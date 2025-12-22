@@ -1,0 +1,868 @@
+
+rst:0x1 (PH���j!�m[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e6b8h (124600) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e6e0 vaddr=3ffb0000 size=01938h (  6456) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=92a20h (600608) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2a48 vaddr=3ffb1938 size=0269ch (  9884) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c50ec vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (456) app_init: ELF file SHA256:  73189ab20...[0m
+[0;32mI (462) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (477) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (489) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (525) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (542) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MAIN: Connecting to WiFi...[0m
+[0;32mI (613) wifi:wifi driver task: 3ffc047c, prio:23, stack:6656, core=0[0m
+[0;32mI (623) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (633) wifi:wifi certification version: v7.0[0m
+[0;32mI (633) wifi:config NVS flash: enabled[0m
+[0;32mI (633) wifi:config nano formating: disabled[0m
+[0;32mI (633) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (643) wifi:Init management short buffer num: 32[0m
+[0;32mI (643) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (653) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (653) wifi:Init static rx buffer num: 10[0m
+[0;32mI (653) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (663) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: accept mbox: 6[0m
+[0;32mI (673) wifi_init: tcpip mbox: 32[0m
+[0;32mI (673) wifi_init: udp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp mbox: 6[0m
+[0;32mI (683) wifi_init: tcp tx win: 5760[0m
+[0;32mI (683) wifi_init: tcp rx win: 5760[0m
+[0;32mI (693) wifi_init: tcp mss: 1440[0m
+[0;32mI (693) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (693) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (703) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (793) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (793) wifi:enable tsf[0m
+[0;32mI (793) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (823) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (823) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (843) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (853) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (883) wifi:connected with Tran Van Tuan, aid = 27, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (883) wifi:security: WPA2-PSK, phy: bgn, rssi: -53[0m
+[0;32mI (893) wifi:pm start, type: 1[0m
+
+[0;32mI (893) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (903) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (933) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3903) esp_netif_handlers: sta ip: 192.168.1.66, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.66
+[0;32mI (3903) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3903) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4913) WEBSERVER: [34mPID loaded from NVS - Kp: 8.80, Ki: 27.60, Kd: 2.633[0m[0m
+[0;32mI (4913) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4923) WEBSERVER: Web server started successfully![0m
+[0;32mI (4923) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5423) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5423) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5523) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5523) GPIO: LED GPIO initialized[0m
+[0;32mI (5523) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5533) GPIO: Button GPIO initialized[0m
+[0;32mI (5633) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (5733) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (7733) MAIN: I2C initialized successfully[0m
+[0;32mI (8033) MPU6050: Starting gyro calibration...[0m
+[0;32mI (12713) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (12713) MPU6050: Gyro offsets - X: -399.82, Y: -54.03, Z: 25.61[0m
+Target: 24.00, Max Speed: 255.0, Min Speed: 100.0
+Robot ready. Press the button to start balancing...
+>Setpoint:24.00, Measured:-15.86, Output:255.00
+>Setpoint:24.00, Measured:-4.31, Output:255.00
+>Setpoint:24.00, Measured:3.26, Output:181.26
+>Setpoint:24.00, Measured:7.13, Output:119.85
+>Setpoint:24.00, Measured:11.07, Output:57.76
+>Setpoint:24.00, Measured:14.59, Output:4.72
+>Setpoint:24.00, Measured:16.02, Output:-6.72
+>Setpoint:24.00, Measured:18.15, Output:-32.56
+>Setpoint:24.00, Measured:20.59, Output:-64.75
+>Setpoint:24.00, Measured:21.29, Output:-62.71
+>Setpoint:24.00, Measured:22.34, Output:-68.75
+>Setpoint:24.00, Measured:22.71, Output:-61.95
+>Setpoint:24.00, Measured:22.97, Output:-53.84
+>Setpoint:24.00, Measured:22.77, Output:-37.42
+>Setpoint:24.00, Measured:22.41, Output:-19.13
+>Setpoint:24.00, Measured:21.85, Output:2.51
+>Setpoint:24.00, Measured:22.11, Output:6.74
+>Setpoint:24.00, Measured:22.11, Output:15.66
+>Setpoint:24.00, Measured:21.81, Output:29.84
+>Setpoint:24.00, Measured:21.47, Output:44.08
+>Setpoint:24.00, Measured:20.95, Output:61.30
+>Setpoint:24.00, Measured:20.51, Output:76.45
+>Setpoint:24.00, Measured:20.93, Output:74.08
+>Setpoint:24.00, Measured:20.85, Output:81.26
+>Setpoint:24.00, Measured:20.51, Output:93.37
+>Setpoint:24.00, Measured:20.07, Output:107.02
+>Setpoint:24.00, Measured:19.66, Output:119.69
+>Setpoint:24.00, Measured:19.00, Output:137.17
+>Setpoint:24.00, Measured:18.41, Output:152.82
+>Setpoint:24.00, Measured:17.91, Output:166.39
+>Setpoint:24.00, Measured:17.49, Output:178.18
+>Setpoint:24.00, Measured:17.08, Output:189.81
+>Setpoint:24.00, Measured:17.16, Output:191.34
+>Setpoint:24.00, Measured:16.16, Output:214.57
+>Setpoint:24.00, Measured:15.64, Output:227.89
+>Setpoint:24.00, Measured:14.72, Output:249.33
+>Setpoint:24.00, Measured:14.86, Output:249.37
+>Setpoint:24.00, Measured:15.43, Output:241.03
+>Setpoint:24.00, Measured:15.05, Output:252.11
+>Setpoint:24.00, Measured:14.56, Output:255.00
+>Setpoint:24.00, Measured:14.76, Output:255.00
+>Setpoint:24.00, Measured:14.52, Output:255.00
+>Setpoint:24.00, Measured:16.86, Output:230.13
+>Setpoint:24.00, Measured:18.81, Output:195.67
+>Setpoint:24.00, Measured:21.29, Output:151.37
+>Setpoint:24.00, Measured:23.20, Output:118.97
+>Setpoint:24.00, Measured:25.32, Output:82.47
+>Setpoint:24.00, Measured:28.74, Output:20.55
+>Setpoint:24.00, Measured:31.17, Output:-21.41
+>Setpoint:24.00, Measured:32.09, Output:-33.21
+>Setpoint:24.00, Measured:33.29, Output:-51.33
+>Setpoint:24.00, Measured:34.48, Output:-69.73
+>Setpoint:24.00, Measured:37.28, Output:-120.46
+>Setpoint:24.00, Measured:39.69, Output:-163.46
+>Setpoint:24.00, Measured:40.14, Output:-167.95
+>Setpoint:24.00, Measured:40.11, Output:-163.73
+>Setpoint:24.00, Measured:39.62, Output:-151.37
+>Setpoint:24.00, Measured:40.22, Output:-161.76
+>Setpoint:24.00, Measured:40.27, Output:-161.83
+>Setpoint:24.00, Measured:40.08, Output:-157.97
+>Setpoint:24.00, Measured:39.88, Output:-154.58
+>Setpoint:24.00, Measured:39.77, Output:-153.77
+>Setpoint:24.00, Measured:39.16, Output:-143.68
+>Setpoint:24.00, Measured:38.89, Output:-140.85
+>Setpoint:24.00, Measured:38.80, Output:-142.31
+>Setpoint:24.00, Measured:38.22, Output:-134.52
+>Setpoint:24.00, Measured:38.72, Output:-148.70
+>Setpoint:24.00, Measured:38.10, Output:-140.58
+>Setpoint:24.00, Measured:36.64, Output:-116.35
+>Setpoint:24.00, Measured:36.12, Output:-111.51
+>Setpoint:24.00, Measured:34.96, Output:-94.22
+>Setpoint:24.00, Measured:34.91, Output:-99.46
+>Setpoint:24.00, Measured:35.11, Output:-109.59
+>Setpoint:24.00, Measured:34.44, Output:-102.41
+>Setpoint:24.00, Measured:34.66, Output:-113.01
+>Setpoint:24.00, Measured:34.21, Output:-110.22
+>Setpoint:24.00, Measured:34.13, Output:-114.96
+>Setpoint:24.00, Measured:34.16, Output:-121.84
+>Setpoint:24.00, Measured:33.39, Output:-112.72
+>Setpoint:24.00, Measured:32.88, Output:-109.06
+>Setpoint:24.00, Measured:32.44, Output:-106.67
+>Setpoint:24.00, Measured:31.93, Output:-102.91
+>Setpoint:24.00, Measured:31.42, Output:-99.28
+>Setpoint:24.00, Measured:30.90, Output:-95.36
+>Setpoint:24.00, Measured:30.90, Output:-101.80
+>Setpoint:24.00, Measured:30.54, Output:-100.74
+>Setpoint:24.00, Measured:30.19, Output:-99.98
+>Setpoint:24.00, Measured:30.26, Output:-107.36
+>Setpoint:24.00, Measured:30.16, Output:-111.15
+>Setpoint:24.00, Measured:30.22, Output:-117.92
+>Setpoint:24.00, Measured:29.97, Output:-118.39
+>Setpoint:24.00, Measured:29.70, Output:-118.37
+>Setpoint:24.00, Measured:29.09, Output:-111.41
+>Setpoint:24.00, Measured:28.64, Output:-107.66
+>Setpoint:24.00, Measured:28.32, Output:-106.61
+>Setpoint:24.00, Measured:27.92, Output:-103.69
+>Setpoint:24.00, Measured:27.57, Output:-101.76
+>Setpoint:24.00, Measured:27.04, Output:-96.09
+>Setpoint:24.00, Measured:26.77, Output:-95.52
+>Setpoint:24.00, Measured:26.33, Output:-91.28
+>Setpoint:24.00, Measured:26.32, Output:-95.67
+>Setpoint:24.00, Measured:26.35, Output:-100.49
+>Setpoint:24.00, Measured:26.41, Output:-105.52
+>Setpoint:24.00, Measured:26.39, Output:-108.94
+>Setpoint:24.00, Measured:26.33, Output:-111.37
+>Setpoint:24.00, Measured:26.06, Output:-109.43
+>Setpoint:24.00, Measured:26.04, Output:-112.35
+>Setpoint:24.00, Measured:25.92, Output:-113.12
+>Setpoint:24.00, Measured:25.78, Output:-113.41
+>Setpoint:24.00, Measured:26.02, Output:-120.96
+>Setpoint:24.00, Measured:25.85, Output:-120.23
+>Setpoint:24.00, Measured:25.29, Output:-111.82
+>Setpoint:24.00, Measured:25.40, Output:-116.55
+>Setpoint:24.00, Measured:25.03, Output:-111.72
+>Setpoint:24.00, Measured:24.58, Output:-105.23
+>Setpoint:24.00, Measured:24.14, Output:-98.88
+>Setpoint:24.00, Measured:23.87, Output:-95.91
+>Setpoint:24.00, Measured:23.80, Output:-96.66
+>Setpoint:24.00, Measured:24.00, Output:-102.70
+>Setpoint:24.00, Measured:23.41, Output:-92.82
+>Setpoint:24.00, Measured:23.34, Output:-93.50
+>Setpoint:24.00, Measured:23.12, Output:-90.73
+>Setpoint:24.00, Measured:22.95, Output:-88.96
+>Setpoint:24.00, Measured:22.53, Output:-82.22
+>Setpoint:24.00, Measured:22.19, Output:-76.97
+>Setpoint:24.00, Measured:22.02, Output:-74.87
+>Setpoint:24.00, Measured:21.93, Output:-74.35
+>Setpoint:24.00, Measured:22.22, Output:-81.07
+>Setpoint:24.00, Measured:22.41, Output:-85.84
+>Setpoint:24.00, Measured:22.26, Output:-83.36
+>Setpoint:24.00, Measured:22.29, Output:-84.47
+>Setpoint:24.00, Measured:21.73, Output:-73.75
+>Setpoint:24.00, Measured:20.75, Output:-54.85
+>Setpoint:24.00, Measured:20.07, Output:-41.82
+>Setpoint:24.00, Measured:19.79, Output:-36.89
+>Setpoint:24.00, Measured:19.72, Output:-36.04
+>Setpoint:24.00, Measured:19.54, Output:-32.61
+>Setpoint:24.00, Measured:18.86, Output:-19.26
+>Setpoint:24.00, Measured:18.92, Output:-20.59
+>Setpoint:24.00, Measured:18.40, Output:-10.14
+>Setpoint:24.00, Measured:17.78, Output:2.46
+>Setpoint:24.00, Measured:17.77, Output:2.88
+>Setpoint:24.00, Measured:17.79, Output:2.90
+>Setpoint:24.00, Measured:17.80, Output:3.55
+>Setpoint:24.00, Measured:17.63, Output:7.82
+>Setpoint:24.00, Measured:17.76, Output:6.40
+>Setpoint:24.00, Measured:17.61, Output:10.85
+>Setpoint:24.00, Measured:17.42, Output:15.92
+>Setpoint:24.00, Measured:17.08, Output:24.24
+>Setpoint:24.00, Measured:17.03, Output:26.97
+>Setpoint:24.00, Measured:17.02, Output:28.97
+>Setpoint:24.00, Measured:16.92, Output:32.93
+>Setpoint:24.00, Measured:16.82, Output:36.91
+>Setpoint:24.00, Measured:16.63, Output:43.06
+>Setpoint:24.00, Measured:16.71, Output:43.61
+>Setpoint:24.00, Measured:16.70, Output:46.30
+>Setpoint:24.00, Measured:16.64, Output:50.01
+>Setpoint:24.00, Measured:16.46, Output:56.26
+>Setpoint:24.00, Measured:16.54, Output:57.47
+>Setpoint:24.00, Measured:16.76, Output:56.01
+>Setpoint:24.00, Measured:16.59, Output:62.42
+>Setpoint:24.00, Measured:16.39, Output:69.46
+>Setpoint:24.00, Measured:17.02, Output:60.04
+>Setpoint:24.00, Measured:17.15, Output:60.72
+>Setpoint:24.00, Measured:16.70, Output:73.21
+>Setpoint:24.00, Measured:16.63, Output:77.88
+>Setpoint:24.00, Measured:16.98, Output:74.25
+>Setpoint:24.00, Measured:17.24, Output:72.65
+>Setpoint:24.00, Measured:17.29, Output:75.35
+>Setpoint:24.00, Measured:17.13, Output:82.10
+>Setpoint:24.00, Measured:16.98, Output:88.75
+>Setpoint:24.00, Measured:17.03, Output:91.35
+>Setpoint:24.00, Measured:17.07, Output:94.11
+>Setpoint:24.00, Measured:16.84, Output:102.29
+>Setpoint:24.00, Measured:17.07, Output:101.29
+>Setpoint:24.00, Measured:17.16, Output:103.31
+>Setpoint:24.00, Measured:17.09, Output:108.49
+>Setpoint:24.00, Measured:17.09, Output:112.06
+>Setpoint:24.00, Measured:17.34, Output:110.76
+>Setpoint:24.00, Measured:17.87, Output:104.06
+>Setpoint:24.00, Measured:18.35, Output:98.60
+>Setpoint:24.00, Measured:18.83, Output:92.91
+>Setpoint:24.00, Measured:19.06, Output:92.51
+>Setpoint:24.00, Measured:18.81, Output:101.65
+>Setpoint:24.00, Measured:18.35, Output:114.61
+>Setpoint:24.00, Measured:17.91, Output:127.05
+>Setpoint:24.00, Measured:17.61, Output:136.51
+>Setpoint:24.00, Measured:17.15, Output:149.05
+>Setpoint:24.00, Measured:16.59, Output:163.39
+>Setpoint:24.00, Measured:15.97, Output:178.95
+>Setpoint:24.00, Measured:15.56, Output:190.25
+>Setpoint:24.00, Measured:15.67, Output:191.09
+>Setpoint:24.00, Measured:14.81, Output:211.29
+>Setpoint:24.00, Measured:15.05, Output:209.69
+>Setpoint:24.00, Measured:14.22, Output:229.44
+>Setpoint:24.00, Measured:14.07, Output:235.62
+>Setpoint:24.00, Measured:14.29, Output:234.58
+>Setpoint:24.00, Measured:14.98, Output:224.41
+>Setpoint:24.00, Measured:14.33, Output:241.30
+>Setpoint:24.00, Measured:13.55, Output:255.00
+>Setpoint:24.00, Measured:14.77, Output:240.04
+>Setpoint:24.00, Measured:14.11, Output:255.00
+>Setpoint:24.00, Measured:14.01, Output:255.00
+>Setpoint:24.00, Measured:13.27, Output:255.00
+>Setpoint:24.00, Measured:13.92, Output:255.00
+>Setpoint:24.00, Measured:15.24, Output:251.66
+>Setpoint:24.00, Measured:13.79, Output:255.00
+>Setpoint:24.00, Measured:15.43, Output:255.00
+>Setpoint:24.00, Measured:15.28, Output:255.00
+>Setpoint:24.00, Measured:18.04, Output:215.25
+>Setpoint:24.00, Measured:19.72, Output:187.47
+>Setpoint:24.00, Measured:22.10, Output:146.25
+>Setpoint:24.00, Measured:22.53, Output:144.21
+>Setpoint:24.00, Measured:22.75, Output:145.84
+>Setpoint:24.00, Measured:22.25, Output:161.56
+>Setpoint:24.00, Measured:23.88, Output:134.46
+>Setpoint:24.00, Measured:25.58, Output:106.08
+>Setpoint:24.00, Measured:27.53, Output:72.56
+>Setpoint:24.00, Measured:29.54, Output:38.12
+>Setpoint:24.00, Measured:30.83, Output:18.08
+>Setpoint:24.00, Measured:30.69, Output:25.90
+>Setpoint:24.00, Measured:32.33, Output:-2.28
+>Setpoint:24.00, Measured:32.83, Output:-8.03
+>Setpoint:24.00, Measured:34.27, Output:-33.01
+>Setpoint:24.00, Measured:34.89, Output:-41.91
+>Setpoint:24.00, Measured:36.36, Output:-68.21
+>Setpoint:24.00, Measured:36.44, Output:-67.27
+>Setpoint:24.00, Measured:37.79, Output:-92.22
+>Setpoint:24.00, Measured:38.84, Output:-111.56
+>Setpoint:24.00, Measured:38.79, Output:-109.44
+>Setpoint:24.00, Measured:39.25, Output:-118.15
+>Setpoint:24.00, Measured:40.07, Output:-134.71
+>Setpoint:24.00, Measured:40.03, Output:-134.44
+>Setpoint:24.00, Measured:40.22, Output:-139.54
+>Setpoint:24.00, Measured:40.66, Output:-150.19
+>Setpoint:24.00, Measured:40.71, Output:-153.32
+>Setpoint:24.00, Measured:40.59, Output:-153.82
+>Setpoint:24.00, Measured:40.31, Output:-151.62
+>Setpoint:24.00, Measured:40.65, Output:-162.22
+>Setpoint:24.00, Measured:40.63, Output:-166.15
+>Setpoint:24.00, Measured:40.03, Output:-158.73
+>Setpoint:24.00, Measured:39.58, Output:-155.10
+>Setpoint:24.00, Measured:39.27, Output:-154.44
+>Setpoint:24.00, Measured:38.92, Output:-153.42
+>Setpoint:24.00, Measured:38.75, Output:-156.31
+>Setpoint:24.00, Measured:38.54, Output:-158.52
+>Setpoint:24.00, Measured:37.83, Output:-150.91
+>Setpoint:24.00, Measured:38.04, Output:-162.19
+>Setpoint:24.00, Measured:37.41, Output:-156.51
+>Setpoint:24.00, Measured:37.42, Output:-163.80
+>Setpoint:24.00, Measured:36.86, Output:-160.03
+>Setpoint:24.00, Measured:35.62, Output:-142.64
+>Setpoint:24.00, Measured:34.78, Output:-133.71
+>Setpoint:24.00, Measured:34.35, Output:-133.10
+>Setpoint:24.00, Measured:33.67, Output:-127.40
+>Setpoint:24.00, Measured:32.61, Output:-114.17
+>Setpoint:24.00, Measured:32.09, Output:-111.68
+>Setpoint:24.00, Measured:30.99, Output:-97.73
+>Setpoint:24.00, Measured:29.87, Output:-83.37
+>Setpoint:24.00, Measured:28.67, Output:-67.34
+>Setpoint:24.00, Measured:27.91, Output:-60.21
+>Setpoint:24.00, Measured:27.01, Output:-49.93
+>Setpoint:24.00, Measured:25.65, Output:-30.50
+>Setpoint:24.00, Measured:24.95, Output:-23.96
+>Setpoint:24.00, Measured:24.70, Output:-26.01
+>Setpoint:24.00, Measured:24.24, Output:-23.50
+>Setpoint:24.00, Measured:24.14, Output:-27.88
+>Setpoint:24.00, Measured:24.26, Output:-36.13
+>Setpoint:24.00, Measured:24.06, Output:-37.38
+>Setpoint:24.00, Measured:24.15, Output:-44.13
+>Setpoint:24.00, Measured:23.78, Output:-41.40
+>Setpoint:24.00, Measured:23.37, Output:-37.47
+>Setpoint:24.00, Measured:22.97, Output:-33.70
+>Setpoint:24.00, Measured:22.21, Output:-22.46
+>Setpoint:24.00, Measured:21.85, Output:-18.85
+>Setpoint:24.00, Measured:21.75, Output:-20.42
+>Setpoint:24.00, Measured:21.76, Output:-23.64
+>Setpoint:24.00, Measured:21.49, Output:-20.97
+>Setpoint:24.00, Measured:20.97, Output:-13.09
+>Setpoint:24.00, Measured:20.71, Output:-10.44
+>Setpoint:24.00, Measured:20.60, Output:-10.17
+>Setpoint:24.00, Measured:20.31, Output:-6.30
+>Setpoint:24.00, Measured:20.35, Output:-8.72
+>Setpoint:24.00, Measured:20.27, Output:-8.36
+>Setpoint:24.00, Measured:19.93, Output:-2.74
+>Setpoint:24.00, Measured:19.98, Output:-4.64
+>Setpoint:24.00, Measured:19.98, Output:-5.22
+>Setpoint:24.00, Measured:20.05, Output:-6.99
+>Setpoint:24.00, Measured:19.98, Output:-5.79
+>Setpoint:24.00, Measured:20.13, Output:-8.88
+>Setpoint:24.00, Measured:20.20, Output:-9.94
+>Setpoint:24.00, Measured:20.11, Output:-7.93
+>Setpoint:24.00, Measured:19.98, Output:-4.73
+>Setpoint:24.00, Measured:19.84, Output:-1.41
+>Setpoint:24.00, Measured:19.65, Output:3.10
+>Setpoint:24.00, Measured:19.18, Output:13.11
+>Setpoint:24.00, Measured:18.74, Output:22.75
+>Setpoint:24.00, Measured:18.21, Output:33.92
+>Setpoint:24.00, Measured:17.69, Output:45.14
+>Setpoint:24.00, Measured:17.29, Output:53.97
+>Setpoint:24.00, Measured:16.88, Output:62.88
+>Setpoint:24.00, Measured:16.35, Output:74.53
+>Setpoint:24.00, Measured:15.73, Output:88.03
+>Setpoint:24.00, Measured:15.35, Output:96.73
+>Setpoint:24.00, Measured:14.90, Output:106.93
+>Setpoint:24.00, Measured:14.33, Output:119.90
+>Setpoint:24.00, Measured:13.73, Output:133.43
+>Setpoint:24.00, Measured:13.44, Output:140.83
+>Setpoint:24.00, Measured:13.26, Output:146.33
+>Setpoint:24.00, Measured:12.99, Output:153.86
+>Setpoint:24.00, Measured:12.81, Output:160.06
+>Setpoint:24.00, Measured:12.70, Output:164.78
+>Setpoint:24.00, Measured:12.75, Output:166.66
+>Setpoint:24.00, Measured:12.97, Output:165.52
+>Setpoint:24.00, Measured:13.25, Output:163.57
+>Setpoint:24.00, Measured:13.38, Output:164.78
+>Setpoint:24.00, Measured:12.95, Output:177.36
+>Setpoint:24.00, Measured:13.23, Output:175.78
+>Setpoint:24.00, Measured:13.14, Output:181.78
+>Setpoint:24.00, Measured:12.84, Output:192.14
+>Setpoint:24.00, Measured:14.49, Output:163.69
+>Setpoint:24.00, Measured:13.87, Output:181.21
+>Setpoint:24.00, Measured:13.73, Output:188.76
+>Setpoint:24.00, Measured:12.89, Output:210.33
+>Setpoint:24.00, Measured:12.97, Output:213.58
+>Setpoint:24.00, Measured:13.89, Output:199.98
+>Setpoint:24.00, Measured:14.13, Output:200.51
+>Setpoint:24.00, Measured:14.69, Output:194.77
+>Setpoint:24.00, Measured:14.90, Output:195.94
+>Setpoint:24.00, Measured:14.30, Output:213.38
+>Setpoint:24.00, Measured:14.50, Output:214.77
+>Setpoint:24.00, Measured:15.52, Output:199.95
+>Setpoint:24.00, Measured:16.69, Output:182.16
+>Setpoint:24.00, Measured:17.82, Output:165.61
+>Setpoint:24.00, Measured:19.14, Output:145.48
+>Setpoint:24.00, Measured:19.98, Output:135.19
+>Setpoint:24.00, Measured:20.84, Output:124.13
+>Setpoint:24.00, Measured:21.24, Output:122.51
+>Setpoint:24.00, Measured:21.41, Output:124.87
+>Setpoint:24.00, Measured:22.28, Output:113.22
+>Setpoint:24.00, Measured:23.46, Output:95.41
+>Setpoint:24.00, Measured:25.16, Output:67.08
+>Setpoint:24.00, Measured:26.76, Output:40.74
+>Setpoint:24.00, Measured:28.64, Output:8.89
+>Setpoint:24.00, Measured:30.34, Output:-19.29
+>Setpoint:24.00, Measured:31.60, Output:-38.91
+>Setpoint:24.00, Measured:32.13, Output:-44.38
+>Setpoint:24.00, Measured:32.61, Output:-49.59
+>Setpoint:24.00, Measured:32.80, Output:-49.45
+>Setpoint:24.00, Measured:33.17, Output:-53.63
+>Setpoint:24.00, Measured:33.55, Output:-58.41
+>Setpoint:24.00, Measured:33.65, Output:-58.23
+>Setpoint:24.00, Measured:34.01, Output:-63.79
+>Setpoint:24.00, Measured:34.97, Output:-81.67
+>Setpoint:24.00, Measured:35.44, Output:-90.10
+>Setpoint:24.00, Measured:35.67, Output:-94.27
+>Setpoint:24.00, Measured:34.95, Output:-79.88
+>Setpoint:24.00, Measured:34.58, Output:-73.21
+>Setpoint:24.00, Measured:34.34, Output:-69.73
+>Setpoint:24.00, Measured:33.76, Output:-59.79
+>Setpoint:24.00, Measured:32.88, Output:-44.59
+>Setpoint:24.00, Measured:32.49, Output:-39.55
+>Setpoint:24.00, Measured:32.33, Output:-39.20
+>Setpoint:24.00, Measured:32.03, Output:-36.47
+>Setpoint:24.00, Measured:32.92, Output:-57.50
+>Setpoint:24.00, Measured:32.12, Output:-44.84
+>Setpoint:24.00, Measured:34.21, Output:-89.95
+>Setpoint:24.00, Measured:34.95, Output:-107.69
+>Setpoint:24.00, Measured:34.87, Output:-109.01
+>Setpoint:24.00, Measured:34.07, Output:-96.42
+>Setpoint:24.00, Measured:33.07, Output:-80.35
+>Setpoint:24.00, Measured:33.97, Output:-102.41
+>Setpoint:24.00, Measured:33.02, Output:-87.56
+>Setpoint:24.00, Measured:31.36, Output:-58.81
+>Setpoint:24.00, Measured:29.28, Output:-22.39
+>Setpoint:24.00, Measured:26.77, Output:22.05
+>Setpoint:24.00, Measured:26.36, Output:24.23
+>Setpoint:24.00, Measured:25.47, Output:36.25
+>Setpoint:24.00, Measured:25.10, Output:37.92
+>Setpoint:24.00, Measured:25.85, Output:17.70
+>Setpoint:24.00, Measured:27.77, Output:-25.27
+>Setpoint:24.00, Measured:30.54, Output:-84.32
+>Setpoint:24.00, Measured:33.26, Output:-141.28
+>Setpoint:24.00, Measured:35.34, Output:-184.82
+>Setpoint:24.00, Measured:36.75, Output:-214.65
+>Setpoint:24.00, Measured:38.26, Output:-246.61
+>Setpoint:24.00, Measured:37.94, Output:-242.04
+>Setpoint:24.00, Measured:39.66, Output:-255.00
+>Setpoint:24.00, Measured:40.78, Output:-255.00
+>Setpoint:24.00, Measured:39.84, Output:-255.00
+>Setpoint:24.00, Measured:42.13, Output:-255.00
+>Setpoint:24.00, Measured:42.77, Output:-255.00
+>Setpoint:24.00, Measured:44.00, Output:-255.00
+>Setpoint:24.00, Measured:46.36, Output:-255.00
+>Setpoint:24.00, Measured:46.39, Output:-255.00
+>Setpoint:24.00, Measured:46.85, Output:-255.00
+>Setpoint:24.00, Measured:47.18, Output:-255.00
+>Setpoint:24.00, Measured:48.97, Output:-255.00
+>Setpoint:24.00, Measured:49.78, Output:-255.00
+>Setpoint:24.00, Measured:49.09, Output:-255.00
+>Setpoint:24.00, Measured:48.41, Output:-255.00
+>Setpoint:24.00, Measured:49.42, Output:-255.00
+>Setpoint:24.00, Measured:51.46, Output:-255.00
+>Setpoint:24.00, Measured:52.24, Output:-255.00
+>Setpoint:24.00, Measured:51.78, Output:-255.00
+>Setpoint:24.00, Measured:51.30, Output:-255.00
+>Setpoint:24.00, Measured:51.96, Output:-255.00
+>Setpoint:24.00, Measured:52.16, Output:-255.00
+>Setpoint:24.00, Measured:52.16, Output:-255.00
+>Setpoint:24.00, Measured:52.68, Output:-255.00
+>Setpoint:24.00, Measured:50.85, Output:-255.00
+>Setpoint:24.00, Measured:51.05, Output:-255.00
+>Setpoint:24.00, Measured:50.90, Output:-255.00
+>Setpoint:24.00, Measured:49.96, Output:-255.00
+>Setpoint:24.00, Measured:49.13, Output:-255.00
+>Setpoint:24.00, Measured:48.55, Output:-255.00
+>Setpoint:24.00, Measured:48.69, Output:-255.00
+>Setpoint:24.00, Measured:49.17, Output:-255.00
+>Setpoint:24.00, Measured:48.49, Output:-255.00
+>Setpoint:24.00, Measured:48.52, Output:-255.00
+>Setpoint:24.00, Measured:50.63, Output:-255.00
+>Setpoint:24.00, Measured:52.87, Output:-255.00
+>Setpoint:24.00, Measured:53.29, Output:-255.00
+>Setpoint:24.00, Measured:53.23, Output:-255.00
+>Setpoint:24.00, Measured:52.73, Output:-255.00
+>Setpoint:24.00, Measured:52.12, Output:-255.00
+>Setpoint:24.00, Measured:52.86, Output:-255.00
+>Setpoint:24.00, Measured:52.03, Output:-255.00
+>Setpoint:24.00, Measured:51.64, Output:-255.00
+>Setpoint:24.00, Measured:51.00, Output:-255.00
+>Setpoint:24.00, Measured:50.97, Output:-255.00
+>Setpoint:24.00, Measured:50.48, Output:-255.00
+>Setpoint:24.00, Measured:48.95, Output:-255.00
+>Setpoint:24.00, Measured:47.90, Output:-255.00
+>Setpoint:24.00, Measured:47.20, Output:-255.00
+>Setpoint:24.00, Measured:47.56, Output:-255.00
+>Setpoint:24.00, Measured:47.56, Output:-255.00
+>Setpoint:24.00, Measured:48.92, Output:-255.00
+>Setpoint:24.00, Measured:49.35, Output:-255.00
+>Setpoint:24.00, Measured:50.21, Output:-255.00
+>Setpoint:24.00, Measured:51.06, Output:-255.00
+>Setpoint:24.00, Measured:52.14, Output:-255.00
+>Setpoint:24.00, Measured:52.99, Output:-255.00
+>Setpoint:24.00, Measured:53.46, Output:-255.00
+>Setpoint:24.00, Measured:54.62, Output:-255.00
+>Setpoint:24.00, Measured:54.45, Output:-255.00
+>Setpoint:24.00, Measured:52.23, Output:-255.00
+>Setpoint:24.00, Measured:49.70, Output:-255.00
+>Setpoint:24.00, Measured:46.86, Output:-255.00
+>Setpoint:24.00, Measured:46.96, Output:-255.00
+>Setpoint:24.00, Measured:43.94, Output:-255.00
+>Setpoint:24.00, Measured:38.31, Output:-255.00
+>Setpoint:24.00, Measured:32.76, Output:-161.53
+>Setpoint:24.00, Measured:28.20, Output:-87.11
+>Setpoint:24.00, Measured:24.40, Output:-30.03
+>Setpoint:24.00, Measured:21.47, Output:9.84
+>Setpoint:24.00, Measured:19.92, Output:22.75
+>Setpoint:24.00, Measured:19.06, Output:22.91
+>Setpoint:24.00, Measured:19.52, Output:-1.59
+>Setpoint:24.00, Measured:19.17, Output:-8.73
+>Setpoint:24.00, Measured:20.24, Output:-42.62
+>Setpoint:24.00, Measured:20.10, Output:-51.10
+>Setpoint:24.00, Measured:20.03, Output:-59.75
+>Setpoint:24.00, Measured:20.04, Output:-69.25
+>Setpoint:24.00, Measured:20.03, Output:-77.24
+>Setpoint:24.00, Measured:19.32, Output:-70.57
+>Setpoint:24.00, Measured:19.19, Output:-74.92
+>Setpoint:24.00, Measured:18.69, Output:-71.13
+>Setpoint:24.00, Measured:18.23, Output:-67.55
+>Setpoint:24.00, Measured:17.69, Output:-61.84
+>Setpoint:24.00, Measured:17.60, Output:-64.64
+>Setpoint:24.00, Measured:17.43, Output:-65.19
+>Setpoint:24.00, Measured:17.47, Output:-69.36
+>Setpoint:24.00, Measured:17.46, Output:-71.92
+>Setpoint:24.00, Measured:17.82, Output:-81.45
+>Setpoint:24.00, Measured:17.51, Output:-77.05
+>Setpoint:24.00, Measured:17.60, Output:-80.32
+>Setpoint:24.00, Measured:17.62, Output:-81.56
+>Setpoint:24.00, Measured:17.32, Output:-76.21
+>Setpoint:24.00, Measured:17.41, Output:-78.36
+>Setpoint:24.00, Measured:17.15, Output:-73.19
+>Setpoint:24.00, Measured:17.38, Output:-77.58
+>Setpoint:24.00, Measured:17.30, Output:-75.49
+>Setpoint:24.00, Measured:17.41, Output:-76.94
+>Setpoint:24.00, Measured:17.19, Output:-71.54
+>Setpoint:24.00, Measured:16.78, Output:-62.06
+>Setpoint:24.00, Measured:16.34, Output:-52.07
+>Setpoint:24.00, Measured:16.39, Output:-51.85
+>Setpoint:24.00, Measured:16.64, Output:-55.09
+>Setpoint:24.00, Measured:16.65, Output:-53.35
+>Setpoint:24.00, Measured:16.99, Output:-58.16
+>Setpoint:24.00, Measured:17.18, Output:-59.61
+>Setpoint:24.00, Measured:17.57, Output:-64.92
+>Setpoint:24.00, Measured:17.63, Output:-63.30
+>Setpoint:24.00, Measured:17.42, Output:-56.38
+>Setpoint:24.00, Measured:17.39, Output:-53.03
+>Setpoint:24.00, Measured:16.90, Output:-40.38
+>Setpoint:24.00, Measured:17.16, Output:-42.78
+>Setpoint:24.00, Measured:17.49, Output:-46.43
+>Setpoint:24.00, Measured:17.50, Output:-43.50
+>Setpoint:24.00, Measured:17.59, Output:-42.08
+>Setpoint:24.00, Measured:17.85, Output:-44.14
+>Setpoint:24.00, Measured:18.07, Output:-45.17
+>Setpoint:24.00, Measured:17.95, Output:-39.32
+>Setpoint:24.00, Measured:17.65, Output:-30.01
+>Setpoint:24.00, Measured:18.05, Output:-34.76
+>Setpoint:24.00, Measured:18.00, Output:-30.46
+>Setpoint:24.00, Measured:17.81, Output:-23.24
+>Setpoint:24.00, Measured:17.78, Output:-19.35
+>Setpoint:24.00, Measured:17.84, Output:-17.22
+>Setpoint:24.00, Measured:17.95, Output:-16.05
+>Setpoint:24.00, Measured:17.84, Output:-10.58
+>Setpoint:24.00, Measured:17.60, Output:-2.50
+>Setpoint:24.00, Measured:17.65, Output:-0.12
+>Setpoint:24.00, Measured:17.76, Output:0.95
+>Setpoint:24.00, Measured:17.73, Output:5.02
+>Setpoint:24.00, Measured:17.69, Output:9.09
+>Setpoint:24.00, Measured:17.47, Output:16.89
+>Setpoint:24.00, Measured:17.55, Output:18.52
+>Setpoint:24.00, Measured:17.42, Output:24.50
+>Setpoint:24.00, Measured:17.30, Output:30.24
+>Setpoint:24.00, Measured:17.10, Output:37.36
+>Setpoint:24.00, Measured:17.03, Output:42.04
+>Setpoint:24.00, Measured:17.00, Output:46.01
+>Setpoint:24.00, Measured:16.92, Output:50.93
+>Setpoint:24.00, Measured:16.76, Output:57.45
+>Setpoint:24.00, Measured:16.73, Output:61.54
+>Setpoint:24.00, Measured:16.87, Output:62.03
+>Setpoint:24.00, Measured:17.23, Output:58.39
+>Setpoint:24.00, Measured:17.53, Output:56.06
+>Setpoint:24.00, Measured:17.59, Output:58.60
+>Setpoint:24.00, Measured:17.51, Output:64.02
+>Setpoint:24.00, Measured:17.50, Output:67.73
+>Setpoint:24.00, Measured:17.52, Output:71.15
+>Setpoint:24.00, Measured:17.12, Output:82.80
+>Setpoint:24.00, Measured:16.98, Output:89.08
+>Setpoint:24.00, Measured:16.83, Output:95.49
+>Setpoint:24.00, Measured:16.74, Output:100.90
+>Setpoint:24.00, Measured:16.62, Output:106.77
+>Setpoint:24.00, Measured:16.56, Output:111.51
+>Setpoint:24.00, Measured:16.65, Output:113.26
+>Setpoint:24.00, Measured:16.67, Output:116.57
+>Setpoint:24.00, Measured:16.75, Output:118.50
+>Setpoint:24.00, Measured:16.72, Output:122.88
+>Setpoint:24.00, Measured:16.65, Output:127.98
+>Setpoint:24.00, Measured:16.69, Output:130.93
+>Setpoint:24.00, Measured:16.64, Output:135.74
+>Setpoint:24.00, Measured:16.70, Output:138.33
+>Setpoint:24.00, Measured:16.52, Output:145.76
+>Setpoint:24.00, Measured:16.60, Output:148.00
+>Setpoint:24.00, Measured:16.67, Output:150.30
+>Setpoint:24.00, Measured:16.64, Output:154.79
+>Setpoint:24.00, Measured:16.47, Output:162.20
+>Setpoint:24.00, Measured:16.66, Output:162.23
+>Setpoint:24.00, Measured:16.58, Output:167.67
+>Setpoint:24.00, Measured:16.50, Output:173.22
+>Setpoint:24.00, Measured:16.48, Output:177.49
+>Setpoint:24.00, Measured:16.22, Output:186.65
+>Setpoint:24.00, Measured:16.05, Output:193.73
+>Setpoint:24.00, Measured:15.66, Output:205.48
+>Setpoint:24.00, Measured:15.20, Output:218.40
+>Setpoint:24.00, Measured:15.61, Output:213.85
+>Setpoint:24.00, Measured:15.71, Output:215.85
+>Setpoint:24.00, Measured:14.96, Output:234.66
+>Setpoint:24.00, Measured:14.14, Output:254.82
+>Setpoint:24.00, Measured:13.79, Output:255.00
+>Setpoint:24.00, Measured:12.25, Output:255.00
+>Setpoint:24.00, Measured:11.48, Output:255.00
+>Setpoint:24.00, Measured:10.02, Output:255.00
+>Setpoint:24.00, Measured:8.58, Output:255.00
+>Setpoint:24.00, Measured:7.05, Output:255.00
+>Setpoint:24.00, Measured:4.56, Output:255.00
+>Setpoint:24.00, Measured:2.62, Output:255.00
+>Setpoint:24.00, Measured:0.92, Output:255.00
+>Setpoint:24.00, Measured:-0.73, Output:255.00
+>Setpoint:24.00, Measured:-1.34, Output:255.00
+>Setpoint:24.00, Measured:-1.33, Output:255.00
+>Setpoint:24.00, Measured:-0.95, Output:255.00
+>Setpoint:24.00, Measured:-0.69, Output:255.00
+>Setpoint:24.00, Measured:-0.30, Output:255.00
+>Setpoint:24.00, Measured:0.46, Output:255.00
+>Setpoint:24.00, Measured:0.38, Output:255.00
+>Setpoint:24.00, Measured:-0.05, Output:255.00
+>Setpoint:24.00, Measured:-0.03, Output:255.00
+>Setpoint:24.00, Measured:0.02, Output:255.00
+>Setpoint:24.00, Measured:0.52, Output:255.00
+>Setpoint:24.00, Measured:0.89, Output:255.00
+>Setpoint:24.00, Measured:1.59, Output:255.00
+>Setpoint:24.00, Measured:2.17, Output:255.00
+>Setpoint:24.00, Measured:2.42, Output:255.00
+>Setpoint:24.00, Measured:2.83, Output:255.00
+>Setpoint:24.00, Measured:2.84, Output:255.00
+>Setpoint:24.00, Measured:2.79, Output:255.00
+>Setpoint:24.00, Measured:2.35, Output:255.00
+>Setpoint:24.00, Measured:2.21, Output:255.00
+>Setpoint:24.00, Measured:2.03, Output:255.00
+>Setpoint:24.00, Measured:1.85, Output:255.00
+>Setpoint:24.00, Measured:2.56, Output:255.00
+>Setpoint:24.00, Measured:3.02, Output:255.00
+>Setpoint:24.00, Measured:3.51, Output:255.00
+>Setpoint:24.00, Measured:3.68, Output:255.00
+>Setpoint:24.00, Measured:3.99, Output:255.00
+>Setpoint:24.00, Measured:4.39, Output:255.00
+>Setpoint:24.00, Measured:4.64, Output:255.00
+>Setpoint:24.00, Measured:4.89, Output:255.00
+>Setpoint:24.00, Measured:5.01, Output:255.00
+>Setpoint:24.00, Measured:4.83, Output:255.00
+>Setpoint:24.00, Measured:4.95, Output:255.00
+>Setpoint:24.00, Measured:4.73, Output:255.00
+>Setpoint:24.00, Measured:5.36, Output:255.00
+>Setpoint:24.00, Measured:5.48, Output:255.00
+>Setpoint:24.00, Measured:5.33, Output:255.00
+>Setpoint:24.00, Measured:5.71, Output:255.00
+>Setpoint:24.00, Measured:6.03, Output:255.00
+>Setpoint:24.00, Measured:6.63, Output:255.00
+>Setpoint:24.00, Measured:6.79, Output:255.00
+>Setpoint:24.00, Measured:6.54, Output:255.00
+>Setpoint:24.00, Measured:6.19, Output:255.00
+>Setpoint:24.00, Measured:5.74, Output:255.00
+>Setpoint:24.00, Measured:5.39, Output:255.00
+>Setpoint:24.00, Measured:5.11, Output:255.00
+>Setpoint:24.00, Measured:4.94, Output:255.00
+>Setpoint:24.00, Measured:5.41, Output:255.00
+>Setpoint:24.00, Measured:5.85, Output:255.00
+>Setpoint:24.00, Measured:6.47, Output:255.00
+>Setpoint:24.00, Measured:7.07, Output:255.00
+>Setpoint:24.00, Measured:7.89, Output:255.00
+>Setpoint:24.00, Measured:8.30, Output:255.00
+>Setpoint:24.00, Measured:8.11, Output:255.00
+>Setpoint:24.00, Measured:7.84, Output:255.00
+>Setpoint:24.00, Measured:7.49, Output:255.00
+>Setpoint:24.00, Measured:6.81, Output:255.00
+>Setpoint:24.00, Measured:5.99, Output:255.00
+>Setpoint:24.00, Measured:5.40, Output:255.00
+>Setpoint:24.00, Measured:6.02, Output:255.00
+>Setpoint:24.00, Measured:7.17, Output:255.00
+>Setpoint:24.00, Measured:8.05, Output:255.00
+>Setpoint:24.00, Measured:9.03, Output:255.00
+>Setpoint:24.00, Measured:9.83, Output:255.00
+>Setpoint:24.00, Measured:10.99, Output:255.00
+>Setpoint:24.00, Measured:12.22, Output:255.00
+>Setpoint:24.00, Measured:14.49, Output:255.00
+>Setpoint:24.00, Measured:16.82, Output:227.01
+>Setpoint:24.00, Measured:19.34, Output:185.61
+>Setpoint:24.00, Measured:22.08, Output:141.42
+>Setpoint:24.00, Measured:23.96, Output:115.50
+>Setpoint:24.00, Measured:25.09, Output:104.24
+>Setpoint:24.00, Measured:25.49, Output:107.00
+>Setpoint:24.00, Measured:24.99, Output:126.71
+>Setpoint:24.00, Measured:24.69, Output:141.56
+>Setpoint:24.00, Measured:24.64, Output:150.53
+>Setpoint:24.00, Measured:24.13, Output:168.15
+>Setpoint:24.00, Measured:23.91, Output:179.09
+>Setpoint:24.00, Measured:23.30, Output:197.18
+>Setpoint:24.00, Measured:24.04, Output:187.77
+>Setpoint:24.00, Measured:24.56, Output:182.44
+>Setpoint:24.00, Measured:24.90, Output:180.62
+>Setpoint:24.00, Measured:25.30, Output:177.22
+>Setpoint:24.00, Measured:26.18, Output:164.08
+>Setpoint:24.00, Measured:25.74, Output:176.92
+>Setpoint:24.00, Measured:25.52, Output:184.94
+>Setpoint:24.00, Measured:25.48, Output:188.73
+>Setpoint:24.00, Measured:26.32, Output:174.85
+>Setpoint:24.00, Measured:28.05, Output:143.41
+>Setpoint:24.00, Measured:29.36, Output:120.22
+>Setpoint:24.00, Measured:28.54, Output:139.41
+>Setpoint:24.00, Measured:28.27, Output:147.08
+>Setpoint:24.00, Measured:27.70, Output:160.17
+>Setpoint:24.00, Measured:32.15, Output:72.91
+>Setpoint:24.00, Measured:31.09, Output:96.30
+>Setpoint:24.00, Measured:30.99, Output:99.69
+>Setpoint:24.00, Measured:30.09, Output:118.52
+>Setpoint:24.00, Measured:29.89, Output:122.78
+>Setpoint:24.00, Measured:30.06, Output:119.45
+>Setpoint:24.00, Measured:30.57, Output:109.09
+>Setpoint:24.00, Measured:30.58, Output:108.48
+>Setpoint:24.00, Measured:29.93, Output:120.88
+>Setpoint:24.00, Measured:30.05, Output:117.51
+>Setpoint:24.00, Measured:30.99, Output:97.67
+>Setpoint:24.00, Measured:33.07, Output:55.10
+>Setpoint:24.00, Measured:32.90, Output:57.94
+>Setpoint:24.00, Measured:33.76, Output:39.72
+>Setpoint:24.00, Measured:33.51, Output:43.56
+>Setpoint:24.00, Measured:35.04, Output:11.59
+>Setpoint:24.00, Measured:35.29, Output:5.12
+>Setpoint:24.00, Measured:36.02, Output:-10.98
+>Setpoint:24.00, Measured:36.63, Output:-24.98
+>Setpoint:24.00, Measured:37.01, Output:-34.67
+>Setpoint:24.00, Measured:37.83, Output:-53.37
+>Setpoint:24.00, Measured:38.07, Output:-60.54
+>Setpoint:24.00, Measured:38.62, Output:-74.39
+>Setpoint:24.00, Measured:38.74, Output:-79.81
+>Setpoint:24.00, Measured:38.43, Output:-77.14
+>Setpoint:24.00, Measured:37.67, Output:-65.77
+>Setpoint:24.00, Measured:36.54, Output:-47.77
+>Setpoint:24.00, Measured:35.70, Output:-36.18
+>Setpoint:24.00, Measured:36.38, Output:-55.17
+>Setpoint:24.00, Measured:36.07, Output:-54.27
+>Setpoint:24.00, Measured:37.18, Output:-81.85
+>Setpoint:24.00, Measured:37.02, Output:-83.95
+>Setpoint:24.00, Measured:36.65, Output:-82.06
+>Setpoint:24.00, Measured:37.07, Output:-96.19
+>Setpoint:24.00, Measured:37.62, Output:-112.79
+>Setpoint:24.00, Measured:38.74, Output:-140.70
+>Setpoint:24.00, Measured:39.66, Output:-164.58
+>Setpoint:24.00, Measured:40.34, Output:-183.46
+>Setpoint:24.00, Measured:41.01, Output:-202.23
+>Setpoint:24.00, Measured:41.76, Output:-222.85
+>Setpoint:24.00, Measured:42.36, Output:-240.36
+>Setpoint:24.00, Measured:43.47, Output:-255.00
+>Setpoint:24.00, Measured:43.60, Output:-255.00
+>Setpoint:24.00, Measured:43.32, Output:-255.00
+>Setpoint:24.00, Measured:42.00, Output:-255.00
+>Setpoint:24.00, Measured:41.66, Output:-255.00
+>Setpoint:24.00, Measured:43.42, Output:-255.00
+>Setpoint:24.00, Measured:41.10, Output:-255.00
+>Setpoint:24.00, Measured:39.79, Output:-244.43
+>Setpoint:24.00, Measured:40.59, Output:-255.00
+>Setpoint:24.00, Measured:38.68, Output:-239.55
+>Setpoint:24.00, Measured:37.77, Output:-230.69
+>Setpoint:24.00, Measured:37.01, Output:-224.92
+>Setpoint:24.00, Measured:36.21, Output:-218.21
+>Setpoint:24.00, Measured:39.46, Output:-255.00
+>Setpoint:24.00, Measured:40.61, Output:-255.00
+>Setpoint:24.00, Measured:37.57, Output:-255.00
+>Setpoint:24.00, Measured:38.12, Output:-255.00
+>Setpoint:24.00, Measured:35.53, Output:-248.09
+>Setpoint:24.00, Measured:35.09, Output:-248.66
+>Setpoint:24.00, Measured:36.72, Output:-255.00
+>Setpoint:24.00, Measured:38.02, Output:-255.00
+>Setpoint:24.00, Measured:39.77, Output:-255.00
+>Setpoint:24.00, Measured:41.61, Output:-255.00
+>Setpoint:24.00, Measured:44.07, Output:-255.00
+>Setpoint:24.00, Measured:40.84, Output:-255.00
+>Setpoint:24.00, Measured:39.05, Output:-255.00
+>Setpoint:24.00, Measured:36.26, Output:-255.00
+>Setpoint:24.00, Measured:34.52, Output:-255.00
+>Setpoint:24.00, Measured:33.66, Output:-255.00
+>Setpoint:24.00, Measured:33.97, Output:-255.00
+>Setpoint:24.00, Measured:34.37, Output:-255.00
+>Setpoint:24.00, Measured:33.58, Output:-255.00
+>Setpoint:24.00, Measured:34.03, Output:-255.00
+>Setpoint:24.00, Measured:33.16, Output:-255.00
+>Setpoint:24.00, Measured:32.76, Output:-255.00
+>Setpoint:24.00, Measured:32.98, Output:-255.00
+>Setpoint:24.00, Measured:31.44, Output:-255.00
+>Setpoint:24.00, Measured:32.83, Output:-255.00

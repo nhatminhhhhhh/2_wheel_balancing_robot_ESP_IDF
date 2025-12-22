@@ -1,0 +1,706 @@
+
+rst:0x1 (����j!�m[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e668h (124520) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0002e690 vaddr=3ffb0000 size=01988h (  6536) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9295ch (600412) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2984 vaddr=3ffb1988 size=0264ch (  9804) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c4fd8 vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (429) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (456) app_init: ELF file SHA256:  64712a5e4...[0m
+[0;32mI (462) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (477) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (489) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFB8328 len 00027CD8 (159 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (525) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (542) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MAIN: Connecting to WiFi...[0m
+[0;32mI (603) wifi:wifi driver task: 3ffc0474, prio:23, stack:6656, core=0[0m
+[0;32mI (613) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (613) wifi:wifi certification version: v7.0[0m
+[0;32mI (613) wifi:config NVS flash: enabled[0m
+[0;32mI (613) wifi:config nano formating: disabled[0m
+[0;32mI (623) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (623) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (633) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (643) wifi:Init static rx buffer num: 10[0m
+[0;32mI (643) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (783) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (783) wifi:enable tsf[0m
+[0;32mI (783) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (803) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (803) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (823) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (833) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (883) wifi:connected with Tran Van Tuan, aid = 20, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (883) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (883) wifi:pm start, type: 1[0m
+
+[0;32mI (883) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (903) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (973) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3893) esp_netif_handlers: sta ip: 192.168.1.181, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.181
+[0;32mI (3893) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3893) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4903) WEBSERVER: [34mPID loaded from NVS - Kp: 40.40, Ki: 0.00, Kd: 0.636[0m[0m
+[0;32mI (4903) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4913) WEBSERVER: Web server started successfully![0m
+[0;32mI (4913) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5413) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5413) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5513) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5513) GPIO: LED GPIO initialized[0m
+[0;32mI (5513) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5523) GPIO: Button GPIO initialized[0m
+[0;32mI (5623) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (5723) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (5823) MAIN: I2C initialized successfully[0m
+[0;32mI (6123) MPU6050: Starting gyro calibration...[0m
+[0;32mI (10833) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (10833) MPU6050: Gyro offsets - X: -405.16, Y: -88.95, Z: 31.42[0m
+Robot ready. Press the button to start balancing...
+Pitch: -31.65
+Pitch: -12.93
+Pitch: -0.90
+Pitch: 8.83
+Pitch: 15.80
+Pitch: 21.92
+Pitch: 25.67
+Pitch: 29.20
+Pitch: 32.46
+Pitch: 33.34
+Pitch: 34.82
+Pitch: 36.57
+Pitch: 36.72
+Pitch: 35.60
+Pitch: 32.43
+Pitch: 29.66
+Pitch: 29.06
+Pitch: 27.00
+Pitch: 24.47
+Pitch: 24.81
+Pitch: 24.69
+Pitch: 24.37
+Pitch: 24.49
+Pitch: 25.87
+Pitch: 27.73
+Pitch: 30.24
+Pitch: 32.14
+Pitch: 32.68
+Pitch: 33.87
+Pitch: 34.25
+Pitch: 32.49
+Pitch: 29.96
+Pitch: 31.65
+Pitch: 27.98
+Pitch: 24.44
+Pitch: 23.31
+Pitch: 24.39
+Pitch: 27.52
+Pitch: 30.05
+Pitch: 32.57
+Pitch: 32.84
+Pitch: 31.24
+Pitch: 31.03
+Pitch: 32.15
+Pitch: 29.31
+Pitch: 27.26
+Pitch: 28.19
+Pitch: 29.27
+Pitch: 31.10
+Pitch: 31.21
+Pitch: 31.07
+Pitch: 31.78
+Pitch: 31.57
+Pitch: 31.10
+Pitch: 30.40
+Pitch: 29.93
+Pitch: 30.37
+Pitch: 30.21
+Pitch: 30.97
+Pitch: 31.46
+Pitch: 31.35
+Pitch: 31.44
+Pitch: 31.30
+Pitch: 31.29
+Pitch: 31.41
+Pitch: 31.28
+Pitch: 31.32
+Pitch: 31.45
+Pitch: 31.75
+Pitch: 31.94
+Pitch: 31.78
+Pitch: 32.11
+Pitch: 31.41
+Pitch: 31.99
+Pitch: 31.42
+Pitch: 31.86
+Pitch: 31.51
+Pitch: 31.49
+Pitch: 31.46
+Pitch: 31.17
+Pitch: 30.97
+Pitch: 30.77
+Pitch: 30.80
+Pitch: 30.78
+Pitch: 30.93
+Pitch: 31.13
+Pitch: 31.09
+Pitch: 31.37
+Pitch: 31.50
+Pitch: 31.42
+Pitch: 31.24
+Pitch: 31.18
+Pitch: 31.24
+Pitch: 31.27
+Pitch: 31.33
+Pitch: 31.30
+Pitch: 31.39
+Pitch: 31.54
+Pitch: 31.39
+Pitch: 31.39
+Pitch: 31.42
+Pitch: 31.39
+Pitch: 31.58
+Pitch: 31.84
+Pitch: 31.98
+Pitch: 32.07
+Pitch: 31.59
+Pitch: 32.17
+Pitch: 31.87
+Pitch: 31.10
+Pitch: 31.19
+Pitch: 31.09
+Pitch: 30.80
+Pitch: 30.79
+Pitch: 30.56
+Pitch: 30.36
+Pitch: 30.35
+Pitch: 30.36
+Pitch: 30.32
+Pitch: 30.27
+Pitch: 30.44
+Pitch: 30.63
+Pitch: 30.83
+Pitch: 30.90
+Pitch: 30.86
+Pitch: 30.90
+Pitch: 30.86
+Pitch: 30.77
+Pitch: 30.68
+Pitch: 30.79
+Pitch: 30.74
+Pitch: 30.64
+Pitch: 31.12
+Pitch: 31.53
+Pitch: 32.29
+Pitch: 32.92
+Pitch: 33.06
+Pitch: 32.70
+Pitch: 31.46
+Pitch: 31.31
+Pitch: 28.95
+Pitch: 26.83
+Pitch: 25.90
+Pitch: 26.77
+Pitch: 30.51
+Pitch: 29.99
+Pitch: 22.20
+Pitch: 24.81
+Pitch: 26.08
+Pitch: 26.08
+Pitch: 25.16
+Pitch: 26.63
+Pitch: 29.45
+Pitch: 33.87
+Pitch: 35.56
+Pitch: 35.19
+Pitch: 35.05
+Pitch: 34.10
+Pitch: 33.52
+Pitch: 31.30
+Pitch: 32.34
+Pitch: 28.83
+Pitch: 27.93
+Pitch: 27.40
+Pitch: 25.21
+Pitch: 25.20
+Pitch: 27.56
+Pitch: 27.86
+Pitch: 28.66
+Pitch: 29.72
+Pitch: 30.52
+Pitch: 29.98
+Pitch: 29.54
+Pitch: 29.90
+Pitch: 28.91
+Pitch: 28.82
+Pitch: 29.07
+Pitch: 29.48
+Pitch: 29.63
+Pitch: 29.51
+Pitch: 29.32
+Pitch: 29.10
+Pitch: 29.03
+Pitch: 28.94
+Pitch: 29.08
+Pitch: 29.00
+Pitch: 29.06
+Pitch: 29.05
+Pitch: 28.95
+Pitch: 29.02
+Pitch: 29.18
+Pitch: 29.11
+Pitch: 28.90
+Pitch: 28.90
+Pitch: 28.85
+Pitch: 28.94
+Pitch: 29.05
+Pitch: 29.07
+Pitch: 29.25
+Pitch: 29.12
+Pitch: 29.13
+Pitch: 29.06
+Pitch: 28.80
+Pitch: 28.63
+Pitch: 28.60
+Pitch: 28.55
+Pitch: 28.71
+Pitch: 28.68
+Pitch: 28.66
+Pitch: 28.62
+Pitch: 28.56
+Pitch: 28.52
+Pitch: 28.59
+Pitch: 28.61
+Pitch: 28.64
+Pitch: 28.71
+Pitch: 28.57
+Pitch: 28.54
+Pitch: 28.60
+Pitch: 28.41
+Pitch: 28.22
+Pitch: 28.05
+Pitch: 28.68
+Pitch: 29.28
+Pitch: 29.78
+Pitch: 29.95
+Pitch: 30.27
+Pitch: 30.12
+Pitch: 30.13
+Pitch: 29.93
+Pitch: 29.31
+Pitch: 29.04
+Pitch: 28.53
+Pitch: 28.24
+Pitch: 28.08
+Pitch: 28.26
+Pitch: 28.14
+Pitch: 28.31
+Pitch: 28.09
+Pitch: 28.53
+Pitch: 28.40
+Pitch: 28.65
+Pitch: 28.69
+Pitch: 28.70
+Pitch: 28.64
+Pitch: 28.69
+Pitch: 28.59
+Pitch: 28.56
+Pitch: 28.57
+Pitch: 28.69
+Pitch: 28.88
+Pitch: 28.69
+Pitch: 28.65
+Pitch: 28.52
+Pitch: 28.39
+Pitch: 28.23
+Pitch: 28.19
+Pitch: 28.25
+Pitch: 28.32
+Pitch: 28.47
+Pitch: 28.60
+Pitch: 28.60
+Pitch: 28.52
+Pitch: 28.37
+Pitch: 28.18
+Pitch: 28.05
+Pitch: 27.83
+Pitch: 28.27
+Pitch: 28.66
+Pitch: 29.64
+Pitch: 30.79
+Pitch: 30.95
+Pitch: 31.58
+Pitch: 31.68
+Pitch: 31.58
+Pitch: 31.72
+Pitch: 32.14
+Pitch: 32.31
+Pitch: 32.73
+Pitch: 32.26
+Pitch: 32.55
+Pitch: 22.11
+Pitch: 20.03
+Pitch: 19.05
+Pitch: 16.40
+Pitch: 12.22
+Pitch: 8.35
+Pitch: 7.63
+Pitch: 8.59
+Pitch: 9.75
+Pitch: 14.49
+Pitch: 18.42
+Pitch: 22.99
+Pitch: 26.45
+Pitch: 29.82
+Pitch: 22.62
+Pitch: 24.38
+Pitch: 24.13
+Pitch: 24.17
+Pitch: 26.02
+Pitch: 27.15
+Pitch: 27.94
+Pitch: 29.35
+Pitch: 30.93
+Pitch: 31.49
+Pitch: 33.26
+Pitch: 35.17
+Pitch: 35.03
+Pitch: 35.71
+Pitch: 37.26
+Pitch: 34.04
+Pitch: 28.13
+Pitch: 26.32
+Pitch: 22.90
+Pitch: 19.38
+Pitch: 16.31
+Pitch: 15.15
+Pitch: 16.80
+Pitch: 19.48
+Pitch: 20.20
+Pitch: 24.40
+Pitch: 26.93
+Pitch: 27.97
+Pitch: 29.76
+Pitch: 32.20
+Pitch: 33.81
+Pitch: 36.93
+Pitch: 38.17
+Pitch: 37.71
+Pitch: 37.58
+Pitch: 39.09
+Pitch: 37.80
+Pitch: 35.04
+Pitch: 30.24
+Pitch: 24.80
+Pitch: 22.03
+Pitch: 18.28
+Pitch: 16.90
+Pitch: 16.01
+Pitch: 14.90
+Pitch: 14.82
+Pitch: 14.78
+Pitch: 19.26
+Pitch: 19.88
+Pitch: 21.92
+Pitch: 24.15
+Pitch: 29.13
+Pitch: 31.41
+Pitch: 32.12
+Pitch: 36.94
+Pitch: 40.27
+Pitch: 42.21
+Pitch: 42.10
+Pitch: 41.00
+Pitch: 39.61
+Pitch: 38.92
+Pitch: 39.77
+Pitch: 37.96
+Pitch: 35.19
+Pitch: 32.05
+Pitch: 24.80
+Pitch: 19.90
+Pitch: 13.79
+Pitch: 7.90
+Pitch: 4.35
+Pitch: 2.18
+Pitch: -0.85
+Pitch: -1.76
+Pitch: -2.89
+Pitch: -0.49
+Pitch: 3.54
+Pitch: 3.06
+Pitch: 4.82
+Pitch: 5.57
+Pitch: 9.85
+Pitch: 15.59
+Pitch: 20.00
+Pitch: 26.08
+Pitch: 30.94
+Pitch: 37.61
+Pitch: 38.63
+Pitch: 41.37
+Pitch: 41.79
+Pitch: 41.53
+Pitch: 39.78
+Pitch: 38.24
+Pitch: 38.97
+Pitch: 37.78
+Pitch: 36.48
+Pitch: 37.61
+Pitch: 38.27
+Pitch: 40.65
+Pitch: 38.28
+Pitch: 27.76
+Pitch: 18.07
+Pitch: 11.50
+Pitch: 8.05
+Pitch: 7.54
+Pitch: 8.31
+Pitch: 8.50
+Pitch: 9.95
+Pitch: 10.94
+Pitch: 13.43
+Pitch: 15.67
+Pitch: 21.38
+Pitch: 24.13
+Pitch: 28.54
+Pitch: 31.19
+Pitch: 31.79
+Pitch: 33.82
+Pitch: 35.25
+Pitch: 36.19
+Pitch: 35.61
+Pitch: 34.63
+Pitch: 32.11
+Pitch: 31.92
+Pitch: 30.24
+Pitch: 27.28
+Pitch: 25.33
+Pitch: 23.44
+Pitch: 23.28
+Pitch: 27.95
+Pitch: 32.74
+Pitch: 34.42
+Pitch: 39.35
+Pitch: 42.97
+Pitch: 44.66
+Pitch: 43.18
+Pitch: 40.21
+Pitch: 27.30
+Pitch: 24.79
+Pitch: 24.67
+Pitch: 22.08
+Pitch: 18.74
+Pitch: 16.59
+Pitch: 19.62
+Pitch: 21.96
+Pitch: 24.81
+Pitch: 28.04
+Pitch: 31.23
+Pitch: 33.71
+Pitch: 35.73
+Pitch: 35.98
+Pitch: 35.58
+Pitch: 32.89
+Pitch: 31.16
+Pitch: 28.30
+Pitch: 27.45
+Pitch: 24.71
+Pitch: 21.66
+Pitch: 18.90
+Pitch: 20.82
+Pitch: 21.74
+Pitch: 25.62
+Pitch: 29.15
+Pitch: 31.93
+Pitch: 31.86
+Pitch: 33.40
+Pitch: 34.52
+Pitch: 32.47
+Pitch: 27.98
+Pitch: 24.32
+Pitch: 22.63
+Pitch: 20.68
+Pitch: 18.00
+Pitch: 19.47
+Pitch: 21.36
+Pitch: 23.77
+Pitch: 24.76
+Pitch: 27.44
+Pitch: 31.40
+Pitch: 32.79
+Pitch: 34.66
+Pitch: 36.76
+Pitch: 36.27
+Pitch: 34.66
+Pitch: 31.67
+Pitch: 28.41
+Pitch: 28.78
+Pitch: 26.16
+Pitch: 24.03
+Pitch: 23.35
+Pitch: 23.66
+Pitch: 25.07
+Pitch: 26.84
+Pitch: 29.65
+Pitch: 30.27
+Pitch: 31.06
+Pitch: 32.78
+Pitch: 34.01
+Pitch: 32.37
+Pitch: 29.29
+Pitch: 26.24
+Pitch: 25.23
+Pitch: 24.95
+Pitch: 23.12
+Pitch: 24.67
+Pitch: 25.69
+Pitch: 28.92
+Pitch: 31.63
+Pitch: 35.40
+Pitch: 35.50
+Pitch: 36.07
+Pitch: 35.23
+Pitch: 34.29
+Pitch: 30.55
+Pitch: 27.40
+Pitch: 26.90
+Pitch: 25.42
+Pitch: 22.56
+Pitch: 24.03
+Pitch: 24.25
+Pitch: 25.11
+Pitch: 29.04
+Pitch: 30.60
+Pitch: 31.91
+Pitch: 32.07
+Pitch: 32.20
+Pitch: 32.74
+Pitch: 32.14
+Pitch: 23.80
+Pitch: 21.26
+Pitch: 20.67
+Pitch: 17.70
+Pitch: 14.94
+Pitch: 14.52
+Pitch: 16.29
+Pitch: 19.41
+Pitch: 21.57
+Pitch: 24.20
+Pitch: 28.06
+Pitch: 29.47
+Pitch: 28.93
+Pitch: 29.87
+Pitch: 28.90
+Pitch: 26.30
+Pitch: 25.20
+Pitch: 24.73
+Pitch: 23.44
+Pitch: 25.48
+Pitch: 27.49
+Pitch: 27.50
+Pitch: 26.64
+Pitch: 27.97
+Pitch: 29.07
+Pitch: 29.66
+Pitch: 29.46
+Pitch: 29.45
+Pitch: 28.37
+Pitch: 27.28
+Pitch: 26.89
+Pitch: 26.80
+Pitch: 26.30
+Pitch: 26.19
+Pitch: 26.68
+Pitch: 27.10
+Pitch: 27.03
+Pitch: 26.83
+Pitch: 26.14
+Pitch: 25.63
+Pitch: 25.01
+Pitch: 25.93
+Pitch: 25.70
+Pitch: 27.12
+Pitch: 27.66
+Pitch: 28.32
+Pitch: 30.34
+Pitch: 30.57
+Pitch: 29.35
+Pitch: 28.34
+Pitch: 29.01
+Pitch: 28.74
+Pitch: 29.19
+Pitch: 29.30
+Pitch: 28.93
+Pitch: 29.12
+Pitch: 28.78
+Pitch: 28.49
+Pitch: 27.76
+Pitch: 28.84
+Pitch: 28.28
+Pitch: 28.32
+Pitch: 28.65
+Pitch: 28.45
+Pitch: 27.80
+Pitch: 29.48

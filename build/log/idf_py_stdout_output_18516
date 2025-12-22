@@ -1,0 +1,1955 @@
+el            Usage          Type ST Offset   Length[0m
+[0;32mI (51) b[0;32mI (13) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (17) boot: chip revision: v3.1[0m
+[0;32mI (21) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (26) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (30) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (35) boot: Enabling RNG early entropy source...[0m
+[0;32mI (40) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (73) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b988h ( 47496) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001b9b0 vaddr=3ffb0000 size=023fch (  9212) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001ddb4 vaddr=40080000 size=02264h (  8804) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=18460h ( 99424) map[0m
+[0;32mI (151) esp_image: segment 4: paddr=00038488 vaddr=40082264 size=0c050h ( 49232) load[0m
+[0;32mI (177) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (190) cpu_start: Multicore app[0m
+[0;32mI (198) cpu_start: Pro cpu start user code[0m
+[0;32mI (198) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (198) app_init: Application information:[0m
+[0;32mI (201) app_init: Project name:     IDF_project[0m
+[0;32mI (206) app_init: App version:      1[0m
+[0;32mI (211) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (217) app_init: ELF file SHA256:  9e6d539d8...[0m
+[0;32mI (222) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (232) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (237) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (242) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (249) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFB2D80 len 0002D280 (180 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (268) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (274) heap_init: At 4008E2B4 len 00011D4C (71 KiB): IRAM[0m
+[0;32mI (282) spi_flash: detected chip: generic[0m
+[0;32mI (285) spi_flash: flash io: dio[0m
+[0;33mW (289) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (302) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (313) main_task: Started on CPU0[0m
+[0;32mI (323) main_task: Calling app_main()[0m
+[0;32mI (323) MAIN: I2C initialized successfully[0m
+[0;32mI (323) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (323) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (433) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (433) GPIO: LED GPIO initialized[0m
+[0;32mI (433) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (443) GPIO: Button GPIO initialized[0m
+[0;32mI (743) MPU6050: Starting gyro calibration...[0m
+[0;32mI (5313) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (5313) MPU6050: Gyro offsets - X: -422.89, Y: -58.36, Z: -6.46[0m
+Check button press to start balancing...
+Setpoint: 0.00, Measured: 6.11, Error: -6.11, Output: -61.05, I Term: -0.061053, D Term: -549.473633
+Setpoint: 0.00, Measured: 11.69, Error: -11.69, Output: -116.92, I Term: -0.177972, D Term: -557.745239
+Setpoint: 0.00, Measured: 16.70, Error: -16.70, Output: -166.99, I Term: -0.344963, D Term: -506.424164
+Setpoint: 0.00, Measured: 21.22, Error: -21.22, Output: -212.19, I Term: -0.557154, D Term: -457.440399
+Setpoint: 0.00, Measured: 25.30, Error: -25.30, Output: -252.99, I Term: -0.810143, D Term: -412.928772
+Setpoint: 0.00, Measured: 28.90, Error: -28.90, Output: -289.02, I Term: -1.099160, D Term: -365.536682
+Setpoint: 0.00, Measured: 31.96, Error: -31.96, Output: -319.60, I Term: -1.418763, D Term: -311.837585
+Setpoint: 0.00, Measured: 35.16, Error: -35.16, Output: -351.63, I Term: -1.770390, D Term: -319.395660
+Setpoint: 0.00, Measured: 37.81, Error: -37.81, Output: -378.06, I Term: -2.148448, D Term: -269.817261
+Setpoint: 0.00, Measured: 40.34, Error: -40.34, Output: -403.39, I Term: -2.551843, D Term: -255.014984
+Setpoint: 0.00, Measured: 42.62, Error: -42.62, Output: -426.23, I Term: -2.978075, D Term: -231.034760
+Setpoint: 0.00, Measured: 44.76, Error: -44.76, Output: -447.58, I Term: -3.425655, D Term: -215.238571
+[0;32mI (6033) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6043) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6053) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6063) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6093) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6103) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6113) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6243) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6243) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6323) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6323) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6353) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6353) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6403) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6403) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6433) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6433) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6453) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6453) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6483) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6483) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6513) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6513) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6533) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6533) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6563) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6563) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6593) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6593) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6613) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6613) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6643) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6643) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6673) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6673) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6693) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6693) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6723) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6723) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6743) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6743) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6753) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6753) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6773) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6773) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6803) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6803) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6823) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6823) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6853) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6853) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6883) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6883) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6903) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6903) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6933) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6933) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6953) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6953) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6963) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6963) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6983) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6983) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (6993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7013) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7013) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7033) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7033) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7043) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7043) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7063) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7063) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7093) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7093) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7113) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7113) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7143) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7143) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7173) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7173) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7193) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7193) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7223) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7223) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7253) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7253) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7273) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7273) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7303) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7303) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7333) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7333) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7353) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7353) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7383) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7383) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7433) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7433) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7463) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7463) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7543) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7543) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7573) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7573) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7623) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7623) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7653) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7653) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7703) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7703) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;31mE (7733) MPU6050: Failed to read MPU6050 data[0m
+[0;32mI (7733) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7733) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7753) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7753) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7773) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7773) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7783) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7783) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7803) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7803) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7813) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7813) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7853) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7853) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7863) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7863) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7883) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7883) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7893) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7893) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7933) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7933) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7943) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7943) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7963) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7963) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7973) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7973) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (7993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8013) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8013) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8023) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8023) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8043) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8043) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8053) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8053) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8103) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8103) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8243) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8243) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8323) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8323) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8403) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8403) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8453) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8453) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8483) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8483) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8533) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8533) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8563) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8563) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8613) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8613) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8643) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8643) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8693) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8693) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8723) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8723) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8743) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8743) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8763) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8763) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8773) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8773) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8803) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8803) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8823) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8823) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8843) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8843) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8853) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8853) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8883) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8883) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8903) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8903) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8923) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8923) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8933) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8933) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8953) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8953) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8963) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8963) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8983) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (8983) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9003) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9003) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9013) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9013) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9033) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9033) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9043) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9043) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9063) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9063) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9093) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9093) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9113) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9113) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9143) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9143) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9173) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9173) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9193) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9193) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9223) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9223) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9253) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9253) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9273) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9273) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9303) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9303) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9333) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9333) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9353) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9353) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9383) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9383) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9433) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9433) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9463) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9463) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9513) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9513) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9543) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9543) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9573) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9573) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9593) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9593) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9623) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9623) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9653) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9653) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9673) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9673) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9703) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9703) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9733) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9733) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9753) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9753) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9763) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9763) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9783) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9783) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9813) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9813) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9843) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9843) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9863) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9863) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9893) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9893) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9923) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9923) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9943) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9943) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9953) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9953) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9973) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9973) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (9993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10003) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10003) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10023) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10023) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10033) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10033) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10053) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10053) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10103) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10103) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10113) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10113) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10243) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10243) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10323) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10323) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10453) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10453) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10533) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10533) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10573) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10573) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10623) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10623) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10653) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10653) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10703) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10703) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10733) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10733) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10743) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10743) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10763) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10763) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10783) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10783) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10813) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10813) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10843) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10843) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10863) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10863) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10893) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10893) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10923) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10923) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10943) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10943) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10953) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10953) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10973) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10973) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (10993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11003) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11003) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11023) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11023) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11033) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11033) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11053) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11053) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11103) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11103) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11163) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11243) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11243) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11333) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11333) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11453) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11453) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11543) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11543) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11573) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11573) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11623) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11623) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11653) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11653) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11703) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11703) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11733) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11733) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11753) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11753) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11763) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11763) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11783) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11783) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11793) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11813) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11813) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11833) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11843) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11843) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11863) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11863) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11873) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11893) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11893) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11913) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11923) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11923) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11943) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11943) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11963) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11963) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11973) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11973) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (11993) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12003) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12003) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12023) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12023) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12043) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12043) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12053) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12053) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12073) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12083) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12103) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12103) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12123) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12133) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12153) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12173) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12173) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12183) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12203) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12213) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12233) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12253) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12253) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12263) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12283) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12293) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12313) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12333) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12333) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12343) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12363) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12373) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12393) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12413) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12423) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12443) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12463) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12463) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12473) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12493) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12503) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12523) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12533) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12543) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12553) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12563) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12573) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12583) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12593) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12603) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12613) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12623) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12633) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12643) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12653) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12663) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12673) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12683) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12693) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12703) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12713) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12723) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12733) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12743) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (12753) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+Setpoint: 0.00, Measured: 44.68, Error: -44.68, Output: -446.84, I Term: -3.872496, D Term: -14.867865
+Setpoint: 0.00, Measured: 43.39, Error: -43.39, Output: -433.90, I Term: -4.306394, D Term: 115.000908
+Setpoint: 0.00, Measured: 42.24, Error: -42.24, Output: -422.42, I Term: -4.728817, D Term: 114.764709
+Setpoint: 0.00, Measured: 41.11, Error: -41.11, Output: -411.12, I Term: -5.139939, D Term: 113.192360
+Setpoint: 0.00, Measured: 39.85, Error: -39.85, Output: -398.48, I Term: -5.538415, D Term: 125.131416
+Setpoint: 0.00, Measured: 38.49, Error: -38.49, Output: -384.93, I Term: -5.923341, D Term: 134.464813
+Setpoint: 0.00, Measured: 37.01, Error: -37.01, Output: -370.13, I Term: -6.293474, D Term: 146.584991
+Setpoint: 0.00, Measured: 35.32, Error: -35.32, Output: -353.24, I Term: -6.646715, D Term: 166.690063
+Setpoint: 0.00, Measured: 33.32, Error: -33.32, Output: -333.21, I Term: -6.979927, D Term: 196.926498
+Setpoint: 0.00, Measured: 31.32, Error: -31.32, Output: -313.22, I Term: -7.293149, D Term: 199.599274
+Setpoint: 0.00, Measured: 29.28, Error: -29.28, Output: -292.81, I Term: -7.585962, D Term: 203.639999
+Setpoint: 0.00, Measured: 27.03, Error: -27.03, Output: -270.26, I Term: -7.856227, D Term: 223.299667
+Setpoint: 0.00, Measured: 24.75, Error: -24.75, Output: -247.46, I Term: -8.103690, D Term: 227.546677
+Setpoint: 0.00, Measured: 22.72, Error: -22.72, Output: -227.19, I Term: -8.330876, D Term: 205.246841
+Setpoint: 0.00, Measured: 21.13, Error: -21.13, Output: -211.33, I Term: -8.542203, D Term: 163.264389
+Setpoint: 0.00, Measured: 19.79, Error: -19.79, Output: -197.92, I Term: -8.740123, D Term: 136.986710
+Setpoint: 0.00, Measured: 18.43, Error: -18.43, Output: -184.32, I Term: -8.924444, D Term: 136.080536
+Setpoint: 0.00, Measured: 16.89, Error: -16.89, Output: -168.90, I Term: -9.093342, D Term: 152.427017
+Setpoint: 0.00, Measured: 15.31, Error: -15.31, Output: -153.12, I Term: -9.246463, D Term: 157.226746
+Setpoint: 0.00, Measured: 14.23, Error: -14.23, Output: -142.31, I Term: -9.388769, D Term: 113.055534
+Setpoint: 0.00, Measured: 13.48, Error: -13.48, Output: -134.78, I Term: -9.523549, D Term: 79.044678
+Setpoint: 0.00, Measured: 12.96, Error: -12.96, Output: -129.64, I Term: -9.653187, D Term: 54.185406
+Setpoint: 0.00, Measured: 12.74, Error: -12.74, Output: -127.42, I Term: -9.780611, D Term: 25.334438
+Setpoint: 0.00, Measured: 12.89, Error: -12.89, Output: -128.88, I Term: -9.909495, D Term: -10.601483
+Setpoint: 0.00, Measured: 13.34, Error: -13.34, Output: -133.43, I Term: -10.000000, D Term: -42.002075
+Setpoint: 0.00, Measured: 14.03, Error: -14.03, Output: -140.31, I Term: -10.000000, D Term: -66.127739
+Setpoint: 0.00, Measured: 14.61, Error: -14.61, Output: -146.12, I Term: -10.000000, D Term: -58.870529
+Setpoint: 0.00, Measured: 15.21, Error: -15.21, Output: -152.14, I Term: -10.000000, D Term: -60.049393
+Setpoint: 0.00, Measured: 15.57, Error: -15.57, Output: -155.71, I Term: -10.000000, D Term: -38.133167
+Setpoint: 0.00, Measured: 15.82, Error: -15.82, Output: -158.20, I Term: -10.000000, D Term: -26.251949
+Setpoint: 0.00, Measured: 16.01, Error: -16.01, Output: -160.11, I Term: -10.000000, D Term: -19.767986
+Setpoint: 0.00, Measured: 16.00, Error: -16.00, Output: -160.04, I Term: -10.000000, D Term: -1.360706
+Setpoint: 0.00, Measured: 15.96, Error: -15.96, Output: -159.64, I Term: -10.000000, D Term: 3.482208
+Setpoint: 0.00, Measured: 15.87, Error: -15.87, Output: -158.65, I Term: -10.000000, D Term: 9.208179
+Setpoint: 0.00, Measured: 15.71, Error: -15.71, Output: -157.11, I Term: -10.000000, D Term: 14.775780
+Setpoint: 0.00, Measured: 15.63, Error: -15.63, Output: -156.32, I Term: -10.000000, D Term: 8.599551
+Setpoint: 0.00, Measured: 15.66, Error: -15.66, Output: -156.59, I Term: -10.000000, D Term: -1.596862
+Setpoint: 0.00, Measured: 15.82, Error: -15.82, Output: -158.22, I Term: -10.000000, D Term: -14.793733
+Setpoint: 0.00, Measured: 16.09, Error: -16.09, Output: -160.91, I Term: -10.000000, D Term: -25.735298
+Setpoint: 0.00, Measured: 16.29, Error: -16.29, Output: -162.87, I Term: -10.000000, D Term: -20.130198
+Setpoint: 0.00, Measured: 16.04, Error: -16.04, Output: -160.41, I Term: -10.000000, D Term: 20.068642
+Setpoint: 0.00, Measured: 15.72, Error: -15.72, Output: -157.20, I Term: -10.000000, D Term: 30.912409
+Setpoint: 0.00, Measured: 15.29, Error: -15.29, Output: -152.89, I Term: -10.000000, D Term: 41.924217
+Setpoint: 0.00, Measured: 14.82, Error: -14.82, Output: -148.16, I Term: -10.000000, D Term: 46.739212
+Setpoint: 0.00, Measured: 14.39, Error: -14.39, Output: -143.95, I Term: -10.000000, D Term: 42.587826
+Setpoint: 0.00, Measured: 14.03, Error: -14.03, Output: -140.33, I Term: -10.000000, D Term: 36.818829
+Setpoint: 0.00, Measured: 13.68, Error: -13.68, Output: -136.82, I Term: -10.000000, D Term: 35.267063
+Setpoint: 0.00, Measured: 13.31, Error: -13.31, Output: -133.13, I Term: -10.000000, D Term: 36.749878
+Setpoint: 0.00, Measured: 12.94, Error: -12.94, Output: -129.38, I Term: -10.000000, D Term: 37.361557
+Setpoint: 0.00, Measured: 12.68, Error: -12.68, Output: -126.79, I Term: -10.000000, D Term: 27.040733
+Setpoint: 0.00, Measured: 12.56, Error: -12.56, Output: -125.62, I Term: -10.000000, D Term: 13.229491
+Setpoint: 0.00, Measured: 12.49, Error: -12.49, Output: -124.86, I Term: -10.000000, D Term: 8.205369
+Setpoint: 0.00, Measured: 12.50, Error: -12.50, Output: -124.97, I Term: -10.000000, D Term: -0.161108
+Setpoint: 0.00, Measured: 12.44, Error: -12.44, Output: -124.36, I Term: -10.000000, D Term: 5.463234
+Setpoint: 0.00, Measured: 12.34, Error: -12.34, Output: -123.37, I Term: -10.000000, D Term: 9.476406
+Setpoint: 0.00, Measured: 12.23, Error: -12.23, Output: -122.28, I Term: -10.000000, D Term: 10.772765
+Setpoint: 0.00, Measured: 12.02, Error: -12.02, Output: -120.24, I Term: -10.000000, D Term: 19.424015
+Setpoint: 0.00, Measured: 11.70, Error: -11.70, Output: -117.05, I Term: -10.000000, D Term: 30.636116
+Setpoint: 0.00, Measured: 11.38, Error: -11.38, Output: -113.82, I Term: -10.000000, D Term: 32.142277
+Setpoint: 0.00, Measured: 11.10, Error: -11.10, Output: -111.04, I Term: -10.000000, D Term: 28.201429
+Setpoint: 0.00, Measured: 10.76, Error: -10.76, Output: -107.56, I Term: -10.000000, D Term: 34.121910
+Setpoint: 0.00, Measured: 10.30, Error: -10.30, Output: -102.97, I Term: -10.000000, D Term: 44.761726
+Setpoint: 0.00, Measured: 9.85, Error: -9.85, Output: -98.54, I Term: -10.000000, D Term: 44.360577
+Setpoint: 0.00, Measured: 9.55, Error: -9.55, Output: -95.50, I Term: -10.000000, D Term: 31.741461
+Setpoint: 0.00, Measured: 9.34, Error: -9.34, Output: -93.44, I Term: -10.000000, D Term: 21.737951
+Setpoint: 0.00, Measured: 9.33, Error: -9.33, Output: -93.26, I Term: -10.000000, D Term: 3.828011
+Setpoint: 0.00, Measured: 9.41, Error: -9.41, Output: -94.11, I Term: -10.000000, D Term: -7.299303
+Setpoint: 0.00, Measured: 9.47, Error: -9.47, Output: -94.67, I Term: -10.000000, D Term: -5.794971
+Setpoint: 0.00, Measured: 9.30, Error: -9.30, Output: -93.04, I Term: -10.000000, D Term: 14.087594
+Setpoint: 0.00, Measured: 8.98, Error: -8.98, Output: -89.81, I Term: -10.000000, D Term: 30.507767
+Setpoint: 0.00, Measured: 9.12, Error: -9.12, Output: -91.20, I Term: -10.000000, D Term: -9.417160
+Setpoint: 0.00, Measured: 9.32, Error: -9.32, Output: -93.16, I Term: -10.000000, D Term: -18.635027
+Setpoint: 0.00, Measured: 9.74, Error: -9.74, Output: -97.36, I Term: -10.000000, D Term: -39.642052
+Setpoint: 0.00, Measured: 9.94, Error: -9.94, Output: -99.36, I Term: -10.000000, D Term: -21.961615
+Setpoint: 0.00, Measured: 9.92, Error: -9.92, Output: -99.16, I Term: -10.000000, D Term: -0.388139
+Setpoint: 0.00, Measured: 9.54, Error: -9.54, Output: -95.44, I Term: -10.000000, D Term: 33.432407
+Setpoint: 0.00, Measured: 9.05, Error: -9.05, Output: -90.54, I Term: -10.000000, D Term: 47.402195
+Setpoint: 0.00, Measured: 8.64, Error: -8.64, Output: -86.35, I Term: -10.000000, D Term: 42.484093
+Setpoint: 0.00, Measured: 8.40, Error: -8.40, Output: -83.96, I Term: -10.000000, D Term: 25.727367
+Setpoint: 0.00, Measured: 8.27, Error: -8.27, Output: -82.69, I Term: -10.000000, D Term: 14.036799
+Setpoint: 0.00, Measured: 8.32, Error: -8.32, Output: -83.18, I Term: -10.000000, D Term: -2.968363
+Setpoint: 0.00, Measured: 8.48, Error: -8.48, Output: -84.81, I Term: -10.000000, D Term: -15.036198
+Setpoint: 0.00, Measured: 8.75, Error: -8.75, Output: -87.49, I Term: -10.000000, D Term: -25.573463
+Setpoint: 0.00, Measured: 9.66, Error: -9.66, Output: -96.55, I Term: -10.000000, D Term: -84.131348
+Setpoint: 0.00, Measured: 10.39, Error: -10.39, Output: -103.92, I Term: -10.000000, D Term: -74.755455
+Setpoint: 0.00, Measured: 10.58, Error: -10.58, Output: -105.82, I Term: -10.000000, D Term: -24.499893
+Setpoint: 0.00, Measured: 10.89, Error: -10.89, Output: -108.89, I Term: -10.000000, D Term: -30.079231
+Setpoint: 0.00, Measured: 11.26, Error: -11.26, Output: -112.64, I Term: -10.000000, D Term: -36.783329
+Setpoint: 0.00, Measured: 11.62, Error: -11.62, Output: -116.21, I Term: -10.000000, D Term: -35.848103
+Setpoint: 0.00, Measured: 11.74, Error: -11.74, Output: -117.38, I Term: -10.000000, D Term: -14.092977
+Setpoint: 0.00, Measured: 12.26, Error: -12.26, Output: -122.64, I Term: -10.000000, D Term: -48.711533
+Setpoint: 0.00, Measured: 12.50, Error: -12.50, Output: -125.00, I Term: -10.000000, D Term: -26.185061
+Setpoint: 0.00, Measured: 12.61, Error: -12.61, Output: -126.14, I Term: -10.000000, D Term: -12.865317
+Setpoint: 0.00, Measured: 12.46, Error: -12.46, Output: -124.60, I Term: -10.000000, D Term: 12.574952
+Setpoint: 0.00, Measured: 12.40, Error: -12.40, Output: -124.00, I Term: -10.000000, D Term: 6.676502
+Setpoint: 0.00, Measured: 12.12, Error: -12.12, Output: -121.18, I Term: -10.000000, D Term: 26.077911
+Setpoint: 0.00, Measured: 11.64, Error: -11.64, Output: -116.44, I Term: -10.000000, D Term: 45.251995
+Setpoint: 0.00, Measured: 10.97, Error: -10.97, Output: -109.71, I Term: -10.000000, D Term: 65.053261
+Setpoint: 0.00, Measured: 10.07, Error: -10.07, Output: -100.72, I Term: -10.000000, D Term: 87.427612
+Setpoint: 0.00, Measured: 9.39, Error: -9.39, Output: -93.85, I Term: -10.000000, D Term: 70.586090
+Setpoint: 0.00, Measured: 8.76, Error: -8.76, Output: -87.56, I Term: -10.000000, D Term: 63.661804
+Setpoint: 0.00, Measured: 8.14, Error: -8.14, Output: -81.38, I Term: -10.000000, D Term: 61.997513
+Setpoint: 0.00, Measured: 7.63, Error: -7.63, Output: -76.33, I Term: -10.000000, D Term: 51.666756
+Setpoint: 0.00, Measured: 7.12, Error: -7.12, Output: -71.21, I Term: -10.000000, D Term: 51.242218
+Setpoint: 0.00, Measured: 6.83, Error: -6.83, Output: -68.29, I Term: -10.000000, D Term: 31.407125
+Setpoint: 0.00, Measured: 6.63, Error: -6.63, Output: -66.30, I Term: -10.000000, D Term: 21.061430
+Setpoint: 0.00, Measured: 6.01, Error: -6.01, Output: -60.07, I Term: -10.000000, D Term: 58.154011
+Setpoint: 0.00, Measured: 5.49, Error: -5.49, Output: -54.93, I Term: -10.000000, D Term: 52.059605
+Setpoint: 0.00, Measured: 5.03, Error: -5.03, Output: -50.33, I Term: -10.000000, D Term: 46.599743
+Setpoint: 0.00, Measured: 4.55, Error: -4.55, Output: -45.45, I Term: -10.000000, D Term: 48.554562
+Setpoint: 0.00, Measured: 4.06, Error: -4.06, Output: -40.60, I Term: -10.000000, D Term: 48.538170
+Setpoint: 0.00, Measured: 3.71, Error: -3.71, Output: -37.07, I Term: -10.000000, D Term: 36.675049
+Setpoint: 0.00, Measured: 3.55, Error: -3.55, Output: -35.47, I Term: -10.000000, D Term: 18.035841
+Setpoint: 0.00, Measured: 3.32, Error: -3.32, Output: -33.18, I Term: -10.000000, D Term: 22.361923
+Setpoint: 0.00, Measured: 3.10, Error: -3.10, Output: -31.01, I Term: -10.000000, D Term: 21.807392
+Setpoint: 0.00, Measured: 2.92, Error: -2.92, Output: -29.16, I Term: -10.000000, D Term: 18.826614
+Setpoint: 0.00, Measured: 2.77, Error: -2.77, Output: -27.66, I Term: -10.000000, D Term: 15.360890
+Setpoint: 0.00, Measured: 2.67, Error: -2.67, Output: -26.67, I Term: -10.000000, D Term: 10.479004
+Setpoint: 0.00, Measured: 2.67, Error: -2.67, Output: -26.68, I Term: -10.000000, D Term: 0.976597
+Setpoint: 0.00, Measured: 2.67, Error: -2.67, Output: -26.66, I Term: -10.000000, D Term: 0.279363
+Setpoint: 0.00, Measured: 2.68, Error: -2.68, Output: -26.75, I Term: -10.000000, D Term: -0.832237
+Setpoint: 0.00, Measured: 2.68, Error: -2.68, Output: -26.85, I Term: -10.000000, D Term: -0.930695
+Setpoint: 0.00, Measured: 2.74, Error: -2.74, Output: -27.37, I Term: -10.000000, D Term: -4.796205
+Setpoint: 0.00, Measured: 2.74, Error: -2.74, Output: -27.37, I Term: -10.000000, D Term: -0.523909
+Setpoint: 0.00, Measured: 2.70, Error: -2.70, Output: -27.00, I Term: -10.000000, D Term: 3.288547
+Setpoint: 0.00, Measured: 2.70, Error: -2.70, Output: -26.95, I Term: -10.000000, D Term: 0.778286
+Setpoint: 0.00, Measured: 2.79, Error: -2.79, Output: -27.88, I Term: -10.000000, D Term: -8.254786
+Setpoint: 0.00, Measured: 3.00, Error: -3.00, Output: -30.02, I Term: -10.000000, D Term: -20.075886
+Setpoint: 0.00, Measured: 3.21, Error: -3.21, Output: -32.09, I Term: -10.000000, D Term: -20.641882
+Setpoint: 0.00, Measured: 2.99, Error: -2.99, Output: -29.94, I Term: -10.000000, D Term: 17.302198
+Setpoint: 0.00, Measured: 2.80, Error: -2.80, Output: -28.01, I Term: -10.000000, D Term: 19.055296
+Setpoint: 0.00, Measured: 2.67, Error: -2.67, Output: -26.72, I Term: -10.000000, D Term: 13.552604
+Setpoint: 0.00, Measured: 2.45, Error: -2.45, Output: -24.47, I Term: -10.000000, D Term: 21.625916
+Setpoint: 0.00, Measured: 2.31, Error: -2.31, Output: -23.08, I Term: -10.000000, D Term: 14.642824
+Setpoint: 0.00, Measured: 1.88, Error: -1.88, Output: -18.83, I Term: -10.000000, D Term: 39.678574
+Setpoint: 0.00, Measured: 1.58, Error: -1.58, Output: -15.78, I Term: -10.000000, D Term: 31.451962
+Setpoint: 0.00, Measured: 1.29, Error: -1.29, Output: -12.90, I Term: -10.000000, D Term: 29.024363
+Setpoint: 0.00, Measured: 1.14, Error: -1.14, Output: -11.35, I Term: -10.000000, D Term: 16.843819
+Setpoint: 0.00, Measured: 1.19, Error: -1.19, Output: -11.89, I Term: -10.000000, D Term: -3.166500
+Setpoint: 0.00, Measured: 1.45, Error: -1.45, Output: -14.54, I Term: -10.000000, D Term: -24.149204
+Setpoint: 0.00, Measured: 1.28, Error: -1.28, Output: -12.79, I Term: -10.000000, D Term: 13.384857
+Setpoint: 0.00, Measured: 1.21, Error: -1.21, Output: -12.13, I Term: -10.000000, D Term: 7.256190
+Setpoint: 0.00, Measured: 1.21, Error: -1.21, Output: -12.05, I Term: -10.000000, D Term: 1.398811
+Setpoint: 0.00, Measured: 1.13, Error: -1.13, Output: -11.31, I Term: -10.000000, D Term: 6.795987
+Setpoint: 0.00, Measured: 1.02, Error: -1.02, Output: -10.24, I Term: -10.000000, D Term: 10.381363
+Setpoint: 0.00, Measured: 0.97, Error: -0.97, Output: -9.69, I Term: -10.000000, D Term: 5.915948
+Setpoint: 0.00, Measured: 0.99, Error: -0.99, Output: -9.88, I Term: -10.000000, D Term: -1.065876
+Setpoint: 0.00, Measured: 1.03, Error: -1.03, Output: -10.28, I Term: -10.000000, D Term: -3.708875
+Setpoint: 0.00, Measured: 0.99, Error: -0.99, Output: -9.92, I Term: -10.000000, D Term: 2.875122
+Setpoint: 0.00, Measured: 0.84, Error: -0.84, Output: -8.44, I Term: -10.000000, D Term: 13.544716
+Setpoint: 0.00, Measured: 0.63, Error: -0.63, Output: -6.27, I Term: -10.000000, D Term: 20.943985
+Setpoint: 0.00, Measured: 0.38, Error: -0.38, Output: -3.81, I Term: -10.000000, D Term: 24.228191
+Setpoint: 0.00, Measured: 0.13, Error: -0.13, Output: -1.25, I Term: -10.000000, D Term: 25.426064
+Setpoint: 0.00, Measured: -0.03, Error: 0.03, Output: 0.29, I Term: -9.999710, D Term: 16.423910
+Setpoint: 0.00, Measured: -0.04, Error: 0.04, Output: 0.36, I Term: -9.999347, D Term: 2.309164
+Setpoint: 0.00, Measured: -0.01, Error: 0.01, Output: 0.09, I Term: -9.999252, D Term: -2.196585
+Setpoint: 0.00, Measured: -0.02, Error: 0.02, Output: 0.19, I Term: -9.999067, D Term: 0.600586
+Setpoint: 0.00, Measured: 0.10, Error: -0.10, Output: -1.02, I Term: -10.000000, D Term: -10.757791
+Setpoint: 0.00, Measured: 0.15, Error: -0.15, Output: -1.52, I Term: -10.000000, D Term: -5.586345
+Setpoint: 0.00, Measured: 0.26, Error: -0.26, Output: -2.65, I Term: -10.000000, D Term: -10.705981
+Setpoint: 0.00, Measured: 0.39, Error: -0.39, Output: -3.89, I Term: -10.000000, D Term: -12.253208
+Setpoint: 0.00, Measured: 0.52, Error: -0.52, Output: -5.16, I Term: -10.000000, D Term: -12.709153
+Setpoint: 0.00, Measured: 0.60, Error: -0.60, Output: -5.99, I Term: -10.000000, D Term: -8.697674
+Setpoint: 0.00, Measured: 0.64, Error: -0.64, Output: -6.40, I Term: -10.000000, D Term: -4.594299
+Setpoint: 0.00, Measured: 0.67, Error: -0.67, Output: -6.66, I Term: -10.000000, D Term: -2.815520
+Setpoint: 0.00, Measured: 0.61, Error: -0.61, Output: -6.14, I Term: -10.000000, D Term: 4.421970
+Setpoint: 0.00, Measured: 0.54, Error: -0.54, Output: -5.44, I Term: -10.000000, D Term: 6.804879
+Setpoint: 0.00, Measured: 0.50, Error: -0.50, Output: -5.04, I Term: -10.000000, D Term: 4.232280
+Setpoint: 0.00, Measured: 0.49, Error: -0.49, Output: -4.90, I Term: -10.000000, D Term: 1.669747
+Setpoint: 0.00, Measured: 0.47, Error: -0.47, Output: -4.71, I Term: -10.000000, D Term: 1.901720
+Setpoint: 0.00, Measured: 0.45, Error: -0.45, Output: -4.47, I Term: -10.000000, D Term: 2.305024
+Setpoint: 0.00, Measured: 0.44, Error: -0.44, Output: -4.39, I Term: -10.000000, D Term: 0.954299
+Setpoint: 0.00, Measured: 0.31, Error: -0.31, Output: -3.07, I Term: -10.000000, D Term: 11.992431
+Setpoint: 0.00, Measured: 0.17, Error: -0.17, Output: -1.75, I Term: -10.000000, D Term: 13.101392
+Setpoint: 0.00, Measured: 0.08, Error: -0.08, Output: -0.84, I Term: -10.000000, D Term: 9.483810
+Setpoint: 0.00, Measured: 0.03, Error: -0.03, Output: -0.31, I Term: -10.000000, D Term: 5.720140
+Setpoint: 0.00, Measured: -0.04, Error: 0.04, Output: 0.43, I Term: -9.999565, D Term: 7.283776
+Setpoint: 0.00, Measured: -0.13, Error: 0.13, Output: 1.27, I Term: -9.998297, D Term: 8.231452
+Setpoint: 0.00, Measured: -0.35, Error: 0.35, Output: 3.46, I Term: -9.994833, D Term: 20.581749
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...
+Check button press to start balancing...

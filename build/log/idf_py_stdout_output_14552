@@ -1,0 +1,417 @@
+9 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0�ښ�j%�(49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c3f8h ( 50168) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001c420 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001e7bc vaddr=40080000 size=0185ch (  6236) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1957ch (103804) map[0m
+[0;32mI (172) esp_image: segment 4: paddr=000395a4 vaddr=4008185c size=0c914h ( 51476) load[0m
+[0;32mI (199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (212) cpu_start: Multicore app[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     IDF_project[0m
+[0;32mI (228) app_init: App version:      1[0m
+[0;32mI (233) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (239) app_init: ELF file SHA256:  07c3e7506...[0m
+[0;32mI (244) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (249) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (254) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (259) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (264) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (271) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (290) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (296) heap_init: At 4008E170 len 00011E90 (71 KiB): IRAM[0m
+[0;32mI (304) spi_flash: detected chip: generic[0m
+[0;32mI (307) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (324) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (335) main_task: Started on CPU0[0m
+[0;32mI (345) main_task: Calling app_main()[0m
+[0;32mI (345) MAIN: I2C initialized successfully[0m
+[0;32mI (345) MOTOR: Initializing MCPWM for motor control[0m
+[0;32mI (345) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (365) MOTOR: Motor PWM initialized successfully[0m
+[0;32mI (475) MPU6050: WHO_AM_I register: 0x68 (expected 0x68)[0m
+[0;32mI (475) MPU6050: MPU6050 detected successfully![0m
+[0;32mI (775) MPU6050: Starting gyro calibration...[0m
+[0;32mI (995) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (995) MPU6050: Gyro offsets - X: 235.26, Y: -680.01, Z: 95.95[0m
+>Pitch Angle: 3.691662
+>Pitch Angle: 7.174084
+>Pitch Angle: 10.453887
+>Pitch Angle: 13.545641
+>Pitch Angle: 16.446739
+>Pitch Angle: 19.165716
+>Pitch Angle: 21.730766
+>Pitch Angle: 24.137024
+>Pitch Angle: 26.403576
+>Pitch Angle: 28.525749
+>Pitch Angle: 30.525911
+>Pitch Angle: 32.408710
+>Pitch Angle: 34.172012
+>Pitch Angle: 35.823231
+>Pitch Angle: 37.366859
+>Pitch Angle: 38.820541
+>Pitch Angle: 40.201488
+>Pitch Angle: 41.500618
+>Pitch Angle: 42.736824
+>Pitch Angle: 43.908386
+>Pitch Angle: 45.006092
+>Pitch Angle: 46.031891
+>Pitch Angle: 46.991531
+>Pitch Angle: 47.895180
+>Pitch Angle: 48.720970
+>Pitch Angle: 49.502533
+>Pitch Angle: 50.240028
+>Pitch Angle: 50.914711
+>Pitch Angle: 51.551857
+>Pitch Angle: 52.165699
+>Pitch Angle: 52.746601
+>Pitch Angle: 53.294571
+>Pitch Angle: 53.820251
+>Pitch Angle: 54.327087
+>Pitch Angle: 54.790466
+>Pitch Angle: 55.224159
+>Pitch Angle: 55.627613
+>Pitch Angle: 56.005333
+>Pitch Angle: 56.352436
+>Pitch Angle: 56.661507
+>Pitch Angle: 56.955120
+>Pitch Angle: 57.231819
+>Pitch Angle: 57.504272
+>Pitch Angle: 57.758698
+>Pitch Angle: 57.999397
+>Pitch Angle: 58.238747
+>Pitch Angle: 58.473724
+>Pitch Angle: 58.685036
+>Pitch Angle: 58.889519
+>Pitch Angle: 59.081306
+>Pitch Angle: 59.258438
+>Pitch Angle: 59.390808
+>Pitch Angle: 59.523094
+>Pitch Angle: 59.660328
+>Pitch Angle: 59.777946
+>Pitch Angle: 59.885635
+>Pitch Angle: 59.985565
+>Pitch Angle: 60.110767
+>Pitch Angle: 60.237823
+>Pitch Angle: 60.335747
+>Pitch Angle: 60.437103
+>Pitch Angle: 60.508640
+>Pitch Angle: 60.587120
+>Pitch Angle: 60.646862
+>Pitch Angle: 60.715385
+>Pitch Angle: 60.765099
+>Pitch Angle: 60.815536
+>Pitch Angle: 60.874134
+>Pitch Angle: 60.930885
+>Pitch Angle: 60.997749
+>Pitch Angle: 61.058926
+>Pitch Angle: 61.118782
+>Pitch Angle: 61.170387
+>Pitch Angle: 61.217300
+>Pitch Angle: 61.254269
+>Pitch Angle: 61.279442
+>Pitch Angle: 61.302834
+>Pitch Angle: 61.313557
+>Pitch Angle: 61.331333
+>Pitch Angle: 61.363350
+>Pitch Angle: 61.390152
+>Pitch Angle: 61.424629
+>Pitch Angle: 61.467285
+>Pitch Angle: 61.496368
+>Pitch Angle: 61.525578
+>Pitch Angle: 61.529854
+>Pitch Angle: 61.549294
+>Pitch Angle: 61.544746
+>Pitch Angle: 61.541149
+>Pitch Angle: 61.554394
+>Pitch Angle: 61.566216
+>Pitch Angle: 61.588062
+>Pitch Angle: 61.602242
+>Pitch Angle: 61.613182
+>Pitch Angle: 61.620178
+>Pitch Angle: 61.625736
+>Pitch Angle: 61.640236
+>Pitch Angle: 61.651001
+>Pitch Angle: 61.678421
+>Pitch Angle: 61.692863
+>Pitch Angle: 61.713692
+>Pitch Angle: 61.730862
+>Pitch Angle: 61.742188
+>Pitch Angle: 61.762459
+>Pitch Angle: 61.751984
+>Pitch Angle: 61.734962
+>Pitch Angle: 61.727993
+>Pitch Angle: 61.728180
+>Pitch Angle: 61.733097
+>Pitch Angle: 61.735001
+>Pitch Angle: 61.737350
+>Pitch Angle: 61.757698
+>Pitch Angle: 61.767525
+>Pitch Angle: 61.791195
+>Pitch Angle: 61.803009
+>Pitch Angle: 61.802727
+>Pitch Angle: 61.805199
+>Pitch Angle: 61.817566
+>Pitch Angle: 61.828728
+>Pitch Angle: 61.831150
+>Pitch Angle: 61.833939
+>Pitch Angle: 61.822212
+>Pitch Angle: 61.824280
+>Pitch Angle: 61.817959
+>Pitch Angle: 61.817841
+>Pitch Angle: 61.813026
+>Pitch Angle: 61.820889
+>Pitch Angle: 61.819511
+>Pitch Angle: 61.816391
+>Pitch Angle: 61.827030
+>Pitch Angle: 61.829971
+>Pitch Angle: 61.844429
+>Pitch Angle: 61.846920
+>Pitch Angle: 61.847404
+>Pitch Angle: 61.845100
+>Pitch Angle: 61.851284
+>Pitch Angle: 61.851620
+>Pitch Angle: 61.854294
+>Pitch Angle: 61.858925
+>Pitch Angle: 61.861561
+>Pitch Angle: 61.863750
+>Pitch Angle: 61.874588
+>Pitch Angle: 61.877399
+>Pitch Angle: 61.885719
+>Pitch Angle: 61.875816
+>Pitch Angle: 61.881668
+>Pitch Angle: 61.878826
+>Pitch Angle: 61.873913
+>Pitch Angle: 61.886093
+>Pitch Angle: 61.879871
+>Pitch Angle: 61.867622
+>Pitch Angle: 61.857449
+>Pitch Angle: 61.850201
+>Pitch Angle: 61.844086
+>Pitch Angle: 61.839928
+>Pitch Angle: 61.838127
+>Pitch Angle: 61.846272
+>Pitch Angle: 61.863400
+>Pitch Angle: 61.891457
+>Pitch Angle: 61.914749
+>Pitch Angle: 61.923695
+>Pitch Angle: 61.918282
+>Pitch Angle: 61.910339
+>Pitch Angle: 61.896049
+>Pitch Angle: 61.889549
+>Pitch Angle: 61.880882
+>Pitch Angle: 61.888447
+>Pitch Angle: 61.904709
+>Pitch Angle: 61.911983
+>Pitch Angle: 61.909325
+>Pitch Angle: 61.912243
+>Pitch Angle: 61.903770
+>Pitch Angle: 61.912384
+>Pitch Angle: 61.908745
+>Pitch Angle: 61.885567
+>Pitch Angle: 61.868881
+>Pitch Angle: 61.851311
+>Pitch Angle: 61.838127
+>Pitch Angle: 61.838066
+>Pitch Angle: 61.849045
+>Pitch Angle: 61.850952
+>Pitch Angle: 61.869362
+>Pitch Angle: 61.876984
+>Pitch Angle: 61.887913
+>Pitch Angle: 61.881798
+>Pitch Angle: 61.878716
+>Pitch Angle: 61.888107
+>Pitch Angle: 61.889042
+>Pitch Angle: 61.877682
+>Pitch Angle: 61.870804
+>Pitch Angle: 61.849091
+>Pitch Angle: 61.846313
+>Pitch Angle: 61.842911
+>Pitch Angle: 61.840492
+>Pitch Angle: 61.843983
+>Pitch Angle: 61.855659
+>Pitch Angle: 61.863091
+>Pitch Angle: 61.856663
+>Pitch Angle: 61.865189
+>Pitch Angle: 61.875927
+>Pitch Angle: 61.862724
+>Pitch Angle: 61.844906
+>Pitch Angle: 61.839310
+>Pitch Angle: 61.837753
+>Pitch Angle: 61.835129
+>Pitch Angle: 61.830208
+>Pitch Angle: 61.845608
+>Pitch Angle: 61.854557
+>Pitch Angle: 61.878597
+>Pitch Angle: 61.874741
+>Pitch Angle: 61.876678
+>Pitch Angle: 61.879776
+>Pitch Angle: 61.852966
+>Pitch Angle: 61.831139
+>Pitch Angle: 61.812187
+>Pitch Angle: 61.812454
+>Pitch Angle: 61.824642
+>Pitch Angle: 61.842636
+>Pitch Angle: 61.868961
+>Pitch Angle: 61.878853
+>Pitch Angle: 61.887390
+>Pitch Angle: 61.890266
+>Pitch Angle: 61.893394
+>Pitch Angle: 61.895184
+>Pitch Angle: 61.880379
+>Pitch Angle: 61.870384
+>Pitch Angle: 61.843407
+>Pitch Angle: 61.842567
+>Pitch Angle: 61.835800
+>Pitch Angle: 61.830158
+>Pitch Angle: 61.826553
+>Pitch Angle: 61.829590
+>Pitch Angle: 61.855251
+>Pitch Angle: 61.880676
+>Pitch Angle: 61.893192
+>Pitch Angle: 61.892311
+>Pitch Angle: 61.876793
+>Pitch Angle: 61.848244
+>Pitch Angle: 61.807442
+>Pitch Angle: 61.794067
+>Pitch Angle: 61.784962
+>Pitch Angle: 61.803337
+>Pitch Angle: 61.810783
+>Pitch Angle: 61.840515
+>Pitch Angle: 61.864220
+>Pitch Angle: 61.874489
+>Pitch Angle: 61.870041
+>Pitch Angle: 61.869026
+>Pitch Angle: 61.858742
+>Pitch Angle: 61.852173
+>Pitch Angle: 61.842999
+>Pitch Angle: 61.836464
+>Pitch Angle: 61.828747
+>Pitch Angle: 61.822426
+>Pitch Angle: 61.826298
+>Pitch Angle: 61.840614
+>Pitch Angle: 61.858276
+>Pitch Angle: 61.869453
+>Pitch Angle: 61.870987
+>Pitch Angle: 61.868973
+>Pitch Angle: 61.862137
+>Pitch Angle: 61.849571
+>Pitch Angle: 61.847069
+>Pitch Angle: 61.841770
+>Pitch Angle: 61.842175
+>Pitch Angle: 61.846237
+>Pitch Angle: 61.851517
+>Pitch Angle: 61.852249
+>Pitch Angle: 61.853256
+>Pitch Angle: 61.845276
+>Pitch Angle: 61.850533
+>Pitch Angle: 61.843658
+>Pitch Angle: 61.830772
+>Pitch Angle: 61.814064
+>Pitch Angle: 61.795673
+>Pitch Angle: 61.784576
+>Pitch Angle: 61.753101
+>Pitch Angle: 61.757965
+>Pitch Angle: 61.784931
+>Pitch Angle: 61.820107
+>Pitch Angle: 61.861427
+>Pitch Angle: 61.889202
+>Pitch Angle: 61.899105
+>Pitch Angle: 61.881409
+>Pitch Angle: 61.851692
+>Pitch Angle: 61.820576
+>Pitch Angle: 61.802402
+>Pitch Angle: 61.798653
+>Pitch Angle: 61.795479
+>Pitch Angle: 61.793114
+>Pitch Angle: 61.788025
+>Pitch Angle: 61.789722
+>Pitch Angle: 61.796402
+>Pitch Angle: 61.825996
+>Pitch Angle: 61.851227
+>Pitch Angle: 61.867188
+>Pitch Angle: 61.884689
+>Pitch Angle: 61.881920
+>Pitch Angle: 61.866180
+>Pitch Angle: 61.859520
+>Pitch Angle: 61.845688
+>Pitch Angle: 61.825775
+>Pitch Angle: 61.813416
+>Pitch Angle: 61.819427
+>Pitch Angle: 61.827873
+>Pitch Angle: 61.847534
+>Pitch Angle: 61.877762
+>Pitch Angle: 61.903412
+>Pitch Angle: 61.925308
+>Pitch Angle: 61.927780
+>Pitch Angle: 61.916065
+>Pitch Angle: 61.896534
+>Pitch Angle: 61.877743
+>Pitch Angle: 61.866512
+>Pitch Angle: 61.861465
+>Pitch Angle: 61.867676
+>Pitch Angle: 61.888618
+>Pitch Angle: 61.913528
+>Pitch Angle: 61.935738
+>Pitch Angle: 61.941696
+>Pitch Angle: 61.926338
+>Pitch Angle: 61.902260
+>Pitch Angle: 61.868675
+>Pitch Angle: 61.847069
+>Pitch Angle: 61.827946
+>Pitch Angle: 61.834335
+>Pitch Angle: 61.855480
+>Pitch Angle: 61.874390
+>Pitch Angle: 61.895576
+>Pitch Angle: 61.903263
+>Pitch Angle: 61.920639
+>Pitch Angle: 61.926155
+>Pitch Angle: 61.908310
+>Pitch Angle: 61.876499
+>Pitch Angle: 61.866722
+>Pitch Angle: 61.853237
+>Pitch Angle: 61.827080
+>Pitch Angle: 61.803925
+>Pitch Angle: 61.805786
+>Pitch Angle: 61.832561
+>Pitch Angle: 61.870571
+>Pitch Angle: 61.895103
+>Pitch Angle: 61.909470
+>Pitch Angle: 61.906982
+>Pitch Angle: 61.899010
+>Pitch Angle: 61.885345

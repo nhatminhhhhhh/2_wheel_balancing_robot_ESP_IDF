@@ -1,0 +1,123 @@
+3 (SPI_FAST_Y.�2: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ea70h (125552) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002ea98 vaddr=3ffb0000 size=01580h (  5504) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=930a8h (602280) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000c30d0 vaddr=3ffb1580 size=02a54h ( 10836) load[0m
+[0;32mI (364) esp_image: segment 4: paddr=000c5b2c vaddr=40080000 size=18f88h (102280) load[0m
+[0;32mI (418) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (418) boot: Disabling RNG early entropy source...[0m
+[0;32mI (431) cpu_start: Multicore app[0m
+[0;32mI (439) cpu_start: Pro cpu start user code[0m
+[0;32mI (439) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (439) app_init: Application information:[0m
+[0;32mI (442) app_init: Project name:     IDF_project[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (452) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (458) app_init: ELF file SHA256:  0d0654a11...[0m
+[0;32mI (463) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (473) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (483) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (490) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFB8348 len 00027CB8 (159 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 40098F88 len 00007078 (28 KiB): IRAM[0m
+[0;32mI (523) spi_flash: detected chip: generic[0m
+[0;32mI (526) spi_flash: flash io: dio[0m
+[0;33mW (530) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (564) MAIN: Connecting to WiFi...[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc0494, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (634) wifi:wifi certification version: v7.0[0m
+[0;32mI (634) wifi:config NVS flash: enabled[0m
+[0;32mI (634) wifi:config nano formating: disabled[0m
+[0;32mI (634) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (644) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (654) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (664) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (674) wifi_init: tcpip mbox: 32[0m
+[0;32mI (674) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (684) wifi_init: tcp tx win: 5760[0m
+[0;32mI (684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (694) wifi_init: tcp mss: 1440[0m
+[0;32mI (694) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (694) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (704) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (804) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (804) wifi:enable tsf[0m
+[0;32mI (804) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (824) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (824) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (854) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (854) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (894) wifi:connected with Tran Van Tuan, aid = 16, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (894) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (904) wifi:pm start, type: 1[0m
+
+[0;32mI (904) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (914) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (994) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3914) esp_netif_handlers: sta ip: 192.168.1.163, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.163
+[0;32mI (3914) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3914) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4924) WEBSERVER: [34mPID loaded from NVS - Kp: 0.00, Ki: 0.00, Kd: 0.000, Kx: 0.00[0m[0m
+[0;32mI (4924) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4934) WEBSERVER: Web server started successfully![0m
+[0;32mI (4934) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5444) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5444) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5544) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5544) GPIO: LED GPIO initialized[0m
+[0;32mI (5544) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5554) GPIO: Button GPIO initialized[0m
+[0;32mI (5654) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (5754) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (7754) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7754) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7754) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7764) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7774) MOTOR: Encoders initialized on GPIOs 32/35 and 13/4[0m
+[0;32mI (7884) MAIN: I2C initialized successfully[0m
+[0;32mI (8184) MPU6050: Starting gyro calibration...[0m
+[0;32mI (12854) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (12854) MPU6050: Gyro offsets - X: -391.17, Y: -44.39, Z: 20.60[0m
+Target: 15.00, Max Speed: 200.0, Min Speed: 150.0
+Robot ready. Press the button to start balancing...

@@ -1,0 +1,1488 @@
+
+rst:0x1 (   : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e708h (124680) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e730 vaddr=3ffb0000 size=018e8h (  6376) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=92ae4h (600804) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2b0c vaddr=3ffb18e8 size=026ech (  9964) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5200 vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (456) app_init: ELF file SHA256:  5fec7367e...[0m
+[0;32mI (462) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (477) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (489) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (525) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (542) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MAIN: Connecting to WiFi...[0m
+[0;32mI (603) wifi:wifi driver task: 3ffc047c, prio:23, stack:6656, core=0[0m
+[0;32mI (613) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (613) wifi:wifi certification version: v7.0[0m
+[0;32mI (613) wifi:config NVS flash: enabled[0m
+[0;32mI (613) wifi:config nano formating: disabled[0m
+[0;32mI (623) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (623) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (633) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (643) wifi:Init static rx buffer num: 10[0m
+[0;32mI (643) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (783) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (783) wifi:enable tsf[0m
+[0;32mI (783) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (803) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (803) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (833) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (843) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (883) wifi:connected with Tran Van Tuan, aid = 20, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (883) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (893) wifi:pm start, type: 1[0m
+
+[0;32mI (893) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (903) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (923) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3903) esp_netif_handlers: sta ip: 192.168.1.148, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.148
+[0;32mI (3903) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3903) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4913) WEBSERVER: [34mPID loaded from NVS - Kp: 42.40, Ki: 0.50, Kd: 1.601[0m[0m
+[0;32mI (4913) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4923) WEBSERVER: Web server started successfully![0m
+[0;32mI (4923) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5423) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5423) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5523) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5523) GPIO: LED GPIO initialized[0m
+[0;32mI (5523) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5533) GPIO: Button GPIO initialized[0m
+[0;32mI (5633) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (5733) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (5833) MAIN: I2C initialized successfully[0m
+[0;32mI (6133) MPU6050: Starting gyro calibration...[0m
+[0;32mI (10833) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (10833) MPU6050: Gyro offsets - X: -406.26, Y: -64.24, Z: 34.36[0m
+Robot ready. Press the button to start balancing...
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 45.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 48.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 51.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 54.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 57.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 60.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 63.40 after fail-safe
+Setpoint: 38.00, Measured: 45.22, Error: -14.44, Output: -190.00, I: -0.14, D: 2260.88, Time: 60234099
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.80, Error: 16.41, Output: 190.00, I: 0.02, D: -771.07, Time: 60254077
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 10.50, Error: 55.00, Output: 190.00, I: 0.57, D: -964.87, Time: 60274947
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 4.77, Error: 66.45, Output: 190.00, I: 1.23, D: -286.27, Time: 60294099
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -4.09, Error: 84.17, Output: 190.00, I: 2.08, D: -442.94, Time: 60316031
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -9.52, Error: 95.04, Output: 190.00, I: 3.03, D: -271.78, Time: 60334244
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -13.82, Error: 103.65, Output: 190.00, I: 4.06, D: -215.14, Time: 60354822
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 45.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 48.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 51.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 54.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 57.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 60.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 63.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 66.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 69.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 72.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 75.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 78.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 81.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 84.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 87.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 90.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 93.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 96.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 99.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 102.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 105.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 108.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 111.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 114.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 117.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 120.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 123.40 after fail-safe
+Setpoint: 38.00, Measured: -13.82, Error: 103.63, Output: 190.00, I: 5.10, D: 0.34, Time: 60894064
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -9.75, Error: 95.51, Output: 190.00, I: 6.05, D: 203.13, Time: 60914079
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -6.92, Error: 89.84, Output: 190.00, I: 6.95, D: 141.65, Time: 60934940
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -6.47, Error: 88.94, Output: 190.00, I: 7.84, D: 22.45, Time: 60954106
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -7.12, Error: 90.23, Output: 190.00, I: 8.74, D: -32.13, Time: 60974093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -7.51, Error: 91.02, Output: 190.00, I: 9.65, D: -19.84, Time: 60994093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -9.17, Error: 94.34, Output: 190.00, I: 10.60, D: -82.88, Time: 61014093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -10.05, Error: 96.10, Output: 190.00, I: 11.56, D: -44.04, Time: 61034897
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -10.81, Error: 97.62, Output: 190.00, I: 12.54, D: -37.88, Time: 61054107
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -8.97, Error: 93.95, Output: 190.00, I: 13.47, D: 91.68, Time: 61074622
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -8.44, Error: 92.89, Output: 190.00, I: 14.40, D: 26.52, Time: 61094094
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -6.30, Error: 88.61, Output: 190.00, I: 15.29, D: 107.01, Time: 61114093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -4.22, Error: 84.44, Output: 190.00, I: 16.13, D: 104.06, Time: 61134681
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -1.61, Error: 79.21, Output: 190.00, I: 16.93, D: 130.85, Time: 61154710
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -0.53, Error: 77.06, Output: 190.00, I: 17.70, D: 53.86, Time: 61174111
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 0.80, Error: 74.39, Output: 190.00, I: 18.44, D: 66.65, Time: 61194098
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 2.66, Error: 70.69, Output: 190.00, I: 19.15, D: 92.60, Time: 61214097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 4.69, Error: 66.62, Output: 190.00, I: 19.81, D: 101.56, Time: 61236126
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 6.99, Error: 62.03, Output: 190.00, I: 20.43, D: 114.86, Time: 61254262
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 8.20, Error: 59.60, Output: 190.00, I: 21.03, D: 60.72, Time: 61274093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 9.67, Error: 56.67, Output: 190.00, I: 21.60, D: 73.39, Time: 61294093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 10.68, Error: 54.64, Output: 190.00, I: 22.14, D: 50.63, Time: 61314093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 10.49, Error: 55.02, Output: 190.00, I: 22.69, D: -9.51, Time: 61334586
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 11.04, Error: 53.93, Output: 190.00, I: 23.23, D: 27.36, Time: 61354710
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 12.22, Error: 51.56, Output: 190.00, I: 23.75, D: 59.04, Time: 61374111
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 13.82, Error: 48.37, Output: 190.00, I: 24.23, D: 79.89, Time: 61394098
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 14.77, Error: 46.47, Output: 190.00, I: 24.70, D: 47.58, Time: 61414097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 15.57, Error: 44.86, Output: 190.00, I: 25.15, D: 40.06, Time: 61434673
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 16.45, Error: 43.10, Output: 190.00, I: 25.58, D: 44.11, Time: 61454707
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 17.03, Error: 41.93, Output: 190.00, I: 26.00, D: 29.13, Time: 61474106
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 18.46, Error: 39.09, Output: 190.00, I: 26.39, D: 71.23, Time: 61494139
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 18.95, Error: 38.11, Output: 190.00, I: 26.77, D: 24.45, Time: 61514093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 19.42, Error: 37.17, Output: 190.00, I: 27.14, D: 23.45, Time: 61535338
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 19.77, Error: 36.46, Output: 190.00, I: 27.50, D: 17.75, Time: 61554805
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 20.41, Error: 35.18, Output: 190.00, I: 27.86, D: 31.87, Time: 61574110
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 20.71, Error: 34.58, Output: 190.00, I: 28.20, D: 15.20, Time: 61594097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 21.12, Error: 33.75, Output: 190.00, I: 28.54, D: 20.58, Time: 61614097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 21.73, Error: 32.55, Output: 190.00, I: 28.86, D: 30.09, Time: 61634142
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 22.42, Error: 31.16, Output: 190.00, I: 29.18, D: 34.71, Time: 61654954
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 23.13, Error: 29.73, Output: 190.00, I: 29.47, D: 35.76, Time: 61674120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 23.97, Error: 28.06, Output: 190.00, I: 29.75, D: 41.81, Time: 61694109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.53, Error: 26.94, Output: 190.00, I: 30.02, D: 28.08, Time: 61714109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.94, Error: 26.13, Output: 190.00, I: 30.28, D: 20.21, Time: 61734109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.37, Error: 25.26, Output: 190.00, I: 30.54, D: 21.54, Time: 61754942
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.71, Error: 24.58, Output: 190.00, I: 30.78, D: 17.05, Time: 61774127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.60, Error: 24.81, Output: 190.00, I: 31.03, D: -5.64, Time: 61794115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.92, Error: 24.15, Output: 190.00, I: 31.27, D: 16.44, Time: 61814115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.15, Error: 23.69, Output: 190.00, I: 31.51, D: 11.41, Time: 61834115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.63, Error: 22.74, Output: 190.00, I: 31.74, D: 23.77, Time: 61854954
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.99, Error: 22.02, Output: 190.00, I: 31.96, D: 18.13, Time: 61874119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.33, Error: 21.33, Output: 190.00, I: 32.17, D: 17.13, Time: 61894109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.43, Error: 21.14, Output: 190.00, I: 32.38, D: 4.89, Time: 61914109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.23, Error: 21.54, Output: 190.00, I: 32.60, D: -9.95, Time: 61934109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.05, Error: 21.90, Output: 190.00, I: 32.82, D: -9.06, Time: 61955364
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.07, Error: 21.87, Output: 190.00, I: 33.04, D: 0.75, Time: 61974127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.24, Error: 21.52, Output: 190.00, I: 33.25, D: 8.68, Time: 61994115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.47, Error: 21.05, Output: 190.00, I: 33.46, D: 11.68, Time: 62014115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.67, Error: 20.65, Output: 190.00, I: 33.67, D: 10.07, Time: 62034115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.60, Error: 20.79, Output: 190.00, I: 33.88, D: -3.51, Time: 62055935
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.29, Error: 21.42, Output: 190.00, I: 34.09, D: -15.61, Time: 62074596
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.91, Error: 22.18, Output: 190.00, I: 34.31, D: -19.08, Time: 62094115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.70, Error: 22.60, Output: 190.00, I: 34.54, D: -10.54, Time: 62114115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.59, Error: 22.83, Output: 190.00, I: 34.77, D: -5.65, Time: 62134115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.50, Error: 23.00, Output: 190.00, I: 35.00, D: -4.24, Time: 62154691
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.44, Error: 23.12, Output: 190.00, I: 35.23, D: -3.01, Time: 62174750
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.15, Error: 23.71, Output: 190.00, I: 35.46, D: -14.77, Time: 62194127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.88, Error: 24.25, Output: 190.00, I: 35.71, D: -13.49, Time: 62214119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.57, Error: 24.86, Output: 190.00, I: 35.95, D: -15.20, Time: 62234119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.38, Error: 25.24, Output: 190.00, I: 36.21, D: -9.67, Time: 62254699
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.14, Error: 25.72, Output: 190.00, I: 36.46, D: -12.03, Time: 62274739
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.05, Error: 25.90, Output: 190.00, I: 36.72, D: -4.41, Time: 62294123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.90, Error: 26.20, Output: 190.00, I: 36.99, D: -7.54, Time: 62314113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.74, Error: 26.51, Output: 190.00, I: 37.25, D: -7.81, Time: 62334113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.54, Error: 26.92, Output: 190.00, I: 37.52, D: -10.24, Time: 62355912
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.44, Error: 27.13, Output: 190.00, I: 37.79, D: -5.05, Time: 62374743
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.49, Error: 27.03, Output: 190.00, I: 38.06, D: 2.44, Time: 62394122
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.52, Error: 26.96, Output: 190.00, I: 38.33, D: 1.63, Time: 62414115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.55, Error: 26.90, Output: 190.00, I: 38.60, D: 1.54, Time: 62434115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.60, Error: 26.80, Output: 190.00, I: 38.87, D: 2.45, Time: 62454115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.77, Error: 26.47, Output: 190.00, I: 39.13, D: 8.35, Time: 62474983
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.79, Error: 26.42, Output: 190.00, I: 39.40, D: 1.13, Time: 62494120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.84, Error: 26.32, Output: 190.00, I: 39.66, D: 2.52, Time: 62514109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.31, Error: 25.38, Output: 190.00, I: 39.91, D: 23.56, Time: 62534109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.44, Error: 25.12, Output: 190.00, I: 40.17, D: 6.58, Time: 62554109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.68, Error: 24.64, Output: 190.00, I: 40.41, D: 11.85, Time: 62574919
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.81, Error: 24.37, Output: 190.00, I: 40.66, D: 6.84, Time: 62594127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.27, Error: 23.45, Output: 190.00, I: 40.89, D: 22.94, Time: 62614115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.98, Error: 22.03, Output: 190.00, I: 41.11, D: 35.46, Time: 62634115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.59, Error: 20.83, Output: 190.00, I: 41.32, D: 30.22, Time: 62654115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.91, Error: 18.18, Output: 190.00, I: 41.50, D: 66.07, Time: 62674990
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.94, Error: 16.13, Output: 190.00, I: 41.66, D: 51.32, Time: 62694127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.05, Error: 13.89, Output: 190.00, I: 41.80, D: 55.97, Time: 62714119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.86, Error: 12.28, Output: 190.00, I: 41.92, D: 40.23, Time: 62734119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.72, Error: 10.55, Output: 190.00, I: 42.03, D: 43.26, Time: 62754119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.90, Error: 6.21, Output: 131.27, I: 42.09, D: 108.65, Time: 62774639
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.90, Error: 4.19, Output: 139.14, I: 42.13, D: 50.38, Time: 62794754
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.82, Error: 2.36, Output: 110.00, I: 42.16, D: 45.72, Time: 62814135
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.01, Error: -0.02, Output: -110.00, I: 42.16, D: 59.62, Time: 62834123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.57, Error: -3.14, Output: -190.00, I: 42.12, D: 77.88, Time: 62854131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.89, Error: -3.78, Output: -144.07, I: 42.09, D: 16.11, Time: 62874707
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.54, Error: -7.09, Output: -190.00, I: 42.02, D: 82.68, Time: 62894754
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.35, Error: -8.71, Output: -190.00, I: 41.93, D: 40.51, Time: 62914131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.38, Error: -8.77, Output: -190.00, I: 41.84, D: 1.42, Time: 62934123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.11, Error: -10.22, Output: -190.00, I: 41.74, D: 36.36, Time: 62954123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.55, Error: -9.10, Output: -190.00, I: 41.65, D: -28.00, Time: 62974691
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.00, Error: -8.00, Output: -190.00, I: 41.57, D: -27.46, Time: 62994743
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.06, Error: -6.11, Output: -142.16, I: 41.51, D: -47.21, Time: 63014127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.08, Error: -2.16, Output: 110.00, I: 41.49, D: -98.89, Time: 63034098
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.41, Error: 5.18, Output: 190.00, I: 41.54, D: -183.36, Time: 63054097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.55, Error: 10.90, Output: 190.00, I: 41.65, D: -143.20, Time: 63075099
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.65, Error: 10.70, Output: 190.00, I: 41.75, D: 4.99, Time: 63094751
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.38, Error: 13.23, Output: 190.00, I: 41.89, D: -63.27, Time: 63114124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.08, Error: 15.84, Output: 190.00, I: 42.04, D: -65.22, Time: 63134113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.41, Error: 17.17, Output: 190.00, I: 42.22, D: -33.16, Time: 63154113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.63, Error: 20.75, Output: 190.00, I: 42.42, D: -89.47, Time: 63175166
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.67, Error: 22.67, Output: 190.00, I: 42.65, D: -47.95, Time: 63194709
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.23, Error: 27.54, Output: 190.00, I: 42.93, D: -121.76, Time: 63214111
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 22.08, Error: 31.85, Output: 190.00, I: 43.24, D: -107.73, Time: 63234097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 19.63, Error: 36.74, Output: 190.00, I: 43.61, D: -122.29, Time: 63254097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 16.70, Error: 42.61, Output: 190.00, I: 44.04, D: -146.75, Time: 63274097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 13.95, Error: 48.10, Output: 190.00, I: 44.52, D: -137.26, Time: 63294932
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 11.33, Error: 53.34, Output: 190.00, I: 45.05, D: -130.95, Time: 63314103
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 9.40, Error: 57.20, Output: 190.00, I: 45.62, D: -96.59, Time: 63334089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 8.43, Error: 59.13, Output: 190.00, I: 46.21, D: -48.36, Time: 63354089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 7.94, Error: 60.11, Output: 190.00, I: 46.82, D: -24.41, Time: 63374089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 7.87, Error: 60.26, Output: 190.00, I: 47.42, D: -3.78, Time: 63394884
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 8.14, Error: 59.72, Output: 190.00, I: 48.02, D: 13.61, Time: 63414110
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 7.84, Error: 60.32, Output: 190.00, I: 48.62, D: -15.04, Time: 63434093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 8.36, Error: 59.28, Output: 190.00, I: 49.21, D: 26.07, Time: 63454093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 8.41, Error: 59.18, Output: 190.00, I: 49.80, D: 2.38, Time: 63474093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 9.34, Error: 57.33, Output: 190.00, I: 50.38, D: 46.27, Time: 63495287
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 11.09, Error: 53.82, Output: 190.00, I: 50.91, D: 87.69, Time: 63514102
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 11.72, Error: 52.56, Output: 190.00, I: 51.44, D: 31.64, Time: 63534089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 13.90, Error: 48.21, Output: 190.00, I: 51.92, D: 108.70, Time: 63554130
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 15.84, Error: 44.31, Output: 190.00, I: 52.37, D: 97.45, Time: 63574109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 18.59, Error: 38.82, Output: 190.00, I: 52.75, D: 137.38, Time: 63594918
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 20.90, Error: 34.20, Output: 190.00, I: 53.10, D: 115.47, Time: 63614127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.78, Error: 26.43, Output: 190.00, I: 53.36, D: 194.09, Time: 63634127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.17, Error: 25.66, Output: 190.00, I: 53.62, D: 19.36, Time: 63654115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.59, Error: 22.82, Output: 190.00, I: 53.84, D: 70.92, Time: 63674119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.24, Error: 15.53, Output: 190.00, I: 54.00, D: 182.41, Time: 63694698
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.49, Error: 13.02, Output: 190.00, I: 54.13, D: 62.58, Time: 63714728
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.06, Error: 11.88, Output: 190.00, I: 54.25, D: 28.45, Time: 63734130
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.92, Error: 6.15, Output: 110.00, I: 54.31, D: 143.31, Time: 63754123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.88, Error: 0.24, Output: -172.15, I: 54.31, D: 147.80, Time: 63774139
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.71, Error: -11.43, Output: -190.00, I: 54.20, D: 291.71, Time: 63794699
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.56, Error: -9.12, Output: -190.00, I: 54.11, D: -57.75, Time: 63814755
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.02, Error: -10.05, Output: -190.00, I: 54.01, D: 23.24, Time: 63834134
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.08, Error: -12.16, Output: -190.00, I: 53.89, D: 52.70, Time: 63854124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.98, Error: -13.97, Output: -190.00, I: 53.75, D: 45.25, Time: 63874123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.10, Error: -14.19, Output: -190.00, I: 53.60, D: 5.60, Time: 63894711
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.66, Error: -13.31, Output: -190.00, I: 53.47, D: -21.99, Time: 63914751
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.04, Error: -8.07, Output: -110.00, I: 53.39, D: -131.00, Time: 63934127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.16, Error: -4.32, Output: 110.00, I: 53.35, D: -93.75, Time: 63954112
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.21, Error: -2.41, Output: 110.00, I: 53.32, D: -47.74, Time: 63974113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.78, Error: 2.44, Output: 190.00, I: 53.35, D: -121.20, Time: 63994657
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.81, Error: 4.38, Output: 190.00, I: 53.39, D: -48.64, Time: 64014751
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.96, Error: 2.08, Output: 110.00, I: 53.41, D: 57.67, Time: 64034147
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.32, Error: 1.36, Output: 110.00, I: 53.43, D: 17.83, Time: 64054124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.61, Error: 4.78, Output: 190.00, I: 53.47, D: -85.49, Time: 64074609
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.18, Error: 9.63, Output: 190.00, I: 53.57, D: -121.20, Time: 64095482
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.72, Error: 10.55, Output: 190.00, I: 53.68, D: -23.07, Time: 64114848
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.03, Error: 13.93, Output: 190.00, I: 53.81, D: -84.45, Time: 64134115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.60, Error: 16.80, Output: 190.00, I: 53.98, D: -71.66, Time: 64154105
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.61, Error: 18.78, Output: 190.00, I: 54.17, D: -49.46, Time: 64174105
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.91, Error: 20.18, Output: 190.00, I: 54.37, D: -35.20, Time: 64194105
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.98, Error: 22.05, Output: 190.00, I: 54.59, D: -46.62, Time: 64214962
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.00, Error: 24.01, Output: 190.00, I: 54.83, D: -48.98, Time: 64234123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.95, Error: 24.09, Output: 190.00, I: 55.07, D: -2.17, Time: 64254115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.40, Error: 23.20, Output: 190.00, I: 55.31, D: 22.33, Time: 64274115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.22, Error: 21.57, Output: 190.00, I: 55.52, D: 40.80, Time: 64294115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.77, Error: 20.47, Output: 190.00, I: 55.73, D: 27.54, Time: 64314950
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.63, Error: 18.73, Output: 190.00, I: 55.91, D: 43.39, Time: 64334139
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.65, Error: 14.69, Output: 190.00, I: 56.06, D: 101.04, Time: 64354119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.21, Error: 11.58, Output: 190.00, I: 56.18, D: 77.81, Time: 64374119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.72, Error: 12.56, Output: 190.00, I: 56.30, D: -24.55, Time: 64394119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.08, Error: 3.84, Output: -130.15, I: 56.34, D: 218.10, Time: 64414967
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.87, Error: -1.73, Output: -190.00, I: 56.32, D: 139.17, Time: 64434143
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.80, Error: -1.60, Output: -110.00, I: 56.31, D: -3.21, Time: 64454126
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.58, Error: -5.16, Output: -190.00, I: 56.26, D: 88.89, Time: 64474119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.67, Error: -3.34, Output: -110.00, I: 56.22, D: -45.32, Time: 64494120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.74, Error: 0.51, Output: 190.00, I: 56.23, D: -96.48, Time: 64514663
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.75, Error: -3.49, Output: -190.00, I: 56.19, D: 100.23, Time: 64534149
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 46.46, Error: -16.91, Output: -190.00, I: 56.02, D: 335.49, Time: 64554135
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.66, Error: -15.31, Output: -190.00, I: 55.87, D: -39.99, Time: 64574120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.20, Error: -12.41, Output: -190.00, I: 55.75, D: -72.67, Time: 64594115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.85, Error: -11.69, Output: -190.00, I: 55.63, D: -17.82, Time: 64615848
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.03, Error: -8.07, Output: -141.26, I: 55.55, D: -90.70, Time: 64634131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.17, Error: -2.34, Output: 185.88, I: 55.52, D: -143.27, Time: 64654094
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.98, Error: 6.04, Output: 190.00, I: 55.58, D: -209.47, Time: 64674093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.74, Error: 6.52, Output: 190.00, I: 55.65, D: -11.87, Time: 64694115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.38, Error: 9.25, Output: 190.00, I: 55.74, D: -68.27, Time: 64714683
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.40, Error: 9.20, Output: 190.00, I: 55.83, D: 1.24, Time: 64734773
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.69, Error: 10.62, Output: 190.00, I: 55.94, D: -35.53, Time: 64754131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.15, Error: 13.70, Output: 190.00, I: 56.08, D: -76.95, Time: 64774119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.11, Error: 15.79, Output: 190.00, I: 56.24, D: -52.21, Time: 64794119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.18, Error: 17.63, Output: 190.00, I: 56.41, D: -46.08, Time: 64814684
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.19, Error: 17.62, Output: 190.00, I: 56.59, D: 0.30, Time: 64834751
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.89, Error: 18.22, Output: 190.00, I: 56.77, D: -15.17, Time: 64854123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.32, Error: 17.35, Output: 190.00, I: 56.94, D: 21.76, Time: 64874127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.14, Error: 11.71, Output: 190.00, I: 57.06, D: 141.01, Time: 64894123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.69, Error: 6.61, Output: 133.50, I: 57.13, D: 127.48, Time: 64915874
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.49, Error: 5.02, Output: 190.00, I: 57.18, D: 39.78, Time: 64934770
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.69, Error: 8.62, Output: 190.00, I: 57.26, D: -90.01, Time: 64954127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.16, Error: 1.68, Output: -149.36, I: 57.28, D: 173.58, Time: 64974139
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.85, Error: 2.30, Output: 179.70, I: 57.30, D: -15.51, Time: 64994119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.65, Error: 10.70, Output: 190.00, I: 57.41, D: -209.88, Time: 65014094
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.11, Error: 7.79, Output: 190.00, I: 57.49, D: 72.70, Time: 65034982
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.22, Error: 3.55, Output: 110.00, I: 57.52, D: 105.90, Time: 65054126
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.84, Error: -1.67, Output: -190.00, I: 57.51, D: 130.67, Time: 65074588
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.53, Error: -3.06, Output: -127.91, I: 57.48, D: 34.70, Time: 65094120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.66, Error: -5.32, Output: -190.00, I: 57.42, D: 56.53, Time: 65114120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.63, Error: -5.27, Output: -163.93, I: 57.37, D: -1.34, Time: 65134966
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.46, Error: -6.92, Output: -190.00, I: 57.30, D: 41.29, Time: 65154134
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.56, Error: -11.12, Output: -190.00, I: 57.19, D: 104.96, Time: 65174119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.63, Error: -13.26, Output: -190.00, I: 57.06, D: 53.43, Time: 65194119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.47, Error: -14.94, Output: -190.00, I: 56.91, D: 41.99, Time: 65214119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.88, Error: -15.77, Output: -190.00, I: 56.75, D: 20.72, Time: 65234982
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.46, Error: -12.92, Output: -190.00, I: 56.62, D: -71.02, Time: 65254123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.74, Error: -9.49, Output: -190.00, I: 56.53, D: -85.92, Time: 65274109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.03, Error: -2.07, Output: 190.00, I: 56.51, D: -185.53, Time: 65294089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.56, Error: 0.89, Output: 190.00, I: 56.51, D: -73.85, Time: 65314109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.94, Error: 4.12, Output: 190.00, I: 56.56, D: -80.77, Time: 65334938
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.02, Error: 9.96, Output: 190.00, I: 56.66, D: -145.98, Time: 65354109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.21, Error: 13.57, Output: 190.00, I: 56.79, D: -90.37, Time: 65374115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.67, Error: 16.66, Output: 190.00, I: 56.96, D: -77.15, Time: 65394115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.91, Error: 20.18, Output: 190.00, I: 57.16, D: -88.02, Time: 65414115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.61, Error: 22.79, Output: 190.00, I: 57.39, D: -65.14, Time: 65436170
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.98, Error: 26.04, Output: 190.00, I: 57.65, D: -81.42, Time: 65454223
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.10, Error: 27.81, Output: 190.00, I: 57.93, D: -44.08, Time: 65474119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.05, Error: 27.91, Output: 190.00, I: 58.20, D: -2.61, Time: 65494119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.22, Error: 27.56, Output: 190.00, I: 58.48, D: 8.75, Time: 65514119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.26, Error: 27.48, Output: 190.00, I: 58.76, D: 1.92, Time: 65534628
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.17, Error: 27.65, Output: 190.00, I: 59.03, D: -4.20, Time: 65554758
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.02, Error: 27.95, Output: 190.00, I: 59.31, D: -7.53, Time: 65574123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.56, Error: 26.87, Output: 190.00, I: 59.58, D: 26.97, Time: 65594113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.35, Error: 23.31, Output: 190.00, I: 59.81, D: 89.16, Time: 65614131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.40, Error: 21.19, Output: 190.00, I: 60.03, D: 52.86, Time: 65634683
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.97, Error: 18.06, Output: 190.00, I: 60.21, D: 78.27, Time: 65654768
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.98, Error: 10.04, Output: 164.75, I: 60.31, D: 200.60, Time: 65674155
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.33, Error: 7.33, Output: 190.00, I: 60.38, D: 67.61, Time: 65694123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.15, Error: 1.71, Output: -110.00, I: 60.40, D: 140.70, Time: 65714135
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.19, Error: -2.39, Output: -190.00, I: 60.37, D: 102.31, Time: 65735130
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.00, Error: -6.01, Output: -190.00, I: 60.31, D: 90.56, Time: 65754766
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.13, Error: -6.26, Output: -190.00, I: 60.25, D: 6.23, Time: 65774130
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.67, Error: -9.34, Output: -190.00, I: 60.16, D: 77.00, Time: 65794123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.90, Error: -11.80, Output: -190.00, I: 60.04, D: 61.66, Time: 65814123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.94, Error: -13.88, Output: -190.00, I: 59.90, D: 51.84, Time: 65834123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 46.54, Error: -17.08, Output: -190.00, I: 59.73, D: 80.10, Time: 65854969
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 46.12, Error: -16.24, Output: -190.00, I: 59.57, D: -20.99, Time: 65874130
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.89, Error: -11.78, Output: -190.00, I: 59.45, D: -111.69, Time: 65894116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.64, Error: -5.28, Output: 110.00, I: 59.40, D: -162.31, Time: 65914093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.92, Error: 2.16, Output: 190.00, I: 59.42, D: -185.97, Time: 65934093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.97, Error: 2.07, Output: 143.37, I: 59.44, D: 2.27, Time: 65954938
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.52, Error: 0.96, Output: 110.00, I: 59.45, D: 27.61, Time: 65974135
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.74, Error: 2.53, Output: 190.00, I: 59.47, D: -39.16, Time: 65994109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.88, Error: 8.23, Output: 190.00, I: 59.56, D: -142.64, Time: 66014089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.93, Error: 12.15, Output: 190.00, I: 59.68, D: -97.92, Time: 66034108
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.53, Error: 16.93, Output: 190.00, I: 59.85, D: -119.56, Time: 66054940
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.58, Error: 20.84, Output: 190.00, I: 60.05, D: -97.82, Time: 66074562
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.05, Error: 23.90, Output: 190.00, I: 60.29, D: -76.33, Time: 66094097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 24.15, Error: 27.69, Output: 190.00, I: 60.57, D: -94.92, Time: 66114098
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 22.81, Error: 30.39, Output: 190.00, I: 60.87, D: -67.31, Time: 66134098
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 21.65, Error: 32.70, Output: 190.00, I: 61.20, D: -57.86, Time: 66154929
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 22.28, Error: 31.44, Output: 190.00, I: 61.52, D: 31.49, Time: 66174147
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 22.27, Error: 31.46, Output: 190.00, I: 61.83, D: -0.39, Time: 66194109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 22.61, Error: 30.77, Output: 190.00, I: 62.14, D: 17.10, Time: 66214109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 21.95, Error: 32.09, Output: 190.00, I: 62.46, D: -32.93, Time: 66234089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 22.21, Error: 31.58, Output: 190.00, I: 62.77, D: 12.83, Time: 66256124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 22.93, Error: 30.15, Output: 190.00, I: 63.08, D: 35.79, Time: 66274123
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 45.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 48.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 51.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 54.40 after fail-safe
+Setpoint: 38.00, Measured: 54.01, Error: -32.02, Output: -190.00, I: -0.32, D: 1554.19, Time: 85454095
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 47.94, Error: -19.89, Output: -190.00, I: -0.52, D: -303.32, Time: 85474092
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.04, Error: -8.07, Output: 129.99, I: -0.60, D: -295.39, Time: 85494057
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.01, Error: -2.02, Output: 155.72, I: -0.62, D: -151.25, Time: 85514984
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.76, Error: 2.48, Output: 190.00, I: -0.60, D: -112.58, Time: 85534116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.02, Error: 3.96, Output: 190.00, I: -0.56, D: -36.93, Time: 85554115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.69, Error: 6.62, Output: 190.00, I: -0.49, D: -66.56, Time: 85574115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.90, Error: 8.21, Output: 190.00, I: -0.41, D: -39.70, Time: 85594115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.13, Error: 7.74, Output: 190.00, I: -0.33, D: 11.55, Time: 85614937
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.74, Error: 8.52, Output: 190.00, I: -0.24, D: -19.49, Time: 85634123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.67, Error: 6.66, Output: 190.00, I: -0.18, D: 46.61, Time: 85654119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.11, Error: 5.78, Output: 190.00, I: -0.12, D: 22.11, Time: 85674119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.24, Error: 9.51, Output: 190.00, I: -0.03, D: -93.37, Time: 85694115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.76, Error: 8.47, Output: 190.00, I: 0.06, D: 26.00, Time: 85714992
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.15, Error: 11.70, Output: 190.00, I: 0.18, D: -80.75, Time: 85734127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.51, Error: 12.99, Output: 190.00, I: 0.31, D: -32.24, Time: 85754115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.45, Error: 7.09, Output: 110.00, I: 0.38, D: 147.41, Time: 85774120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.23, Error: 3.54, Output: 110.00, I: 0.41, D: 88.78, Time: 85794119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.18, Error: 1.63, Output: -110.00, I: 0.43, D: 47.73, Time: 85814938
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.77, Error: 0.45, Output: -110.00, I: 0.43, D: 29.53, Time: 85834123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.93, Error: -1.85, Output: -170.51, I: 0.41, D: 57.66, Time: 85854119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.24, Error: -4.49, Output: -190.00, I: 0.37, D: 65.86, Time: 85874119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.37, Error: -4.75, Output: -190.00, I: 0.32, D: 6.42, Time: 85894119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.61, Error: -7.22, Output: -190.00, I: 0.25, D: 61.85, Time: 85914992
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.90, Error: -7.80, Output: -190.00, I: 0.17, D: 14.58, Time: 85934123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.16, Error: -6.32, Output: -190.00, I: 0.11, D: -37.05, Time: 85954115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.51, Error: -5.02, Output: -160.67, I: 0.06, D: -32.53, Time: 85974115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.60, Error: -5.20, Output: -190.00, I: 0.01, D: 4.51, Time: 85994127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.59, Error: -3.18, Output: -110.00, I: -0.02, D: -50.53, Time: 86016104
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.59, Error: 0.81, Output: 190.00, I: -0.02, D: -99.75, Time: 86034434
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.04, Error: -10.08, Output: -190.00, I: -0.12, D: 272.18, Time: 86054151
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 51.43, Error: -26.86, Output: -190.00, I: -0.39, D: 419.66, Time: 86074591
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 48.39, Error: -20.77, Output: -190.00, I: -0.59, D: -152.29, Time: 86094127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.28, Error: -10.57, Output: -110.00, I: -0.70, D: -255.11, Time: 86114614
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.14, Error: -2.28, Output: 190.00, I: -0.72, D: -207.09, Time: 86134719
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.81, Error: 0.38, Output: 122.35, I: -0.72, D: -66.68, Time: 86154147
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.65, Error: 0.69, Output: 110.00, I: -0.71, D: -7.67, Time: 86174131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.75, Error: 2.50, Output: 178.08, I: -0.69, D: -45.33, Time: 86194119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.22, Error: 5.56, Output: 190.00, I: -0.63, D: -76.36, Time: 86214850
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.44, Error: 7.11, Output: 190.00, I: -0.56, D: -38.81, Time: 86234738
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.67, Error: 8.65, Output: 190.00, I: -0.47, D: -38.51, Time: 86254119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.25, Error: 11.51, Output: 190.00, I: -0.36, D: -71.42, Time: 86274113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.63, Error: 12.74, Output: 190.00, I: -0.23, D: -30.89, Time: 86294113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.41, Error: 13.19, Output: 190.00, I: -0.10, D: -11.04, Time: 86314131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.77, Error: 12.45, Output: 190.00, I: 0.03, D: 18.38, Time: 86334938
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.24, Error: 11.52, Output: 190.00, I: 0.14, D: 23.21, Time: 86354366
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.50, Error: 13.00, Output: 190.00, I: 0.27, D: -37.02, Time: 86374120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.66, Error: 14.67, Output: 190.00, I: 0.42, D: -41.73, Time: 86394116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.21, Error: 13.57, Output: 190.00, I: 0.55, D: 27.47, Time: 86414120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.45, Error: 13.09, Output: 190.00, I: 0.68, D: 12.01, Time: 86434947
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.41, Error: 7.18, Output: 110.00, I: 0.76, D: 147.84, Time: 86454123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.19, Error: 1.62, Output: -152.84, I: 0.77, D: 138.91, Time: 86474132
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.55, Error: -1.10, Output: -155.10, I: 0.76, D: 68.14, Time: 86494119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.14, Error: -4.28, Output: -190.00, I: 0.72, D: 79.42, Time: 86514119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.19, Error: -6.37, Output: -190.00, I: 0.65, D: 52.28, Time: 86535485
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.98, Error: -9.96, Output: -190.00, I: 0.56, D: 89.62, Time: 86554229
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.49, Error: -12.99, Output: -190.00, I: 0.43, D: 75.79, Time: 86574124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.66, Error: -15.32, Output: -190.00, I: 0.27, D: 58.39, Time: 86594123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 46.06, Error: -16.12, Output: -190.00, I: 0.11, D: 19.88, Time: 86614123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.08, Error: -14.16, Output: -190.00, I: -0.03, D: -49.04, Time: 86634974
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.75, Error: -13.49, Output: -190.00, I: -0.17, D: -16.62, Time: 86654127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.02, Error: -14.04, Output: -190.00, I: -0.31, D: 13.69, Time: 86674119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.55, Error: -11.10, Output: -190.00, I: -0.42, D: -73.39, Time: 86694115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.22, Error: -6.44, Output: -110.00, I: -0.48, D: -116.61, Time: 86714109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.06, Error: -2.13, Output: 110.00, I: -0.50, D: -107.84, Time: 86735873
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.64, Error: 0.72, Output: 144.25, I: -0.50, D: -71.24, Time: 86754120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.04, Error: 1.93, Output: 129.50, I: -0.48, D: -30.11, Time: 86774115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.99, Error: 4.01, Output: 190.00, I: -0.44, D: -52.05, Time: 86794115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.09, Error: 5.82, Output: 190.00, I: -0.38, D: -45.12, Time: 86814115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.72, Error: 6.56, Output: 190.00, I: -0.31, D: -18.71, Time: 86834644
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.87, Error: 8.26, Output: 190.00, I: -0.23, D: -42.33, Time: 86854727
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.54, Error: 10.92, Output: 190.00, I: -0.12, D: -66.53, Time: 86874119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.99, Error: 16.03, Output: 190.00, I: 0.04, D: -127.75, Time: 86894112
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.55, Error: 18.90, Output: 190.00, I: 0.23, D: -71.89, Time: 86914123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.88, Error: 18.24, Output: 190.00, I: 0.41, D: 16.52, Time: 86934679
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.31, Error: 15.37, Output: 190.00, I: 0.56, D: 71.82, Time: 86954775
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.88, Error: 12.25, Output: 190.00, I: 0.69, D: 78.07, Time: 86974127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.56, Error: 12.89, Output: 190.00, I: 0.82, D: -15.98, Time: 86994123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.80, Error: 14.39, Output: 190.00, I: 0.96, D: -37.63, Time: 87014123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.79, Error: 12.43, Output: 190.00, I: 1.08, D: 49.13, Time: 87034691
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.90, Error: 10.21, Output: 190.00, I: 1.19, D: 55.51, Time: 87054771
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.66, Error: 4.68, Output: -110.00, I: 1.23, D: 138.05, Time: 87074611
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.02, Error: -2.04, Output: -190.00, I: 1.21, D: 168.00, Time: 87094143
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.00, Error: 1.99, Output: 190.00, I: 1.23, D: -100.75, Time: 87114124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.42, Error: 9.16, Output: 190.00, I: 1.32, D: -179.10, Time: 87135807
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.63, Error: 4.74, Output: 110.00, I: 1.37, D: 110.35, Time: 87154780
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.22, Error: -0.44, Output: -190.00, I: 1.37, D: 129.52, Time: 87174123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.38, Error: 3.24, Output: 190.00, I: 1.40, D: -91.82, Time: 87194116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.28, Error: 7.43, Output: 190.00, I: 1.47, D: -104.94, Time: 87214115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.83, Error: -1.66, Output: -190.00, I: 1.46, D: 227.39, Time: 87234139
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 48.69, Error: -21.38, Output: -190.00, I: 1.24, D: 492.98, Time: 87254987
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 46.79, Error: -17.58, Output: -190.00, I: 1.07, D: -95.02, Time: 87274126
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.87, Error: -15.74, Output: -190.00, I: 0.91, D: -45.99, Time: 87294119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.48, Error: -14.96, Output: -190.00, I: 0.76, D: -19.46, Time: 87314119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.38, Error: -10.77, Output: -190.00, I: 0.65, D: -104.88, Time: 87334115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.16, Error: -8.33, Output: -190.00, I: 0.57, D: -61.00, Time: 87354910
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.81, Error: -3.62, Output: 110.00, I: 0.53, D: -117.59, Time: 87374370
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.81, Error: 2.38, Output: 190.00, I: 0.56, D: -150.03, Time: 87394097
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.24, Error: 5.52, Output: 190.00, I: 0.61, D: -78.66, Time: 87414115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.48, Error: 3.04, Output: 110.00, I: 0.64, D: 62.18, Time: 87434130
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.31, Error: 3.39, Output: 158.40, I: 0.68, D: -8.77, Time: 87454991
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.12, Error: 5.76, Output: 190.00, I: 0.73, D: -59.37, Time: 87474119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.54, Error: 6.93, Output: 190.00, I: 0.80, D: -29.09, Time: 87494109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.50, Error: 9.00, Output: 190.00, I: 0.89, D: -51.90, Time: 87514109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.50, Error: 11.00, Output: 190.00, I: 1.00, D: -50.03, Time: 87534109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.52, Error: 12.96, Output: 190.00, I: 1.13, D: -48.88, Time: 87555272
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.95, Error: 16.09, Output: 190.00, I: 1.29, D: -78.31, Time: 87574116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.70, Error: 12.59, Output: 190.00, I: 1.42, D: 87.46, Time: 87594127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.74, Error: 12.51, Output: 190.00, I: 1.55, D: 2.05, Time: 87614119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.38, Error: 15.24, Output: 190.00, I: 1.70, D: -68.10, Time: 87634115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.13, Error: 11.74, Output: 190.00, I: 1.82, D: 87.32, Time: 87654698
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.76, Error: 10.47, Output: 190.00, I: 1.92, D: 31.70, Time: 87674754
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.36, Error: 7.27, Output: 182.02, I: 1.99, D: 80.10, Time: 87694124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.54, Error: 6.92, Output: 190.00, I: 2.06, D: 8.76, Time: 87714123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.19, Error: 9.62, Output: 190.00, I: 2.16, D: -67.38, Time: 87734119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.92, Error: 0.16, Output: -190.00, I: 2.16, D: 236.30, Time: 87754703
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.71, Error: -5.43, Output: -190.00, I: 2.11, D: 139.76, Time: 87774771
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.84, Error: -7.68, Output: -190.00, I: 2.03, D: 56.34, Time: 87794138
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.84, Error: -7.67, Output: -190.00, I: 1.95, D: -0.13, Time: 87814123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.89, Error: -9.78, Output: -190.00, I: 1.85, D: 52.68, Time: 87834123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.31, Error: -10.61, Output: -190.00, I: 1.75, D: 20.71, Time: 87854706
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.79, Error: -9.59, Output: -190.00, I: 1.65, D: -25.62, Time: 87874754
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.83, Error: -7.66, Output: -190.00, I: 1.58, D: -48.26, Time: 87894120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.59, Error: -5.18, Output: -118.62, I: 1.52, D: -62.01, Time: 87914113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.68, Error: 0.64, Output: 190.00, I: 1.53, D: -145.37, Time: 87934093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.87, Error: 2.26, Output: 162.31, I: 1.55, D: -40.53, Time: 87955621
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.36, Error: -0.72, Output: -148.12, I: 1.55, D: 74.47, Time: 87974767
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.71, Error: -1.41, Output: -110.00, I: 1.53, D: 17.43, Time: 87994127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.96, Error: -1.92, Output: -110.00, I: 1.51, D: 12.72, Time: 88014124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.58, Error: 0.84, Output: 147.73, I: 1.52, D: -69.09, Time: 88034119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.27, Error: 5.46, Output: 190.00, I: 1.58, D: -115.51, Time: 88054119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.45, Error: 9.11, Output: 190.00, I: 1.67, D: -91.14, Time: 88075396
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.52, Error: 8.96, Output: 190.00, I: 1.76, D: 3.73, Time: 88094123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.89, Error: 8.22, Output: 190.00, I: 1.84, D: 18.44, Time: 88114119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.56, Error: 6.87, Output: 190.00, I: 1.91, D: 33.64, Time: 88134119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.32, Error: 5.36, Output: 168.51, I: 1.96, D: 37.87, Time: 88154119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.55, Error: 4.91, Output: 190.00, I: 2.01, D: 11.28, Time: 88174976
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.21, Error: 1.58, Output: -110.00, I: 2.03, D: 83.07, Time: 88194127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.88, Error: 2.24, Output: 123.65, I: 2.05, D: -16.51, Time: 88214119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.87, Error: 2.25, Output: 110.00, I: 2.07, D: -0.23, Time: 88234120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.26, Error: 1.47, Output: 110.00, I: 2.09, D: 19.59, Time: 88254120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.74, Error: 2.52, Output: 150.76, I: 2.11, D: -26.18, Time: 88274992
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.47, Error: 1.06, Output: -110.00, I: 2.12, D: 36.42, Time: 88294119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.03, Error: 1.93, Output: 119.01, I: 2.14, D: -21.81, Time: 88314119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.93, Error: 2.14, Output: 110.00, I: 2.16, D: -5.27, Time: 88334119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.57, Error: 2.85, Output: 151.49, I: 2.19, D: -17.71, Time: 88354119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.80, Error: 2.41, Output: 110.00, I: 2.21, D: 11.18, Time: 88375004
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.71, Error: 0.59, Output: -110.00, I: 2.22, D: 45.46, Time: 88394378
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.77, Error: 0.47, Output: 110.00, I: 2.22, D: 2.92, Time: 88414119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.11, Error: -0.22, Output: -110.00, I: 2.22, D: 17.17, Time: 88434120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.42, Error: 5.16, Output: 190.00, I: 0.05, D: -134.39, Time: 89755188
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.36, Error: 1.27, Output: -110.00, I: 0.06, D: 97.11, Time: 89774127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.95, Error: -1.90, Output: -190.00, I: 0.05, D: 79.45, Time: 89794124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.00, Error: 4.00, Output: 190.00, I: 0.09, D: -147.55, Time: 89814930
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.54, Error: 10.91, Output: 190.00, I: 0.19, D: -172.82, Time: 89834110
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.40, Error: -0.81, Output: -190.00, I: 0.19, D: 292.99, Time: 89854139
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.64, Error: 0.73, Output: 110.00, I: 0.19, D: -38.44, Time: 89874119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.15, Error: 5.70, Output: 190.00, I: 0.25, D: -124.30, Time: 89894115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.13, Error: 9.74, Output: 190.00, I: 0.35, D: -101.01, Time: 89914993
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.93, Error: 4.14, Output: -110.00, I: 0.39, D: 140.08, Time: 89934126
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.00, Error: 4.01, Output: 165.23, I: 0.43, D: 3.24, Time: 89954119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.06, Error: 5.88, Output: 190.00, I: 0.49, D: -46.74, Time: 89974109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.63, Error: 0.75, Output: -173.22, I: 0.50, D: 128.29, Time: 89994119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.21, Error: -8.41, Output: -190.00, I: 0.41, D: 229.05, Time: 90014934
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.09, Error: -8.19, Output: -190.00, I: 0.33, D: -5.69, Time: 90034134
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.27, Error: -6.55, Output: -190.00, I: 0.26, D: -41.03, Time: 90054119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.91, Error: -3.82, Output: -110.00, I: 0.23, D: -68.07, Time: 90074588
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.65, Error: -1.31, Output: 110.00, I: 0.21, D: -62.85, Time: 90094120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.18, Error: -4.36, Output: -190.00, I: 0.17, D: 76.37, Time: 90115025
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.69, Error: 0.62, Output: 190.00, I: 0.18, D: -124.72, Time: 90134116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.58, Error: 14.84, Output: 190.00, I: 0.32, D: -355.34, Time: 90154089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.59, Error: 10.81, Output: 190.00, I: 0.43, D: 100.63, Time: 90174119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.04, Error: 7.92, Output: 190.00, I: 0.51, D: 72.41, Time: 90194119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.30, Error: 5.39, Output: 128.32, I: 0.57, D: 63.06, Time: 90214639
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.69, Error: 4.62, Output: 165.76, I: 0.61, D: 19.28, Time: 90234659
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.40, Error: 7.20, Output: 190.00, I: 0.68, D: -64.51, Time: 90254111
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.13, Error: 1.73, Output: -144.95, I: 0.70, D: 136.82, Time: 90274116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.11, Error: 5.78, Output: 190.00, I: 0.76, D: -101.20, Time: 90294111
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.84, Error: 12.33, Output: 190.00, I: 0.88, D: -163.68, Time: 90314645
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.28, Error: 11.43, Output: 190.00, I: 1.00, D: 22.32, Time: 90334934
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.26, Error: 9.48, Output: 190.00, I: 1.09, D: 48.72, Time: 90354119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.06, Error: 9.89, Output: 190.00, I: 1.19, D: -10.05, Time: 90374119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.98, Error: 6.05, Output: 110.00, I: 1.25, D: 95.94, Time: 90394119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.11, Error: -2.22, Output: -190.00, I: 1.23, D: 206.82, Time: 90414716
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.34, Error: -0.68, Output: 110.00, I: 1.22, D: -38.67, Time: 90434762
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.20, Error: -2.40, Output: -169.87, I: 1.20, D: 43.18, Time: 90454127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.26, Error: -8.52, Output: -190.00, I: 1.11, D: 152.78, Time: 90474143
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.23, Error: -8.47, Output: -190.00, I: 1.03, D: -1.20, Time: 90494124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.90, Error: -9.80, Output: -190.00, I: 0.93, D: 33.26, Time: 90515611
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.06, Error: -12.12, Output: -190.00, I: 0.81, D: 58.18, Time: 90534776
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.28, Error: -10.55, Output: -190.00, I: 0.70, D: -39.25, Time: 90554124
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.17, Error: -8.34, Output: -190.00, I: 0.62, D: -55.47, Time: 90574119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.90, Error: -7.81, Output: -190.00, I: 0.54, D: -13.21, Time: 90594123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.70, Error: -5.40, Output: -132.08, I: 0.49, D: -60.20, Time: 90614113
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.73, Error: -5.45, Output: -190.00, I: 0.43, D: 1.28, Time: 90634986
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.37, Error: -4.74, Output: -172.04, I: 0.39, D: -17.80, Time: 90654120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.04, Error: -2.08, Output: 110.00, I: 0.36, D: -66.41, Time: 90674115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.49, Error: 3.01, Output: 190.00, I: 0.39, D: -127.35, Time: 90694093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.78, Error: 4.44, Output: 190.00, I: 0.44, D: -35.64, Time: 90714115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.07, Error: 3.86, Output: 141.29, I: 0.48, D: 14.35, Time: 90734951
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.82, Error: 2.36, Output: 110.00, I: 0.50, D: 37.60, Time: 90754123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.61, Error: 4.79, Output: 190.00, I: 0.55, D: -60.66, Time: 90774115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 34.13, Error: 7.74, Output: 190.00, I: 0.63, D: -73.85, Time: 90794109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.78, Error: 8.45, Output: 190.00, I: 0.71, D: -17.68, Time: 90814108
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.61, Error: 8.78, Output: 190.00, I: 0.80, D: -8.41, Time: 90834979
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.57, Error: 8.86, Output: 190.00, I: 0.89, D: -1.97, Time: 90854116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.29, Error: 11.42, Output: 190.00, I: 1.00, D: -64.06, Time: 90874115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.81, Error: 14.38, Output: 190.00, I: 1.15, D: -73.87, Time: 90894093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.42, Error: 17.15, Output: 190.00, I: 1.32, D: -69.36, Time: 90914093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.07, Error: 19.86, Output: 190.00, I: 1.52, D: -67.72, Time: 90934614
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.31, Error: 21.39, Output: 190.00, I: 1.73, D: -38.11, Time: 90954673
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.36, Error: 23.29, Output: 190.00, I: 1.96, D: -47.57, Time: 90974093
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 25.05, Error: 25.89, Output: 190.00, I: 2.22, D: -65.07, Time: 90994089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 23.57, Error: 28.85, Output: 190.00, I: 2.51, D: -74.03, Time: 91014089
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 21.95, Error: 32.09, Output: 190.00, I: 2.83, D: -80.97, Time: 91035895
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 19.64, Error: 36.72, Output: 190.00, I: 3.20, D: -115.68, Time: 91054226
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 15.74, Error: 44.52, Output: 190.00, I: 3.64, D: -194.98, Time: 91074570
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 9.78, Error: 56.44, Output: 190.00, I: 4.21, D: -297.98, Time: 91094102
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 2.89, Error: 70.22, Output: 190.00, I: 4.91, D: -344.57, Time: 91114151
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -1.59, Error: 79.18, Output: 190.00, I: 5.70, D: -223.87, Time: 91134637
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -5.73, Error: 87.45, Output: 190.00, I: 6.58, D: -206.90, Time: 91154747
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -12.29, Error: 100.58, Output: 190.00, I: 7.58, D: -328.18, Time: 91174135
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 45.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 48.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 51.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 54.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 57.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 60.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 63.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 66.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 69.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 72.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 75.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 78.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 81.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 84.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 87.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 90.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 93.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 96.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 99.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 102.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 105.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 108.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 111.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 114.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 117.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 120.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 123.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 126.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 129.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 132.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 135.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 138.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 141.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 144.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 147.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 150.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 153.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 156.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 159.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 162.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 165.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 168.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 171.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 174.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 177.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 180.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 183.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 186.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 189.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 192.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 195.40 after fail-safe
+Fail-safe activated! Angle exceeded safe limit.
+Adjusting Kp to 198.40 after fail-safe
+Setpoint: 38.00, Measured: -13.71, Error: 103.43, Output: 190.00, I: 8.62, D: -71.21, Time: 92214071
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -7.57, Error: 91.15, Output: 190.00, I: 9.53, D: 307.01, Time: 92234073
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: -2.73, Error: 81.46, Output: 190.00, I: 10.34, D: 242.23, Time: 92255622
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 2.75, Error: 70.50, Output: 190.00, I: 11.05, D: 273.90, Time: 92274741
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 6.63, Error: 62.74, Output: 190.00, I: 11.67, D: 193.95, Time: 92294116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 9.06, Error: 57.89, Output: 190.00, I: 12.25, D: 121.37, Time: 92314115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 11.51, Error: 52.97, Output: 190.00, I: 12.78, D: 122.88, Time: 92334115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 18.27, Error: 39.46, Output: 190.00, I: 13.18, D: 337.84, Time: 92354131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 26.49, Error: 23.03, Output: 190.00, I: 13.41, D: 410.81, Time: 92374988
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 33.31, Error: 9.37, Output: -135.49, I: 13.50, D: 341.33, Time: 92394131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.98, Error: 4.04, Output: -110.00, I: 13.54, D: 133.40, Time: 92414127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.22, Error: 1.55, Output: -110.00, I: 13.56, D: 62.13, Time: 92434123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.36, Error: -2.71, Output: -190.00, I: 13.53, D: 106.59, Time: 92454119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.15, Error: -4.31, Output: -190.00, I: 13.49, D: 39.90, Time: 92474943
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.58, Error: -5.16, Output: -190.00, I: 13.44, D: 21.43, Time: 92494127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.87, Error: -7.74, Output: -190.00, I: 13.36, D: 64.42, Time: 92514120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.67, Error: -11.34, Output: -190.00, I: 13.25, D: 89.87, Time: 92534120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 45.59, Error: -15.19, Output: -190.00, I: 13.09, D: 96.34, Time: 92554120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.32, Error: -12.64, Output: -190.00, I: 12.97, D: -63.65, Time: 92574988
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.26, Error: -8.53, Output: -184.02, I: 12.88, D: -102.87, Time: 92594115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.08, Error: -8.16, Output: -190.00, I: 12.80, D: -9.17, Time: 92614119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.25, Error: -4.51, Output: -110.00, I: 12.75, D: -91.40, Time: 92634109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.51, Error: -3.01, Output: -110.00, I: 12.72, D: -37.33, Time: 92654109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.13, Error: -6.26, Output: -190.00, I: 12.66, D: 81.13, Time: 92674943
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.45, Error: -10.91, Output: -190.00, I: 12.55, D: 116.24, Time: 92694127
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.06, Error: -4.12, Output: 110.00, I: 12.51, D: -169.66, Time: 92714116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 37.74, Error: 0.52, Output: 190.00, I: 12.52, D: -116.09, Time: 92734115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.32, Error: 5.36, Output: 190.00, I: 12.57, D: -120.86, Time: 92754115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.98, Error: 4.05, Output: 131.60, I: 12.61, D: 32.81, Time: 92775888
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 35.37, Error: 5.27, Output: 190.00, I: 12.66, D: -30.60, Time: 92794116
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.92, Error: 10.16, Output: 190.00, I: 12.77, D: -122.23, Time: 92814109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.84, Error: 14.33, Output: 190.00, I: 12.91, D: -104.21, Time: 92834108
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.63, Error: 16.74, Output: 190.00, I: 13.08, D: -60.27, Time: 92854109
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.00, Error: 18.00, Output: 190.00, I: 13.26, D: -31.66, Time: 92874635
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 27.58, Error: 20.84, Output: 190.00, I: 13.46, D: -70.94, Time: 92894496
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.67, Error: 18.66, Output: 190.00, I: 13.65, D: 54.64, Time: 92914126
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.39, Error: 17.22, Output: 190.00, I: 13.82, D: 35.84, Time: 92934115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.87, Error: 16.26, Output: 190.00, I: 13.99, D: 24.00, Time: 92954115
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.69, Error: 16.62, Output: 190.00, I: 14.15, D: -9.03, Time: 92974631
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 29.43, Error: 17.14, Output: 190.00, I: 14.32, D: -12.84, Time: 92994754
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 28.51, Error: 18.98, Output: 190.00, I: 14.51, D: -45.99, Time: 93014120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.95, Error: 14.09, Output: 190.00, I: 14.65, D: 122.15, Time: 93034131
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 30.95, Error: 14.09, Output: 190.00, I: 14.80, D: -0.09, Time: 93054123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 31.39, Error: 13.22, Output: 190.00, I: 14.93, D: 21.78, Time: 93075624
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 32.54, Error: 10.93, Output: 190.00, I: 15.04, D: 57.42, Time: 93094766
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 36.28, Error: 3.44, Output: -138.46, I: 15.07, D: 187.08, Time: 93114143
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 38.07, Error: -0.14, Output: -134.48, I: 15.07, D: 89.63, Time: 93134123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 39.06, Error: -2.12, Output: -153.66, I: 15.05, D: 49.34, Time: 93154123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.15, Error: -4.29, Output: -190.00, I: 15.01, D: 54.44, Time: 93174123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 40.81, Error: -5.62, Output: -190.00, I: 14.95, D: 33.27, Time: 93194996
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.91, Error: -7.81, Output: -190.00, I: 14.87, D: 54.68, Time: 93214123
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.04, Error: -10.07, Output: -190.00, I: 14.77, D: 56.48, Time: 93234119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 44.02, Error: -12.03, Output: -190.00, I: 14.65, D: 49.01, Time: 93254119
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 43.46, Error: -10.92, Output: -190.00, I: 14.54, D: -27.80, Time: 93274120
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 42.04, Error: -8.08, Output: -190.00, I: 14.46, D: -70.96, Time: 93294927
+Adjusting Kp to 45.40 after fail-safe
+Setpoint: 38.00, Measured: 41.86, Error: -7.71, Output: -190.00, I: 14.38, D: -9.23, Time: 93314127

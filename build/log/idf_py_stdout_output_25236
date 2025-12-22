@@ -1,0 +1,975 @@
+ET),boot:0x13 (SPI_FAST.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c428h ( 50216) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001c450 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001e7ec vaddr=40080000 size=0182ch (  6188) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=195cch (103884) map[0m
+[0;32mI (172) esp_image: segment 4: paddr=000395f4 vaddr=4008182c size=0c944h ( 51524) load[0m
+[0;32mI (199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (212) cpu_start: Multicore app[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     IDF_project[0m
+[0;32mI (228) app_init: App version:      1[0m
+[0;32mI (233) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (239) app_init: ELF file SHA256:  b6641b06d...[0m
+[0;32mI (244) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (249) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (254) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (259) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (264) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (271) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFB2CD8 len 0002D328 (180 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (290) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (296) heap_init: At 4008E170 len 00011E90 (71 KiB): IRAM[0m
+[0;32mI (304) spi_flash: detected chip: generic[0m
+[0;32mI (307) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (324) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (335) main_task: Started on CPU0[0m
+[0;32mI (345) main_task: Calling app_main()[0m
+[0;32mI (345) MAIN: I2C initialized successfully[0m
+[0;32mI (345) MOTOR: Initializing MCPWM for motor control[0m
+[0;32mI (345) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (365) MOTOR: Motor PWM initialized successfully[0m
+[0;32mI (475) MPU6050: WHO_AM_I register: 0x68 (expected 0x68)[0m
+[0;32mI (475) MPU6050: MPU6050 detected successfully![0m
+[0;32mI (775) MPU6050: Starting gyro calibration...[0m
+[0;32mI (5255) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (5255) MPU6050: Gyro offsets - X: 208.87, Y: -524.21, Z: 101.65[0m
+>Pitch Angle: 4.820181
+>Accel Pitch Angle: 80.336349
+>Gyro Pitch Angle: -0.000001
+>Pitch Angle: 9.361061
+>Accel Pitch Angle: 80.487083
+>Gyro Pitch Angle: 0.001967
+>Pitch Angle: 13.619713
+>Accel Pitch Angle: 80.324921
+>Gyro Pitch Angle: 0.003831
+>Pitch Angle: 17.604740
+>Accel Pitch Angle: 80.022034
+>Gyro Pitch Angle: 0.005847
+>Pitch Angle: 21.352882
+>Accel Pitch Angle: 80.066818
+>Gyro Pitch Angle: 0.006794
+>Pitch Angle: 24.873405
+>Accel Pitch Angle: 80.026932
+>Gyro Pitch Angle: 0.006978
+>Pitch Angle: 28.202072
+>Accel Pitch Angle: 80.357674
+>Gyro Pitch Angle: 0.006094
+>Pitch Angle: 31.323156
+>Accel Pitch Angle: 80.225502
+>Gyro Pitch Angle: 0.005362
+>Pitch Angle: 34.258518
+>Accel Pitch Angle: 80.250092
+>Gyro Pitch Angle: 0.004782
+>Pitch Angle: 37.009239
+>Accel Pitch Angle: 80.100311
+>Gyro Pitch Angle: 0.005272
+>Pitch Angle: 39.593811
+>Accel Pitch Angle: 80.080719
+>Gyro Pitch Angle: 0.005914
+>Pitch Angle: 42.031414
+>Accel Pitch Angle: 80.220322
+>Gyro Pitch Angle: 0.005945
+>Pitch Angle: 44.308186
+>Accel Pitch Angle: 79.974007
+>Gyro Pitch Angle: 0.006435
+>Pitch Angle: 46.452141
+>Accel Pitch Angle: 80.036072
+>Gyro Pitch Angle: 0.007077
+>Pitch Angle: 48.459618
+>Accel Pitch Angle: 79.907661
+>Gyro Pitch Angle: 0.007413
+>Pitch Angle: 50.357803
+>Accel Pitch Angle: 80.098015
+>Gyro Pitch Angle: 0.007139
+>Pitch Angle: 52.139339
+>Accel Pitch Angle: 80.055450
+>Gyro Pitch Angle: 0.006407
+>Pitch Angle: 53.814468
+>Accel Pitch Angle: 80.061310
+>Gyro Pitch Angle: 0.005981
+>Pitch Angle: 55.393814
+>Accel Pitch Angle: 80.138901
+>Gyro Pitch Angle: 0.005707
+>Pitch Angle: 56.877640
+>Accel Pitch Angle: 80.125099
+>Gyro Pitch Angle: 0.005586
+>Pitch Angle: 58.274525
+>Accel Pitch Angle: 80.156570
+>Gyro Pitch Angle: 0.005922
+>Pitch Angle: 59.586853
+>Accel Pitch Angle: 80.153137
+>Gyro Pitch Angle: 0.005038
+>Pitch Angle: 60.816109
+>Accel Pitch Angle: 80.070854
+>Gyro Pitch Angle: 0.005527
+>Pitch Angle: 61.969196
+>Accel Pitch Angle: 80.036270
+>Gyro Pitch Angle: 0.005253
+>Pitch Angle: 63.074348
+>Accel Pitch Angle: 80.388115
+>Gyro Pitch Angle: 0.005284
+>Pitch Angle: 64.101562
+>Accel Pitch Angle: 80.190933
+>Gyro Pitch Angle: 0.005774
+>Pitch Angle: 65.062546
+>Accel Pitch Angle: 80.116676
+>Gyro Pitch Angle: 0.005958
+>Pitch Angle: 65.969589
+>Accel Pitch Angle: 80.179756
+>Gyro Pitch Angle: 0.005989
+>Pitch Angle: 66.822403
+>Accel Pitch Angle: 80.179626
+>Gyro Pitch Angle: 0.006479
+>Pitch Angle: 67.620628
+>Accel Pitch Angle: 80.115860
+>Gyro Pitch Angle: 0.007884
+>Pitch Angle: 68.371719
+>Accel Pitch Angle: 80.137474
+>Gyro Pitch Angle: 0.008068
+>Pitch Angle: 69.066902
+>Accel Pitch Angle: 79.962379
+>Gyro Pitch Angle: 0.007489
+>Pitch Angle: 69.726608
+>Accel Pitch Angle: 80.062973
+>Gyro Pitch Angle: 0.007367
+>Pitch Angle: 70.357834
+>Accel Pitch Angle: 80.244507
+>Gyro Pitch Angle: 0.007704
+>Pitch Angle: 70.944672
+>Accel Pitch Angle: 80.135948
+>Gyro Pitch Angle: 0.008041
+>Pitch Angle: 71.504501
+>Accel Pitch Angle: 80.270432
+>Gyro Pitch Angle: 0.008683
+>Pitch Angle: 72.012985
+>Accel Pitch Angle: 79.975739
+>Gyro Pitch Angle: 0.009172
+>Pitch Angle: 72.504608
+>Accel Pitch Angle: 80.204155
+>Gyro Pitch Angle: 0.009509
+>Pitch Angle: 72.953827
+>Accel Pitch Angle: 79.993561
+>Gyro Pitch Angle: 0.009235
+>Pitch Angle: 73.385132
+>Accel Pitch Angle: 80.140823
+>Gyro Pitch Angle: 0.009419
+>Pitch Angle: 73.791443
+>Accel Pitch Angle: 80.158981
+>Gyro Pitch Angle: 0.009145
+>Pitch Angle: 74.168877
+>Accel Pitch Angle: 80.088516
+>Gyro Pitch Angle: 0.008261
+>Pitch Angle: 74.533066
+>Accel Pitch Angle: 80.242943
+>Gyro Pitch Angle: 0.007681
+>Pitch Angle: 74.869774
+>Accel Pitch Angle: 80.144608
+>Gyro Pitch Angle: 0.007713
+>Pitch Angle: 75.197006
+>Accel Pitch Angle: 80.317764
+>Gyro Pitch Angle: 0.008507
+>Pitch Angle: 75.497070
+>Accel Pitch Angle: 80.200081
+>Gyro Pitch Angle: 0.008233
+>Pitch Angle: 75.777023
+>Accel Pitch Angle: 80.154892
+>Gyro Pitch Angle: 0.009333
+>Pitch Angle: 76.037041
+>Accel Pitch Angle: 80.109283
+>Gyro Pitch Angle: 0.009517
+>Pitch Angle: 76.268311
+>Accel Pitch Angle: 79.883606
+>Gyro Pitch Angle: 0.010618
+>Pitch Angle: 76.505203
+>Accel Pitch Angle: 80.217384
+>Gyro Pitch Angle: 0.010496
+>Pitch Angle: 76.729683
+>Accel Pitch Angle: 80.249672
+>Gyro Pitch Angle: 0.010070
+>Pitch Angle: 76.940857
+>Accel Pitch Angle: 80.246834
+>Gyro Pitch Angle: 0.010406
+>Pitch Angle: 77.133987
+>Accel Pitch Angle: 80.161758
+>Gyro Pitch Angle: 0.010132
+>Pitch Angle: 77.315506
+>Accel Pitch Angle: 80.152328
+>Gyro Pitch Angle: 0.011080
+>Pitch Angle: 77.487976
+>Accel Pitch Angle: 80.192047
+>Gyro Pitch Angle: 0.010806
+>Pitch Angle: 77.652992
+>Accel Pitch Angle: 80.233582
+>Gyro Pitch Angle: 0.011448
+>Pitch Angle: 77.802902
+>Accel Pitch Angle: 80.155685
+>Gyro Pitch Angle: 0.010869
+>Pitch Angle: 77.949188
+>Accel Pitch Angle: 80.240761
+>Gyro Pitch Angle: 0.010900
+>Pitch Angle: 78.084259
+>Accel Pitch Angle: 80.203491
+>Gyro Pitch Angle: 0.010473
+>Pitch Angle: 78.205856
+>Accel Pitch Angle: 80.116226
+>Gyro Pitch Angle: 0.009741
+>Pitch Angle: 78.323280
+>Accel Pitch Angle: 80.158195
+>Gyro Pitch Angle: 0.010383
+>Pitch Angle: 78.436783
+>Accel Pitch Angle: 80.219215
+>Gyro Pitch Angle: 0.009804
+>Pitch Angle: 78.550339
+>Accel Pitch Angle: 80.329170
+>Gyro Pitch Angle: 0.009835
+>Pitch Angle: 78.641953
+>Accel Pitch Angle: 80.074776
+>Gyro Pitch Angle: 0.010172
+>Pitch Angle: 78.727341
+>Accel Pitch Angle: 80.063744
+>Gyro Pitch Angle: 0.010356
+>Pitch Angle: 78.813217
+>Accel Pitch Angle: 80.158348
+>Gyro Pitch Angle: 0.010388
+>Pitch Angle: 78.899040
+>Accel Pitch Angle: 80.239983
+>Gyro Pitch Angle: 0.010877
+>Pitch Angle: 78.974762
+>Accel Pitch Angle: 80.159752
+>Gyro Pitch Angle: 0.011061
+>Pitch Angle: 79.039619
+>Accel Pitch Angle: 80.047646
+>Gyro Pitch Angle: 0.012161
+>Pitch Angle: 79.101944
+>Accel Pitch Angle: 80.073746
+>Gyro Pitch Angle: 0.012803
+>Pitch Angle: 79.157471
+>Accel Pitch Angle: 80.021584
+>Gyro Pitch Angle: 0.013598
+>Pitch Angle: 79.208633
+>Accel Pitch Angle: 80.007767
+>Gyro Pitch Angle: 0.013935
+>Pitch Angle: 79.258202
+>Accel Pitch Angle: 80.036819
+>Gyro Pitch Angle: 0.013661
+>Pitch Angle: 79.310760
+>Accel Pitch Angle: 80.130554
+>Gyro Pitch Angle: 0.014150
+>Pitch Angle: 79.364647
+>Accel Pitch Angle: 80.205284
+>Gyro Pitch Angle: 0.014639
+>Pitch Angle: 79.411835
+>Accel Pitch Angle: 80.143044
+>Gyro Pitch Angle: 0.015739
+>Pitch Angle: 79.458580
+>Accel Pitch Angle: 80.182800
+>Gyro Pitch Angle: 0.016840
+>Pitch Angle: 79.509827
+>Accel Pitch Angle: 80.309174
+>Gyro Pitch Angle: 0.017329
+>Pitch Angle: 79.557709
+>Accel Pitch Angle: 80.312164
+>Gyro Pitch Angle: 0.016750
+>Pitch Angle: 79.589478
+>Accel Pitch Angle: 80.090347
+>Gyro Pitch Angle: 0.016323
+>Pitch Angle: 79.619133
+>Accel Pitch Angle: 80.080132
+>Gyro Pitch Angle: 0.016812
+>Pitch Angle: 79.642212
+>Accel Pitch Angle: 80.004730
+>Gyro Pitch Angle: 0.016691
+>Pitch Angle: 79.684509
+>Accel Pitch Angle: 80.336815
+>Gyro Pitch Angle: 0.018096
+>Pitch Angle: 79.722466
+>Accel Pitch Angle: 80.319176
+>Gyro Pitch Angle: 0.017823
+>Pitch Angle: 79.767792
+>Accel Pitch Angle: 80.474342
+>Gyro Pitch Angle: 0.018312
+>Pitch Angle: 79.798874
+>Accel Pitch Angle: 80.288940
+>Gyro Pitch Angle: 0.017885
+>Pitch Angle: 79.817581
+>Accel Pitch Angle: 80.112709
+>Gyro Pitch Angle: 0.017611
+>Pitch Angle: 79.818680
+>Accel Pitch Angle: 79.832283
+>Gyro Pitch Angle: 0.018101
+>Pitch Angle: 79.829971
+>Accel Pitch Angle: 80.006577
+>Gyro Pitch Angle: 0.018132
+>Pitch Angle: 79.858185
+>Accel Pitch Angle: 80.306770
+>Gyro Pitch Angle: 0.017247
+>Pitch Angle: 79.889023
+>Accel Pitch Angle: 80.372002
+>Gyro Pitch Angle: 0.017279
+>Pitch Angle: 79.899818
+>Accel Pitch Angle: 80.069870
+>Gyro Pitch Angle: 0.017157
+>Pitch Angle: 79.907364
+>Accel Pitch Angle: 80.026520
+>Gyro Pitch Angle: 0.017036
+>Pitch Angle: 79.920761
+>Accel Pitch Angle: 80.130508
+>Gyro Pitch Angle: 0.017068
+>Pitch Angle: 79.931839
+>Accel Pitch Angle: 80.101799
+>Gyro Pitch Angle: 0.017557
+>Pitch Angle: 79.935928
+>Accel Pitch Angle: 80.002068
+>Gyro Pitch Angle: 0.017283
+>Pitch Angle: 79.943718
+>Accel Pitch Angle: 80.064354
+>Gyro Pitch Angle: 0.017467
+>Pitch Angle: 79.970871
+>Accel Pitch Angle: 80.395027
+>Gyro Pitch Angle: 0.017651
+>Pitch Angle: 79.985420
+>Accel Pitch Angle: 80.209778
+>Gyro Pitch Angle: 0.018140
+>Pitch Angle: 79.985458
+>Accel Pitch Angle: 79.983650
+>Gyro Pitch Angle: 0.018477
+>Pitch Angle: 79.997086
+>Accel Pitch Angle: 80.174606
+>Gyro Pitch Angle: 0.019119
+>Pitch Angle: 80.011749
+>Accel Pitch Angle: 80.250259
+>Gyro Pitch Angle: 0.017929
+>Pitch Angle: 80.015297
+>Accel Pitch Angle: 80.077393
+>Gyro Pitch Angle: 0.017045
+>Pitch Angle: 80.034592
+>Accel Pitch Angle: 80.337814
+>Gyro Pitch Angle: 0.016923
+>Pitch Angle: 80.050476
+>Accel Pitch Angle: 80.299133
+>Gyro Pitch Angle: 0.016955
+>Pitch Angle: 80.053162
+>Accel Pitch Angle: 80.099457
+>Gyro Pitch Angle: 0.016375
+>Pitch Angle: 80.058418
+>Accel Pitch Angle: 80.138329
+>Gyro Pitch Angle: 0.016712
+>Pitch Angle: 80.058365
+>Accel Pitch Angle: 80.049408
+>Gyro Pitch Angle: 0.017812
+>Pitch Angle: 80.056839
+>Accel Pitch Angle: 80.026047
+>Gyro Pitch Angle: 0.018760
+>Pitch Angle: 80.055862
+>Accel Pitch Angle: 80.034721
+>Gyro Pitch Angle: 0.019554
+>Pitch Angle: 80.053726
+>Accel Pitch Angle: 80.018974
+>Gyro Pitch Angle: 0.019738
+>Pitch Angle: 80.062698
+>Accel Pitch Angle: 80.204048
+>Gyro Pitch Angle: 0.019617
+>Pitch Angle: 80.066833
+>Accel Pitch Angle: 80.139305
+>Gyro Pitch Angle: 0.018580
+>Pitch Angle: 80.080978
+>Accel Pitch Angle: 80.303459
+>Gyro Pitch Angle: 0.018458
+>Pitch Angle: 80.088425
+>Accel Pitch Angle: 80.209259
+>Gyro Pitch Angle: 0.017879
+>Pitch Angle: 80.090622
+>Accel Pitch Angle: 80.129311
+>Gyro Pitch Angle: 0.017300
+>Pitch Angle: 80.108414
+>Accel Pitch Angle: 80.382553
+>Gyro Pitch Angle: 0.017942
+>Pitch Angle: 80.119171
+>Accel Pitch Angle: 80.279671
+>Gyro Pitch Angle: 0.019042
+>Pitch Angle: 80.122452
+>Accel Pitch Angle: 80.163620
+>Gyro Pitch Angle: 0.020447
+>Pitch Angle: 80.107254
+>Accel Pitch Angle: 79.868866
+>Gyro Pitch Angle: 0.020479
+>Pitch Angle: 80.110809
+>Accel Pitch Angle: 80.177559
+>Gyro Pitch Angle: 0.018983
+>Pitch Angle: 80.104675
+>Accel Pitch Angle: 80.011703
+>Gyro Pitch Angle: 0.018557
+>Pitch Angle: 80.105728
+>Accel Pitch Angle: 80.117538
+>Gyro Pitch Angle: 0.019199
+>Pitch Angle: 80.106903
+>Accel Pitch Angle: 80.127411
+>Gyro Pitch Angle: 0.018925
+>Pitch Angle: 80.109528
+>Accel Pitch Angle: 80.147041
+>Gyro Pitch Angle: 0.019414
+>Pitch Angle: 80.107788
+>Accel Pitch Angle: 80.077034
+>Gyro Pitch Angle: 0.019904
+>Pitch Angle: 80.105049
+>Accel Pitch Angle: 80.057480
+>Gyro Pitch Angle: 0.020546
+>Pitch Angle: 80.115723
+>Accel Pitch Angle: 80.283867
+>Gyro Pitch Angle: 0.020424
+>Pitch Angle: 80.112717
+>Accel Pitch Angle: 80.068741
+>Gyro Pitch Angle: 0.019998
+>Pitch Angle: 80.119385
+>Accel Pitch Angle: 80.225807
+>Gyro Pitch Angle: 0.019724
+>Pitch Angle: 80.124268
+>Accel Pitch Angle: 80.199425
+>Gyro Pitch Angle: 0.019908
+>Pitch Angle: 80.132355
+>Accel Pitch Angle: 80.252167
+>Gyro Pitch Angle: 0.020855
+>Pitch Angle: 80.132225
+>Accel Pitch Angle: 80.128822
+>Gyro Pitch Angle: 0.021039
+>Pitch Angle: 80.131622
+>Accel Pitch Angle: 80.119667
+>Gyro Pitch Angle: 0.021376
+>Pitch Angle: 80.134590
+>Accel Pitch Angle: 80.183075
+>Gyro Pitch Angle: 0.021102
+>Pitch Angle: 80.139633
+>Accel Pitch Angle: 80.220688
+>Gyro Pitch Angle: 0.020828
+>Pitch Angle: 80.146408
+>Accel Pitch Angle: 80.261230
+>Gyro Pitch Angle: 0.019638
+>Pitch Angle: 80.146927
+>Accel Pitch Angle: 80.162590
+>Gyro Pitch Angle: 0.018601
+>Pitch Angle: 80.152565
+>Accel Pitch Angle: 80.247375
+>Gyro Pitch Angle: 0.017716
+>Pitch Angle: 80.164017
+>Accel Pitch Angle: 80.336594
+>Gyro Pitch Angle: 0.018663
+>Pitch Angle: 80.161545
+>Accel Pitch Angle: 80.117027
+>Gyro Pitch Angle: 0.019458
+>Pitch Angle: 80.156326
+>Accel Pitch Angle: 80.068764
+>Gyro Pitch Angle: 0.020253
+>Pitch Angle: 80.145576
+>Accel Pitch Angle: 79.973595
+>Gyro Pitch Angle: 0.020742
+>Pitch Angle: 80.139343
+>Accel Pitch Angle: 80.035866
+>Gyro Pitch Angle: 0.021537
+>Pitch Angle: 80.140320
+>Accel Pitch Angle: 80.157730
+>Gyro Pitch Angle: 0.021263
+>Pitch Angle: 80.144516
+>Accel Pitch Angle: 80.216766
+>Gyro Pitch Angle: 0.020378
+>Pitch Angle: 80.146202
+>Accel Pitch Angle: 80.174652
+>Gyro Pitch Angle: 0.020104
+>Pitch Angle: 80.140015
+>Accel Pitch Angle: 80.045143
+>Gyro Pitch Angle: 0.019830
+>Pitch Angle: 80.131531
+>Accel Pitch Angle: 79.997292
+>Gyro Pitch Angle: 0.020015
+>Pitch Angle: 80.137390
+>Accel Pitch Angle: 80.230026
+>Gyro Pitch Angle: 0.019893
+>Pitch Angle: 80.149429
+>Accel Pitch Angle: 80.344589
+>Gyro Pitch Angle: 0.019009
+>Pitch Angle: 80.162117
+>Accel Pitch Angle: 80.370705
+>Gyro Pitch Angle: 0.017666
+>Pitch Angle: 80.159355
+>Accel Pitch Angle: 80.121468
+>Gyro Pitch Angle: 0.016934
+>Pitch Angle: 80.158707
+>Accel Pitch Angle: 80.151718
+>Gyro Pitch Angle: 0.016507
+>Pitch Angle: 80.161774
+>Accel Pitch Angle: 80.208466
+>Gyro Pitch Angle: 0.016691
+>Pitch Angle: 80.171814
+>Accel Pitch Angle: 80.327705
+>Gyro Pitch Angle: 0.016875
+>Pitch Angle: 80.166382
+>Accel Pitch Angle: 80.077736
+>Gyro Pitch Angle: 0.017365
+>Pitch Angle: 80.163109
+>Accel Pitch Angle: 80.109337
+>Gyro Pitch Angle: 0.017701
+>Pitch Angle: 80.156563
+>Accel Pitch Angle: 80.054939
+>Gyro Pitch Angle: 0.017580
+>Pitch Angle: 80.153961
+>Accel Pitch Angle: 80.119682
+>Gyro Pitch Angle: 0.016696
+>Pitch Angle: 80.148186
+>Accel Pitch Angle: 80.060852
+>Gyro Pitch Angle: 0.016269
+>Pitch Angle: 80.162125
+>Accel Pitch Angle: 80.383629
+>Gyro Pitch Angle: 0.015842
+>Pitch Angle: 80.175636
+>Accel Pitch Angle: 80.385933
+>Gyro Pitch Angle: 0.016026
+>Pitch Angle: 80.173340
+>Accel Pitch Angle: 80.138222
+>Gyro Pitch Angle: 0.015905
+>Pitch Angle: 80.163910
+>Accel Pitch Angle: 80.012520
+>Gyro Pitch Angle: 0.016394
+>Pitch Angle: 80.162827
+>Accel Pitch Angle: 80.145615
+>Gyro Pitch Angle: 0.016426
+>Pitch Angle: 80.155220
+>Accel Pitch Angle: 80.035812
+>Gyro Pitch Angle: 0.016457
+>Pitch Angle: 80.150719
+>Accel Pitch Angle: 80.081093
+>Gyro Pitch Angle: 0.016336
+>Pitch Angle: 80.148132
+>Accel Pitch Angle: 80.101677
+>Gyro Pitch Angle: 0.017131
+>Pitch Angle: 80.145187
+>Accel Pitch Angle: 80.095505
+>Gyro Pitch Angle: 0.017620
+>Pitch Angle: 80.152611
+>Accel Pitch Angle: 80.268639
+>Gyro Pitch Angle: 0.017651
+>Pitch Angle: 80.162415
+>Accel Pitch Angle: 80.317993
+>Gyro Pitch Angle: 0.017377
+>Pitch Angle: 80.171417
+>Accel Pitch Angle: 80.324615
+>Gyro Pitch Angle: 0.015729
+>Pitch Angle: 80.177147
+>Accel Pitch Angle: 80.270081
+>Gyro Pitch Angle: 0.015303
+>Pitch Angle: 80.181610
+>Accel Pitch Angle: 80.255791
+>Gyro Pitch Angle: 0.014723
+>Pitch Angle: 80.198624
+>Accel Pitch Angle: 80.466072
+>Gyro Pitch Angle: 0.014602
+>Pitch Angle: 80.203712
+>Accel Pitch Angle: 80.269836
+>Gyro Pitch Angle: 0.016466
+>Pitch Angle: 80.204483
+>Accel Pitch Angle: 80.200577
+>Gyro Pitch Angle: 0.018634
+>Pitch Angle: 80.204926
+>Accel Pitch Angle: 80.200516
+>Gyro Pitch Angle: 0.020192
+>Pitch Angle: 80.197525
+>Accel Pitch Angle: 80.073624
+>Gyro Pitch Angle: 0.021292
+>Pitch Angle: 80.199966
+>Accel Pitch Angle: 80.235687
+>Gyro Pitch Angle: 0.021629
+>Pitch Angle: 80.181175
+>Accel Pitch Angle: 79.886528
+>Gyro Pitch Angle: 0.021661
+>Pitch Angle: 80.177139
+>Accel Pitch Angle: 80.127129
+>Gyro Pitch Angle: 0.019860
+>Pitch Angle: 80.175888
+>Accel Pitch Angle: 80.172768
+>Gyro Pitch Angle: 0.017601
+>Pitch Angle: 80.164627
+>Accel Pitch Angle: 80.006920
+>Gyro Pitch Angle: 0.015037
+>Pitch Angle: 80.168060
+>Accel Pitch Angle: 80.224983
+>Gyro Pitch Angle: 0.014611
+>Pitch Angle: 80.178467
+>Accel Pitch Angle: 80.333412
+>Gyro Pitch Angle: 0.015711
+>Pitch Angle: 80.166290
+>Accel Pitch Angle: 79.955208
+>Gyro Pitch Angle: 0.018490
+>Pitch Angle: 80.163933
+>Accel Pitch Angle: 80.114464
+>Gyro Pitch Angle: 0.020201
+>Pitch Angle: 80.158447
+>Accel Pitch Angle: 80.060997
+>Gyro Pitch Angle: 0.021759
+>Pitch Angle: 80.151909
+>Accel Pitch Angle: 80.044731
+>Gyro Pitch Angle: 0.022401
+>Pitch Angle: 80.148170
+>Accel Pitch Angle: 80.096123
+>Gyro Pitch Angle: 0.021516
+>Pitch Angle: 80.155701
+>Accel Pitch Angle: 80.274628
+>Gyro Pitch Angle: 0.021395
+>Pitch Angle: 80.168030
+>Accel Pitch Angle: 80.360924
+>Gyro Pitch Angle: 0.021426
+>Pitch Angle: 80.173645
+>Accel Pitch Angle: 80.250290
+>Gyro Pitch Angle: 0.022984
+>Pitch Angle: 80.178986
+>Accel Pitch Angle: 80.230042
+>Gyro Pitch Angle: 0.027443
+>Pitch Angle: 80.169785
+>Accel Pitch Angle: 79.995155
+>Gyro Pitch Angle: 0.031597
+>Pitch Angle: 80.152847
+>Accel Pitch Angle: 79.859322
+>Gyro Pitch Angle: 0.035445
+>Pitch Angle: 80.126923
+>Accel Pitch Angle: 79.722702
+>Gyro Pitch Angle: 0.035171
+>Pitch Angle: 80.101128
+>Accel Pitch Angle: 79.735909
+>Gyro Pitch Angle: 0.029859
+>Pitch Angle: 80.099884
+>Accel Pitch Angle: 80.147377
+>Gyro Pitch Angle: 0.020730
+>Pitch Angle: 80.108582
+>Accel Pitch Angle: 80.292717
+>Gyro Pitch Angle: 0.014196
+>Pitch Angle: 80.109299
+>Accel Pitch Angle: 80.127029
+>Gyro Pitch Angle: 0.013312
+>Pitch Angle: 80.128265
+>Accel Pitch Angle: 80.401619
+>Gyro Pitch Angle: 0.016549
+>Pitch Angle: 80.137718
+>Accel Pitch Angle: 80.241890
+>Gyro Pitch Angle: 0.022535
+>Pitch Angle: 80.135986
+>Accel Pitch Angle: 80.064980
+>Gyro Pitch Angle: 0.028520
+>Pitch Angle: 80.139252
+>Accel Pitch Angle: 80.172310
+>Gyro Pitch Angle: 0.030995
+>Pitch Angle: 80.146820
+>Accel Pitch Angle: 80.284149
+>Gyro Pitch Angle: 0.028431
+>Pitch Angle: 80.173492
+>Accel Pitch Angle: 80.617897
+>Gyro Pitch Angle: 0.024798
+>Pitch Angle: 80.202232
+>Accel Pitch Angle: 80.663483
+>Gyro Pitch Angle: 0.023302
+>Pitch Angle: 80.218338
+>Accel Pitch Angle: 80.440132
+>Gyro Pitch Angle: 0.027456
+>Pitch Angle: 80.201103
+>Accel Pitch Angle: 79.891724
+>Gyro Pitch Angle: 0.032831
+>Pitch Angle: 80.169693
+>Accel Pitch Angle: 79.637100
+>Gyro Pitch Angle: 0.038358
+>Pitch Angle: 80.144783
+>Accel Pitch Angle: 79.744194
+>Gyro Pitch Angle: 0.039764
+>Pitch Angle: 80.116669
+>Accel Pitch Angle: 79.715126
+>Gyro Pitch Angle: 0.034452
+>Pitch Angle: 80.120483
+>Accel Pitch Angle: 80.243866
+>Gyro Pitch Angle: 0.025781
+>Pitch Angle: 80.144821
+>Accel Pitch Angle: 80.591942
+>Gyro Pitch Angle: 0.016804
+>Pitch Angle: 80.169418
+>Accel Pitch Angle: 80.586945
+>Gyro Pitch Angle: 0.012408
+>Pitch Angle: 80.186104
+>Accel Pitch Angle: 80.424866
+>Gyro Pitch Angle: 0.015493
+>Pitch Angle: 80.195175
+>Accel Pitch Angle: 80.273148
+>Gyro Pitch Angle: 0.024227
+>Pitch Angle: 80.195229
+>Accel Pitch Angle: 80.124161
+>Gyro Pitch Angle: 0.034029
+>Pitch Angle: 80.188011
+>Accel Pitch Angle: 80.034378
+>Gyro Pitch Angle: 0.039557
+>Pitch Angle: 80.175499
+>Accel Pitch Angle: 79.991508
+>Gyro Pitch Angle: 0.037909
+>Pitch Angle: 80.167740
+>Accel Pitch Angle: 80.094025
+>Gyro Pitch Angle: 0.031375
+>Pitch Angle: 80.184998
+>Accel Pitch Angle: 80.507721
+>Gyro Pitch Angle: 0.024231
+>Pitch Angle: 80.213394
+>Accel Pitch Angle: 80.686066
+>Gyro Pitch Angle: 0.020446
+>Pitch Angle: 80.227844
+>Accel Pitch Angle: 80.442841
+>Gyro Pitch Angle: 0.022004
+>Pitch Angle: 80.245483
+>Accel Pitch Angle: 80.482414
+>Gyro Pitch Angle: 0.027379
+>Pitch Angle: 80.226715
+>Accel Pitch Angle: 79.885399
+>Gyro Pitch Angle: 0.033822
+>Pitch Angle: 80.203506
+>Accel Pitch Angle: 79.815086
+>Gyro Pitch Angle: 0.037212
+>Pitch Angle: 80.193069
+>Accel Pitch Angle: 80.042747
+>Gyro Pitch Angle: 0.035412
+>Pitch Angle: 80.194489
+>Accel Pitch Angle: 80.260178
+>Gyro Pitch Angle: 0.029489
+>Pitch Angle: 80.186630
+>Accel Pitch Angle: 80.119331
+>Gyro Pitch Angle: 0.021887
+>Pitch Angle: 80.197456
+>Accel Pitch Angle: 80.397057
+>Gyro Pitch Angle: 0.017796
+>Pitch Angle: 80.199348
+>Accel Pitch Angle: 80.218697
+>Gyro Pitch Angle: 0.019201
+>Pitch Angle: 80.185974
+>Accel Pitch Angle: 79.935837
+>Gyro Pitch Angle: 0.024729
+>Pitch Angle: 80.179626
+>Accel Pitch Angle: 80.018387
+>Gyro Pitch Angle: 0.033157
+>Pitch Angle: 80.150017
+>Accel Pitch Angle: 79.646713
+>Gyro Pitch Angle: 0.038532
+>Pitch Angle: 80.116394
+>Accel Pitch Angle: 79.590500
+>Gyro Pitch Angle: 0.038411
+>Pitch Angle: 80.118118
+>Accel Pitch Angle: 80.183029
+>Gyro Pitch Angle: 0.033251
+>Pitch Angle: 80.133629
+>Accel Pitch Angle: 80.433434
+>Gyro Pitch Angle: 0.025496
+>Pitch Angle: 80.159760
+>Accel Pitch Angle: 80.604683
+>Gyro Pitch Angle: 0.020642
+>Pitch Angle: 80.181198
+>Accel Pitch Angle: 80.517891
+>Gyro Pitch Angle: 0.020521
+>Pitch Angle: 80.194038
+>Accel Pitch Angle: 80.362488
+>Gyro Pitch Angle: 0.024980
+>Pitch Angle: 80.191971
+>Accel Pitch Angle: 80.108971
+>Gyro Pitch Angle: 0.031881
+>Pitch Angle: 80.197823
+>Accel Pitch Angle: 80.254593
+>Gyro Pitch Angle: 0.036646
+>Pitch Angle: 80.187759
+>Accel Pitch Angle: 80.026466
+>Gyro Pitch Angle: 0.037135
+>Pitch Angle: 80.168427
+>Accel Pitch Angle: 79.900108
+>Gyro Pitch Angle: 0.032434
+>Pitch Angle: 80.167282
+>Accel Pitch Angle: 80.193962
+>Gyro Pitch Angle: 0.026358
+>Pitch Angle: 80.169754
+>Accel Pitch Angle: 80.237274
+>Gyro Pitch Angle: 0.022420
+>Pitch Angle: 80.176575
+>Accel Pitch Angle: 80.286522
+>Gyro Pitch Angle: 0.021993
+>Pitch Angle: 80.184555
+>Accel Pitch Angle: 80.270157
+>Gyro Pitch Angle: 0.027368
+>Pitch Angle: 80.181824
+>Accel Pitch Angle: 80.099655
+>Gyro Pitch Angle: 0.032743
+>Pitch Angle: 80.175240
+>Accel Pitch Angle: 80.052849
+>Gyro Pitch Angle: 0.035370
+>Pitch Angle: 80.159149
+>Accel Pitch Angle: 79.909134
+>Gyro Pitch Angle: 0.035096
+>Pitch Angle: 80.146973
+>Accel Pitch Angle: 79.988327
+>Gyro Pitch Angle: 0.030700
+>Pitch Angle: 80.153091
+>Accel Pitch Angle: 80.283470
+>Gyro Pitch Angle: 0.025998
+>Pitch Angle: 80.161942
+>Accel Pitch Angle: 80.328445
+>Gyro Pitch Angle: 0.022213
+>Pitch Angle: 80.170319
+>Accel Pitch Angle: 80.305840
+>Gyro Pitch Angle: 0.021634
+>Pitch Angle: 80.178635
+>Accel Pitch Angle: 80.288544
+>Gyro Pitch Angle: 0.024413
+>Pitch Angle: 80.169098
+>Accel Pitch Angle: 79.988174
+>Gyro Pitch Angle: 0.028719
+>Pitch Angle: 80.154221
+>Accel Pitch Angle: 79.886200
+>Gyro Pitch Angle: 0.033484
+>Pitch Angle: 80.145966
+>Accel Pitch Angle: 79.995178
+>Gyro Pitch Angle: 0.036416
+>Pitch Angle: 80.138672
+>Accel Pitch Angle: 80.030930
+>Gyro Pitch Angle: 0.035531
+>Pitch Angle: 80.132812
+>Accel Pitch Angle: 80.076599
+>Gyro Pitch Angle: 0.030677
+>Pitch Angle: 80.147812
+>Accel Pitch Angle: 80.427414
+>Gyro Pitch Angle: 0.024601
+>Pitch Angle: 80.168266
+>Accel Pitch Angle: 80.517609
+>Gyro Pitch Angle: 0.020663
+>Pitch Angle: 80.196823
+>Accel Pitch Angle: 80.646233
+>Gyro Pitch Angle: 0.020389
+>Pitch Angle: 80.209946
+>Accel Pitch Angle: 80.390762
+>Gyro Pitch Angle: 0.023780
+>Pitch Angle: 80.221512
+>Accel Pitch Angle: 80.372276
+>Gyro Pitch Angle: 0.027933
+>Pitch Angle: 80.215637
+>Accel Pitch Angle: 80.093132
+>Gyro Pitch Angle: 0.032087
+>Pitch Angle: 80.194351
+>Accel Pitch Angle: 79.844948
+>Gyro Pitch Angle: 0.034255
+>Pitch Angle: 80.180923
+>Accel Pitch Angle: 79.983795
+>Gyro Pitch Angle: 0.032455
+>Pitch Angle: 80.174072
+>Accel Pitch Angle: 80.087708
+>Gyro Pitch Angle: 0.029585
+>Pitch Angle: 80.153351
+>Accel Pitch Angle: 79.856415
+>Gyro Pitch Angle: 0.025800
+>Pitch Angle: 80.154037
+>Accel Pitch Angle: 80.174583
+>Gyro Pitch Angle: 0.024457
+>Pitch Angle: 80.149261
+>Accel Pitch Angle: 80.069725
+>Gyro Pitch Angle: 0.025099
+>Pitch Angle: 80.154106
+>Accel Pitch Angle: 80.223083
+>Gyro Pitch Angle: 0.026047
+>Pitch Angle: 80.145317
+>Accel Pitch Angle: 79.997307
+>Gyro Pitch Angle: 0.027452
+>Pitch Angle: 80.160316
+>Accel Pitch Angle: 80.388359
+>Gyro Pitch Angle: 0.028399
+>Pitch Angle: 80.173775
+>Accel Pitch Angle: 80.380981
+>Gyro Pitch Angle: 0.028889
+>Pitch Angle: 80.178406
+>Accel Pitch Angle: 80.255257
+>Gyro Pitch Angle: 0.028310
+>Pitch Angle: 80.183151
+>Accel Pitch Angle: 80.257202
+>Gyro Pitch Angle: 0.028341
+>Pitch Angle: 80.195236
+>Accel Pitch Angle: 80.379837
+>Gyro Pitch Angle: 0.028983
+>Pitch Angle: 80.200256
+>Accel Pitch Angle: 80.284233
+>Gyro Pitch Angle: 0.028251
+>Pitch Angle: 80.217270
+>Accel Pitch Angle: 80.495880
+>Gyro Pitch Angle: 0.026603
+>Pitch Angle: 80.214653
+>Accel Pitch Angle: 80.171227
+>Gyro Pitch Angle: 0.026940
+>Pitch Angle: 80.210663
+>Accel Pitch Angle: 80.161247
+>Gyro Pitch Angle: 0.025139
+>Pitch Angle: 80.198639
+>Accel Pitch Angle: 80.016853
+>Gyro Pitch Angle: 0.024254
+>Pitch Angle: 80.199493
+>Accel Pitch Angle: 80.204750
+>Gyro Pitch Angle: 0.025354
+>Pitch Angle: 80.181122
+>Accel Pitch Angle: 79.884102
+>Gyro Pitch Angle: 0.026607
+>Pitch Angle: 80.170990
+>Accel Pitch Angle: 80.005249
+>Gyro Pitch Angle: 0.027555
+>Pitch Angle: 80.159073
+>Accel Pitch Angle: 79.975517
+>Gyro Pitch Angle: 0.027128
+>Pitch Angle: 80.156509
+>Accel Pitch Angle: 80.122795
+>Gyro Pitch Angle: 0.026243
+>Pitch Angle: 80.146652
+>Accel Pitch Angle: 79.994308
+>Gyro Pitch Angle: 0.025969
+>Pitch Angle: 80.144653
+>Accel Pitch Angle: 80.115463
+>Gyro Pitch Angle: 0.025695
+>Pitch Angle: 80.158524
+>Accel Pitch Angle: 80.353271
+>Gyro Pitch Angle: 0.028780
+>Pitch Angle: 80.160126
+>Accel Pitch Angle: 80.166008
+>Gyro Pitch Angle: 0.031407
+>Pitch Angle: 80.162018
+>Accel Pitch Angle: 80.175819
+>Gyro Pitch Angle: 0.033576
+>Pitch Angle: 80.140732
+>Accel Pitch Angle: 79.803619
+>Gyro Pitch Angle: 0.034065
+>Pitch Angle: 80.138443
+>Accel Pitch Angle: 80.132507
+>Gyro Pitch Angle: 0.029974
+>Pitch Angle: 80.147377
+>Accel Pitch Angle: 80.320663
+>Gyro Pitch Angle: 0.025426
+>Pitch Angle: 80.157242

@@ -1,0 +1,1074 @@
+
+rst:0x1 (P����j!�m[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;3�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e6a8h (124584) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e6d0 vaddr=3ffb0000 size=01948h (  6472) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=929bch (600508) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c29e4 vaddr=3ffb1948 size=0268ch (  9868) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5078 vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (456) app_init: ELF file SHA256:  88a43f805...[0m
+[0;32mI (462) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (477) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (489) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFB8328 len 00027CD8 (159 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (525) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (542) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MAIN: Connecting to WiFi...[0m
+[0;32mI (603) wifi:wifi driver task: 3ffc0474, prio:23, stack:6656, core=0[0m
+[0;32mI (613) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (613) wifi:wifi certification version: v7.0[0m
+[0;32mI (613) wifi:config NVS flash: enabled[0m
+[0;32mI (613) wifi:config nano formating: disabled[0m
+[0;32mI (623) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (623) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (633) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (643) wifi:Init static rx buffer num: 10[0m
+[0;32mI (643) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (783) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (783) wifi:enable tsf[0m
+[0;32mI (783) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (803) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (803) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (833) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (843) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (883) wifi:connected with Tran Van Tuan, aid = 20, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (883) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (883) wifi:pm start, type: 1[0m
+
+[0;32mI (883) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (903) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (923) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3893) esp_netif_handlers: sta ip: 192.168.1.181, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.181
+[0;32mI (3893) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3893) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4903) WEBSERVER: [34mPID loaded from NVS - Kp: 26.90, Ki: 0.00, Kd: 3.596[0m[0m
+[0;32mI (4903) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4913) WEBSERVER: Web server started successfully![0m
+[0;32mI (4913) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5413) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5413) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5513) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5513) GPIO: LED GPIO initialized[0m
+[0;32mI (5513) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5523) GPIO: Button GPIO initialized[0m
+[0;32mI (5623) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (5723) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (5823) MAIN: I2C initialized successfully[0m
+[0;32mI (6123) MPU6050: Starting gyro calibration...[0m
+[0;32mI (10823) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (10823) MPU6050: Gyro offsets - X: -407.15, Y: -67.77, Z: 34.58[0m
+Robot ready. Press the button to start balancing...
+[0;32mI (11383) wifi:<ba-add>idx:1 (ifx:0, e4:60:4d:cf:9a:d7), tid:5, ssn:1, winSize:64[0m
+Setpoint: 30.00, Measured: -9.19, Error: 78.38, Output: 190.00, I: 0.00, D: 49.79, Time: 0.040000
+Setpoint: 30.00, Measured: -5.59, Error: 71.18, Output: 190.00, I: 0.00, D: 69.89, Time: 0.040000
+Setpoint: 30.00, Measured: -2.82, Error: 65.65, Output: 190.00, I: 0.00, D: 69.52, Time: 0.040000
+Setpoint: 30.00, Measured: -1.10, Error: 62.20, Output: 190.00, I: 0.00, D: 56.30, Time: 0.040000
+Setpoint: 30.00, Measured: 0.93, Error: 58.13, Output: 190.00, I: 0.00, D: 53.58, Time: 0.040000
+Setpoint: 30.00, Measured: 2.15, Error: 55.71, Output: 190.00, I: 0.00, D: 41.94, Time: 0.040000
+Setpoint: 30.00, Measured: 3.43, Error: 53.14, Output: 190.00, I: 0.00, D: 37.02, Time: 0.040000
+Setpoint: 30.00, Measured: 4.18, Error: 51.63, Output: 190.00, I: 0.00, D: 27.94, Time: 0.040000
+Setpoint: 30.00, Measured: 4.26, Error: 51.49, Output: 190.00, I: 0.00, D: 14.87, Time: 0.040000
+Setpoint: 30.00, Measured: 3.99, Error: 52.02, Output: 190.00, I: 0.00, D: 4.11, Time: 0.040000
+Setpoint: 30.00, Measured: 3.06, Error: 53.88, Output: 190.00, I: 0.00, D: -9.57, Time: 0.040000
+Setpoint: 30.00, Measured: 3.51, Error: 52.99, Output: 190.00, I: 0.00, D: 0.78, Time: 0.040000
+Setpoint: 30.00, Measured: -0.71, Error: 61.42, Output: 190.00, I: 0.00, D: -52.33, Time: 0.040000
+Setpoint: 30.00, Measured: 0.96, Error: 58.08, Output: 190.00, I: 0.00, D: -5.25, Time: 0.040000
+Setpoint: 30.00, Measured: 2.25, Error: 55.51, Output: 190.00, I: 0.00, D: 13.44, Time: 0.040000
+Setpoint: 30.00, Measured: 4.82, Error: 50.37, Output: 190.00, I: 0.00, D: 38.84, Time: 0.040000
+Setpoint: 30.00, Measured: 4.28, Error: 51.44, Output: 190.00, I: 0.00, D: 12.71, Time: 0.040000
+Setpoint: 30.00, Measured: 3.05, Error: 53.90, Output: 190.00, I: 0.00, D: -9.03, Time: 0.040000
+Setpoint: 30.00, Measured: 4.66, Error: 50.67, Output: 190.00, I: 0.00, D: 15.68, Time: 0.040000
+Setpoint: 30.00, Measured: 4.05, Error: 51.90, Output: 190.00, I: 0.00, D: 0.15, Time: 0.040000
+Setpoint: 30.00, Measured: 2.72, Error: 54.57, Output: 190.00, I: 0.00, D: -16.60, Time: 0.040000
+Setpoint: 30.00, Measured: 1.18, Error: 57.64, Output: 190.00, I: 0.00, D: -27.49, Time: 0.040000
+Setpoint: 30.00, Measured: 0.38, Error: 59.24, Output: 190.00, I: 0.00, D: -23.73, Time: 0.040000
+Setpoint: 30.00, Measured: -1.52, Error: 63.04, Output: 190.00, I: 0.00, D: -35.62, Time: 0.040000
+Setpoint: 30.00, Measured: -0.88, Error: 61.75, Output: 190.00, I: 0.00, D: -9.79, Time: 0.040000
+Setpoint: 30.00, Measured: -1.18, Error: 62.35, Output: 190.00, I: 0.00, D: -8.64, Time: 0.040000
+Setpoint: 30.00, Measured: -1.86, Error: 63.72, Output: 190.00, I: 0.00, D: -12.88, Time: 0.040000
+Setpoint: 30.00, Measured: -1.47, Error: 62.94, Output: 190.00, I: 0.00, D: -1.55, Time: 0.040000
+Setpoint: 30.00, Measured: -2.21, Error: 64.43, Output: 190.00, I: 0.00, D: -10.07, Time: 0.040000
+Setpoint: 30.00, Measured: -2.22, Error: 64.44, Output: 190.00, I: 0.00, D: -5.11, Time: 0.040000
+Setpoint: 30.00, Measured: -3.06, Error: 66.12, Output: 190.00, I: 0.00, D: -13.08, Time: 0.040000
+Setpoint: 30.00, Measured: -3.84, Error: 67.67, Output: 190.00, I: 0.00, D: -16.21, Time: 0.040000
+Setpoint: 30.00, Measured: -3.82, Error: 67.65, Output: 190.00, I: 0.00, D: -7.97, Time: 0.040000
+Setpoint: 30.00, Measured: -4.38, Error: 68.76, Output: 190.00, I: 0.00, D: -10.91, Time: 0.040000
+Setpoint: 30.00, Measured: -4.75, Error: 69.50, Output: 190.00, I: 0.00, D: -10.08, Time: 0.040000
+Setpoint: 30.00, Measured: -5.17, Error: 70.33, Output: 190.00, I: 0.00, D: -10.28, Time: 0.040000
+Setpoint: 30.00, Measured: -5.84, Error: 71.67, Output: 190.00, I: 0.00, D: -13.50, Time: 0.040000
+Setpoint: 30.00, Measured: -6.38, Error: 72.76, Output: 190.00, I: 0.00, D: -13.53, Time: 0.040000
+Setpoint: 30.00, Measured: -7.09, Error: 74.18, Output: 190.00, I: 0.00, D: -15.69, Time: 0.040000
+Setpoint: 30.00, Measured: -7.47, Error: 74.94, Output: 190.00, I: 0.00, D: -12.54, Time: 0.040000
+Setpoint: 30.00, Measured: -7.27, Error: 74.55, Output: 190.00, I: 0.00, D: -3.85, Time: 0.040000
+Setpoint: 30.00, Measured: -7.43, Error: 74.87, Output: 190.00, I: 0.00, D: -3.93, Time: 0.040000
+Setpoint: 30.00, Measured: -7.47, Error: 74.94, Output: 190.00, I: 0.00, D: -2.38, Time: 0.040000
+Setpoint: 30.00, Measured: -8.01, Error: 76.03, Output: 190.00, I: 0.00, D: -8.00, Time: 0.040000
+Setpoint: 30.00, Measured: -8.22, Error: 76.43, Output: 190.00, I: 0.00, D: -6.55, Time: 0.040000
+Setpoint: 30.00, Measured: -8.99, Error: 77.98, Output: 190.00, I: 0.00, D: -12.94, Time: 0.040000
+Setpoint: 30.00, Measured: -9.40, Error: 78.79, Output: 190.00, I: 0.00, D: -11.56, Time: 0.040000
+Setpoint: 30.00, Measured: -9.82, Error: 79.65, Output: 190.00, I: 0.00, D: -11.12, Time: 0.040000
+Setpoint: 30.00, Measured: -9.85, Error: 79.71, Output: 190.00, I: 0.00, D: -5.93, Time: 0.040000
+Setpoint: 30.00, Measured: -9.99, Error: 79.97, Output: 190.00, I: 0.00, D: 0.11, Time: 0.040000
+Setpoint: 30.00, Measured: -8.83, Error: 77.66, Output: 190.00, I: 0.00, D: 14.48, Time: 0.040000
+Setpoint: 30.00, Measured: -8.20, Error: 76.40, Output: 190.00, I: 0.00, D: 15.13, Time: 0.040000
+Setpoint: 30.00, Measured: -7.71, Error: 75.43, Output: 190.00, I: 0.00, D: 13.65, Time: 0.040000
+Setpoint: 30.00, Measured: -8.42, Error: 76.84, Output: 190.00, I: 0.00, D: -2.00, Time: 0.040000
+Setpoint: 30.00, Measured: -6.50, Error: 73.01, Output: 190.00, I: 0.00, D: 22.94, Time: 0.040000
+Setpoint: 30.00, Measured: -5.75, Error: 71.50, Output: 190.00, I: 0.00, D: 20.91, Time: 0.040000
+Setpoint: 30.00, Measured: -4.63, Error: 69.26, Output: 190.00, I: 0.00, D: 24.43, Time: 0.040000
+Setpoint: 30.00, Measured: -3.99, Error: 67.99, Output: 190.00, I: 0.00, D: 20.18, Time: 0.040000
+Setpoint: 30.00, Measured: -1.84, Error: 63.68, Output: 190.00, I: 0.00, D: 36.99, Time: 0.040000
+Setpoint: 30.00, Measured: -1.04, Error: 62.08, Output: 190.00, I: 0.00, D: 28.50, Time: 0.040000
+Setpoint: 30.00, Measured: -0.24, Error: 60.48, Output: 190.00, I: 0.00, D: 24.26, Time: 0.040000
+Setpoint: 30.00, Measured: 0.45, Error: 59.11, Output: 190.00, I: 0.00, D: 20.73, Time: 0.040000
+Setpoint: 30.00, Measured: 1.29, Error: 57.42, Output: 190.00, I: 0.00, D: 20.90, Time: 0.040000
+Setpoint: 30.00, Measured: 2.30, Error: 55.39, Output: 190.00, I: 0.00, D: 23.12, Time: 0.040000
+Setpoint: 30.00, Measured: 3.13, Error: 53.75, Output: 190.00, I: 0.00, D: 21.84, Time: 0.040000
+Setpoint: 30.00, Measured: 2.79, Error: 54.42, Output: 190.00, I: 0.00, D: 6.70, Time: 0.040000
+Setpoint: 30.00, Measured: 2.79, Error: 54.41, Output: 190.00, I: 0.00, D: 3.40, Time: 0.040000
+Setpoint: 30.00, Measured: 2.74, Error: 54.53, Output: 190.00, I: 0.00, D: 0.99, Time: 0.040000
+Setpoint: 30.00, Measured: 2.89, Error: 54.23, Output: 190.00, I: 0.00, D: 2.38, Time: 0.040000
+Setpoint: 30.00, Measured: 3.36, Error: 53.28, Output: 190.00, I: 0.00, D: 7.08, Time: 0.040000
+Setpoint: 30.00, Measured: 3.76, Error: 52.49, Output: 190.00, I: 0.00, D: 8.52, Time: 0.040000
+Setpoint: 30.00, Measured: 3.91, Error: 52.19, Output: 190.00, I: 0.00, D: 6.13, Time: 0.040000
+Setpoint: 30.00, Measured: 4.16, Error: 51.69, Output: 190.00, I: 0.00, D: 6.20, Time: 0.040000
+Setpoint: 30.00, Measured: 4.07, Error: 51.86, Output: 190.00, I: 0.00, D: 2.01, Time: 0.040000
+Setpoint: 30.00, Measured: 4.02, Error: 51.96, Output: 190.00, I: 0.00, D: 0.38, Time: 0.040000
+Setpoint: 30.00, Measured: 3.91, Error: 52.19, Output: 190.00, I: 0.00, D: -1.21, Time: 0.040000
+Setpoint: 30.00, Measured: 3.48, Error: 53.03, Output: 190.00, I: 0.00, D: -5.91, Time: 0.040000
+Setpoint: 30.00, Measured: 3.55, Error: 52.91, Output: 190.00, I: 0.00, D: -2.17, Time: 0.040000
+Setpoint: 30.00, Measured: 3.37, Error: 53.25, Output: 190.00, I: 0.00, D: -3.22, Time: 0.040000
+Setpoint: 30.00, Measured: 3.21, Error: 53.58, Output: 190.00, I: 0.00, D: -3.66, Time: 0.040000
+Setpoint: 30.00, Measured: 3.06, Error: 53.88, Output: 190.00, I: 0.00, D: -3.72, Time: 0.040000
+Setpoint: 30.00, Measured: 3.27, Error: 53.46, Output: 190.00, I: 0.00, D: 0.77, Time: 0.040000
+Setpoint: 30.00, Measured: 3.39, Error: 53.22, Output: 190.00, I: 0.00, D: 1.89, Time: 0.040000
+Setpoint: 30.00, Measured: 3.36, Error: 53.29, Output: 190.00, I: 0.00, D: 0.53, Time: 0.040000
+Setpoint: 30.00, Measured: 2.85, Error: 54.31, Output: 190.00, I: 0.00, D: -6.13, Time: 0.040000
+Setpoint: 30.00, Measured: 1.82, Error: 56.36, Output: 190.00, I: 0.00, D: -15.90, Time: 0.040000
+Setpoint: 30.00, Measured: 1.32, Error: 57.36, Output: 190.00, I: 0.00, D: -14.16, Time: 0.040000
+Setpoint: 30.00, Measured: 0.90, Error: 58.19, Output: 190.00, I: 0.00, D: -12.30, Time: 0.040000
+Setpoint: 30.00, Measured: 0.38, Error: 59.24, Output: 190.00, I: 0.00, D: -12.72, Time: 0.040000
+Setpoint: 30.00, Measured: -0.37, Error: 60.74, Output: 190.00, I: 0.00, D: -15.71, Time: 0.040000
+Setpoint: 30.00, Measured: -1.26, Error: 62.53, Output: 190.00, I: 0.00, D: -19.05, Time: 0.040000
+Setpoint: 30.00, Measured: -2.33, Error: 64.65, Output: 190.00, I: 0.00, D: -22.79, Time: 0.040000
+Setpoint: 30.00, Measured: -2.99, Error: 65.99, Output: 190.00, I: 0.00, D: -19.74, Time: 0.040000
+Setpoint: 30.00, Measured: -4.04, Error: 68.07, Output: 190.00, I: 0.00, D: -22.90, Time: 0.040000
+Setpoint: 30.00, Measured: -5.33, Error: 70.66, Output: 190.00, I: 0.00, D: -27.60, Time: 0.040000
+Setpoint: 30.00, Measured: -6.17, Error: 72.35, Output: 190.00, I: 0.00, D: -24.36, Time: 0.040000
+Setpoint: 30.00, Measured: -7.34, Error: 74.69, Output: 190.00, I: 0.00, D: -26.82, Time: 0.040000
+Setpoint: 30.00, Measured: -8.38, Error: 76.75, Output: 190.00, I: 0.00, D: -26.32, Time: 0.040000
+Setpoint: 30.00, Measured: -9.12, Error: 78.24, Output: 190.00, I: 0.00, D: -22.45, Time: 0.040000
+Setpoint: 30.00, Measured: -5.23, Error: 70.47, Output: 190.00, I: 0.00, D: 80.89, Time: 0.040000
+Setpoint: 30.00, Measured: 3.84, Error: 52.31, Output: 190.00, I: 0.00, D: 153.90, Time: 0.040000
+Setpoint: 30.00, Measured: 10.41, Error: 39.18, Output: 190.00, I: 0.00, D: 159.03, Time: 0.040000
+Setpoint: 30.00, Measured: 14.80, Error: 30.41, Output: 190.00, I: 0.00, D: 134.35, Time: 0.040000
+Setpoint: 30.00, Measured: 20.53, Error: 18.95, Output: 140.00, I: 0.00, D: 138.81, Time: 0.040000
+Setpoint: 30.00, Measured: 25.36, Error: 9.28, Output: -190.00, I: 0.00, D: 129.84, Time: 0.040000
+Setpoint: 30.00, Measured: 28.58, Error: 2.84, Output: -190.00, I: 0.00, D: 105.12, Time: 0.040000
+Setpoint: 30.00, Measured: 30.70, Error: -1.39, Output: -190.00, I: 0.00, D: 79.04, Time: 0.040000
+Setpoint: 30.00, Measured: 31.07, Error: -2.15, Output: -190.00, I: 0.00, D: 44.25, Time: 0.040000
+Setpoint: 30.00, Measured: 23.56, Error: 12.88, Output: 190.00, I: 0.00, D: -71.80, Time: 0.040000
+Setpoint: 30.00, Measured: 27.10, Error: 5.79, Output: 140.00, I: 0.00, D: 8.38, Time: 0.040000
+Setpoint: 30.00, Measured: 27.40, Error: 5.19, Output: 140.00, I: 0.00, D: 7.95, Time: 0.040000
+Setpoint: 30.00, Measured: 25.02, Error: 9.96, Output: 190.00, I: 0.00, D: -25.85, Time: 0.040000
+Setpoint: 30.00, Measured: 23.67, Error: 12.67, Output: 190.00, I: 0.00, D: -29.81, Time: 0.040000
+Setpoint: 30.00, Measured: 22.64, Error: 14.73, Output: 190.00, I: 0.00, D: -27.80, Time: 0.040000
+Setpoint: 30.00, Measured: 21.39, Error: 17.22, Output: 190.00, I: 0.00, D: -29.49, Time: 0.040000
+Setpoint: 30.00, Measured: 21.75, Error: 16.51, Output: 190.00, I: 0.00, D: -10.26, Time: 0.040000
+Setpoint: 30.00, Measured: 25.39, Error: 9.23, Output: 140.00, I: 0.00, D: 40.36, Time: 0.040000
+Setpoint: 30.00, Measured: 28.42, Error: 3.16, Output: -140.00, I: 0.00, D: 58.07, Time: 0.040000
+Setpoint: 30.00, Measured: 30.11, Error: -0.22, Output: -186.61, I: 0.00, D: 50.22, Time: 0.040000
+Setpoint: 30.00, Measured: 33.76, Error: -7.53, Output: -190.00, I: 0.00, D: 70.76, Time: 0.040000
+Setpoint: 30.00, Measured: 35.67, Error: -11.35, Output: -190.00, I: 0.00, D: 59.24, Time: 0.040000
+Setpoint: 30.00, Measured: 33.84, Error: -7.69, Output: -190.00, I: 0.00, D: 6.75, Time: 0.040000
+Setpoint: 30.00, Measured: 30.12, Error: -0.25, Output: 148.40, I: 0.00, D: -43.12, Time: 0.040000
+Setpoint: 30.00, Measured: 28.96, Error: 2.09, Output: 186.20, I: 0.00, D: -36.16, Time: 0.040000
+Setpoint: 30.00, Measured: 25.89, Error: 8.22, Output: 190.00, I: 0.00, D: -56.40, Time: 0.040000
+Setpoint: 30.00, Measured: 21.56, Error: 16.88, Output: 190.00, I: 0.00, D: -82.32, Time: 0.040000
+Setpoint: 30.00, Measured: 18.48, Error: 23.03, Output: 190.00, I: 0.00, D: -79.63, Time: 0.040000
+Setpoint: 30.00, Measured: 17.87, Error: 24.26, Output: 190.00, I: 0.00, D: -47.46, Time: 0.040000
+Setpoint: 30.00, Measured: 19.21, Error: 21.59, Output: 190.00, I: 0.00, D: -7.05, Time: 0.040000
+Setpoint: 30.00, Measured: 24.68, Error: 10.63, Output: 140.00, I: 0.00, D: 64.95, Time: 0.040000
+Setpoint: 30.00, Measured: 27.07, Error: 5.86, Output: -140.00, I: 0.00, D: 62.30, Time: 0.040000
+Setpoint: 30.00, Measured: 30.44, Error: -0.88, Output: -190.00, I: 0.00, D: 73.30, Time: 0.040000
+Setpoint: 30.00, Measured: 33.50, Error: -7.00, Output: -190.00, I: 0.00, D: 74.91, Time: 0.040000
+Setpoint: 30.00, Measured: 35.23, Error: -10.46, Output: -190.00, I: 0.00, D: 59.03, Time: 0.040000
+Setpoint: 30.00, Measured: 35.60, Error: -11.21, Output: -190.00, I: 0.00, D: 34.21, Time: 0.040000
+Setpoint: 30.00, Measured: 29.95, Error: 0.10, Output: 190.00, I: 0.00, D: -53.60, Time: 0.040000
+Setpoint: 30.00, Measured: 30.38, Error: -0.77, Output: 140.00, I: 0.00, D: -21.36, Time: 0.040000
+Setpoint: 30.00, Measured: 27.31, Error: 5.39, Output: 190.00, I: 0.00, D: -49.14, Time: 0.040000
+Setpoint: 30.00, Measured: 23.54, Error: 12.91, Output: 190.00, I: 0.00, D: -71.60, Time: 0.040000
+Setpoint: 30.00, Measured: 21.95, Error: 16.11, Output: 190.00, I: 0.00, D: -55.76, Time: 0.040000
+Setpoint: 30.00, Measured: 20.78, Error: 18.45, Output: 190.00, I: 0.00, D: -42.52, Time: 0.040000
+Setpoint: 30.00, Measured: 23.05, Error: 13.91, Output: 190.00, I: 0.00, D: 7.11, Time: 0.040000
+Setpoint: 30.00, Measured: 29.54, Error: 0.92, Output: -190.00, I: 0.00, D: 84.71, Time: 0.040000
+Setpoint: 30.00, Measured: 30.84, Error: -1.67, Output: -190.00, I: 0.00, D: 58.60, Time: 0.040000
+Setpoint: 30.00, Measured: 35.85, Error: -11.69, Output: -190.00, I: 0.00, D: 91.91, Time: 0.040000
+Setpoint: 30.00, Measured: 39.24, Error: -18.48, Output: -190.00, I: 0.00, D: 88.35, Time: 0.040000
+Setpoint: 30.00, Measured: 36.69, Error: -13.37, Output: -190.00, I: 0.00, D: 12.29, Time: 0.040000
+Setpoint: 30.00, Measured: 33.66, Error: -7.33, Output: -140.00, I: 0.00, D: -31.65, Time: 0.040000
+Setpoint: 30.00, Measured: 28.88, Error: 2.25, Output: 190.00, I: 0.00, D: -75.65, Time: 0.040000
+Setpoint: 30.00, Measured: 25.70, Error: 8.61, Output: 190.00, I: 0.00, D: -77.60, Time: 0.040000
+Setpoint: 30.00, Measured: 21.55, Error: 16.91, Output: 190.00, I: 0.00, D: -90.65, Time: 0.040000
+Setpoint: 30.00, Measured: 19.21, Error: 21.58, Output: 190.00, I: 0.00, D: -74.54, Time: 0.040000
+Setpoint: 30.00, Measured: 17.56, Error: 24.88, Output: 190.00, I: 0.00, D: -57.90, Time: 0.040000
+Setpoint: 30.00, Measured: 17.99, Error: 24.02, Output: 190.00, I: 0.00, D: -23.55, Time: 0.040000
+Setpoint: 30.00, Measured: 20.98, Error: 18.04, Output: 190.00, I: 0.00, D: 25.58, Time: 0.040000
+Setpoint: 30.00, Measured: 24.79, Error: 10.42, Output: 140.00, I: 0.00, D: 60.39, Time: 0.040000
+Setpoint: 30.00, Measured: 28.36, Error: 3.28, Output: -180.97, I: 0.00, D: 74.85, Time: 0.040000
+Setpoint: 30.00, Measured: 30.79, Error: -1.58, Output: -190.00, I: 0.00, D: 67.77, Time: 0.040000
+Setpoint: 30.00, Measured: 35.71, Error: -11.41, Output: -190.00, I: 0.00, D: 95.37, Time: 0.040000
+Setpoint: 30.00, Measured: 38.74, Error: -17.49, Output: -190.00, I: 0.00, D: 85.66, Time: 0.040000
+Setpoint: 30.00, Measured: 39.42, Error: -18.85, Output: -190.00, I: 0.00, D: 51.33, Time: 0.040000
+Setpoint: 30.00, Measured: 35.33, Error: -10.65, Output: -190.00, I: 0.00, D: -25.57, Time: 0.040000
+Setpoint: 30.00, Measured: 31.23, Error: -2.46, Output: 164.05, I: 0.00, D: -64.00, Time: 0.040000
+Setpoint: 30.00, Measured: 27.54, Error: 4.92, Output: 190.00, I: 0.00, D: -78.10, Time: 0.040000
+Setpoint: 30.00, Measured: 23.96, Error: 12.07, Output: 190.00, I: 0.00, D: -83.78, Time: 0.040000
+Setpoint: 30.00, Measured: 20.25, Error: 19.50, Output: 190.00, I: 0.00, D: -88.30, Time: 0.040000
+Setpoint: 30.00, Measured: 20.31, Error: 19.38, Output: 190.00, I: 0.00, D: -43.43, Time: 0.040000
+Setpoint: 30.00, Measured: 22.69, Error: 14.62, Output: 190.00, I: 0.00, D: 8.09, Time: 0.040000
+Setpoint: 30.00, Measured: 25.40, Error: 9.21, Output: 140.00, I: 0.00, D: 37.83, Time: 0.040000
+Setpoint: 30.00, Measured: 29.10, Error: 1.81, Output: -185.76, I: 0.00, D: 65.18, Time: 0.040000
+Setpoint: 30.00, Measured: 32.32, Error: -4.64, Output: -190.00, I: 0.00, D: 72.90, Time: 0.040000
+Setpoint: 30.00, Measured: 37.58, Error: -15.16, Output: -190.00, I: 0.00, D: 102.16, Time: 0.040000
+Setpoint: 30.00, Measured: 39.01, Error: -18.02, Output: -190.00, I: 0.00, D: 68.98, Time: 0.040000
+Setpoint: 30.00, Measured: 36.76, Error: -13.53, Output: -190.00, I: 0.00, D: 6.40, Time: 0.040000
+Setpoint: 30.00, Measured: 34.76, Error: -9.51, Output: -177.08, I: 0.00, D: -21.90, Time: 0.040000
+Setpoint: 30.00, Measured: 32.73, Error: -5.46, Output: -140.00, I: 0.00, D: -36.29, Time: 0.040000
+Setpoint: 30.00, Measured: 29.29, Error: 1.42, Output: 190.00, I: 0.00, D: -61.14, Time: 0.040000
+Setpoint: 30.00, Measured: 25.12, Error: 9.75, Output: 190.00, I: 0.00, D: -82.62, Time: 0.040000
+Setpoint: 30.00, Measured: 22.42, Error: 15.16, Output: 190.00, I: 0.00, D: -75.09, Time: 0.040000
+Setpoint: 30.00, Measured: 19.65, Error: 20.69, Output: 190.00, I: 0.00, D: -72.14, Time: 0.040000
+Setpoint: 30.00, Measured: 18.12, Error: 23.77, Output: 190.00, I: 0.00, D: -55.30, Time: 0.040000
+Setpoint: 30.00, Measured: 16.89, Error: 26.22, Output: 190.00, I: 0.00, D: -42.98, Time: 0.040000
+Setpoint: 30.00, Measured: 17.06, Error: 25.88, Output: 190.00, I: 0.00, D: -19.38, Time: 0.040000
+Setpoint: 30.00, Measured: 16.73, Error: 26.54, Output: 190.00, I: 0.00, D: -13.79, Time: 0.040000
+Setpoint: 30.00, Measured: 17.78, Error: 24.45, Output: 190.00, I: 0.00, D: 6.18, Time: 0.040000
+Setpoint: 30.00, Measured: 20.26, Error: 19.47, Output: 190.00, I: 0.00, D: 34.17, Time: 0.040000
+Setpoint: 30.00, Measured: 28.03, Error: 3.95, Output: -190.00, I: 0.00, D: 114.13, Time: 0.040000
+Setpoint: 30.00, Measured: 31.73, Error: -3.47, Output: -190.00, I: 0.00, D: 103.40, Time: 0.040000
+Setpoint: 30.00, Measured: 37.49, Error: -14.98, Output: -190.00, I: 0.00, D: 123.68, Time: 0.040000
+Setpoint: 30.00, Measured: 42.48, Error: -24.96, Output: -190.00, I: 0.00, D: 124.21, Time: 0.040000
+Setpoint: 30.00, Measured: 43.39, Error: -26.79, Output: -190.00, I: 0.00, D: 73.52, Time: 0.040000
+Setpoint: 30.00, Measured: 37.38, Error: -14.76, Output: -190.00, I: 0.00, D: -38.43, Time: 0.040000
+Setpoint: 30.00, Measured: 30.20, Error: -0.39, Output: 190.00, I: 0.00, D: -109.00, Time: 0.040000
+Setpoint: 30.00, Measured: 31.65, Error: -3.30, Output: 140.00, I: 0.00, D: -36.31, Time: 0.040000
+Setpoint: 30.00, Measured: 27.83, Error: 4.35, Output: 190.00, I: 0.00, D: -65.98, Time: 0.040000
+Setpoint: 30.00, Measured: 24.90, Error: 10.19, Output: 190.00, I: 0.00, D: -69.53, Time: 0.040000
+Setpoint: 30.00, Measured: 25.00, Error: 9.99, Output: 190.00, I: 0.00, D: -33.51, Time: 0.040000
+Setpoint: 30.00, Measured: 27.84, Error: 4.32, Output: 140.00, I: 0.00, D: 18.71, Time: 0.040000
+Setpoint: 30.00, Measured: 29.85, Error: 0.31, Output: -140.00, I: 0.00, D: 34.42, Time: 0.040000
+Setpoint: 30.00, Measured: 32.09, Error: -4.18, Output: -190.00, I: 0.00, D: 45.26, Time: 0.040000
+Setpoint: 30.00, Measured: 36.56, Error: -13.13, Output: -190.00, I: 0.00, D: 78.54, Time: 0.040000
+Setpoint: 30.00, Measured: 38.56, Error: -17.11, Output: -190.00, I: 0.00, D: 64.19, Time: 0.040000
+Setpoint: 30.00, Measured: 37.49, Error: -14.98, Output: -190.00, I: 0.00, D: 18.78, Time: 0.040000
+Setpoint: 30.00, Measured: 37.26, Error: -14.53, Output: -190.00, I: 0.00, D: 6.55, Time: 0.040000
+Setpoint: 30.00, Measured: 36.45, Error: -12.91, Output: -190.00, I: 0.00, D: -6.85, Time: 0.040000
+Setpoint: 30.00, Measured: 33.09, Error: -6.18, Output: -140.00, I: 0.00, D: -45.47, Time: 0.040000
+Setpoint: 30.00, Measured: 25.24, Error: 9.51, Output: 190.00, I: 0.00, D: -120.83, Time: 0.040000
+Setpoint: 30.00, Measured: 20.35, Error: 19.31, Output: 190.00, I: 0.00, D: -121.61, Time: 0.040000
+Setpoint: 30.00, Measured: 15.54, Error: 28.92, Output: 190.00, I: 0.00, D: -120.90, Time: 0.040000
+Setpoint: 30.00, Measured: 10.48, Error: 39.05, Output: 190.00, I: 0.00, D: -123.75, Time: 0.040000
+Setpoint: 30.00, Measured: 9.56, Error: 40.89, Output: 190.00, I: 0.00, D: -73.35, Time: 0.040000
+Setpoint: 30.00, Measured: 8.26, Error: 43.48, Output: 190.00, I: 0.00, D: -52.92, Time: 0.040000
+Setpoint: 30.00, Measured: 8.20, Error: 43.61, Output: 190.00, I: 0.00, D: -27.22, Time: 0.040000
+Setpoint: 30.00, Measured: 12.39, Error: 35.23, Output: 190.00, I: 0.00, D: 38.77, Time: 0.040000
+Setpoint: 30.00, Measured: 14.69, Error: 30.62, Output: 190.00, I: 0.00, D: 48.15, Time: 0.040000
+Setpoint: 30.00, Measured: 21.74, Error: 16.53, Output: 140.00, I: 0.00, D: 112.17, Time: 0.040000
+Setpoint: 30.00, Measured: 28.23, Error: 3.54, Output: -190.00, I: 0.00, D: 137.26, Time: 0.040000
+Setpoint: 30.00, Measured: 31.46, Error: -2.92, Output: -190.00, I: 0.00, D: 108.99, Time: 0.040000
+Setpoint: 30.00, Measured: 38.12, Error: -16.23, Output: -190.00, I: 0.00, D: 137.73, Time: 0.040000
+Setpoint: 30.00, Measured: 41.15, Error: -22.30, Output: -190.00, I: 0.00, D: 106.78, Time: 0.040000
+Setpoint: 30.00, Measured: 40.13, Error: -20.26, Output: -190.00, I: 0.00, D: 40.63, Time: 0.040000
+Setpoint: 30.00, Measured: 40.34, Error: -20.67, Output: -190.00, I: 0.00, D: 22.88, Time: 0.040000
+Setpoint: 30.00, Measured: 38.84, Error: -17.68, Output: -190.00, I: 0.00, D: -7.25, Time: 0.040000
+Setpoint: 30.00, Measured: 35.00, Error: -10.01, Output: -140.00, I: 0.00, D: -51.59, Time: 0.040000
+Setpoint: 30.00, Measured: 34.60, Error: -9.19, Output: -140.00, I: 0.00, D: -30.88, Time: 0.040000
+Setpoint: 30.00, Measured: 32.95, Error: -5.90, Output: -140.00, I: 0.00, D: -36.01, Time: 0.040000
+Setpoint: 30.00, Measured: 30.77, Error: -1.55, Output: 140.00, I: 0.00, D: -45.20, Time: 0.040000
+Setpoint: 30.00, Measured: 31.28, Error: -2.55, Output: -140.00, I: 0.00, D: -16.32, Time: 0.040000
+Setpoint: 30.00, Measured: 29.16, Error: 1.68, Output: 169.84, I: 0.00, D: -34.64, Time: 0.040000
+Setpoint: 30.00, Measured: 29.97, Error: 0.07, Output: 140.00, I: 0.00, D: -7.24, Time: 0.040000
+Setpoint: 30.00, Measured: 29.63, Error: 0.73, Output: 140.00, I: 0.00, D: -7.77, Time: 0.040000
+Setpoint: 30.00, Measured: 29.21, Error: 1.57, Output: 140.00, I: 0.00, D: -9.12, Time: 0.040000
+Setpoint: 30.00, Measured: 29.73, Error: 0.54, Output: 140.00, I: 0.00, D: 1.86, Time: 0.040000
+Setpoint: 30.00, Measured: 31.03, Error: -2.05, Output: -140.00, I: 0.00, D: 17.15, Time: 0.040000
+Setpoint: 30.00, Measured: 31.22, Error: -2.45, Output: -140.00, I: 0.00, D: 11.05, Time: 0.040000
+Setpoint: 30.00, Measured: 32.40, Error: -4.79, Output: -190.00, I: 0.00, D: 20.19, Time: 0.040000
+Setpoint: 30.00, Measured: 33.94, Error: -7.89, Output: -190.00, I: 0.00, D: 29.42, Time: 0.040000
+Setpoint: 30.00, Measured: 34.50, Error: -8.99, Output: -190.00, I: 0.00, D: 21.63, Time: 0.040000
+Setpoint: 30.00, Measured: 34.36, Error: -8.72, Output: -190.00, I: 0.00, D: 9.10, Time: 0.040000
+Setpoint: 30.00, Measured: 33.91, Error: -7.83, Output: -190.00, I: 0.00, D: -1.03, Time: 0.040000
+Setpoint: 30.00, Measured: 33.22, Error: -6.45, Output: -140.55, I: 0.00, D: -9.14, Time: 0.040000
+Setpoint: 30.00, Measured: 27.73, Error: 4.54, Output: 190.00, I: 0.00, D: -73.21, Time: 0.040000
+Setpoint: 30.00, Measured: 23.41, Error: 13.18, Output: 190.00, I: 0.00, D: -90.60, Time: 0.040000
+Setpoint: 30.00, Measured: 18.39, Error: 23.23, Output: 190.00, I: 0.00, D: -108.13, Time: 0.040000
+Setpoint: 30.00, Measured: 16.15, Error: 27.69, Output: 190.00, I: 0.00, D: -81.95, Time: 0.040000
+Setpoint: 30.00, Measured: 15.36, Error: 29.27, Output: 190.00, I: 0.00, D: -50.85, Time: 0.040000
+Setpoint: 30.00, Measured: 14.43, Error: 31.15, Output: 190.00, I: 0.00, D: -37.16, Time: 0.040000
+Setpoint: 30.00, Measured: 19.93, Error: 20.13, Output: 190.00, I: 0.00, D: 50.27, Time: 0.040000
+Setpoint: 30.00, Measured: 34.37, Error: -8.73, Output: -190.00, I: 0.00, D: 205.53, Time: 0.040000
+Setpoint: 30.00, Measured: 36.00, Error: -11.99, Output: -190.00, I: 0.00, D: 123.14, Time: 0.040000
+Setpoint: 30.00, Measured: 37.93, Error: -15.86, Output: -190.00, I: 0.00, D: 85.73, Time: 0.040000
+Setpoint: 30.00, Measured: 42.05, Error: -24.09, Output: -190.00, I: 0.00, D: 94.34, Time: 0.040000
+Setpoint: 30.00, Measured: 40.73, Error: -21.46, Output: -190.00, I: 0.00, D: 30.73, Time: 0.040000
+Setpoint: 30.00, Measured: 37.64, Error: -15.27, Output: -190.00, I: 0.00, D: -23.33, Time: 0.040000
+Setpoint: 30.00, Measured: 35.47, Error: -10.95, Output: -155.33, I: 0.00, D: -38.69, Time: 0.040000
+Setpoint: 30.00, Measured: 31.59, Error: -3.19, Output: 158.23, I: 0.00, D: -67.84, Time: 0.040000
+Setpoint: 30.00, Measured: 29.73, Error: 0.53, Output: 190.00, I: 0.00, D: -57.17, Time: 0.040000
+Setpoint: 30.00, Measured: 28.55, Error: 2.91, Output: 190.00, I: 0.00, D: -43.41, Time: 0.040000
+Setpoint: 30.00, Measured: 28.59, Error: 2.82, Output: 151.78, I: 0.00, D: -21.15, Time: 0.040000
+Setpoint: 30.00, Measured: 28.09, Error: 3.81, Output: 163.09, I: 0.00, D: -16.82, Time: 0.040000
+Setpoint: 30.00, Measured: 29.56, Error: 0.89, Output: -140.00, I: 0.00, D: 9.88, Time: 0.040000
+Setpoint: 30.00, Measured: 32.78, Error: -5.55, Output: -190.00, I: 0.00, D: 45.21, Time: 0.040000
+Setpoint: 30.00, Measured: 34.40, Error: -8.79, Output: -190.00, I: 0.00, D: 42.84, Time: 0.040000
+Setpoint: 30.00, Measured: 35.53, Error: -11.07, Output: -190.00, I: 0.00, D: 35.64, Time: 0.040000
+Setpoint: 30.00, Measured: 35.85, Error: -11.71, Output: -190.00, I: 0.00, D: 21.81, Time: 0.040000
+Setpoint: 30.00, Measured: 34.52, Error: -9.04, Output: -190.00, I: 0.00, D: -5.75, Time: 0.040000
+Setpoint: 30.00, Measured: 33.81, Error: -7.62, Output: -162.84, I: 0.00, D: -11.74, Time: 0.040000
+Setpoint: 30.00, Measured: 30.44, Error: -0.87, Output: 149.46, I: 0.00, D: -48.07, Time: 0.040000
+Setpoint: 30.00, Measured: 28.48, Error: 3.03, Output: 190.00, I: 0.00, D: -48.43, Time: 0.040000
+Setpoint: 30.00, Measured: 27.47, Error: 5.06, Output: 190.00, I: 0.00, D: -36.86, Time: 0.040000
+Setpoint: 30.00, Measured: 26.42, Error: 7.16, Output: 190.00, I: 0.00, D: -31.60, Time: 0.040000
+Setpoint: 30.00, Measured: 25.03, Error: 9.95, Output: 190.00, I: 0.00, D: -33.20, Time: 0.040000
+Setpoint: 30.00, Measured: 25.68, Error: 8.63, Output: 190.00, I: 0.00, D: -8.37, Time: 0.040000
+Setpoint: 30.00, Measured: 27.15, Error: 5.70, Output: 140.00, I: 0.00, D: 14.16, Time: 0.040000
+Setpoint: 30.00, Measured: 27.83, Error: 4.34, Output: 140.00, I: 0.00, D: 15.54, Time: 0.040000
+Setpoint: 30.00, Measured: 30.23, Error: -0.47, Output: -148.60, I: 0.00, D: 37.83, Time: 0.040000
+Setpoint: 30.00, Measured: 31.57, Error: -3.14, Output: -190.00, I: 0.00, D: 35.60, Time: 0.040000
+Setpoint: 30.00, Measured: 34.23, Error: -8.47, Output: -190.00, I: 0.00, D: 51.10, Time: 0.040000
+Setpoint: 30.00, Measured: 35.34, Error: -10.67, Output: -190.00, I: 0.00, D: 39.33, Time: 0.040000
+Setpoint: 30.00, Measured: 34.89, Error: -9.78, Output: -190.00, I: 0.00, D: 14.11, Time: 0.040000
+Setpoint: 30.00, Measured: 34.72, Error: -9.44, Output: -190.00, I: 0.00, D: 4.91, Time: 0.040000
+Setpoint: 30.00, Measured: 33.28, Error: -6.57, Output: -140.00, I: 0.00, D: -15.47, Time: 0.040000
+Setpoint: 30.00, Measured: 30.66, Error: -1.32, Output: 140.00, I: 0.00, D: -40.56, Time: 0.040000
+Setpoint: 30.00, Measured: 27.56, Error: 4.88, Output: 190.00, I: 0.00, D: -59.03, Time: 0.040000
+Setpoint: 30.00, Measured: 24.84, Error: 10.32, Output: 190.00, I: 0.00, D: -63.50, Time: 0.040000
+Setpoint: 30.00, Measured: 22.85, Error: 14.30, Output: 190.00, I: 0.00, D: -56.62, Time: 0.040000
+Setpoint: 30.00, Measured: 21.02, Error: 17.96, Output: 190.00, I: 0.00, D: -51.20, Time: 0.040000
+Setpoint: 30.00, Measured: 21.63, Error: 16.74, Output: 190.00, I: 0.00, D: -17.95, Time: 0.040000
+Setpoint: 30.00, Measured: 24.75, Error: 10.50, Output: 174.64, I: 0.00, D: 30.00, Time: 0.040000
+Setpoint: 30.00, Measured: 29.46, Error: 1.09, Output: -190.00, I: 0.00, D: 73.85, Time: 0.040000
+Setpoint: 30.00, Measured: 29.83, Error: 0.34, Output: -140.21, I: 0.00, D: 41.57, Time: 0.040000
+Setpoint: 30.00, Measured: 35.08, Error: -10.17, Output: -190.00, I: 0.00, D: 86.48, Time: 0.040000
+Setpoint: 30.00, Measured: 36.84, Error: -13.68, Output: -190.00, I: 0.00, D: 65.20, Time: 0.040000
+Setpoint: 30.00, Measured: 39.16, Error: -18.32, Output: -190.00, I: 0.00, D: 61.57, Time: 0.040000
+Setpoint: 30.00, Measured: 39.61, Error: -19.22, Output: -190.00, I: 0.00, D: 36.41, Time: 0.040000
+Setpoint: 30.00, Measured: 37.75, Error: -15.49, Output: -190.00, I: 0.00, D: -5.06, Time: 0.040000
+Setpoint: 30.00, Measured: 34.30, Error: -8.60, Output: -140.00, I: 0.00, D: -45.61, Time: 0.040000
+Setpoint: 30.00, Measured: 32.11, Error: -4.22, Output: 140.00, I: 0.00, D: -50.21, Time: 0.040000
+Setpoint: 30.00, Measured: 28.47, Error: 3.07, Output: 190.00, I: 0.00, D: -70.64, Time: 0.040000
+Setpoint: 30.00, Measured: 24.78, Error: 10.44, Output: 190.00, I: 0.00, D: -81.40, Time: 0.040000
+Setpoint: 30.00, Measured: 21.75, Error: 16.49, Output: 190.00, I: 0.00, D: -78.53, Time: 0.040000
+Setpoint: 30.00, Measured: 20.35, Error: 19.30, Output: 190.00, I: 0.00, D: -56.81, Time: 0.040000
+Setpoint: 30.00, Measured: 21.61, Error: 16.77, Output: 190.00, I: 0.00, D: -12.61, Time: 0.040000
+Setpoint: 30.00, Measured: 22.33, Error: 15.34, Output: 190.00, I: 0.00, D: 2.63, Time: 0.040000
+Setpoint: 30.00, Measured: 27.07, Error: 5.87, Output: -140.00, I: 0.00, D: 60.53, Time: 0.040000
+Setpoint: 30.00, Measured: 31.00, Error: -1.99, Output: -190.00, I: 0.00, D: 79.41, Time: 0.040000
+Setpoint: 30.00, Measured: 35.74, Error: -11.49, Output: -190.00, I: 0.00, D: 99.05, Time: 0.040000
+Setpoint: 30.00, Measured: 41.99, Error: -23.98, Output: -190.00, I: 0.00, D: 127.56, Time: 0.040000
+Setpoint: 30.00, Measured: 43.75, Error: -27.49, Output: -190.00, I: 0.00, D: 85.76, Time: 0.040000
+Setpoint: 30.00, Measured: 44.22, Error: -28.44, Output: -190.00, I: 0.00, D: 48.80, Time: 0.040000
+Setpoint: 30.00, Measured: 44.47, Error: -28.94, Output: -190.00, I: 0.00, D: 27.51, Time: 0.040000
+Setpoint: 30.00, Measured: 42.13, Error: -24.26, Output: -190.00, I: 0.00, D: -15.49, Time: 0.040000
+Setpoint: 30.00, Measured: 40.05, Error: -20.10, Output: -190.00, I: 0.00, D: -33.71, Time: 0.040000
+Setpoint: 30.00, Measured: 38.15, Error: -16.30, Output: -190.00, I: 0.00, D: -40.63, Time: 0.040000
+Setpoint: 30.00, Measured: 35.18, Error: -10.35, Output: -140.00, I: 0.00, D: -57.47, Time: 0.040000
+Setpoint: 30.00, Measured: 31.18, Error: -2.36, Output: 190.00, I: 0.00, D: -78.73, Time: 0.040000
+Setpoint: 30.00, Measured: 29.53, Error: 0.95, Output: 190.00, I: 0.00, D: -60.02, Time: 0.040000
+Setpoint: 30.00, Measured: 26.79, Error: 6.42, Output: 190.00, I: 0.00, D: -64.22, Time: 0.040000
+Setpoint: 30.00, Measured: 24.07, Error: 11.85, Output: 190.00, I: 0.00, D: -66.06, Time: 0.040000
+Setpoint: 30.00, Measured: 23.55, Error: 12.91, Output: 190.00, I: 0.00, D: -39.61, Time: 0.040000
+Setpoint: 30.00, Measured: 24.87, Error: 10.25, Output: 190.00, I: 0.00, D: -3.22, Time: 0.040000
+Setpoint: 30.00, Measured: 25.70, Error: 8.60, Output: 190.00, I: 0.00, D: 8.72, Time: 0.040000
+Setpoint: 30.00, Measured: 30.81, Error: -1.63, Output: -190.00, I: 0.00, D: 68.27, Time: 0.040000
+Setpoint: 30.00, Measured: 30.95, Error: -1.91, Output: -180.51, I: 0.00, D: 35.91, Time: 0.040000
+Setpoint: 30.00, Measured: 35.85, Error: -11.71, Output: -190.00, I: 0.00, D: 79.19, Time: 0.040000
+Setpoint: 30.00, Measured: 39.24, Error: -18.49, Output: -190.00, I: 0.00, D: 81.98, Time: 0.040000
+Setpoint: 30.00, Measured: 39.71, Error: -19.42, Output: -190.00, I: 0.00, D: 46.82, Time: 0.040000
+Setpoint: 30.00, Measured: 38.63, Error: -17.27, Output: -190.00, I: 0.00, D: 9.94, Time: 0.040000
+Setpoint: 30.00, Measured: 37.10, Error: -14.21, Output: -190.00, I: 0.00, D: -14.14, Time: 0.040000
+Setpoint: 30.00, Measured: 34.67, Error: -9.35, Output: -140.00, I: 0.00, D: -37.45, Time: 0.040000
+Setpoint: 30.00, Measured: 32.89, Error: -5.77, Output: -140.00, I: 0.00, D: -41.07, Time: 0.040000
+Setpoint: 30.00, Measured: 29.47, Error: 1.06, Output: 190.00, I: 0.00, D: -63.24, Time: 0.040000
+Setpoint: 30.00, Measured: 25.78, Error: 8.45, Output: 190.00, I: 0.00, D: -77.78, Time: 0.040000
+Setpoint: 30.00, Measured: 23.79, Error: 12.42, Output: 190.00, I: 0.00, D: -63.73, Time: 0.040000
+Setpoint: 30.00, Measured: 22.08, Error: 15.84, Output: 190.00, I: 0.00, D: -53.23, Time: 0.040000
+Setpoint: 30.00, Measured: 21.24, Error: 17.52, Output: 190.00, I: 0.00, D: -37.09, Time: 0.040000
+Setpoint: 30.00, Measured: 24.94, Error: 10.12, Output: 172.74, I: 0.00, D: 27.67, Time: 0.040000
+Setpoint: 30.00, Measured: 27.68, Error: 4.63, Output: -140.00, I: 0.00, D: 48.13, Time: 0.040000
+Setpoint: 30.00, Measured: 31.31, Error: -2.62, Output: -190.00, I: 0.00, D: 69.42, Time: 0.040000
+Setpoint: 30.00, Measured: 36.19, Error: -12.37, Output: -190.00, I: 0.00, D: 95.64, Time: 0.040000
+Setpoint: 30.00, Measured: 38.76, Error: -17.51, Output: -190.00, I: 0.00, D: 79.94, Time: 0.040000
+Setpoint: 30.00, Measured: 38.59, Error: -17.18, Output: -190.00, I: 0.00, D: 37.91, Time: 0.040000
+Setpoint: 30.00, Measured: 37.24, Error: -14.48, Output: -190.00, I: 0.00, D: 2.10, Time: 0.040000
+Setpoint: 30.00, Measured: 35.64, Error: -11.27, Output: -190.00, I: 0.00, D: -19.02, Time: 0.040000
+Setpoint: 30.00, Measured: 32.30, Error: -4.60, Output: 140.00, I: 0.00, D: -51.24, Time: 0.040000
+Setpoint: 30.00, Measured: 30.35, Error: -0.71, Output: 160.52, I: 0.00, D: -49.93, Time: 0.040000
+Setpoint: 30.00, Measured: 27.82, Error: 4.36, Output: 190.00, I: 0.00, D: -56.61, Time: 0.040000
+Setpoint: 30.00, Measured: 25.57, Error: 8.87, Output: 190.00, I: 0.00, D: -56.50, Time: 0.040000
+Setpoint: 30.00, Measured: 23.45, Error: 13.09, Output: 190.00, I: 0.00, D: -54.66, Time: 0.040000
+Setpoint: 30.00, Measured: 22.20, Error: 15.61, Output: 190.00, I: 0.00, D: -43.04, Time: 0.040000
+Setpoint: 30.00, Measured: 23.88, Error: 12.23, Output: 190.00, I: 0.00, D: -0.44, Time: 0.040000
+Setpoint: 30.00, Measured: 25.74, Error: 8.52, Output: 146.31, I: 0.00, D: 23.02, Time: 0.040000
+Setpoint: 30.00, Measured: 30.86, Error: -1.72, Output: -190.00, I: 0.00, D: 75.50, Time: 0.040000
+Setpoint: 30.00, Measured: 31.91, Error: -3.82, Output: -190.00, I: 0.00, D: 50.87, Time: 0.040000
+Setpoint: 30.00, Measured: 37.14, Error: -14.29, Output: -190.00, I: 0.00, D: 90.84, Time: 0.040000
+Setpoint: 30.00, Measured: 38.99, Error: -17.99, Output: -190.00, I: 0.00, D: 68.54, Time: 0.040000
+Setpoint: 30.00, Measured: 40.80, Error: -21.61, Output: -190.00, I: 0.00, D: 56.92, Time: 0.040000
+Setpoint: 30.00, Measured: 37.55, Error: -15.11, Output: -190.00, I: 0.00, D: -12.16, Time: 0.040000
+Setpoint: 30.00, Measured: 36.23, Error: -12.45, Output: -190.00, I: 0.00, D: -22.70, Time: 0.040000
+Setpoint: 30.00, Measured: 35.63, Error: -11.27, Output: -190.00, I: 0.00, D: -18.73, Time: 0.040000
+Setpoint: 30.00, Measured: 30.42, Error: -0.84, Output: 190.00, I: 0.00, D: -74.56, Time: 0.040000
+Setpoint: 30.00, Measured: 28.43, Error: 3.14, Output: 190.00, I: 0.00, D: -62.12, Time: 0.040000
+Setpoint: 30.00, Measured: 25.74, Error: 8.51, Output: 190.00, I: 0.00, D: -64.68, Time: 0.040000
+Setpoint: 30.00, Measured: 22.10, Error: 15.80, Output: 190.00, I: 0.00, D: -77.85, Time: 0.040000
+Setpoint: 30.00, Measured: 19.46, Error: 21.08, Output: 190.00, I: 0.00, D: -71.97, Time: 0.040000
+Setpoint: 30.00, Measured: 18.00, Error: 23.99, Output: 190.00, I: 0.00, D: -54.17, Time: 0.040000
+Setpoint: 30.00, Measured: 19.83, Error: 20.34, Output: 190.00, I: 0.00, D: -4.27, Time: 0.040000
+Setpoint: 30.00, Measured: 20.74, Error: 18.51, Output: 190.00, I: 0.00, D: 9.29, Time: 0.040000
+Setpoint: 30.00, Measured: 23.02, Error: 13.96, Output: 190.00, I: 0.00, D: 33.10, Time: 0.040000
+Setpoint: 30.00, Measured: 25.85, Error: 8.30, Output: 140.00, I: 0.00, D: 51.92, Time: 0.040000
+Setpoint: 30.00, Measured: 29.70, Error: 0.59, Output: -190.00, I: 0.00, D: 74.15, Time: 0.040000
+Setpoint: 30.00, Measured: 33.49, Error: -6.98, Output: -190.00, I: 0.00, D: 84.41, Time: 0.040000
+Setpoint: 30.00, Measured: 39.39, Error: -18.78, Output: -190.00, I: 0.00, D: 115.93, Time: 0.040000
+Setpoint: 30.00, Measured: 42.30, Error: -24.61, Output: -190.00, I: 0.00, D: 94.41, Time: 0.040000
+Setpoint: 30.00, Measured: 44.57, Error: -29.15, Output: -190.00, I: 0.00, D: 75.58, Time: 0.040000
+Setpoint: 30.00, Measured: 46.41, Error: -32.82, Output: -190.00, I: 0.00, D: 60.72, Time: 0.040000
+Setpoint: 30.00, Measured: 47.45, Error: -34.90, Output: -190.00, I: 0.00, D: 43.39, Time: 0.040000
+Setpoint: 30.00, Measured: 46.36, Error: -32.73, Output: -190.00, I: 0.00, D: 8.11, Time: 0.040000
+Setpoint: 30.00, Measured: 43.59, Error: -27.18, Output: -190.00, I: 0.00, D: -30.64, Time: 0.040000
+Setpoint: 30.00, Measured: 42.63, Error: -25.26, Output: -190.00, I: 0.00, D: -27.33, Time: 0.040000
+Setpoint: 30.00, Measured: 40.12, Error: -20.24, Output: -190.00, I: 0.00, D: -45.00, Time: 0.040000
+Setpoint: 30.00, Measured: 40.40, Error: -20.81, Output: -190.00, I: 0.00, D: -18.98, Time: 0.040000
+Setpoint: 30.00, Measured: 39.24, Error: -18.49, Output: -190.00, I: 0.00, D: -23.98, Time: 0.040000
+Setpoint: 30.00, Measured: 37.90, Error: -15.80, Output: -190.00, I: 0.00, D: -28.78, Time: 0.040000
+Setpoint: 30.00, Measured: 37.02, Error: -14.04, Output: -190.00, I: 0.00, D: -25.38, Time: 0.040000
+Setpoint: 30.00, Measured: 34.39, Error: -8.77, Output: -140.00, I: 0.00, D: -45.61, Time: 0.040000
+Setpoint: 30.00, Measured: 34.18, Error: -8.37, Output: -140.00, I: 0.00, D: -25.36, Time: 0.040000
+Setpoint: 30.00, Measured: 33.90, Error: -7.80, Output: -151.43, I: 0.00, D: -16.22, Time: 0.040000
+Setpoint: 30.00, Measured: 33.64, Error: -7.28, Output: -154.80, I: 0.00, D: -11.38, Time: 0.040000
+Setpoint: 30.00, Measured: 33.42, Error: -6.84, Output: -153.89, I: 0.00, D: -8.39, Time: 0.040000
+Setpoint: 30.00, Measured: 33.25, Error: -6.49, Output: -151.65, I: 0.00, D: -6.39, Time: 0.040000
+Setpoint: 30.00, Measured: 32.93, Error: -5.86, Output: -140.00, I: 0.00, D: -7.16, Time: 0.040000
+Setpoint: 30.00, Measured: 33.68, Error: -7.36, Output: -190.00, I: 0.00, D: 5.81, Time: 0.040000
+Setpoint: 30.00, Measured: 32.86, Error: -5.72, Output: -140.00, I: 0.00, D: -7.32, Time: 0.040000
+Setpoint: 30.00, Measured: 32.87, Error: -5.75, Output: -141.93, I: 0.00, D: -3.52, Time: 0.040000
+Setpoint: 30.00, Measured: 32.38, Error: -4.77, Output: -140.00, I: 0.00, D: -7.88, Time: 0.040000
+Setpoint: 30.00, Measured: 32.23, Error: -4.46, Output: -140.00, I: 0.00, D: -5.87, Time: 0.040000
+Setpoint: 30.00, Measured: 32.60, Error: -5.19, Output: -145.54, I: 0.00, D: 1.64, Time: 0.040000
+Setpoint: 30.00, Measured: 33.01, Error: -6.02, Output: -183.70, I: 0.00, D: 6.03, Time: 0.040000
+Setpoint: 30.00, Measured: 34.16, Error: -8.31, Output: -190.00, I: 0.00, D: 17.30, Time: 0.040000
+Setpoint: 30.00, Measured: 34.23, Error: -8.46, Output: -190.00, I: 0.00, D: 9.58, Time: 0.040000
+Setpoint: 30.00, Measured: 34.39, Error: -8.77, Output: -190.00, I: 0.00, D: 6.75, Time: 0.040000
+Setpoint: 30.00, Measured: 32.53, Error: -5.06, Output: -140.00, I: 0.00, D: -19.80, Time: 0.040000
+Setpoint: 30.00, Measured: 31.67, Error: -3.33, Output: -140.00, I: 0.00, D: -20.72, Time: 0.040000
+Setpoint: 30.00, Measured: 29.98, Error: 0.04, Output: 140.00, I: 0.00, D: -31.47, Time: 0.040000
+Setpoint: 30.00, Measured: 26.93, Error: 6.14, Output: 190.00, I: 0.00, D: -53.83, Time: 0.040000
+Setpoint: 30.00, Measured: 25.01, Error: 9.97, Output: 190.00, I: 0.00, D: -50.87, Time: 0.040000
+Setpoint: 30.00, Measured: 22.04, Error: 15.91, Output: 190.00, I: 0.00, D: -62.57, Time: 0.040000
+Setpoint: 30.00, Measured: 21.54, Error: 16.92, Output: 190.00, I: 0.00, D: -37.57, Time: 0.040000
+Setpoint: 30.00, Measured: 20.56, Error: 18.88, Output: 190.00, I: 0.00, D: -31.02, Time: 0.040000
+Setpoint: 30.00, Measured: 21.31, Error: 17.38, Output: 190.00, I: 0.00, D: -6.18, Time: 0.040000
+Setpoint: 30.00, Measured: 24.77, Error: 10.47, Output: 140.00, I: 0.00, D: 40.15, Time: 0.040000
+Setpoint: 30.00, Measured: 28.84, Error: 2.31, Output: -190.00, I: 0.00, D: 71.03, Time: 0.040000
+Setpoint: 30.00, Measured: 30.65, Error: -1.29, Output: -190.00, I: 0.00, D: 58.06, Time: 0.040000
+Setpoint: 30.00, Measured: 33.91, Error: -7.82, Output: -190.00, I: 0.00, D: 69.79, Time: 0.040000
+Setpoint: 30.00, Measured: 34.61, Error: -9.23, Output: -190.00, I: 0.00, D: 43.73, Time: 0.040000
+Setpoint: 30.00, Measured: 34.53, Error: -9.07, Output: -190.00, I: 0.00, D: 20.86, Time: 0.040000
+Setpoint: 30.00, Measured: 33.64, Error: -7.27, Output: -190.00, I: 0.00, D: -0.79, Time: 0.040000
+Setpoint: 30.00, Measured: 32.37, Error: -4.74, Output: -140.00, I: 0.00, D: -16.26, Time: 0.040000
+Setpoint: 30.00, Measured: 30.67, Error: -1.34, Output: 140.00, I: 0.00, D: -29.36, Time: 0.040000
+Setpoint: 30.00, Measured: 28.28, Error: 3.45, Output: 190.00, I: 0.00, D: -44.61, Time: 0.040000
+Setpoint: 30.00, Measured: 27.19, Error: 5.62, Output: 190.00, I: 0.00, D: -35.88, Time: 0.040000
+Setpoint: 30.00, Measured: 25.58, Error: 8.84, Output: 190.00, I: 0.00, D: -38.03, Time: 0.040000
+Setpoint: 30.00, Measured: 24.52, Error: 10.96, Output: 190.00, I: 0.00, D: -32.30, Time: 0.040000
+Setpoint: 30.00, Measured: 25.64, Error: 8.72, Output: 190.00, I: 0.00, D: -2.13, Time: 0.040000
+Setpoint: 30.00, Measured: 27.63, Error: 4.73, Output: 140.00, I: 0.00, D: 23.86, Time: 0.040000
+Setpoint: 30.00, Measured: 27.76, Error: 4.49, Output: 140.00, I: 0.00, D: 13.46, Time: 0.040000
+Setpoint: 30.00, Measured: 29.37, Error: 1.26, Output: -140.00, I: 0.00, D: 26.92, Time: 0.040000
+Setpoint: 30.00, Measured: 30.54, Error: -1.08, Output: -140.00, I: 0.00, D: 28.08, Time: 0.040000
+Setpoint: 30.00, Measured: 32.41, Error: -4.81, Output: -190.00, I: 0.00, D: 37.33, Time: 0.040000
+Setpoint: 30.00, Measured: 33.60, Error: -7.20, Output: -190.00, I: 0.00, D: 33.59, Time: 0.040000
+Setpoint: 30.00, Measured: 32.42, Error: -4.84, Output: -140.00, I: 0.00, D: 2.08, Time: 0.040000
+Setpoint: 30.00, Measured: 31.55, Error: -3.10, Output: -140.00, I: 0.00, D: -9.87, Time: 0.040000
+Setpoint: 30.00, Measured: 29.79, Error: 0.43, Output: 140.00, I: 0.00, D: -26.97, Time: 0.040000
+Setpoint: 30.00, Measured: 27.47, Error: 5.06, Output: 190.00, I: 0.00, D: -42.42, Time: 0.040000
+Setpoint: 30.00, Measured: 26.07, Error: 7.85, Output: 190.00, I: 0.00, D: -38.69, Time: 0.040000
+Setpoint: 30.00, Measured: 23.92, Error: 12.16, Output: 190.00, I: 0.00, D: -46.23, Time: 0.040000
+Setpoint: 30.00, Measured: 22.54, Error: 14.93, Output: 190.00, I: 0.00, D: -40.44, Time: 0.040000
+Setpoint: 30.00, Measured: 22.93, Error: 14.15, Output: 190.00, I: 0.00, D: -15.36, Time: 0.040000
+Setpoint: 30.00, Measured: 23.64, Error: 12.72, Output: 190.00, I: 0.00, D: 1.28, Time: 0.040000
+Setpoint: 30.00, Measured: 26.11, Error: 7.77, Output: 140.00, I: 0.00, D: 31.52, Time: 0.040000
+Setpoint: 30.00, Measured: 26.78, Error: 6.44, Output: 140.00, I: 0.00, D: 24.11, Time: 0.040000
+Setpoint: 30.00, Measured: 28.50, Error: 2.99, Output: -140.00, I: 0.00, D: 33.59, Time: 0.040000
+Setpoint: 30.00, Measured: 29.46, Error: 1.09, Output: -140.00, I: 0.00, D: 28.72, Time: 0.040000
+Setpoint: 30.00, Measured: 29.49, Error: 1.01, Output: -140.00, I: 0.00, D: 14.81, Time: 0.040000
+Setpoint: 30.00, Measured: 29.17, Error: 1.67, Output: 140.00, I: 0.00, D: 3.33, Time: 0.040000
+Setpoint: 30.00, Measured: 29.79, Error: 0.42, Output: -140.00, I: 0.00, D: 9.43, Time: 0.040000
+Setpoint: 30.00, Measured: 28.14, Error: 3.73, Output: 157.48, I: 0.00, D: -15.93, Time: 0.040000
+Setpoint: 30.00, Measured: 28.56, Error: 2.88, Output: 140.00, I: 0.00, D: -2.65, Time: 0.040000
+Setpoint: 30.00, Measured: 27.72, Error: 4.56, Output: 165.10, I: 0.00, D: -11.83, Time: 0.040000
+Setpoint: 30.00, Measured: 28.12, Error: 3.77, Output: 140.00, I: 0.00, D: -0.98, Time: 0.040000
+Setpoint: 30.00, Measured: 27.77, Error: 4.46, Output: 140.00, I: 0.00, D: -4.81, Time: 0.040000
+Setpoint: 30.00, Measured: 28.43, Error: 3.14, Output: 140.00, I: 0.00, D: 5.83, Time: 0.040000
+Setpoint: 30.00, Measured: 28.83, Error: 2.34, Output: 140.00, I: 0.00, D: 7.94, Time: 0.040000
+Setpoint: 30.00, Measured: 28.83, Error: 2.34, Output: 140.00, I: 0.00, D: 3.97, Time: 0.040000
+Setpoint: 30.00, Measured: 29.25, Error: 1.51, Output: 140.00, I: 0.00, D: 7.15, Time: 0.040000
+Setpoint: 30.00, Measured: 29.48, Error: 1.04, Output: 140.00, I: 0.00, D: 6.49, Time: 0.040000
+Setpoint: 30.00, Measured: 29.81, Error: 0.39, Output: -140.00, I: 0.00, D: 7.34, Time: 0.040000
+Setpoint: 30.00, Measured: 30.39, Error: -0.79, Output: -140.00, I: 0.00, D: 11.01, Time: 0.040000
+Setpoint: 30.00, Measured: 31.02, Error: -2.04, Output: -140.00, I: 0.00, D: 13.34, Time: 0.040000
+Setpoint: 30.00, Measured: 31.51, Error: -3.03, Output: -140.00, I: 0.00, D: 12.85, Time: 0.040000
+Setpoint: 30.00, Measured: 31.99, Error: -3.97, Output: -151.23, I: 0.00, D: 12.33, Time: 0.040000
+Setpoint: 30.00, Measured: 33.18, Error: -6.36, Output: -190.00, I: 0.00, D: 21.10, Time: 0.040000
+Setpoint: 30.00, Measured: 26.65, Error: 6.70, Output: 190.00, I: 0.00, D: -71.09, Time: 0.040000
+Setpoint: 30.00, Measured: 20.82, Error: 18.35, Output: 190.00, I: 0.00, D: -108.37, Time: 0.040000
+Setpoint: 30.00, Measured: 15.98, Error: 28.04, Output: 190.00, I: 0.00, D: -114.72, Time: 0.040000
+Setpoint: 30.00, Measured: 8.92, Error: 42.16, Output: 190.00, I: 0.00, D: -145.65, Time: 0.040000
+Setpoint: 30.00, Measured: 4.18, Error: 51.64, Output: 190.00, I: 0.00, D: -132.08, Time: 0.040000
+Setpoint: 30.00, Measured: 2.38, Error: 55.25, Output: 190.00, I: 0.00, D: -88.55, Time: 0.040000
+Setpoint: 30.00, Measured: 1.97, Error: 56.06, Output: 190.00, I: 0.00, D: -49.40, Time: 0.040000
+Setpoint: 30.00, Measured: -0.98, Error: 61.96, Output: 190.00, I: 0.00, D: -61.57, Time: 0.040000
+Setpoint: 30.00, Measured: 4.35, Error: 51.31, Output: 190.00, I: 0.00, D: 35.83, Time: 0.040000
+Setpoint: 30.00, Measured: 10.11, Error: 39.79, Output: 190.00, I: 0.00, D: 89.90, Time: 0.040000
+Setpoint: 30.00, Measured: 14.86, Error: 30.28, Output: 190.00, I: 0.00, D: 104.36, Time: 0.040000
+Setpoint: 30.00, Measured: 24.91, Error: 10.19, Output: -190.00, I: 0.00, D: 177.77, Time: 0.040000
+Setpoint: 30.00, Measured: 27.75, Error: 4.51, Output: -190.00, I: 0.00, D: 124.39, Time: 0.040000
+Setpoint: 30.00, Measured: 34.01, Error: -8.02, Output: -190.00, I: 0.00, D: 140.52, Time: 0.040000
+Setpoint: 30.00, Measured: 36.98, Error: -13.96, Output: -190.00, I: 0.00, D: 107.36, Time: 0.040000
+Setpoint: 30.00, Measured: 37.43, Error: -14.86, Output: -190.00, I: 0.00, D: 59.28, Time: 0.040000
+Setpoint: 30.00, Measured: 37.04, Error: -14.08, Output: -190.00, I: 0.00, D: 24.81, Time: 0.040000
+Setpoint: 30.00, Measured: 37.71, Error: -15.41, Output: -190.00, I: 0.00, D: 20.71, Time: 0.040000
+Setpoint: 30.00, Measured: 36.39, Error: -12.78, Output: -190.00, I: 0.00, D: -6.10, Time: 0.040000
+Setpoint: 30.00, Measured: 33.97, Error: -7.95, Output: -140.00, I: 0.00, D: -33.25, Time: 0.040000
+Setpoint: 30.00, Measured: 33.26, Error: -6.51, Output: -140.00, I: 0.00, D: -25.59, Time: 0.040000
+Setpoint: 30.00, Measured: 31.11, Error: -2.21, Output: 140.00, I: 0.00, D: -39.68, Time: 0.040000
+Setpoint: 30.00, Measured: 29.97, Error: 0.06, Output: 140.00, I: 0.00, D: -34.04, Time: 0.040000
+Setpoint: 30.00, Measured: 28.61, Error: 2.78, Output: 190.00, I: 0.00, D: -34.03, Time: 0.040000
+Setpoint: 30.00, Measured: 28.23, Error: 3.54, Output: 173.62, I: 0.00, D: -21.78, Time: 0.040000
+Setpoint: 30.00, Measured: 28.08, Error: 3.84, Output: 149.16, I: 0.00, D: -12.75, Time: 0.040000
+Setpoint: 30.00, Measured: 27.26, Error: 5.48, Output: 190.00, I: 0.00, D: -16.60, Time: 0.040000
+Setpoint: 30.00, Measured: 27.51, Error: 4.98, Output: 152.40, I: 0.00, D: -5.16, Time: 0.040000
+Setpoint: 30.00, Measured: 28.27, Error: 3.46, Output: 140.00, I: 0.00, D: 6.86, Time: 0.040000
+Setpoint: 30.00, Measured: 29.36, Error: 1.27, Output: -140.00, I: 0.00, D: 17.14, Time: 0.040000
+Setpoint: 30.00, Measured: 31.03, Error: -2.05, Output: -160.72, I: 0.00, D: 29.34, Time: 0.040000
+Setpoint: 30.00, Measured: 32.21, Error: -4.43, Output: -190.00, I: 0.00, D: 29.53, Time: 0.040000
+Setpoint: 30.00, Measured: 34.09, Error: -8.18, Output: -190.00, I: 0.00, D: 38.23, Time: 0.040000
+Setpoint: 30.00, Measured: 31.80, Error: -3.60, Output: -140.00, I: 0.00, D: -9.52, Time: 0.040000
+Setpoint: 30.00, Measured: 31.67, Error: -3.35, Output: -140.00, I: 0.00, D: -6.37, Time: 0.040000
+Setpoint: 30.00, Measured: 32.10, Error: -4.20, Output: -140.00, I: 0.00, D: 2.13, Time: 0.040000
+Setpoint: 30.00, Measured: 29.75, Error: 0.51, Output: 140.00, I: 0.00, D: -28.32, Time: 0.040000
+Setpoint: 30.00, Measured: 29.31, Error: 1.38, Output: 140.00, I: 0.00, D: -19.63, Time: 0.040000
+Setpoint: 30.00, Measured: 28.10, Error: 3.80, Output: 190.00, I: 0.00, D: -24.93, Time: 0.040000
+Setpoint: 30.00, Measured: 28.37, Error: 3.26, Output: 140.00, I: 0.00, D: -9.08, Time: 0.040000
+Setpoint: 30.00, Measured: 26.60, Error: 6.80, Output: 190.00, I: 0.00, D: -26.68, Time: 0.040000
+Setpoint: 30.00, Measured: 27.50, Error: 5.01, Output: 142.39, I: 0.00, D: -2.14, Time: 0.040000
+Setpoint: 30.00, Measured: 27.59, Error: 4.83, Output: 140.00, I: 0.00, D: 0.06, Time: 0.040000
+Setpoint: 30.00, Measured: 28.61, Error: 2.77, Output: 140.00, I: 0.00, D: 12.86, Time: 0.040000
+Setpoint: 30.00, Measured: 29.81, Error: 0.39, Output: -140.00, I: 0.00, D: 21.35, Time: 0.040000
+Setpoint: 30.00, Measured: 28.62, Error: 2.75, Output: 140.00, I: 0.00, D: -4.12, Time: 0.040000
+Setpoint: 30.00, Measured: 31.19, Error: -2.38, Output: -172.14, I: 0.00, D: 30.05, Time: 0.040000
+Setpoint: 30.00, Measured: 30.20, Error: -0.39, Output: -140.00, I: 0.00, D: 2.58, Time: 0.040000
+Setpoint: 30.00, Measured: 31.18, Error: -2.37, Output: -140.00, I: 0.00, D: 13.62, Time: 0.040000
+Setpoint: 30.00, Measured: 30.04, Error: -0.07, Output: 140.00, I: 0.00, D: -7.53, Time: 0.040000
+Setpoint: 30.00, Measured: 31.11, Error: -2.23, Output: -140.00, I: 0.00, D: 9.72, Time: 0.040000
+Setpoint: 30.00, Measured: 28.61, Error: 2.78, Output: 169.93, I: 0.00, D: -26.45, Time: 0.040000
+Setpoint: 30.00, Measured: 28.22, Error: 3.56, Output: 160.76, I: 0.00, D: -18.08, Time: 0.040000
+Setpoint: 30.00, Measured: 28.12, Error: 3.75, Output: 140.00, I: 0.00, D: -10.24, Time: 0.040000
+Setpoint: 30.00, Measured: 28.94, Error: 2.12, Output: 140.00, I: 0.00, D: 5.04, Time: 0.040000
+Setpoint: 30.00, Measured: 29.96, Error: 0.08, Output: -140.00, I: 0.00, D: 15.31, Time: 0.040000
+Setpoint: 30.00, Measured: 30.92, Error: -1.83, Output: -140.00, I: 0.00, D: 19.59, Time: 0.040000
+Setpoint: 30.00, Measured: 31.86, Error: -3.73, Output: -178.15, I: 0.00, D: 21.65, Time: 0.040000
+Setpoint: 30.00, Measured: 32.01, Error: -4.02, Output: -153.80, I: 0.00, D: 12.67, Time: 0.040000
+Setpoint: 30.00, Measured: 32.67, Error: -5.33, Output: -190.00, I: 0.00, D: 14.51, Time: 0.040000
+Setpoint: 30.00, Measured: 31.29, Error: -2.58, Output: -140.00, I: 0.00, D: -9.94, Time: 0.040000
+Setpoint: 30.00, Measured: 32.06, Error: -4.12, Output: -140.00, I: 0.00, D: 4.64, Time: 0.040000
+Setpoint: 30.00, Measured: 31.56, Error: -3.12, Output: -140.00, I: 0.00, D: -3.90, Time: 0.040000
+Setpoint: 30.00, Measured: 30.83, Error: -1.66, Output: -140.00, I: 0.00, D: -11.10, Time: 0.040000
+Setpoint: 30.00, Measured: 30.09, Error: -0.19, Output: 140.00, I: 0.00, D: -14.76, Time: 0.040000
+Setpoint: 30.00, Measured: 30.35, Error: -0.69, Output: -140.00, I: 0.00, D: -4.21, Time: 0.040000
+Setpoint: 30.00, Measured: 29.72, Error: 0.56, Output: 140.00, I: 0.00, D: -9.95, Time: 0.040000
+Setpoint: 30.00, Measured: 30.58, Error: -1.17, Output: -140.00, I: 0.00, D: 5.85, Time: 0.040000
+Setpoint: 30.00, Measured: 29.54, Error: 0.93, Output: 140.00, I: 0.00, D: -10.17, Time: 0.040000
+Setpoint: 30.00, Measured: 32.45, Error: -4.90, Output: -190.00, I: 0.00, D: 31.35, Time: 0.040000
+Setpoint: 30.00, Measured: 31.46, Error: -2.92, Output: -140.00, I: 0.00, D: 3.26, Time: 0.040000
+Setpoint: 30.00, Measured: 33.29, Error: -6.58, Output: -190.00, I: 0.00, D: 24.55, Time: 0.040000
+Setpoint: 30.00, Measured: 31.71, Error: -3.43, Output: -140.00, I: 0.00, D: -7.45, Time: 0.040000
+Setpoint: 30.00, Measured: 32.46, Error: -4.91, Output: -152.09, I: 0.00, D: 5.55, Time: 0.040000
+Setpoint: 30.00, Measured: 31.64, Error: -3.28, Output: -140.00, I: 0.00, D: -7.45, Time: 0.040000
+Setpoint: 30.00, Measured: 31.00, Error: -2.01, Output: -140.00, I: 0.00, D: -11.66, Time: 0.040000
+Setpoint: 30.00, Measured: 31.08, Error: -2.17, Output: -140.00, I: 0.00, D: -4.83, Time: 0.040000
+Setpoint: 30.00, Measured: 30.74, Error: -1.47, Output: -140.00, I: 0.00, D: -6.74, Time: 0.040000
+Setpoint: 30.00, Measured: 30.55, Error: -1.10, Output: -140.00, I: 0.00, D: -5.72, Time: 0.040000
+Setpoint: 30.00, Measured: 30.56, Error: -1.11, Output: -140.00, I: 0.00, D: -2.78, Time: 0.040000
+Setpoint: 30.00, Measured: 30.63, Error: -1.26, Output: -140.00, I: 0.00, D: -0.43, Time: 0.040000
+Setpoint: 30.00, Measured: 30.65, Error: -1.29, Output: -140.00, I: 0.00, D: -0.03, Time: 0.040000
+Setpoint: 30.00, Measured: 30.93, Error: -1.86, Output: -140.00, I: 0.00, D: 3.55, Time: 0.040000
+Setpoint: 30.00, Measured: 30.89, Error: -1.77, Output: -140.00, I: 0.00, D: 1.21, Time: 0.040000
+Setpoint: 30.00, Measured: 30.82, Error: -1.63, Output: -140.00, I: 0.00, D: -0.27, Time: 0.040000
+Setpoint: 30.00, Measured: 30.82, Error: -1.63, Output: -140.00, I: 0.00, D: -0.14, Time: 0.040000
+Setpoint: 30.00, Measured: 30.66, Error: -1.32, Output: -140.00, I: 0.00, D: -2.05, Time: 0.040000
+Setpoint: 30.00, Measured: 30.76, Error: -1.53, Output: -140.00, I: 0.00, D: 0.30, Time: 0.040000
+Setpoint: 30.00, Measured: 30.91, Error: -1.82, Output: -140.00, I: 0.00, D: 1.97, Time: 0.040000
+Setpoint: 30.00, Measured: 30.96, Error: -1.91, Output: -140.00, I: 0.00, D: 1.57, Time: 0.040000
+Setpoint: 30.00, Measured: 31.10, Error: -2.20, Output: -140.00, I: 0.00, D: 2.59, Time: 0.040000
+Setpoint: 30.00, Measured: 31.35, Error: -2.69, Output: -140.00, I: 0.00, D: 4.35, Time: 0.040000
+Setpoint: 30.00, Measured: 31.71, Error: -3.41, Output: -140.00, I: 0.00, D: 6.68, Time: 0.040000
+Setpoint: 30.00, Measured: 31.97, Error: -3.93, Output: -140.00, I: 0.00, D: 6.59, Time: 0.040000
+Setpoint: 30.00, Measured: 32.05, Error: -4.10, Output: -140.00, I: 0.00, D: 4.33, Time: 0.040000
+Setpoint: 30.00, Measured: 32.11, Error: -4.22, Output: -140.00, I: 0.00, D: 2.94, Time: 0.040000
+Setpoint: 30.00, Measured: 31.92, Error: -3.83, Output: -140.00, I: 0.00, D: -0.95, Time: 0.040000
+Setpoint: 30.00, Measured: 32.22, Error: -4.44, Output: -140.00, I: 0.00, D: 3.31, Time: 0.040000
+Setpoint: 30.00, Measured: 32.46, Error: -4.93, Output: -149.46, I: 0.00, D: 4.70, Time: 0.040000
+Setpoint: 30.00, Measured: 32.37, Error: -4.74, Output: -140.00, I: 0.00, D: 1.16, Time: 0.040000
+Setpoint: 30.00, Measured: 32.20, Error: -4.40, Output: -140.00, I: 0.00, D: -1.51, Time: 0.040000
+Setpoint: 30.00, Measured: 32.27, Error: -4.55, Output: -140.00, I: 0.00, D: 0.14, Time: 0.040000
+Setpoint: 30.00, Measured: 35.63, Error: -11.26, Output: -190.00, I: 0.00, D: 42.01, Time: 0.040000
+Setpoint: 30.00, Measured: 37.45, Error: -14.90, Output: -190.00, I: 0.00, D: 43.77, Time: 0.040000
+Setpoint: 30.00, Measured: 39.20, Error: -18.41, Output: -190.00, I: 0.00, D: 43.81, Time: 0.040000
+Setpoint: 30.00, Measured: 42.49, Error: -24.98, Output: -190.00, I: 0.00, D: 62.97, Time: 0.040000
+Setpoint: 30.00, Measured: 45.13, Error: -30.26, Output: -190.00, I: 0.00, D: 64.51, Time: 0.040000
+Setpoint: 30.00, Measured: 46.45, Error: -32.91, Output: -190.00, I: 0.00, D: 48.79, Time: 0.040000
+Setpoint: 30.00, Measured: 47.97, Error: -35.94, Output: -190.00, I: 0.00, D: 43.32, Time: 0.040000
+Setpoint: 30.00, Measured: 48.66, Error: -37.32, Output: -190.00, I: 0.00, D: 30.30, Time: 0.040000
+Setpoint: 30.00, Measured: 49.51, Error: -39.02, Output: -190.00, I: 0.00, D: 25.76, Time: 0.040000
+Setpoint: 30.00, Measured: 50.16, Error: -40.31, Output: -190.00, I: 0.00, D: 21.00, Time: 0.040000
+Setpoint: 30.00, Measured: 51.46, Error: -42.93, Output: -190.00, I: 0.00, D: 26.85, Time: 0.040000
+Setpoint: 30.00, Measured: 52.83, Error: -45.67, Output: -190.00, I: 0.00, D: 30.54, Time: 0.040000
+Setpoint: 30.00, Measured: 53.12, Error: -46.24, Output: -190.00, I: 0.00, D: 18.83, Time: 0.040000
+Setpoint: 30.00, Measured: 53.41, Error: -46.83, Output: -190.00, I: 0.00, D: 13.10, Time: 0.040000
+Setpoint: 30.00, Measured: 52.87, Error: -45.74, Output: -190.00, I: 0.00, D: -0.28, Time: 0.040000
+Setpoint: 30.00, Measured: 50.20, Error: -40.40, Output: -190.00, I: 0.00, D: -33.50, Time: 0.040000
+Setpoint: 30.00, Measured: 44.88, Error: -29.75, Output: -190.00, I: 0.00, D: -83.28, Time: 0.040000
+Setpoint: 30.00, Measured: 39.74, Error: -19.48, Output: -143.35, I: 0.00, D: -105.85, Time: 0.040000
+Setpoint: 30.00, Measured: 34.20, Error: -8.39, Output: 190.00, I: 0.00, D: -122.20, Time: 0.040000
+Setpoint: 30.00, Measured: 31.70, Error: -3.41, Output: 190.00, I: 0.00, D: -92.26, Time: 0.040000
+Setpoint: 30.00, Measured: 29.17, Error: 1.65, Output: 190.00, I: 0.00, D: -77.78, Time: 0.040000
+Setpoint: 30.00, Measured: 35.16, Error: -10.32, Output: -190.00, I: 0.00, D: 35.94, Time: 0.040000
+Setpoint: 30.00, Measured: 34.41, Error: -8.82, Output: -190.00, I: 0.00, D: 8.63, Time: 0.040000
+Setpoint: 30.00, Measured: 36.35, Error: -12.70, Output: -190.00, I: 0.00, D: 28.55, Time: 0.040000
+Setpoint: 30.00, Measured: 38.95, Error: -17.90, Output: -190.00, I: 0.00, D: 46.73, Time: 0.040000
+Setpoint: 30.00, Measured: 35.51, Error: -11.02, Output: -190.00, I: 0.00, D: -19.61, Time: 0.040000
+Setpoint: 30.00, Measured: 31.24, Error: -2.49, Output: 160.18, I: 0.00, D: -63.14, Time: 0.040000
+Setpoint: 30.00, Measured: 28.31, Error: 3.39, Output: 190.00, I: 0.00, D: -68.28, Time: 0.040000
+Setpoint: 30.00, Measured: 24.51, Error: 10.97, Output: 190.00, I: 0.00, D: -81.55, Time: 0.040000
+Setpoint: 30.00, Measured: 22.51, Error: 14.99, Output: 190.00, I: 0.00, D: -65.85, Time: 0.040000
+Setpoint: 30.00, Measured: 23.07, Error: 13.85, Output: 190.00, I: 0.00, D: -25.85, Time: 0.040000
+Setpoint: 30.00, Measured: 25.59, Error: 8.81, Output: 170.29, I: 0.00, D: 18.57, Time: 0.040000
+Setpoint: 30.00, Measured: 26.78, Error: 6.45, Output: 140.00, I: 0.00, D: 24.09, Time: 0.040000
+Setpoint: 30.00, Measured: 28.69, Error: 2.61, Output: -140.00, I: 0.00, D: 36.01, Time: 0.040000
+Setpoint: 30.00, Measured: 30.78, Error: -1.55, Output: -190.00, I: 0.00, D: 44.04, Time: 0.040000
+Setpoint: 30.00, Measured: 30.51, Error: -1.01, Output: -140.00, I: 0.00, D: 18.64, Time: 0.040000
+Setpoint: 30.00, Measured: 31.32, Error: -2.64, Output: -141.18, I: 0.00, D: 19.50, Time: 0.040000
+Setpoint: 30.00, Measured: 30.02, Error: -0.03, Output: 140.00, I: 0.00, D: -6.56, Time: 0.040000
+Setpoint: 30.00, Measured: 29.45, Error: 1.11, Output: 140.00, I: 0.00, D: -10.41, Time: 0.040000
+Setpoint: 30.00, Measured: 28.92, Error: 2.16, Output: 140.00, I: 0.00, D: -11.78, Time: 0.040000
+Setpoint: 30.00, Measured: 28.76, Error: 2.49, Output: 140.00, I: 0.00, D: -7.94, Time: 0.040000
+Setpoint: 30.00, Measured: 28.22, Error: 3.56, Output: 140.00, I: 0.00, D: -10.68, Time: 0.040000
+Setpoint: 30.00, Measured: 28.02, Error: 3.97, Output: 140.00, I: 0.00, D: -7.88, Time: 0.040000
+Setpoint: 30.00, Measured: 28.18, Error: 3.63, Output: 140.00, I: 0.00, D: -1.84, Time: 0.040000
+Setpoint: 30.00, Measured: 28.24, Error: 3.52, Output: 140.00, I: 0.00, D: -0.23, Time: 0.040000
+Setpoint: 30.00, Measured: 27.92, Error: 4.16, Output: 140.00, I: 0.00, D: -4.12, Time: 0.040000
+Setpoint: 30.00, Measured: 27.73, Error: 4.54, Output: 140.00, I: 0.00, D: -4.41, Time: 0.040000
+Setpoint: 30.00, Measured: 27.85, Error: 4.29, Output: 140.00, I: 0.00, D: -0.67, Time: 0.040000
+Setpoint: 30.00, Measured: 27.94, Error: 4.12, Output: 140.00, I: 0.00, D: 0.72, Time: 0.040000
+Setpoint: 30.00, Measured: 28.25, Error: 3.50, Output: 140.00, I: 0.00, D: 4.27, Time: 0.040000
+Setpoint: 30.00, Measured: 28.90, Error: 2.20, Output: 140.00, I: 0.00, D: 10.27, Time: 0.040000
+Setpoint: 30.00, Measured: 29.24, Error: 1.52, Output: 140.00, I: 0.00, D: 9.35, Time: 0.040000
+Setpoint: 30.00, Measured: 29.65, Error: 0.70, Output: -140.00, I: 0.00, D: 9.81, Time: 0.040000
+Setpoint: 30.00, Measured: 29.33, Error: 1.33, Output: 140.00, I: 0.00, D: 0.97, Time: 0.040000
+Setpoint: 30.00, Measured: 30.88, Error: -1.77, Output: -140.00, I: 0.00, D: 19.85, Time: 0.040000
+Setpoint: 30.00, Measured: 30.39, Error: -0.78, Output: -140.00, I: 0.00, D: 3.74, Time: 0.040000
+Setpoint: 30.00, Measured: 30.81, Error: -1.62, Output: -140.00, I: 0.00, D: 7.10, Time: 0.040000
+Setpoint: 30.00, Measured: 30.97, Error: -1.93, Output: -140.00, I: 0.00, D: 5.54, Time: 0.040000
+Setpoint: 30.00, Measured: 31.02, Error: -2.04, Output: -140.00, I: 0.00, D: 3.43, Time: 0.040000
+Setpoint: 30.00, Measured: 31.21, Error: -2.43, Output: -140.00, I: 0.00, D: 4.14, Time: 0.040000
+Setpoint: 30.00, Measured: 31.58, Error: -3.16, Output: -140.00, I: 0.00, D: 6.66, Time: 0.040000
+Setpoint: 30.00, Measured: 31.66, Error: -3.33, Output: -140.00, I: 0.00, D: 4.36, Time: 0.040000
+Setpoint: 30.00, Measured: 31.31, Error: -2.62, Output: -140.00, I: 0.00, D: -2.23, Time: 0.040000
+Setpoint: 30.00, Measured: 31.14, Error: -2.27, Output: -140.00, I: 0.00, D: -3.28, Time: 0.040000
+Setpoint: 30.00, Measured: 31.21, Error: -2.41, Output: -140.00, I: 0.00, D: -0.78, Time: 0.040000
+Setpoint: 30.00, Measured: 31.22, Error: -2.45, Output: -140.00, I: 0.00, D: -0.16, Time: 0.040000
+Setpoint: 30.00, Measured: 31.19, Error: -2.38, Output: -140.00, I: 0.00, D: -0.54, Time: 0.040000
+Setpoint: 30.00, Measured: 31.37, Error: -2.74, Output: -140.00, I: 0.00, D: 2.00, Time: 0.040000
+Setpoint: 30.00, Measured: 31.60, Error: -3.21, Output: -140.00, I: 0.00, D: 3.93, Time: 0.040000
+Setpoint: 30.00, Measured: 27.84, Error: 4.32, Output: 190.00, I: 0.00, D: -45.05, Time: 0.040000
+Setpoint: 30.00, Measured: 24.63, Error: 10.73, Output: 190.00, I: 0.00, D: -62.63, Time: 0.040000
+Setpoint: 30.00, Measured: 23.00, Error: 13.99, Output: 190.00, I: 0.00, D: -51.68, Time: 0.040000
+Setpoint: 30.00, Measured: 20.05, Error: 19.91, Output: 190.00, I: 0.00, D: -62.81, Time: 0.040000
+Setpoint: 30.00, Measured: 18.08, Error: 23.84, Output: 190.00, I: 0.00, D: -56.02, Time: 0.040000
+Setpoint: 30.00, Measured: 17.96, Error: 24.07, Output: 190.00, I: 0.00, D: -29.43, Time: 0.040000
+Setpoint: 30.00, Measured: 17.67, Error: 24.65, Output: 190.00, I: 0.00, D: -18.33, Time: 0.040000
+Setpoint: 30.00, Measured: 19.46, Error: 21.08, Output: 190.00, I: 0.00, D: 13.13, Time: 0.040000
+Setpoint: 30.00, Measured: 21.64, Error: 16.73, Output: 190.00, I: 0.00, D: 33.80, Time: 0.040000
+Setpoint: 30.00, Measured: 31.96, Error: -3.93, Output: -190.00, I: 0.00, D: 145.99, Time: 0.040000
+Setpoint: 30.00, Measured: 35.77, Error: -11.54, Output: -190.00, I: 0.00, D: 120.58, Time: 0.040000
+Setpoint: 30.00, Measured: 36.24, Error: -12.49, Output: -190.00, I: 0.00, D: 66.21, Time: 0.040000
+Setpoint: 30.00, Measured: 36.54, Error: -13.09, Output: -190.00, I: 0.00, D: 36.85, Time: 0.040000
+Setpoint: 30.00, Measured: 36.64, Error: -13.27, Output: -190.00, I: 0.00, D: 19.59, Time: 0.040000
+Setpoint: 30.00, Measured: 36.45, Error: -12.89, Output: -190.00, I: 0.00, D: 7.41, Time: 0.040000
+Setpoint: 30.00, Measured: 37.84, Error: -15.67, Output: -190.00, I: 0.00, D: 21.08, Time: 0.040000
+Setpoint: 30.00, Measured: 36.06, Error: -12.12, Output: -190.00, I: 0.00, D: -11.69, Time: 0.040000
+Setpoint: 30.00, Measured: 33.69, Error: -7.38, Output: -140.00, I: 0.00, D: -35.46, Time: 0.040000
+Setpoint: 30.00, Measured: 31.29, Error: -2.58, Output: 140.00, I: 0.00, D: -47.73, Time: 0.040000
+Setpoint: 30.00, Measured: 29.65, Error: 0.70, Output: 178.36, I: 0.00, D: -44.36, Time: 0.040000
+Setpoint: 30.00, Measured: 28.01, Error: 3.98, Output: 190.00, I: 0.00, D: -42.66, Time: 0.040000
+Setpoint: 30.00, Measured: 26.24, Error: 7.51, Output: 190.00, I: 0.00, D: -43.42, Time: 0.040000
+Setpoint: 30.00, Measured: 24.65, Error: 10.69, Output: 190.00, I: 0.00, D: -41.60, Time: 0.040000
+Setpoint: 30.00, Measured: 26.25, Error: 7.49, Output: 190.00, I: 0.00, D: -0.78, Time: 0.040000
+Setpoint: 30.00, Measured: 28.41, Error: 3.18, Output: -140.00, I: 0.00, D: 26.54, Time: 0.040000
+Setpoint: 30.00, Measured: 29.50, Error: 0.99, Output: -140.00, I: 0.00, D: 26.95, Time: 0.040000
+Setpoint: 30.00, Measured: 32.50, Error: -4.99, Output: -190.00, I: 0.00, D: 50.90, Time: 0.040000
+Setpoint: 30.00, Measured: 33.06, Error: -6.12, Output: -190.00, I: 0.00, D: 32.52, Time: 0.040000
+Setpoint: 30.00, Measured: 32.68, Error: -5.36, Output: -185.69, I: 0.00, D: 11.51, Time: 0.040000
+Setpoint: 30.00, Measured: 32.62, Error: -5.24, Output: -158.95, I: 0.00, D: 4.99, Time: 0.040000
+Setpoint: 30.00, Measured: 32.47, Error: -4.93, Output: -140.00, I: 0.00, D: 0.56, Time: 0.040000
+Setpoint: 30.00, Measured: 32.18, Error: -4.35, Output: -140.00, I: 0.00, D: -3.34, Time: 0.040000
+Setpoint: 30.00, Measured: 30.02, Error: -0.05, Output: 140.00, I: 0.00, D: -28.59, Time: 0.040000
+Setpoint: 30.00, Measured: 28.93, Error: 2.15, Output: 158.38, I: 0.00, D: -27.99, Time: 0.040000
+Setpoint: 30.00, Measured: 28.65, Error: 2.69, Output: 140.00, I: 0.00, D: -17.41, Time: 0.040000
+Setpoint: 30.00, Measured: 27.31, Error: 5.39, Output: 190.00, I: 0.00, D: -25.54, Time: 0.040000
+Setpoint: 30.00, Measured: 28.32, Error: 3.36, Output: 140.00, I: 0.00, D: -0.10, Time: 0.040000
+Setpoint: 30.00, Measured: 26.98, Error: 6.05, Output: 190.00, I: 0.00, D: -16.86, Time: 0.040000
+Setpoint: 30.00, Measured: 28.77, Error: 2.45, Output: 140.00, I: 0.00, D: 14.04, Time: 0.040000
+Setpoint: 30.00, Measured: 27.82, Error: 4.37, Output: 140.00, I: 0.00, D: -4.96, Time: 0.040000
+Setpoint: 30.00, Measured: 28.63, Error: 2.74, Output: 140.00, I: 0.00, D: 7.69, Time: 0.040000
+Setpoint: 30.00, Measured: 29.16, Error: 1.69, Output: 140.00, I: 0.00, D: 10.43, Time: 0.040000
+Setpoint: 30.00, Measured: 28.73, Error: 2.55, Output: 140.00, I: 0.00, D: -0.17, Time: 0.040000
+Setpoint: 30.00, Measured: 28.93, Error: 2.14, Output: 140.00, I: 0.00, D: 2.45, Time: 0.040000
+Setpoint: 30.00, Measured: 28.90, Error: 2.20, Output: 140.00, I: 0.00, D: 0.90, Time: 0.040000
+Setpoint: 30.00, Measured: 28.72, Error: 2.55, Output: 140.00, I: 0.00, D: -1.77, Time: 0.040000
+Setpoint: 30.00, Measured: 28.66, Error: 2.69, Output: 140.00, I: 0.00, D: -1.75, Time: 0.040000
+Setpoint: 30.00, Measured: 28.69, Error: 2.62, Output: 140.00, I: 0.00, D: -0.46, Time: 0.040000
+Setpoint: 30.00, Measured: 28.72, Error: 2.57, Output: 140.00, I: 0.00, D: 0.11, Time: 0.040000
+Setpoint: 30.00, Measured: 28.95, Error: 2.11, Output: 140.00, I: 0.00, D: 2.94, Time: 0.040000
+Setpoint: 30.00, Measured: 28.80, Error: 2.41, Output: 140.00, I: 0.00, D: -0.40, Time: 0.040000
+Setpoint: 30.00, Measured: 28.63, Error: 2.73, Output: 140.00, I: 0.00, D: -2.25, Time: 0.040000
+Setpoint: 30.00, Measured: 28.22, Error: 3.56, Output: 140.00, I: 0.00, D: -6.30, Time: 0.040000
+Setpoint: 30.00, Measured: 28.29, Error: 3.42, Output: 140.00, I: 0.00, D: -2.27, Time: 0.040000
+Setpoint: 30.00, Measured: 28.19, Error: 3.62, Output: 140.00, I: 0.00, D: -2.38, Time: 0.040000
+Setpoint: 30.00, Measured: 28.06, Error: 3.88, Output: 140.00, I: 0.00, D: -2.81, Time: 0.040000
+Setpoint: 30.00, Measured: 28.12, Error: 3.77, Output: 140.00, I: 0.00, D: -0.72, Time: 0.040000
+Setpoint: 30.00, Measured: 28.30, Error: 3.40, Output: 140.00, I: 0.00, D: 1.94, Time: 0.040000
+Setpoint: 30.00, Measured: 28.54, Error: 2.93, Output: 140.00, I: 0.00, D: 3.92, Time: 0.040000
+Setpoint: 30.00, Measured: 28.94, Error: 2.11, Output: 140.00, I: 0.00, D: 7.08, Time: 0.040000
+Setpoint: 30.00, Measured: 29.54, Error: 0.92, Output: -140.00, I: 0.00, D: 11.00, Time: 0.040000
+Setpoint: 30.00, Measured: 29.35, Error: 1.29, Output: 140.00, I: 0.00, D: 3.14, Time: 0.040000
+Setpoint: 30.00, Measured: 30.26, Error: -0.53, Output: -140.00, I: 0.00, D: 12.95, Time: 0.040000
+Setpoint: 30.00, Measured: 29.66, Error: 0.67, Output: 140.00, I: 0.00, D: -1.01, Time: 0.040000
+Setpoint: 30.00, Measured: 30.65, Error: -1.29, Output: -140.00, I: 0.00, D: 11.76, Time: 0.040000
+Setpoint: 30.00, Measured: 29.20, Error: 1.60, Output: 140.00, I: 0.00, D: -12.19, Time: 0.040000
+Setpoint: 30.00, Measured: 29.57, Error: 0.85, Output: 140.00, I: 0.00, D: -1.41, Time: 0.040000
+Setpoint: 30.00, Measured: 29.58, Error: 0.84, Output: 140.00, I: 0.00, D: -0.62, Time: 0.040000
+Setpoint: 30.00, Measured: 29.83, Error: 0.34, Output: -140.00, I: 0.00, D: 2.77, Time: 0.040000
+Setpoint: 30.00, Measured: 29.71, Error: 0.57, Output: 140.00, I: 0.00, D: -0.03, Time: 0.040000
+Setpoint: 30.00, Measured: 29.74, Error: 0.53, Output: 140.00, I: 0.00, D: 0.25, Time: 0.040000
+Setpoint: 30.00, Measured: 29.94, Error: 0.13, Output: -140.00, I: 0.00, D: 2.64, Time: 0.040000
+Setpoint: 30.00, Measured: 29.56, Error: 0.88, Output: 140.00, I: 0.00, D: -3.40, Time: 0.040000
+Setpoint: 30.00, Measured: 29.41, Error: 1.18, Output: 140.00, I: 0.00, D: -3.59, Time: 0.040000
+Setpoint: 30.00, Measured: 29.08, Error: 1.85, Output: 140.00, I: 0.00, D: -5.95, Time: 0.040000
+Setpoint: 30.00, Measured: 28.61, Error: 2.79, Output: 140.00, I: 0.00, D: -8.84, Time: 0.040000
+Setpoint: 30.00, Measured: 27.59, Error: 4.81, Output: 190.00, I: 0.00, D: -17.08, Time: 0.040000
+Setpoint: 30.00, Measured: 38.61, Error: -17.21, Output: -190.00, I: 0.00, D: 129.11, Time: 0.040000
+Setpoint: 30.00, Measured: 46.34, Error: -32.69, Output: -190.00, I: 0.00, D: 161.27, Time: 0.040000
+Setpoint: 30.00, Measured: 52.70, Error: -45.41, Output: -190.00, I: 0.00, D: 160.13, Time: 0.040000
+Setpoint: 30.00, Measured: 59.58, Error: -59.16, Output: -190.00, I: 0.00, D: 49.46, Time: 0.040000
+Setpoint: 30.00, Measured: 57.28, Error: -54.56, Output: -190.00, I: 0.00, D: -4.01, Time: 0.040000
+Setpoint: 30.00, Measured: 53.97, Error: -47.95, Output: -190.00, I: 0.00, D: -43.35, Time: 0.040000
+Setpoint: 30.00, Measured: 48.48, Error: -36.95, Output: -190.00, I: 0.00, D: -90.37, Time: 0.040000
+Setpoint: 30.00, Measured: 42.89, Error: -25.78, Output: -190.00, I: 0.00, D: -115.03, Time: 0.040000
+Setpoint: 30.00, Measured: 37.86, Error: -15.71, Output: 140.00, I: 0.00, D: -120.45, Time: 0.040000
+Setpoint: 30.00, Measured: 34.27, Error: -8.53, Output: 148.43, I: 0.00, D: -105.09, Time: 0.040000
+Setpoint: 30.00, Measured: 30.20, Error: -0.41, Output: 190.00, I: 0.00, D: -103.32, Time: 0.040000
+Setpoint: 30.00, Measured: 27.25, Error: 5.50, Output: 190.00, I: 0.00, D: -88.60, Time: 0.040000
+Setpoint: 30.00, Measured: 26.50, Error: 6.99, Output: 190.00, I: 0.00, D: -53.61, Time: 0.040000
+Setpoint: 30.00, Measured: 25.10, Error: 9.79, Output: 190.00, I: 0.00, D: -44.30, Time: 0.040000
+Setpoint: 30.00, Measured: 28.14, Error: 3.72, Output: 140.00, I: 0.00, D: 15.83, Time: 0.040000
+Setpoint: 30.00, Measured: 29.94, Error: 0.11, Output: -140.00, I: 0.00, D: 30.44, Time: 0.040000
+Setpoint: 30.00, Measured: 32.41, Error: -4.81, Output: -190.00, I: 0.00, D: 46.01, Time: 0.040000
+Setpoint: 30.00, Measured: 33.33, Error: -6.67, Output: -190.00, I: 0.00, D: 34.59, Time: 0.040000
+Setpoint: 30.00, Measured: 33.60, Error: -7.19, Output: -190.00, I: 0.00, D: 20.58, Time: 0.040000
+Setpoint: 30.00, Measured: 32.62, Error: -5.25, Output: -140.00, I: 0.00, D: -1.87, Time: 0.040000
+Setpoint: 30.00, Measured: 32.05, Error: -4.10, Output: -140.00, I: 0.00, D: -8.09, Time: 0.040000
+Setpoint: 30.00, Measured: 31.02, Error: -2.05, Output: 140.00, I: 0.00, D: -16.88, Time: 0.040000
+Setpoint: 30.00, Measured: 29.72, Error: 0.56, Output: 140.00, I: 0.00, D: -24.72, Time: 0.040000
+Setpoint: 30.00, Measured: 28.30, Error: 3.40, Output: 190.00, I: 0.00, D: -30.14, Time: 0.040000
+Setpoint: 30.00, Measured: 28.22, Error: 3.57, Output: 153.95, I: 0.00, D: -16.12, Time: 0.040000
+Setpoint: 30.00, Measured: 27.70, Error: 4.61, Output: 176.22, I: 0.00, D: -14.55, Time: 0.040000
+Setpoint: 30.00, Measured: 27.62, Error: 4.76, Output: 157.84, I: 0.00, D: -8.26, Time: 0.040000
+Setpoint: 30.00, Measured: 28.15, Error: 3.70, Output: 140.00, I: 0.00, D: 2.54, Time: 0.040000
+Setpoint: 30.00, Measured: 29.10, Error: 1.81, Output: 140.00, I: 0.00, D: 13.09, Time: 0.040000
+Setpoint: 30.00, Measured: 30.14, Error: -0.29, Output: -140.00, I: 0.00, D: 19.63, Time: 0.040000
+Setpoint: 30.00, Measured: 31.57, Error: -3.14, Output: -184.06, I: 0.00, D: 27.67, Time: 0.040000
+Setpoint: 30.00, Measured: 31.21, Error: -2.42, Output: -140.00, I: 0.00, D: 9.30, Time: 0.040000
+Setpoint: 30.00, Measured: 33.58, Error: -7.15, Output: -190.00, I: 0.00, D: 34.25, Time: 0.040000
+Setpoint: 30.00, Measured: 33.03, Error: -6.06, Output: -190.00, I: 0.00, D: 10.29, Time: 0.040000
+Setpoint: 30.00, Measured: 31.79, Error: -3.58, Output: -140.00, I: 0.00, D: -10.34, Time: 0.040000
+Setpoint: 30.00, Measured: 31.07, Error: -2.15, Output: -140.00, I: 0.00, D: -14.13, Time: 0.040000
+Setpoint: 30.00, Measured: 29.62, Error: 0.76, Output: 140.00, I: 0.00, D: -25.22, Time: 0.040000
+Setpoint: 30.00, Measured: 28.40, Error: 3.21, Output: 186.66, I: 0.00, D: -27.92, Time: 0.040000
+Setpoint: 30.00, Measured: 27.00, Error: 6.00, Output: 190.00, I: 0.00, D: -31.40, Time: 0.040000
+Setpoint: 30.00, Measured: 25.33, Error: 9.33, Output: 190.00, I: 0.00, D: -36.55, Time: 0.040000
+Setpoint: 30.00, Measured: 25.29, Error: 9.42, Output: 190.00, I: 0.00, D: -18.81, Time: 0.040000
+Setpoint: 30.00, Measured: 25.67, Error: 8.67, Output: 190.00, I: 0.00, D: -4.71, Time: 0.040000
+Setpoint: 30.00, Measured: 29.19, Error: 1.62, Output: -140.00, I: 0.00, D: 41.70, Time: 0.040000
+Setpoint: 30.00, Measured: 30.15, Error: -0.30, Output: -140.00, I: 0.00, D: 32.81, Time: 0.040000
+Setpoint: 30.00, Measured: 33.14, Error: -6.27, Output: -190.00, I: 0.00, D: 53.77, Time: 0.040000
+Setpoint: 30.00, Measured: 33.61, Error: -7.22, Output: -190.00, I: 0.00, D: 32.77, Time: 0.040000
+Setpoint: 30.00, Measured: 34.51, Error: -9.03, Output: -190.00, I: 0.00, D: 27.71, Time: 0.040000
+Setpoint: 30.00, Measured: 35.30, Error: -10.59, Output: -190.00, I: 0.00, D: 23.61, Time: 0.040000
+Setpoint: 30.00, Measured: 35.29, Error: -10.59, Output: -190.00, I: 0.00, D: 11.80, Time: 0.040000
+Setpoint: 30.00, Measured: 35.37, Error: -10.74, Output: -190.00, I: 0.00, D: 6.87, Time: 0.040000
+Setpoint: 30.00, Measured: 33.16, Error: -6.31, Output: -140.00, I: 0.00, D: -24.27, Time: 0.040000
+Setpoint: 30.00, Measured: 32.43, Error: -4.86, Output: -140.00, I: 0.00, D: -21.23, Time: 0.040000
+Setpoint: 30.00, Measured: 29.61, Error: 0.77, Output: 185.33, I: 0.00, D: -45.78, Time: 0.040000
+Setpoint: 30.00, Measured: 28.06, Error: 3.88, Output: 190.00, I: 0.00, D: -42.31, Time: 0.040000
+Setpoint: 30.00, Measured: 26.87, Error: 6.27, Output: 190.00, I: 0.00, D: -36.09, Time: 0.040000
+Setpoint: 30.00, Measured: 26.04, Error: 7.91, Output: 190.00, I: 0.00, D: -28.33, Time: 0.040000
+Setpoint: 30.00, Measured: 25.11, Error: 9.79, Output: 190.00, I: 0.00, D: -25.89, Time: 0.040000
+Setpoint: 30.00, Measured: 28.41, Error: 3.19, Output: -140.00, I: 0.00, D: 28.30, Time: 0.040000
+Setpoint: 30.00, Measured: 29.11, Error: 1.78, Output: -140.00, I: 0.00, D: 22.99, Time: 0.040000
+Setpoint: 30.00, Measured: 32.07, Error: -4.13, Output: -190.00, I: 0.00, D: 48.43, Time: 0.040000
+Setpoint: 30.00, Measured: 32.69, Error: -5.38, Output: -190.00, I: 0.00, D: 31.97, Time: 0.040000
+Setpoint: 30.00, Measured: 33.83, Error: -7.66, Output: -190.00, I: 0.00, D: 30.26, Time: 0.040000
+Setpoint: 30.00, Measured: 32.35, Error: -4.69, Output: -140.00, I: 0.00, D: -3.43, Time: 0.040000
+Setpoint: 30.00, Measured: 32.89, Error: -5.77, Output: -173.37, I: 0.00, D: 5.04, Time: 0.040000
+Setpoint: 30.00, Measured: 30.86, Error: -1.72, Output: 140.00, I: 0.00, D: -22.78, Time: 0.040000
+Setpoint: 30.00, Measured: 30.85, Error: -1.70, Output: -140.00, I: 0.00, D: -11.53, Time: 0.040000
+Setpoint: 30.00, Measured: 28.35, Error: 3.30, Output: 190.00, I: 0.00, D: -37.01, Time: 0.040000
+Setpoint: 30.00, Measured: 30.45, Error: -0.90, Output: -140.00, I: 0.00, D: 7.76, Time: 0.040000
+Setpoint: 30.00, Measured: 27.37, Error: 5.25, Output: 190.00, I: 0.00, D: -34.59, Time: 0.040000
+Setpoint: 30.00, Measured: 30.49, Error: -0.97, Output: -140.00, I: 0.00, D: 21.60, Time: 0.040000
+Setpoint: 30.00, Measured: 29.33, Error: 1.34, Output: 140.00, I: 0.00, D: -3.64, Time: 0.040000
+Setpoint: 30.00, Measured: 29.76, Error: 0.48, Output: 140.00, I: 0.00, D: 3.55, Time: 0.040000
+Setpoint: 30.00, Measured: 30.46, Error: -0.93, Output: -140.00, I: 0.00, D: 10.56, Time: 0.040000
+Setpoint: 30.00, Measured: 30.77, Error: -1.54, Output: -140.00, I: 0.00, D: 9.14, Time: 0.040000
+Setpoint: 30.00, Measured: 29.70, Error: 0.60, Output: 140.00, I: 0.00, D: -8.84, Time: 0.040000
+Setpoint: 30.00, Measured: 29.47, Error: 1.05, Output: 140.00, I: 0.00, D: -7.24, Time: 0.040000
+Setpoint: 30.00, Measured: 29.32, Error: 1.37, Output: 140.00, I: 0.00, D: -5.58, Time: 0.040000
+Setpoint: 30.00, Measured: 29.05, Error: 1.90, Output: 140.00, I: 0.00, D: -6.10, Time: 0.040000
+Setpoint: 30.00, Measured: 28.68, Error: 2.63, Output: 140.00, I: 0.00, D: -7.66, Time: 0.040000
+Setpoint: 30.00, Measured: 28.72, Error: 2.55, Output: 140.00, I: 0.00, D: -3.31, Time: 0.040000
+Setpoint: 30.00, Measured: 27.81, Error: 4.38, Output: 165.07, I: 0.00, D: -13.11, Time: 0.040000
+Setpoint: 30.00, Measured: 26.85, Error: 6.29, Output: 190.00, I: 0.00, D: -18.48, Time: 0.040000
+Setpoint: 30.00, Measured: 29.06, Error: 1.87, Output: -140.00, I: 0.00, D: 18.38, Time: 0.040000
+[0;32mI (86713) WEBSERVER: PID saved to NVS - Kp: 41.40, Ki: 0.00, Kd: 3.596[0m
+[0;32mI (86723) WEBSERVER: PID Updated & Saved - Kp: 41.40, Ki: 0.00, Kd: 3.596[0m
+Setpoint: 30.00, Measured: 14.17, Error: 31.65, Output: 190.00, I: 0.00, D: -176.93, Time: 0.040000
+Setpoint: 30.00, Measured: 22.07, Error: 15.86, Output: 190.00, I: 0.00, D: 10.24, Time: 0.040000
+Setpoint: 30.00, Measured: 25.55, Error: 8.91, Output: 190.00, I: 0.00, D: 48.56, Time: 0.040000
+Setpoint: 30.00, Measured: 28.62, Error: 2.76, Output: -140.00, I: 0.00, D: 62.70, Time: 0.040000
+Setpoint: 30.00, Measured: 30.37, Error: -0.74, Output: -190.00, I: 0.00, D: 53.26, Time: 0.040000
+Setpoint: 30.00, Measured: 32.50, Error: -5.00, Output: -190.00, I: 0.00, D: 53.24, Time: 0.040000
+Setpoint: 30.00, Measured: 33.21, Error: -6.42, Output: -190.00, I: 0.00, D: 35.46, Time: 0.040000
+Setpoint: 30.00, Measured: 33.18, Error: -6.35, Output: -190.00, I: 0.00, D: 17.33, Time: 0.040000
+Setpoint: 30.00, Measured: 32.52, Error: -5.03, Output: -190.00, I: 0.00, D: 0.41, Time: 0.040000
+Setpoint: 30.00, Measured: 31.13, Error: -2.27, Output: -140.00, I: 0.00, D: -17.07, Time: 0.040000
+Setpoint: 30.00, Measured: 28.48, Error: 3.04, Output: 190.00, I: 0.00, D: -41.73, Time: 0.040000
+Setpoint: 30.00, Measured: 28.25, Error: 3.49, Output: 190.00, I: 0.00, D: -23.65, Time: 0.040000
+Setpoint: 30.00, Measured: 25.72, Error: 8.56, Output: 190.00, I: 0.00, D: -43.51, Time: 0.040000
+Setpoint: 30.00, Measured: 23.50, Error: 13.00, Output: 190.00, I: 0.00, D: -49.51, Time: 0.040000
+Setpoint: 30.00, Measured: 23.67, Error: 12.66, Output: 190.00, I: 0.00, D: -22.62, Time: 0.040000
+Setpoint: 30.00, Measured: 27.52, Error: 4.97, Output: 140.00, I: 0.00, D: 36.76, Time: 0.040000
+Setpoint: 30.00, Measured: 29.22, Error: 1.56, Output: -140.00, I: 0.00, D: 39.70, Time: 0.040000
+Setpoint: 30.00, Measured: 30.37, Error: -0.74, Output: -153.85, I: 0.00, D: 34.22, Time: 0.040000
+Setpoint: 30.00, Measured: 33.18, Error: -6.35, Output: -190.00, I: 0.00, D: 52.16, Time: 0.040000
+Setpoint: 30.00, Measured: 34.24, Error: -8.48, Output: -190.00, I: 0.00, D: 39.40, Time: 0.040000
+Setpoint: 30.00, Measured: 35.51, Error: -11.02, Output: -190.00, I: 0.00, D: 35.58, Time: 0.040000
+Setpoint: 30.00, Measured: 36.73, Error: -13.45, Output: -190.00, I: 0.00, D: 32.98, Time: 0.040000
+Setpoint: 30.00, Measured: 35.01, Error: -10.02, Output: -190.00, I: 0.00, D: -4.97, Time: 0.040000
+Setpoint: 30.00, Measured: 31.79, Error: -3.58, Output: 140.00, I: 0.00, D: -42.73, Time: 0.040000
+Setpoint: 30.00, Measured: 30.95, Error: -1.89, Output: 140.00, I: 0.00, D: -31.91, Time: 0.040000
+Setpoint: 30.00, Measured: 28.98, Error: 2.04, Output: 190.00, I: 0.00, D: -40.52, Time: 0.040000
+Setpoint: 30.00, Measured: 27.39, Error: 5.22, Output: 190.00, I: 0.00, D: -40.17, Time: 0.040000
+Setpoint: 30.00, Measured: 27.31, Error: 5.38, Output: 190.00, I: 0.00, D: -21.10, Time: 0.040000
+Setpoint: 30.00, Measured: 26.86, Error: 6.28, Output: 190.00, I: 0.00, D: -16.15, Time: 0.040000
+Setpoint: 30.00, Measured: 26.01, Error: 7.99, Output: 190.00, I: 0.00, D: -18.74, Time: 0.040000
+Setpoint: 30.00, Measured: 27.00, Error: 6.01, Output: 190.00, I: 0.00, D: 3.01, Time: 0.040000
+Setpoint: 30.00, Measured: 29.88, Error: 0.24, Output: -140.00, I: 0.00, D: 37.52, Time: 0.040000
+Setpoint: 30.00, Measured: 30.76, Error: -1.52, Output: -170.21, I: 0.00, D: 29.80, Time: 0.040000
+Setpoint: 30.00, Measured: 32.39, Error: -4.77, Output: -190.00, I: 0.00, D: 35.22, Time: 0.040000
+Setpoint: 30.00, Measured: 34.46, Error: -8.92, Output: -190.00, I: 0.00, D: 43.49, Time: 0.040000
+Setpoint: 30.00, Measured: 35.24, Error: -10.47, Output: -190.00, I: 0.00, D: 31.49, Time: 0.040000
+Setpoint: 30.00, Measured: 35.16, Error: -10.32, Output: -190.00, I: 0.00, D: 14.79, Time: 0.040000
+Setpoint: 30.00, Measured: 33.21, Error: -6.42, Output: -190.00, I: 0.00, D: -17.01, Time: 0.040000
+Setpoint: 30.00, Measured: 30.24, Error: -0.48, Output: 144.39, I: 0.00, D: -45.64, Time: 0.040000
+Setpoint: 30.00, Measured: 31.88, Error: -3.76, Output: -147.17, I: 0.00, D: -2.32, Time: 0.040000
+Setpoint: 30.00, Measured: 28.66, Error: 2.67, Output: 190.00, I: 0.00, D: -41.33, Time: 0.040000
+Setpoint: 30.00, Measured: 28.08, Error: 3.85, Output: 190.00, I: 0.00, D: -28.01, Time: 0.040000
+Setpoint: 30.00, Measured: 27.83, Error: 4.33, Output: 190.00, I: 0.00, D: -17.05, Time: 0.040000
+Setpoint: 30.00, Measured: 27.16, Error: 5.68, Output: 190.00, I: 0.00, D: -16.91, Time: 0.040000
+Setpoint: 30.00, Measured: 27.09, Error: 5.82, Output: 190.00, I: 0.00, D: -9.39, Time: 0.040000
+Setpoint: 30.00, Measured: 28.85, Error: 2.30, Output: 140.00, I: 0.00, D: 17.35, Time: 0.040000
+Setpoint: 30.00, Measured: 29.68, Error: 0.64, Output: -140.00, I: 0.00, D: 19.02, Time: 0.040000
+Setpoint: 30.00, Measured: 31.64, Error: -3.28, Output: -190.00, I: 0.00, D: 34.01, Time: 0.040000
+Setpoint: 30.00, Measured: 33.85, Error: -7.70, Output: -190.00, I: 0.00, D: 44.63, Time: 0.040000
+Setpoint: 30.00, Measured: 34.34, Error: -8.69, Output: -190.00, I: 0.00, D: 28.51, Time: 0.040000
+Setpoint: 30.00, Measured: 34.11, Error: -8.21, Output: -190.00, I: 0.00, D: 11.28, Time: 0.040000
+Setpoint: 30.00, Measured: 32.66, Error: -5.33, Output: -175.90, I: 0.00, D: -12.41, Time: 0.040000
+Setpoint: 30.00, Measured: 31.73, Error: -3.47, Output: -140.00, I: 0.00, D: -17.81, Time: 0.040000
+Setpoint: 30.00, Measured: 31.62, Error: -3.23, Output: -140.00, I: 0.00, D: -10.38, Time: 0.040000
+Setpoint: 30.00, Measured: 29.75, Error: 0.50, Output: 140.00, I: 0.00, D: -28.54, Time: 0.040000
+Setpoint: 30.00, Measured: 29.63, Error: 0.74, Output: 140.00, I: 0.00, D: -15.73, Time: 0.040000
+Setpoint: 30.00, Measured: 28.13, Error: 3.74, Output: 190.00, I: 0.00, D: -26.66, Time: 0.040000
+Setpoint: 30.00, Measured: 28.09, Error: 3.82, Output: 190.00, I: 0.00, D: -13.81, Time: 0.040000
+Setpoint: 30.00, Measured: 27.39, Error: 5.22, Output: 190.00, I: 0.00, D: -15.65, Time: 0.040000
+Setpoint: 30.00, Measured: 27.39, Error: 5.22, Output: 190.00, I: 0.00, D: -7.81, Time: 0.040000
+Setpoint: 30.00, Measured: 28.75, Error: 2.49, Output: 140.00, I: 0.00, D: 13.12, Time: 0.040000
+Setpoint: 30.00, Measured: 29.13, Error: 1.75, Output: 140.00, I: 0.00, D: 11.22, Time: 0.040000
+Setpoint: 30.00, Measured: 30.98, Error: -1.97, Output: -185.26, I: 0.00, D: 28.84, Time: 0.040000
+Setpoint: 30.00, Measured: 32.49, Error: -4.98, Output: -190.00, I: 0.00, D: 33.21, Time: 0.040000
+Setpoint: 30.00, Measured: 31.94, Error: -3.87, Output: -190.00, I: 0.00, D: 9.71, Time: 0.040000
+Setpoint: 30.00, Measured: 33.26, Error: -6.53, Output: -190.00, I: 0.00, D: 21.45, Time: 0.040000
+Setpoint: 30.00, Measured: 32.43, Error: -4.87, Output: -190.00, I: 0.00, D: 0.35, Time: 0.040000
+Setpoint: 30.00, Measured: 29.21, Error: 1.59, Output: 190.00, I: 0.00, D: -40.19, Time: 0.040000
+Setpoint: 30.00, Measured: 28.18, Error: 3.64, Output: 190.00, I: 0.00, D: -32.89, Time: 0.040000
+Setpoint: 30.00, Measured: 27.38, Error: 5.24, Output: 190.00, I: 0.00, D: -26.46, Time: 0.040000
+Setpoint: 30.00, Measured: 24.37, Error: 11.25, Output: 190.00, I: 0.00, D: -50.80, Time: 0.040000
+Setpoint: 30.00, Measured: 22.84, Error: 14.33, Output: 190.00, I: 0.00, D: -44.62, Time: 0.040000
+Setpoint: 30.00, Measured: 24.41, Error: 11.17, Output: 190.00, I: 0.00, D: -2.61, Time: 0.040000
+Setpoint: 30.00, Measured: 29.14, Error: 1.73, Output: -140.00, I: 0.00, D: 57.73, Time: 0.040000
+Setpoint: 30.00, Measured: 30.12, Error: -0.24, Output: -158.22, I: 0.00, D: 41.19, Time: 0.040000
+Setpoint: 30.00, Measured: 31.78, Error: -3.56, Output: -190.00, I: 0.00, D: 41.31, Time: 0.040000
+Setpoint: 30.00, Measured: 34.22, Error: -8.45, Output: -190.00, I: 0.00, D: 51.23, Time: 0.040000
+Setpoint: 30.00, Measured: 33.29, Error: -6.58, Output: -190.00, I: 0.00, D: 13.91, Time: 0.040000
+Setpoint: 30.00, Measured: 33.19, Error: -6.38, Output: -190.00, I: 0.00, D: 5.70, Time: 0.040000
+Setpoint: 30.00, Measured: 31.99, Error: -3.98, Output: -140.00, I: 0.00, D: -12.16, Time: 0.040000
+Setpoint: 30.00, Measured: 29.42, Error: 1.17, Output: 185.92, I: 0.00, D: -38.23, Time: 0.040000
+Setpoint: 30.00, Measured: 29.76, Error: 0.47, Output: 140.00, I: 0.00, D: -14.75, Time: 0.040000
+Setpoint: 30.00, Measured: 27.01, Error: 5.98, Output: 190.00, I: 0.00, D: -41.84, Time: 0.040000
+Setpoint: 30.00, Measured: 26.13, Error: 7.74, Output: 190.00, I: 0.00, D: -31.92, Time: 0.040000
+Setpoint: 30.00, Measured: 25.91, Error: 8.19, Output: 190.00, I: 0.00, D: -18.74, Time: 0.040000
+Setpoint: 30.00, Measured: 24.72, Error: 10.57, Output: 190.00, I: 0.00, D: -24.23, Time: 0.040000
+Setpoint: 30.00, Measured: 26.38, Error: 7.23, Output: 190.00, I: 0.00, D: 8.73, Time: 0.040000
+Setpoint: 30.00, Measured: 29.14, Error: 1.72, Output: -140.00, I: 0.00, D: 38.82, Time: 0.040000
+Setpoint: 30.00, Measured: 31.35, Error: -2.70, Output: -190.00, I: 0.00, D: 47.03, Time: 0.040000
+Setpoint: 30.00, Measured: 39.51, Error: -19.02, Output: -190.00, I: 0.00, D: 125.49, Time: 0.040000
+Setpoint: 30.00, Measured: 39.50, Error: -19.01, Output: -190.00, I: 0.00, D: 62.71, Time: 0.040000
+Setpoint: 30.00, Measured: 38.58, Error: -17.16, Output: -190.00, I: 0.00, D: 19.79, Time: 0.040000
+Setpoint: 30.00, Measured: 39.56, Error: -19.12, Output: -190.00, I: 0.00, D: 22.14, Time: 0.040000
+Setpoint: 30.00, Measured: 38.66, Error: -17.33, Output: -190.00, I: 0.00, D: -0.12, Time: 0.040000
+Setpoint: 30.00, Measured: 33.76, Error: -7.51, Output: -140.00, I: 0.00, D: -61.39, Time: 0.040000
+Setpoint: 30.00, Measured: 22.18, Error: 15.64, Output: 190.00, I: 0.00, D: -175.40, Time: 0.040000
+Setpoint: 30.00, Measured: 18.72, Error: 22.56, Output: 190.00, I: 0.00, D: -130.94, Time: 0.040000
+Setpoint: 30.00, Measured: 14.45, Error: 31.09, Output: 190.00, I: 0.00, D: -118.82, Time: 0.040000
+Setpoint: 30.00, Measured: 7.86, Error: 44.28, Output: 190.00, I: 0.00, D: -141.81, Time: 0.040000
+Setpoint: 30.00, Measured: 3.97, Error: 52.05, Output: 190.00, I: 0.00, D: -119.52, Time: 0.040000
+Setpoint: 30.00, Measured: 0.15, Error: 59.70, Output: 190.00, I: 0.00, D: -107.56, Time: 0.040000
+Setpoint: 30.00, Measured: 4.05, Error: 51.90, Output: 190.00, I: 0.00, D: -5.03, Time: 0.040000
+Setpoint: 30.00, Measured: 14.77, Error: 30.46, Output: 190.00, I: 0.00, D: 131.48, Time: 0.040000
+Setpoint: 30.00, Measured: 23.09, Error: 13.82, Output: -140.00, I: 0.00, D: 169.78, Time: 0.040000
+Setpoint: 30.00, Measured: 28.36, Error: 3.27, Output: -190.00, I: 0.00, D: 150.80, Time: 0.040000
+Setpoint: 30.00, Measured: 30.91, Error: -1.81, Output: -190.00, I: 0.00, D: 107.16, Time: 0.040000
+Setpoint: 30.00, Measured: 34.53, Error: -9.06, Output: -190.00, I: 0.00, D: 98.90, Time: 0.040000
+Setpoint: 30.00, Measured: 34.64, Error: -9.27, Output: -190.00, I: 0.00, D: 50.77, Time: 0.040000
+Setpoint: 30.00, Measured: 32.72, Error: -5.44, Output: -190.00, I: 0.00, D: 1.45, Time: 0.040000
+Setpoint: 30.00, Measured: 30.29, Error: -0.58, Output: 140.00, I: 0.00, D: -29.67, Time: 0.040000
+Setpoint: 30.00, Measured: 30.39, Error: -0.78, Output: 140.00, I: 0.00, D: -13.60, Time: 0.040000
+Setpoint: 30.00, Measured: 28.89, Error: 2.22, Output: 183.85, I: 0.00, D: -25.55, Time: 0.040000
+Setpoint: 30.00, Measured: 27.58, Error: 4.84, Output: 190.00, I: 0.00, D: -29.12, Time: 0.040000
+Setpoint: 30.00, Measured: 27.74, Error: 4.52, Output: 190.00, I: 0.00, D: -12.58, Time: 0.040000
+Setpoint: 30.00, Measured: 27.82, Error: 4.36, Output: 190.00, I: 0.00, D: -5.27, Time: 0.040000
+Setpoint: 30.00, Measured: 27.38, Error: 5.24, Output: 190.00, I: 0.00, D: -8.17, Time: 0.040000
+Setpoint: 30.00, Measured: 34.18, Error: -8.36, Output: -190.00, I: 0.00, D: 80.91, Time: 0.040000
+Setpoint: 30.00, Measured: 33.46, Error: -6.92, Output: -190.00, I: 0.00, D: 31.50, Time: 0.040000
+Setpoint: 30.00, Measured: 35.87, Error: -11.74, Output: -190.00, I: 0.00, D: 45.84, Time: 0.040000
+Setpoint: 30.00, Measured: 38.55, Error: -17.10, Output: -190.00, I: 0.00, D: 56.44, Time: 0.040000
+Setpoint: 30.00, Measured: 38.39, Error: -16.79, Output: -190.00, I: 0.00, D: 26.26, Time: 0.040000
+Setpoint: 30.00, Measured: 39.01, Error: -18.02, Output: -190.00, I: 0.00, D: 20.83, Time: 0.040000
+Setpoint: 30.00, Measured: 39.05, Error: -18.10, Output: -190.00, I: 0.00, D: 10.93, Time: 0.040000
+Setpoint: 30.00, Measured: 39.33, Error: -18.67, Output: -190.00, I: 0.00, D: 8.99, Time: 0.040000
+Setpoint: 30.00, Measured: 36.79, Error: -13.59, Output: -190.00, I: 0.00, D: -27.25, Time: 0.040000
+Setpoint: 30.00, Measured: 35.19, Error: -10.37, Output: -190.00, I: 0.00, D: -33.71, Time: 0.040000
+Setpoint: 30.00, Measured: 31.56, Error: -3.13, Output: 140.00, I: 0.00, D: -62.15, Time: 0.040000
+Setpoint: 30.00, Measured: 29.39, Error: 1.22, Output: 190.00, I: 0.00, D: -58.25, Time: 0.040000
+Setpoint: 30.00, Measured: 26.47, Error: 7.07, Output: 190.00, I: 0.00, D: -65.65, Time: 0.040000
+Setpoint: 30.00, Measured: 23.28, Error: 13.43, Output: 190.00, I: 0.00, D: -72.60, Time: 0.040000
+Setpoint: 30.00, Measured: 19.13, Error: 21.74, Output: 190.00, I: 0.00, D: -88.23, Time: 0.040000
+Setpoint: 30.00, Measured: 18.56, Error: 22.88, Output: 190.00, I: 0.00, D: -51.26, Time: 0.040000
+Setpoint: 30.00, Measured: 21.70, Error: 16.60, Output: 190.00, I: 0.00, D: 13.63, Time: 0.040000
+Setpoint: 30.00, Measured: 25.43, Error: 9.14, Output: 186.27, I: 0.00, D: 53.44, Time: 0.040000
+Setpoint: 30.00, Measured: 28.25, Error: 3.50, Output: -140.00, I: 0.00, D: 61.96, Time: 0.040000
+Setpoint: 30.00, Measured: 32.15, Error: -4.29, Output: -190.00, I: 0.00, D: 79.71, Time: 0.040000
+Setpoint: 30.00, Measured: 35.14, Error: -10.27, Output: -190.00, I: 0.00, D: 77.23, Time: 0.040000
+Setpoint: 30.00, Measured: 37.77, Error: -15.54, Output: -190.00, I: 0.00, D: 71.54, Time: 0.040000
+Setpoint: 30.00, Measured: 37.85, Error: -15.69, Output: -190.00, I: 0.00, D: 36.70, Time: 0.040000
+Setpoint: 30.00, Measured: 36.33, Error: -12.66, Output: -190.00, I: 0.00, D: -0.59, Time: 0.040000
+Setpoint: 30.00, Measured: 35.32, Error: -10.63, Output: -190.00, I: 0.00, D: -12.98, Time: 0.040000
+Setpoint: 30.00, Measured: 32.68, Error: -5.35, Output: -140.00, I: 0.00, D: -39.50, Time: 0.040000
+Setpoint: 30.00, Measured: 30.63, Error: -1.27, Output: 140.00, I: 0.00, D: -45.25, Time: 0.040000
+Setpoint: 30.00, Measured: 28.82, Error: 2.36, Output: 190.00, I: 0.00, D: -45.32, Time: 0.040000
+Setpoint: 30.00, Measured: 25.98, Error: 8.04, Output: 190.00, I: 0.00, D: -58.13, Time: 0.040000
+Setpoint: 30.00, Measured: 23.69, Error: 12.62, Output: 190.00, I: 0.00, D: -57.69, Time: 0.040000
+Setpoint: 30.00, Measured: 23.10, Error: 13.80, Output: 190.00, I: 0.00, D: -36.21, Time: 0.040000
+Setpoint: 30.00, Measured: 24.02, Error: 11.96, Output: 190.00, I: 0.00, D: -6.67, Time: 0.040000
+Setpoint: 30.00, Measured: 26.18, Error: 7.64, Output: 190.00, I: 0.00, D: 23.67, Time: 0.040000
+Setpoint: 30.00, Measured: 28.13, Error: 3.74, Output: 140.00, I: 0.00, D: 36.25, Time: 0.040000
+Setpoint: 30.00, Measured: 29.62, Error: 0.75, Output: -140.00, I: 0.00, D: 36.78, Time: 0.040000
+Setpoint: 30.00, Measured: 26.48, Error: 7.04, Output: 190.00, I: 0.00, D: -20.91, Time: 0.040000
+Setpoint: 30.00, Measured: 31.79, Error: -3.58, Output: -190.00, I: 0.00, D: 55.91, Time: 0.040000
+Setpoint: 30.00, Measured: 27.01, Error: 5.99, Output: 190.00, I: 0.00, D: -31.84, Time: 0.040000
+Setpoint: 30.00, Measured: 30.82, Error: -1.63, Output: -181.56, I: 0.00, D: 31.71, Time: 0.040000
+Setpoint: 30.00, Measured: 22.65, Error: 14.70, Output: 190.00, I: 0.00, D: -86.21, Time: 0.040000

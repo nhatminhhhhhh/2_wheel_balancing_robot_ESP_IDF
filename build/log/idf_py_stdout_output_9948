@@ -1,0 +1,737 @@
+
+configsip: 0, SPIWP:0��;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c408h ( 50184) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001c430 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001e7cc vaddr=40080000 size=0184ch (  6220) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=195f8h (103928) map[0m
+[0;32mI (172) esp_image: segment 4: paddr=00039620 vaddr=4008184c size=0c924h ( 51492) load[0m
+[0;32mI (199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (212) cpu_start: Multicore app[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     IDF_project[0m
+[0;32mI (228) app_init: App version:      1[0m
+[0;32mI (233) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (239) app_init: ELF file SHA256:  355739637...[0m
+[0;32mI (244) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (249) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (254) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (259) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (264) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (271) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFB2CE0 len 0002D320 (180 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (290) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (296) heap_init: At 4008E170 len 00011E90 (71 KiB): IRAM[0m
+[0;32mI (304) spi_flash: detected chip: generic[0m
+[0;32mI (307) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (324) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (335) main_task: Started on CPU0[0m
+[0;32mI (345) main_task: Calling app_main()[0m
+[0;32mI (345) MAIN: I2C initialized successfully[0m
+[0;32mI (345) MOTOR: Initializing MCPWM for motor control[0m
+[0;32mI (345) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (365) MOTOR: Motor PWM initialized successfully[0m
+[0;32mI (775) MPU6050: Starting gyro calibration...[0m
+[0;32mI (5395) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (5405) MPU6050: Gyro offsets - X: -428.45, Y: -65.70, Z: -11.67[0m
+> Pitch: 2.11 degrees
+Setpoint: 0.00, Measured: 2.11, Error: -2.11, Output: -31.71, I Term: -0.021137, D Term: -42.273701
+> Pitch: 4.13 degrees
+Setpoint: 0.00, Measured: 4.13, Error: -4.13, Output: -61.97, I Term: -0.062449, D Term: -74.170235
+> Pitch: 6.09 degrees
+Setpoint: 0.00, Measured: 6.09, Error: -6.09, Output: -91.32, I Term: -0.123329, D Term: -98.469757
+> Pitch: 7.90 degrees
+[0;31mE (5445) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5445) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 7.90, Error: -7.90, Output: -118.50, I Term: -0.202326, D Term: -115.011597
+> Pitch: 9.84 degrees
+[0;31mE (5475) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5475) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 9.84, Error: -9.84, Output: -147.53, I Term: -0.300677, D Term: -130.718262
+> Pitch: 11.58 degrees
+[0;31mE (5495) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5495) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 11.58, Error: -11.58, Output: -173.69, I Term: -0.416471, D Term: -139.459259
+> Pitch: 13.25 degrees
+[0;31mE (5525) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5525) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 13.25, Error: -13.25, Output: -198.77, I Term: -0.548984, D Term: -145.003967
+> Pitch: 14.90 degrees
+[0;31mE (5555) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5555) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 14.90, Error: -14.90, Output: -223.53, I Term: -0.698002, D Term: -149.014938
+> Pitch: 16.53 degrees
+[0;31mE (5585) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5585) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 16.53, Error: -16.53, Output: -247.88, I Term: -0.863258, D Term: -151.687881
+> Pitch: 18.05 degrees
+[0;31mE (5615) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5615) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 18.05, Error: -18.05, Output: -270.68, I Term: -1.043710, D Term: -151.742645
+> Pitch: 19.53 degrees
+[0;31mE (5635) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5635) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 19.53, Error: -19.53, Output: -292.93, I Term: -1.239000, D Term: -151.069260
+> Pitch: 20.94 degrees
+[0;31mE (5665) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5665) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 20.94, Error: -20.94, Output: -314.15, I Term: -1.448431, D Term: -149.136887
+> Pitch: 22.33 degrees
+[0;31mE (5695) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5695) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 22.33, Error: -22.33, Output: -334.88, I Term: -1.671687, D Term: -146.961639
+> Pitch: 23.65 degrees
+[0;31mE (5725) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5725) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 23.65, Error: -23.65, Output: -354.79, I Term: -1.908214, D Term: -144.110077
+> Pitch: 24.93 degrees
+[0;31mE (5755) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5755) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 24.93, Error: -24.93, Output: -373.91, I Term: -2.157486, D Term: -140.777100
+> Pitch: 26.14 degrees
+[0;31mE (5775) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5775) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 26.14, Error: -26.14, Output: -392.08, I Term: -2.418871, D Term: -136.849213
+> Pitch: 27.34 degrees
+[0;31mE (5805) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5805) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 27.34, Error: -27.34, Output: -410.04, I Term: -2.692229, D Term: -133.423996
+> Pitch: 28.49 degrees
+[0;31mE (5835) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5835) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 28.49, Error: -28.49, Output: -427.39, I Term: -2.977153, D Term: -129.872162
+> Pitch: 29.61 degrees
+[0;31mE (5865) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5865) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 29.61, Error: -29.61, Output: -444.21, I Term: -3.273294, D Term: -126.332840
+> Pitch: 30.68 degrees
+[0;31mE (5885) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5885) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 30.68, Error: -30.68, Output: -460.25, I Term: -3.580126, D Term: -122.446663
+> Pitch: 31.72 degrees
+[0;31mE (5915) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5915) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 31.72, Error: -31.72, Output: -475.82, I Term: -3.897340, D Term: -118.722061
+> Pitch: 32.72 degrees
+[0;31mE (5945) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5945) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 32.72, Error: -32.72, Output: -490.81, I Term: -4.224546, D Term: -114.960602
+> Pitch: 33.69 degrees
+[0;31mE (5975) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (5975) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 33.69, Error: -33.69, Output: -505.41, I Term: -4.561488, D Term: -111.440224
+> Pitch: 34.60 degrees
+[0;31mE (6005) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6005) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 34.60, Error: -34.60, Output: -519.05, I Term: -4.907521, D Term: -107.336464
+> Pitch: 35.50 degrees
+[0;31mE (6025) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6025) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 35.50, Error: -35.50, Output: -532.55, I Term: -5.262557, D Term: -103.872864
+> Pitch: 36.37 degrees
+[0;31mE (6055) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6055) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 36.37, Error: -36.37, Output: -545.53, I Term: -5.626241, D Term: -100.395882
+> Pitch: 37.22 degrees
+[0;31mE (6085) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6085) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 37.22, Error: -37.22, Output: -558.29, I Term: -5.998435, D Term: -97.336586
+> Pitch: 38.01 degrees
+[0;31mE (6115) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6115) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 38.01, Error: -38.01, Output: -570.21, I Term: -6.378573, D Term: -93.755959
+> Pitch: 38.80 degrees
+[0;31mE (6135) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6145) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 38.80, Error: -38.80, Output: -581.97, I Term: -6.766554, D Term: -90.691109
+> Pitch: 39.55 degrees
+[0;31mE (6165) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6165) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 39.55, Error: -39.55, Output: -593.31, I Term: -7.162093, D Term: -87.668930
+> Pitch: 40.28 degrees
+[0;31mE (6195) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6195) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 40.28, Error: -40.28, Output: -604.27, I Term: -7.564940, D Term: -84.753525
+> Pitch: 40.98 degrees
+[0;31mE (6225) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6225) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 40.98, Error: -40.98, Output: -614.76, I Term: -7.974778, D Term: -81.781166
+> Pitch: 41.66 degrees
+[0;31mE (6255) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6255) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 41.66, Error: -41.66, Output: -624.89, I Term: -8.391368, D Term: -78.930870
+> Pitch: 42.33 degrees
+[0;31mE (6275) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6275) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 42.33, Error: -42.33, Output: -634.99, I Term: -8.814692, D Term: -76.614166
+> Pitch: 42.97 degrees
+[0;31mE (6305) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6305) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 42.97, Error: -42.97, Output: -644.58, I Term: -9.244414, D Term: -74.085831
+> Pitch: 43.59 degrees
+[0;31mE (6335) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6335) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 43.59, Error: -43.59, Output: -653.78, I Term: -9.680265, D Term: -71.526352
+> Pitch: 44.14 degrees
+[0;31mE (6365) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6365) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 44.14, Error: -44.14, Output: -662.13, I Term: -10.121683, D Term: -68.355118
+> Pitch: 44.72 degrees
+[0;31mE (6395) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6395) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 44.72, Error: -44.72, Output: -670.80, I Term: -10.568882, D Term: -66.245758
+> Pitch: 45.28 degrees
+[0;31mE (6415) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6415) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 45.28, Error: -45.28, Output: -679.14, I Term: -11.021643, D Term: -64.119431
+> Pitch: 45.80 degrees
+[0;31mE (6445) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6445) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 45.80, Error: -45.80, Output: -686.94, I Term: -11.479606, D Term: -61.700665
+> Pitch: 46.32 degrees
+[0;31mE (6475) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6475) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 46.32, Error: -46.32, Output: -694.79, I Term: -11.942796, D Term: -59.815777
+> Pitch: 46.81 degrees
+[0;31mE (6505) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6505) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 46.81, Error: -46.81, Output: -702.22, I Term: -12.410941, D Term: -57.762367
+> Pitch: 47.28 degrees
+[0;31mE (6525) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6525) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 47.28, Error: -47.28, Output: -709.26, I Term: -12.883780, D Term: -55.596340
+> Pitch: 47.72 degrees
+[0;31mE (6555) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6555) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 47.72, Error: -47.72, Output: -715.75, I Term: -13.360946, D Term: -53.131859
+> Pitch: 48.15 degrees
+[0;31mE (6585) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6585) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 48.15, Error: -48.15, Output: -722.30, I Term: -13.842480, D Term: -51.242062
+> Pitch: 48.60 degrees
+[0;31mE (6615) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6615) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 48.60, Error: -48.60, Output: -728.99, I Term: -14.328471, D Term: -49.907909
+> Pitch: 49.02 degrees
+[0;31mE (6645) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6645) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 49.02, Error: -49.02, Output: -735.34, I Term: -14.818700, D Term: -48.401516
+> Pitch: 49.39 degrees
+[0;31mE (6665) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6665) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 49.39, Error: -49.39, Output: -740.87, I Term: -15.312613, D Term: -46.089455
+> Pitch: 49.79 degrees
+[0;31mE (6695) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6695) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 49.79, Error: -49.79, Output: -746.79, I Term: -15.810470, D Term: -44.759212
+> Pitch: 50.16 degrees
+[0;31mE (6725) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6725) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 50.16, Error: -50.16, Output: -752.47, I Term: -16.312119, D Term: -43.389614
+> Pitch: 50.54 degrees
+[0;31mE (6755) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6755) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 50.54, Error: -50.54, Output: -758.06, I Term: -16.817492, D Term: -42.160652
+> Pitch: 50.89 degrees
+[0;31mE (6785) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6785) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 50.89, Error: -50.89, Output: -763.31, I Term: -17.326368, D Term: -40.736885
+> Pitch: 51.24 degrees
+[0;31mE (6805) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6805) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 51.24, Error: -51.24, Output: -768.54, I Term: -17.838728, D Term: -39.555222
+> Pitch: 51.57 degrees
+[0;31mE (6835) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6835) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 51.57, Error: -51.57, Output: -773.53, I Term: -18.354418, D Term: -38.304031
+> Pitch: 51.89 degrees
+[0;31mE (6865) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6865) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 51.89, Error: -51.89, Output: -778.35, I Term: -18.873318, D Term: -37.064201
+> Pitch: 52.18 degrees
+[0;31mE (6895) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6895) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 52.18, Error: -52.18, Output: -782.73, I Term: -19.395140, D Term: -35.495781
+> Pitch: 52.46 degrees
+[0;31mE (6915) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6915) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 52.46, Error: -52.46, Output: -786.86, I Term: -19.919710, D Term: -33.892689
+> Pitch: 52.74 degrees
+[0;31mE (6945) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6945) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 52.74, Error: -52.74, Output: -791.08, I Term: -20.447094, D Term: -32.740524
+> Pitch: 53.03 degrees
+[0;31mE (6975) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (6975) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 53.03, Error: -53.03, Output: -795.42, I Term: -20.977373, D Term: -31.985571
+> Pitch: 53.28 degrees
+[0;31mE (7005) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (7005) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 53.28, Error: -53.28, Output: -799.22, I Term: -21.510187, D Term: -30.658266
+> Pitch: 53.52 degrees
+[0;31mE (7035) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (7035) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 53.52, Error: -53.52, Output: -802.85, I Term: -22.045420, D Term: -29.362505
+> Pitch: 53.78 degrees
+[0;31mE (7055) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (7055) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 53.78, Error: -53.78, Output: -806.69, I Term: -22.583210, D Term: -28.606428
+> Pitch: 54.02 degrees
+[0;31mE (7085) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (7085) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 54.02, Error: -54.02, Output: -810.23, I Term: -23.123362, D Term: -27.606670
+[0;31mE (8115) MPU6050: Failed to read MPU6050 data[0m
+> Pitch: 54.02 degrees
+[0;31mE (8115) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8115) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 54.02, Error: -54.02, Output: -810.23, I Term: -23.663513, D Term: -22.085337
+> Pitch: 53.92 degrees
+[0;31mE (8145) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8145) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 53.92, Error: -53.92, Output: -808.81, I Term: -24.202721, D Term: -15.778927
+> Pitch: 54.14 degrees
+[0;31mE (8175) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8175) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 54.14, Error: -54.14, Output: -812.11, I Term: -24.744125, D Term: -17.018284
+> Pitch: 54.36 degrees
+[0;31mE (8195) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8195) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 54.36, Error: -54.36, Output: -815.43, I Term: -25.287746, D Term: -18.047306
+> Pitch: 54.57 degrees
+[0;31mE (8225) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8225) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 54.57, Error: -54.57, Output: -818.51, I Term: -25.833416, D Term: -18.536966
+> Pitch: 54.79 degrees
+[0;31mE (8255) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8255) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 54.79, Error: -54.79, Output: -821.83, I Term: -26.381304, D Term: -19.265610
+> Pitch: 54.99 degrees
+[0;31mE (8285) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8285) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 54.99, Error: -54.99, Output: -824.92, I Term: -26.931248, D Term: -19.523434
+> Pitch: 55.19 degrees
+[0;31mE (8305) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8305) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 55.19, Error: -55.19, Output: -827.89, I Term: -27.483171, D Term: -19.577564
+> Pitch: 55.37 degrees
+[0;31mE (8335) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8335) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 55.37, Error: -55.37, Output: -830.53, I Term: -28.036860, D Term: -19.191563
+> Pitch: 55.53 degrees
+[0;31mE (8365) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8365) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 55.53, Error: -55.53, Output: -833.00, I Term: -28.592190, D Term: -18.638926
+[0;31mE (8395) MPU6050: Failed to read MPU6050 data[0m
+> Pitch: 55.53 degrees
+[0;31mE (8395) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8395) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 55.53, Error: -55.53, Output: -833.00, I Term: -29.147520, D Term: -14.911140
+> Pitch: 55.71 degrees
+[0;31mE (8425) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8425) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 55.71, Error: -55.71, Output: -835.62, I Term: -29.704599, D Term: -15.425616
+> Pitch: 55.88 degrees
+[0;31mE (8455) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8455) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 55.88, Error: -55.88, Output: -838.19, I Term: -30.263393, D Term: -15.770516
+> Pitch: 56.04 degrees
+[0;31mE (8485) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8485) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.04, Error: -56.04, Output: -840.58, I Term: -30.823780, D Term: -15.799015
+> Pitch: 56.20 degrees
+[0;31mE (8505) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8505) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.20, Error: -56.20, Output: -842.95, I Term: -31.385746, D Term: -15.797782
+> Pitch: 56.36 degrees
+[0;31mE (8535) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8535) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.36, Error: -56.36, Output: -845.35, I Term: -31.949312, D Term: -15.840282
+> Pitch: 56.49 degrees
+[0;31mE (8565) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8565) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.49, Error: -56.49, Output: -847.41, I Term: -32.514252, D Term: -15.416061
+> Pitch: 56.61 degrees
+[0;31mE (8595) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8595) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.61, Error: -56.61, Output: -849.19, I Term: -33.080379, D Term: -14.714823
+> Pitch: 56.77 degrees
+[0;31mE (8625) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8625) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.77, Error: -56.77, Output: -851.57, I Term: -33.648094, D Term: -14.939583
+> Pitch: 56.35 degrees
+[0;31mE (8645) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8645) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.35, Error: -56.35, Output: -845.27, I Term: -34.211605, D Term: -3.550864
+> Pitch: 56.49 degrees
+[0;31mE (8675) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8675) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.49, Error: -56.49, Output: -847.33, I Term: -34.776489, D Term: -5.587731
+> Pitch: 56.62 degrees
+[0;31mE (8705) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8705) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.62, Error: -56.62, Output: -849.25, I Term: -35.342655, D Term: -7.028703
+> Pitch: 56.72 degrees
+[0;31mE (8735) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8735) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.72, Error: -56.72, Output: -850.87, I Term: -35.909904, D Term: -7.791084
+> Pitch: 56.85 degrees
+[0;31mE (8765) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8765) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.85, Error: -56.85, Output: -852.82, I Term: -36.478451, D Term: -8.824725
+> Pitch: 56.97 degrees
+[0;31mE (8785) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8785) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 56.97, Error: -56.97, Output: -854.48, I Term: -37.048103, D Term: -9.271999
+> Pitch: 57.07 degrees
+[0;31mE (8815) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8815) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.07, Error: -57.07, Output: -856.03, I Term: -37.618790, D Term: -9.489972
+> Pitch: 57.18 degrees
+[0;31mE (8845) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8845) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.18, Error: -57.18, Output: -857.74, I Term: -38.190613, D Term: -9.866072
+> Pitch: 57.29 degrees
+[0;31mE (8875) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8875) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.29, Error: -57.29, Output: -859.37, I Term: -38.763527, D Term: -10.073110
+> Pitch: 57.41 degrees
+[0;31mE (8895) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8895) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.41, Error: -57.41, Output: -861.19, I Term: -39.337654, D Term: -10.483491
+> Pitch: 57.53 degrees
+[0;31mE (8925) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8925) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.53, Error: -57.53, Output: -862.91, I Term: -39.912930, D Term: -10.680113
+> Pitch: 57.61 degrees
+[0;31mE (8955) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8955) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.61, Error: -57.61, Output: -864.19, I Term: -40.489056, D Term: -10.246819
+> Pitch: 57.70 degrees
+[0;31mE (8985) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (8985) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.70, Error: -57.70, Output: -865.45, I Term: -41.066021, D Term: -9.878135
+> Pitch: 57.78 degrees
+[0;31mE (9015) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9015) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.78, Error: -57.78, Output: -866.74, I Term: -41.643848, D Term: -9.624462
+> Pitch: 57.88 degrees
+[0;31mE (9035) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9035) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.88, Error: -57.88, Output: -868.19, I Term: -42.222637, D Term: -9.627365
+> Pitch: 57.97 degrees
+[0;31mE (9065) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9065) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 57.97, Error: -57.97, Output: -869.58, I Term: -42.802361, D Term: -9.565296
+> Pitch: 58.06 degrees
+[0;31mE (9095) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9095) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.06, Error: -58.06, Output: -870.87, I Term: -43.382938, D Term: -9.363052
+> Pitch: 58.16 degrees
+[0;31mE (9125) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9125) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.16, Error: -58.16, Output: -872.47, I Term: -43.964584, D Term: -9.624765
+> Pitch: 58.24 degrees
+[0;31mE (9145) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9145) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.24, Error: -58.24, Output: -873.61, I Term: -44.546989, D Term: -9.220808
+> Pitch: 58.30 degrees
+[0;31mE (9175) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9175) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.30, Error: -58.30, Output: -874.55, I Term: -45.130020, D Term: -8.628553
+> Pitch: 58.35 degrees
+[0;31mE (9205) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9205) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.35, Error: -58.35, Output: -875.19, I Term: -45.713482, D Term: -7.767253
+> Pitch: 58.43 degrees
+[0;31mE (9235) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9235) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.43, Error: -58.43, Output: -876.49, I Term: -46.297810, D Term: -7.943387
+> Pitch: 58.53 degrees
+[0;31mE (9265) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9265) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.53, Error: -58.53, Output: -877.95, I Term: -46.883106, D Term: -8.292881
+> Pitch: 58.59 degrees
+[0;31mE (9285) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9285) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.59, Error: -58.59, Output: -878.90, I Term: -47.469044, D Term: -7.912076
+> Pitch: 58.62 degrees
+[0;31mE (9315) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9315) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.62, Error: -58.62, Output: -879.36, I Term: -48.055283, D Term: -6.937418
+> Pitch: 58.69 degrees
+[0;31mE (9345) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9345) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.69, Error: -58.69, Output: -880.33, I Term: -48.642170, D Term: -6.848458
+> Pitch: 58.74 degrees
+[0;31mE (9375) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9375) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.74, Error: -58.74, Output: -881.14, I Term: -49.229595, D Term: -6.552985
+> Pitch: 58.81 degrees
+[0;31mE (9395) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9395) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.81, Error: -58.81, Output: -882.09, I Term: -49.817657, D Term: -6.510928
+> Pitch: 58.86 degrees
+[0;31mE (9425) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9425) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.86, Error: -58.86, Output: -882.97, I Term: -50.406303, D Term: -6.382219
+> Pitch: 58.91 degrees
+[0;31mE (9455) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9455) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.91, Error: -58.91, Output: -883.61, I Term: -50.995373, D Term: -5.952257
+> Pitch: 58.98 degrees
+[0;31mE (9485) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9485) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 58.98, Error: -58.98, Output: -884.73, I Term: -51.585190, D Term: -6.257091
+> Pitch: 59.03 degrees
+[0;31mE (9515) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9515) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.03, Error: -59.03, Output: -885.51, I Term: -52.175526, D Term: -6.042660
+> Pitch: 59.06 degrees
+[0;31mE (9535) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9535) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.06, Error: -59.06, Output: -885.89, I Term: -52.766121, D Term: -5.349722
+> Pitch: 59.09 degrees
+[0;31mE (9565) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9565) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.09, Error: -59.09, Output: -886.42, I Term: -53.357067, D Term: -4.979546
+> Pitch: 59.15 degrees
+[0;31mE (9595) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9595) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.15, Error: -59.15, Output: -887.30, I Term: -53.948605, D Term: -5.167719
+> Pitch: 59.22 degrees
+[0;31mE (9625) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9625) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.22, Error: -59.22, Output: -888.27, I Term: -54.540783, D Term: -5.416753
+> Pitch: 59.25 degrees
+[0;31mE (9645) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9645) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.25, Error: -59.25, Output: -888.75, I Term: -55.133286, D Term: -4.982587
+> Pitch: 59.26 degrees
+[0;31mE (9675) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (9675) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.26, Error: -59.26, Output: -888.85, I Term: -55.725857, D Term: -4.120728
+[0;31mE (10705) MPU6050: Failed to read MPU6050 data[0m
+> Pitch: 59.26 degrees
+[0;31mE (10705) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10705) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.26, Error: -59.26, Output: -888.85, I Term: -56.318428, D Term: -3.296583
+> Pitch: 59.28 degrees
+[0;31mE (10735) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10735) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.28, Error: -59.28, Output: -889.24, I Term: -56.911259, D Term: -3.156142
+> Pitch: 59.31 degrees
+[0;31mE (10765) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10765) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.31, Error: -59.31, Output: -889.60, I Term: -57.504330, D Term: -3.006786
+> Pitch: 59.37 degrees
+[0;31mE (10785) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10785) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.37, Error: -59.37, Output: -890.51, I Term: -58.098000, D Term: -3.607821
+> Pitch: 59.41 degrees
+[0;31mE (10815) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10815) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.41, Error: -59.41, Output: -891.10, I Term: -58.692070, D Term: -3.681392
+> Pitch: 59.42 degrees
+[0;31mE (10845) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10845) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.42, Error: -59.42, Output: -891.34, I Term: -59.286301, D Term: -3.267074
+> Pitch: 59.46 degrees
+[0;31mE (10875) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10875) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.46, Error: -59.46, Output: -891.89, I Term: -59.880890, D Term: -3.334637
+> Pitch: 59.49 degrees
+[0;31mE (10905) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10905) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.49, Error: -59.49, Output: -892.41, I Term: -60.475826, D Term: -3.361527
+> Pitch: 59.54 degrees
+[0;31mE (10925) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10925) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.54, Error: -59.54, Output: -893.03, I Term: -61.071182, D Term: -3.527082
+> Pitch: 59.58 degrees
+[0;31mE (10955) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10955) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.58, Error: -59.58, Output: -893.67, I Term: -61.666965, D Term: -3.673640
+> Pitch: 59.61 degrees
+[0;31mE (10985) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (10985) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.61, Error: -59.61, Output: -894.17, I Term: -62.263081, D Term: -3.604806
+> Pitch: 59.64 degrees
+[0;31mE (11015) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11015) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.64, Error: -59.64, Output: -894.55, I Term: -62.859447, D Term: -3.388529
+> Pitch: 59.68 degrees
+[0;31mE (11035) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11045) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.68, Error: -59.68, Output: -895.21, I Term: -63.456253, D Term: -3.589577
+> Pitch: 59.70 degrees
+[0;31mE (11065) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11065) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.70, Error: -59.70, Output: -895.56, I Term: -64.053291, D Term: -3.333927
+> Pitch: 59.71 degrees
+[0;31mE (11095) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11095) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.71, Error: -59.71, Output: -895.63, I Term: -64.650375, D Term: -2.765713
+> Pitch: 59.73 degrees
+[0;31mE (11125) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11125) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.73, Error: -59.73, Output: -895.95, I Term: -65.247681, D Term: -2.643250
+> Pitch: 59.76 degrees
+[0;31mE (11155) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11155) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.76, Error: -59.76, Output: -896.40, I Term: -65.845284, D Term: -2.712897
+> Pitch: 59.80 degrees
+[0;31mE (11175) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11185) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.80, Error: -59.80, Output: -896.99, I Term: -66.443275, D Term: -2.954696
+> Pitch: 59.80 degrees
+[0;31mE (11205) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11205) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.80, Error: -59.80, Output: -897.06, I Term: -67.041313, D Term: -2.454165
+> Pitch: 59.81 degrees
+[0;31mE (11235) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11235) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.81, Error: -59.81, Output: -897.15, I Term: -67.639412, D Term: -2.080520
+> Pitch: 59.86 degrees
+[0;31mE (11265) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11265) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.86, Error: -59.86, Output: -897.86, I Term: -68.237984, D Term: -2.620150
+> Pitch: 59.88 degrees
+[0;31mE (11295) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11295) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.88, Error: -59.88, Output: -898.16, I Term: -68.836761, D Term: -2.495519
+> Pitch: 59.88 degrees
+[0;31mE (11315) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11315) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.88, Error: -59.88, Output: -898.19, I Term: -69.435555, D Term: -2.028306
+> Pitch: 59.88 degrees
+[0;31mE (11345) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11345) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.88, Error: -59.88, Output: -898.27, I Term: -70.034401, D Term: -1.734949
+> Pitch: 59.92 degrees
+[0;31mE (11375) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11375) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.92, Error: -59.92, Output: -898.78, I Term: -70.633591, D Term: -2.067891
+> Pitch: 59.94 degrees
+[0;31mE (11405) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11405) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.94, Error: -59.94, Output: -899.12, I Term: -71.233002, D Term: -2.100633
+> Pitch: 59.95 degrees
+[0;31mE (11435) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11435) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.95, Error: -59.95, Output: -899.28, I Term: -71.832520, D Term: -1.893824
+> Pitch: 59.96 degrees
+[0;31mE (11455) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11455) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.96, Error: -59.96, Output: -899.33, I Term: -72.432076, D Term: -1.592116
+> Pitch: 59.99 degrees
+[0;31mE (11485) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11485) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 59.99, Error: -59.99, Output: -899.79, I Term: -73.031937, D Term: -1.877178
+> Pitch: 60.01 degrees
+[0;31mE (11515) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11515) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.01, Error: -60.01, Output: -900.16, I Term: -73.632042, D Term: -1.998263
+> Pitch: 60.01 degrees
+[0;31mE (11545) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11545) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.01, Error: -60.01, Output: -900.13, I Term: -74.232124, D Term: -1.559625
+> Pitch: 60.03 degrees
+[0;31mE (11575) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11575) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.03, Error: -60.03, Output: -900.40, I Term: -74.832390, D Term: -1.611011
+> Pitch: 60.04 degrees
+[0;31mE (11595) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11595) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.04, Error: -60.04, Output: -900.64, I Term: -75.432823, D Term: -1.612982
+> Pitch: 60.08 degrees
+[0;31mE (11625) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11625) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.08, Error: -60.08, Output: -901.26, I Term: -76.033661, D Term: -2.111537
+> Pitch: 60.11 degrees
+[0;31mE (11655) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11655) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.11, Error: -60.11, Output: -901.61, I Term: -76.634727, D Term: -2.149054
+> Pitch: 60.14 degrees
+[0;31mE (11685) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11685) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.14, Error: -60.14, Output: -902.08, I Term: -77.236115, D Term: -2.345464
+> Pitch: 60.17 degrees
+[0;31mE (11715) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11715) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.17, Error: -60.17, Output: -902.57, I Term: -77.837822, D Term: -2.530668
+> Pitch: 60.17 degrees
+[0;31mE (11735) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11735) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.17, Error: -60.17, Output: -902.62, I Term: -78.439568, D Term: -2.095182
+> Pitch: 60.17 degrees
+[0;31mE (11765) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11765) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.17, Error: -60.17, Output: -902.61, I Term: -79.041313, D Term: -1.668517
+> Pitch: 60.19 degrees
+[0;31mE (11795) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11795) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.19, Error: -60.19, Output: -902.86, I Term: -79.643219, D Term: -1.657460
+> Pitch: 60.20 degrees
+[0;31mE (11825) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11825) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.20, Error: -60.20, Output: -902.94, I Term: -80.245178, D Term: -1.433009
+> Pitch: 60.19 degrees
+[0;31mE (11855) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11855) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.19, Error: -60.19, Output: -902.85, I Term: -80.847076, D Term: -1.032653
+> Pitch: 60.20 degrees
+[0;31mE (11875) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11875) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.20, Error: -60.20, Output: -903.06, I Term: -81.449112, D Term: -1.102840
+> Pitch: 60.23 degrees
+[0;31mE (11905) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11905) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.23, Error: -60.23, Output: -903.52, I Term: -82.051460, D Term: -1.498270
+> Pitch: 60.23 degrees
+[0;31mE (11935) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11935) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.23, Error: -60.23, Output: -903.46, I Term: -82.653770, D Term: -1.125221
+> Pitch: 60.25 degrees
+[0;31mE (11965) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11965) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.25, Error: -60.25, Output: -903.71, I Term: -83.256241, D Term: -1.224121
+> Pitch: 60.24 degrees
+[0;31mE (11995) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (11995) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.24, Error: -60.24, Output: -903.67, I Term: -83.858688, D Term: -0.924975
+> Pitch: 60.26 degrees
+[0;31mE (12015) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+[0;31mE (12015) mcpwm: mcpwm_comparator_set_compare_value(214): compare value out of range[0m
+Setpoint: 0.00, Measured: 60.26, Error: -60.26, Output: -903.97, I Term: -84.461334, D Term: -1.141897

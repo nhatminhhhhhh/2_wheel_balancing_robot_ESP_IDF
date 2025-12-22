@@ -1,0 +1,1238 @@
+ 0, SPIWP:0x[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e6b8h (124600) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e6e0 vaddr=3ffb0000 size=01938h (  6456) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=92ae0h (600800) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2b08 vaddr=3ffb1938 size=0269ch (  9884) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c51ac vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (456) app_init: ELF file SHA256:  e766f598c...[0m
+[0;32mI (462) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (477) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (489) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (525) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (542) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MAIN: Connecting to WiFi...[0m
+[0;32mI (613) wifi:wifi driver task: 3ffc047c, prio:23, stack:6656, core=0[0m
+[0;32mI (623) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (633) wifi:wifi certification version: v7.0[0m
+[0;32mI (633) wifi:config NVS flash: enabled[0m
+[0;32mI (633) wifi:config nano formating: disabled[0m
+[0;32mI (633) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (643) wifi:Init management short buffer num: 32[0m
+[0;32mI (643) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (653) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (653) wifi:Init static rx buffer num: 10[0m
+[0;32mI (653) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (663) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: accept mbox: 6[0m
+[0;32mI (673) wifi_init: tcpip mbox: 32[0m
+[0;32mI (673) wifi_init: udp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp mbox: 6[0m
+[0;32mI (683) wifi_init: tcp tx win: 5760[0m
+[0;32mI (683) wifi_init: tcp rx win: 5760[0m
+[0;32mI (693) wifi_init: tcp mss: 1440[0m
+[0;32mI (693) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (693) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (703) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (793) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (793) wifi:enable tsf[0m
+[0;32mI (793) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (813) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (823) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (833) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (843) wifi:state: assoc -> init (0x6c0)[0m
+[0;32mI (853) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (853) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (853) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (3273) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (3273) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (3283) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3283) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3293) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3303) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3323) wifi:connected with P2.3->2.6, aid = 1, channel 6, BW20, bssid = 32:16:9d:ed:21:53[0m
+[0;32mI (3323) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (3333) wifi:pm start, type: 1[0m
+
+[0;32mI (3333) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3393) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4343) esp_netif_handlers: sta ip: 192.168.0.190, mask: 255.255.255.0, gw: 192.168.0.1[0m
+Got IP: 192.168.0.190
+[0;32mI (4343) WEBSERVER: Connected to AP SSID:P2.3->2.6[0m
+[0;32mI (4343) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (5353) WEBSERVER: [34mPID loaded from NVS - Kp: 9.50, Ki: 20.40, Kd: 4.232[0m[0m
+[0;32mI (5353) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (5363) WEBSERVER: Web server started successfully![0m
+[0;32mI (5363) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5863) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5863) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5963) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5963) GPIO: LED GPIO initialized[0m
+[0;32mI (5963) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5973) GPIO: Button GPIO initialized[0m
+[0;32mI (6073) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (6173) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (8173) MAIN: I2C initialized successfully[0m
+[0;32mI (8473) MPU6050: Starting gyro calibration...[0m
+[0;32mI (13143) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (13143) MPU6050: Gyro offsets - X: -403.20, Y: -57.66, Z: 24.50[0m
+Robot ready. Press the button to start balancing...
+[0;32mI (14243) wifi:<ba-add>idx:0 (ifx:0, 32:16:9d:ed:21:53), tid:0, ssn:0, winSize:64[0m
+[0;32mI (57053) wifi:<ba-add>idx:1 (ifx:0, 32:16:9d:ed:21:53), tid:6, ssn:0, winSize:64[0m
+Setpoint: 18.00, Pitch: -21.06, Real Error: -39.06, Error: 39.06, Output: 141.23, PWM: 141, I: 15.94, D: 441.08
+Setpoint: 18.00, Pitch: -4.54, Real Error: -22.54, Error: 22.54, Output: -209.00, PWM: 209, I: 25.13, D: 685.44
+Setpoint: 18.00, Pitch: 8.06, Real Error: -9.94, Error: 4.97, Output: -209.00, PWM: 209, I: 27.16, D: 843.91
+Setpoint: 18.00, Pitch: 13.70, Real Error: -4.30, Error: 2.15, Output: -209.00, PWM: 209, I: 28.04, D: 871.85
+Setpoint: 18.00, Pitch: 17.87, Real Error: -0.13, Error: 0.07, Output: -209.00, PWM: 209, I: 28.06, D: 872.64
+Setpoint: 18.00, Pitch: 19.65, Real Error: 1.65, Error: -0.82, Output: -209.00, PWM: 209, I: 27.73, D: 833.00
+Setpoint: 18.00, Pitch: 19.04, Real Error: 1.04, Error: -0.52, Output: -209.00, PWM: 209, I: 27.52, D: 756.07
+Setpoint: 18.00, Pitch: 18.03, Real Error: 0.03, Error: -0.01, Output: -209.00, PWM: 209, I: 27.51, D: 678.39
+Setpoint: 18.00, Pitch: 14.17, Real Error: -3.83, Error: 1.92, Output: -209.00, PWM: 209, I: 28.29, D: 558.80
+Setpoint: 18.00, Pitch: 12.41, Real Error: -5.59, Error: 2.80, Output: -209.00, PWM: 209, I: 29.43, D: 484.31
+Setpoint: 18.00, Pitch: 11.91, Real Error: -6.09, Error: 3.05, Output: -209.00, PWM: 209, I: 30.68, D: 437.12
+Setpoint: 18.00, Pitch: 12.59, Real Error: -5.41, Error: 2.70, Output: -209.00, PWM: 209, I: 31.78, D: 413.77
+Setpoint: 18.00, Pitch: 13.31, Real Error: -4.69, Error: 2.35, Output: -209.00, PWM: 209, I: 32.74, D: 392.75
+Setpoint: 18.00, Pitch: 11.06, Real Error: -6.94, Error: 3.47, Output: -209.00, PWM: 209, I: 34.15, D: 323.25
+Setpoint: 18.00, Pitch: 9.45, Real Error: -8.55, Error: 4.27, Output: -209.00, PWM: 209, I: 35.90, D: 270.17
+Setpoint: 18.00, Pitch: 6.31, Real Error: -11.69, Error: 5.84, Output: -136.69, PWM: 136, I: 38.28, D: 195.43
+Setpoint: 18.00, Pitch: 4.31, Real Error: -13.69, Error: 6.84, Output: -80.89, PWM: 130, I: 41.07, D: 145.92
+Setpoint: 18.00, Pitch: 5.15, Real Error: -12.85, Error: 6.42, Output: -82.32, PWM: 130, I: 43.69, D: 148.50
+Setpoint: 18.00, Pitch: 4.49, Real Error: -13.51, Error: 6.76, Output: -55.23, PWM: 130, I: 46.45, D: 125.33
+Setpoint: 18.00, Pitch: 3.81, Real Error: -14.19, Error: 7.10, Output: -29.61, PWM: 130, I: 49.35, D: 103.80
+Setpoint: 18.00, Pitch: 1.14, Real Error: -16.86, Error: 8.43, Output: 31.86, PWM: 130, I: 52.79, D: 50.42
+Setpoint: 18.00, Pitch: -1.67, Real Error: -19.67, Error: 19.67, Output: 209.00, PWM: 209, I: 60.81, D: -1.31
+Setpoint: 18.00, Pitch: -2.83, Real Error: -20.83, Error: 20.83, Output: 209.00, PWM: 209, I: 69.31, D: -20.72
+Setpoint: 18.00, Pitch: -4.41, Real Error: -22.41, Error: 22.41, Output: 209.00, PWM: 209, I: 78.45, D: -45.84
+Setpoint: 18.00, Pitch: -5.01, Real Error: -23.01, Error: 23.01, Output: 209.00, PWM: 209, I: 87.84, D: -52.35
+Setpoint: 18.00, Pitch: -3.66, Real Error: -21.66, Error: 21.66, Output: 209.00, PWM: 209, I: 96.68, D: -25.35
+Setpoint: 18.00, Pitch: -2.58, Real Error: -20.58, Error: 20.58, Output: 209.00, PWM: 209, I: 105.07, D: -4.94
+Setpoint: 18.00, Pitch: -1.39, Real Error: -19.39, Error: 19.39, Output: 209.00, PWM: 209, I: 112.98, D: 15.59
+Setpoint: 18.00, Pitch: 0.15, Real Error: -17.85, Error: 8.93, Output: 107.58, PWM: 130, I: 116.62, D: 40.29
+Setpoint: 18.00, Pitch: -1.71, Real Error: -19.71, Error: 19.71, Output: 209.00, PWM: 209, I: 124.67, D: 5.57
+Setpoint: 18.00, Pitch: -0.17, Real Error: -18.17, Error: 18.17, Output: 209.00, PWM: 209, I: 132.08, D: 31.23
+Setpoint: 18.00, Pitch: 0.69, Real Error: -17.31, Error: 8.65, Output: 122.55, PWM: 130, I: 135.61, D: 43.35
+Setpoint: 18.00, Pitch: -1.83, Real Error: -19.83, Error: 19.83, Output: 209.00, PWM: 209, I: 143.70, D: -2.83
+Setpoint: 18.00, Pitch: -6.56, Real Error: -24.56, Error: 24.56, Output: 209.00, PWM: 209, I: 153.72, D: -82.61
+Setpoint: 18.00, Pitch: -4.80, Real Error: -22.80, Error: 22.80, Output: 209.00, PWM: 209, I: 163.03, D: -46.22
+Setpoint: 18.00, Pitch: -2.00, Real Error: -20.00, Error: 20.00, Output: 209.00, PWM: 209, I: 171.19, D: 4.86
+Setpoint: 18.00, Pitch: 1.13, Real Error: -16.87, Error: 8.43, Output: 146.68, PWM: 146, I: 174.63, D: 57.47
+Setpoint: 18.00, Pitch: 3.17, Real Error: -14.83, Error: 7.41, Output: 116.19, PWM: 130, I: 177.65, D: 87.41
+Setpoint: 18.00, Pitch: 5.67, Real Error: -12.33, Error: 6.16, Output: 79.02, PWM: 130, I: 180.17, D: 122.73
+Setpoint: 18.00, Pitch: 6.91, Real Error: -11.09, Error: 5.54, Output: 67.93, PWM: 130, I: 182.43, D: 133.90
+Setpoint: 18.00, Pitch: 7.92, Real Error: -10.08, Error: 5.04, Output: 61.77, PWM: 130, I: 184.49, D: 140.35
+Setpoint: 18.00, Pitch: 9.00, Real Error: -9.00, Error: 4.50, Output: 54.72, PWM: 130, I: 186.32, D: 147.35
+Setpoint: 18.00, Pitch: 10.43, Real Error: -7.57, Error: 3.78, Output: 41.29, PWM: 130, I: 187.86, D: 159.81
+Setpoint: 18.00, Pitch: 10.66, Real Error: -7.34, Error: 3.67, Output: 51.32, PWM: 130, I: 189.36, D: 150.88
+Setpoint: 18.00, Pitch: 11.26, Real Error: -6.74, Error: 3.37, Output: 53.66, PWM: 130, I: 190.74, D: 148.88
+Setpoint: 18.00, Pitch: 11.59, Real Error: -6.41, Error: 3.20, Output: 60.63, PWM: 130, I: 192.05, D: 142.63
+Setpoint: 18.00, Pitch: 12.20, Real Error: -5.80, Error: 2.90, Output: 61.93, PWM: 130, I: 193.23, D: 141.46
+Setpoint: 18.00, Pitch: 12.75, Real Error: -5.25, Error: 2.62, Output: 63.91, PWM: 130, I: 194.30, D: 139.57
+Setpoint: 18.00, Pitch: 14.25, Real Error: -3.75, Error: 1.87, Output: 47.83, PWM: 130, I: 195.06, D: 153.79
+Setpoint: 18.00, Pitch: 15.72, Real Error: -2.28, Error: 1.14, Output: 33.16, PWM: 130, I: 195.53, D: 166.36
+Setpoint: 18.00, Pitch: 16.67, Real Error: -1.33, Error: 0.66, Output: 28.94, PWM: 130, I: 195.80, D: 169.18
+Setpoint: 18.00, Pitch: 17.14, Real Error: -0.86, Error: 0.43, Output: 33.98, PWM: 130, I: 195.98, D: 163.50
+Setpoint: 18.00, Pitch: 17.27, Real Error: -0.73, Error: 0.37, Output: 44.80, PWM: 130, I: 196.12, D: 152.61
+Setpoint: 18.00, Pitch: 17.16, Real Error: -0.84, Error: 0.42, Output: 59.13, PWM: 130, I: 196.30, D: 138.63
+Setpoint: 18.00, Pitch: 17.26, Real Error: -0.74, Error: 0.37, Output: 68.53, PWM: 130, I: 196.45, D: 129.21
+Setpoint: 18.00, Pitch: 17.46, Real Error: -0.54, Error: 0.27, Output: 75.25, PWM: 130, I: 196.56, D: 122.25
+Setpoint: 18.00, Pitch: 17.66, Real Error: -0.34, Error: 0.17, Output: 81.47, PWM: 130, I: 196.63, D: 115.76
+Setpoint: 18.00, Pitch: 17.76, Real Error: -0.24, Error: 0.12, Output: 88.83, PWM: 130, I: 196.68, D: 108.26
+Setpoint: 18.00, Pitch: 17.69, Real Error: -0.31, Error: 0.16, Output: 98.93, PWM: 130, I: 196.74, D: 98.36
+Setpoint: 18.00, Pitch: 17.65, Real Error: -0.35, Error: 0.18, Output: 107.59, PWM: 130, I: 196.81, D: 89.84
+Setpoint: 18.00, Pitch: 17.74, Real Error: -0.26, Error: 0.13, Output: 113.13, PWM: 130, I: 196.86, D: 84.20
+Setpoint: 18.00, Pitch: 17.64, Real Error: -0.36, Error: 0.18, Output: 121.86, PWM: 130, I: 196.94, D: 75.72
+Setpoint: 18.00, Pitch: 17.37, Real Error: -0.63, Error: 0.32, Output: 133.03, PWM: 133, I: 197.07, D: 65.14
+Setpoint: 18.00, Pitch: 16.64, Real Error: -1.36, Error: 0.68, Output: 152.10, PWM: 152, I: 197.34, D: 47.62
+Setpoint: 18.00, Pitch: 18.15, Real Error: 0.15, Error: -0.07, Output: 127.72, PWM: 130, I: 197.31, D: 69.33
+Setpoint: 18.00, Pitch: 19.06, Real Error: 1.06, Error: -0.53, Output: 116.12, PWM: 130, I: 197.10, D: 79.13
+Setpoint: 18.00, Pitch: 19.09, Real Error: 1.09, Error: -0.55, Output: 121.57, PWM: 130, I: 196.88, D: 73.40
+Setpoint: 18.00, Pitch: 18.16, Real Error: 0.16, Error: -0.08, Output: 144.82, PWM: 144, I: 196.84, D: 51.75
+Setpoint: 18.00, Pitch: 17.62, Real Error: -0.38, Error: 0.19, Output: 159.20, PWM: 159, I: 196.92, D: 38.40
+Setpoint: 18.00, Pitch: 17.21, Real Error: -0.79, Error: 0.40, Output: 170.09, PWM: 170, I: 197.08, D: 28.38
+Setpoint: 18.00, Pitch: 15.53, Real Error: -2.47, Error: 1.23, Output: 204.07, PWM: 204, I: 197.59, D: -2.17
+Setpoint: 18.00, Pitch: 15.08, Real Error: -2.92, Error: 1.46, Output: 209.00, PWM: 209, I: 198.18, D: -9.77
+Setpoint: 18.00, Pitch: 15.94, Real Error: -2.06, Error: 1.03, Output: 196.55, PWM: 196, I: 198.60, D: 5.66
+Setpoint: 18.00, Pitch: 21.37, Real Error: 3.37, Error: -1.69, Output: 94.83, PWM: 130, I: 197.92, D: 97.18
+Setpoint: 18.00, Pitch: 23.83, Real Error: 5.83, Error: -2.91, Output: 55.54, PWM: 130, I: 196.73, D: 130.98
+Setpoint: 18.00, Pitch: 25.47, Real Error: 7.47, Error: -37.37, Output: -209.00, PWM: 209, I: 181.48, D: 148.36
+Setpoint: 18.00, Pitch: 35.18, Real Error: 17.18, Error: -85.92, Output: -209.00, PWM: 209, I: 146.42, D: 300.85
+Setpoint: 18.00, Pitch: 31.97, Real Error: 13.97, Error: -69.83, Output: -209.00, PWM: 209, I: 117.93, D: 222.31
+Setpoint: 18.00, Pitch: 32.12, Real Error: 14.12, Error: -70.61, Output: -209.00, PWM: 209, I: 89.12, D: 207.17
+Setpoint: 18.00, Pitch: 31.59, Real Error: 13.59, Error: -67.93, Output: -209.00, PWM: 209, I: 61.41, D: 181.50
+Setpoint: 18.00, Pitch: 31.47, Real Error: 13.47, Error: -67.35, Output: -209.00, PWM: 209, I: 33.92, D: 165.04
+Setpoint: 18.00, Pitch: 22.33, Real Error: 4.33, Error: -2.16, Output: 28.44, PWM: 130, I: 33.04, D: -2.96
+Setpoint: 18.00, Pitch: 18.74, Real Error: 0.74, Error: -0.37, Output: 95.07, PWM: 130, I: 32.89, D: -63.47
+Setpoint: 18.00, Pitch: 20.48, Real Error: 2.48, Error: -1.24, Output: 56.89, PWM: 130, I: 32.39, D: -28.85
+Setpoint: 18.00, Pitch: 21.68, Real Error: 3.68, Error: -1.84, Output: 31.53, PWM: 130, I: 31.64, D: -6.33
+Setpoint: 18.00, Pitch: 20.81, Real Error: 2.81, Error: -1.41, Output: 46.60, PWM: 130, I: 31.06, D: -20.46
+Setpoint: 18.00, Pitch: 19.04, Real Error: 1.04, Error: -0.52, Output: 77.87, PWM: 130, I: 30.85, D: -48.84
+Setpoint: 18.00, Pitch: 16.87, Real Error: -1.13, Error: 0.57, Output: 114.77, PWM: 130, I: 31.08, D: -81.71
+Setpoint: 18.00, Pitch: 15.49, Real Error: -2.51, Error: 1.26, Output: 134.47, PWM: 134, I: 31.59, D: -98.49
+Setpoint: 18.00, Pitch: 14.67, Real Error: -3.33, Error: 1.67, Output: 142.58, PWM: 142, I: 32.27, D: -104.48
+Setpoint: 18.00, Pitch: 14.13, Real Error: -3.87, Error: 1.94, Output: 145.17, PWM: 145, I: 33.06, D: -105.33
+Setpoint: 18.00, Pitch: 14.15, Real Error: -3.85, Error: 1.93, Output: 137.16, PWM: 137, I: 33.85, D: -96.56
+Setpoint: 18.00, Pitch: 14.65, Real Error: -3.35, Error: 1.68, Output: 120.80, PWM: 130, I: 34.53, D: -80.39
+Setpoint: 18.00, Pitch: 15.22, Real Error: -2.78, Error: 1.39, Output: 104.28, PWM: 130, I: 35.10, D: -64.31
+Setpoint: 18.00, Pitch: 15.45, Real Error: -2.55, Error: 1.28, Output: 95.30, PWM: 130, I: 35.62, D: -55.22
+Setpoint: 18.00, Pitch: 15.57, Real Error: -2.43, Error: 1.21, Output: 89.06, PWM: 130, I: 36.12, D: -48.69
+Setpoint: 18.00, Pitch: 15.49, Real Error: -2.51, Error: 1.25, Output: 87.16, PWM: 130, I: 36.63, D: -46.15
+Setpoint: 18.00, Pitch: 15.22, Real Error: -2.78, Error: 1.39, Output: 89.23, PWM: 130, I: 37.20, D: -47.16
+Setpoint: 18.00, Pitch: 14.88, Real Error: -3.12, Error: 1.56, Output: 92.44, PWM: 130, I: 37.83, D: -49.14
+Setpoint: 18.00, Pitch: 14.59, Real Error: -3.41, Error: 1.71, Output: 94.57, PWM: 130, I: 38.53, D: -50.07
+Setpoint: 18.00, Pitch: 14.21, Real Error: -3.79, Error: 1.90, Output: 98.47, PWM: 130, I: 39.30, D: -52.53
+Setpoint: 18.00, Pitch: 13.82, Real Error: -4.18, Error: 2.09, Output: 102.28, PWM: 130, I: 40.16, D: -54.81
+Setpoint: 18.00, Pitch: 13.69, Real Error: -4.31, Error: 2.16, Output: 101.29, PWM: 130, I: 41.03, D: -52.71
+Setpoint: 18.00, Pitch: 13.62, Real Error: -4.38, Error: 2.19, Output: 99.22, PWM: 130, I: 41.93, D: -49.63
+Setpoint: 18.00, Pitch: 13.85, Real Error: -4.15, Error: 2.07, Output: 91.76, PWM: 130, I: 42.77, D: -41.73
+Setpoint: 18.00, Pitch: 14.32, Real Error: -3.68, Error: 1.84, Output: 80.49, PWM: 130, I: 43.53, D: -30.53
+Setpoint: 18.00, Pitch: 14.76, Real Error: -3.24, Error: 1.62, Output: 70.39, PWM: 130, I: 44.19, D: -20.54
+Setpoint: 18.00, Pitch: 15.10, Real Error: -2.90, Error: 1.45, Output: 63.04, PWM: 130, I: 44.78, D: -13.19
+Setpoint: 18.00, Pitch: 15.24, Real Error: -2.76, Error: 1.38, Output: 60.01, PWM: 130, I: 45.34, D: -9.83
+Setpoint: 18.00, Pitch: 15.17, Real Error: -2.83, Error: 1.41, Output: 60.99, PWM: 130, I: 45.92, D: -10.13
+Setpoint: 18.00, Pitch: 14.48, Real Error: -3.52, Error: 1.76, Output: 73.83, PWM: 130, I: 46.64, D: -21.04
+Setpoint: 18.00, Pitch: 13.90, Real Error: -4.10, Error: 2.05, Output: 83.90, PWM: 130, I: 47.47, D: -29.25
+Setpoint: 18.00, Pitch: 12.96, Real Error: -5.04, Error: 2.52, Output: 100.01, PWM: 130, I: 48.50, D: -42.70
+Setpoint: 18.00, Pitch: 10.83, Real Error: -7.17, Error: 3.58, Output: 137.88, PWM: 137, I: 49.96, D: -75.37
+Setpoint: 18.00, Pitch: 8.14, Real Error: -9.86, Error: 4.93, Output: 184.06, PWM: 184, I: 51.97, D: -114.84
+Setpoint: 18.00, Pitch: 6.35, Real Error: -11.65, Error: 5.83, Output: 209.00, PWM: 209, I: 54.35, D: -136.06
+Setpoint: 18.00, Pitch: 5.12, Real Error: -12.88, Error: 6.44, Output: 209.00, PWM: 209, I: 56.98, D: -145.97
+Setpoint: 18.00, Pitch: 4.57, Real Error: -13.43, Error: 6.71, Output: 209.00, PWM: 209, I: 59.72, D: -143.56
+Setpoint: 18.00, Pitch: 3.19, Real Error: -14.81, Error: 7.41, Output: 209.00, PWM: 209, I: 62.74, D: -155.47
+Setpoint: 18.00, Pitch: 5.04, Real Error: -12.96, Error: 6.48, Output: 199.71, PWM: 199, I: 65.38, D: -111.65
+Setpoint: 18.00, Pitch: 7.09, Real Error: -10.91, Error: 5.46, Output: 154.79, PWM: 154, I: 67.61, D: -68.08
+Setpoint: 18.00, Pitch: 11.18, Real Error: -6.82, Error: 3.41, Output: 74.29, PWM: 130, I: 69.00, D: 6.64
+Setpoint: 18.00, Pitch: 12.43, Real Error: -5.57, Error: 2.79, Output: 52.72, PWM: 130, I: 70.14, D: 27.17
+Setpoint: 18.00, Pitch: 12.98, Real Error: -5.02, Error: 2.51, Output: 45.58, PWM: 130, I: 71.16, D: 34.36
+Setpoint: 18.00, Pitch: 14.43, Real Error: -3.57, Error: 1.78, Output: 21.89, PWM: 130, I: 71.89, D: 56.23
+Setpoint: 18.00, Pitch: 15.44, Real Error: -2.56, Error: 1.28, Output: 8.19, PWM: 130, I: 72.41, D: 68.70
+Setpoint: 18.00, Pitch: 16.42, Real Error: -1.58, Error: 0.79, Output: -4.46, PWM: 130, I: 72.73, D: 79.94
+Setpoint: 18.00, Pitch: 17.65, Real Error: -0.35, Error: 0.18, Output: -20.84, PWM: 130, I: 72.80, D: 94.26
+Setpoint: 18.00, Pitch: 18.31, Real Error: 0.31, Error: -0.16, Output: -25.81, PWM: 130, I: 72.74, D: 98.00
+Setpoint: 18.00, Pitch: 18.93, Real Error: 0.93, Error: -0.47, Output: -29.71, PWM: 130, I: 72.55, D: 100.63
+Setpoint: 18.00, Pitch: 19.40, Real Error: 1.40, Error: -0.70, Output: -30.66, PWM: 130, I: 72.26, D: 100.47
+Setpoint: 18.00, Pitch: 19.76, Real Error: 1.76, Error: -0.88, Output: -29.78, PWM: 130, I: 71.90, D: 98.60
+Setpoint: 18.00, Pitch: 20.29, Real Error: 2.29, Error: -1.15, Output: -32.20, PWM: 130, I: 71.44, D: 99.63
+Setpoint: 18.00, Pitch: 21.33, Real Error: 3.33, Error: -1.66, Output: -44.32, PWM: 130, I: 70.76, D: 109.25
+Setpoint: 18.00, Pitch: 21.71, Real Error: 3.71, Error: -1.85, Output: -43.43, PWM: 130, I: 70.00, D: 106.94
+Setpoint: 18.00, Pitch: 21.29, Real Error: 3.29, Error: -1.64, Output: -27.70, PWM: 130, I: 69.33, D: 91.27
+Setpoint: 18.00, Pitch: 20.60, Real Error: 2.60, Error: -1.30, Output: -8.04, PWM: 130, I: 68.80, D: 72.29
+Setpoint: 18.00, Pitch: 19.80, Real Error: 1.80, Error: -0.90, Output: 12.33, PWM: 130, I: 68.43, D: 52.95
+Setpoint: 18.00, Pitch: 19.27, Real Error: 1.27, Error: -0.63, Output: 26.19, PWM: 130, I: 68.17, D: 39.77
+Setpoint: 18.00, Pitch: 18.73, Real Error: 0.73, Error: -0.37, Output: 39.21, PWM: 130, I: 68.02, D: 27.52
+Setpoint: 18.00, Pitch: 18.51, Real Error: 0.51, Error: -0.25, Output: 45.56, PWM: 130, I: 67.92, D: 21.47
+Setpoint: 18.00, Pitch: 18.37, Real Error: 0.37, Error: -0.18, Output: 49.79, PWM: 130, I: 67.84, D: 17.41
+Setpoint: 18.00, Pitch: 18.27, Real Error: 0.27, Error: -0.13, Output: 52.99, PWM: 130, I: 67.79, D: 14.33
+Setpoint: 18.00, Pitch: 18.16, Real Error: 0.16, Error: -0.08, Output: 56.10, PWM: 130, I: 67.76, D: 11.38
+Setpoint: 18.00, Pitch: 17.97, Real Error: -0.03, Error: 0.01, Output: 60.56, PWM: 130, I: 67.76, D: 7.25
+Setpoint: 18.00, Pitch: 19.40, Real Error: 1.40, Error: -0.70, Output: 34.19, PWM: 130, I: 67.48, D: 30.83
+Setpoint: 18.00, Pitch: 21.48, Real Error: 3.48, Error: -1.74, Output: -2.91, PWM: 130, I: 66.77, D: 63.58
+Setpoint: 18.00, Pitch: 23.69, Real Error: 5.69, Error: -2.84, Output: -40.18, PWM: 130, I: 65.61, D: 95.84
+Setpoint: 18.00, Pitch: 25.55, Real Error: 7.55, Error: -37.76, Output: -209.00, PWM: 209, I: 50.20, D: 119.78
+Setpoint: 18.00, Pitch: 34.96, Real Error: 16.96, Error: -84.78, Output: -209.00, PWM: 209, I: 15.61, D: 269.36
+Setpoint: 18.00, Pitch: 32.68, Real Error: 14.68, Error: -73.42, Output: -209.00, PWM: 209, I: -14.35, D: 209.38
+Setpoint: 18.00, Pitch: 31.55, Real Error: 13.55, Error: -67.77, Output: -209.00, PWM: 209, I: -42.00, D: 173.49
+Setpoint: 18.00, Pitch: 29.81, Real Error: 11.81, Error: -59.07, Output: -209.00, PWM: 209, I: -66.10, D: 130.16
+Setpoint: 18.00, Pitch: 26.85, Real Error: 8.85, Error: -44.25, Output: -209.00, PWM: 209, I: -84.15, D: 69.55
+Setpoint: 18.00, Pitch: 21.42, Real Error: 3.42, Error: -1.71, Output: -62.98, PWM: 130, I: -84.85, D: -27.86
+Setpoint: 18.00, Pitch: 19.31, Real Error: 1.31, Error: -0.65, Output: -25.96, PWM: 130, I: -85.12, D: -61.45
+Setpoint: 18.00, Pitch: 17.72, Real Error: -0.28, Error: 0.14, Output: -1.23, PWM: 130, I: -85.06, D: -83.35
+Setpoint: 18.00, Pitch: 16.55, Real Error: -1.45, Error: 0.72, Output: 14.28, PWM: 130, I: -84.77, D: -96.51
+Setpoint: 18.00, Pitch: 13.37, Real Error: -4.63, Error: 2.31, Output: 66.86, PWM: 130, I: -83.82, D: -142.59
+Setpoint: 18.00, Pitch: 11.01, Real Error: -6.99, Error: 3.50, Output: 101.08, PWM: 130, I: -82.40, D: -171.24
+Setpoint: 18.00, Pitch: 10.03, Real Error: -7.97, Error: 3.99, Output: 107.36, PWM: 130, I: -80.77, D: -174.17
+Setpoint: 18.00, Pitch: 9.44, Real Error: -8.56, Error: 4.28, Output: 106.16, PWM: 130, I: -79.02, D: -170.20
+Setpoint: 18.00, Pitch: 8.74, Real Error: -9.26, Error: 4.63, Output: 107.41, PWM: 130, I: -77.14, D: -168.34
+Setpoint: 18.00, Pitch: 9.39, Real Error: -8.61, Error: 4.31, Output: 83.62, PWM: 130, I: -75.38, D: -143.93
+Setpoint: 18.00, Pitch: 10.77, Real Error: -7.23, Error: 3.62, Output: 47.87, PWM: 130, I: -73.90, D: -109.11
+Setpoint: 18.00, Pitch: 11.84, Real Error: -6.16, Error: 3.08, Output: 20.33, PWM: 130, I: -72.65, D: -82.20
+Setpoint: 18.00, Pitch: 12.50, Real Error: -5.50, Error: 2.75, Output: 2.56, PWM: 130, I: -71.52, D: -64.46
+Setpoint: 18.00, Pitch: 12.79, Real Error: -5.21, Error: 2.61, Output: -6.89, PWM: 130, I: -70.46, D: -54.45
+Setpoint: 18.00, Pitch: 12.28, Real Error: -5.72, Error: 2.86, Output: -0.66, PWM: 130, I: -69.29, D: -58.63
+Setpoint: 18.00, Pitch: 11.82, Real Error: -6.18, Error: 3.09, Output: 4.58, PWM: 130, I: -68.03, D: -61.80
+Setpoint: 18.00, Pitch: 11.11, Real Error: -6.89, Error: 3.45, Output: 14.28, PWM: 130, I: -66.63, D: -68.85
+Setpoint: 18.00, Pitch: 10.52, Real Error: -7.48, Error: 3.74, Output: 21.36, PWM: 130, I: -65.10, D: -73.37
+Setpoint: 18.00, Pitch: 10.26, Real Error: -7.74, Error: 3.87, Output: 21.93, PWM: 130, I: -63.52, D: -71.90
+Setpoint: 18.00, Pitch: 10.11, Real Error: -7.89, Error: 3.95, Output: 20.57, PWM: 130, I: -61.91, D: -68.67
+Setpoint: 18.00, Pitch: 9.78, Real Error: -8.22, Error: 4.11, Output: 22.83, PWM: 130, I: -60.23, D: -68.68
+Setpoint: 18.00, Pitch: 9.23, Real Error: -8.77, Error: 4.39, Output: 29.46, PWM: 130, I: -58.45, D: -72.56
+Setpoint: 18.00, Pitch: 8.95, Real Error: -9.05, Error: 4.53, Output: 30.74, PWM: 130, I: -56.60, D: -71.50
+Setpoint: 18.00, Pitch: 9.13, Real Error: -8.87, Error: 4.44, Output: 23.52, PWM: 130, I: -54.79, D: -62.78
+Setpoint: 18.00, Pitch: 9.49, Real Error: -8.51, Error: 4.25, Output: 13.36, PWM: 130, I: -53.05, D: -51.53
+Setpoint: 18.00, Pitch: 9.89, Real Error: -8.11, Error: 4.06, Output: 3.56, PWM: 130, I: -51.40, D: -40.75
+Setpoint: 18.00, Pitch: 9.77, Real Error: -8.23, Error: 4.12, Output: 4.22, PWM: 130, I: -49.72, D: -39.53
+Setpoint: 18.00, Pitch: 9.61, Real Error: -8.39, Error: 4.19, Output: 5.67, PWM: 130, I: -48.01, D: -38.99
+Setpoint: 18.00, Pitch: 9.24, Real Error: -8.76, Error: 4.38, Output: 11.27, PWM: 130, I: -46.22, D: -42.16
+Setpoint: 18.00, Pitch: 9.17, Real Error: -8.83, Error: 4.41, Output: 10.99, PWM: 130, I: -44.42, D: -39.96
+Setpoint: 18.00, Pitch: 9.55, Real Error: -8.45, Error: 4.22, Output: 2.35, PWM: 130, I: -42.70, D: -30.27
+Setpoint: 18.00, Pitch: 10.55, Real Error: -7.45, Error: 3.72, Output: -17.19, PWM: 130, I: -41.18, D: -10.96
+Setpoint: 18.00, Pitch: 11.63, Real Error: -6.37, Error: 3.19, Output: -36.89, PWM: 130, I: -39.88, D: 8.16
+Setpoint: 18.00, Pitch: 12.95, Real Error: -5.05, Error: 2.52, Output: -59.94, PWM: 130, I: -38.85, D: 29.92
+Setpoint: 18.00, Pitch: 13.99, Real Error: -4.01, Error: 2.01, Output: -76.07, PWM: 130, I: -38.03, D: 45.06
+Setpoint: 18.00, Pitch: 14.80, Real Error: -3.20, Error: 1.60, Output: -87.03, PWM: 130, I: -37.38, D: 55.24
+Setpoint: 18.00, Pitch: 15.35, Real Error: -2.65, Error: 1.33, Output: -92.23, PWM: 130, I: -36.84, D: 60.04
+Setpoint: 18.00, Pitch: 15.81, Real Error: -2.19, Error: 1.09, Output: -95.68, PWM: 130, I: -36.39, D: 63.12
+Setpoint: 18.00, Pitch: 16.17, Real Error: -1.83, Error: 0.92, Output: -96.82, PWM: 130, I: -36.02, D: 64.02
+Setpoint: 18.00, Pitch: 16.32, Real Error: -1.68, Error: 0.84, Output: -94.24, PWM: 130, I: -35.67, D: 61.51
+Setpoint: 18.00, Pitch: 15.81, Real Error: -2.19, Error: 1.10, Output: -79.29, PWM: 130, I: -35.23, D: 47.90
+Setpoint: 18.00, Pitch: 14.97, Real Error: -3.03, Error: 1.52, Output: -59.13, PWM: 130, I: -34.61, D: 29.83
+Setpoint: 18.00, Pitch: 13.38, Real Error: -4.62, Error: 2.31, Output: -26.22, PWM: 130, I: -33.66, D: 0.64
+Setpoint: 18.00, Pitch: 11.88, Real Error: -6.12, Error: 3.06, Output: 3.13, PWM: 130, I: -32.42, D: -24.84
+Setpoint: 18.00, Pitch: 10.80, Real Error: -7.20, Error: 3.60, Output: 22.85, PWM: 130, I: -30.95, D: -41.19
+Setpoint: 18.00, Pitch: 9.56, Real Error: -8.44, Error: 4.22, Output: 44.40, PWM: 130, I: -29.22, D: -58.85
+Setpoint: 18.00, Pitch: 8.83, Real Error: -9.17, Error: 4.58, Output: 55.11, PWM: 130, I: -27.35, D: -66.42
+Setpoint: 18.00, Pitch: 8.47, Real Error: -9.53, Error: 4.76, Output: 58.49, PWM: 130, I: -25.41, D: -67.22
+Setpoint: 18.00, Pitch: 8.29, Real Error: -9.71, Error: 4.86, Output: 58.54, PWM: 130, I: -23.43, D: -64.97
+Setpoint: 18.00, Pitch: 8.25, Real Error: -9.75, Error: 4.87, Output: 55.94, PWM: 130, I: -21.44, D: -60.33
+Setpoint: 18.00, Pitch: 8.45, Real Error: -9.55, Error: 4.77, Output: 49.41, PWM: 130, I: -19.49, D: -52.19
+Setpoint: 18.00, Pitch: 9.05, Real Error: -8.95, Error: 4.48, Output: 35.88, PWM: 130, I: -17.67, D: -37.88
+Setpoint: 18.00, Pitch: 9.56, Real Error: -8.44, Error: 4.22, Output: 24.94, PWM: 130, I: -15.95, D: -26.13
+Setpoint: 18.00, Pitch: 9.66, Real Error: -8.34, Error: 4.17, Output: 22.74, PWM: 130, I: -14.24, D: -22.39
+Setpoint: 18.00, Pitch: 9.42, Real Error: -8.58, Error: 4.29, Output: 27.30, PWM: 130, I: -12.49, D: -24.77
+Setpoint: 18.00, Pitch: 9.53, Real Error: -8.47, Error: 4.23, Output: 24.84, PWM: 130, I: -10.77, D: -20.79
+Setpoint: 18.00, Pitch: 9.87, Real Error: -8.13, Error: 4.07, Output: 18.63, PWM: 130, I: -9.11, D: -13.50
+Setpoint: 18.00, Pitch: 9.97, Real Error: -8.03, Error: 4.01, Output: 17.16, PWM: 130, I: -7.47, D: -10.58
+Setpoint: 18.00, Pitch: 9.92, Real Error: -8.08, Error: 4.04, Output: 18.91, PWM: 130, I: -5.82, D: -10.59
+Setpoint: 18.00, Pitch: 9.91, Real Error: -8.09, Error: 4.04, Output: 19.91, PWM: 130, I: -4.17, D: -9.93
+Setpoint: 18.00, Pitch: 10.16, Real Error: -7.84, Error: 3.92, Output: 16.04, PWM: 130, I: -2.57, D: -4.90
+Setpoint: 18.00, Pitch: 10.34, Real Error: -7.66, Error: 3.83, Output: 13.85, PWM: 130, I: -1.01, D: -1.46
+Setpoint: 18.00, Pitch: 10.40, Real Error: -7.60, Error: 3.80, Output: 14.12, PWM: 130, I: 0.54, D: -0.29
+Setpoint: 18.00, Pitch: 10.37, Real Error: -7.63, Error: 3.82, Output: 16.39, PWM: 130, I: 2.10, D: -0.94
+Setpoint: 18.00, Pitch: 10.33, Real Error: -7.67, Error: 3.84, Output: 18.56, PWM: 130, I: 3.66, D: -1.47
+Setpoint: 18.00, Pitch: 10.21, Real Error: -7.79, Error: 3.89, Output: 22.22, PWM: 130, I: 5.25, D: -3.34
+Setpoint: 18.00, Pitch: 9.87, Real Error: -8.13, Error: 4.07, Output: 30.00, PWM: 130, I: 6.91, D: -8.86
+Setpoint: 18.00, Pitch: 9.61, Real Error: -8.39, Error: 4.19, Output: 35.85, PWM: 130, I: 8.62, D: -12.55
+Setpoint: 18.00, Pitch: 9.56, Real Error: -8.44, Error: 4.22, Output: 37.53, PWM: 130, I: 10.34, D: -12.42
+Setpoint: 18.00, Pitch: 9.37, Real Error: -8.63, Error: 4.32, Output: 41.90, PWM: 130, I: 12.10, D: -14.68
+Setpoint: 18.00, Pitch: 8.93, Real Error: -9.07, Error: 4.53, Output: 50.67, PWM: 130, I: 13.95, D: -20.85
+Setpoint: 18.00, Pitch: 8.37, Real Error: -9.63, Error: 4.81, Output: 61.43, PWM: 130, I: 15.92, D: -28.67
+Setpoint: 18.00, Pitch: 7.65, Real Error: -10.35, Error: 5.18, Output: 74.81, PWM: 130, I: 18.03, D: -38.66
+Setpoint: 18.00, Pitch: 6.62, Real Error: -11.38, Error: 5.69, Output: 93.28, PWM: 130, I: 20.35, D: -53.01
+Setpoint: 18.00, Pitch: 5.49, Real Error: -12.51, Error: 6.26, Output: 112.67, PWM: 130, I: 22.90, D: -67.87
+Setpoint: 18.00, Pitch: 4.22, Real Error: -13.78, Error: 6.89, Output: 133.76, PWM: 133, I: 25.72, D: -83.93
+Setpoint: 18.00, Pitch: 2.89, Real Error: -15.11, Error: 7.56, Output: 154.98, PWM: 154, I: 28.80, D: -99.73
+Setpoint: 18.00, Pitch: 2.99, Real Error: -15.01, Error: 7.50, Output: 148.09, PWM: 148, I: 31.86, D: -89.97
+Setpoint: 18.00, Pitch: 2.62, Real Error: -15.38, Error: 7.69, Output: 150.94, PWM: 150, I: 35.00, D: -89.03
+Setpoint: 18.00, Pitch: 2.86, Real Error: -15.14, Error: 7.57, Output: 142.44, PWM: 142, I: 38.08, D: -77.87
+Setpoint: 18.00, Pitch: 2.71, Real Error: -15.29, Error: 7.64, Output: 142.12, PWM: 142, I: 41.20, D: -74.16
+Setpoint: 18.00, Pitch: 2.96, Real Error: -15.04, Error: 7.52, Output: 134.72, PWM: 134, I: 44.27, D: -64.12
+Setpoint: 18.00, Pitch: 2.62, Real Error: -15.38, Error: 7.69, Output: 138.94, PWM: 138, I: 47.41, D: -64.62
+Setpoint: 18.00, Pitch: 2.83, Real Error: -15.17, Error: 7.58, Output: 132.96, PWM: 132, I: 50.50, D: -55.91
+Setpoint: 18.00, Pitch: 3.40, Real Error: -14.60, Error: 7.30, Output: 120.84, PWM: 130, I: 53.48, D: -41.81
+Setpoint: 18.00, Pitch: 4.02, Real Error: -13.98, Error: 6.99, Output: 108.73, PWM: 130, I: 56.33, D: -27.94
+Setpoint: 18.00, Pitch: 4.51, Real Error: -13.49, Error: 6.74, Output: 100.14, PWM: 130, I: 59.08, D: -17.45
+Setpoint: 18.00, Pitch: 5.04, Real Error: -12.96, Error: 6.48, Output: 91.57, PWM: 130, I: 61.73, D: -7.16
+Setpoint: 18.00, Pitch: 5.29, Real Error: -12.71, Error: 6.35, Output: 88.81, PWM: 130, I: 64.32, D: -2.25
+Setpoint: 18.00, Pitch: 5.55, Real Error: -12.45, Error: 6.22, Output: 86.34, PWM: 130, I: 66.86, D: 2.31
+Setpoint: 18.00, Pitch: 5.86, Real Error: -12.14, Error: 6.07, Output: 83.15, PWM: 130, I: 69.34, D: 7.42
+Setpoint: 18.00, Pitch: 6.07, Real Error: -11.93, Error: 5.96, Output: 82.31, PWM: 130, I: 71.77, D: 10.34
+Setpoint: 18.00, Pitch: 6.14, Real Error: -11.86, Error: 5.93, Output: 84.36, PWM: 130, I: 74.19, D: 10.60
+Setpoint: 18.00, Pitch: 6.43, Real Error: -11.57, Error: 5.78, Output: 82.05, PWM: 130, I: 76.55, D: 14.74
+Setpoint: 18.00, Pitch: 6.44, Real Error: -11.56, Error: 5.78, Output: 85.43, PWM: 130, I: 78.91, D: 13.71
+Setpoint: 18.00, Pitch: 5.90, Real Error: -12.10, Error: 6.05, Output: 99.08, PWM: 130, I: 81.38, D: 3.47
+Setpoint: 18.00, Pitch: 4.79, Real Error: -13.21, Error: 6.60, Output: 122.73, PWM: 130, I: 84.07, D: -15.54
+Setpoint: 18.00, Pitch: 3.54, Real Error: -14.46, Error: 7.23, Output: 147.83, PWM: 147, I: 87.02, D: -35.50
+Setpoint: 18.00, Pitch: 2.77, Real Error: -15.23, Error: 7.61, Output: 162.45, PWM: 162, I: 90.13, D: -45.67
+Setpoint: 18.00, Pitch: 0.96, Real Error: -17.04, Error: 8.52, Output: 196.06, PWM: 196, I: 93.60, D: -72.64
+Setpoint: 18.00, Pitch: 0.39, Real Error: -17.61, Error: 8.80, Output: 204.45, PWM: 204, I: 97.20, D: -76.44
+Setpoint: 18.00, Pitch: 0.12, Real Error: -17.88, Error: 8.94, Output: 207.19, PWM: 207, I: 100.84, D: -75.04
+Setpoint: 18.00, Pitch: -0.09, Real Error: -18.09, Error: 18.09, Output: 209.00, PWM: 209, I: 108.22, D: -72.44
+Setpoint: 18.00, Pitch: 0.50, Real Error: -17.50, Error: 8.75, Output: 199.23, PWM: 199, I: 111.79, D: -56.81
+Setpoint: 18.00, Pitch: 0.21, Real Error: -17.79, Error: 8.89, Output: 203.60, PWM: 203, I: 115.42, D: -57.05
+Setpoint: 18.00, Pitch: 1.07, Real Error: -16.93, Error: 8.46, Output: 186.47, PWM: 186, I: 118.88, D: -37.97
+Setpoint: 18.00, Pitch: 1.30, Real Error: -16.70, Error: 8.35, Output: 182.65, PWM: 182, I: 122.28, D: -31.13
+Setpoint: 18.00, Pitch: 3.02, Real Error: -14.98, Error: 7.49, Output: 151.00, PWM: 150, I: 125.34, D: 0.56
+Setpoint: 18.00, Pitch: 4.61, Real Error: -13.39, Error: 6.69, Output: 124.04, PWM: 130, I: 128.07, D: 27.46
+Setpoint: 18.00, Pitch: 6.89, Real Error: -11.11, Error: 5.56, Output: 85.98, PWM: 130, I: 130.34, D: 63.80
+Setpoint: 18.00, Pitch: 9.38, Real Error: -8.62, Error: 4.31, Output: 46.40, PWM: 130, I: 132.10, D: 100.79
+Setpoint: 18.00, Pitch: 11.80, Real Error: -6.20, Error: 3.10, Output: 10.48, PWM: 130, I: 133.36, D: 133.74
+Setpoint: 18.00, Pitch: 14.61, Real Error: -3.39, Error: 1.70, Output: -30.62, PWM: 130, I: 134.05, D: 170.61
+Setpoint: 18.00, Pitch: 17.36, Real Error: -0.64, Error: 0.32, Output: -68.31, PWM: 130, I: 134.18, D: 203.61
+Setpoint: 18.00, Pitch: 20.24, Real Error: 2.24, Error: -1.12, Output: -106.26, PWM: 130, I: 133.73, D: 236.06
+Setpoint: 18.00, Pitch: 21.79, Real Error: 3.79, Error: -1.89, Output: -117.03, PWM: 130, I: 132.95, D: 243.36
+Setpoint: 18.00, Pitch: 23.92, Real Error: 5.92, Error: -2.96, Output: -138.61, PWM: 138, I: 131.75, D: 259.99
+Setpoint: 18.00, Pitch: 24.98, Real Error: 6.98, Error: -34.88, Output: -209.00, PWM: 209, I: 117.51, D: 257.04
+Setpoint: 18.00, Pitch: 23.09, Real Error: 5.09, Error: -2.54, Output: -96.94, PWM: 130, I: 116.48, D: 204.51
+Setpoint: 18.00, Pitch: 24.32, Real Error: 6.32, Error: -31.59, Output: -209.00, PWM: 209, I: 103.59, D: 208.97
+Setpoint: 18.00, Pitch: 27.24, Real Error: 9.24, Error: -46.18, Output: -209.00, PWM: 209, I: 84.75, D: 241.64
+Setpoint: 18.00, Pitch: 25.21, Real Error: 7.21, Error: -36.06, Output: -209.00, PWM: 209, I: 70.03, D: 188.06
+Setpoint: 18.00, Pitch: 22.09, Real Error: 4.09, Error: -2.04, Output: -58.08, PWM: 130, I: 69.20, D: 120.12
+Setpoint: 18.00, Pitch: 18.89, Real Error: 0.89, Error: -0.44, Output: 11.13, PWM: 130, I: 69.02, D: 56.34
+Setpoint: 18.00, Pitch: 15.71, Real Error: -2.29, Error: 1.15, Output: 75.51, PWM: 130, I: 69.49, D: -2.01
+Setpoint: 18.00, Pitch: 16.02, Real Error: -1.98, Error: 0.99, Output: 69.86, PWM: 130, I: 69.89, D: 3.49
+Setpoint: 18.00, Pitch: 17.85, Real Error: -0.15, Error: 0.08, Output: 36.07, PWM: 130, I: 69.92, D: 34.11
+Setpoint: 18.00, Pitch: 18.58, Real Error: 0.58, Error: -0.29, Output: 25.02, PWM: 130, I: 69.80, D: 43.77
+Setpoint: 18.00, Pitch: 18.45, Real Error: 0.45, Error: -0.22, Output: 30.89, PWM: 130, I: 69.71, D: 38.03
+Setpoint: 18.00, Pitch: 18.27, Real Error: 0.27, Error: -0.13, Output: 37.20, PWM: 130, I: 69.66, D: 31.98
+Setpoint: 18.00, Pitch: 18.52, Real Error: 0.52, Error: -0.26, Output: 34.91, PWM: 130, I: 69.55, D: 33.73
+Setpoint: 18.00, Pitch: 17.93, Real Error: -0.07, Error: 0.03, Output: 48.71, PWM: 130, I: 69.56, D: 20.97
+Setpoint: 18.00, Pitch: 19.07, Real Error: 1.07, Error: -0.53, Output: 28.95, PWM: 130, I: 69.35, D: 38.53
+Setpoint: 18.00, Pitch: 20.37, Real Error: 2.37, Error: -1.19, Output: 7.11, PWM: 130, I: 68.86, D: 57.59
+Setpoint: 18.00, Pitch: 22.08, Real Error: 4.08, Error: -2.04, Output: -21.05, PWM: 130, I: 68.03, D: 81.93
+Setpoint: 18.00, Pitch: 22.40, Real Error: 4.40, Error: -2.20, Output: -21.23, PWM: 130, I: 67.13, D: 80.66
+Setpoint: 18.00, Pitch: 22.40, Real Error: 4.40, Error: -2.20, Output: -15.68, PWM: 130, I: 66.23, D: 74.22
+Setpoint: 18.00, Pitch: 22.56, Real Error: 4.56, Error: -2.28, Output: -13.76, PWM: 130, I: 65.30, D: 71.07
+Setpoint: 18.00, Pitch: 23.02, Real Error: 5.02, Error: -2.51, Output: -17.62, PWM: 130, I: 64.28, D: 73.11
+Setpoint: 18.00, Pitch: 23.18, Real Error: 5.18, Error: -2.59, Output: -15.87, PWM: 130, I: 63.22, D: 70.02
+Setpoint: 18.00, Pitch: 23.25, Real Error: 5.25, Error: -2.62, Output: -12.53, PWM: 130, I: 62.15, D: 65.51
+Setpoint: 18.00, Pitch: 22.87, Real Error: 4.87, Error: -2.44, Output: -1.36, PWM: 130, I: 61.16, D: 53.98
+Setpoint: 18.00, Pitch: 22.69, Real Error: 4.69, Error: -2.35, Output: 5.44, PWM: 130, I: 60.20, D: 46.55
+Setpoint: 18.00, Pitch: 22.35, Real Error: 4.35, Error: -2.17, Output: 14.68, PWM: 130, I: 59.31, D: 37.03
+Setpoint: 18.00, Pitch: 21.84, Real Error: 3.84, Error: -1.92, Output: 26.37, PWM: 130, I: 58.53, D: 25.44
+Setpoint: 18.00, Pitch: 21.20, Real Error: 3.20, Error: -1.60, Output: 39.63, PWM: 130, I: 57.88, D: 12.65
+Setpoint: 18.00, Pitch: 20.63, Real Error: 2.63, Error: -1.31, Output: 50.82, PWM: 130, I: 57.34, D: 1.92
+Setpoint: 18.00, Pitch: 20.39, Real Error: 2.39, Error: -1.19, Output: 54.98, PWM: 130, I: 56.85, D: -2.30
+Setpoint: 18.00, Pitch: 20.19, Real Error: 2.19, Error: -1.10, Output: 58.00, PWM: 130, I: 56.41, D: -5.43
+Setpoint: 18.00, Pitch: 19.94, Real Error: 1.94, Error: -0.97, Output: 61.80, PWM: 130, I: 56.01, D: -9.20
+Setpoint: 18.00, Pitch: 19.45, Real Error: 1.45, Error: -0.73, Output: 70.00, PWM: 130, I: 55.71, D: -16.83
+Setpoint: 18.00, Pitch: 19.01, Real Error: 1.01, Error: -0.50, Output: 76.70, PWM: 130, I: 55.51, D: -22.95
+Setpoint: 18.00, Pitch: 18.67, Real Error: 0.67, Error: -0.34, Output: 80.97, PWM: 130, I: 55.37, D: -26.78
+Setpoint: 18.00, Pitch: 18.53, Real Error: 0.53, Error: -0.27, Output: 81.41, PWM: 130, I: 55.26, D: -27.08
+Setpoint: 18.00, Pitch: 18.99, Real Error: 0.99, Error: -0.49, Output: 70.50, PWM: 130, I: 55.06, D: -17.17
+Setpoint: 18.00, Pitch: 20.97, Real Error: 2.97, Error: -1.48, Output: 31.54, PWM: 130, I: 54.46, D: 17.72
+Setpoint: 18.00, Pitch: 24.29, Real Error: 6.29, Error: -31.44, Output: -209.00, PWM: 209, I: 41.63, D: 72.51
+Setpoint: 18.00, Pitch: 27.16, Real Error: 9.16, Error: -45.81, Output: -209.00, PWM: 209, I: 22.93, D: 115.37
+Setpoint: 18.00, Pitch: 28.28, Real Error: 10.28, Error: -51.40, Output: -209.00, PWM: 209, I: 1.97, D: 125.04
+Setpoint: 18.00, Pitch: 29.30, Real Error: 11.30, Error: -56.50, Output: -209.00, PWM: 209, I: -21.09, D: 132.31
+Setpoint: 18.00, Pitch: 29.45, Real Error: 11.45, Error: -57.25, Output: -209.00, PWM: 209, I: -44.44, D: 124.28
+Setpoint: 18.00, Pitch: 32.04, Real Error: 14.04, Error: -70.19, Output: -209.00, PWM: 209, I: -73.08, D: 158.14
+Setpoint: 18.00, Pitch: 34.47, Real Error: 16.47, Error: -82.36, Output: -209.00, PWM: 209, I: -106.68, D: 186.68
+Setpoint: 18.00, Pitch: 30.52, Real Error: 12.52, Error: -62.61, Output: -209.00, PWM: 209, I: -132.23, D: 104.88
+Setpoint: 18.00, Pitch: 26.32, Real Error: 8.32, Error: -41.59, Output: -209.00, PWM: 209, I: -149.20, D: 25.34
+Setpoint: 18.00, Pitch: 6.89, Real Error: -11.11, Error: 5.55, Output: 178.04, PWM: 178, I: -146.93, D: -305.53
+Setpoint: 18.00, Pitch: 3.54, Real Error: -14.46, Error: 7.23, Output: 209.00, PWM: 209, I: -143.98, D: -337.84
+Setpoint: 18.00, Pitch: 6.96, Real Error: -11.04, Error: 5.52, Output: 130.43, PWM: 130, I: -141.73, D: -252.85
+Setpoint: 18.00, Pitch: 5.10, Real Error: -12.90, Error: 6.45, Output: 147.63, PWM: 147, I: -139.10, D: -264.16
+Setpoint: 18.00, Pitch: 3.70, Real Error: -14.30, Error: 7.15, Output: 155.56, PWM: 155, I: -136.18, D: -266.72
+Setpoint: 18.00, Pitch: 0.71, Real Error: -17.29, Error: 8.65, Output: 193.66, PWM: 193, I: -132.66, D: -296.06
+Setpoint: 18.00, Pitch: -0.93, Real Error: -18.93, Error: 18.93, Output: 209.00, PWM: 209, I: -124.93, D: -300.15
+Setpoint: 18.00, Pitch: -2.57, Real Error: -20.57, Error: 20.57, Output: 209.00, PWM: 209, I: -116.54, D: -303.91
+Setpoint: 18.00, Pitch: -3.51, Real Error: -21.51, Error: 21.51, Output: 209.00, PWM: 209, I: -107.76, D: -295.52
+Setpoint: 18.00, Pitch: -4.04, Real Error: -22.04, Error: 22.04, Output: 209.00, PWM: 209, I: -98.76, D: -280.82
+Setpoint: 18.00, Pitch: -2.26, Real Error: -20.26, Error: 20.26, Output: 209.00, PWM: 209, I: -90.50, D: -228.26
+Setpoint: 18.00, Pitch: -1.13, Real Error: -19.13, Error: 19.13, Output: 209.00, PWM: 209, I: -82.69, D: -190.82
+Setpoint: 18.00, Pitch: -0.87, Real Error: -18.87, Error: 18.87, Output: 209.00, PWM: 209, I: -74.99, D: -171.13
+Setpoint: 18.00, Pitch: 0.81, Real Error: -17.19, Error: 8.60, Output: 87.62, PWM: 130, I: -71.48, D: -129.02
+Setpoint: 18.00, Pitch: 2.84, Real Error: -15.16, Error: 7.58, Output: 42.36, PWM: 130, I: -68.39, D: -84.23
+Setpoint: 18.00, Pitch: 6.21, Real Error: -11.79, Error: 5.89, Output: -24.86, PWM: 130, I: -65.99, D: -20.50
+Setpoint: 18.00, Pitch: 6.60, Real Error: -11.40, Error: 5.70, Output: -31.36, PWM: 130, I: -63.66, D: -12.35
+Setpoint: 18.00, Pitch: 8.13, Real Error: -9.87, Error: 4.93, Output: -59.00, PWM: 130, I: -61.65, D: 14.62
+Setpoint: 18.00, Pitch: 9.68, Real Error: -8.32, Error: 4.16, Output: -85.04, PWM: 130, I: -59.95, D: 39.65
+Setpoint: 18.00, Pitch: 11.05, Real Error: -6.95, Error: 3.48, Output: -105.98, PWM: 130, I: -58.53, D: 59.62
+Setpoint: 18.00, Pitch: 12.33, Real Error: -5.67, Error: 2.83, Output: -124.09, PWM: 130, I: -57.38, D: 76.64
+Setpoint: 18.00, Pitch: 12.79, Real Error: -5.21, Error: 2.61, Output: -125.43, PWM: 130, I: -56.31, D: 78.23
+Setpoint: 18.00, Pitch: 13.34, Real Error: -4.66, Error: 2.33, Output: -128.55, PWM: 130, I: -55.36, D: 81.34
+Setpoint: 18.00, Pitch: 12.88, Real Error: -5.12, Error: 2.56, Output: -112.38, PWM: 130, I: -54.32, D: 67.02
+Setpoint: 18.00, Pitch: 12.49, Real Error: -5.51, Error: 2.75, Output: -98.67, PWM: 130, I: -53.20, D: 55.11
+Setpoint: 18.00, Pitch: 12.43, Real Error: -5.57, Error: 2.79, Output: -91.85, PWM: 130, I: -52.06, D: 49.54
+Setpoint: 18.00, Pitch: 12.57, Real Error: -5.43, Error: 2.71, Output: -89.51, PWM: 130, I: -50.95, D: 48.06
+Setpoint: 18.00, Pitch: 12.80, Real Error: -5.20, Error: 2.60, Output: -88.83, PWM: 130, I: -49.89, D: 48.04
+Setpoint: 18.00, Pitch: 12.40, Real Error: -5.60, Error: 2.80, Output: -76.42, PWM: 130, I: -48.75, D: 37.47
+Setpoint: 18.00, Pitch: 12.07, Real Error: -5.93, Error: 2.96, Output: -66.05, PWM: 130, I: -47.54, D: 28.89
+Setpoint: 18.00, Pitch: 12.46, Real Error: -5.54, Error: 2.77, Output: -69.87, PWM: 130, I: -46.41, D: 33.16
+Setpoint: 18.00, Pitch: 12.30, Real Error: -5.70, Error: 2.85, Output: -63.00, PWM: 130, I: -45.24, D: 27.74
+Setpoint: 18.00, Pitch: 11.92, Real Error: -6.08, Error: 3.04, Output: -52.46, PWM: 130, I: -44.00, D: 19.10
+Setpoint: 18.00, Pitch: 11.16, Real Error: -6.84, Error: 3.42, Output: -35.49, PWM: 130, I: -42.61, D: 4.84
+Setpoint: 18.00, Pitch: 10.90, Real Error: -7.10, Error: 3.55, Output: -28.66, PWM: 130, I: -41.16, D: -0.07
+Setpoint: 18.00, Pitch: 11.09, Real Error: -6.91, Error: 3.46, Output: -30.76, PWM: 130, I: -39.75, D: 3.11
+Setpoint: 18.00, Pitch: 11.45, Real Error: -6.55, Error: 3.28, Output: -35.96, PWM: 130, I: -38.41, D: 9.01
+Setpoint: 18.00, Pitch: 11.99, Real Error: -6.01, Error: 3.01, Output: -44.09, PWM: 130, I: -37.19, D: 17.43
+Setpoint: 18.00, Pitch: 12.64, Real Error: -5.36, Error: 2.68, Output: -53.87, PWM: 130, I: -36.09, D: 27.15
+Setpoint: 18.00, Pitch: 13.55, Real Error: -4.45, Error: 2.22, Output: -67.72, PWM: 130, I: -35.19, D: 40.32
+Setpoint: 18.00, Pitch: 14.63, Real Error: -3.37, Error: 1.69, Output: -83.93, PWM: 130, I: -34.50, D: 55.33
+Setpoint: 18.00, Pitch: 15.38, Real Error: -2.62, Error: 1.31, Output: -92.93, PWM: 130, I: -33.96, D: 63.56
+Setpoint: 18.00, Pitch: 16.13, Real Error: -1.87, Error: 0.94, Output: -101.54, PWM: 130, I: -33.58, D: 71.23
+Setpoint: 18.00, Pitch: 16.78, Real Error: -1.22, Error: 0.61, Output: -107.69, PWM: 130, I: -33.33, D: 76.50
+Setpoint: 18.00, Pitch: 16.83, Real Error: -1.17, Error: 0.58, Output: -102.32, PWM: 130, I: -33.09, D: 71.27
+Setpoint: 18.00, Pitch: 17.13, Real Error: -0.87, Error: 0.44, Output: -102.01, PWM: 130, I: -32.92, D: 70.62
+Setpoint: 18.00, Pitch: 17.52, Real Error: -0.48, Error: 0.24, Output: -103.54, PWM: 130, I: -32.82, D: 71.57
+Setpoint: 18.00, Pitch: 17.77, Real Error: -0.23, Error: 0.11, Output: -102.54, PWM: 130, I: -32.77, D: 70.16
+Setpoint: 18.00, Pitch: 17.59, Real Error: -0.41, Error: 0.21, Output: -93.40, PWM: 130, I: -32.69, D: 61.44
+Setpoint: 18.00, Pitch: 16.92, Real Error: -1.08, Error: 0.54, Output: -75.68, PWM: 130, I: -32.47, D: 45.12
+Setpoint: 18.00, Pitch: 16.23, Real Error: -1.77, Error: 0.88, Output: -58.97, PWM: 130, I: -32.11, D: 29.96
+Setpoint: 18.00, Pitch: 15.64, Real Error: -2.36, Error: 1.18, Output: -45.10, PWM: 130, I: -31.62, D: 17.60
+Setpoint: 18.00, Pitch: 15.11, Real Error: -2.89, Error: 1.44, Output: -33.14, PWM: 130, I: -31.04, D: 7.16
+Setpoint: 18.00, Pitch: 15.01, Real Error: -2.99, Error: 1.50, Output: -30.02, PWM: 130, I: -30.43, D: 4.83
+Setpoint: 18.00, Pitch: 14.99, Real Error: -3.01, Error: 1.50, Output: -28.76, PWM: 130, I: -29.81, D: 4.21
+Setpoint: 18.00, Pitch: 14.91, Real Error: -3.09, Error: 1.54, Output: -26.23, PWM: 130, I: -29.18, D: 2.46
+Setpoint: 18.00, Pitch: 14.93, Real Error: -3.07, Error: 1.53, Output: -25.79, PWM: 130, I: -28.56, D: 2.60
+Setpoint: 18.00, Pitch: 15.04, Real Error: -2.96, Error: 1.48, Output: -26.98, PWM: 130, I: -27.95, D: 4.21
+Setpoint: 18.00, Pitch: 15.21, Real Error: -2.79, Error: 1.39, Output: -29.29, PWM: 130, I: -27.38, D: 6.79
+Setpoint: 18.00, Pitch: 15.62, Real Error: -2.38, Error: 1.19, Output: -35.83, PWM: 130, I: -26.90, D: 13.11
+Setpoint: 18.00, Pitch: 15.97, Real Error: -2.03, Error: 1.01, Output: -41.00, PWM: 130, I: -26.48, D: 18.07
+Setpoint: 18.00, Pitch: 16.19, Real Error: -1.81, Error: 0.90, Output: -43.31, PWM: 130, I: -26.11, D: 20.36
+Setpoint: 18.00, Pitch: 16.32, Real Error: -1.68, Error: 0.84, Output: -43.83, PWM: 130, I: -25.77, D: 20.99
+Setpoint: 18.00, Pitch: 16.42, Real Error: -1.58, Error: 0.79, Output: -43.70, PWM: 130, I: -25.45, D: 21.01
+Setpoint: 18.00, Pitch: 16.52, Real Error: -1.48, Error: 0.74, Output: -43.57, PWM: 130, I: -25.15, D: 21.00
+Setpoint: 18.00, Pitch: 16.62, Real Error: -1.38, Error: 0.69, Output: -43.33, PWM: 130, I: -24.87, D: 20.89
+Setpoint: 18.00, Pitch: 16.40, Real Error: -1.60, Error: 0.80, Output: -37.28, PWM: 130, I: -24.54, D: 15.55
+Setpoint: 18.00, Pitch: 16.06, Real Error: -1.94, Error: 0.97, Output: -29.39, PWM: 130, I: -24.14, D: 8.63
+Setpoint: 18.00, Pitch: 15.10, Real Error: -2.90, Error: 1.45, Output: -10.11, PWM: 130, I: -23.55, D: -8.37
+Setpoint: 18.00, Pitch: 13.59, Real Error: -4.41, Error: 2.20, Output: 18.32, PWM: 130, I: -22.65, D: -33.26
+Setpoint: 18.00, Pitch: 11.48, Real Error: -6.52, Error: 3.26, Output: 56.50, PWM: 130, I: -21.32, D: -66.40
+Setpoint: 18.00, Pitch: 9.05, Real Error: -8.95, Error: 4.47, Output: 98.28, PWM: 130, I: -19.50, D: -102.12
+Setpoint: 18.00, Pitch: 7.82, Real Error: -10.18, Error: 5.09, Output: 115.12, PWM: 130, I: -17.42, D: -114.73
+Setpoint: 18.00, Pitch: 7.50, Real Error: -10.50, Error: 5.25, Output: 114.05, PWM: 130, I: -15.28, D: -110.96
+Setpoint: 18.00, Pitch: 7.69, Real Error: -10.31, Error: 5.15, Output: 103.78, PWM: 130, I: -13.18, D: -98.92
+Setpoint: 18.00, Pitch: 7.75, Real Error: -10.25, Error: 5.12, Output: 96.82, PWM: 130, I: -11.09, D: -89.98
+Setpoint: 18.00, Pitch: 7.66, Real Error: -10.34, Error: 5.17, Output: 93.48, PWM: 130, I: -8.98, D: -84.36
+Setpoint: 18.00, Pitch: 7.58, Real Error: -10.42, Error: 5.21, Output: 90.40, PWM: 130, I: -6.85, D: -79.01
+Setpoint: 18.00, Pitch: 7.57, Real Error: -10.43, Error: 5.22, Output: 86.40, PWM: 130, I: -4.72, D: -72.86
+Setpoint: 18.00, Pitch: 7.74, Real Error: -10.26, Error: 5.13, Output: 79.42, PWM: 130, I: -2.63, D: -64.09
+Setpoint: 18.00, Pitch: 8.05, Real Error: -9.95, Error: 4.97, Output: 70.50, PWM: 130, I: -0.60, D: -53.70
+Setpoint: 18.00, Pitch: 8.51, Real Error: -9.49, Error: 4.75, Output: 59.62, PWM: 130, I: 1.34, D: -41.67
+Setpoint: 18.00, Pitch: 8.64, Real Error: -9.36, Error: 4.68, Output: 55.81, PWM: 130, I: 3.25, D: -36.17
+Setpoint: 18.00, Pitch: 8.56, Real Error: -9.44, Error: 4.72, Output: 56.25, PWM: 130, I: 5.17, D: -34.56
+Setpoint: 18.00, Pitch: 7.92, Real Error: -10.08, Error: 5.04, Output: 67.43, PWM: 130, I: 7.23, D: -42.57
+Setpoint: 18.00, Pitch: 7.32, Real Error: -10.68, Error: 5.34, Output: 77.43, PWM: 130, I: 9.41, D: -49.34
+Setpoint: 18.00, Pitch: 6.90, Real Error: -11.10, Error: 5.55, Output: 83.60, PWM: 130, I: 11.67, D: -52.51
+Setpoint: 18.00, Pitch: 6.27, Real Error: -11.73, Error: 5.87, Output: 93.62, PWM: 130, I: 14.06, D: -59.03
+Setpoint: 18.00, Pitch: 5.38, Real Error: -12.62, Error: 6.31, Output: 107.99, PWM: 130, I: 16.64, D: -69.28
+Setpoint: 18.00, Pitch: 4.43, Real Error: -13.57, Error: 6.78, Output: 122.98, PWM: 130, I: 19.40, D: -79.83
+Setpoint: 18.00, Pitch: 3.12, Real Error: -14.88, Error: 7.44, Output: 144.09, PWM: 144, I: 22.44, D: -95.62
+Setpoint: 18.00, Pitch: 1.49, Real Error: -16.51, Error: 8.25, Output: 170.30, PWM: 170, I: 25.81, D: -115.60
+Setpoint: 18.00, Pitch: -0.31, Real Error: -18.31, Error: 18.31, Output: 209.00, PWM: 209, I: 33.28, D: -136.83
+Setpoint: 18.00, Pitch: -2.02, Real Error: -20.02, Error: 20.02, Output: 209.00, PWM: 209, I: 41.45, D: -154.90
+Setpoint: 18.00, Pitch: -3.65, Real Error: -21.65, Error: 21.65, Output: 209.00, PWM: 209, I: 50.28, D: -169.98
+Setpoint: 18.00, Pitch: -5.58, Real Error: -23.58, Error: 23.58, Output: 209.00, PWM: 209, I: 59.90, D: -189.13
+Setpoint: 18.00, Pitch: -5.44, Real Error: -23.44, Error: 23.44, Output: 209.00, PWM: 209, I: 69.46, D: -171.65
+Setpoint: 18.00, Pitch: -5.68, Real Error: -23.68, Error: 23.68, Output: 209.00, PWM: 209, I: 79.13, D: -162.01
+Setpoint: 18.00, Pitch: -4.49, Real Error: -22.49, Error: 22.49, Output: 209.00, PWM: 209, I: 88.30, D: -128.81
+Setpoint: 18.00, Pitch: -4.11, Real Error: -22.11, Error: 22.11, Output: 209.00, PWM: 209, I: 97.32, D: -112.05
+Setpoint: 18.00, Pitch: -3.88, Real Error: -21.88, Error: 21.88, Output: 209.00, PWM: 209, I: 106.24, D: -99.18
+Setpoint: 18.00, Pitch: -1.32, Real Error: -19.32, Error: 19.32, Output: 209.00, PWM: 209, I: 114.13, D: -47.99
+Setpoint: 18.00, Pitch: 0.26, Real Error: -17.74, Error: 8.87, Output: 166.27, PWM: 166, I: 117.75, D: -17.47
+Setpoint: 18.00, Pitch: 1.04, Real Error: -16.96, Error: 8.48, Output: 153.75, PWM: 153, I: 121.21, D: -2.85
+Setpoint: 18.00, Pitch: 5.76, Real Error: -12.24, Error: 6.12, Output: 67.79, PWM: 130, I: 123.70, D: 77.33
+Setpoint: 18.00, Pitch: 10.04, Real Error: -7.96, Error: 3.98, Output: -4.25, PWM: 130, I: 125.33, D: 143.52
+Setpoint: 18.00, Pitch: 13.40, Real Error: -4.60, Error: 2.30, Output: -54.62, PWM: 130, I: 126.27, D: 188.94
+Setpoint: 18.00, Pitch: 16.23, Real Error: -1.77, Error: 0.89, Output: -92.05, PWM: 130, I: 126.63, D: 221.78
+Setpoint: 18.00, Pitch: 18.35, Real Error: 0.35, Error: -0.18, Output: -114.01, PWM: 130, I: 126.56, D: 239.95
+Setpoint: 18.00, Pitch: 20.08, Real Error: 2.08, Error: -1.04, Output: -127.57, PWM: 130, I: 126.13, D: 250.06
+Setpoint: 18.00, Pitch: 20.96, Real Error: 2.96, Error: -1.48, Output: -124.60, PWM: 130, I: 125.53, D: 244.94
+Setpoint: 18.00, Pitch: 21.87, Real Error: 3.87, Error: -1.93, Output: -122.69, PWM: 130, I: 124.74, D: 240.67
+Setpoint: 18.00, Pitch: 21.90, Real Error: 3.90, Error: -1.95, Output: -104.88, PWM: 130, I: 123.94, D: 222.00
+Setpoint: 18.00, Pitch: 21.31, Real Error: 3.31, Error: -1.65, Output: -76.72, PWM: 130, I: 123.27, D: 194.20
+Setpoint: 18.00, Pitch: 20.19, Real Error: 2.19, Error: -1.09, Output: -40.65, PWM: 130, I: 122.82, D: 159.65
+Setpoint: 18.00, Pitch: 19.85, Real Error: 1.85, Error: -0.93, Output: -22.08, PWM: 130, I: 122.45, D: 141.28
+Setpoint: 18.00, Pitch: 20.24, Real Error: 2.24, Error: -1.12, Output: -18.36, PWM: 130, I: 121.99, D: 136.44
+Setpoint: 18.00, Pitch: 20.06, Real Error: 2.06, Error: -1.03, Output: -4.64, PWM: 130, I: 121.57, D: 122.60
+Setpoint: 18.00, Pitch: 19.37, Real Error: 1.37, Error: -0.69, Output: 17.77, PWM: 130, I: 121.29, D: 101.12
+Setpoint: 18.00, Pitch: 19.00, Real Error: 1.00, Error: -0.50, Output: 32.70, PWM: 130, I: 121.08, D: 86.64
+Setpoint: 18.00, Pitch: 18.59, Real Error: 0.59, Error: -0.30, Output: 47.04, PWM: 130, I: 120.96, D: 72.89
+Setpoint: 18.00, Pitch: 18.23, Real Error: 0.23, Error: -0.11, Output: 59.66, PWM: 130, I: 120.92, D: 60.86
+Setpoint: 18.00, Pitch: 17.94, Real Error: -0.06, Error: 0.03, Output: 69.84, PWM: 130, I: 120.93, D: 51.19
+Setpoint: 18.00, Pitch: 17.83, Real Error: -0.17, Error: 0.09, Output: 76.14, PWM: 130, I: 120.96, D: 45.13
+Setpoint: 18.00, Pitch: 17.57, Real Error: -0.43, Error: 0.22, Output: 84.74, PWM: 130, I: 121.05, D: 37.08
+Setpoint: 18.00, Pitch: 17.48, Real Error: -0.52, Error: 0.26, Output: 89.36, PWM: 130, I: 121.16, D: 32.71
+Setpoint: 18.00, Pitch: 17.37, Real Error: -0.63, Error: 0.32, Output: 94.27, PWM: 130, I: 121.29, D: 28.12
+Setpoint: 18.00, Pitch: 17.36, Real Error: -0.64, Error: 0.32, Output: 96.78, PWM: 130, I: 121.42, D: 25.76
+Setpoint: 18.00, Pitch: 17.20, Real Error: -0.80, Error: 0.40, Output: 101.94, PWM: 130, I: 121.58, D: 21.04
+Setpoint: 18.00, Pitch: 17.16, Real Error: -0.84, Error: 0.42, Output: 104.62, PWM: 130, I: 121.75, D: 18.61
+Setpoint: 18.00, Pitch: 17.10, Real Error: -0.90, Error: 0.45, Output: 107.33, PWM: 130, I: 121.94, D: 16.18
+Setpoint: 18.00, Pitch: 17.09, Real Error: -0.91, Error: 0.45, Output: 108.97, PWM: 130, I: 122.12, D: 14.74
+Setpoint: 18.00, Pitch: 17.00, Real Error: -1.00, Error: 0.50, Output: 112.12, PWM: 130, I: 122.33, D: 11.95
+Setpoint: 18.00, Pitch: 16.96, Real Error: -1.04, Error: 0.52, Output: 114.02, PWM: 130, I: 122.54, D: 10.34
+Setpoint: 18.00, Pitch: 16.95, Real Error: -1.05, Error: 0.53, Output: 115.33, PWM: 130, I: 122.75, D: 9.27
+Setpoint: 18.00, Pitch: 16.89, Real Error: -1.11, Error: 0.56, Output: 117.39, PWM: 130, I: 122.98, D: 7.53
+Setpoint: 18.00, Pitch: 16.91, Real Error: -1.09, Error: 0.54, Output: 117.76, PWM: 130, I: 123.20, D: 7.34
+Setpoint: 18.00, Pitch: 17.01, Real Error: -0.99, Error: 0.49, Output: 116.69, PWM: 130, I: 123.40, D: 8.44
+Setpoint: 18.00, Pitch: 16.95, Real Error: -1.05, Error: 0.53, Output: 118.76, PWM: 130, I: 123.62, D: 6.70
+Setpoint: 18.00, Pitch: 16.90, Real Error: -1.10, Error: 0.55, Output: 120.46, PWM: 130, I: 123.84, D: 5.31
+Setpoint: 18.00, Pitch: 16.88, Real Error: -1.12, Error: 0.56, Output: 121.44, PWM: 130, I: 124.07, D: 4.59
+Setpoint: 18.00, Pitch: 16.88, Real Error: -1.12, Error: 0.56, Output: 122.02, PWM: 130, I: 124.30, D: 4.24
+Setpoint: 18.00, Pitch: 16.97, Real Error: -1.03, Error: 0.51, Output: 120.82, PWM: 130, I: 124.51, D: 5.48
+Setpoint: 18.00, Pitch: 16.98, Real Error: -1.02, Error: 0.51, Output: 121.40, PWM: 130, I: 124.72, D: 5.11
+Setpoint: 18.00, Pitch: 17.02, Real Error: -0.98, Error: 0.49, Output: 121.19, PWM: 130, I: 124.92, D: 5.44
+Setpoint: 18.00, Pitch: 17.02, Real Error: -0.98, Error: 0.49, Output: 121.93, PWM: 130, I: 125.12, D: 4.91
+Setpoint: 18.00, Pitch: 17.00, Real Error: -1.00, Error: 0.50, Output: 122.77, PWM: 130, I: 125.32, D: 4.29
+Setpoint: 18.00, Pitch: 17.07, Real Error: -0.93, Error: 0.47, Output: 122.11, PWM: 130, I: 125.51, D: 5.03
+Setpoint: 18.00, Pitch: 17.21, Real Error: -0.79, Error: 0.40, Output: 120.05, PWM: 130, I: 125.67, D: 7.01
+Setpoint: 18.00, Pitch: 17.31, Real Error: -0.69, Error: 0.35, Output: 118.92, PWM: 130, I: 125.81, D: 8.11
+Setpoint: 18.00, Pitch: 17.51, Real Error: -0.49, Error: 0.25, Output: 115.87, PWM: 130, I: 125.91, D: 10.91
+Setpoint: 18.00, Pitch: 17.53, Real Error: -0.47, Error: 0.24, Output: 116.50, PWM: 130, I: 126.01, D: 10.34
+Setpoint: 18.00, Pitch: 17.57, Real Error: -0.43, Error: 0.22, Output: 116.70, PWM: 130, I: 126.10, D: 10.16
+Setpoint: 18.00, Pitch: 17.62, Real Error: -0.38, Error: 0.19, Output: 116.59, PWM: 130, I: 126.18, D: 10.25
+Setpoint: 18.00, Pitch: 17.68, Real Error: -0.32, Error: 0.16, Output: 116.28, PWM: 130, I: 126.24, D: 10.51
+Setpoint: 18.00, Pitch: 17.75, Real Error: -0.25, Error: 0.13, Output: 115.96, PWM: 130, I: 126.29, D: 10.77
+Setpoint: 18.00, Pitch: 17.78, Real Error: -0.22, Error: 0.11, Output: 116.23, PWM: 130, I: 126.34, D: 10.49
+Setpoint: 18.00, Pitch: 17.85, Real Error: -0.15, Error: 0.08, Output: 115.90, PWM: 130, I: 126.37, D: 10.74
+Setpoint: 18.00, Pitch: 17.94, Real Error: -0.06, Error: 0.03, Output: 115.01, PWM: 130, I: 126.38, D: 11.47
+Setpoint: 18.00, Pitch: 18.02, Real Error: 0.02, Error: -0.01, Output: 114.45, PWM: 130, I: 126.38, D: 11.90
+Setpoint: 18.00, Pitch: 18.19, Real Error: 0.19, Error: -0.09, Output: 112.24, PWM: 130, I: 126.34, D: 13.77
+Setpoint: 18.00, Pitch: 18.20, Real Error: 0.20, Error: -0.10, Output: 113.14, PWM: 130, I: 126.30, D: 12.81
+Setpoint: 18.00, Pitch: 19.09, Real Error: 1.09, Error: -0.54, Output: 97.29, PWM: 130, I: 126.08, D: 26.89
+Setpoint: 18.00, Pitch: 22.76, Real Error: 4.76, Error: -2.38, Output: 29.88, PWM: 130, I: 125.11, D: 86.90
+Setpoint: 18.00, Pitch: 27.67, Real Error: 9.67, Error: -48.37, Output: -209.00, PWM: 209, I: 105.37, D: 163.13
+Setpoint: 18.00, Pitch: 35.61, Real Error: 17.61, Error: -88.03, Output: -209.00, PWM: 209, I: 69.46, D: 284.36
+Setpoint: 18.00, Pitch: 33.46, Real Error: 15.46, Error: -77.30, Output: -209.00, PWM: 209, I: 37.92, D: 225.29
+Setpoint: 18.00, Pitch: 35.00, Real Error: 17.00, Error: -84.99, Output: -209.00, PWM: 209, I: 3.24, D: 233.28
+Setpoint: 18.00, Pitch: 36.16, Real Error: 18.16, Error: -90.80, Output: -209.00, PWM: 209, I: -33.80, D: 234.30
+Setpoint: 18.00, Pitch: 36.79, Real Error: 18.79, Error: -93.96, Output: -209.00, PWM: 209, I: -72.14, D: 226.24
+Setpoint: 18.00, Pitch: 36.50, Real Error: 18.50, Error: -92.50, Output: -209.00, PWM: 209, I: -109.88, D: 203.23
+Setpoint: 18.00, Pitch: 38.04, Real Error: 20.04, Error: -100.22, Output: -209.00, PWM: 209, I: -150.77, D: 213.10
+Setpoint: 18.00, Pitch: 37.80, Real Error: 19.80, Error: -98.99, Output: -209.00, PWM: 209, I: -191.16, D: 191.88
+Setpoint: 18.00, Pitch: 38.65, Real Error: 20.65, Error: -103.25, Output: -209.00, PWM: 209, I: -209.00, D: 190.94
+Setpoint: 18.00, Pitch: 30.74, Real Error: 12.74, Error: -63.68, Output: -209.00, PWM: 209, I: -209.00, D: 41.72
+Setpoint: 18.00, Pitch: 23.92, Real Error: 5.92, Error: -2.96, Output: -142.40, PWM: 142, I: -209.00, D: -76.97
+Setpoint: 18.00, Pitch: 21.67, Real Error: 3.67, Error: -1.84, Output: -106.54, PWM: 130, I: -209.00, D: -108.88
+Setpoint: 18.00, Pitch: 26.32, Real Error: 8.32, Error: -41.60, Output: -209.00, PWM: 209, I: -209.00, D: -21.51
+Setpoint: 18.00, Pitch: 22.76, Real Error: 4.76, Error: -2.38, Output: -137.24, PWM: 137, I: -209.00, D: -80.09
+Setpoint: 18.00, Pitch: 11.71, Real Error: -6.29, Error: 3.15, Output: 64.04, PWM: 130, I: -207.72, D: -260.74
+Setpoint: 18.00, Pitch: 8.25, Real Error: -9.75, Error: 4.87, Output: 109.67, PWM: 130, I: -205.73, D: -298.34
+Setpoint: 18.00, Pitch: 4.58, Real Error: -13.42, Error: 6.71, Output: 157.18, PWM: 157, I: -202.99, D: -336.68
+Setpoint: 18.00, Pitch: 1.94, Real Error: -16.06, Error: 8.03, Output: 182.86, PWM: 182, I: -199.71, D: -354.46
+Setpoint: 18.00, Pitch: 2.07, Real Error: -15.93, Error: 7.96, Output: 155.19, PWM: 155, I: -196.47, D: -323.79
+Setpoint: 18.00, Pitch: 0.95, Real Error: -17.05, Error: 8.52, Output: 153.74, PWM: 153, I: -192.99, D: -316.89
+Setpoint: 18.00, Pitch: 2.89, Real Error: -15.11, Error: 7.56, Output: 95.29, PWM: 130, I: -189.90, D: -258.75
+Setpoint: 18.00, Pitch: 5.19, Real Error: -12.81, Error: 6.41, Output: 34.31, PWM: 130, I: -187.29, D: -199.17
+Setpoint: 18.00, Pitch: 7.88, Real Error: -10.12, Error: 5.06, Output: -29.95, PWM: 130, I: -185.23, D: -137.57
+Setpoint: 18.00, Pitch: 9.52, Real Error: -8.48, Error: 4.24, Output: -69.70, PWM: 130, I: -183.50, D: -98.94
+Setpoint: 18.00, Pitch: 10.77, Real Error: -7.23, Error: 3.62, Output: -99.51, PWM: 130, I: -182.02, D: -69.85
+Setpoint: 18.00, Pitch: 10.67, Real Error: -7.33, Error: 3.67, Output: -101.74, PWM: 130, I: -180.52, D: -65.95
+Setpoint: 18.00, Pitch: 10.62, Real Error: -7.38, Error: 3.69, Output: -104.61, PWM: 130, I: -179.02, D: -61.49
+Setpoint: 18.00, Pitch: 10.59, Real Error: -7.41, Error: 3.70, Output: -107.50, PWM: 130, I: -177.51, D: -57.04
+Setpoint: 18.00, Pitch: 10.67, Real Error: -7.33, Error: 3.66, Output: -112.10, PWM: 130, I: -176.01, D: -51.09
+Setpoint: 18.00, Pitch: 10.79, Real Error: -7.21, Error: 3.61, Output: -116.89, PWM: 130, I: -174.54, D: -45.03
+Setpoint: 18.00, Pitch: 11.14, Real Error: -6.86, Error: 3.43, Output: -125.70, PWM: 130, I: -173.14, D: -35.44
+Setpoint: 18.00, Pitch: 10.60, Real Error: -7.40, Error: 3.70, Output: -116.92, PWM: 130, I: -171.63, D: -41.77
+Setpoint: 18.00, Pitch: 9.33, Real Error: -8.67, Error: 4.34, Output: -94.71, PWM: 130, I: -169.86, D: -59.98
+Setpoint: 18.00, Pitch: 8.34, Real Error: -9.66, Error: 4.83, Output: -79.00, PWM: 130, I: -167.89, D: -71.98
+Setpoint: 18.00, Pitch: 5.74, Real Error: -12.26, Error: 6.13, Output: -33.78, PWM: 130, I: -165.39, D: -110.16
+Setpoint: 18.00, Pitch: 1.18, Real Error: -16.82, Error: 8.41, Output: 46.07, PWM: 130, I: -161.96, D: -178.59
+Setpoint: 18.00, Pitch: -0.70, Real Error: -18.70, Error: 18.70, Output: 209.00, PWM: 209, I: -154.33, D: -196.10
+Setpoint: 18.00, Pitch: 1.34, Real Error: -16.66, Error: 8.33, Output: 24.02, PWM: 130, I: -150.93, D: -145.80
+Setpoint: 18.00, Pitch: 0.01, Real Error: -17.99, Error: 8.99, Output: 40.87, PWM: 130, I: -147.26, D: -156.66
+Setpoint: 18.00, Pitch: -0.79, Real Error: -18.79, Error: 18.79, Output: 209.00, PWM: 209, I: -139.60, D: -157.71
+Setpoint: 18.00, Pitch: -7.54, Real Error: -25.54, Error: 25.54, Output: 209.00, PWM: 209, I: -129.18, D: -259.36
+Setpoint: 18.00, Pitch: -10.11, Real Error: -28.11, Error: 28.11, Output: 209.00, PWM: 209, I: -117.71, D: -282.20
+Setpoint: 18.00, Pitch: -7.14, Real Error: -25.14, Error: 25.14, Output: 209.00, PWM: 209, I: -107.45, D: -209.27
+Setpoint: 18.00, Pitch: -7.88, Real Error: -25.88, Error: 25.88, Output: 209.00, PWM: 209, I: -96.89, D: -205.14
+Setpoint: 18.00, Pitch: -6.99, Real Error: -24.99, Error: 24.99, Output: 209.00, PWM: 209, I: -86.69, D: -173.53
+Setpoint: 18.00, Pitch: -4.48, Real Error: -22.48, Error: 22.48, Output: 209.00, PWM: 209, I: -77.52, D: -117.18
+Setpoint: 18.00, Pitch: -3.81, Real Error: -21.81, Error: 21.81, Output: 209.00, PWM: 209, I: -68.62, D: -96.50
+Setpoint: 18.00, Pitch: -2.99, Real Error: -20.99, Error: 20.99, Output: 209.00, PWM: 209, I: -60.06, D: -74.84
+Setpoint: 18.00, Pitch: 0.74, Real Error: -17.26, Error: 8.63, Output: -20.56, PWM: 130, I: -56.54, D: -5.77
+Setpoint: 18.00, Pitch: 1.99, Real Error: -16.01, Error: 8.00, Output: -41.14, PWM: 130, I: -53.27, D: 15.88
+Setpoint: 18.00, Pitch: 6.03, Real Error: -11.97, Error: 5.98, Output: -112.95, PWM: 130, I: -50.83, D: 83.06
+Setpoint: 18.00, Pitch: 8.91, Real Error: -9.09, Error: 4.55, Output: -158.07, PWM: 158, I: -48.98, D: 125.01
+Setpoint: 18.00, Pitch: 10.21, Real Error: -7.79, Error: 3.90, Output: -170.78, PWM: 170, I: -47.39, D: 137.04
+Setpoint: 18.00, Pitch: 11.76, Real Error: -6.24, Error: 3.12, Output: -187.49, PWM: 187, I: -46.11, D: 152.30
+Setpoint: 18.00, Pitch: 13.29, Real Error: -4.71, Error: 2.35, Output: -203.05, PWM: 203, I: -45.15, D: 166.14
+Setpoint: 18.00, Pitch: 13.30, Real Error: -4.70, Error: 2.35, Output: -189.00, PWM: 189, I: -44.19, D: 153.02
+Setpoint: 18.00, Pitch: 13.45, Real Error: -4.55, Error: 2.28, Output: -178.54, PWM: 178, I: -43.27, D: 143.24
+Setpoint: 18.00, Pitch: 12.81, Real Error: -5.19, Error: 2.59, Output: -154.14, PWM: 154, I: -42.21, D: 121.01
+Setpoint: 18.00, Pitch: 11.86, Real Error: -6.14, Error: 3.07, Output: -125.38, PWM: 130, I: -40.96, D: 95.18
+Setpoint: 18.00, Pitch: 10.41, Real Error: -7.59, Error: 3.79, Output: -89.21, PWM: 130, I: -39.41, D: 63.08
+Setpoint: 18.00, Pitch: 10.53, Real Error: -7.47, Error: 3.74, Output: -84.76, PWM: 130, I: -37.88, D: 59.96
+Setpoint: 18.00, Pitch: 10.69, Real Error: -7.31, Error: 3.65, Output: -81.58, PWM: 130, I: -36.39, D: 57.98
+Setpoint: 18.00, Pitch: 10.50, Real Error: -7.50, Error: 3.75, Output: -71.78, PWM: 130, I: -34.86, D: 50.05
+Setpoint: 18.00, Pitch: 9.65, Real Error: -8.35, Error: 4.17, Output: -50.30, PWM: 130, I: -33.16, D: 31.75
+Setpoint: 18.00, Pitch: 9.27, Real Error: -8.73, Error: 4.37, Output: -38.74, PWM: 130, I: -31.38, D: 22.65
+Setpoint: 18.00, Pitch: 9.12, Real Error: -8.88, Error: 4.44, Output: -32.45, PWM: 130, I: -29.57, D: 18.42
+Setpoint: 18.00, Pitch: 8.98, Real Error: -9.02, Error: 4.51, Output: -26.51, PWM: 130, I: -27.73, D: 14.57
+Setpoint: 18.00, Pitch: 8.73, Real Error: -9.27, Error: 4.64, Output: -18.73, PWM: 130, I: -25.84, D: 9.12
+Setpoint: 18.00, Pitch: 9.31, Real Error: -8.69, Error: 4.35, Output: -27.01, PWM: 130, I: -24.06, D: 18.16
+Setpoint: 18.00, Pitch: 9.80, Real Error: -8.20, Error: 4.10, Output: -33.08, PWM: 130, I: -22.39, D: 25.04
+Setpoint: 18.00, Pitch: 10.10, Real Error: -7.90, Error: 3.95, Output: -35.15, PWM: 130, I: -20.78, D: 28.19
+Setpoint: 18.00, Pitch: 10.35, Real Error: -7.65, Error: 3.82, Output: -35.94, PWM: 130, I: -19.22, D: 30.11
+Setpoint: 18.00, Pitch: 10.35, Real Error: -7.65, Error: 3.83, Output: -31.90, PWM: 130, I: -17.66, D: 27.64
+Setpoint: 18.00, Pitch: 10.24, Real Error: -7.76, Error: 3.88, Output: -26.09, PWM: 130, I: -16.07, D: 23.60
+Setpoint: 18.00, Pitch: 10.30, Real Error: -7.70, Error: 3.85, Output: -23.69, PWM: 130, I: -14.50, D: 22.68
+Setpoint: 18.00, Pitch: 10.26, Real Error: -7.74, Error: 3.87, Output: -19.66, PWM: 130, I: -12.92, D: 20.28
+Setpoint: 18.00, Pitch: 10.25, Real Error: -7.75, Error: 3.88, Output: -16.16, PWM: 130, I: -11.34, D: 18.39
+Setpoint: 18.00, Pitch: 10.76, Real Error: -7.24, Error: 3.62, Output: -22.85, PWM: 130, I: -9.86, D: 25.65
+Setpoint: 18.00, Pitch: 11.69, Real Error: -6.31, Error: 3.16, Output: -36.77, PWM: 130, I: -8.58, D: 39.25
+Setpoint: 18.00, Pitch: 12.58, Real Error: -5.42, Error: 2.71, Output: -49.32, PWM: 130, I: -7.47, D: 51.33
+Setpoint: 18.00, Pitch: 13.41, Real Error: -4.59, Error: 2.30, Output: -59.61, PWM: 130, I: -6.53, D: 61.12
+Setpoint: 18.00, Pitch: 14.20, Real Error: -3.80, Error: 1.90, Output: -68.77, PWM: 130, I: -5.76, D: 69.66
+Setpoint: 18.00, Pitch: 14.88, Real Error: -3.12, Error: 1.56, Output: -75.33, PWM: 130, I: -5.12, D: 75.66
+Setpoint: 18.00, Pitch: 15.51, Real Error: -2.49, Error: 1.24, Output: -80.52, PWM: 130, I: -4.61, D: 80.26
+Setpoint: 18.00, Pitch: 15.88, Real Error: -2.12, Error: 1.06, Output: -80.45, PWM: 130, I: -4.18, D: 79.99
+Setpoint: 18.00, Pitch: 16.12, Real Error: -1.88, Error: 0.94, Output: -78.27, PWM: 130, I: -3.80, D: 77.76
+Setpoint: 18.00, Pitch: 16.39, Real Error: -1.61, Error: 0.80, Output: -76.78, PWM: 130, I: -3.47, D: 76.12
+Setpoint: 18.00, Pitch: 16.15, Real Error: -1.85, Error: 0.93, Output: -65.71, PWM: 130, I: -3.09, D: 65.86
+Setpoint: 18.00, Pitch: 16.00, Real Error: -2.00, Error: 1.00, Output: -57.28, PWM: 130, I: -2.68, D: 58.10
+Setpoint: 18.00, Pitch: 15.69, Real Error: -2.31, Error: 1.16, Output: -46.31, PWM: 130, I: -2.21, D: 48.15
+Setpoint: 18.00, Pitch: 15.06, Real Error: -2.94, Error: 1.47, Output: -30.17, PWM: 130, I: -1.61, D: 33.71
+Setpoint: 18.00, Pitch: 14.00, Real Error: -4.00, Error: 2.00, Output: -6.91, PWM: 130, I: -0.80, D: 13.11
+Setpoint: 18.00, Pitch: 12.45, Real Error: -5.55, Error: 2.77, Output: 24.18, PWM: 130, I: 0.34, D: -14.14
+Setpoint: 18.00, Pitch: 10.92, Real Error: -7.08, Error: 3.54, Output: 53.07, PWM: 130, I: 1.78, D: -38.91
+Setpoint: 18.00, Pitch: 9.61, Real Error: -8.39, Error: 4.19, Output: 76.14, PWM: 130, I: 3.49, D: -57.98
+Setpoint: 18.00, Pitch: 8.18, Real Error: -9.82, Error: 4.91, Output: 100.23, PWM: 130, I: 5.49, D: -77.56
+Setpoint: 18.00, Pitch: 6.67, Real Error: -11.33, Error: 5.66, Output: 124.54, PWM: 130, I: 7.80, D: -96.92
+Setpoint: 18.00, Pitch: 5.44, Real Error: -12.56, Error: 6.28, Output: 142.48, PWM: 142, I: 10.37, D: -110.12
+Setpoint: 18.00, Pitch: 4.59, Real Error: -13.41, Error: 6.71, Output: 152.20, PWM: 152, I: 13.10, D: -115.63
+Setpoint: 18.00, Pitch: 4.16, Real Error: -13.84, Error: 6.92, Output: 153.81, PWM: 153, I: 15.93, D: -113.66
+Setpoint: 18.00, Pitch: 3.53, Real Error: -14.47, Error: 7.24, Output: 159.47, PWM: 159, I: 18.88, D: -115.27
+Setpoint: 18.00, Pitch: 3.46, Real Error: -14.54, Error: 7.27, Output: 154.52, PWM: 154, I: 21.84, D: -107.23
+Setpoint: 18.00, Pitch: 4.65, Real Error: -13.35, Error: 6.67, Output: 126.32, PWM: 130, I: 24.57, D: -78.40
+Setpoint: 18.00, Pitch: 5.71, Real Error: -12.29, Error: 6.14, Output: 102.79, PWM: 130, I: 27.07, D: -54.21
+Setpoint: 18.00, Pitch: 6.57, Real Error: -11.43, Error: 5.72, Output: 84.85, PWM: 130, I: 29.41, D: -35.43
+Setpoint: 18.00, Pitch: 6.46, Real Error: -11.54, Error: 5.77, Output: 86.26, PWM: 130, I: 31.76, D: -34.31
+Setpoint: 18.00, Pitch: 6.42, Real Error: -11.58, Error: 5.79, Output: 86.74, PWM: 130, I: 34.12, D: -32.35
+Setpoint: 18.00, Pitch: 7.01, Real Error: -10.99, Error: 5.50, Output: 75.37, PWM: 130, I: 36.37, D: -19.77
+Setpoint: 18.00, Pitch: 7.56, Real Error: -10.44, Error: 5.22, Output: 65.67, PWM: 130, I: 38.50, D: -8.90
+Setpoint: 18.00, Pitch: 8.57, Real Error: -9.43, Error: 4.72, Output: 47.97, PWM: 130, I: 40.42, D: 8.96
+Setpoint: 18.00, Pitch: 8.74, Real Error: -9.26, Error: 4.63, Output: 47.38, PWM: 130, I: 42.31, D: 11.13
+Setpoint: 18.00, Pitch: 8.19, Real Error: -9.81, Error: 4.90, Output: 60.49, PWM: 130, I: 44.31, D: 0.98
+Setpoint: 18.00, Pitch: 6.13, Real Error: -11.87, Error: 5.94, Output: 101.55, PWM: 130, I: 46.73, D: -34.05
+Setpoint: 18.00, Pitch: 3.70, Real Error: -14.30, Error: 7.15, Output: 147.05, PWM: 147, I: 49.65, D: -72.39
+Setpoint: 18.00, Pitch: 1.75, Real Error: -16.25, Error: 8.12, Output: 180.96, PWM: 180, I: 52.96, D: -99.57
+Setpoint: 18.00, Pitch: 0.85, Real Error: -17.15, Error: 8.57, Output: 193.31, PWM: 193, I: 56.46, D: -106.84
+Setpoint: 18.00, Pitch: -1.72, Real Error: -19.72, Error: 19.72, Output: 209.00, PWM: 209, I: 64.50, D: -141.88
+Setpoint: 18.00, Pitch: -4.69, Real Error: -22.69, Error: 22.69, Output: 209.00, PWM: 209, I: 73.76, D: -180.78
+Setpoint: 18.00, Pitch: -6.24, Real Error: -24.24, Error: 24.24, Output: 209.00, PWM: 209, I: 83.65, D: -192.65
+Setpoint: 18.00, Pitch: -8.01, Real Error: -26.01, Error: 26.01, Output: 209.00, PWM: 209, I: 94.27, D: -207.17
+Setpoint: 18.00, Pitch: -8.39, Real Error: -26.39, Error: 26.39, Output: 209.00, PWM: 209, I: 105.03, D: -196.93
+Setpoint: 18.00, Pitch: -9.21, Real Error: -27.21, Error: 27.21, Output: 209.00, PWM: 209, I: 116.13, D: -195.05
+Setpoint: 18.00, Pitch: -6.66, Real Error: -24.66, Error: 24.66, Output: 209.00, PWM: 209, I: 126.19, D: -136.29
+Setpoint: 18.00, Pitch: -9.62, Real Error: -27.62, Error: 27.62, Output: 209.00, PWM: 209, I: 137.46, D: -175.51
+Setpoint: 18.00, Pitch: -8.76, Real Error: -26.76, Error: 26.76, Output: 209.00, PWM: 209, I: 148.38, D: -146.87
+Setpoint: 18.00, Pitch: -5.28, Real Error: -23.28, Error: 23.28, Output: 209.00, PWM: 209, I: 157.88, D: -76.35
+Setpoint: 18.00, Pitch: 0.34, Real Error: -17.66, Error: 8.83, Output: 167.45, PWM: 167, I: 161.48, D: 24.94
+Setpoint: 18.00, Pitch: 6.11, Real Error: -11.89, Error: 5.95, Output: 64.17, PWM: 130, I: 163.90, D: 120.55
+Setpoint: 18.00, Pitch: 11.19, Real Error: -6.81, Error: 3.41, Output: -19.68, PWM: 130, I: 165.29, D: 196.90
+Setpoint: 18.00, Pitch: 13.81, Real Error: -4.19, Error: 2.10, Output: -52.03, PWM: 130, I: 166.15, D: 225.52
+Setpoint: 18.00, Pitch: 15.94, Real Error: -2.06, Error: 1.03, Output: -73.37, PWM: 130, I: 166.57, D: 243.55
+Setpoint: 18.00, Pitch: 17.56, Real Error: -0.44, Error: 0.22, Output: -84.13, PWM: 130, I: 166.66, D: 251.55
+Setpoint: 18.00, Pitch: 19.37, Real Error: 1.37, Error: -0.68, Output: -97.97, PWM: 130, I: 166.38, D: 261.97
+Setpoint: 18.00, Pitch: 21.08, Real Error: 3.08, Error: -1.54, Output: -109.67, PWM: 130, I: 165.75, D: 270.03
+Setpoint: 18.00, Pitch: 21.86, Real Error: 3.86, Error: -1.93, Output: -103.47, PWM: 130, I: 164.97, D: 261.68
+Setpoint: 18.00, Pitch: 21.80, Real Error: 3.80, Error: -1.90, Output: -82.19, PWM: 130, I: 164.19, D: 239.72
+Setpoint: 18.00, Pitch: 21.47, Real Error: 3.47, Error: -1.73, Output: -57.45, PWM: 130, I: 163.48, D: 214.87
+Setpoint: 18.00, Pitch: 21.46, Real Error: 3.46, Error: -1.73, Output: -40.79, PWM: 130, I: 162.78, D: 197.52
+Setpoint: 18.00, Pitch: 21.30, Real Error: 3.30, Error: -1.65, Output: -22.70, PWM: 130, I: 162.10, D: 179.03
+Setpoint: 18.00, Pitch: 21.38, Real Error: 3.38, Error: -1.69, Output: -10.68, PWM: 130, I: 161.41, D: 166.17
+Setpoint: 18.00, Pitch: 21.37, Real Error: 3.37, Error: -1.68, Output: 2.27, PWM: 130, I: 160.73, D: 152.57
+Setpoint: 18.00, Pitch: 21.49, Real Error: 3.49, Error: -1.74, Output: 11.50, PWM: 130, I: 160.02, D: 142.42
+Setpoint: 18.00, Pitch: 20.92, Real Error: 2.92, Error: -1.46, Output: 32.90, PWM: 130, I: 159.42, D: 121.41
+Setpoint: 18.00, Pitch: 20.46, Real Error: 2.46, Error: -1.23, Output: 50.63, PWM: 130, I: 158.92, D: 103.97
+Setpoint: 18.00, Pitch: 20.54, Real Error: 2.54, Error: -1.27, Output: 56.98, PWM: 130, I: 158.40, D: 96.97
+Setpoint: 18.00, Pitch: 20.79, Real Error: 2.79, Error: -1.39, Output: 59.53, PWM: 130, I: 157.83, D: 93.42
+Setpoint: 18.00, Pitch: 21.37, Real Error: 3.37, Error: -1.68, Output: 55.49, PWM: 130, I: 157.14, D: 95.76
+Setpoint: 18.00, Pitch: 22.02, Real Error: 4.02, Error: -2.01, Output: 50.27, PWM: 130, I: 156.32, D: 99.03
+Setpoint: 18.00, Pitch: 22.44, Real Error: 4.44, Error: -2.22, Output: 49.26, PWM: 130, I: 155.42, D: 98.38
+Setpoint: 18.00, Pitch: 22.70, Real Error: 4.70, Error: -2.35, Output: 51.45, PWM: 130, I: 154.46, D: 94.78
+Setpoint: 18.00, Pitch: 22.81, Real Error: 4.81, Error: -2.40, Output: 55.97, PWM: 130, I: 153.48, D: 89.09
+Setpoint: 18.00, Pitch: 23.00, Real Error: 5.00, Error: -2.50, Output: 58.50, PWM: 130, I: 152.46, D: 85.21
+Setpoint: 18.00, Pitch: 23.10, Real Error: 5.10, Error: -2.55, Output: 62.37, PWM: 130, I: 151.42, D: 80.12
+Setpoint: 18.00, Pitch: 22.91, Real Error: 4.91, Error: -2.46, Output: 71.38, PWM: 130, I: 150.41, D: 70.45
+Setpoint: 18.00, Pitch: 22.73, Real Error: 4.73, Error: -2.37, Output: 79.41, PWM: 130, I: 149.45, D: 61.76
+Setpoint: 18.00, Pitch: 22.90, Real Error: 4.90, Error: -2.45, Output: 80.24, PWM: 130, I: 148.45, D: 59.64
+Setpoint: 18.00, Pitch: 23.50, Real Error: 5.50, Error: -2.75, Output: 72.61, PWM: 130, I: 147.33, D: 65.09
+Setpoint: 18.00, Pitch: 24.62, Real Error: 6.62, Error: -33.08, Output: -209.00, PWM: 209, I: 133.83, D: 78.77
+Setpoint: 18.00, Pitch: 26.21, Real Error: 8.21, Error: -41.04, Output: -209.00, PWM: 209, I: 117.09, D: 99.41
+Setpoint: 18.00, Pitch: 25.48, Real Error: 7.48, Error: -37.41, Output: -209.00, PWM: 209, I: 101.83, D: 79.16
+Setpoint: 18.00, Pitch: 26.07, Real Error: 8.07, Error: -40.37, Output: -209.00, PWM: 209, I: 85.36, D: 82.86
+Setpoint: 18.00, Pitch: 24.32, Real Error: 6.32, Error: -31.60, Output: -209.00, PWM: 209, I: 72.46, D: 46.54
+Setpoint: 18.00, Pitch: 25.28, Real Error: 7.28, Error: -36.41, Output: -209.00, PWM: 209, I: 57.61, D: 59.09
+Setpoint: 18.00, Pitch: 26.04, Real Error: 8.04, Error: -40.18, Output: -209.00, PWM: 209, I: 41.22, D: 67.15
+Setpoint: 18.00, Pitch: 26.40, Real Error: 8.40, Error: -41.98, Output: -209.00, PWM: 209, I: 24.09, D: 67.86
+Setpoint: 18.00, Pitch: 25.01, Real Error: 7.01, Error: -35.04, Output: -209.00, PWM: 209, I: 9.79, D: 38.93
+Setpoint: 18.00, Pitch: 21.38, Real Error: 3.38, Error: -1.69, Output: 28.71, PWM: 130, I: 9.10, D: -25.53
+Setpoint: 18.00, Pitch: 12.04, Real Error: -5.96, Error: 2.98, Output: 202.38, PWM: 202, I: 10.32, D: -181.63
+Setpoint: 18.00, Pitch: 7.06, Real Error: -10.94, Error: 5.47, Output: 209.00, PWM: 209, I: 12.55, D: -251.37
+Setpoint: 18.00, Pitch: 9.26, Real Error: -8.74, Error: 4.37, Output: 209.00, PWM: 209, I: 14.33, D: -194.06
+Setpoint: 18.00, Pitch: 10.87, Real Error: -7.13, Error: 3.56, Output: 179.49, PWM: 179, I: 15.79, D: -151.23
+Setpoint: 18.00, Pitch: 11.77, Real Error: -6.23, Error: 3.11, Output: 151.84, PWM: 151, I: 17.06, D: -123.89
+Setpoint: 18.00, Pitch: 9.82, Real Error: -8.18, Error: 4.09, Output: 180.05, PWM: 180, I: 18.72, D: -147.02
+Setpoint: 18.00, Pitch: 7.48, Real Error: -10.52, Error: 5.26, Output: 209.00, PWM: 209, I: 20.87, D: -174.96
+Setpoint: 18.00, Pitch: 5.57, Real Error: -12.43, Error: 6.21, Output: 209.00, PWM: 209, I: 23.41, D: -193.17
+Setpoint: 18.00, Pitch: 5.34, Real Error: -12.66, Error: 6.33, Output: 209.00, PWM: 209, I: 25.99, D: -181.72
+Setpoint: 18.00, Pitch: 6.56, Real Error: -11.44, Error: 5.72, Output: 194.87, PWM: 194, I: 28.32, D: -146.53
+Setpoint: 18.00, Pitch: 8.06, Real Error: -9.94, Error: 4.97, Output: 157.22, PWM: 157, I: 30.35, D: -109.47
+Setpoint: 18.00, Pitch: 9.69, Real Error: -8.31, Error: 4.15, Output: 119.60, PWM: 130, I: 32.05, D: -73.02
+Setpoint: 18.00, Pitch: 12.09, Real Error: -5.91, Error: 2.95, Output: 70.14, PWM: 130, I: 33.25, D: -26.55
+Setpoint: 18.00, Pitch: 13.84, Real Error: -4.16, Error: 2.08, Output: 36.26, PWM: 130, I: 34.10, D: 5.13
+Setpoint: 18.00, Pitch: 15.88, Real Error: -2.12, Error: 1.06, Output: -1.05, PWM: 130, I: 34.53, D: 39.30
+Setpoint: 18.00, Pitch: 17.67, Real Error: -0.33, Error: 0.16, Output: -31.37, PWM: 130, I: 34.60, D: 66.54
+Setpoint: 18.00, Pitch: 17.91, Real Error: -0.09, Error: 0.05, Output: -30.40, PWM: 130, I: 34.62, D: 65.18
+Setpoint: 18.00, Pitch: 18.00, Real Error: -0.00, Error: 0.00, Output: -26.81, PWM: 130, I: 34.62, D: 61.44
+Setpoint: 18.00, Pitch: 17.99, Real Error: -0.01, Error: 0.01, Output: -21.73, PWM: 130, I: 34.62, D: 56.38
+Setpoint: 18.00, Pitch: 18.64, Real Error: 0.64, Error: -0.32, Output: -29.60, PWM: 130, I: 34.49, D: 62.97
+Setpoint: 18.00, Pitch: 19.10, Real Error: 1.10, Error: -0.55, Output: -33.32, PWM: 130, I: 34.27, D: 65.67
+Setpoint: 18.00, Pitch: 19.25, Real Error: 1.25, Error: -0.62, Output: -31.09, PWM: 130, I: 34.01, D: 62.92
+Setpoint: 18.00, Pitch: 19.62, Real Error: 1.62, Error: -0.81, Output: -33.34, PWM: 130, I: 33.68, D: 64.19
+Setpoint: 18.00, Pitch: 19.08, Real Error: 1.08, Error: -0.54, Output: -18.36, PWM: 130, I: 33.46, D: 49.93
+Setpoint: 18.00, Pitch: 18.32, Real Error: 0.32, Error: -0.16, Output: -0.30, PWM: 130, I: 33.39, D: 33.13
+Setpoint: 18.00, Pitch: 18.15, Real Error: 0.15, Error: -0.08, Output: 5.58, PWM: 130, I: 33.36, D: 27.52
+Setpoint: 18.00, Pitch: 17.98, Real Error: -0.02, Error: 0.01, Output: 10.96, PWM: 130, I: 33.37, D: 22.45
+Setpoint: 18.00, Pitch: 17.89, Real Error: -0.11, Error: 0.06, Output: 14.49, PWM: 130, I: 33.39, D: 19.10
+Setpoint: 18.00, Pitch: 17.76, Real Error: -0.24, Error: 0.12, Output: 18.45, PWM: 130, I: 33.44, D: 15.41
+Setpoint: 18.00, Pitch: 17.71, Real Error: -0.29, Error: 0.14, Output: 20.68, PWM: 130, I: 33.50, D: 13.33
+Setpoint: 18.00, Pitch: 17.60, Real Error: -0.40, Error: 0.20, Output: 23.95, PWM: 130, I: 33.58, D: 10.33
+Setpoint: 18.00, Pitch: 17.68, Real Error: -0.32, Error: 0.16, Output: 23.20, PWM: 130, I: 33.65, D: 11.00
+Setpoint: 18.00, Pitch: 17.77, Real Error: -0.23, Error: 0.11, Output: 22.52, PWM: 130, I: 33.69, D: 11.57
+Setpoint: 18.00, Pitch: 17.79, Real Error: -0.21, Error: 0.10, Output: 23.05, PWM: 130, I: 33.73, D: 11.04
+Setpoint: 18.00, Pitch: 17.80, Real Error: -0.20, Error: 0.10, Output: 23.88, PWM: 130, I: 33.77, D: 10.25
+Setpoint: 18.00, Pitch: 17.86, Real Error: -0.14, Error: 0.07, Output: 23.59, PWM: 130, I: 33.80, D: 10.46
+Setpoint: 18.00, Pitch: 17.91, Real Error: -0.09, Error: 0.04, Output: 23.51, PWM: 130, I: 33.82, D: 10.47
+Setpoint: 18.00, Pitch: 17.97, Real Error: -0.03, Error: 0.01, Output: 23.16, PWM: 130, I: 33.83, D: 10.71
+Setpoint: 18.00, Pitch: 18.10, Real Error: 0.10, Error: -0.05, Output: 21.69, PWM: 130, I: 33.81, D: 11.95
+Setpoint: 18.00, Pitch: 18.19, Real Error: 0.19, Error: -0.09, Output: 20.91, PWM: 130, I: 33.77, D: 12.53
+Setpoint: 18.00, Pitch: 18.17, Real Error: 0.17, Error: -0.09, Output: 22.20, PWM: 130, I: 33.73, D: 11.24
+Setpoint: 18.00, Pitch: 18.37, Real Error: 0.37, Error: -0.18, Output: 19.37, PWM: 130, I: 33.66, D: 13.65
+Setpoint: 18.00, Pitch: 20.08, Real Error: 2.08, Error: -1.04, Output: -12.03, PWM: 130, I: 33.23, D: 41.62
+Setpoint: 18.00, Pitch: 24.02, Real Error: 6.02, Error: -30.08, Output: -209.00, PWM: 209, I: 20.96, D: 104.85
+Setpoint: 18.00, Pitch: 28.66, Real Error: 10.66, Error: -53.28, Output: -209.00, PWM: 209, I: -0.78, D: 174.99
+Setpoint: 18.00, Pitch: 27.81, Real Error: 9.81, Error: -49.04, Output: -209.00, PWM: 209, I: -20.78, D: 146.67
+Setpoint: 18.00, Pitch: 28.40, Real Error: 10.40, Error: -52.00, Output: -209.00, PWM: 209, I: -42.00, D: 144.96
+Setpoint: 18.00, Pitch: 25.60, Real Error: 7.60, Error: -38.02, Output: -209.00, PWM: 209, I: -57.52, D: 86.03
+Setpoint: 18.00, Pitch: 21.58, Real Error: 3.58, Error: -1.79, Output: -75.56, PWM: 130, I: -58.25, D: 11.05
+Setpoint: 18.00, Pitch: 20.89, Real Error: 2.89, Error: -1.45, Output: -62.40, PWM: 130, I: -58.84, D: -1.50
+Setpoint: 18.00, Pitch: 13.25, Real Error: -4.75, Error: 2.37, Output: 81.19, PWM: 130, I: -57.87, D: -130.75
+Setpoint: 18.00, Pitch: 13.89, Real Error: -4.11, Error: 2.06, Output: 59.64, PWM: 130, I: -57.03, D: -109.48
+Setpoint: 18.00, Pitch: 14.12, Real Error: -3.88, Error: 1.94, Output: 47.45, PWM: 130, I: -56.24, D: -96.89
+Setpoint: 18.00, Pitch: 12.28, Real Error: -5.72, Error: 2.86, Output: 75.12, PWM: 130, I: -55.07, D: -120.18
+Setpoint: 18.00, Pitch: 10.46, Real Error: -7.54, Error: 3.77, Output: 101.04, PWM: 130, I: -53.53, D: -141.38
+Setpoint: 18.00, Pitch: 8.54, Real Error: -9.46, Error: 4.73, Output: 127.47, PWM: 130, I: -51.60, D: -162.53
+Setpoint: 18.00, Pitch: 6.86, Real Error: -11.14, Error: 5.57, Output: 148.27, PWM: 148, I: -49.33, D: -178.10
+Setpoint: 18.00, Pitch: 5.55, Real Error: -12.45, Error: 6.22, Output: 160.91, PWM: 160, I: -46.79, D: -185.92
+Setpoint: 18.00, Pitch: 4.54, Real Error: -13.46, Error: 6.73, Output: 167.61, PWM: 167, I: -44.05, D: -188.11
+Setpoint: 18.00, Pitch: 5.20, Real Error: -12.80, Error: 6.40, Output: 142.90, PWM: 142, I: -41.43, D: -161.94
+Setpoint: 18.00, Pitch: 4.70, Real Error: -13.30, Error: 6.65, Output: 141.99, PWM: 141, I: -38.72, D: -157.44
+Setpoint: 18.00, Pitch: 5.71, Real Error: -12.29, Error: 6.14, Output: 113.03, PWM: 130, I: -36.21, D: -127.74
+Setpoint: 18.00, Pitch: 5.47, Real Error: -12.53, Error: 6.26, Output: 109.86, PWM: 130, I: -33.66, D: -121.59
+Setpoint: 18.00, Pitch: 5.86, Real Error: -12.14, Error: 6.07, Output: 95.36, PWM: 130, I: -31.18, D: -105.30
+Setpoint: 18.00, Pitch: 6.15, Real Error: -11.85, Error: 5.92, Output: 83.84, PWM: 130, I: -28.77, D: -91.88
+Setpoint: 18.00, Pitch: 7.72, Real Error: -10.28, Error: 5.14, Output: 49.33, PWM: 130, I: -26.67, D: -58.01
+Setpoint: 18.00, Pitch: 8.80, Real Error: -9.20, Error: 4.60, Output: 26.47, PWM: 130, I: -24.79, D: -35.16
+Setpoint: 18.00, Pitch: 9.55, Real Error: -8.45, Error: 4.23, Output: 11.40, PWM: 130, I: -23.07, D: -19.67
+Setpoint: 18.00, Pitch: 10.29, Real Error: -7.71, Error: 3.85, Output: -2.58, PWM: 130, I: -21.50, D: -5.43
+Setpoint: 18.00, Pitch: 10.02, Real Error: -7.98, Error: 3.99, Output: 3.66, PWM: 130, I: -19.87, D: -9.57
+Setpoint: 18.00, Pitch: 10.24, Real Error: -7.76, Error: 3.88, Output: 0.44, PWM: 130, I: -18.29, D: -5.14
+Setpoint: 18.00, Pitch: 9.57, Real Error: -8.43, Error: 4.21, Output: 14.23, PWM: 130, I: -16.57, D: -16.05
+Setpoint: 18.00, Pitch: 5.85, Real Error: -12.15, Error: 6.07, Output: 84.85, PWM: 130, I: -14.09, D: -77.69
+Setpoint: 18.00, Pitch: 1.44, Real Error: -16.56, Error: 8.28, Output: 164.52, PWM: 164, I: -10.71, D: -146.24
+Setpoint: 18.00, Pitch: -1.83, Real Error: -19.83, Error: 19.83, Output: 209.00, PWM: 209, I: -2.62, D: -189.82
+Setpoint: 18.00, Pitch: -5.24, Real Error: -23.24, Error: 23.24, Output: 209.00, PWM: 209, I: 6.86, D: -232.38
+Setpoint: 18.00, Pitch: -8.05, Real Error: -26.05, Error: 26.05, Output: 209.00, PWM: 209, I: 17.49, D: -261.45
+Setpoint: 18.00, Pitch: -9.80, Real Error: -27.80, Error: 27.80, Output: 209.00, PWM: 209, I: 28.84, D: -270.10
+Setpoint: 18.00, Pitch: -11.58, Real Error: -29.58, Error: 29.58, Output: 209.00, PWM: 209, I: 40.90, D: -278.64
+Setpoint: 18.00, Pitch: -12.99, Real Error: -30.99, Error: 30.99, Output: 209.00, PWM: 209, I: 53.55, D: -280.14
+Setpoint: 18.00, Pitch: -14.61, Real Error: -32.61, Error: 32.61, Output: 209.00, PWM: 209, I: 66.85, D: -285.16
+Setpoint: 18.00, Pitch: -12.76, Real Error: -30.76, Error: 30.76, Output: 209.00, PWM: 209, I: 79.40, D: -231.13
+Setpoint: 18.00, Pitch: -11.70, Real Error: -29.70, Error: 29.70, Output: 209.00, PWM: 209, I: 91.52, D: -194.71
+Setpoint: 18.00, Pitch: -8.19, Real Error: -26.19, Error: 26.19, Output: 209.00, PWM: 209, I: 102.21, D: -119.71
+Setpoint: 18.00, Pitch: -6.93, Real Error: -24.93, Error: 24.93, Output: 209.00, PWM: 209, I: 112.38, D: -88.66
+Setpoint: 18.00, Pitch: -3.07, Real Error: -21.07, Error: 21.07, Output: 209.00, PWM: 209, I: 120.98, D: -16.32
+Setpoint: 18.00, Pitch: 1.84, Real Error: -16.16, Error: 8.08, Output: 84.33, PWM: 130, I: 124.27, D: 68.21
+Setpoint: 18.00, Pitch: 7.56, Real Error: -10.44, Error: 5.22, Output: -14.77, PWM: 130, I: 126.40, D: 159.45
+Setpoint: 18.00, Pitch: 10.87, Real Error: -7.13, Error: 3.56, Output: -62.52, PWM: 130, I: 127.86, D: 202.84
+Setpoint: 18.00, Pitch: 11.97, Real Error: -6.03, Error: 3.02, Output: -65.46, PWM: 130, I: 129.09, D: 205.11
+Setpoint: 18.00, Pitch: 13.12, Real Error: -4.88, Error: 2.44, Output: -69.52, PWM: 130, I: 130.08, D: 208.15
+Setpoint: 18.00, Pitch: 14.60, Real Error: -3.40, Error: 1.70, Output: -79.89, PWM: 130, I: 130.78, D: 216.61
+Setpoint: 18.00, Pitch: 15.96, Real Error: -2.04, Error: 1.02, Output: -87.63, PWM: 130, I: 131.19, D: 222.38
+Setpoint: 18.00, Pitch: 16.55, Real Error: -1.45, Error: 0.73, Output: -80.42, PWM: 130, I: 131.49, D: 214.45
+Setpoint: 18.00, Pitch: 16.63, Real Error: -1.37, Error: 0.68, Output: -64.56, PWM: 130, I: 131.77, D: 198.73
+Setpoint: 18.00, Pitch: 16.74, Real Error: -1.26, Error: 0.63, Output: -50.43, PWM: 130, I: 132.03, D: 184.67
+Setpoint: 18.00, Pitch: 16.38, Real Error: -1.62, Error: 0.81, Output: -28.53, PWM: 130, I: 132.36, D: 163.73
+Setpoint: 18.00, Pitch: 16.10, Real Error: -1.90, Error: 0.95, Output: -9.83, PWM: 130, I: 132.75, D: 145.91
+Setpoint: 18.00, Pitch: 16.23, Real Error: -1.77, Error: 0.88, Output: -0.38, PWM: 130, I: 133.11, D: 136.58
+Setpoint: 18.00, Pitch: 16.33, Real Error: -1.67, Error: 0.83, Output: 9.04, PWM: 130, I: 133.45, D: 127.32
+Setpoint: 18.00, Pitch: 16.43, Real Error: -1.57, Error: 0.78, Output: 17.65, PWM: 130, I: 133.76, D: 118.86
+Setpoint: 18.00, Pitch: 16.54, Real Error: -1.46, Error: 0.73, Output: 25.43, PWM: 130, I: 134.06, D: 111.18
+Setpoint: 18.00, Pitch: 16.65, Real Error: -1.35, Error: 0.67, Output: 32.60, PWM: 130, I: 134.34, D: 104.10
+Setpoint: 18.00, Pitch: 16.64, Real Error: -1.36, Error: 0.68, Output: 41.40, PWM: 130, I: 134.61, D: 95.60
+Setpoint: 18.00, Pitch: 16.74, Real Error: -1.26, Error: 0.63, Output: 47.36, PWM: 130, I: 134.87, D: 89.71
+Setpoint: 18.00, Pitch: 16.67, Real Error: -1.33, Error: 0.67, Output: 56.20, PWM: 130, I: 135.14, D: 81.27
+Setpoint: 18.00, Pitch: 16.72, Real Error: -1.28, Error: 0.64, Output: 61.99, PWM: 130, I: 135.40, D: 75.65
+Setpoint: 18.00, Pitch: 16.69, Real Error: -1.31, Error: 0.66, Output: 68.96, PWM: 130, I: 135.67, D: 69.01
+Setpoint: 18.00, Pitch: 16.65, Real Error: -1.35, Error: 0.67, Output: 75.39, PWM: 130, I: 135.95, D: 62.91
+Setpoint: 18.00, Pitch: 16.62, Real Error: -1.38, Error: 0.69, Output: 81.41, PWM: 130, I: 136.23, D: 57.25
+Setpoint: 18.00, Pitch: 16.58, Real Error: -1.42, Error: 0.71, Output: 86.86, PWM: 130, I: 136.52, D: 52.13
+Setpoint: 18.00, Pitch: 16.54, Real Error: -1.46, Error: 0.73, Output: 92.24, PWM: 130, I: 136.82, D: 47.14
+Setpoint: 18.00, Pitch: 16.51, Real Error: -1.49, Error: 0.75, Output: 96.86, PWM: 130, I: 137.12, D: 42.87
+Setpoint: 18.00, Pitch: 16.48, Real Error: -1.52, Error: 0.76, Output: 101.13, PWM: 130, I: 137.43, D: 38.96
+Setpoint: 18.00, Pitch: 15.33, Real Error: -2.67, Error: 1.34, Output: 126.27, PWM: 130, I: 137.98, D: 16.38
+Setpoint: 18.00, Pitch: 12.74, Real Error: -5.26, Error: 2.63, Output: 177.04, PWM: 177, I: 139.05, D: -28.78
+Setpoint: 18.00, Pitch: 9.99, Real Error: -8.01, Error: 4.01, Output: 209.00, PWM: 209, I: 140.68, D: -73.06
+Setpoint: 18.00, Pitch: 7.19, Real Error: -10.81, Error: 5.40, Output: 209.00, PWM: 209, I: 142.89, D: -114.52
+Setpoint: 18.00, Pitch: 4.84, Real Error: -13.16, Error: 6.58, Output: 209.00, PWM: 209, I: 145.57, D: -145.10
+Setpoint: 18.00, Pitch: 4.17, Real Error: -13.83, Error: 6.91, Output: 209.00, PWM: 209, I: 148.40, D: -144.89
+Setpoint: 18.00, Pitch: 1.75, Real Error: -16.25, Error: 8.12, Output: 209.00, PWM: 209, I: 151.71, D: -174.20
+Setpoint: 18.00, Pitch: -0.22, Real Error: -18.22, Error: 18.22, Output: 209.00, PWM: 209, I: 159.14, D: -193.73
+Setpoint: 18.00, Pitch: -0.03, Real Error: -18.03, Error: 18.03, Output: 209.00, PWM: 209, I: 166.50, D: -175.03
+Setpoint: 18.00, Pitch: 2.19, Real Error: -15.81, Error: 7.91, Output: 209.00, PWM: 209, I: 169.73, D: -123.41
+Setpoint: 18.00, Pitch: 3.13, Real Error: -14.87, Error: 7.44, Output: 209.00, PWM: 209, I: 172.76, D: -97.63
+Setpoint: 18.00, Pitch: 6.27, Real Error: -11.73, Error: 5.87, Output: 209.00, PWM: 209, I: 175.16, D: -36.69
+Setpoint: 18.00, Pitch: 14.73, Real Error: -3.27, Error: 1.63, Output: 72.01, PWM: 130, I: 175.82, D: 109.54
+Setpoint: 18.00, Pitch: 19.41, Real Error: 1.41, Error: -0.71, Output: -6.92, PWM: 130, I: 175.53, D: 179.99
+Setpoint: 18.00, Pitch: 23.19, Real Error: 5.19, Error: -2.59, Output: -64.09, PWM: 130, I: 174.48, D: 229.49
+Setpoint: 18.00, Pitch: 25.86, Real Error: 7.86, Error: -39.28, Output: -209.00, PWM: 209, I: 158.45, D: 256.35
+Setpoint: 18.00, Pitch: 38.20, Real Error: 20.20, Error: -101.00, Output: -209.00, PWM: 209, I: 117.24, D: 444.78
+Setpoint: 18.00, Pitch: 34.51, Real Error: 16.51, Error: -82.53, Output: -209.00, PWM: 209, I: 83.57, D: 346.66
+Setpoint: 18.00, Pitch: 33.33, Real Error: 15.33, Error: -76.63, Output: -209.00, PWM: 209, I: 52.31, D: 298.96
+Setpoint: 18.00, Pitch: 31.85, Real Error: 13.85, Error: -69.24, Output: -209.00, PWM: 209, I: 24.06, D: 250.04
+Setpoint: 18.00, Pitch: 31.37, Real Error: 13.37, Error: -66.84, Output: -209.00, PWM: 209, I: -3.21, D: 221.89
+Setpoint: 18.00, Pitch: 28.15, Real Error: 10.15, Error: -50.73, Output: -209.00, PWM: 209, I: -23.91, D: 149.59
+Setpoint: 18.00, Pitch: 27.12, Real Error: 9.12, Error: -45.61, Output: -209.00, PWM: 209, I: -42.52, D: 120.29
+Setpoint: 18.00, Pitch: 23.42, Real Error: 5.42, Error: -2.71, Output: -101.03, PWM: 130, I: -43.62, D: 47.93
+Setpoint: 18.00, Pitch: 19.71, Real Error: 1.71, Error: -0.86, Output: -28.41, PWM: 130, I: -43.97, D: -18.56
+Setpoint: 18.00, Pitch: 17.06, Real Error: -0.94, Error: 0.47, Output: 19.80, PWM: 130, I: -43.78, D: -61.94
+Setpoint: 18.00, Pitch: 22.70, Real Error: 4.70, Error: -2.35, Output: -91.44, PWM: 130, I: -44.74, D: 38.47
+Setpoint: 18.00, Pitch: 21.29, Real Error: 3.29, Error: -1.64, Output: -62.58, PWM: 130, I: -45.41, D: 11.42
+Setpoint: 18.00, Pitch: 21.34, Real Error: 3.34, Error: -1.67, Output: -63.34, PWM: 130, I: -46.09, D: 11.40
+Setpoint: 18.00, Pitch: 18.21, Real Error: 0.21, Error: -0.10, Output: -3.99, PWM: 130, I: -46.13, D: -42.51
+Setpoint: 18.00, Pitch: 6.04, Real Error: -11.96, Error: 5.98, Output: 209.00, PWM: 209, I: -43.69, D: -245.17
+Setpoint: 18.00, Pitch: -3.93, Real Error: -21.93, Error: 21.93, Output: 209.00, PWM: 209, I: -34.75, D: -394.25
+Setpoint: 18.00, Pitch: -15.34, Real Error: -33.34, Error: 33.34, Output: 209.00, PWM: 209, I: -21.14, D: -555.81
+Setpoint: 18.00, Pitch: -19.96, Real Error: -37.96, Error: 37.96, Output: 209.00, PWM: 209, I: -5.66, D: -589.54
+Setpoint: 18.00, Pitch: -22.98, Real Error: -40.98, Error: 40.98, Output: 209.00, PWM: 209, I: 11.06, D: -593.51
+Setpoint: 18.00, Pitch: -28.64, Real Error: -46.64, Error: 46.64, Output: 209.00, PWM: 209, I: 19.03, D: 39.58
+Setpoint: 18.00, Pitch: -25.19, Real Error: -43.19, Error: 43.19, Output: 209.00, PWM: 209, I: 36.65, D: 94.74
+Setpoint: 18.00, Pitch: -21.28, Real Error: -39.28, Error: 39.28, Output: 209.00, PWM: 209, I: 52.68, D: 153.41
+Setpoint: 18.00, Pitch: -9.17, Real Error: -27.17, Error: 27.17, Output: 111.64, PWM: 130, I: 63.76, D: 346.09
+Setpoint: 18.00, Pitch: -4.88, Real Error: -22.88, Error: 22.88, Output: 13.74, PWM: 130, I: 73.09, D: 391.07
+Setpoint: 18.00, Pitch: -1.69, Real Error: -19.69, Error: 19.69, Output: -47.26, PWM: 130, I: 81.13, D: 413.82
+Setpoint: 18.00, Pitch: -0.45, Real Error: -18.45, Error: 18.45, Output: -45.48, PWM: 130, I: 88.65, D: 401.64
+Setpoint: 18.00, Pitch: 1.09, Real Error: -16.91, Error: 8.45, Output: -209.00, PWM: 209, I: 92.10, D: 395.59
+Setpoint: 18.00, Pitch: 3.20, Real Error: -14.80, Error: 7.40, Output: -209.00, PWM: 209, I: 95.12, D: 399.70
+Setpoint: 18.00, Pitch: 6.85, Real Error: -11.15, Error: 5.58, Output: -209.00, PWM: 209, I: 97.40, D: 429.38
+Setpoint: 18.00, Pitch: 8.09, Real Error: -9.91, Error: 4.95, Output: -209.00, PWM: 209, I: 99.42, D: 416.09
+Setpoint: 18.00, Pitch: 8.12, Real Error: -9.88, Error: 4.94, Output: -209.00, PWM: 209, I: 101.43, D: 383.32
+Setpoint: 18.00, Pitch: 7.56, Real Error: -10.44, Error: 5.22, Output: -209.00, PWM: 209, I: 103.56, D: 343.16
+Setpoint: 18.00, Pitch: 5.55, Real Error: -12.45, Error: 6.22, Output: -153.88, PWM: 153, I: 106.10, D: 281.76
+Setpoint: 18.00, Pitch: 6.28, Real Error: -11.72, Error: 5.86, Output: -142.55, PWM: 142, I: 108.49, D: 271.55
+Setpoint: 18.00, Pitch: 4.16, Real Error: -13.84, Error: 6.92, Output: -78.42, PWM: 130, I: 111.31, D: 213.95
+Setpoint: 18.00, Pitch: 2.98, Real Error: -15.02, Error: 7.51, Output: -36.08, PWM: 130, I: 114.38, D: 176.75
+Setpoint: 18.00, Pitch: -0.55, Real Error: -18.55, Error: 18.55, Output: 209.00, PWM: 209, I: 121.95, D: 102.85
+Setpoint: 18.00, Pitch: -15.78, Real Error: -33.78, Error: 33.78, Output: 209.00, PWM: 209, I: 135.73, D: -163.14
+Setpoint: 18.00, Pitch: -12.27, Real Error: -30.27, Error: 30.27, Output: 209.00, PWM: 209, I: 148.08, D: -90.65
+Setpoint: 18.00, Pitch: -9.11, Real Error: -27.11, Error: 27.11, Output: 209.00, PWM: 209, I: 159.14, D: -29.91
+Setpoint: 18.00, Pitch: -10.35, Real Error: -28.35, Error: 28.35, Output: 209.00, PWM: 209, I: 170.71, D: -48.55
+Setpoint: 18.00, Pitch: -8.33, Real Error: -26.33, Error: 26.33, Output: 209.00, PWM: 209, I: 181.45, D: -10.42
+Setpoint: 18.00, Pitch: -7.00, Real Error: -25.00, Error: 25.00, Output: 209.00, PWM: 209, I: 191.65, D: 12.95
+Setpoint: 18.00, Pitch: -6.32, Real Error: -24.32, Error: 24.32, Output: 209.00, PWM: 209, I: 201.57, D: 23.29
+Setpoint: 18.00, Pitch: -4.57, Real Error: -22.57, Error: 22.57, Output: 209.00, PWM: 209, I: 209.00, D: 51.11
+Setpoint: 18.00, Pitch: -5.04, Real Error: -23.04, Error: 23.04, Output: 209.00, PWM: 209, I: 209.00, D: 39.10
+Setpoint: 18.00, Pitch: -5.02, Real Error: -23.02, Error: 23.02, Output: 209.00, PWM: 209, I: 209.00, D: 36.38
+Setpoint: 18.00, Pitch: -3.61, Real Error: -21.61, Error: 21.61, Output: 209.00, PWM: 209, I: 209.00, D: 57.30
+Setpoint: 18.00, Pitch: -2.22, Real Error: -20.22, Error: 20.22, Output: 209.00, PWM: 209, I: 209.00, D: 76.28
+Setpoint: 18.00, Pitch: -0.18, Real Error: -18.18, Error: 18.18, Output: 209.00, PWM: 209, I: 209.00, D: 104.64
+Setpoint: 18.00, Pitch: 2.02, Real Error: -15.98, Error: 7.99, Output: 103.38, PWM: 130, I: 209.00, D: 133.58
+Setpoint: 18.00, Pitch: 3.65, Real Error: -14.35, Error: 7.18, Output: 83.70, PWM: 130, I: 209.00, D: 150.41
+Setpoint: 18.00, Pitch: 7.03, Real Error: -10.97, Error: 5.48, Output: 32.56, PWM: 130, I: 209.00, D: 195.63
+Setpoint: 18.00, Pitch: 9.87, Real Error: -8.13, Error: 4.07, Output: -4.74, PWM: 130, I: 209.00, D: 227.97
+Setpoint: 18.00, Pitch: 11.83, Real Error: -6.17, Error: 3.08, Output: -23.19, PWM: 130, I: 209.00, D: 242.99
+Setpoint: 18.00, Pitch: 13.38, Real Error: -4.62, Error: 2.31, Output: -32.60, PWM: 130, I: 209.00, D: 249.69
+Setpoint: 18.00, Pitch: 15.22, Real Error: -2.78, Error: 1.39, Output: -47.00, PWM: 130, I: 209.00, D: 260.87
+Setpoint: 18.00, Pitch: 16.21, Real Error: -1.79, Error: 0.89, Output: -44.77, PWM: 130, I: 209.00, D: 256.90
+Setpoint: 18.00, Pitch: 17.69, Real Error: -0.31, Error: 0.16, Output: -51.69, PWM: 130, I: 209.00, D: 261.24
+Setpoint: 18.00, Pitch: 18.99, Real Error: 0.99, Error: -0.50, Output: -55.42, PWM: 130, I: 208.80, D: 262.48
+Setpoint: 18.00, Pitch: 19.88, Real Error: 1.88, Error: -0.94, Output: -51.33, PWM: 130, I: 208.41, D: 256.46
+Setpoint: 18.00, Pitch: 19.75, Real Error: 1.75, Error: -0.87, Output: -28.72, PWM: 130, I: 208.06, D: 233.72
+Setpoint: 18.00, Pitch: 19.42, Real Error: 1.42, Error: -0.71, Output: -4.25, PWM: 130, I: 207.77, D: 209.53
+Setpoint: 18.00, Pitch: 18.99, Real Error: 0.99, Error: -0.50, Output: 20.35, PWM: 130, I: 207.57, D: 185.48
+Setpoint: 18.00, Pitch: 18.42, Real Error: 0.42, Error: -0.21, Output: 45.78, PWM: 130, I: 207.48, D: 160.97
+Setpoint: 18.00, Pitch: 18.14, Real Error: 0.14, Error: -0.07, Output: 63.83, PWM: 130, I: 207.45, D: 143.37
+Setpoint: 18.00, Pitch: 18.27, Real Error: 0.27, Error: -0.14, Output: 72.80, PWM: 130, I: 207.40, D: 134.12
+Setpoint: 18.00, Pitch: 18.29, Real Error: 0.29, Error: -0.15, Output: 83.05, PWM: 130, I: 207.34, D: 123.77
+Setpoint: 18.00, Pitch: 18.27, Real Error: 0.27, Error: -0.13, Output: 93.37, PWM: 130, I: 207.28, D: 113.44
+Setpoint: 18.00, Pitch: 18.27, Real Error: 0.27, Error: -0.13, Output: 102.43, PWM: 130, I: 207.23, D: 104.33
+Setpoint: 18.00, Pitch: 18.10, Real Error: 0.10, Error: -0.05, Output: 113.83, PWM: 130, I: 207.21, D: 93.19
+Setpoint: 18.00, Pitch: 18.01, Real Error: 0.01, Error: -0.00, Output: 123.06, PWM: 130, I: 207.20, D: 84.13
+Setpoint: 18.00, Pitch: 18.01, Real Error: 0.01, Error: -0.00, Output: 129.80, PWM: 130, I: 207.20, D: 77.39
+Setpoint: 18.00, Pitch: 17.91, Real Error: -0.09, Error: 0.05, Output: 137.89, PWM: 137, I: 207.22, D: 69.50
+Setpoint: 18.00, Pitch: 17.88, Real Error: -0.12, Error: 0.06, Output: 144.00, PWM: 143, I: 207.25, D: 63.46
+Setpoint: 18.00, Pitch: 17.53, Real Error: -0.47, Error: 0.23, Output: 155.64, PWM: 155, I: 207.34, D: 52.52
+Setpoint: 18.00, Pitch: 17.60, Real Error: -0.40, Error: 0.20, Output: 158.60, PWM: 158, I: 207.42, D: 49.51
+Setpoint: 18.00, Pitch: 17.01, Real Error: -0.99, Error: 0.50, Output: 173.91, PWM: 173, I: 207.63, D: 35.45
+Setpoint: 18.00, Pitch: 16.32, Real Error: -1.68, Error: 0.84, Output: 189.88, PWM: 189, I: 207.97, D: 21.02
+Setpoint: 18.00, Pitch: 15.52, Real Error: -2.48, Error: 1.24, Output: 207.03, PWM: 207, I: 208.47, D: 5.78
+Setpoint: 18.00, Pitch: 14.21, Real Error: -3.79, Error: 1.89, Output: 209.00, PWM: 209, I: 209.00, D: -16.81
+Setpoint: 18.00, Pitch: 14.71, Real Error: -3.29, Error: 1.64, Output: 209.00, PWM: 209, I: 209.00, D: -7.00
+Setpoint: 18.00, Pitch: 20.86, Real Error: 2.86, Error: -1.43, Output: 105.75, PWM: 130, I: 208.42, D: 97.66
+Setpoint: 18.00, Pitch: 25.97, Real Error: 7.97, Error: -39.85, Output: -209.00, PWM: 209, I: 192.16, D: 176.32
+Setpoint: 18.00, Pitch: 38.99, Real Error: 20.99, Error: -104.94, Output: -209.00, PWM: 209, I: 149.34, D: 382.58
+Setpoint: 18.00, Pitch: 33.77, Real Error: 15.77, Error: -78.85, Output: -209.00, PWM: 209, I: 117.17, D: 263.64
+Setpoint: 18.00, Pitch: 31.92, Real Error: 13.92, Error: -69.62, Output: -209.00, PWM: 209, I: 88.76, D: 211.29
+Setpoint: 18.00, Pitch: 34.20, Real Error: 16.20, Error: -81.00, Output: -209.00, PWM: 209, I: 55.72, D: 232.91
+Setpoint: 18.00, Pitch: 36.52, Real Error: 18.52, Error: -92.61, Output: -209.00, PWM: 209, I: 17.93, D: 253.60
+Setpoint: 18.00, Pitch: 37.55, Real Error: 19.55, Error: -97.74, Output: -209.00, PWM: 209, I: -21.95, D: 250.69
+Setpoint: 18.00, Pitch: 36.30, Real Error: 18.30, Error: -91.49, Output: -209.00, PWM: 209, I: -59.27, D: 209.45
+Setpoint: 18.00, Pitch: 35.00, Real Error: 17.00, Error: -85.00, Output: -209.00, PWM: 209, I: -93.95, D: 170.74
+Setpoint: 18.00, Pitch: 34.20, Real Error: 16.20, Error: -81.00, Output: -209.00, PWM: 209, I: -127.00, D: 143.52
+Setpoint: 18.00, Pitch: 33.11, Real Error: 15.11, Error: -75.56, Output: -209.00, PWM: 209, I: -157.83, D: 113.65
+Setpoint: 18.00, Pitch: 25.55, Real Error: 7.55, Error: -37.76, Output: -209.00, PWM: 209, I: -173.24, D: -23.42
+Setpoint: 18.00, Pitch: 20.76, Real Error: 2.76, Error: -1.38, Output: -75.91, PWM: 130, I: -173.80, D: -102.72
+Setpoint: 18.00, Pitch: 22.18, Real Error: 4.18, Error: -2.09, Output: -111.55, PWM: 130, I: -174.65, D: -70.42
+Setpoint: 18.00, Pitch: 27.07, Real Error: 9.07, Error: -45.36, Output: -209.00, PWM: 209, I: -193.16, D: 18.03
+Setpoint: 18.00, Pitch: 20.33, Real Error: 2.33, Error: -1.16, Output: -100.10, PWM: 130, I: -193.64, D: -97.61
+Setpoint: 18.00, Pitch: 10.07, Real Error: -7.93, Error: 3.97, Output: 85.33, PWM: 130, I: -192.02, D: -263.47
+Setpoint: 18.00, Pitch: 7.82, Real Error: -10.18, Error: 5.09, Output: 108.37, PWM: 130, I: -189.94, D: -280.49
+Setpoint: 18.00, Pitch: 3.18, Real Error: -14.82, Error: 7.41, Output: 175.63, PWM: 175, I: -186.92, D: -336.61
+Setpoint: 18.00, Pitch: 3.78, Real Error: -14.22, Error: 7.11, Output: 140.32, PWM: 140, I: -184.02, D: -299.45
+Setpoint: 18.00, Pitch: 1.21, Real Error: -16.79, Error: 8.39, Output: 167.72, PWM: 167, I: -180.59, D: -318.94
+Setpoint: 18.00, Pitch: 1.81, Real Error: -16.19, Error: 8.10, Output: 134.38, PWM: 134, I: -177.29, D: -283.34
+Setpoint: 18.00, Pitch: 1.28, Real Error: -16.72, Error: 8.36, Output: 125.01, PWM: 130, I: -173.88, D: -269.63
+Setpoint: 18.00, Pitch: 1.91, Real Error: -16.09, Error: 8.04, Output: 94.89, PWM: 130, I: -170.60, D: -237.33
+Setpoint: 18.00, Pitch: 1.67, Real Error: -16.33, Error: 8.17, Output: 83.80, PWM: 130, I: -167.27, D: -222.49
+Setpoint: 18.00, Pitch: 2.27, Real Error: -15.73, Error: 7.86, Output: 57.96, PWM: 130, I: -164.06, D: -194.49
+Setpoint: 18.00, Pitch: 1.98, Real Error: -16.02, Error: 8.01, Output: 51.11, PWM: 130, I: -160.79, D: -183.87
+Setpoint: 18.00, Pitch: 1.10, Real Error: -16.90, Error: 8.45, Output: 56.24, PWM: 130, I: -157.34, D: -184.01
+Setpoint: 18.00, Pitch: 1.36, Real Error: -16.64, Error: 8.32, Output: 40.06, PWM: 130, I: -153.95, D: -164.89
+Setpoint: 18.00, Pitch: 1.95, Real Error: -16.05, Error: 8.02, Output: 19.11, PWM: 130, I: -150.67, D: -141.70
+Setpoint: 18.00, Pitch: 3.10, Real Error: -14.90, Error: 7.45, Output: -10.59, PWM: 130, I: -147.63, D: -110.97
+Setpoint: 18.00, Pitch: 3.75, Real Error: -14.25, Error: 7.12, Output: -28.74, PWM: 130, I: -144.73, D: -91.05
+Setpoint: 18.00, Pitch: 4.43, Real Error: -13.57, Error: 6.78, Output: -46.02, PWM: 130, I: -141.96, D: -72.20
+Setpoint: 18.00, Pitch: 4.69, Real Error: -13.31, Error: 6.65, Output: -53.94, PWM: 130, I: -139.25, D: -62.02
+Setpoint: 18.00, Pitch: 5.13, Real Error: -12.87, Error: 6.43, Output: -64.44, PWM: 130, I: -136.62, D: -49.66
+Setpoint: 18.00, Pitch: 5.83, Real Error: -12.17, Error: 6.09, Output: -78.88, PWM: 130, I: -134.14, D: -33.95
+Setpoint: 18.00, Pitch: 6.89, Real Error: -11.11, Error: 5.56, Output: -99.21, PWM: 130, I: -131.87, D: -13.22
+Setpoint: 18.00, Pitch: 7.54, Real Error: -10.46, Error: 5.23, Output: -110.29, PWM: 130, I: -129.74, D: -1.14
+Setpoint: 18.00, Pitch: 7.60, Real Error: -10.40, Error: 5.20, Output: -109.28, PWM: 130, I: -127.61, D: -0.12
+Setpoint: 18.00, Pitch: 7.36, Real Error: -10.64, Error: 5.32, Output: -102.73, PWM: 130, I: -125.44, D: -4.10
+Setpoint: 18.00, Pitch: 7.12, Real Error: -10.88, Error: 5.44, Output: -96.35, PWM: 130, I: -123.22, D: -7.84
+Setpoint: 18.00, Pitch: 6.95, Real Error: -11.05, Error: 5.53, Output: -91.48, PWM: 130, I: -120.97, D: -10.15
+Setpoint: 18.00, Pitch: 6.88, Real Error: -11.12, Error: 5.56, Output: -88.73, PWM: 130, I: -118.70, D: -10.51
+Setpoint: 18.00, Pitch: 6.61, Real Error: -11.39, Error: 5.69, Output: -82.35, PWM: 130, I: -116.38, D: -14.10
+Setpoint: 18.00, Pitch: 6.23, Real Error: -11.77, Error: 5.88, Output: -73.95, PWM: 130, I: -113.98, D: -19.44
+Setpoint: 18.00, Pitch: 5.86, Real Error: -12.14, Error: 6.07, Output: -66.09, PWM: 130, I: -111.50, D: -24.17
+Setpoint: 18.00, Pitch: 5.52, Real Error: -12.48, Error: 6.24, Output: -59.12, PWM: 130, I: -108.96, D: -28.00
+Setpoint: 18.00, Pitch: 5.59, Real Error: -12.41, Error: 6.20, Output: -60.16, PWM: 130, I: -106.42, D: -24.55
+Setpoint: 18.00, Pitch: 5.74, Real Error: -12.26, Error: 6.13, Output: -62.42, PWM: 130, I: -103.92, D: -20.05
+Setpoint: 18.00, Pitch: 5.72, Real Error: -12.28, Error: 6.14, Output: -61.15, PWM: 130, I: -101.42, D: -18.78
+Setpoint: 18.00, Pitch: 5.31, Real Error: -12.69, Error: 6.34, Output: -52.39, PWM: 130, I: -98.83, D: -24.23
+Setpoint: 18.00, Pitch: 5.21, Real Error: -12.79, Error: 6.39, Output: -49.82, PWM: 130, I: -96.22, D: -24.01
+Setpoint: 18.00, Pitch: 4.79, Real Error: -13.21, Error: 6.60, Output: -41.23, PWM: 130, I: -93.53, D: -29.18
+Setpoint: 18.00, Pitch: 3.34, Real Error: -14.66, Error: 7.33, Output: -13.38, PWM: 130, I: -90.54, D: -51.49
+Setpoint: 18.00, Pitch: 1.58, Real Error: -16.42, Error: 8.21, Output: 18.57, PWM: 130, I: -87.19, D: -77.03
+Setpoint: 18.00, Pitch: -0.42, Real Error: -18.42, Error: 18.42, Output: 209.00, PWM: 209, I: -79.67, D: -104.84
+Setpoint: 18.00, Pitch: 0.56, Real Error: -17.44, Error: 8.72, Output: 34.14, PWM: 130, I: -76.11, D: -79.74
+Setpoint: 18.00, Pitch: -1.12, Real Error: -19.12, Error: 19.12, Output: 209.00, PWM: 209, I: -68.31, D: -101.83
+Setpoint: 18.00, Pitch: 1.19, Real Error: -16.81, Error: 8.40, Output: 19.10, PWM: 130, I: -64.88, D: -54.57
+Setpoint: 18.00, Pitch: -2.49, Real Error: -20.49, Error: 20.49, Output: 209.00, PWM: 209, I: -56.53, D: -112.48
+Setpoint: 18.00, Pitch: -0.13, Real Error: -18.13, Error: 18.13, Output: 209.00, PWM: 209, I: -49.13, D: -63.61
+Setpoint: 18.00, Pitch: -2.52, Real Error: -20.52, Error: 20.52, Output: 209.00, PWM: 209, I: -40.76, D: -99.02
+Setpoint: 18.00, Pitch: -1.33, Real Error: -19.33, Error: 19.33, Output: 209.00, PWM: 209, I: -32.87, D: -70.84
+Setpoint: 18.00, Pitch: -1.73, Real Error: -19.73, Error: 19.73, Output: 209.00, PWM: 209, I: -24.82, D: -72.05
+Setpoint: 18.00, Pitch: -0.27, Real Error: -18.27, Error: 18.27, Output: 209.00, PWM: 209, I: -17.36, D: -41.61
+Setpoint: 18.00, Pitch: -0.02, Real Error: -18.02, Error: 18.02, Output: 209.00, PWM: 209, I: -10.01, D: -34.03
+Setpoint: 18.00, Pitch: 4.68, Real Error: -13.32, Error: 6.66, Output: -32.21, PWM: 130, I: -7.29, D: 48.24
+Setpoint: 18.00, Pitch: 9.11, Real Error: -8.89, Error: 4.44, Output: -109.41, PWM: 130, I: -5.48, D: 119.48
+Setpoint: 18.00, Pitch: 11.59, Real Error: -6.41, Error: 3.20, Output: -144.88, PWM: 144, I: -4.17, D: 151.92
+Setpoint: 18.00, Pitch: 12.50, Real Error: -5.50, Error: 2.75, Output: -148.62, PWM: 148, I: -3.05, D: 155.19
+Setpoint: 18.00, Pitch: 14.19, Real Error: -3.81, Error: 1.90, Output: -166.93, PWM: 166, I: -2.27, D: 171.32
+Setpoint: 18.00, Pitch: 15.72, Real Error: -2.28, Error: 1.14, Output: -181.27, PWM: 181, I: -1.81, D: 183.46
+Setpoint: 18.00, Pitch: 16.01, Real Error: -1.99, Error: 1.00, Output: -171.61, PWM: 171, I: -1.40, D: 173.69
+Setpoint: 18.00, Pitch: 16.94, Real Error: -1.06, Error: 0.53, Output: -174.94, PWM: 174, I: -1.18, D: 175.61
+Setpoint: 18.00, Pitch: 17.69, Real Error: -0.31, Error: 0.15, Output: -174.84, PWM: 174, I: -1.12, D: 174.26
+Setpoint: 18.00, Pitch: 17.94, Real Error: -0.06, Error: 0.03, Output: -165.57, PWM: 165, I: -1.11, D: 164.56
+Setpoint: 18.00, Pitch: 16.91, Real Error: -1.09, Error: 0.55, Output: -132.86, PWM: 132, I: -0.89, D: 133.89
+Setpoint: 18.00, Pitch: 15.93, Real Error: -2.07, Error: 1.04, Output: -103.44, PWM: 130, I: -0.46, D: 106.60
+Setpoint: 18.00, Pitch: 15.83, Real Error: -2.17, Error: 1.09, Output: -92.57, PWM: 130, I: -0.02, D: 96.35
+Setpoint: 18.00, Pitch: 16.48, Real Error: -1.52, Error: 0.76, Output: -96.66, PWM: 130, I: 0.29, D: 99.62
+Setpoint: 18.00, Pitch: 16.66, Real Error: -1.34, Error: 0.67, Output: -91.81, PWM: 130, I: 0.56, D: 94.72
+Setpoint: 18.00, Pitch: 16.97, Real Error: -1.03, Error: 0.51, Output: -89.96, PWM: 130, I: 0.77, D: 92.52
+Setpoint: 18.00, Pitch: 17.32, Real Error: -0.68, Error: 0.34, Output: -88.96, PWM: 130, I: 0.91, D: 91.05
+Setpoint: 18.00, Pitch: 17.56, Real Error: -0.44, Error: 0.22, Output: -86.04, PWM: 130, I: 1.00, D: 87.80
+Setpoint: 18.00, Pitch: 17.84, Real Error: -0.16, Error: 0.08, Output: -84.07, PWM: 130, I: 1.03, D: 85.39
+Setpoint: 18.00, Pitch: 17.88, Real Error: -0.12, Error: 0.06, Output: -78.10, PWM: 130, I: 1.06, D: 79.36
+Setpoint: 18.00, Pitch: 17.86, Real Error: -0.14, Error: 0.07, Output: -71.22, PWM: 130, I: 1.09, D: 72.56
+Setpoint: 18.00, Pitch: 17.85, Real Error: -0.15, Error: 0.08, Output: -65.25, PWM: 130, I: 1.12, D: 66.63
+Setpoint: 18.00, Pitch: 17.69, Real Error: -0.31, Error: 0.15, Output: -56.97, PWM: 130, I: 1.18, D: 58.68
+Setpoint: 18.00, Pitch: 17.59, Real Error: -0.41, Error: 0.21, Output: -50.20, PWM: 130, I: 1.26, D: 52.19
+Setpoint: 18.00, Pitch: 17.70, Real Error: -0.30, Error: 0.15, Output: -47.99, PWM: 130, I: 1.33, D: 49.85
+Setpoint: 18.00, Pitch: 17.67, Real Error: -0.33, Error: 0.16, Output: -43.45, PWM: 130, I: 1.39, D: 45.42
+Setpoint: 18.00, Pitch: 17.63, Real Error: -0.37, Error: 0.19, Output: -38.95, PWM: 130, I: 1.47, D: 41.07
+Setpoint: 18.00, Pitch: 17.70, Real Error: -0.30, Error: 0.15, Output: -36.99, PWM: 130, I: 1.53, D: 39.04
+Setpoint: 18.00, Pitch: 17.66, Real Error: -0.34, Error: 0.17, Output: -33.03, PWM: 130, I: 1.60, D: 35.22
+Setpoint: 18.00, Pitch: 17.59, Real Error: -0.41, Error: 0.21, Output: -28.74, PWM: 130, I: 1.68, D: 31.14
+Setpoint: 18.00, Pitch: 17.51, Real Error: -0.49, Error: 0.24, Output: -24.75, PWM: 130, I: 1.78, D: 27.38
+Setpoint: 18.00, Pitch: 17.58, Real Error: -0.42, Error: 0.21, Output: -23.68, PWM: 130, I: 1.87, D: 26.29
+Setpoint: 18.00, Pitch: 17.57, Real Error: -0.43, Error: 0.21, Output: -21.38, PWM: 130, I: 1.96, D: 24.09
+Setpoint: 18.00, Pitch: 17.63, Real Error: -0.37, Error: 0.18, Output: -20.57, PWM: 130, I: 2.03, D: 23.24
+Setpoint: 18.00, Pitch: 17.57, Real Error: -0.43, Error: 0.22, Output: -17.33, PWM: 130, I: 2.12, D: 20.21
+Setpoint: 18.00, Pitch: 17.45, Real Error: -0.55, Error: 0.28, Output: -13.39, PWM: 130, I: 2.23, D: 16.59
+Setpoint: 18.00, Pitch: 17.32, Real Error: -0.68, Error: 0.34, Output: -9.53, PWM: 130, I: 2.37, D: 13.09
+Setpoint: 18.00, Pitch: 17.31, Real Error: -0.69, Error: 0.35, Output: -8.17, PWM: 130, I: 2.51, D: 11.89
+Setpoint: 18.00, Pitch: 17.25, Real Error: -0.75, Error: 0.37, Output: -6.03, PWM: 130, I: 2.66, D: 10.00
+Setpoint: 18.00, Pitch: 17.24, Real Error: -0.76, Error: 0.38, Output: -4.84, PWM: 130, I: 2.82, D: 8.99
+Setpoint: 18.00, Pitch: 17.17, Real Error: -0.83, Error: 0.42, Output: -2.58, PWM: 130, I: 2.99, D: 7.02
+Setpoint: 18.00, Pitch: 17.04, Real Error: -0.96, Error: 0.48, Output: 0.59, PWM: 130, I: 3.19, D: 4.27
+Setpoint: 18.00, Pitch: 16.91, Real Error: -1.09, Error: 0.54, Output: 3.55, PWM: 130, I: 3.41, D: 1.77
+Setpoint: 18.00, Pitch: 16.87, Real Error: -1.13, Error: 0.56, Output: 4.64, PWM: 130, I: 3.64, D: 0.97
+Setpoint: 18.00, Pitch: 16.82, Real Error: -1.18, Error: 0.59, Output: 5.94, PWM: 130, I: 3.88, D: 0.00
+Setpoint: 18.00, Pitch: 16.79, Real Error: -1.21, Error: 0.61, Output: 6.78, PWM: 130, I: 4.13, D: -0.54
+Setpoint: 18.00, Pitch: 15.61, Real Error: -2.39, Error: 1.20, Output: 29.28, PWM: 130, I: 4.61, D: -20.48
+Setpoint: 18.00, Pitch: 10.61, Real Error: -7.39, Error: 3.69, Output: 122.44, PWM: 130, I: 6.12, D: -103.40
+Setpoint: 18.00, Pitch: 7.85, Real Error: -10.15, Error: 5.08, Output: 167.84, PWM: 167, I: 8.19, D: -141.88
+Setpoint: 18.00, Pitch: 6.50, Real Error: -11.50, Error: 5.75, Output: 184.03, PWM: 184, I: 10.54, D: -153.37
+Setpoint: 18.00, Pitch: 4.42, Real Error: -13.58, Error: 6.79, Output: 209.00, PWM: 209, I: 13.31, D: -176.25
+Setpoint: 18.00, Pitch: 3.92, Real Error: -14.08, Error: 7.04, Output: 209.00, PWM: 209, I: 16.18, D: -170.64
+Setpoint: 18.00, Pitch: 3.81, Real Error: -14.19, Error: 7.10, Output: 202.89, PWM: 202, I: 19.07, D: -158.98
+Setpoint: 18.00, Pitch: 3.64, Real Error: -14.36, Error: 7.18, Output: 196.26, PWM: 196, I: 22.00, D: -149.12
+Setpoint: 18.00, Pitch: 3.86, Real Error: -14.14, Error: 7.07, Output: 182.99, PWM: 182, I: 24.89, D: -133.36
+Setpoint: 18.00, Pitch: 6.76, Real Error: -11.24, Error: 5.62, Output: 120.53, PWM: 130, I: 27.18, D: -73.68
+Setpoint: 18.00, Pitch: 10.91, Real Error: -7.09, Error: 3.55, Output: 38.57, PWM: 130, I: 28.63, D: 2.47
+Setpoint: 18.00, Pitch: 13.65, Real Error: -4.35, Error: 2.18, Output: -11.47, PWM: 130, I: 29.52, D: 48.61
+Setpoint: 18.00, Pitch: 15.38, Real Error: -2.62, Error: 1.31, Output: -39.49, PWM: 130, I: 30.05, D: 74.12
+Setpoint: 18.00, Pitch: 17.15, Real Error: -0.85, Error: 0.42, Output: -66.45, PWM: 130, I: 30.22, D: 98.16
+Setpoint: 18.00, Pitch: 19.05, Real Error: 1.05, Error: -0.53, Output: -94.26, PWM: 130, I: 30.01, D: 122.43
+Setpoint: 18.00, Pitch: 20.97, Real Error: 2.97, Error: -1.49, Output: -120.93, PWM: 130, I: 29.40, D: 145.14
+Setpoint: 18.00, Pitch: 21.73, Real Error: 3.73, Error: -1.86, Output: -124.19, PWM: 130, I: 28.64, D: 146.32
+Setpoint: 18.00, Pitch: 22.33, Real Error: 4.33, Error: -2.17, Output: -124.71, PWM: 130, I: 27.76, D: 144.89
+Setpoint: 18.00, Pitch: 22.52, Real Error: 4.52, Error: -2.26, Output: -117.48, PWM: 130, I: 26.84, D: 136.41
+Setpoint: 18.00, Pitch: 22.79, Real Error: 4.79, Error: -2.40, Output: -112.71, PWM: 130, I: 25.86, D: 130.18
+Setpoint: 18.00, Pitch: 23.06, Real Error: 5.06, Error: -2.53, Output: -108.31, PWM: 130, I: 24.83, D: 124.28
+Setpoint: 18.00, Pitch: 22.94, Real Error: 4.94, Error: -2.47, Output: -97.05, PWM: 130, I: 23.82, D: 112.23
+Setpoint: 18.00, Pitch: 22.64, Real Error: 4.64, Error: -2.32, Output: -83.48, PWM: 130, I: 22.87, D: 98.24
+Setpoint: 18.00, Pitch: 22.29, Real Error: 4.29, Error: -2.15, Output: -70.06, PWM: 130, I: 22.00, D: 84.55
+Setpoint: 18.00, Pitch: 21.79, Real Error: 3.79, Error: -1.90, Output: -54.66, PWM: 130, I: 21.22, D: 69.25
+Setpoint: 18.00, Pitch: 20.90, Real Error: 2.90, Error: -1.45, Output: -33.16, PWM: 130, I: 20.63, D: 48.71
+Setpoint: 18.00, Pitch: 20.19, Real Error: 2.19, Error: -1.09, Output: -16.35, PWM: 130, I: 20.19, D: 32.71
+Setpoint: 18.00, Pitch: 19.78, Real Error: 1.78, Error: -0.89, Output: -6.46, PWM: 130, I: 19.82, D: 23.17
+Setpoint: 18.00, Pitch: 19.61, Real Error: 1.61, Error: -0.81, Output: -1.80, PWM: 130, I: 19.49, D: 18.47
+Setpoint: 18.00, Pitch: 19.71, Real Error: 1.71, Error: -0.86, Output: -2.57, PWM: 130, I: 19.14, D: 18.71
+Setpoint: 18.00, Pitch: 20.21, Real Error: 2.21, Error: -1.10, Output: -10.78, PWM: 130, I: 18.69, D: 25.61
+Setpoint: 18.00, Pitch: 21.05, Real Error: 3.05, Error: -1.52, Output: -25.01, PWM: 130, I: 18.07, D: 37.75
+Setpoint: 18.00, Pitch: 22.27, Real Error: 4.27, Error: -2.14, Output: -45.71, PWM: 130, I: 17.20, D: 55.43
+Setpoint: 18.00, Pitch: 23.81, Real Error: 5.81, Error: -2.90, Output: -71.13, PWM: 130, I: 16.02, D: 76.98
+Setpoint: 18.00, Pitch: 25.55, Real Error: 7.55, Error: -37.76, Output: -209.00, PWM: 209, I: 0.61, D: 100.37
+Setpoint: 18.00, Pitch: 26.00, Real Error: 8.00, Error: -39.99, Output: -209.00, PWM: 209, I: -15.71, D: 99.91
+Setpoint: 18.00, Pitch: 27.25, Real Error: 9.25, Error: -46.27, Output: -209.00, PWM: 209, I: -34.59, D: 113.16
+Setpoint: 18.00, Pitch: 29.71, Real Error: 11.71, Error: -58.54, Output: -209.00, PWM: 209, I: -58.47, D: 145.66
+Setpoint: 18.00, Pitch: 29.19, Real Error: 11.19, Error: -55.95, Output: -209.00, PWM: 209, I: -81.30, D: 125.22
+Setpoint: 18.00, Pitch: 22.02, Real Error: 4.02, Error: -2.01, Output: -83.01, PWM: 130, I: -82.12, D: -6.14
+Setpoint: 18.00, Pitch: 18.89, Real Error: 0.89, Error: -0.45, Output: -25.25, PWM: 130, I: -82.30, D: -58.61
+Setpoint: 18.00, Pitch: 14.64, Real Error: -3.36, Error: 1.68, Output: 50.14, PWM: 130, I: -81.61, D: -125.88
+Setpoint: 18.00, Pitch: 17.91, Real Error: -0.09, Error: 0.05, Output: -20.95, PWM: 130, I: -81.59, D: -60.49
+Setpoint: 18.00, Pitch: 15.15, Real Error: -2.85, Error: 1.42, Output: 26.27, PWM: 130, I: -81.01, D: -102.30
+Setpoint: 18.00, Pitch: 9.00, Real Error: -9.00, Error: 4.50, Output: 134.84, PWM: 134, I: -79.18, D: -198.27
+Setpoint: 18.00, Pitch: 4.96, Real Error: -13.04, Error: 6.52, Output: 197.13, PWM: 197, I: -76.52, D: -250.83
+Setpoint: 18.00, Pitch: 8.67, Real Error: -9.33, Error: 4.66, Output: 109.64, PWM: 130, I: -74.62, D: -167.93
+Setpoint: 18.00, Pitch: 4.92, Real Error: -13.08, Error: 6.54, Output: 168.90, PWM: 168, I: -71.95, D: -217.96
+Setpoint: 18.00, Pitch: 5.70, Real Error: -12.30, Error: 6.15, Output: 139.45, PWM: 139, I: -69.44, D: -187.36
+Setpoint: 18.00, Pitch: 2.17, Real Error: -15.83, Error: 7.91, Output: 193.58, PWM: 193, I: -66.21, D: -232.09
+Setpoint: 18.00, Pitch: 3.01, Real Error: -14.99, Error: 7.50, Output: 162.42, PWM: 162, I: -63.15, D: -199.34
+Setpoint: 18.00, Pitch: 0.80, Real Error: -17.20, Error: 8.60, Output: 191.31, PWM: 191, I: -59.64, D: -220.84
+Setpoint: 18.00, Pitch: 3.60, Real Error: -14.40, Error: 7.20, Output: 124.27, PWM: 130, I: -56.70, D: -155.77
+Setpoint: 18.00, Pitch: 2.38, Real Error: -15.62, Error: 7.81, Output: 137.79, PWM: 137, I: -53.52, D: -163.97
+Setpoint: 18.00, Pitch: 3.91, Real Error: -14.09, Error: 7.04, Output: 98.86, PWM: 130, I: -50.64, D: -124.85
+Setpoint: 18.00, Pitch: 3.47, Real Error: -14.53, Error: 7.26, Output: 100.09, PWM: 130, I: -47.68, D: -122.35
+Setpoint: 18.00, Pitch: 3.72, Real Error: -14.28, Error: 7.14, Output: 88.60, PWM: 130, I: -44.77, D: -108.37
+Setpoint: 18.00, Pitch: 2.79, Real Error: -15.21, Error: 7.61, Output: 100.41, PWM: 130, I: -41.66, D: -115.45
+Setpoint: 18.00, Pitch: 2.00, Real Error: -16.00, Error: 8.00, Output: 109.15, PWM: 130, I: -38.40, D: -119.55
+Setpoint: 18.00, Pitch: 1.87, Real Error: -16.13, Error: 8.06, Output: 105.23, PWM: 130, I: -35.11, D: -112.12
+Setpoint: 18.00, Pitch: 2.07, Real Error: -15.93, Error: 7.96, Output: 95.76, PWM: 130, I: -31.86, D: -99.75
+Setpoint: 18.00, Pitch: 3.00, Real Error: -15.00, Error: 7.50, Output: 73.61, PWM: 130, I: -28.80, D: -76.15
+Setpoint: 18.00, Pitch: 4.06, Real Error: -13.94, Error: 6.97, Output: 50.58, PWM: 130, I: -25.95, D: -52.13
+Setpoint: 18.00, Pitch: 5.10, Real Error: -12.90, Error: 6.45, Output: 29.61, PWM: 130, I: -23.32, D: -30.35
+Setpoint: 18.00, Pitch: 5.85, Real Error: -12.15, Error: 6.08, Output: 15.64, PWM: 130, I: -20.84, D: -15.22
+Setpoint: 18.00, Pitch: 6.38, Real Error: -11.62, Error: 5.81, Output: 6.76, PWM: 130, I: -18.47, D: -4.91
+Setpoint: 18.00, Pitch: 6.59, Real Error: -11.41, Error: 5.71, Output: 4.91, PWM: 130, I: -16.15, D: -1.08
+Setpoint: 18.00, Pitch: 6.57, Real Error: -11.43, Error: 5.71, Output: 7.42, PWM: 130, I: -13.81, D: -1.24
+Setpoint: 18.00, Pitch: 6.51, Real Error: -11.49, Error: 5.74, Output: 10.79, PWM: 130, I: -11.47, D: -2.16
+Setpoint: 18.00, Pitch: 6.19, Real Error: -11.81, Error: 5.90, Output: 18.98, PWM: 130, I: -9.06, D: -7.38
+Setpoint: 18.00, Pitch: 5.93, Real Error: -12.07, Error: 6.04, Output: 25.87, PWM: 130, I: -6.60, D: -11.34
+Setpoint: 18.00, Pitch: 5.47, Real Error: -12.53, Error: 6.26, Output: 35.97, PWM: 130, I: -4.04, D: -18.09
+Setpoint: 18.00, Pitch: 4.59, Real Error: -13.41, Error: 6.70, Output: 53.73, PWM: 130, I: -1.31, D: -31.57
+Setpoint: 18.00, Pitch: 3.38, Real Error: -14.62, Error: 7.31, Output: 76.85, PWM: 130, I: 1.67, D: -49.59
+Setpoint: 18.00, Pitch: 2.63, Real Error: -15.37, Error: 7.69, Output: 90.06, PWM: 130, I: 4.81, D: -58.34
+Setpoint: 18.00, Pitch: 1.87, Real Error: -16.13, Error: 8.06, Output: 102.80, PWM: 130, I: 8.10, D: -66.47
+Setpoint: 18.00, Pitch: 0.92, Real Error: -17.08, Error: 8.54, Output: 118.68, PWM: 130, I: 11.58, D: -77.20
+Setpoint: 18.00, Pitch: 0.42, Real Error: -17.58, Error: 8.79, Output: 125.48, PWM: 130, I: 15.17, D: -79.54
+Setpoint: 18.00, Pitch: 0.45, Real Error: -17.55, Error: 8.77, Output: 122.09, PWM: 130, I: 18.75, D: -72.63
+Setpoint: 18.00, Pitch: 0.45, Real Error: -17.55, Error: 8.77, Output: 119.86, PWM: 130, I: 22.33, D: -66.82
+Setpoint: 18.00, Pitch: 0.57, Real Error: -17.43, Error: 8.72, Output: 115.92, PWM: 130, I: 25.89, D: -59.53
+Setpoint: 18.00, Pitch: 0.72, Real Error: -17.28, Error: 8.64, Output: 111.73, PWM: 130, I: 29.41, D: -52.09
+Setpoint: 18.00, Pitch: 1.14, Real Error: -16.86, Error: 8.43, Output: 103.21, PWM: 130, I: 32.85, D: -40.86
+Setpoint: 18.00, Pitch: 1.61, Real Error: -16.39, Error: 8.19, Output: 94.46, PWM: 130, I: 36.19, D: -29.59
+Setpoint: 18.00, Pitch: 1.81, Real Error: -16.19, Error: 8.09, Output: 91.67, PWM: 130, I: 39.49, D: -23.85
+Setpoint: 18.00, Pitch: 1.74, Real Error: -16.26, Error: 8.13, Output: 94.50, PWM: 130, I: 42.81, D: -23.23
+Setpoint: 18.00, Pitch: 1.59, Real Error: -16.41, Error: 8.21, Output: 98.80, PWM: 130, I: 46.16, D: -23.92
+Setpoint: 18.00, Pitch: 1.51, Real Error: -16.49, Error: 8.24, Output: 101.62, PWM: 130, I: 49.52, D: -23.24
+Setpoint: 18.00, Pitch: 1.34, Real Error: -16.66, Error: 8.33, Output: 106.45, PWM: 130, I: 52.92, D: -24.37
+Setpoint: 18.00, Pitch: 0.87, Real Error: -17.13, Error: 8.57, Output: 116.73, PWM: 130, I: 56.42, D: -30.34
+Setpoint: 18.00, Pitch: 0.09, Real Error: -17.91, Error: 8.96, Output: 132.58, PWM: 132, I: 60.07, D: -41.16
+Setpoint: 18.00, Pitch: -0.36, Real Error: -18.36, Error: 18.36, Output: 209.00, PWM: 209, I: 67.56, D: -45.38
+Setpoint: 18.00, Pitch: 1.47, Real Error: -16.53, Error: 8.27, Output: 110.75, PWM: 130, I: 70.93, D: -10.88
+Setpoint: 18.00, Pitch: 0.32, Real Error: -17.68, Error: 8.84, Output: 134.97, PWM: 134, I: 74.54, D: -29.49
+Setpoint: 18.00, Pitch: 1.64, Real Error: -16.36, Error: 8.18, Output: 111.25, PWM: 130, I: 77.88, D: -4.74
+Setpoint: 18.00, Pitch: 1.27, Real Error: -16.73, Error: 8.37, Output: 121.24, PWM: 130, I: 81.29, D: -10.66
+Setpoint: 18.00, Pitch: 2.65, Real Error: -15.35, Error: 7.67, Output: 97.66, PWM: 130, I: 84.42, D: 13.62
+Setpoint: 18.00, Pitch: 3.24, Real Error: -14.76, Error: 7.38, Output: 90.71, PWM: 130, I: 87.43, D: 22.55
+Setpoint: 18.00, Pitch: 4.97, Real Error: -13.03, Error: 6.52, Output: 63.00, PWM: 130, I: 90.09, D: 49.91
+Setpoint: 18.00, Pitch: 5.94, Real Error: -12.06, Error: 6.03, Output: 51.15, PWM: 130, I: 92.55, D: 62.50
+Setpoint: 18.00, Pitch: 6.43, Real Error: -11.57, Error: 5.79, Output: 49.52, PWM: 130, I: 94.91, D: 65.65
+Setpoint: 18.00, Pitch: 7.04, Real Error: -10.96, Error: 5.48, Output: 45.61, PWM: 130, I: 97.15, D: 70.72
+Setpoint: 18.00, Pitch: 7.48, Real Error: -10.52, Error: 5.26, Output: 45.05, PWM: 130, I: 99.30, D: 72.64
+Setpoint: 18.00, Pitch: 7.44, Real Error: -10.56, Error: 5.28, Output: 53.92, PWM: 130, I: 101.45, D: 66.02
+Setpoint: 18.00, Pitch: 7.64, Real Error: -10.36, Error: 5.18, Output: 57.51, PWM: 130, I: 103.56, D: 64.19
+Setpoint: 18.00, Pitch: 7.76, Real Error: -10.24, Error: 5.12, Output: 62.53, PWM: 130, I: 105.65, D: 61.04
+Setpoint: 18.00, Pitch: 7.96, Real Error: -10.04, Error: 5.02, Output: 65.63, PWM: 130, I: 107.70, D: 59.63
+Setpoint: 18.00, Pitch: 8.10, Real Error: -9.90, Error: 4.95, Output: 69.94, PWM: 130, I: 109.72, D: 57.11
+Setpoint: 18.00, Pitch: 8.33, Real Error: -9.67, Error: 4.83, Output: 72.07, PWM: 130, I: 111.69, D: 56.54
+Setpoint: 18.00, Pitch: 8.48, Real Error: -9.52, Error: 4.76, Output: 75.86, PWM: 130, I: 113.64, D: 54.45
+Setpoint: 18.00, Pitch: 8.76, Real Error: -9.24, Error: 4.62, Output: 76.72, PWM: 130, I: 115.52, D: 54.96
+Setpoint: 18.00, Pitch: 8.86, Real Error: -9.14, Error: 4.57, Output: 81.11, PWM: 130, I: 117.38, D: 52.26
+Setpoint: 18.00, Pitch: 8.66, Real Error: -9.34, Error: 4.67, Output: 91.08, PWM: 130, I: 119.29, D: 44.57
+Setpoint: 18.00, Pitch: 8.26, Real Error: -9.74, Error: 4.87, Output: 104.09, PWM: 130, I: 121.28, D: 34.24
+Setpoint: 18.00, Pitch: 7.88, Real Error: -10.12, Error: 5.06, Output: 116.01, PWM: 130, I: 123.34, D: 25.05
+Setpoint: 18.00, Pitch: 7.39, Real Error: -10.61, Error: 5.31, Output: 129.27, PWM: 130, I: 125.51, D: 14.81
+Setpoint: 18.00, Pitch: 6.91, Real Error: -11.09, Error: 5.55, Output: 141.70, PWM: 141, I: 127.77, D: 5.49
+Setpoint: 18.00, Pitch: 6.21, Real Error: -11.79, Error: 5.89, Output: 157.54, PWM: 157, I: 130.18, D: -6.73
+Setpoint: 18.00, Pitch: 5.46, Real Error: -12.54, Error: 6.27, Output: 173.55, PWM: 173, I: 132.73, D: -18.87
+Setpoint: 18.00, Pitch: 5.54, Real Error: -12.46, Error: 6.23, Output: 173.09, PWM: 173, I: 135.28, D: -16.01
+Setpoint: 18.00, Pitch: 4.73, Real Error: -13.27, Error: 6.64, Output: 189.75, PWM: 189, I: 137.98, D: -28.54
+Setpoint: 18.00, Pitch: 4.96, Real Error: -13.04, Error: 6.52, Output: 185.78, PWM: 185, I: 140.64, D: -22.31
+Setpoint: 18.00, Pitch: 4.11, Real Error: -13.89, Error: 6.94, Output: 202.62, PWM: 202, I: 143.48, D: -34.84
+Setpoint: 18.00, Pitch: 4.69, Real Error: -13.31, Error: 6.66, Output: 191.88, PWM: 191, I: 146.19, D: -22.38
+Setpoint: 18.00, Pitch: 4.44, Real Error: -13.56, Error: 6.78, Output: 197.40, PWM: 197, I: 148.96, D: -24.72
+Setpoint: 18.00, Pitch: 4.96, Real Error: -13.04, Error: 6.52, Output: 188.42, PWM: 188, I: 151.62, D: -13.98
+Setpoint: 18.00, Pitch: 5.56, Real Error: -12.44, Error: 6.22, Output: 178.68, PWM: 178, I: 154.16, D: -2.75
+Setpoint: 18.00, Pitch: 5.69, Real Error: -12.31, Error: 6.15, Output: 178.48, PWM: 178, I: 156.67, D: -0.27
+Setpoint: 18.00, Pitch: 6.43, Real Error: -11.57, Error: 5.79, Output: 167.02, PWM: 167, I: 159.03, D: 12.26
+Setpoint: 18.00, Pitch: 7.37, Real Error: -10.63, Error: 5.32, Output: 152.65, PWM: 152, I: 161.20, D: 27.16
+Setpoint: 18.00, Pitch: 7.71, Real Error: -10.29, Error: 5.15, Output: 150.57, PWM: 150, I: 163.30, D: 30.74
+Setpoint: 18.00, Pitch: 8.22, Real Error: -9.78, Error: 4.89, Output: 145.44, PWM: 145, I: 165.29, D: 36.97
+Setpoint: 18.00, Pitch: 8.64, Real Error: -9.36, Error: 4.68, Output: 142.52, PWM: 142, I: 167.20, D: 41.07
+Setpoint: 18.00, Pitch: 9.75, Real Error: -8.25, Error: 4.13, Output: 126.78, PWM: 130, I: 168.89, D: 56.55
+Setpoint: 18.00, Pitch: 10.97, Real Error: -7.03, Error: 3.52, Output: 109.88, PWM: 130, I: 170.32, D: 72.74

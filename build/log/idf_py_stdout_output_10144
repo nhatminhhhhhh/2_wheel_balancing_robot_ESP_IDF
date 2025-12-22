@@ -1,0 +1,923 @@
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0�ښ�j%�(49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e6b8h (124600) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e6e0 vaddr=3ffb0000 size=01938h (  6456) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=929e0h (600544) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2a08 vaddr=3ffb1938 size=0269ch (  9884) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c50ac vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (456) app_init: ELF file SHA256:  b7c2b42f7...[0m
+[0;32mI (462) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (477) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (489) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFB8328 len 00027CD8 (159 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (525) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (542) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MAIN: Connecting to WiFi...[0m
+[0;32mI (603) wifi:wifi driver task: 3ffc0474, prio:23, stack:6656, core=0[0m
+[0;32mI (613) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (613) wifi:wifi certification version: v7.0[0m
+[0;32mI (613) wifi:config NVS flash: enabled[0m
+[0;32mI (613) wifi:config nano formating: disabled[0m
+[0;32mI (623) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (623) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (633) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (643) wifi:Init static rx buffer num: 10[0m
+[0;32mI (643) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (783) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (783) wifi:enable tsf[0m
+[0;32mI (783) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (803) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (813) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (823) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (843) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (883) wifi:connected with Tran Van Tuan, aid = 17, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (883) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (883) wifi:pm start, type: 1[0m
+
+[0;32mI (883) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (903) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (913) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3893) esp_netif_handlers: sta ip: 192.168.1.192, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.192
+[0;32mI (3893) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3893) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4903) WEBSERVER: [34mPID loaded from NVS - Kp: 4.70, Ki: 3.00, Kd: 2.944[0m[0m
+[0;32mI (4903) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4913) WEBSERVER: Web server started successfully![0m
+[0;32mI (4913) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5423) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5423) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5523) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5523) GPIO: LED GPIO initialized[0m
+[0;32mI (5523) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5533) GPIO: Button GPIO initialized[0m
+[0;32mI (5633) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (5733) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (7033) MAIN: I2C initialized successfully[0m
+[0;32mI (7333) MPU6050: Starting gyro calibration...[0m
+[0;32mI (13043) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (13043) MPU6050: Gyro offsets - X: -410.60, Y: -65.18, Z: 35.42[0m
+Robot ready. Press the button to start balancing...
+Setpoint: 15.00, Measured: 2.06, Error: 12.94, Output: 252.11, PWM: 200, I: 0.78, D: 190.50, Time: 0.020000
+Setpoint: 15.00, Measured: 10.32, Error: 4.68, Output: 72.97, PWM: 72, I: 1.06, D: 49.90, Time: 0.020000
+Setpoint: 15.00, Measured: 12.26, Error: 2.74, Output: 30.42, PWM: 70, I: 1.22, D: 16.31, Time: 0.020000
+Setpoint: 15.00, Measured: 13.92, Error: 1.08, Output: -3.49, PWM: 70, I: 1.29, D: -9.83, Time: 0.020000
+Setpoint: 15.00, Measured: 15.67, Error: -0.67, Output: -36.41, PWM: 70, I: 1.25, D: -34.52, Time: 0.020000
+Setpoint: 15.00, Measured: 16.22, Error: -1.22, Output: -43.70, PWM: 70, I: 1.17, D: -39.16, Time: 0.020000
+Setpoint: 15.00, Measured: 16.43, Error: -1.43, Output: -43.96, PWM: 70, I: 1.09, D: -38.34, Time: 0.020000
+Setpoint: 15.00, Measured: 17.25, Error: -2.25, Output: -56.28, PWM: 70, I: 0.95, D: -46.64, Time: 0.020000
+Setpoint: 15.00, Measured: 17.76, Error: -2.76, Output: -61.71, PWM: 70, I: 0.79, D: -49.51, Time: 0.020000
+Setpoint: 15.00, Measured: 18.20, Error: -3.20, Output: -65.45, PWM: 70, I: 0.59, D: -50.99, Time: 0.020000
+Setpoint: 15.00, Measured: 18.64, Error: -3.64, Output: -69.16, PWM: 70, I: 0.38, D: -52.41, Time: 0.020000
+Setpoint: 15.00, Measured: 19.35, Error: -4.35, Output: -77.81, PWM: 77, I: 0.12, D: -57.50, Time: 0.020000
+Setpoint: 15.00, Measured: 19.87, Error: -4.87, Output: -82.52, PWM: 82, I: -0.18, D: -59.46, Time: 0.020000
+Setpoint: 15.00, Measured: 19.85, Error: -4.85, Output: -76.56, PWM: 76, I: -0.47, D: -53.28, Time: 0.020000
+Setpoint: 15.00, Measured: 19.51, Error: -4.51, Output: -64.83, PWM: 70, I: -0.74, D: -42.89, Time: 0.020000
+Setpoint: 15.00, Measured: 19.98, Error: -4.98, Output: -70.02, PWM: 70, I: -1.04, D: -45.56, Time: 0.020000
+Setpoint: 15.00, Measured: 20.11, Error: -5.11, Output: -68.20, PWM: 70, I: -1.34, D: -42.85, Time: 0.020000
+Setpoint: 15.00, Measured: 20.21, Error: -5.21, Output: -66.27, PWM: 70, I: -1.66, D: -40.11, Time: 0.020000
+Setpoint: 15.00, Measured: 20.00, Error: -5.00, Output: -58.37, PWM: 70, I: -1.96, D: -32.92, Time: 0.020000
+Setpoint: 15.00, Measured: 19.62, Error: -4.62, Output: -48.10, PWM: 70, I: -2.23, D: -24.13, Time: 0.020000
+Setpoint: 15.00, Measured: 19.07, Error: -4.07, Output: -35.11, PWM: 70, I: -2.48, D: -13.52, Time: 0.020000
+Setpoint: 15.00, Measured: 18.74, Error: -3.74, Output: -27.67, PWM: 70, I: -2.70, D: -7.38, Time: 0.020000
+Setpoint: 15.00, Measured: 18.33, Error: -3.33, Output: -19.22, PWM: 70, I: -2.90, D: -0.64, Time: 0.020000
+Setpoint: 15.00, Measured: 17.98, Error: -2.98, Output: -12.40, PWM: 70, I: -3.08, D: 4.67, Time: 0.020000
+Setpoint: 15.00, Measured: 17.50, Error: -2.50, Output: -3.79, PWM: 70, I: -3.23, D: 11.20, Time: 0.020000
+Setpoint: 15.00, Measured: 17.01, Error: -2.01, Output: 4.58, PWM: 70, I: -3.35, D: 17.37, Time: 0.020000
+Setpoint: 15.00, Measured: 16.34, Error: -1.34, Output: 15.79, PWM: 70, I: -3.43, D: 25.50, Time: 0.020000
+Setpoint: 15.00, Measured: 16.37, Error: -1.37, Output: 12.40, PWM: 70, I: -3.51, D: 22.38, Time: 0.020000
+Setpoint: 15.00, Measured: 16.01, Error: -1.01, Output: 17.28, PWM: 70, I: -3.57, D: 25.58, Time: 0.020000
+Setpoint: 15.00, Measured: 15.36, Error: -0.36, Output: 27.26, PWM: 70, I: -3.60, D: 32.55, Time: 0.020000
+Setpoint: 15.00, Measured: 14.39, Error: 0.61, Output: 42.93, PWM: 70, I: -3.56, D: 43.60, Time: 0.020000
+Setpoint: 15.00, Measured: 13.64, Error: 1.36, Output: 53.18, PWM: 70, I: -3.48, D: 50.26, Time: 0.020000
+Setpoint: 15.00, Measured: 13.05, Error: 1.95, Output: 59.75, PWM: 70, I: -3.36, D: 53.94, Time: 0.020000
+Setpoint: 15.00, Measured: 12.36, Error: 2.64, Output: 67.77, PWM: 70, I: -3.20, D: 58.59, Time: 0.020000
+Setpoint: 15.00, Measured: 11.82, Error: 3.18, Output: 72.59, PWM: 72, I: -3.01, D: 60.68, Time: 0.020000
+Setpoint: 15.00, Measured: 11.41, Error: 3.59, Output: 74.80, PWM: 74, I: -2.80, D: 60.72, Time: 0.020000
+Setpoint: 15.00, Measured: 11.11, Error: 3.89, Output: 74.83, PWM: 74, I: -2.56, D: 59.10, Time: 0.020000
+Setpoint: 15.00, Measured: 10.15, Error: 4.85, Output: 87.89, PWM: 87, I: -2.27, D: 67.34, Time: 0.020000
+Setpoint: 15.00, Measured: 9.21, Error: 5.79, Output: 99.76, PWM: 99, I: -1.92, D: 74.45, Time: 0.020000
+Setpoint: 15.00, Measured: 8.58, Error: 6.42, Output: 104.86, PWM: 104, I: -1.54, D: 76.22, Time: 0.020000
+Setpoint: 15.00, Measured: 7.82, Error: 7.18, Output: 112.36, PWM: 112, I: -1.11, D: 79.73, Time: 0.020000
+Setpoint: 15.00, Measured: 7.10, Error: 7.90, Output: 118.95, PWM: 118, I: -0.63, D: 82.44, Time: 0.020000
+Setpoint: 15.00, Measured: 6.37, Error: 8.63, Output: 125.37, PWM: 125, I: -0.12, D: 84.92, Time: 0.020000
+Setpoint: 15.00, Measured: 5.89, Error: 9.11, Output: 126.70, PWM: 126, I: 0.43, D: 83.46, Time: 0.020000
+Setpoint: 15.00, Measured: 5.45, Error: 9.55, Output: 127.52, PWM: 127, I: 1.00, D: 81.63, Time: 0.020000
+Setpoint: 15.00, Measured: 5.16, Error: 9.84, Output: 125.61, PWM: 125, I: 1.59, D: 77.75, Time: 0.020000
+Setpoint: 15.00, Measured: 4.58, Error: 10.42, Output: 129.68, PWM: 129, I: 2.22, D: 78.48, Time: 0.020000
+Setpoint: 15.00, Measured: 3.68, Error: 11.32, Output: 139.94, PWM: 139, I: 2.90, D: 83.84, Time: 0.020000
+Setpoint: 15.00, Measured: 3.23, Error: 11.77, Output: 141.12, PWM: 141, I: 3.61, D: 82.17, Time: 0.020000
+Setpoint: 15.00, Measured: 2.65, Error: 12.35, Output: 144.83, PWM: 144, I: 4.35, D: 82.44, Time: 0.020000
+Setpoint: 15.00, Measured: 2.51, Error: 12.49, Output: 140.06, PWM: 140, I: 5.10, D: 76.26, Time: 0.020000
+Setpoint: 15.00, Measured: 2.10, Error: 12.90, Output: 141.18, PWM: 141, I: 5.87, D: 74.67, Time: 0.020000
+Setpoint: 15.00, Measured: 1.91, Error: 13.09, Output: 138.18, PWM: 138, I: 6.66, D: 70.00, Time: 0.020000
+Setpoint: 15.00, Measured: 1.46, Error: 13.54, Output: 140.71, PWM: 140, I: 7.47, D: 69.60, Time: 0.020000
+Setpoint: 15.00, Measured: 1.05, Error: 13.95, Output: 142.59, PWM: 142, I: 8.30, D: 68.71, Time: 0.020000
+Setpoint: 15.00, Measured: 0.46, Error: 14.54, Output: 147.93, PWM: 147, I: 9.18, D: 70.43, Time: 0.020000
+Setpoint: 15.00, Measured: -0.23, Error: 15.23, Output: 155.33, PWM: 155, I: 10.09, D: 73.64, Time: 0.020000
+Setpoint: 15.00, Measured: -1.22, Error: 16.22, Output: 168.18, PWM: 168, I: 11.06, D: 80.87, Time: 0.020000
+Setpoint: 15.00, Measured: -2.13, Error: 17.13, Output: 178.79, PWM: 178, I: 12.09, D: 86.17, Time: 0.020000
+Setpoint: 15.00, Measured: -2.75, Error: 17.75, Output: 183.25, PWM: 183, I: 13.16, D: 86.66, Time: 0.020000
+Setpoint: 15.00, Measured: -2.69, Error: 17.69, Output: 174.47, PWM: 174, I: 14.22, D: 77.10, Time: 0.020000
+Setpoint: 15.00, Measured: -2.53, Error: 17.53, Output: 164.71, PWM: 164, I: 15.27, D: 67.04, Time: 0.020000
+Setpoint: 15.00, Measured: -2.72, Error: 17.72, Output: 162.74, PWM: 162, I: 16.33, D: 63.12, Time: 0.020000
+Setpoint: 15.00, Measured: -2.78, Error: 17.78, Output: 158.68, PWM: 158, I: 17.40, D: 57.71, Time: 0.020000
+Setpoint: 15.00, Measured: -3.11, Error: 18.11, Output: 160.43, PWM: 160, I: 18.49, D: 56.82, Time: 0.020000
+Setpoint: 15.00, Measured: -3.69, Error: 18.69, Output: 167.17, PWM: 167, I: 19.61, D: 59.69, Time: 0.020000
+Setpoint: 15.00, Measured: -4.13, Error: 19.13, Output: 170.83, PWM: 170, I: 20.76, D: 60.15, Time: 0.020000
+Setpoint: 15.00, Measured: -4.28, Error: 19.28, Output: 168.77, PWM: 168, I: 21.91, D: 56.26, Time: 0.020000
+Setpoint: 15.00, Measured: -4.11, Error: 19.11, Output: 161.03, PWM: 161, I: 23.06, D: 48.16, Time: 0.020000
+Setpoint: 15.00, Measured: -3.35, Error: 18.35, Output: 142.56, PWM: 142, I: 24.16, D: 32.16, Time: 0.020000
+Setpoint: 15.00, Measured: -3.05, Error: 18.05, Output: 134.64, PWM: 134, I: 25.24, D: 24.56, Time: 0.020000
+Setpoint: 15.00, Measured: -2.59, Error: 17.59, Output: 124.28, PWM: 124, I: 26.30, D: 15.32, Time: 0.020000
+Setpoint: 15.00, Measured: -1.94, Error: 16.94, Output: 111.18, PWM: 111, I: 27.32, D: 4.24, Time: 0.020000
+Setpoint: 15.00, Measured: -1.65, Error: 16.65, Output: 106.11, PWM: 106, I: 28.31, D: -0.46, Time: 0.020000
+Setpoint: 15.00, Measured: -1.60, Error: 16.60, Output: 106.12, PWM: 106, I: 29.31, D: -1.19, Time: 0.020000
+Setpoint: 15.00, Measured: -1.43, Error: 16.43, Output: 104.06, PWM: 104, I: 30.30, D: -3.48, Time: 0.020000
+Setpoint: 15.00, Measured: -1.13, Error: 16.13, Output: 99.48, PWM: 99, I: 31.26, D: -7.59, Time: 0.020000
+Setpoint: 15.00, Measured: -0.51, Error: 15.51, Output: 89.11, PWM: 89, I: 32.19, D: -15.98, Time: 0.020000
+Setpoint: 15.00, Measured: 0.45, Error: 14.55, Output: 72.96, PWM: 72, I: 33.07, D: -28.49, Time: 0.020000
+Setpoint: 15.00, Measured: 1.65, Error: 13.35, Output: 53.31, PWM: 70, I: 33.87, D: -43.30, Time: 0.020000
+Setpoint: 15.00, Measured: 2.77, Error: 12.23, Output: 36.64, PWM: 70, I: 34.60, D: -55.45, Time: 0.020000
+Setpoint: 15.00, Measured: 3.78, Error: 11.22, Output: 23.31, PWM: 70, I: 35.28, D: -64.72, Time: 0.020000
+Setpoint: 15.00, Measured: 4.67, Error: 10.33, Output: 13.04, PWM: 70, I: 35.90, D: -71.41, Time: 0.020000
+Setpoint: 15.00, Measured: 4.88, Error: 10.12, Output: 16.68, PWM: 70, I: 36.50, D: -67.38, Time: 0.020000
+Setpoint: 15.00, Measured: 4.60, Error: 10.40, Output: 29.52, PWM: 70, I: 37.13, D: -56.49, Time: 0.020000
+Setpoint: 15.00, Measured: 4.40, Error: 10.60, Output: 39.66, PWM: 70, I: 37.76, D: -47.92, Time: 0.020000
+Setpoint: 15.00, Measured: 3.79, Error: 11.21, Output: 56.88, PWM: 70, I: 38.44, D: -34.22, Time: 0.020000
+Setpoint: 15.00, Measured: 3.52, Error: 11.48, Output: 66.31, PWM: 70, I: 39.12, D: -26.76, Time: 0.020000
+Setpoint: 15.00, Measured: 3.48, Error: 11.52, Output: 70.50, PWM: 70, I: 39.82, D: -23.47, Time: 0.020000
+Setpoint: 15.00, Measured: 3.22, Error: 11.78, Output: 78.57, PWM: 78, I: 40.52, D: -17.31, Time: 0.020000
+Setpoint: 15.00, Measured: 3.04, Error: 11.96, Output: 84.60, PWM: 84, I: 41.24, D: -12.87, Time: 0.020000
+Setpoint: 15.00, Measured: 2.85, Error: 12.15, Output: 90.27, PWM: 90, I: 41.97, D: -8.81, Time: 0.020000
+Setpoint: 15.00, Measured: 2.60, Error: 12.40, Output: 96.66, PWM: 96, I: 42.71, D: -4.32, Time: 0.020000
+Setpoint: 15.00, Measured: 2.16, Error: 12.84, Output: 106.45, PWM: 106, I: 43.48, D: 2.62, Time: 0.020000
+Setpoint: 15.00, Measured: 1.24, Error: 13.76, Output: 124.96, PWM: 124, I: 44.31, D: 15.96, Time: 0.020000
+Setpoint: 15.00, Measured: 0.54, Error: 14.46, Output: 137.77, PWM: 137, I: 45.18, D: 24.62, Time: 0.020000
+Setpoint: 15.00, Measured: 0.26, Error: 14.74, Output: 141.66, PWM: 141, I: 46.06, D: 26.31, Time: 0.020000
+Setpoint: 15.00, Measured: -0.24, Error: 15.24, Output: 149.67, PWM: 149, I: 46.98, D: 31.05, Time: 0.020000
+Setpoint: 15.00, Measured: -0.86, Error: 15.86, Output: 159.47, PWM: 159, I: 47.93, D: 37.01, Time: 0.020000
+Setpoint: 15.00, Measured: -0.83, Error: 15.83, Output: 156.16, PWM: 156, I: 48.88, D: 32.88, Time: 0.020000
+Setpoint: 15.00, Measured: -1.16, Error: 16.16, Output: 160.26, PWM: 160, I: 49.85, D: 34.46, Time: 0.020000
+Setpoint: 15.00, Measured: -2.20, Error: 17.20, Output: 178.10, PWM: 178, I: 50.88, D: 46.37, Time: 0.020000
+Setpoint: 15.00, Measured: -2.50, Error: 17.50, Output: 180.23, PWM: 180, I: 51.93, D: 46.06, Time: 0.020000
+Setpoint: 15.00, Measured: -2.80, Error: 17.80, Output: 182.52, PWM: 182, I: 53.00, D: 45.87, Time: 0.020000
+Setpoint: 15.00, Measured: -3.43, Error: 18.43, Output: 191.28, PWM: 191, I: 54.10, D: 50.57, Time: 0.020000
+Setpoint: 15.00, Measured: -3.96, Error: 18.96, Output: 197.59, PWM: 197, I: 55.24, D: 53.26, Time: 0.020000
+Setpoint: 15.00, Measured: -4.79, Error: 19.79, Output: 209.71, PWM: 200, I: 56.43, D: 60.26, Time: 0.020000
+Setpoint: 15.00, Measured: -4.38, Error: 19.38, Output: 196.90, PWM: 196, I: 57.59, D: 48.21, Time: 0.020000
+Setpoint: 15.00, Measured: -5.00, Error: 20.00, Output: 205.28, PWM: 200, I: 58.79, D: 52.48, Time: 0.020000
+Setpoint: 15.00, Measured: -5.04, Error: 20.04, Output: 202.02, PWM: 200, I: 59.99, D: 47.83, Time: 0.020000
+Setpoint: 15.00, Measured: -5.18, Error: 20.18, Output: 201.06, PWM: 200, I: 61.20, D: 45.03, Time: 0.020000
+Setpoint: 15.00, Measured: -4.90, Error: 19.90, Output: 192.35, PWM: 192, I: 62.40, D: 36.43, Time: 0.020000
+Setpoint: 15.00, Measured: -4.61, Error: 19.61, Output: 184.26, PWM: 184, I: 63.57, D: 28.53, Time: 0.020000
+Setpoint: 15.00, Measured: -4.36, Error: 19.36, Output: 177.75, PWM: 177, I: 64.74, D: 22.02, Time: 0.020000
+Setpoint: 15.00, Measured: -2.02, Error: 17.02, Output: 131.14, PWM: 131, I: 65.76, D: -14.62, Time: 0.020000
+Setpoint: 15.00, Measured: -1.61, Error: 16.61, Output: 125.57, PWM: 125, I: 66.75, D: -19.24, Time: 0.020000
+Setpoint: 15.00, Measured: -0.31, Error: 15.31, Output: 103.20, PWM: 103, I: 67.67, D: -36.43, Time: 0.020000
+Setpoint: 15.00, Measured: 1.18, Error: 13.82, Output: 78.71, PWM: 78, I: 68.50, D: -54.74, Time: 0.020000
+Setpoint: 15.00, Measured: 2.58, Error: 12.42, Output: 57.80, PWM: 70, I: 69.25, D: -69.82, Time: 0.020000
+Setpoint: 15.00, Measured: 4.80, Error: 10.20, Output: 22.21, PWM: 70, I: 69.86, D: -95.57, Time: 0.020000
+Setpoint: 15.00, Measured: 6.62, Error: 8.38, Output: -2.98, PWM: 70, I: 70.36, D: -112.74, Time: 0.020000
+Setpoint: 15.00, Measured: 8.45, Error: 6.55, Output: -26.92, PWM: 70, I: 70.75, D: -128.45, Time: 0.020000
+Setpoint: 15.00, Measured: 10.84, Error: 4.16, Output: -60.19, PWM: 70, I: 71.00, D: -150.75, Time: 0.020000
+Setpoint: 15.00, Measured: 12.72, Error: 2.28, Output: -81.41, PWM: 81, I: 71.14, D: -163.29, Time: 0.020000
+Setpoint: 15.00, Measured: 14.28, Error: 0.72, Output: -95.45, PWM: 95, I: 71.18, D: -170.01, Time: 0.020000
+Setpoint: 15.00, Measured: 15.39, Error: -0.39, Output: -100.02, PWM: 100, I: 71.16, D: -169.35, Time: 0.020000
+Setpoint: 15.00, Measured: 15.95, Error: -0.95, Output: -94.06, PWM: 94, I: 71.10, D: -160.68, Time: 0.020000
+Setpoint: 15.00, Measured: 15.69, Error: -0.69, Output: -72.95, PWM: 72, I: 71.06, D: -140.76, Time: 0.020000
+Setpoint: 15.00, Measured: 15.53, Error: -0.53, Output: -55.84, PWM: 70, I: 71.03, D: -124.36, Time: 0.020000
+Setpoint: 15.00, Measured: 15.17, Error: -0.17, Output: -36.29, PWM: 70, I: 71.02, D: -106.53, Time: 0.020000
+Setpoint: 15.00, Measured: 14.68, Error: 0.32, Output: -16.22, PWM: 70, I: 71.04, D: -88.75, Time: 0.020000
+Setpoint: 15.00, Measured: 13.90, Error: 1.10, Output: 7.94, PWM: 70, I: 71.10, D: -68.34, Time: 0.020000
+Setpoint: 15.00, Measured: 13.59, Error: 1.41, Output: 20.84, PWM: 70, I: 71.19, D: -56.97, Time: 0.020000
+Setpoint: 15.00, Measured: 13.02, Error: 1.98, Output: 37.66, PWM: 70, I: 71.31, D: -42.94, Time: 0.020000
+Setpoint: 15.00, Measured: 12.38, Error: 2.62, Output: 54.63, PWM: 70, I: 71.47, D: -29.16, Time: 0.020000
+Setpoint: 15.00, Measured: 11.88, Error: 3.12, Output: 67.49, PWM: 70, I: 71.65, D: -18.84, Time: 0.020000
+Setpoint: 15.00, Measured: 11.93, Error: 3.07, Output: 68.50, PWM: 70, I: 71.84, D: -17.76, Time: 0.020000
+Setpoint: 15.00, Measured: 11.18, Error: 3.82, Output: 85.11, PWM: 85, I: 72.07, D: -4.91, Time: 0.020000
+Setpoint: 15.00, Measured: 10.41, Error: 4.59, Output: 100.84, PWM: 100, I: 72.34, D: 6.92, Time: 0.020000
+Setpoint: 15.00, Measured: 10.36, Error: 4.64, Output: 101.38, PWM: 101, I: 72.62, D: 6.95, Time: 0.020000
+Setpoint: 15.00, Measured: 9.41, Error: 5.59, Output: 119.41, PWM: 119, I: 72.95, D: 20.19, Time: 0.020000
+Setpoint: 15.00, Measured: 8.06, Error: 6.94, Output: 144.00, PWM: 144, I: 73.37, D: 38.03, Time: 0.020000
+Setpoint: 15.00, Measured: 7.04, Error: 7.96, Output: 160.60, PWM: 160, I: 73.85, D: 49.33, Time: 0.020000
+Setpoint: 15.00, Measured: 6.25, Error: 8.75, Output: 171.40, PWM: 171, I: 74.37, D: 55.92, Time: 0.020000
+Setpoint: 15.00, Measured: 5.84, Error: 9.16, Output: 174.39, PWM: 174, I: 74.92, D: 56.42, Time: 0.020000
+Setpoint: 15.00, Measured: 5.76, Error: 9.24, Output: 170.80, PWM: 170, I: 75.48, D: 51.91, Time: 0.020000
+Setpoint: 15.00, Measured: 4.80, Error: 10.20, Output: 185.01, PWM: 185, I: 76.09, D: 60.97, Time: 0.020000
+Setpoint: 15.00, Measured: 4.28, Error: 10.72, Output: 189.64, PWM: 189, I: 76.73, D: 62.51, Time: 0.020000
+Setpoint: 15.00, Measured: 3.53, Error: 11.47, Output: 198.56, PWM: 198, I: 77.42, D: 67.24, Time: 0.020000
+Setpoint: 15.00, Measured: 3.17, Error: 11.83, Output: 199.64, PWM: 199, I: 78.13, D: 65.89, Time: 0.020000
+Setpoint: 15.00, Measured: 2.48, Error: 12.52, Output: 207.08, PWM: 200, I: 78.88, D: 69.36, Time: 0.020000
+Setpoint: 15.00, Measured: 1.85, Error: 13.15, Output: 213.27, PWM: 200, I: 79.67, D: 71.78, Time: 0.020000
+Setpoint: 15.00, Measured: 1.08, Error: 13.92, Output: 221.92, PWM: 200, I: 80.51, D: 75.97, Time: 0.020000
+Setpoint: 15.00, Measured: -0.05, Error: 15.05, Output: 237.03, PWM: 200, I: 81.41, D: 84.89, Time: 0.020000
+Setpoint: 15.00, Measured: -1.04, Error: 16.04, Output: 248.76, PWM: 200, I: 82.37, D: 91.01, Time: 0.020000
+Setpoint: 15.00, Measured: -1.74, Error: 16.74, Output: 254.30, PWM: 200, I: 83.38, D: 92.24, Time: 0.020000
+Setpoint: 15.00, Measured: -2.33, Error: 17.33, Output: 257.53, PWM: 200, I: 84.42, D: 91.67, Time: 0.020000
+Setpoint: 15.00, Measured: -2.84, Error: 17.84, Output: 259.43, PWM: 200, I: 85.49, D: 90.08, Time: 0.020000
+Setpoint: 15.00, Measured: -2.75, Error: 17.75, Output: 249.59, PWM: 200, I: 86.55, D: 79.63, Time: 0.020000
+Setpoint: 15.00, Measured: -2.13, Error: 17.13, Output: 230.74, PWM: 200, I: 87.58, D: 62.64, Time: 0.020000
+Setpoint: 15.00, Measured: -1.58, Error: 16.58, Output: 214.73, PWM: 200, I: 88.57, D: 48.23, Time: 0.020000
+Setpoint: 15.00, Measured: -0.77, Error: 15.77, Output: 195.04, PWM: 195, I: 89.52, D: 31.42, Time: 0.020000
+Setpoint: 15.00, Measured: 0.55, Error: 14.45, Output: 167.29, PWM: 167, I: 90.39, D: 8.97, Time: 0.020000
+Setpoint: 15.00, Measured: 1.37, Error: 13.63, Output: 151.20, PWM: 151, I: 91.20, D: -4.06, Time: 0.020000
+Setpoint: 15.00, Measured: 2.15, Error: 12.85, Output: 137.25, PWM: 137, I: 91.98, D: -15.12, Time: 0.020000
+Setpoint: 15.00, Measured: 1.95, Error: 13.05, Output: 143.47, PWM: 143, I: 92.76, D: -10.64, Time: 0.020000
+Setpoint: 15.00, Measured: 0.89, Error: 14.11, Output: 165.97, PWM: 165, I: 93.61, D: 6.03, Time: 0.020000
+Setpoint: 15.00, Measured: 0.29, Error: 14.71, Output: 177.76, PWM: 177, I: 94.49, D: 14.16, Time: 0.020000
+Setpoint: 15.00, Measured: -0.01, Error: 15.01, Output: 183.08, PWM: 183, I: 95.39, D: 17.16, Time: 0.020000
+Setpoint: 15.00, Measured: 0.43, Error: 14.57, Output: 173.85, PWM: 173, I: 96.26, D: 9.09, Time: 0.020000
+Setpoint: 15.00, Measured: 1.41, Error: 13.59, Output: 154.62, PWM: 154, I: 97.08, D: -6.32, Time: 0.020000
+Setpoint: 15.00, Measured: 2.21, Error: 12.79, Output: 140.47, PWM: 140, I: 97.85, D: -17.48, Time: 0.020000
+Setpoint: 15.00, Measured: 2.50, Error: 12.50, Output: 137.33, PWM: 137, I: 98.60, D: -20.00, Time: 0.020000
+Setpoint: 15.00, Measured: 2.63, Error: 12.37, Output: 137.61, PWM: 137, I: 99.34, D: -19.87, Time: 0.020000
+Setpoint: 15.00, Measured: 3.22, Error: 11.78, Output: 128.73, PWM: 128, I: 100.00, D: -26.62, Time: 0.020000
+Setpoint: 15.00, Measured: 4.17, Error: 10.83, Output: 113.02, PWM: 113, I: 100.00, D: -37.89, Time: 0.020000
+Setpoint: 15.00, Measured: 5.62, Error: 9.38, Output: 88.70, PWM: 88, I: 100.00, D: -55.40, Time: 0.020000
+Setpoint: 15.00, Measured: 6.44, Error: 8.56, Output: 78.21, PWM: 78, I: 100.00, D: -62.01, Time: 0.020000
+Setpoint: 15.00, Measured: 6.64, Error: 8.36, Output: 80.50, PWM: 80, I: 100.00, D: -58.78, Time: 0.020000
+Setpoint: 15.00, Measured: 6.27, Error: 8.73, Output: 93.69, PWM: 93, I: 100.00, D: -47.36, Time: 0.020000
+Setpoint: 15.00, Measured: 5.43, Error: 9.57, Output: 114.61, PWM: 114, I: 100.00, D: -30.35, Time: 0.020000
+Setpoint: 15.00, Measured: 5.12, Error: 9.88, Output: 123.72, PWM: 123, I: 100.00, D: -22.71, Time: 0.020000
+Setpoint: 15.00, Measured: 3.96, Error: 11.04, Output: 148.57, PWM: 148, I: 100.00, D: -3.32, Time: 0.020000
+Setpoint: 15.00, Measured: 3.73, Error: 11.27, Output: 153.37, PWM: 153, I: 100.00, D: 0.39, Time: 0.020000
+Setpoint: 15.00, Measured: 2.88, Error: 12.12, Output: 169.76, PWM: 169, I: 100.00, D: 12.80, Time: 0.020000
+Setpoint: 15.00, Measured: 2.51, Error: 12.49, Output: 175.66, PWM: 175, I: 100.00, D: 16.97, Time: 0.020000
+Setpoint: 15.00, Measured: 2.44, Error: 12.56, Output: 175.27, PWM: 175, I: 100.00, D: 16.26, Time: 0.020000
+Setpoint: 15.00, Measured: 2.94, Error: 12.06, Output: 164.06, PWM: 164, I: 100.00, D: 7.37, Time: 0.020000
+Setpoint: 15.00, Measured: 2.51, Error: 12.49, Output: 171.62, PWM: 171, I: 100.00, D: 12.92, Time: 0.020000
+Setpoint: 15.00, Measured: 4.68, Error: 10.32, Output: 128.30, PWM: 128, I: 100.00, D: -20.22, Time: 0.020000
+Setpoint: 15.00, Measured: 5.68, Error: 9.32, Output: 110.81, PWM: 110, I: 100.00, D: -33.00, Time: 0.020000
+Setpoint: 15.00, Measured: 4.76, Error: 10.24, Output: 131.98, PWM: 131, I: 100.00, D: -16.14, Time: 0.020000
+Setpoint: 15.00, Measured: 4.13, Error: 10.87, Output: 145.81, PWM: 145, I: 100.00, D: -5.28, Time: 0.020000
+Setpoint: 15.00, Measured: 4.17, Error: 10.83, Output: 145.67, PWM: 145, I: 100.00, D: -5.25, Time: 0.020000
+Setpoint: 15.00, Measured: 4.44, Error: 10.56, Output: 140.89, PWM: 140, I: 100.00, D: -8.75, Time: 0.020000
+Setpoint: 15.00, Measured: 4.84, Error: 10.16, Output: 133.93, PWM: 133, I: 100.00, D: -13.81, Time: 0.020000
+Setpoint: 15.00, Measured: 4.71, Error: 10.29, Output: 137.85, PWM: 137, I: 100.00, D: -10.51, Time: 0.020000
+Setpoint: 15.00, Measured: 4.41, Error: 10.59, Output: 144.68, PWM: 144, I: 100.00, D: -5.08, Time: 0.020000
+Setpoint: 15.00, Measured: 4.81, Error: 10.19, Output: 137.48, PWM: 137, I: 100.00, D: -10.41, Time: 0.020000
+Setpoint: 15.00, Measured: 4.42, Error: 10.58, Output: 146.14, PWM: 146, I: 100.00, D: -3.59, Time: 0.020000
+Setpoint: 15.00, Measured: 5.14, Error: 9.86, Output: 132.45, PWM: 132, I: 100.00, D: -13.88, Time: 0.020000
+Setpoint: 15.00, Measured: 6.19, Error: 8.81, Output: 113.56, PWM: 113, I: 100.00, D: -27.87, Time: 0.020000
+Setpoint: 15.00, Measured: 5.55, Error: 9.45, Output: 128.76, PWM: 128, I: 100.00, D: -15.67, Time: 0.020000
+Setpoint: 15.00, Measured: 5.10, Error: 9.90, Output: 138.98, PWM: 138, I: 100.00, D: -7.55, Time: 0.020000
+Setpoint: 15.00, Measured: 4.79, Error: 10.21, Output: 145.69, PWM: 145, I: 100.00, D: -2.28, Time: 0.020000
+Setpoint: 15.00, Measured: 4.24, Error: 10.76, Output: 156.66, PWM: 156, I: 100.00, D: 6.10, Time: 0.020000
+Setpoint: 15.00, Measured: 4.50, Error: 10.50, Output: 151.10, PWM: 151, I: 100.00, D: 1.73, Time: 0.020000
+Setpoint: 15.00, Measured: 5.40, Error: 9.60, Output: 133.45, PWM: 133, I: 100.00, D: -11.69, Time: 0.020000
+Setpoint: 15.00, Measured: 4.73, Error: 10.27, Output: 147.55, PWM: 147, I: 100.00, D: -0.72, Time: 0.020000
+Setpoint: 15.00, Measured: 4.32, Error: 10.68, Output: 155.52, PWM: 155, I: 100.00, D: 5.34, Time: 0.020000
+Setpoint: 15.00, Measured: 4.03, Error: 10.97, Output: 160.69, PWM: 160, I: 100.00, D: 9.13, Time: 0.020000
+Setpoint: 15.00, Measured: 4.01, Error: 10.99, Output: 160.15, PWM: 160, I: 100.00, D: 8.50, Time: 0.020000
+Setpoint: 15.00, Measured: 3.72, Error: 11.28, Output: 164.95, PWM: 164, I: 100.00, D: 11.93, Time: 0.020000
+Setpoint: 15.00, Measured: 4.43, Error: 10.57, Output: 149.95, PWM: 149, I: 100.00, D: 0.27, Time: 0.020000
+Setpoint: 15.00, Measured: 4.74, Error: 10.26, Output: 143.95, PWM: 143, I: 100.00, D: -4.28, Time: 0.020000
+Setpoint: 15.00, Measured: 4.41, Error: 10.59, Output: 150.76, PWM: 150, I: 100.00, D: 0.98, Time: 0.020000
+Setpoint: 15.00, Measured: 3.09, Error: 11.91, Output: 176.29, PWM: 176, I: 100.00, D: 20.31, Time: 0.020000
+Setpoint: 15.00, Measured: 2.75, Error: 12.25, Output: 180.80, PWM: 180, I: 100.00, D: 23.24, Time: 0.020000
+Setpoint: 15.00, Measured: 2.30, Error: 12.70, Output: 187.18, PWM: 187, I: 100.00, D: 27.51, Time: 0.020000
+Setpoint: 15.00, Measured: 2.15, Error: 12.85, Output: 187.44, PWM: 187, I: 100.00, D: 27.05, Time: 0.020000
+Setpoint: 15.00, Measured: 2.27, Error: 12.73, Output: 182.45, PWM: 182, I: 100.00, D: 22.61, Time: 0.020000
+Setpoint: 15.00, Measured: 2.42, Error: 12.58, Output: 177.25, PWM: 177, I: 100.00, D: 18.12, Time: 0.020000
+Setpoint: 15.00, Measured: 2.12, Error: 12.88, Output: 181.27, PWM: 181, I: 100.00, D: 20.73, Time: 0.020000
+Setpoint: 15.00, Measured: 1.86, Error: 13.14, Output: 184.19, PWM: 184, I: 100.00, D: 22.44, Time: 0.020000
+Setpoint: 15.00, Measured: 1.74, Error: 13.26, Output: 184.21, PWM: 184, I: 100.00, D: 21.91, Time: 0.020000
+Setpoint: 15.00, Measured: 1.43, Error: 13.57, Output: 188.18, PWM: 188, I: 100.00, D: 24.39, Time: 0.020000
+Setpoint: 15.00, Measured: 0.94, Error: 14.06, Output: 195.20, PWM: 195, I: 100.00, D: 29.12, Time: 0.020000
+Setpoint: 15.00, Measured: 0.60, Error: 14.40, Output: 198.98, PWM: 198, I: 100.00, D: 31.28, Time: 0.020000
+Setpoint: 15.00, Measured: 0.47, Error: 14.53, Output: 198.27, PWM: 198, I: 100.00, D: 29.98, Time: 0.020000
+Setpoint: 15.00, Measured: 0.41, Error: 14.59, Output: 196.47, PWM: 196, I: 100.00, D: 27.90, Time: 0.020000
+Setpoint: 15.00, Measured: 0.46, Error: 14.54, Output: 192.72, PWM: 192, I: 100.00, D: 24.38, Time: 0.020000
+Setpoint: 15.00, Measured: 0.34, Error: 14.66, Output: 192.62, PWM: 192, I: 100.00, D: 23.71, Time: 0.020000
+Setpoint: 15.00, Measured: -0.24, Error: 15.24, Output: 201.46, PWM: 200, I: 100.00, D: 29.84, Time: 0.020000
+Setpoint: 15.00, Measured: -0.97, Error: 15.97, Output: 212.60, PWM: 200, I: 100.00, D: 37.56, Time: 0.020000
+Setpoint: 15.00, Measured: -1.79, Error: 16.79, Output: 224.88, PWM: 200, I: 100.00, D: 45.96, Time: 0.020000
+Setpoint: 15.00, Measured: -2.62, Error: 17.62, Output: 236.42, PWM: 200, I: 100.00, D: 53.60, Time: 0.020000
+Setpoint: 15.00, Measured: -3.20, Error: 18.20, Output: 242.31, PWM: 200, I: 100.00, D: 56.76, Time: 0.020000
+Setpoint: 15.00, Measured: -3.61, Error: 18.61, Output: 244.55, PWM: 200, I: 100.00, D: 57.08, Time: 0.020000
+Setpoint: 15.00, Measured: -3.78, Error: 18.78, Output: 242.08, PWM: 200, I: 100.00, D: 53.83, Time: 0.020000
+Setpoint: 15.00, Measured: -3.90, Error: 18.90, Output: 239.13, PWM: 200, I: 100.00, D: 50.29, Time: 0.020000
+Setpoint: 15.00, Measured: -4.30, Error: 19.30, Output: 241.74, PWM: 200, I: 100.00, D: 51.06, Time: 0.020000
+Setpoint: 15.00, Measured: -4.89, Error: 19.89, Output: 248.11, PWM: 200, I: 100.00, D: 54.65, Time: 0.020000
+Setpoint: 15.00, Measured: -5.53, Error: 20.53, Output: 255.19, PWM: 200, I: 100.00, D: 58.69, Time: 0.020000
+Setpoint: 15.00, Measured: -5.96, Error: 20.96, Output: 257.72, PWM: 200, I: 100.00, D: 59.19, Time: 0.020000
+Setpoint: 15.00, Measured: -6.38, Error: 21.38, Output: 259.96, PWM: 200, I: 100.00, D: 59.45, Time: 0.020000
+Setpoint: 15.00, Measured: -6.94, Error: 21.94, Output: 264.89, PWM: 200, I: 100.00, D: 61.75, Time: 0.020000
+Setpoint: 15.00, Measured: -7.63, Error: 22.63, Output: 272.07, PWM: 200, I: 100.00, D: 65.70, Time: 0.020000
+Setpoint: 15.00, Measured: -8.29, Error: 23.29, Output: 278.37, PWM: 200, I: 100.00, D: 68.89, Time: 0.020000
+Setpoint: 15.00, Measured: -8.93, Error: 23.93, Output: 283.74, PWM: 200, I: 100.00, D: 71.29, Time: 0.020000
+Setpoint: 15.00, Measured: -9.51, Error: 24.51, Output: 288.04, PWM: 200, I: 100.00, D: 72.82, Time: 0.020000
+Setpoint: 15.00, Measured: -9.89, Error: 24.89, Output: 288.11, PWM: 200, I: 100.00, D: 71.11, Time: 0.020000
+Setpoint: 15.00, Measured: -10.11, Error: 25.11, Output: 285.26, PWM: 200, I: 100.00, D: 67.23, Time: 0.020000
+Setpoint: 15.00, Measured: -9.92, Error: 24.92, Output: 274.84, PWM: 200, I: 100.00, D: 57.71, Time: 0.020000
+Setpoint: 15.00, Measured: -9.57, Error: 24.57, Output: 262.21, PWM: 200, I: 100.00, D: 46.74, Time: 0.020000
+Setpoint: 15.00, Measured: -8.91, Error: 23.91, Output: 244.67, PWM: 200, I: 100.00, D: 32.31, Time: 0.020000
+Setpoint: 15.00, Measured: -8.29, Error: 23.29, Output: 229.52, PWM: 200, I: 100.00, D: 20.04, Time: 0.020000
+Setpoint: 15.00, Measured: -7.71, Error: 22.71, Output: 216.29, PWM: 200, I: 100.00, D: 9.53, Time: 0.020000
+Setpoint: 15.00, Measured: -8.33, Error: 23.33, Output: 227.28, PWM: 200, I: 100.00, D: 17.63, Time: 0.020000
+Setpoint: 15.00, Measured: -8.59, Error: 23.59, Output: 230.53, PWM: 200, I: 100.00, D: 19.67, Time: 0.020000
+Setpoint: 15.00, Measured: -8.33, Error: 23.33, Output: 223.49, PWM: 200, I: 100.00, D: 13.86, Time: 0.020000
+Setpoint: 15.00, Measured: -8.32, Error: 23.32, Output: 221.97, PWM: 200, I: 100.00, D: 12.37, Time: 0.020000
+Setpoint: 15.00, Measured: -7.88, Error: 22.88, Output: 212.14, PWM: 200, I: 100.00, D: 4.62, Time: 0.020000
+Setpoint: 15.00, Measured: -7.12, Error: 22.12, Output: 196.99, PWM: 196, I: 100.00, D: -6.98, Time: 0.020000
+Setpoint: 15.00, Measured: -6.35, Error: 21.35, Output: 182.80, PWM: 182, I: 100.00, D: -17.56, Time: 0.020000
+Setpoint: 15.00, Measured: -5.97, Error: 20.97, Output: 177.07, PWM: 177, I: 100.00, D: -21.49, Time: 0.020000
+Setpoint: 15.00, Measured: -6.16, Error: 21.16, Output: 183.02, PWM: 183, I: 100.00, D: -16.45, Time: 0.020000
+Setpoint: 15.00, Measured: -5.40, Error: 20.40, Output: 169.73, PWM: 169, I: 100.00, D: -26.13, Time: 0.020000
+Setpoint: 15.00, Measured: -3.98, Error: 18.98, Output: 144.93, PWM: 144, I: 100.00, D: -44.29, Time: 0.020000
+Setpoint: 15.00, Measured: -3.29, Error: 18.29, Output: 135.79, PWM: 135, I: 100.00, D: -50.15, Time: 0.020000
+Setpoint: 15.00, Measured: -0.64, Error: 15.64, Output: 89.48, PWM: 89, I: 100.00, D: -84.04, Time: 0.020000
+Setpoint: 15.00, Measured: 1.75, Error: 13.25, Output: 51.36, PWM: 70, I: 100.00, D: -110.90, Time: 0.020000
+Setpoint: 15.00, Measured: 3.97, Error: 11.03, Output: 19.45, PWM: 70, I: 100.00, D: -132.41, Time: 0.020000
+Setpoint: 15.00, Measured: 6.51, Error: 8.49, Output: -16.60, PWM: 70, I: 100.00, D: -156.52, Time: 0.020000
+Setpoint: 15.00, Measured: 9.53, Error: 5.47, Output: -59.61, PWM: 70, I: 100.00, D: -185.33, Time: 0.020000
+Setpoint: 15.00, Measured: 12.20, Error: 2.80, Output: -92.91, PWM: 92, I: 100.00, D: -206.09, Time: 0.020000
+Setpoint: 15.00, Measured: 14.35, Error: 0.65, Output: -114.15, PWM: 114, I: 100.00, D: -217.20, Time: 0.020000
+Setpoint: 15.00, Measured: 15.29, Error: -0.29, Output: -110.66, PWM: 110, I: 99.98, D: -209.29, Time: 0.020000
+Setpoint: 15.00, Measured: 15.66, Error: -0.66, Output: -96.98, PWM: 96, I: 99.94, D: -193.83, Time: 0.020000
+Setpoint: 15.00, Measured: 15.65, Error: -0.65, Output: -77.50, PWM: 77, I: 99.90, D: -174.33, Time: 0.020000
+Setpoint: 15.00, Measured: 15.30, Error: -0.30, Output: -53.28, PWM: 70, I: 99.89, D: -151.74, Time: 0.020000
+Setpoint: 15.00, Measured: 14.41, Error: 0.59, Output: -20.68, PWM: 70, I: 99.92, D: -123.39, Time: 0.020000
+Setpoint: 15.00, Measured: 13.78, Error: 1.22, Output: 3.94, PWM: 70, I: 99.99, D: -101.80, Time: 0.020000
+Setpoint: 15.00, Measured: 13.12, Error: 1.88, Output: 26.94, PWM: 70, I: 100.00, D: -81.90, Time: 0.020000
+Setpoint: 15.00, Measured: 12.53, Error: 2.47, Output: 46.49, PWM: 70, I: 100.00, D: -65.10, Time: 0.020000
+Setpoint: 15.00, Measured: 11.84, Error: 3.16, Output: 66.56, PWM: 70, I: 100.00, D: -48.32, Time: 0.020000
+Setpoint: 15.00, Measured: 11.47, Error: 3.53, Output: 78.43, PWM: 78, I: 100.00, D: -38.15, Time: 0.020000
+Setpoint: 15.00, Measured: 11.03, Error: 3.97, Output: 90.80, PWM: 90, I: 100.00, D: -27.85, Time: 0.020000
+Setpoint: 15.00, Measured: 10.27, Error: 4.73, Output: 108.34, PWM: 108, I: 100.00, D: -13.88, Time: 0.020000
+Setpoint: 15.00, Measured: 9.38, Error: 5.62, Output: 127.02, PWM: 127, I: 100.00, D: 0.62, Time: 0.020000
+Setpoint: 15.00, Measured: 9.28, Error: 5.72, Output: 128.87, PWM: 128, I: 100.00, D: 2.00, Time: 0.020000
+Setpoint: 15.00, Measured: 8.64, Error: 6.36, Output: 141.19, PWM: 141, I: 100.00, D: 11.29, Time: 0.020000
+Setpoint: 15.00, Measured: 8.03, Error: 6.97, Output: 151.85, PWM: 151, I: 100.00, D: 19.10, Time: 0.020000
+Setpoint: 15.00, Measured: 7.80, Error: 7.20, Output: 154.42, PWM: 154, I: 100.00, D: 20.59, Time: 0.020000
+Setpoint: 15.00, Measured: 7.60, Error: 7.40, Output: 156.34, PWM: 156, I: 100.00, D: 21.54, Time: 0.020000
+Setpoint: 15.00, Measured: 7.28, Error: 7.72, Output: 160.36, PWM: 160, I: 100.00, D: 24.07, Time: 0.020000
+Setpoint: 15.00, Measured: 6.58, Error: 8.42, Output: 171.59, PWM: 171, I: 100.00, D: 32.00, Time: 0.020000
+Setpoint: 15.00, Measured: 6.06, Error: 8.94, Output: 178.49, PWM: 178, I: 100.00, D: 36.45, Time: 0.020000
+Setpoint: 15.00, Measured: 5.06, Error: 9.94, Output: 194.20, PWM: 194, I: 100.00, D: 47.48, Time: 0.020000
+Setpoint: 15.00, Measured: 4.19, Error: 10.81, Output: 206.37, PWM: 200, I: 100.00, D: 55.56, Time: 0.020000
+Setpoint: 15.00, Measured: 3.44, Error: 11.56, Output: 215.24, PWM: 200, I: 100.00, D: 60.94, Time: 0.020000
+Setpoint: 15.00, Measured: 2.91, Error: 12.09, Output: 219.57, PWM: 200, I: 100.00, D: 62.74, Time: 0.020000
+Setpoint: 15.00, Measured: 2.32, Error: 12.68, Output: 224.79, PWM: 200, I: 100.00, D: 65.18, Time: 0.020000
+Setpoint: 15.00, Measured: 1.69, Error: 13.31, Output: 230.45, PWM: 200, I: 100.00, D: 67.89, Time: 0.020000
+Setpoint: 15.00, Measured: 1.12, Error: 13.88, Output: 234.74, PWM: 200, I: 100.00, D: 69.50, Time: 0.020000
+Setpoint: 15.00, Measured: 0.35, Error: 14.65, Output: 242.74, PWM: 200, I: 100.00, D: 73.88, Time: 0.020000
+Setpoint: 15.00, Measured: -0.28, Error: 15.28, Output: 247.51, PWM: 200, I: 100.00, D: 75.71, Time: 0.020000
+Setpoint: 15.00, Measured: -0.87, Error: 15.87, Output: 251.46, PWM: 200, I: 100.00, D: 76.87, Time: 0.020000
+Setpoint: 15.00, Measured: -1.29, Error: 16.29, Output: 251.97, PWM: 200, I: 100.00, D: 75.40, Time: 0.020000
+Setpoint: 15.00, Measured: -1.30, Error: 16.30, Output: 244.58, PWM: 200, I: 100.00, D: 67.97, Time: 0.020000
+Setpoint: 15.00, Measured: -0.40, Error: 15.40, Output: 220.26, PWM: 200, I: 100.00, D: 47.89, Time: 0.020000
+Setpoint: 15.00, Measured: 0.64, Error: 14.36, Output: 195.25, PWM: 195, I: 100.00, D: 27.77, Time: 0.020000
+Setpoint: 15.00, Measured: 2.24, Error: 12.76, Output: 161.53, PWM: 161, I: 100.00, D: 1.55, Time: 0.020000
+Setpoint: 15.00, Measured: 2.34, Error: 12.66, Output: 159.45, PWM: 159, I: 100.00, D: -0.07, Time: 0.020000
+Setpoint: 15.00, Measured: 3.02, Error: 11.98, Output: 146.26, PWM: 146, I: 100.00, D: -10.07, Time: 0.020000
+Setpoint: 15.00, Measured: 3.21, Error: 11.79, Output: 143.56, PWM: 143, I: 100.00, D: -11.87, Time: 0.020000
+Setpoint: 15.00, Measured: 3.26, Error: 11.74, Output: 143.66, PWM: 143, I: 100.00, D: -11.51, Time: 0.020000
+Setpoint: 15.00, Measured: 2.73, Error: 12.27, Output: 155.12, PWM: 155, I: 100.00, D: -2.54, Time: 0.020000
+Setpoint: 15.00, Measured: 2.70, Error: 12.30, Output: 156.00, PWM: 155, I: 100.00, D: -1.81, Time: 0.020000
+Setpoint: 15.00, Measured: 2.92, Error: 12.08, Output: 151.93, PWM: 151, I: 100.00, D: -4.86, Time: 0.020000
+Setpoint: 15.00, Measured: 3.58, Error: 11.42, Output: 139.54, PWM: 139, I: 100.00, D: -14.12, Time: 0.020000
+Setpoint: 15.00, Measured: 4.58, Error: 10.42, Output: 121.60, PWM: 121, I: 100.00, D: -27.39, Time: 0.020000
+Setpoint: 15.00, Measured: 5.85, Error: 9.15, Output: 99.59, PWM: 99, I: 100.00, D: -43.40, Time: 0.020000
+Setpoint: 15.00, Measured: 6.79, Error: 8.21, Output: 85.71, PWM: 85, I: 100.00, D: -52.87, Time: 0.020000
+Setpoint: 15.00, Measured: 6.86, Error: 8.14, Output: 89.62, PWM: 89, I: 100.00, D: -48.63, Time: 0.020000
+Setpoint: 15.00, Measured: 6.35, Error: 8.65, Output: 104.44, PWM: 104, I: 100.00, D: -36.22, Time: 0.020000
+Setpoint: 15.00, Measured: 6.13, Error: 8.87, Output: 112.40, PWM: 112, I: 100.00, D: -29.31, Time: 0.020000
+Setpoint: 15.00, Measured: 6.03, Error: 8.97, Output: 117.18, PWM: 117, I: 100.00, D: -24.98, Time: 0.020000
+Setpoint: 15.00, Measured: 6.18, Error: 8.82, Output: 116.79, PWM: 116, I: 100.00, D: -24.67, Time: 0.020000
+Setpoint: 15.00, Measured: 6.18, Error: 8.82, Output: 119.31, PWM: 119, I: 100.00, D: -22.16, Time: 0.020000
+Setpoint: 15.00, Measured: 6.37, Error: 8.63, Output: 117.71, PWM: 117, I: 100.00, D: -22.84, Time: 0.020000
+Setpoint: 15.00, Measured: 5.48, Error: 9.52, Output: 137.29, PWM: 137, I: 100.00, D: -7.45, Time: 0.020000
+Setpoint: 15.00, Measured: 4.68, Error: 10.32, Output: 153.61, PWM: 153, I: 100.00, D: 5.11, Time: 0.020000
+Setpoint: 15.00, Measured: 3.65, Error: 11.35, Output: 173.20, PWM: 173, I: 100.00, D: 19.83, Time: 0.020000
+Setpoint: 15.00, Measured: 3.32, Error: 11.68, Output: 177.53, PWM: 177, I: 100.00, D: 22.64, Time: 0.020000
+Setpoint: 15.00, Measured: 3.26, Error: 11.74, Output: 176.34, PWM: 176, I: 100.00, D: 21.19, Time: 0.020000
+Setpoint: 15.00, Measured: 2.75, Error: 12.25, Output: 184.20, PWM: 184, I: 100.00, D: 26.62, Time: 0.020000
+Setpoint: 15.00, Measured: 1.89, Error: 13.11, Output: 198.16, PWM: 198, I: 100.00, D: 36.57, Time: 0.020000
+Setpoint: 15.00, Measured: 0.98, Error: 14.02, Output: 212.31, PWM: 200, I: 100.00, D: 46.41, Time: 0.020000
+Setpoint: 15.00, Measured: 0.05, Error: 14.95, Output: 225.66, PWM: 200, I: 100.00, D: 55.40, Time: 0.020000
+Setpoint: 15.00, Measured: -0.53, Error: 15.53, Output: 231.46, PWM: 200, I: 100.00, D: 58.45, Time: 0.020000
+Setpoint: 15.00, Measured: -1.09, Error: 16.09, Output: 236.37, PWM: 200, I: 100.00, D: 60.76, Time: 0.020000
+Setpoint: 15.00, Measured: -1.97, Error: 16.97, Output: 247.36, PWM: 200, I: 100.00, D: 67.63, Time: 0.020000
+Setpoint: 15.00, Measured: -2.77, Error: 17.77, Output: 256.30, PWM: 200, I: 100.00, D: 72.76, Time: 0.020000
+Setpoint: 15.00, Measured: -3.54, Error: 18.54, Output: 263.93, PWM: 200, I: 100.00, D: 76.79, Time: 0.020000
+Setpoint: 15.00, Measured: -3.36, Error: 18.36, Output: 252.69, PWM: 200, I: 100.00, D: 66.41, Time: 0.020000
+Setpoint: 15.00, Measured: -2.99, Error: 17.99, Output: 238.93, PWM: 200, I: 100.00, D: 54.37, Time: 0.020000
+Setpoint: 15.00, Measured: -3.82, Error: 18.82, Output: 249.67, PWM: 200, I: 100.00, D: 61.19, Time: 0.020000
+Setpoint: 15.00, Measured: -5.11, Error: 20.11, Output: 268.52, PWM: 200, I: 100.00, D: 74.01, Time: 0.020000
+Setpoint: 15.00, Measured: -3.79, Error: 18.79, Output: 235.49, PWM: 200, I: 100.00, D: 47.17, Time: 0.020000
+Setpoint: 15.00, Measured: -2.69, Error: 17.69, Output: 209.40, PWM: 200, I: 100.00, D: 26.26, Time: 0.020000
+Setpoint: 15.00, Measured: -1.45, Error: 16.45, Output: 182.72, PWM: 182, I: 100.00, D: 5.40, Time: 0.020000
+Setpoint: 15.00, Measured: -1.06, Error: 16.06, Output: 174.65, PWM: 174, I: 100.00, D: -0.85, Time: 0.020000
+Setpoint: 15.00, Measured: 0.03, Error: 14.97, Output: 153.56, PWM: 153, I: 100.00, D: -16.81, Time: 0.020000
+Setpoint: 15.00, Measured: 1.01, Error: 13.99, Output: 136.07, PWM: 136, I: 100.00, D: -29.66, Time: 0.020000
+Setpoint: 15.00, Measured: 0.69, Error: 14.31, Output: 145.40, PWM: 145, I: 100.00, D: -21.87, Time: 0.020000
+Setpoint: 15.00, Measured: 3.62, Error: 11.38, Output: 90.64, PWM: 90, I: 100.00, D: -62.85, Time: 0.020000
+Setpoint: 15.00, Measured: 5.47, Error: 9.53, Output: 60.93, PWM: 70, I: 100.00, D: -83.85, Time: 0.020000
+Setpoint: 15.00, Measured: 5.91, Error: 9.09, Output: 60.74, PWM: 70, I: 100.00, D: -81.96, Time: 0.020000
+Setpoint: 15.00, Measured: 7.91, Error: 7.09, Output: 30.13, PWM: 70, I: 100.00, D: -103.19, Time: 0.020000
+Setpoint: 15.00, Measured: 7.93, Error: 7.07, Output: 40.17, PWM: 70, I: 100.00, D: -93.08, Time: 0.020000
+Setpoint: 15.00, Measured: 7.74, Error: 7.26, Output: 53.18, PWM: 70, I: 100.00, D: -80.96, Time: 0.020000
+Setpoint: 15.00, Measured: 8.11, Error: 6.89, Output: 54.07, PWM: 70, I: 100.00, D: -78.33, Time: 0.020000
+Setpoint: 15.00, Measured: 7.85, Error: 7.15, Output: 66.85, PWM: 70, I: 100.00, D: -66.74, Time: 0.020000
+Setpoint: 15.00, Measured: 7.91, Error: 7.09, Output: 72.35, PWM: 72, I: 100.00, D: -60.96, Time: 0.020000
+Setpoint: 15.00, Measured: 7.19, Error: 7.81, Output: 92.40, PWM: 92, I: 100.00, D: -44.29, Time: 0.020000
+Setpoint: 15.00, Measured: 6.55, Error: 8.45, Output: 109.25, PWM: 109, I: 100.00, D: -30.45, Time: 0.020000
+Setpoint: 15.00, Measured: 5.89, Error: 9.11, Output: 125.14, PWM: 125, I: 100.00, D: -17.66, Time: 0.020000
+Setpoint: 15.00, Measured: 5.09, Error: 9.91, Output: 142.53, PWM: 142, I: 100.00, D: -4.05, Time: 0.020000
+Setpoint: 15.00, Measured: 4.69, Error: 10.31, Output: 150.72, PWM: 150, I: 100.00, D: 2.25, Time: 0.020000
+Setpoint: 15.00, Measured: 4.80, Error: 10.20, Output: 148.37, PWM: 148, I: 100.00, D: 0.42, Time: 0.020000
+Setpoint: 15.00, Measured: 4.87, Error: 10.13, Output: 146.87, PWM: 146, I: 100.00, D: -0.73, Time: 0.020000
+Setpoint: 15.00, Measured: 4.94, Error: 10.06, Output: 145.62, PWM: 145, I: 100.00, D: -1.66, Time: 0.020000
+Setpoint: 15.00, Measured: 4.52, Error: 10.48, Output: 154.00, PWM: 154, I: 100.00, D: 4.73, Time: 0.020000
+Setpoint: 15.00, Measured: 4.03, Error: 10.97, Output: 163.08, PWM: 163, I: 100.00, D: 11.50, Time: 0.020000
+Setpoint: 15.00, Measured: 3.30, Error: 11.70, Output: 176.07, PWM: 176, I: 100.00, D: 21.06, Time: 0.020000
+Setpoint: 15.00, Measured: 2.56, Error: 12.44, Output: 188.34, PWM: 188, I: 100.00, D: 29.86, Time: 0.020000
+Setpoint: 15.00, Measured: 1.95, Error: 13.05, Output: 197.21, PWM: 197, I: 100.00, D: 35.86, Time: 0.020000
+Setpoint: 15.00, Measured: 1.62, Error: 13.38, Output: 199.88, PWM: 199, I: 100.00, D: 37.02, Time: 0.020000
+Setpoint: 15.00, Measured: 1.97, Error: 13.03, Output: 189.40, PWM: 189, I: 100.00, D: 28.17, Time: 0.020000
+Setpoint: 15.00, Measured: 2.35, Error: 12.65, Output: 179.24, PWM: 179, I: 100.00, D: 19.79, Time: 0.020000
+Setpoint: 15.00, Measured: 2.59, Error: 12.41, Output: 172.57, PWM: 172, I: 100.00, D: 14.26, Time: 0.020000
+Setpoint: 15.00, Measured: 2.24, Error: 12.76, Output: 178.00, PWM: 177, I: 100.00, D: 18.03, Time: 0.020000
+Setpoint: 15.00, Measured: 2.13, Error: 12.87, Output: 178.31, PWM: 178, I: 100.00, D: 17.83, Time: 0.020000
+Setpoint: 15.00, Measured: 1.44, Error: 13.56, Output: 189.91, PWM: 189, I: 100.00, D: 26.18, Time: 0.020000
+Setpoint: 15.00, Measured: 0.86, Error: 14.14, Output: 198.52, PWM: 198, I: 100.00, D: 32.08, Time: 0.020000
+Setpoint: 15.00, Measured: 0.08, Error: 14.92, Output: 210.48, PWM: 200, I: 100.00, D: 40.37, Time: 0.020000
+Setpoint: 15.00, Measured: 0.85, Error: 14.15, Output: 191.62, PWM: 191, I: 100.00, D: 25.10, Time: 0.020000
+Setpoint: 15.00, Measured: 2.44, Error: 12.56, Output: 158.07, PWM: 158, I: 100.00, D: -0.94, Time: 0.020000
+Setpoint: 15.00, Measured: 4.69, Error: 10.31, Output: 114.46, PWM: 114, I: 100.00, D: -33.97, Time: 0.020000
+Setpoint: 15.00, Measured: 8.80, Error: 6.20, Output: 38.15, PWM: 70, I: 100.00, D: -90.99, Time: 0.020000
+Setpoint: 15.00, Measured: 13.09, Error: 1.91, Output: -36.01, PWM: 70, I: 100.00, D: -145.00, Time: 0.020000
+Setpoint: 15.00, Measured: 16.80, Error: -1.80, Output: -93.69, PWM: 93, I: 99.89, D: -185.13, Time: 0.020000
+Setpoint: 15.00, Measured: 20.98, Error: -5.98, Output: -156.85, PWM: 156, I: 99.53, D: -228.25, Time: 0.020000
+Setpoint: 15.00, Measured: 25.65, Error: -10.65, Output: -225.21, PWM: 200, I: 98.89, D: -274.06, Time: 0.020000
+Setpoint: 15.00, Measured: 26.58, Error: -11.58, Output: -216.66, PWM: 200, I: 98.20, D: -260.42, Time: 0.020000
+Setpoint: 15.00, Measured: 27.50, Error: -12.50, Output: -209.17, PWM: 200, I: 97.45, D: -247.87, Time: 0.020000
+Setpoint: 15.00, Measured: 26.98, Error: -11.98, Output: -174.97, PWM: 174, I: 96.73, D: -215.41, Time: 0.020000
+Setpoint: 15.00, Measured: 26.70, Error: -11.70, Output: -148.64, PWM: 148, I: 96.03, D: -189.70, Time: 0.020000
+Setpoint: 15.00, Measured: 24.70, Error: -9.70, Output: -91.41, PWM: 91, I: 95.45, D: -141.29, Time: 0.020000
+Setpoint: 15.00, Measured: 22.84, Error: -7.84, Output: -41.66, PWM: 70, I: 94.98, D: -99.81, Time: 0.020000
+Setpoint: 15.00, Measured: 21.34, Error: -6.34, Output: -2.98, PWM: 70, I: 94.60, D: -67.78, Time: 0.020000
+Setpoint: 15.00, Measured: 19.59, Error: -4.59, Output: 37.42, PWM: 70, I: 94.32, D: -35.31, Time: 0.020000
+Setpoint: 15.00, Measured: 18.07, Error: -3.07, Output: 70.33, PWM: 70, I: 94.14, D: -9.37, Time: 0.020000
+Setpoint: 15.00, Measured: 15.76, Error: -0.76, Output: 116.07, PWM: 116, I: 94.09, D: 25.56, Time: 0.020000
+Setpoint: 15.00, Measured: 13.31, Error: 1.69, Output: 161.15, PWM: 161, I: 94.19, D: 59.04, Time: 0.020000
+Setpoint: 15.00, Measured: 12.24, Error: 2.76, Output: 176.32, PWM: 176, I: 94.36, D: 68.98, Time: 0.020000
+Setpoint: 15.00, Measured: 11.71, Error: 3.29, Output: 179.89, PWM: 179, I: 94.56, D: 69.87, Time: 0.020000
+Setpoint: 15.00, Measured: 12.18, Error: 2.82, Output: 163.93, PWM: 163, I: 94.72, D: 55.95, Time: 0.020000
+Setpoint: 15.00, Measured: 12.33, Error: 2.67, Output: 155.66, PWM: 155, I: 94.89, D: 48.20, Time: 0.020000
+Setpoint: 15.00, Measured: 12.00, Error: 3.00, Output: 157.30, PWM: 157, I: 95.07, D: 48.15, Time: 0.020000
+Setpoint: 15.00, Measured: 11.23, Error: 3.77, Output: 167.62, PWM: 167, I: 95.29, D: 54.63, Time: 0.020000
+Setpoint: 15.00, Measured: 10.11, Error: 4.89, Output: 184.26, PWM: 184, I: 95.58, D: 65.70, Time: 0.020000
+Setpoint: 15.00, Measured: 9.31, Error: 5.69, Output: 193.51, PWM: 193, I: 95.93, D: 70.87, Time: 0.020000
+Setpoint: 15.00, Measured: 9.49, Error: 5.51, Output: 183.38, PWM: 183, I: 96.26, D: 61.22, Time: 0.020000
+Setpoint: 15.00, Measured: 10.40, Error: 4.60, Output: 159.73, PWM: 159, I: 96.53, D: 41.60, Time: 0.020000
+Setpoint: 15.00, Measured: 11.52, Error: 3.48, Output: 134.20, PWM: 134, I: 96.74, D: 21.09, Time: 0.020000
+Setpoint: 15.00, Measured: 12.09, Error: 2.91, Output: 121.04, PWM: 121, I: 96.92, D: 10.47, Time: 0.020000
+Setpoint: 15.00, Measured: 12.13, Error: 2.87, Output: 119.56, PWM: 119, I: 97.09, D: 8.96, Time: 0.020000
+Setpoint: 15.00, Measured: 11.98, Error: 3.02, Output: 121.63, PWM: 121, I: 97.27, D: 10.18, Time: 0.020000
+Setpoint: 15.00, Measured: 11.23, Error: 3.77, Output: 135.52, PWM: 135, I: 97.50, D: 20.28, Time: 0.020000
+Setpoint: 15.00, Measured: 10.63, Error: 4.37, Output: 145.39, PWM: 145, I: 97.76, D: 27.08, Time: 0.020000
+Setpoint: 15.00, Measured: 10.05, Error: 4.95, Output: 154.19, PWM: 154, I: 98.05, D: 32.87, Time: 0.020000
+Setpoint: 15.00, Measured: 9.40, Error: 5.60, Output: 163.94, PWM: 163, I: 98.39, D: 39.21, Time: 0.020000
+Setpoint: 15.00, Measured: 9.22, Error: 5.78, Output: 163.84, PWM: 163, I: 98.74, D: 37.92, Time: 0.020000
+Setpoint: 15.00, Measured: 8.84, Error: 6.16, Output: 167.80, PWM: 167, I: 99.11, D: 39.72, Time: 0.020000
+Setpoint: 15.00, Measured: 8.71, Error: 6.29, Output: 166.67, PWM: 166, I: 99.49, D: 37.62, Time: 0.020000
+Setpoint: 15.00, Measured: 8.08, Error: 6.92, Output: 175.45, PWM: 175, I: 99.90, D: 43.05, Time: 0.020000
+Setpoint: 15.00, Measured: 7.24, Error: 7.76, Output: 187.67, PWM: 187, I: 100.00, D: 51.19, Time: 0.020000
+Setpoint: 15.00, Measured: 6.33, Error: 8.67, Output: 200.20, PWM: 200, I: 100.00, D: 59.45, Time: 0.020000
+Setpoint: 15.00, Measured: 5.55, Error: 9.45, Output: 209.46, PWM: 200, I: 100.00, D: 65.03, Time: 0.020000
+Setpoint: 15.00, Measured: 4.85, Error: 10.15, Output: 216.43, PWM: 200, I: 100.00, D: 68.74, Time: 0.020000
+Setpoint: 15.00, Measured: 4.01, Error: 10.99, Output: 226.00, PWM: 200, I: 100.00, D: 74.33, Time: 0.020000
+Setpoint: 15.00, Measured: 3.93, Error: 11.07, Output: 220.05, PWM: 200, I: 100.00, D: 68.03, Time: 0.020000
+Setpoint: 15.00, Measured: 3.45, Error: 11.55, Output: 222.48, PWM: 200, I: 100.00, D: 68.22, Time: 0.020000
+Setpoint: 15.00, Measured: 2.51, Error: 12.49, Output: 233.98, PWM: 200, I: 100.00, D: 75.28, Time: 0.020000
+Setpoint: 15.00, Measured: 3.46, Error: 11.54, Output: 208.08, PWM: 200, I: 100.00, D: 53.83, Time: 0.020000
+Setpoint: 15.00, Measured: 4.58, Error: 10.42, Output: 180.83, PWM: 180, I: 100.00, D: 31.87, Time: 0.020000
+Setpoint: 15.00, Measured: 6.13, Error: 8.87, Output: 147.65, PWM: 147, I: 100.00, D: 5.95, Time: 0.020000
+Setpoint: 15.00, Measured: 7.99, Error: 7.01, Output: 110.90, PWM: 110, I: 100.00, D: -22.05, Time: 0.020000
+Setpoint: 15.00, Measured: 10.75, Error: 4.25, Output: 59.57, PWM: 70, I: 100.00, D: -60.42, Time: 0.020000
+Setpoint: 15.00, Measured: 13.65, Error: 1.35, Output: 9.13, PWM: 70, I: 100.00, D: -97.19, Time: 0.020000
+Setpoint: 15.00, Measured: 17.30, Error: -2.30, Output: -52.01, PWM: 70, I: 99.86, D: -141.08, Time: 0.020000
+Setpoint: 15.00, Measured: 20.35, Error: -5.35, Output: -97.48, PWM: 97, I: 99.54, D: -171.88, Time: 0.020000
+Setpoint: 15.00, Measured: 22.52, Error: -7.52, Output: -122.94, PWM: 122, I: 99.09, D: -186.68, Time: 0.020000
+Setpoint: 15.00, Measured: 23.92, Error: -8.92, Output: -132.02, PWM: 132, I: 98.55, D: -188.64, Time: 0.020000
+Setpoint: 15.00, Measured: 25.03, Error: -10.03, Output: -135.34, PWM: 135, I: 97.95, D: -186.14, Time: 0.020000
+Setpoint: 15.00, Measured: 25.16, Error: -10.16, Output: -119.75, PWM: 119, I: 97.34, D: -169.35, Time: 0.020000
+Setpoint: 15.00, Measured: 25.03, Error: -10.03, Output: -101.01, PWM: 101, I: 96.74, D: -150.60, Time: 0.020000
+Setpoint: 15.00, Measured: 25.09, Error: -10.09, Output: -87.59, PWM: 87, I: 96.14, D: -136.32, Time: 0.020000
+Setpoint: 15.00, Measured: 24.75, Error: -9.75, Output: -67.94, PWM: 70, I: 95.55, D: -117.68, Time: 0.020000
+Setpoint: 15.00, Measured: 24.22, Error: -9.22, Output: -46.44, PWM: 70, I: 95.00, D: -98.11, Time: 0.020000
+Setpoint: 15.00, Measured: 23.97, Error: -8.97, Output: -32.35, PWM: 70, I: 94.46, D: -84.65, Time: 0.020000
+Setpoint: 15.00, Measured: 23.93, Error: -8.93, Output: -23.74, PWM: 70, I: 93.92, D: -75.68, Time: 0.020000
+Setpoint: 15.00, Measured: 23.87, Error: -8.87, Output: -15.45, PWM: 70, I: 93.39, D: -67.16, Time: 0.020000
+Setpoint: 15.00, Measured: 23.39, Error: -8.39, Output: 0.17, PWM: 70, I: 92.89, D: -53.31, Time: 0.020000
+Setpoint: 15.00, Measured: 23.48, Error: -8.48, Output: 3.19, PWM: 70, I: 92.38, D: -49.34, Time: 0.020000
+Setpoint: 15.00, Measured: 23.67, Error: -8.67, Output: 3.93, PWM: 70, I: 91.86, D: -47.19, Time: 0.020000
+Setpoint: 15.00, Measured: 23.90, Error: -8.90, Output: 3.51, PWM: 70, I: 91.33, D: -45.96, Time: 0.020000
+Setpoint: 15.00, Measured: 24.13, Error: -9.13, Output: 3.11, PWM: 70, I: 90.78, D: -44.74, Time: 0.020000
+Setpoint: 15.00, Measured: 24.40, Error: -9.40, Output: 1.76, PWM: 70, I: 90.21, D: -44.25, Time: 0.020000
+Setpoint: 15.00, Measured: 24.89, Error: -9.89, Output: -3.76, PWM: 70, I: 89.62, D: -46.91, Time: 0.020000
+Setpoint: 15.00, Measured: 25.49, Error: -10.49, Output: -11.45, PWM: 70, I: 88.99, D: -51.13, Time: 0.020000
+Setpoint: 15.00, Measured: 26.19, Error: -11.19, Output: -20.55, PWM: 70, I: 88.32, D: -56.29, Time: 0.020000
+Setpoint: 15.00, Measured: 26.82, Error: -11.82, Output: -27.87, PWM: 70, I: 87.61, D: -59.93, Time: 0.020000
+Setpoint: 15.00, Measured: 27.17, Error: -12.17, Output: -29.52, PWM: 70, I: 86.88, D: -59.18, Time: 0.020000
+Setpoint: 15.00, Measured: 27.44, Error: -12.44, Output: -29.41, PWM: 70, I: 86.13, D: -57.10, Time: 0.020000
+Setpoint: 15.00, Measured: 27.40, Error: -12.40, Output: -23.73, PWM: 70, I: 85.39, D: -50.84, Time: 0.020000
+Setpoint: 15.00, Measured: 27.47, Error: -12.47, Output: -20.71, PWM: 70, I: 84.64, D: -46.76, Time: 0.020000
+Setpoint: 15.00, Measured: 27.54, Error: -12.54, Output: -18.24, PWM: 70, I: 83.89, D: -43.18, Time: 0.020000
+Setpoint: 15.00, Measured: 27.69, Error: -12.69, Output: -17.65, PWM: 70, I: 83.13, D: -41.11, Time: 0.020000
+Setpoint: 15.00, Measured: 27.86, Error: -12.86, Output: -17.57, PWM: 70, I: 82.36, D: -39.48, Time: 0.020000
+Setpoint: 15.00, Measured: 28.06, Error: -13.06, Output: -18.17, PWM: 70, I: 81.57, D: -38.38, Time: 0.020000
+Setpoint: 15.00, Measured: 28.25, Error: -13.25, Output: -18.86, PWM: 70, I: 80.78, D: -37.37, Time: 0.020000
+Setpoint: 15.00, Measured: 28.45, Error: -13.45, Output: -19.78, PWM: 70, I: 79.97, D: -36.55, Time: 0.020000
+Setpoint: 15.00, Measured: 28.49, Error: -13.49, Output: -17.88, PWM: 70, I: 79.16, D: -33.62, Time: 0.020000
+Setpoint: 15.00, Measured: 27.86, Error: -12.86, Output: -3.00, PWM: 70, I: 78.39, D: -20.94, Time: 0.020000
+Setpoint: 15.00, Measured: 27.14, Error: -12.14, Output: 12.30, PWM: 70, I: 77.66, D: -8.28, Time: 0.020000
+Setpoint: 15.00, Measured: 26.31, Error: -11.31, Output: 28.61, PWM: 70, I: 76.98, D: 4.79, Time: 0.020000
+Setpoint: 15.00, Measured: 25.37, Error: -10.37, Output: 45.81, PWM: 70, I: 76.36, D: 18.19, Time: 0.020000
+Setpoint: 15.00, Measured: 24.78, Error: -9.78, Output: 54.87, PWM: 70, I: 75.77, D: 25.06, Time: 0.020000
+Setpoint: 15.00, Measured: 24.45, Error: -9.45, Output: 58.21, PWM: 70, I: 75.21, D: 27.41, Time: 0.020000
+Setpoint: 15.00, Measured: 24.41, Error: -9.41, Output: 55.72, PWM: 70, I: 74.64, D: 25.29, Time: 0.020000
+Setpoint: 15.00, Measured: 24.47, Error: -9.47, Output: 51.47, PWM: 70, I: 74.07, D: 21.89, Time: 0.020000
+Setpoint: 15.00, Measured: 24.50, Error: -9.50, Output: 47.97, PWM: 70, I: 73.50, D: 19.14, Time: 0.020000
+Setpoint: 15.00, Measured: 24.27, Error: -9.27, Output: 50.01, PWM: 70, I: 72.95, D: 20.65, Time: 0.020000
+Setpoint: 15.00, Measured: 24.05, Error: -9.05, Output: 51.65, PWM: 70, I: 72.40, D: 21.80, Time: 0.020000
+Setpoint: 15.00, Measured: 24.05, Error: -9.05, Output: 48.91, PWM: 70, I: 71.86, D: 19.61, Time: 0.020000
+Setpoint: 15.00, Measured: 24.13, Error: -9.13, Output: 44.96, PWM: 70, I: 71.31, D: 16.55, Time: 0.020000
+Setpoint: 15.00, Measured: 24.01, Error: -9.01, Output: 45.16, PWM: 70, I: 70.77, D: 16.71, Time: 0.020000
+Setpoint: 15.00, Measured: 24.24, Error: -9.24, Output: 38.40, PWM: 70, I: 70.22, D: 11.61, Time: 0.020000
+Setpoint: 15.00, Measured: 24.48, Error: -9.48, Output: 31.97, PWM: 70, I: 69.65, D: 6.88, Time: 0.020000
+Setpoint: 15.00, Measured: 24.68, Error: -9.68, Output: 26.85, PWM: 70, I: 69.07, D: 3.27, Time: 0.020000
+Setpoint: 15.00, Measured: 25.05, Error: -10.05, Output: 18.68, PWM: 70, I: 68.47, D: -2.54, Time: 0.020000
+Setpoint: 15.00, Measured: 25.68, Error: -10.68, Output: 6.07, PWM: 70, I: 67.82, D: -11.55, Time: 0.020000
+Setpoint: 15.00, Measured: 26.47, Error: -11.47, Output: -8.73, PWM: 70, I: 67.14, D: -21.97, Time: 0.020000
+Setpoint: 15.00, Measured: 27.20, Error: -12.20, Output: -21.40, PWM: 70, I: 66.40, D: -30.49, Time: 0.020000
+Setpoint: 15.00, Measured: 27.73, Error: -12.73, Output: -29.57, PWM: 70, I: 65.64, D: -35.36, Time: 0.020000
+Setpoint: 15.00, Measured: 28.26, Error: -13.26, Output: -36.95, PWM: 70, I: 64.85, D: -39.50, Time: 0.020000
+Setpoint: 15.00, Measured: 28.57, Error: -13.57, Output: -39.93, PWM: 70, I: 64.03, D: -40.18, Time: 0.020000
+Setpoint: 15.00, Measured: 28.82, Error: -13.82, Output: -41.64, PWM: 70, I: 63.20, D: -39.88, Time: 0.020000
+Setpoint: 15.00, Measured: 28.86, Error: -13.86, Output: -39.28, PWM: 70, I: 62.37, D: -36.49, Time: 0.020000
+Setpoint: 15.00, Measured: 28.90, Error: -13.90, Output: -37.11, PWM: 70, I: 61.54, D: -33.34, Time: 0.020000
+Setpoint: 15.00, Measured: 28.82, Error: -13.82, Output: -33.20, PWM: 70, I: 60.71, D: -28.93, Time: 0.020000
+Setpoint: 15.00, Measured: 28.75, Error: -13.75, Output: -29.73, PWM: 70, I: 59.88, D: -24.98, Time: 0.020000
+Setpoint: 15.00, Measured: 28.76, Error: -13.76, Output: -28.23, PWM: 70, I: 59.06, D: -22.61, Time: 0.020000
+Setpoint: 15.00, Measured: 28.90, Error: -13.90, Output: -29.51, PWM: 70, I: 58.22, D: -22.40, Time: 0.020000
+Setpoint: 15.00, Measured: 29.19, Error: -14.19, Output: -33.65, PWM: 70, I: 57.37, D: -24.36, Time: 0.020000
+Setpoint: 15.00, Measured: 29.51, Error: -14.51, Output: -38.46, PWM: 70, I: 56.50, D: -26.75, Time: 0.020000
+Setpoint: 15.00, Measured: 29.82, Error: -14.82, Output: -42.66, PWM: 70, I: 55.61, D: -28.61, Time: 0.020000
+Setpoint: 15.00, Measured: 30.15, Error: -15.15, Output: -47.02, PWM: 70, I: 54.70, D: -30.53, Time: 0.020000
+Setpoint: 15.00, Measured: 30.44, Error: -15.44, Output: -50.56, PWM: 70, I: 53.78, D: -31.77, Time: 0.020000
+Setpoint: 15.00, Measured: 30.56, Error: -15.56, Output: -50.74, PWM: 70, I: 52.84, D: -30.43, Time: 0.020000
+Setpoint: 15.00, Measured: 30.56, Error: -15.56, Output: -48.51, PWM: 70, I: 51.91, D: -27.30, Time: 0.020000
+Setpoint: 15.00, Measured: 30.62, Error: -15.62, Output: -48.01, PWM: 70, I: 50.97, D: -25.55, Time: 0.020000
+Setpoint: 15.00, Measured: 30.59, Error: -15.59, Output: -45.80, PWM: 70, I: 50.04, D: -22.55, Time: 0.020000
+Setpoint: 15.00, Measured: 30.76, Error: -15.76, Output: -47.64, PWM: 70, I: 49.09, D: -22.68, Time: 0.020000
+Setpoint: 15.00, Measured: 30.94, Error: -15.94, Output: -49.96, PWM: 70, I: 48.13, D: -23.17, Time: 0.020000
+Setpoint: 15.00, Measured: 31.25, Error: -16.25, Output: -54.65, PWM: 70, I: 47.16, D: -25.42, Time: 0.020000
+Setpoint: 15.00, Measured: 31.60, Error: -16.60, Output: -59.91, PWM: 70, I: 46.16, D: -28.04, Time: 0.020000
+Setpoint: 15.00, Measured: 31.93, Error: -16.93, Output: -64.48, PWM: 70, I: 45.15, D: -30.06, Time: 0.020000
+Setpoint: 15.00, Measured: 32.32, Error: -17.32, Output: -70.10, PWM: 70, I: 44.11, D: -32.80, Time: 0.020000
+Setpoint: 15.00, Measured: 32.94, Error: -17.94, Output: -79.99, PWM: 79, I: 43.03, D: -38.69, Time: 0.020000
+Setpoint: 15.00, Measured: 33.96, Error: -18.96, Output: -96.98, PWM: 96, I: 41.89, D: -49.77, Time: 0.020000
+Setpoint: 15.00, Measured: 34.84, Error: -19.84, Output: -110.32, PWM: 110, I: 40.70, D: -57.77, Time: 0.020000
+Setpoint: 15.00, Measured: 35.34, Error: -20.34, Output: -115.41, PWM: 115, I: 39.48, D: -59.30, Time: 0.020000
+Setpoint: 15.00, Measured: 35.45, Error: -20.45, Output: -112.89, PWM: 112, I: 38.26, D: -55.03, Time: 0.020000
+Setpoint: 15.00, Measured: 35.32, Error: -20.32, Output: -106.04, PWM: 106, I: 37.04, D: -47.58, Time: 0.020000
+Setpoint: 15.00, Measured: 35.26, Error: -20.26, Output: -101.38, PWM: 101, I: 35.82, D: -41.98, Time: 0.020000
+Setpoint: 15.00, Measured: 35.52, Error: -20.52, Output: -103.54, PWM: 103, I: 34.59, D: -41.67, Time: 0.020000
+Setpoint: 15.00, Measured: 35.84, Error: -20.84, Output: -106.72, PWM: 106, I: 33.34, D: -42.12, Time: 0.020000
+Setpoint: 15.00, Measured: 36.09, Error: -21.09, Output: -108.56, PWM: 108, I: 32.07, D: -41.54, Time: 0.020000
+Setpoint: 15.00, Measured: 36.28, Error: -21.28, Output: -109.47, PWM: 109, I: 30.80, D: -40.25, Time: 0.020000
+Setpoint: 15.00, Measured: 36.49, Error: -21.49, Output: -110.76, PWM: 110, I: 29.51, D: -39.28, Time: 0.020000
+Setpoint: 15.00, Measured: 36.76, Error: -21.76, Output: -113.45, PWM: 113, I: 28.20, D: -39.38, Time: 0.020000
+Setpoint: 15.00, Measured: 36.95, Error: -21.95, Output: -114.53, PWM: 114, I: 26.89, D: -38.24, Time: 0.020000
+Setpoint: 15.00, Measured: 37.15, Error: -22.15, Output: -115.84, PWM: 115, I: 25.56, D: -37.30, Time: 0.020000
+Setpoint: 15.00, Measured: 37.38, Error: -22.38, Output: -118.05, PWM: 118, I: 24.21, D: -37.06, Time: 0.020000
+Setpoint: 15.00, Measured: 37.61, Error: -22.61, Output: -120.13, PWM: 120, I: 22.86, D: -36.71, Time: 0.020000
+Setpoint: 15.00, Measured: 37.98, Error: -22.98, Output: -124.99, PWM: 124, I: 21.48, D: -38.46, Time: 0.020000
+Setpoint: 15.00, Measured: 38.75, Error: -23.75, Output: -137.58, PWM: 137, I: 20.05, D: -45.99, Time: 0.020000
+Setpoint: 15.00, Measured: 39.27, Error: -24.27, Output: -144.47, PWM: 144, I: 18.60, D: -49.00, Time: 0.020000
+Setpoint: 15.00, Measured: 39.53, Error: -24.53, Output: -146.15, PWM: 146, I: 17.12, D: -47.97, Time: 0.020000
+Setpoint: 15.00, Measured: 39.87, Error: -24.87, Output: -149.45, PWM: 149, I: 15.63, D: -48.17, Time: 0.020000
+Setpoint: 15.00, Measured: 40.34, Error: -25.34, Output: -155.15, PWM: 155, I: 14.11, D: -50.18, Time: 0.020000
+Setpoint: 15.00, Measured: 41.07, Error: -26.07, Output: -165.93, PWM: 165, I: 12.55, D: -55.95, Time: 0.020000
+Setpoint: 15.00, Measured: 41.47, Error: -26.47, Output: -169.78, PWM: 169, I: 10.96, D: -56.31, Time: 0.020000
+Setpoint: 15.00, Measured: 41.85, Error: -26.85, Output: -173.08, PWM: 173, I: 9.35, D: -56.23, Time: 0.020000
+Setpoint: 15.00, Measured: 42.14, Error: -27.14, Output: -174.71, PWM: 174, I: 7.72, D: -54.87, Time: 0.020000
+Setpoint: 15.00, Measured: 42.76, Error: -27.76, Output: -183.01, PWM: 183, I: 6.05, D: -58.57, Time: 0.020000
+Setpoint: 15.00, Measured: 43.30, Error: -28.30, Output: -189.17, PWM: 189, I: 4.36, D: -60.53, Time: 0.020000
+Setpoint: 15.00, Measured: 43.02, Error: -28.02, Output: -179.38, PWM: 179, I: 2.67, D: -50.37, Time: 0.020000
+Setpoint: 15.00, Measured: 43.38, Error: -28.38, Output: -183.02, PWM: 183, I: 0.97, D: -50.62, Time: 0.020000
+Setpoint: 15.00, Measured: 43.97, Error: -28.97, Output: -191.16, PWM: 191, I: -0.77, D: -54.25, Time: 0.020000
+Setpoint: 15.00, Measured: 43.98, Error: -28.98, Output: -187.70, PWM: 187, I: -2.50, D: -49.00, Time: 0.020000
+Setpoint: 15.00, Measured: 42.69, Error: -27.69, Output: -159.49, PWM: 159, I: -4.17, D: -25.17, Time: 0.020000
+Setpoint: 15.00, Measured: 41.44, Error: -26.44, Output: -134.31, PWM: 134, I: -5.75, D: -4.27, Time: 0.020000
+Setpoint: 15.00, Measured: 41.30, Error: -26.30, Output: -132.71, PWM: 132, I: -7.33, D: -1.76, Time: 0.020000
+Setpoint: 15.00, Measured: 40.96, Error: -25.96, Output: -127.46, PWM: 127, I: -8.89, D: 3.45, Time: 0.020000
+Setpoint: 15.00, Measured: 41.46, Error: -26.46, Output: -139.10, PWM: 139, I: -10.48, D: -4.26, Time: 0.020000
+Setpoint: 15.00, Measured: 41.82, Error: -26.82, Output: -147.27, PWM: 147, I: -12.09, D: -9.13, Time: 0.020000
+Setpoint: 15.00, Measured: 41.18, Error: -26.18, Output: -135.46, PWM: 135, I: -13.66, D: 1.23, Time: 0.020000
+Setpoint: 15.00, Measured: 41.25, Error: -26.25, Output: -138.47, PWM: 138, I: -15.23, D: 0.11, Time: 0.020000
+Setpoint: 15.00, Measured: 41.46, Error: -26.46, Output: -144.22, PWM: 144, I: -16.82, D: -3.04, Time: 0.020000
+Setpoint: 15.00, Measured: 41.28, Error: -26.28, Output: -141.99, PWM: 141, I: -18.39, D: -0.09, Time: 0.020000
+Setpoint: 15.00, Measured: 40.55, Error: -25.55, Output: -129.37, PWM: 129, I: -19.93, D: 10.64, Time: 0.020000
+Setpoint: 15.00, Measured: 39.56, Error: -24.56, Output: -112.73, PWM: 112, I: -21.40, D: 24.12, Time: 0.020000
+Setpoint: 15.00, Measured: 39.31, Error: -24.31, Output: -111.71, PWM: 111, I: -22.86, D: 25.42, Time: 0.020000
+Setpoint: 15.00, Measured: 38.82, Error: -23.82, Output: -106.04, PWM: 106, I: -24.29, D: 30.18, Time: 0.020000
+Setpoint: 15.00, Measured: 38.09, Error: -23.09, Output: -96.42, PWM: 96, I: -25.67, D: 37.79, Time: 0.020000
+Setpoint: 15.00, Measured: 37.95, Error: -22.95, Output: -98.72, PWM: 98, I: -27.05, D: 36.18, Time: 0.020000
+Setpoint: 15.00, Measured: 37.42, Error: -22.42, Output: -93.38, PWM: 93, I: -28.40, D: 40.37, Time: 0.020000
+Setpoint: 15.00, Measured: 37.02, Error: -22.02, Output: -91.11, PWM: 91, I: -29.72, D: 42.12, Time: 0.020000
+Setpoint: 15.00, Measured: 37.14, Error: -22.14, Output: -98.98, PWM: 98, I: -31.05, D: 36.14, Time: 0.020000
+Setpoint: 15.00, Measured: 37.41, Error: -22.41, Output: -109.21, PWM: 109, I: -32.39, D: 28.53, Time: 0.020000
+Setpoint: 15.00, Measured: 37.47, Error: -22.47, Output: -114.55, PWM: 114, I: -33.74, D: 24.81, Time: 0.020000
+Setpoint: 15.00, Measured: 37.58, Error: -22.58, Output: -120.51, PWM: 120, I: -35.09, D: 20.72, Time: 0.020000
+Setpoint: 15.00, Measured: 37.47, Error: -22.47, Output: -121.82, PWM: 121, I: -36.44, D: 20.25, Time: 0.020000
+Setpoint: 15.00, Measured: 37.43, Error: -22.43, Output: -124.38, PWM: 124, I: -37.79, D: 18.83, Time: 0.020000
+Setpoint: 15.00, Measured: 37.58, Error: -22.58, Output: -130.45, PWM: 130, I: -39.14, D: 14.81, Time: 0.020000
+Setpoint: 15.00, Measured: 37.73, Error: -22.73, Output: -136.33, PWM: 136, I: -40.51, D: 11.02, Time: 0.020000
+Setpoint: 15.00, Measured: 37.75, Error: -22.75, Output: -139.03, PWM: 139, I: -41.87, D: 9.75, Time: 0.020000
+Setpoint: 15.00, Measured: 37.71, Error: -22.71, Output: -140.63, PWM: 140, I: -43.23, D: 9.33, Time: 0.020000
+Setpoint: 15.00, Measured: 37.71, Error: -22.71, Output: -142.90, PWM: 142, I: -44.60, D: 8.42, Time: 0.020000
+Setpoint: 15.00, Measured: 37.75, Error: -22.75, Output: -145.98, PWM: 145, I: -45.96, D: 6.91, Time: 0.020000
+Setpoint: 15.00, Measured: 37.94, Error: -22.94, Output: -151.69, PWM: 151, I: -47.34, D: 3.46, Time: 0.020000
+Setpoint: 15.00, Measured: 37.98, Error: -22.98, Output: -154.22, PWM: 154, I: -48.72, D: 2.50, Time: 0.020000
+Setpoint: 15.00, Measured: 38.24, Error: -23.24, Output: -160.84, PWM: 160, I: -50.11, D: -1.52, Time: 0.020000
+Setpoint: 15.00, Measured: 38.53, Error: -23.53, Output: -167.85, PWM: 167, I: -51.52, D: -5.72, Time: 0.020000
+Setpoint: 15.00, Measured: 38.59, Error: -23.59, Output: -169.74, PWM: 169, I: -52.94, D: -5.95, Time: 0.020000
+Setpoint: 15.00, Measured: 38.92, Error: -23.92, Output: -177.04, PWM: 177, I: -54.37, D: -10.25, Time: 0.020000
+Setpoint: 15.00, Measured: 39.37, Error: -24.37, Output: -186.33, PWM: 186, I: -55.84, D: -15.93, Time: 0.020000
+Setpoint: 15.00, Measured: 40.34, Error: -25.34, Output: -205.06, PWM: 200, I: -57.36, D: -28.59, Time: 0.020000
+Setpoint: 15.00, Measured: 40.64, Error: -25.64, Output: -209.58, PWM: 200, I: -58.90, D: -30.15, Time: 0.020000
+Setpoint: 15.00, Measured: 40.73, Error: -25.73, Output: -209.72, PWM: 200, I: -60.44, D: -28.36, Time: 0.020000
+Setpoint: 15.00, Measured: 41.45, Error: -26.45, Output: -222.47, PWM: 200, I: -62.03, D: -36.14, Time: 0.020000
+Setpoint: 15.00, Measured: 42.03, Error: -27.03, Output: -231.82, PWM: 200, I: -63.65, D: -41.12, Time: 0.020000
+Setpoint: 15.00, Measured: 38.74, Error: -23.74, Output: -165.13, PWM: 165, I: -65.07, D: 11.50, Time: 0.020000
+Setpoint: 15.00, Measured: 36.75, Error: -21.75, Output: -129.10, PWM: 129, I: -66.38, D: 39.52, Time: 0.020000
+Setpoint: 15.00, Measured: 34.16, Error: -19.16, Output: -83.74, PWM: 83, I: -67.53, D: 73.82, Time: 0.020000
+Setpoint: 15.00, Measured: 33.15, Error: -18.15, Output: -72.71, PWM: 72, I: -68.62, D: 81.22, Time: 0.020000
+Setpoint: 15.00, Measured: 32.88, Error: -17.88, Output: -76.63, PWM: 76, I: -69.69, D: 77.10, Time: 0.020000
+Setpoint: 15.00, Measured: 31.03, Error: -16.03, Output: -49.39, PWM: 70, I: -70.65, D: 96.60, Time: 0.020000
+Setpoint: 15.00, Measured: 29.46, Error: -14.46, Output: -29.49, PWM: 70, I: -71.52, D: 110.01, Time: 0.020000
+Setpoint: 15.00, Measured: 28.10, Error: -13.10, Output: -14.70, PWM: 70, I: -72.30, D: 119.15, Time: 0.020000
+Setpoint: 15.00, Measured: 26.76, Error: -11.76, Output: -1.29, PWM: 70, I: -73.01, D: 126.97, Time: 0.020000
+Setpoint: 15.00, Measured: 25.17, Error: -10.17, Output: 16.15, PWM: 70, I: -73.62, D: 137.58, Time: 0.020000
+Setpoint: 15.00, Measured: 23.53, Error: -8.53, Output: 33.69, PWM: 70, I: -74.13, D: 147.93, Time: 0.020000
+Setpoint: 15.00, Measured: 21.82, Error: -6.82, Output: 51.80, PWM: 70, I: -74.54, D: 158.39, Time: 0.020000
+Setpoint: 15.00, Measured: 20.10, Error: -5.10, Output: 69.11, PWM: 70, I: -74.85, D: 167.90, Time: 0.020000
+Setpoint: 15.00, Measured: 19.87, Error: -4.87, Output: 56.50, PWM: 70, I: -75.14, D: 154.50, Time: 0.020000
+Setpoint: 15.00, Measured: 19.30, Error: -4.30, Output: 51.68, PWM: 70, I: -75.40, D: 147.31, Time: 0.020000
+Setpoint: 15.00, Measured: 18.83, Error: -3.83, Output: 45.88, PWM: 70, I: -75.63, D: 139.52, Time: 0.020000
+Setpoint: 15.00, Measured: 18.54, Error: -3.54, Output: 37.45, PWM: 70, I: -75.84, D: 129.92, Time: 0.020000
+Setpoint: 15.00, Measured: 18.32, Error: -3.32, Output: 28.58, PWM: 70, I: -76.04, D: 120.20, Time: 0.020000
+[0;32mI (32863) wifi:<ba-add>idx:1 (ifx:0, e4:60:4d:cf:9a:d7), tid:5, ssn:1, winSize:64[0m
+[0;32mI (32903) WEBSERVER: PID saved to NVS - Kp: 16.30, Ki: 3.00, Kd: 2.944[0m
+[0;32mI (32913) WEBSERVER: PID Updated & Saved - Kp: 16.30, Ki: 3.00, Kd: 2.944[0m
+Setpoint: 15.00, Measured: 8.78, Error: 6.22, Output: 225.42, PWM: 200, I: -75.66, D: 199.72, Time: 0.020000
+Setpoint: 15.00, Measured: 12.59, Error: 2.41, Output: 87.54, PWM: 87, I: -75.52, D: 123.73, Time: 0.020000
+Setpoint: 15.00, Measured: 12.04, Error: 2.96, Output: 92.24, PWM: 92, I: -75.34, D: 119.38, Time: 0.020000
+Setpoint: 15.00, Measured: 10.18, Error: 4.82, Output: 138.26, PWM: 138, I: -75.05, D: 134.80, Time: 0.020000
+Setpoint: 15.00, Measured: 8.88, Error: 6.12, Output: 165.46, PWM: 165, I: -74.69, D: 140.45, Time: 0.020000
+Setpoint: 15.00, Measured: 9.17, Error: 5.83, Output: 142.77, PWM: 142, I: -74.34, D: 122.14, Time: 0.020000
+Setpoint: 15.00, Measured: 9.77, Error: 5.23, Output: 112.24, PWM: 112, I: -74.02, D: 101.09, Time: 0.020000
+Setpoint: 15.00, Measured: 9.71, Error: 5.29, Output: 104.53, PWM: 104, I: -73.71, D: 91.96, Time: 0.020000
+Setpoint: 15.00, Measured: 9.55, Error: 5.45, Output: 100.46, PWM: 100, I: -73.38, D: 85.04, Time: 0.020000
+Setpoint: 15.00, Measured: 9.18, Error: 5.82, Output: 103.87, PWM: 103, I: -73.03, D: 82.03, Time: 0.020000
+Setpoint: 15.00, Measured: 8.82, Error: 6.18, Output: 107.15, PWM: 107, I: -72.66, D: 79.10, Time: 0.020000
+Setpoint: 15.00, Measured: 8.78, Error: 6.22, Output: 100.92, PWM: 100, I: -72.29, D: 71.81, Time: 0.020000
+Setpoint: 15.00, Measured: 8.75, Error: 6.25, Output: 95.01, PWM: 95, I: -71.91, D: 65.05, Time: 0.020000
+Setpoint: 15.00, Measured: 8.54, Error: 6.46, Output: 95.32, PWM: 95, I: -71.52, D: 61.60, Time: 0.020000
+Setpoint: 15.00, Measured: 8.72, Error: 6.28, Output: 83.98, PWM: 83, I: -71.15, D: 52.80, Time: 0.020000
+Setpoint: 15.00, Measured: 9.47, Error: 5.53, Output: 55.80, PWM: 70, I: -70.82, D: 36.50, Time: 0.020000
+Setpoint: 15.00, Measured: 10.38, Error: 4.62, Output: 24.22, PWM: 70, I: -70.54, D: 19.46, Time: 0.020000
+Setpoint: 15.00, Measured: 11.50, Error: 3.50, Output: -12.18, PWM: 70, I: -70.33, D: 1.06, Time: 0.020000
+Setpoint: 15.00, Measured: 12.15, Error: 2.85, Output: -32.22, PWM: 70, I: -70.16, D: -8.58, Time: 0.020000
+Setpoint: 15.00, Measured: 12.84, Error: 2.16, Output: -52.86, PWM: 70, I: -70.03, D: -17.98, Time: 0.020000
+Setpoint: 15.00, Measured: 12.95, Error: 2.05, Output: -54.13, PWM: 70, I: -69.90, D: -17.70, Time: 0.020000
+Setpoint: 15.00, Measured: 13.10, Error: 1.90, Output: -57.00, PWM: 70, I: -69.79, D: -18.19, Time: 0.020000
+Setpoint: 15.00, Measured: 12.86, Error: 2.14, Output: -47.72, PWM: 70, I: -69.66, D: -12.89, Time: 0.020000
+Setpoint: 15.00, Measured: 12.48, Error: 2.52, Output: -34.34, PWM: 70, I: -69.51, D: -5.93, Time: 0.020000
+Setpoint: 15.00, Measured: 11.72, Error: 3.28, Output: -10.00, PWM: 70, I: -69.31, D: 5.83, Time: 0.020000
+Setpoint: 15.00, Measured: 11.13, Error: 3.87, Output: 7.91, PWM: 70, I: -69.08, D: 13.92, Time: 0.020000
+Setpoint: 15.00, Measured: 10.26, Error: 4.74, Output: 33.83, PWM: 70, I: -68.80, D: 25.35, Time: 0.020000
+Setpoint: 15.00, Measured: 9.63, Error: 5.37, Output: 51.27, PWM: 70, I: -68.47, D: 32.14, Time: 0.020000
+Setpoint: 15.00, Measured: 9.40, Error: 5.60, Output: 55.35, PWM: 70, I: -68.14, D: 32.23, Time: 0.020000
+Setpoint: 15.00, Measured: 8.61, Error: 6.39, Output: 77.08, PWM: 77, I: -67.76, D: 40.66, Time: 0.020000
+Setpoint: 15.00, Measured: 8.11, Error: 6.89, Output: 89.04, PWM: 89, I: -67.34, D: 44.01, Time: 0.020000
+Setpoint: 15.00, Measured: 6.86, Error: 8.14, Output: 123.88, PWM: 123, I: -66.85, D: 57.99, Time: 0.020000
+Setpoint: 15.00, Measured: 5.94, Error: 9.06, Output: 147.18, PWM: 147, I: -66.31, D: 65.75, Time: 0.020000
+Setpoint: 15.00, Measured: 5.45, Error: 9.55, Output: 156.21, PWM: 156, I: -65.74, D: 66.31, Time: 0.020000
+Setpoint: 15.00, Measured: 5.02, Error: 9.98, Output: 163.63, PWM: 163, I: -65.14, D: 66.06, Time: 0.020000
+Setpoint: 15.00, Measured: 4.02, Error: 10.98, Output: 188.61, PWM: 188, I: -64.48, D: 74.13, Time: 0.020000
+Setpoint: 15.00, Measured: 2.86, Error: 12.14, Output: 217.91, PWM: 200, I: -63.75, D: 83.79, Time: 0.020000
+Setpoint: 15.00, Measured: 2.20, Error: 12.80, Output: 230.70, PWM: 200, I: -62.98, D: 85.09, Time: 0.020000
+Setpoint: 15.00, Measured: 2.01, Error: 12.99, Output: 228.93, PWM: 200, I: -62.20, D: 79.41, Time: 0.020000
+Setpoint: 15.00, Measured: 1.77, Error: 13.23, Output: 229.14, PWM: 200, I: -61.41, D: 74.96, Time: 0.020000
+Setpoint: 15.00, Measured: 2.46, Error: 12.54, Output: 200.98, PWM: 200, I: -60.66, D: 57.30, Time: 0.020000
+Setpoint: 15.00, Measured: 2.61, Error: 12.39, Output: 191.43, PWM: 191, I: -59.91, D: 49.41, Time: 0.020000
+Setpoint: 15.00, Measured: 2.48, Error: 12.52, Output: 191.31, PWM: 191, I: -59.16, D: 46.40, Time: 0.020000
+Setpoint: 15.00, Measured: 2.63, Error: 12.37, Output: 182.61, PWM: 182, I: -58.42, D: 39.48, Time: 0.020000
+Setpoint: 15.00, Measured: 1.88, Error: 13.12, Output: 202.79, PWM: 200, I: -57.63, D: 46.61, Time: 0.020000
+Setpoint: 15.00, Measured: 2.12, Error: 12.88, Output: 191.41, PWM: 191, I: -56.86, D: 38.39, Time: 0.020000
+Setpoint: 15.00, Measured: 1.84, Error: 13.16, Output: 197.31, PWM: 197, I: -56.07, D: 38.80, Time: 0.020000
+Setpoint: 15.00, Measured: 2.85, Error: 12.15, Output: 162.68, PWM: 162, I: -55.34, D: 19.98, Time: 0.020000
+Setpoint: 15.00, Measured: 4.81, Error: 10.19, Output: 100.54, PWM: 100, I: -54.73, D: -10.85, Time: 0.020000
+Setpoint: 15.00, Measured: 5.45, Error: 9.55, Output: 82.17, PWM: 82, I: -54.16, D: -19.26, Time: 0.020000
+Setpoint: 15.00, Measured: 7.27, Error: 7.73, Output: 28.12, PWM: 70, I: -53.69, D: -44.12, Time: 0.020000
+Setpoint: 15.00, Measured: 8.98, Error: 6.02, Output: -20.15, PWM: 70, I: -53.33, D: -64.88, Time: 0.020000
+Setpoint: 15.00, Measured: 10.55, Error: 4.45, Output: -61.90, PWM: 70, I: -53.07, D: -81.41, Time: 0.020000
+Setpoint: 15.00, Measured: 11.47, Error: 3.53, Output: -82.03, PWM: 82, I: -52.85, D: -86.79, Time: 0.020000
+Setpoint: 15.00, Measured: 12.86, Error: 2.14, Output: -116.48, PWM: 116, I: -52.73, D: -98.63, Time: 0.020000
+Setpoint: 15.00, Measured: 13.55, Error: 1.45, Output: -127.98, PWM: 127, I: -52.64, D: -98.95, Time: 0.020000
+Setpoint: 15.00, Measured: 13.43, Error: 1.57, Output: -114.25, PWM: 114, I: -52.55, D: -87.28, Time: 0.020000
+Setpoint: 15.00, Measured: 12.66, Error: 2.34, Output: -81.53, PWM: 81, I: -52.40, D: -67.23, Time: 0.020000
+Setpoint: 15.00, Measured: 11.56, Error: 3.44, Output: -40.55, PWM: 70, I: -52.20, D: -44.35, Time: 0.020000
+Setpoint: 15.00, Measured: 10.72, Error: 4.28, Output: -9.76, PWM: 70, I: -51.94, D: -27.53, Time: 0.020000
+Setpoint: 15.00, Measured: 10.36, Error: 4.64, Output: 4.60, PWM: 70, I: -51.66, D: -19.40, Time: 0.020000
+Setpoint: 15.00, Measured: 10.53, Error: 4.47, Output: 1.42, PWM: 70, I: -51.40, D: -20.02, Time: 0.020000
+Setpoint: 15.00, Measured: 10.52, Error: 4.48, Output: 4.01, PWM: 70, I: -51.13, D: -17.87, Time: 0.020000
+Setpoint: 15.00, Measured: 10.44, Error: 4.56, Output: 8.73, PWM: 70, I: -50.85, D: -14.82, Time: 0.020000
+Setpoint: 15.00, Measured: 10.12, Error: 4.88, Output: 20.18, PWM: 70, I: -50.56, D: -8.74, Time: 0.020000
+Setpoint: 15.00, Measured: 9.82, Error: 5.18, Output: 30.85, PWM: 70, I: -50.25, D: -3.37, Time: 0.020000
+Setpoint: 15.00, Measured: 9.68, Error: 5.32, Output: 35.70, PWM: 70, I: -49.93, D: -1.04, Time: 0.020000
+Setpoint: 15.00, Measured: 9.61, Error: 5.39, Output: 38.30, PWM: 70, I: -49.61, D: 0.09, Time: 0.020000
+Setpoint: 15.00, Measured: 9.32, Error: 5.68, Output: 47.60, PWM: 70, I: -49.27, D: 4.34, Time: 0.020000
+Setpoint: 15.00, Measured: 9.41, Error: 5.59, Output: 44.96, PWM: 70, I: -48.93, D: 2.70, Time: 0.020000
+Setpoint: 15.00, Measured: 9.06, Error: 5.94, Output: 55.71, PWM: 70, I: -48.57, D: 7.49, Time: 0.020000
+Setpoint: 15.00, Measured: 8.95, Error: 6.05, Output: 58.94, PWM: 70, I: -48.21, D: 8.46, Time: 0.020000
+Setpoint: 15.00, Measured: 8.81, Error: 6.19, Output: 62.72, PWM: 70, I: -47.84, D: 9.63, Time: 0.020000
+Setpoint: 15.00, Measured: 8.29, Error: 6.71, Output: 78.19, PWM: 78, I: -47.44, D: 16.27, Time: 0.020000
+Setpoint: 15.00, Measured: 7.79, Error: 7.21, Output: 92.64, PWM: 92, I: -47.00, D: 22.07, Time: 0.020000
+Setpoint: 15.00, Measured: 6.98, Error: 8.02, Output: 115.91, PWM: 115, I: -46.52, D: 31.73, Time: 0.020000
+Setpoint: 15.00, Measured: 6.43, Error: 8.57, Output: 130.30, PWM: 130, I: -46.01, D: 36.64, Time: 0.020000
+Setpoint: 15.00, Measured: 6.04, Error: 8.96, Output: 139.46, PWM: 139, I: -45.47, D: 38.81, Time: 0.020000
+Setpoint: 15.00, Measured: 5.57, Error: 9.43, Output: 150.71, PWM: 150, I: -44.91, D: 41.84, Time: 0.020000
+Setpoint: 15.00, Measured: 5.50, Error: 9.50, Output: 149.05, PWM: 149, I: -44.34, D: 38.58, Time: 0.020000
+Setpoint: 15.00, Measured: 5.55, Error: 9.45, Output: 144.34, PWM: 144, I: -43.77, D: 34.05, Time: 0.020000
+Setpoint: 15.00, Measured: 5.28, Error: 9.72, Output: 149.87, PWM: 149, I: -43.19, D: 34.61, Time: 0.020000
+Setpoint: 15.00, Measured: 5.08, Error: 9.92, Output: 153.14, PWM: 153, I: -42.59, D: 34.06, Time: 0.020000
+Setpoint: 15.00, Measured: 4.84, Error: 10.16, Output: 157.98, PWM: 157, I: -41.98, D: 34.28, Time: 0.020000
+Setpoint: 15.00, Measured: 4.58, Error: 10.42, Output: 163.02, PWM: 163, I: -41.36, D: 34.57, Time: 0.020000
+Setpoint: 15.00, Measured: 4.02, Error: 10.98, Output: 177.67, PWM: 177, I: -40.70, D: 39.39, Time: 0.020000
+Setpoint: 15.00, Measured: 3.50, Error: 11.50, Output: 190.59, PWM: 190, I: -40.01, D: 43.13, Time: 0.020000
+Setpoint: 15.00, Measured: 3.42, Error: 11.58, Output: 189.36, PWM: 189, I: -39.31, D: 39.95, Time: 0.020000
+Setpoint: 15.00, Measured: 3.62, Error: 11.38, Output: 179.95, PWM: 179, I: -38.63, D: 33.06, Time: 0.020000
+Setpoint: 15.00, Measured: 3.85, Error: 11.15, Output: 170.02, PWM: 170, I: -37.96, D: 26.29, Time: 0.020000
+Setpoint: 15.00, Measured: 3.78, Error: 11.22, Output: 170.19, PWM: 170, I: -37.29, D: 24.67, Time: 0.020000
+Setpoint: 15.00, Measured: 3.62, Error: 11.38, Output: 173.43, PWM: 173, I: -36.60, D: 24.59, Time: 0.020000
+Setpoint: 15.00, Measured: 3.50, Error: 11.50, Output: 175.62, PWM: 175, I: -35.91, D: 24.01, Time: 0.020000
+Setpoint: 15.00, Measured: 3.14, Error: 11.86, Output: 185.02, PWM: 185, I: -35.20, D: 26.87, Time: 0.020000
+Setpoint: 15.00, Measured: 3.00, Error: 12.00, Output: 187.38, PWM: 187, I: -34.48, D: 26.24, Time: 0.020000
+Setpoint: 15.00, Measured: 3.14, Error: 11.86, Output: 181.16, PWM: 181, I: -33.77, D: 21.57, Time: 0.020000
+Setpoint: 15.00, Measured: 3.10, Error: 11.90, Output: 180.74, PWM: 180, I: -33.06, D: 19.89, Time: 0.020000
+Setpoint: 15.00, Measured: 3.63, Error: 11.37, Output: 163.19, PWM: 163, I: -32.37, D: 10.20, Time: 0.020000
+Setpoint: 15.00, Measured: 3.23, Error: 11.77, Output: 175.35, PWM: 175, I: -31.67, D: 15.10, Time: 0.020000
+Setpoint: 15.00, Measured: 3.26, Error: 11.74, Output: 173.60, PWM: 173, I: -30.96, D: 13.14, Time: 0.020000
+Setpoint: 15.00, Measured: 4.07, Error: 10.93, Output: 147.83, PWM: 147, I: -30.31, D: -0.09, Time: 0.020000
+Setpoint: 15.00, Measured: 4.88, Error: 10.12, Output: 123.06, PWM: 123, I: -29.70, D: -12.13, Time: 0.020000
+Setpoint: 15.00, Measured: 4.98, Error: 10.02, Output: 122.04, PWM: 122, I: -29.10, D: -12.26, Time: 0.020000
+Setpoint: 15.00, Measured: 5.07, Error: 9.93, Output: 120.82, PWM: 120, I: -28.50, D: -12.48, Time: 0.020000
+Setpoint: 15.00, Measured: 4.63, Error: 10.37, Output: 136.34, PWM: 136, I: -27.88, D: -4.75, Time: 0.020000
+Setpoint: 15.00, Measured: 4.29, Error: 10.71, Output: 148.08, PWM: 148, I: -27.24, D: 0.76, Time: 0.020000
+Setpoint: 15.00, Measured: 4.06, Error: 10.94, Output: 155.82, PWM: 155, I: -26.58, D: 4.09, Time: 0.020000
+Setpoint: 15.00, Measured: 3.88, Error: 11.12, Output: 161.52, PWM: 161, I: -25.92, D: 6.26, Time: 0.020000
+Setpoint: 15.00, Measured: 3.76, Error: 11.24, Output: 165.50, PWM: 165, I: -25.24, D: 7.50, Time: 0.020000
+Setpoint: 15.00, Measured: 3.91, Error: 11.09, Output: 160.77, PWM: 160, I: -24.58, D: 4.55, Time: 0.020000
+Setpoint: 15.00, Measured: 4.50, Error: 10.50, Output: 142.51, PWM: 142, I: -23.95, D: -4.66, Time: 0.020000
+Setpoint: 15.00, Measured: 4.94, Error: 10.06, Output: 129.87, PWM: 129, I: -23.34, D: -10.70, Time: 0.020000
+Setpoint: 15.00, Measured: 4.98, Error: 10.02, Output: 130.31, PWM: 130, I: -22.74, D: -10.21, Time: 0.020000
+Setpoint: 15.00, Measured: 4.91, Error: 10.09, Output: 134.17, PWM: 134, I: -22.14, D: -8.13, Time: 0.020000
+Setpoint: 15.00, Measured: 4.88, Error: 10.12, Output: 136.53, PWM: 136, I: -21.53, D: -6.87, Time: 0.020000
+Setpoint: 15.00, Measured: 4.99, Error: 10.01, Output: 134.53, PWM: 134, I: -20.93, D: -7.74, Time: 0.020000
+Setpoint: 15.00, Measured: 4.71, Error: 10.29, Output: 144.67, PWM: 144, I: -20.31, D: -2.82, Time: 0.020000
+Setpoint: 15.00, Measured: 4.73, Error: 10.27, Output: 144.82, PWM: 144, I: -19.69, D: -2.89, Time: 0.020000
+Setpoint: 15.00, Measured: 5.23, Error: 9.77, Output: 130.28, PWM: 130, I: -19.11, D: -9.92, Time: 0.020000
+Setpoint: 15.00, Measured: 5.69, Error: 9.31, Output: 117.39, PWM: 117, I: -18.55, D: -15.78, Time: 0.020000
+Setpoint: 15.00, Measured: 5.53, Error: 9.47, Output: 124.67, PWM: 124, I: -17.98, D: -11.76, Time: 0.020000
+Setpoint: 15.00, Measured: 7.44, Error: 7.56, Output: 66.97, PWM: 70, I: -17.53, D: -38.74, Time: 0.020000
+Setpoint: 15.00, Measured: 7.42, Error: 7.58, Output: 71.89, PWM: 71, I: -17.07, D: -34.59, Time: 0.020000
+Setpoint: 15.00, Measured: 5.34, Error: 9.66, Output: 140.55, PWM: 140, I: -16.49, D: -0.46, Time: 0.020000
+Setpoint: 15.00, Measured: 4.55, Error: 10.45, Output: 165.49, PWM: 165, I: -15.87, D: 11.10, Time: 0.020000
+Setpoint: 15.00, Measured: 4.25, Error: 10.75, Output: 174.43, PWM: 174, I: -15.22, D: 14.45, Time: 0.020000
+Setpoint: 15.00, Measured: 3.75, Error: 11.25, Output: 189.26, PWM: 189, I: -14.55, D: 20.41, Time: 0.020000
+Setpoint: 15.00, Measured: 3.91, Error: 11.09, Output: 182.76, PWM: 182, I: -13.88, D: 15.93, Time: 0.020000
+Setpoint: 15.00, Measured: 5.01, Error: 9.99, Output: 147.83, PWM: 147, I: -13.28, D: -1.76, Time: 0.020000
+Setpoint: 15.00, Measured: 4.10, Error: 10.90, Output: 176.76, PWM: 176, I: -12.63, D: 11.75, Time: 0.020000
+Setpoint: 15.00, Measured: 3.03, Error: 11.97, Output: 209.61, PWM: 200, I: -11.91, D: 26.38, Time: 0.020000
+Setpoint: 15.00, Measured: 3.08, Error: 11.92, Output: 206.04, PWM: 200, I: -11.19, D: 22.96, Time: 0.020000
+Setpoint: 15.00, Measured: -5.89, Error: 20.89, Output: 483.18, PWM: 200, I: -9.94, D: 152.67, Time: 0.020000
+Setpoint: 15.00, Measured: -3.67, Error: 18.67, Output: 400.26, PWM: 200, I: -8.82, D: 104.77, Time: 0.020000
+Setpoint: 15.00, Measured: -4.04, Error: 19.04, Output: 402.36, PWM: 200, I: -7.68, D: 99.72, Time: 0.020000
+Setpoint: 15.00, Measured: -3.94, Error: 18.94, Output: 390.47, PWM: 200, I: -6.54, D: 88.30, Time: 0.020000
+Setpoint: 15.00, Measured: -3.78, Error: 18.78, Output: 377.67, PWM: 200, I: -5.42, D: 77.05, Time: 0.020000
+Setpoint: 15.00, Measured: -4.44, Error: 19.44, Output: 391.69, PWM: 200, I: -4.25, D: 79.10, Time: 0.020000
+Setpoint: 15.00, Measured: -3.99, Error: 18.99, Output: 371.12, PWM: 200, I: -3.11, D: 64.64, Time: 0.020000
+Setpoint: 15.00, Measured: -3.25, Error: 18.25, Output: 342.83, PWM: 200, I: -2.01, D: 47.30, Time: 0.020000
+Setpoint: 15.00, Measured: -3.39, Error: 18.39, Output: 343.41, PWM: 200, I: -0.91, D: 44.56, Time: 0.020000
+Setpoint: 15.00, Measured: -2.98, Error: 17.98, Output: 327.27, PWM: 200, I: 0.17, D: 34.05, Time: 0.020000
+Setpoint: 15.00, Measured: -3.07, Error: 18.07, Output: 327.90, PWM: 200, I: 1.25, D: 32.05, Time: 0.020000
+Setpoint: 15.00, Measured: -3.50, Error: 18.50, Output: 339.14, PWM: 200, I: 2.36, D: 35.17, Time: 0.020000
+Setpoint: 15.00, Measured: -3.44, Error: 18.44, Output: 334.86, PWM: 200, I: 3.47, D: 30.76, Time: 0.020000
+Setpoint: 15.00, Measured: -3.32, Error: 18.32, Output: 329.17, PWM: 200, I: 4.57, D: 25.93, Time: 0.020000
+Setpoint: 15.00, Measured: -2.97, Error: 17.97, Output: 316.63, PWM: 200, I: 5.65, D: 18.10, Time: 0.020000
+Setpoint: 15.00, Measured: -3.88, Error: 18.88, Output: 344.25, PWM: 200, I: 6.78, D: 29.72, Time: 0.020000
+Setpoint: 15.00, Measured: -4.70, Error: 19.70, Output: 368.04, PWM: 200, I: 7.96, D: 38.89, Time: 0.020000
+Setpoint: 15.00, Measured: -4.97, Error: 19.97, Output: 373.45, PWM: 200, I: 9.16, D: 38.84, Time: 0.020000
+Setpoint: 15.00, Measured: -4.92, Error: 19.92, Output: 369.20, PWM: 200, I: 10.35, D: 34.22, Time: 0.020000
+Setpoint: 15.00, Measured: -4.93, Error: 19.93, Output: 367.48, PWM: 200, I: 11.55, D: 31.04, Time: 0.020000
+Setpoint: 15.00, Measured: -5.34, Error: 20.34, Output: 378.35, PWM: 200, I: 12.77, D: 33.99, Time: 0.020000
+Setpoint: 15.00, Measured: -5.39, Error: 20.39, Output: 377.65, PWM: 200, I: 13.99, D: 31.29, Time: 0.020000
+Setpoint: 15.00, Measured: -4.73, Error: 19.73, Output: 355.22, PWM: 200, I: 15.18, D: 18.44, Time: 0.020000
+Setpoint: 15.00, Measured: -4.16, Error: 19.16, Output: 336.83, PWM: 200, I: 16.33, D: 8.19, Time: 0.020000
+Setpoint: 15.00, Measured: -3.32, Error: 18.32, Output: 311.06, PWM: 200, I: 17.43, D: -4.99, Time: 0.020000
+Setpoint: 15.00, Measured: -2.15, Error: 17.15, Output: 276.25, PWM: 200, I: 18.46, D: -21.73, Time: 0.020000
+Setpoint: 15.00, Measured: -1.09, Error: 16.09, Output: 246.54, PWM: 200, I: 19.42, D: -35.14, Time: 0.020000
+Setpoint: 15.00, Measured: 0.13, Error: 14.87, Output: 213.02, PWM: 200, I: 20.31, D: -49.63, Time: 0.020000
+Setpoint: 15.00, Measured: 2.48, Error: 12.52, Output: 145.79, PWM: 145, I: 21.06, D: -79.28, Time: 0.020000
+Setpoint: 15.00, Measured: 7.06, Error: 7.94, Output: 12.11, PWM: 70, I: 21.54, D: -138.78, Time: 0.020000
+Setpoint: 15.00, Measured: 5.14, Error: 9.86, Output: 86.44, PWM: 86, I: 22.13, D: -96.49, Time: 0.020000
+Setpoint: 15.00, Measured: 4.88, Error: 10.12, Output: 104.53, PWM: 104, I: 22.74, D: -83.12, Time: 0.020000
+Setpoint: 15.00, Measured: 5.20, Error: 9.80, Output: 103.62, PWM: 103, I: 23.33, D: -79.47, Time: 0.020000
+Setpoint: 15.00, Measured: 4.25, Error: 10.75, Output: 141.50, PWM: 141, I: 23.97, D: -57.62, Time: 0.020000
+Setpoint: 15.00, Measured: 3.63, Error: 11.37, Output: 167.39, PWM: 167, I: 24.65, D: -42.63, Time: 0.020000
+Setpoint: 15.00, Measured: 4.29, Error: 10.71, Output: 151.70, PWM: 151, I: 25.30, D: -48.14, Time: 0.020000
+Setpoint: 15.00, Measured: 4.24, Error: 10.76, Output: 158.75, PWM: 158, I: 25.94, D: -42.57, Time: 0.020000
+Setpoint: 15.00, Measured: 3.42, Error: 11.58, Output: 189.15, PWM: 189, I: 26.64, D: -26.24, Time: 0.020000
+Setpoint: 15.00, Measured: 3.08, Error: 11.92, Output: 202.91, PWM: 200, I: 27.35, D: -18.67, Time: 0.020000
+Setpoint: 15.00, Measured: 3.09, Error: 11.91, Output: 205.18, PWM: 200, I: 28.07, D: -16.95, Time: 0.020000
+Setpoint: 15.00, Measured: 3.56, Error: 11.44, Output: 193.22, PWM: 193, I: 28.75, D: -22.06, Time: 0.020000
+Setpoint: 15.00, Measured: 3.27, Error: 11.73, Output: 204.93, PWM: 200, I: 29.46, D: -15.68, Time: 0.020000
+Setpoint: 15.00, Measured: 3.07, Error: 11.93, Output: 213.60, PWM: 200, I: 30.17, D: -11.08, Time: 0.020000
+Setpoint: 15.00, Measured: 3.60, Error: 11.40, Output: 198.96, PWM: 198, I: 30.86, D: -17.77, Time: 0.020000
+Setpoint: 15.00, Measured: 4.36, Error: 10.64, Output: 177.69, PWM: 177, I: 31.50, D: -27.23, Time: 0.020000
+Setpoint: 15.00, Measured: 6.36, Error: 8.64, Output: 118.98, PWM: 118, I: 32.01, D: -53.91, Time: 0.020000
+Setpoint: 15.00, Measured: 6.88, Error: 8.12, Output: 108.72, PWM: 108, I: 32.50, D: -56.18, Time: 0.020000
+Setpoint: 15.00, Measured: 7.17, Error: 7.83, Output: 105.59, PWM: 105, I: 32.97, D: -54.93, Time: 0.020000
+Setpoint: 15.00, Measured: 7.63, Error: 7.37, Output: 97.54, PWM: 97, I: 33.41, D: -56.07, Time: 0.020000
+Setpoint: 15.00, Measured: 8.69, Error: 6.31, Output: 70.48, PWM: 70, I: 33.79, D: -66.15, Time: 0.020000
+Setpoint: 15.00, Measured: 9.58, Error: 5.42, Output: 49.98, PWM: 70, I: 34.12, D: -72.56, Time: 0.020000
+Setpoint: 15.00, Measured: 10.40, Error: 4.60, Output: 31.98, PWM: 70, I: 34.39, D: -77.42, Time: 0.020000
+Setpoint: 15.00, Measured: 11.21, Error: 3.79, Output: 14.70, PWM: 70, I: 34.62, D: -81.66, Time: 0.020000
+Setpoint: 15.00, Measured: 11.04, Error: 3.96, Output: 28.36, PWM: 70, I: 34.86, D: -70.99, Time: 0.020000
+Setpoint: 15.00, Measured: 10.87, Error: 4.13, Output: 41.13, PWM: 70, I: 35.11, D: -61.32, Time: 0.020000

@@ -1,0 +1,335 @@
+ 0, SPIWP:0��;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e6f8h (124664) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e720 vaddr=3ffb0000 size=018f8h (  6392) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=92a9ch (600732) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2ac4 vaddr=3ffb18f8 size=026dch (  9948) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c51a8 vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (451) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (457) app_init: ELF file SHA256:  3f6069fac...[0m
+[0;32mI (462) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (477) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (489) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFB8328 len 00027CD8 (159 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (525) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (542) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MAIN: Connecting to WiFi...[0m
+[0;32mI (603) wifi:wifi driver task: 3ffc0474, prio:23, stack:6656, core=0[0m
+[0;32mI (613) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (613) wifi:wifi certification version: v7.0[0m
+[0;32mI (613) wifi:config NVS flash: enabled[0m
+[0;32mI (613) wifi:config nano formating: disabled[0m
+[0;32mI (623) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (623) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (633) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (643) wifi:Init static rx buffer num: 10[0m
+[0;32mI (643) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (783) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (783) wifi:enable tsf[0m
+[0;32mI (783) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (813) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (813) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (833) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (843) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (873) wifi:connected with Tran Van Tuan, aid = 16, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (873) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (883) wifi:pm start, type: 1[0m
+
+[0;32mI (883) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (893) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (933) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3893) esp_netif_handlers: sta ip: 192.168.1.157, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.157
+[0;32mI (3893) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3893) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4903) WEBSERVER: [34mPID loaded from NVS - Kp: 42.40, Ki: 0.50, Kd: 1.900[0m[0m
+[0;32mI (4903) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4913) WEBSERVER: Web server started successfully![0m
+[0;32mI (4913) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5413) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5413) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5513) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5513) GPIO: LED GPIO initialized[0m
+[0;32mI (5513) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5523) GPIO: Button GPIO initialized[0m
+[0;32mI (5623) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (5723) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (5823) MAIN: I2C initialized successfully[0m
+[0;32mI (6123) MPU6050: Starting gyro calibration...[0m
+[0;32mI (10823) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (10823) MPU6050: Gyro offsets - X: -410.14, Y: -62.69, Z: 40.30[0m
+Robot ready. Press the button to start balancing...
+> Pitch: 8.91 degrees
+Setpoint: 4.00, Measured: 8.91, Error: -9.82, Output: -170.00, I: -0.20, D: 111.39, Time: 34006283
+> Pitch: 14.06 degrees
+Setpoint: 4.00, Measured: 14.06, Error: -20.11, Output: -170.00, I: -0.60, D: 120.02, Time: 34044374
+> Pitch: 19.48 degrees
+Setpoint: 4.00, Measured: 19.48, Error: -30.96, Output: -170.00, I: -1.22, D: 127.81, Time: 34084218
+> Pitch: 23.47 degrees
+Setpoint: 4.00, Measured: 23.47, Error: -38.94, Output: -170.00, I: -2.00, D: 113.77, Time: 34124990
+> Pitch: 26.11 degrees
+Setpoint: 4.00, Measured: 26.11, Error: -44.22, Output: -170.00, I: -2.88, D: 89.86, Time: 34164156
+> Pitch: 28.22 degrees
+Setpoint: 4.00, Measured: 28.22, Error: -48.44, Output: -170.00, I: -3.85, D: 71.31, Time: 34205168
+> Pitch: 29.40 degrees
+Setpoint: 4.00, Measured: 29.40, Error: -50.81, Output: -170.00, I: -4.87, D: 50.47, Time: 34244758
+> Pitch: 29.63 degrees
+Setpoint: 4.00, Measured: 29.63, Error: -51.25, Output: -170.00, I: -5.89, D: 28.01, Time: 34284145
+> Pitch: 29.84 degrees
+Setpoint: 4.00, Measured: 29.84, Error: -51.68, Output: -170.00, I: -6.92, D: 16.65, Time: 34324989
+> Pitch: 30.36 degrees
+Setpoint: 4.00, Measured: 30.36, Error: -52.73, Output: -170.00, I: -7.98, D: 14.90, Time: 34364158
+> Pitch: 28.96 degrees
+Setpoint: 4.00, Measured: 28.96, Error: -49.92, Output: -170.00, I: -8.98, D: -10.07, Time: 34404141
+> Pitch: 27.84 degrees
+Setpoint: 4.00, Measured: 27.84, Error: -47.68, Output: -170.00, I: -9.93, D: -19.05, Time: 34444943
+> Pitch: 27.16 degrees
+Setpoint: 4.00, Measured: 27.16, Error: -46.32, Output: -170.00, I: -10.86, D: -18.04, Time: 34484177
+> Pitch: 26.51 degrees
+Setpoint: 4.00, Measured: 26.51, Error: -45.03, Output: -170.00, I: -11.76, D: -17.09, Time: 34524980
+> Pitch: 25.73 degrees
+Setpoint: 4.00, Measured: 25.73, Error: -43.46, Output: -170.00, I: -12.63, D: -18.35, Time: 34564154
+> Pitch: 25.51 degrees
+Setpoint: 4.00, Measured: 25.51, Error: -43.03, Output: -170.00, I: -13.49, D: -11.88, Time: 34604154
+> Pitch: 25.57 degrees
+Setpoint: 4.00, Measured: 25.57, Error: -43.15, Output: -170.00, I: -14.35, D: -5.18, Time: 34644964
+> Pitch: 24.96 degrees
+Setpoint: 4.00, Measured: 24.96, Error: -41.92, Output: -170.00, I: -15.19, D: -10.27, Time: 34684140
+> Pitch: 23.89 degrees
+Setpoint: 4.00, Measured: 23.89, Error: -39.77, Output: -170.00, I: -15.98, D: -18.55, Time: 34724966
+> Pitch: 22.71 degrees
+Setpoint: 4.00, Measured: 22.71, Error: -37.42, Output: -170.00, I: -16.73, D: -23.95, Time: 34764141
+> Pitch: 21.81 degrees
+Setpoint: 4.00, Measured: 21.81, Error: -35.61, Output: -170.00, I: -17.45, D: -23.30, Time: 34804136
+> Pitch: 20.90 degrees
+Setpoint: 4.00, Measured: 20.90, Error: -33.81, Output: -170.00, I: -18.12, D: -22.91, Time: 34844943
+> Pitch: 20.43 degrees
+Setpoint: 4.00, Measured: 20.43, Error: -32.87, Output: -170.00, I: -18.78, D: -17.34, Time: 34884132
+> Pitch: 19.76 degrees
+Setpoint: 4.00, Measured: 19.76, Error: -31.53, Output: -170.00, I: -19.41, D: -17.03, Time: 34924655
+> Pitch: 19.42 degrees
+Setpoint: 4.00, Measured: 19.42, Error: -30.84, Output: -170.00, I: -20.03, D: -12.80, Time: 34964735
+> Pitch: 19.05 degrees
+Setpoint: 4.00, Measured: 19.05, Error: -30.10, Output: -170.00, I: -20.63, D: -11.05, Time: 35004136
+> Pitch: 18.31 degrees
+Setpoint: 4.00, Measured: 18.31, Error: -28.62, Output: -170.00, I: -21.20, D: -14.80, Time: 35044976
+> Pitch: 17.75 degrees
+Setpoint: 4.00, Measured: 17.75, Error: -27.49, Output: -170.00, I: -21.75, D: -14.41, Time: 35084207
+> Pitch: 17.20 degrees
+Setpoint: 4.00, Measured: 17.20, Error: -26.40, Output: -170.00, I: -22.28, D: -14.03, Time: 35125596
+> Pitch: 16.77 degrees
+Setpoint: 4.00, Measured: 16.77, Error: -25.54, Output: -170.00, I: -22.79, D: -12.38, Time: 35164809
+> Pitch: 16.41 degrees
+Setpoint: 4.00, Measured: 16.41, Error: -24.81, Output: -170.00, I: -23.29, D: -10.77, Time: 35204132
+> Pitch: 16.01 degrees
+Setpoint: 4.00, Measured: 16.01, Error: -24.01, Output: -170.00, I: -23.77, D: -10.38, Time: 35244975
+> Pitch: 15.78 degrees
+Setpoint: 4.00, Measured: 15.78, Error: -23.56, Output: -170.00, I: -24.24, D: -8.02, Time: 35284136
+> Pitch: 14.91 degrees
+Setpoint: 4.00, Measured: 14.91, Error: -21.83, Output: -170.00, I: -24.67, D: -14.83, Time: 35324133
+> Pitch: 14.54 degrees
+Setpoint: 4.00, Measured: 14.54, Error: -21.09, Output: -170.00, I: -25.10, D: -12.04, Time: 35364915
+> Pitch: 14.24 degrees
+Setpoint: 4.00, Measured: 14.24, Error: -20.48, Output: -170.00, I: -25.51, D: -9.82, Time: 35404136
+> Pitch: 14.22 degrees
+Setpoint: 4.00, Measured: 14.22, Error: -20.45, Output: -170.00, I: -25.91, D: -5.11, Time: 35444963
+> Pitch: 14.16 degrees
+Setpoint: 4.00, Measured: 14.16, Error: -20.32, Output: -170.00, I: -26.32, D: -3.33, Time: 35484137
+> Pitch: 14.12 degrees
+Setpoint: 4.00, Measured: 14.12, Error: -20.24, Output: -170.00, I: -26.73, D: -2.22, Time: 35524128
+> Pitch: 13.86 degrees
+Setpoint: 4.00, Measured: 13.86, Error: -19.72, Output: -170.00, I: -27.12, D: -4.34, Time: 35564930
+> Pitch: 13.58 degrees
+Setpoint: 4.00, Measured: 13.58, Error: -19.16, Output: -170.00, I: -27.50, D: -5.64, Time: 35604141
+> Pitch: 13.21 degrees
+Setpoint: 4.00, Measured: 13.21, Error: -18.43, Output: -170.00, I: -27.87, D: -7.43, Time: 35645641
+> Pitch: 12.92 degrees
+Setpoint: 4.00, Measured: 12.92, Error: -17.84, Output: -170.00, I: -28.23, D: -7.40, Time: 35684349
+> Pitch: 12.70 degrees
+Setpoint: 4.00, Measured: 12.70, Error: -17.39, Output: -170.00, I: -28.58, D: -6.49, Time: 35724136
+> Pitch: 12.61 degrees
+Setpoint: 4.00, Measured: 12.61, Error: -17.21, Output: -170.00, I: -28.92, D: -4.35, Time: 35764930
+> Pitch: 12.43 degrees
+Setpoint: 4.00, Measured: 12.43, Error: -16.85, Output: -170.00, I: -29.26, D: -4.44, Time: 35804139
+> Pitch: 12.15 degrees
+Setpoint: 4.00, Measured: 12.15, Error: -16.31, Output: -170.00, I: -29.58, D: -5.63, Time: 35844683
+> Pitch: 11.84 degrees
+Setpoint: 4.00, Measured: 11.84, Error: -15.67, Output: -170.00, I: -29.90, D: -6.76, Time: 35884718
+> Pitch: 11.39 degrees
+Setpoint: 4.00, Measured: 11.39, Error: -14.78, Output: -170.00, I: -30.19, D: -8.94, Time: 35924132
+> Pitch: 11.12 degrees
+Setpoint: 4.00, Measured: 11.12, Error: -14.23, Output: -170.00, I: -30.48, D: -7.92, Time: 35964967
+> Pitch: 10.92 degrees
+Setpoint: 4.00, Measured: 10.92, Error: -13.83, Output: -170.00, I: -30.75, D: -6.46, Time: 36004140
+> Pitch: 10.82 degrees
+Setpoint: 4.00, Measured: 10.82, Error: -13.65, Output: -170.00, I: -31.03, D: -4.39, Time: 36044136
+> Pitch: 11.03 degrees
+Setpoint: 4.00, Measured: 11.03, Error: -14.07, Output: -170.00, I: -31.31, D: 0.44, Time: 36084986
+> Pitch: 11.08 degrees
+Setpoint: 4.00, Measured: 11.08, Error: -14.16, Output: -170.00, I: -31.59, D: 0.81, Time: 36124149
+> Pitch: 11.06 degrees
+Setpoint: 4.00, Measured: 11.06, Error: -14.12, Output: -170.00, I: -31.87, D: 0.17, Time: 36164968
+> Pitch: 10.76 degrees
+Setpoint: 4.00, Measured: 10.76, Error: -13.52, Output: -170.00, I: -32.14, D: -3.68, Time: 36204136
+> Pitch: 10.69 degrees
+Setpoint: 4.00, Measured: 10.69, Error: -13.37, Output: -170.00, I: -32.41, D: -2.78, Time: 36244135
+> Pitch: 10.42 degrees
+Setpoint: 4.00, Measured: 10.42, Error: -12.84, Output: -170.00, I: -32.67, D: -4.70, Time: 36284943
+> Pitch: 10.24 degrees
+Setpoint: 4.00, Measured: 10.24, Error: -12.48, Output: -170.00, I: -32.92, D: -4.59, Time: 36324137
+> Pitch: 10.13 degrees
+Setpoint: 4.00, Measured: 10.13, Error: -12.25, Output: -170.00, I: -33.16, D: -3.73, Time: 36364970
+> Pitch: 10.17 degrees
+Setpoint: 4.00, Measured: 10.17, Error: -12.34, Output: -170.00, I: -33.41, D: -1.34, Time: 36404139
+> Pitch: 10.04 degrees
+Setpoint: 4.00, Measured: 10.04, Error: -12.07, Output: -170.00, I: -33.65, D: -2.33, Time: 36444135
+> Pitch: 9.97 degrees
+Setpoint: 4.00, Measured: 9.97, Error: -11.94, Output: -170.00, I: -33.89, D: -2.00, Time: 36484932
+> Pitch: 9.72 degrees
+Setpoint: 4.00, Measured: 9.72, Error: -11.44, Output: -170.00, I: -34.12, D: -4.09, Time: 36524130
+> Pitch: 9.45 degrees
+Setpoint: 4.00, Measured: 9.45, Error: -10.90, Output: -170.00, I: -34.34, D: -5.47, Time: 36564656
+> Pitch: 9.34 degrees
+Setpoint: 4.00, Measured: 9.34, Error: -10.69, Output: -170.00, I: -34.55, D: -4.03, Time: 36604447
+> Pitch: 9.06 degrees
+Setpoint: 4.00, Measured: 9.06, Error: -10.12, Output: -170.00, I: -34.75, D: -5.60, Time: 36644117
+> Pitch: 8.60 degrees
+Setpoint: 4.00, Measured: 8.60, Error: -9.20, Output: -170.00, I: -34.94, D: -8.54, Time: 36684968
+> Pitch: 8.17 degrees
+Setpoint: 4.00, Measured: 8.17, Error: -8.33, Output: -170.00, I: -35.10, D: -9.69, Time: 36724133
+> Pitch: 7.81 degrees
+Setpoint: 4.00, Measured: 7.81, Error: -7.63, Output: -170.00, I: -35.26, D: -9.25, Time: 36765029
+> Pitch: 7.54 degrees
+Setpoint: 4.00, Measured: 7.54, Error: -7.09, Output: -170.00, I: -35.40, D: -8.00, Time: 36804710
+> Pitch: 7.43 degrees
+Setpoint: 4.00, Measured: 7.43, Error: -6.86, Output: -170.00, I: -35.54, D: -5.43, Time: 36844126
+> Pitch: 7.33 degrees
+Setpoint: 4.00, Measured: 7.33, Error: -6.66, Output: -170.00, I: -35.67, D: -3.92, Time: 36884952
+> Pitch: 7.27 degrees
+Setpoint: 4.00, Measured: 7.27, Error: -6.55, Output: -170.00, I: -35.80, D: -2.67, Time: 36924135
+> Pitch: 7.15 degrees
+Setpoint: 4.00, Measured: 7.15, Error: -6.31, Output: -170.00, I: -35.93, D: -2.86, Time: 36964130
+> Pitch: 7.05 degrees
+Setpoint: 4.00, Measured: 7.05, Error: -6.10, Output: -170.00, I: -36.05, D: -2.70, Time: 37004908
+> Pitch: 7.09 degrees
+Setpoint: 4.00, Measured: 7.09, Error: -6.17, Output: -170.00, I: -36.17, D: -0.90, Time: 37044129
+> Pitch: 7.12 degrees
+Setpoint: 4.00, Measured: 7.12, Error: -6.24, Output: -170.00, I: -36.30, D: -0.06, Time: 37085007
+> Pitch: 7.12 degrees
+Setpoint: 4.00, Measured: 7.12, Error: -6.24, Output: -170.00, I: -36.42, D: -0.02, Time: 37124153
+> Pitch: 7.13 degrees
+Setpoint: 4.00, Measured: 7.13, Error: -6.26, Output: -170.00, I: -36.55, D: 0.15, Time: 37164142
+> Pitch: 7.09 degrees
+Setpoint: 4.00, Measured: 7.09, Error: -6.18, Output: -170.00, I: -36.67, D: -0.44, Time: 37204953
+> Pitch: 7.11 degrees
+Setpoint: 4.00, Measured: 7.11, Error: -6.21, Output: -170.00, I: -36.79, D: -0.01, Time: 37244134
+> Pitch: 6.95 degrees
+Setpoint: 4.00, Measured: 6.95, Error: -5.91, Output: -170.00, I: -36.91, D: -1.91, Time: 37284937
+> Pitch: 6.81 degrees
+Setpoint: 4.00, Measured: 6.81, Error: -5.62, Output: -170.00, I: -37.02, D: -2.76, Time: 37324357
+> Pitch: 6.81 degrees
+Setpoint: 4.00, Measured: 6.81, Error: -5.61, Output: -170.00, I: -37.14, D: -1.42, Time: 37364133
+> Pitch: 6.82 degrees
+Setpoint: 4.00, Measured: 6.82, Error: -5.63, Output: -170.00, I: -37.25, D: -0.60, Time: 37405027
+> Pitch: 6.83 degrees
+Setpoint: 4.00, Measured: 6.83, Error: -5.66, Output: -170.00, I: -37.36, D: -0.11, Time: 37444134
+> Pitch: 6.90 degrees
+Setpoint: 4.00, Measured: 6.90, Error: -5.80, Output: -170.00, I: -37.48, D: 0.81, Time: 37484652
+> Pitch: 7.01 degrees
+Setpoint: 4.00, Measured: 7.01, Error: -6.02, Output: -170.00, I: -37.60, D: 1.79, Time: 37524865
+> Pitch: 6.95 degrees
+Setpoint: 4.00, Measured: 6.95, Error: -5.91, Output: -170.00, I: -37.72, D: 0.18, Time: 37564130
+> Pitch: 6.93 degrees
+Setpoint: 4.00, Measured: 6.93, Error: -5.86, Output: -170.00, I: -37.83, D: -0.21, Time: 37604953
+> Pitch: 7.15 degrees
+Setpoint: 4.00, Measured: 7.15, Error: -6.30, Output: -170.00, I: -37.96, D: 2.63, Time: 37644133
+> Pitch: 7.35 degrees
+Setpoint: 4.00, Measured: 7.35, Error: -6.70, Output: -170.00, I: -38.09, D: 3.85, Time: 37685553
+> Pitch: 7.74 degrees
+Setpoint: 4.00, Measured: 7.74, Error: -7.48, Output: -170.00, I: -38.24, D: 6.76, Time: 37724956
+> Pitch: 7.90 degrees
+Setpoint: 4.00, Measured: 7.90, Error: -7.80, Output: -170.00, I: -38.40, D: 5.42, Time: 37764130
+> Pitch: 8.18 degrees
+Setpoint: 4.00, Measured: 8.18, Error: -8.37, Output: -170.00, I: -38.57, D: 6.24, Time: 37804937
+> Pitch: 7.89 degrees
+Setpoint: 4.00, Measured: 7.89, Error: -7.79, Output: -170.00, I: -38.72, D: -0.51, Time: 37844355
+> Pitch: 7.82 degrees
+Setpoint: 4.00, Measured: 7.82, Error: -7.64, Output: -170.00, I: -38.88, D: -1.16, Time: 37884134
+> Pitch: 7.04 degrees
+Setpoint: 4.00, Measured: 7.04, Error: -6.07, Output: -170.00, I: -39.00, D: -10.40, Time: 37924972
+> Pitch: 5.48 degrees
+Setpoint: 4.00, Measured: 5.48, Error: -2.96, Output: -117.70, I: -39.06, D: -24.64, Time: 37964121
+> Pitch: 4.64 degrees
+Setpoint: 4.00, Measured: 4.64, Error: -1.29, Output: -110.00, I: -39.08, D: -22.76, Time: 38004988
+> Pitch: 4.33 degrees
+Setpoint: 4.00, Measured: 4.33, Error: -0.67, Output: -110.00, I: -39.10, D: -15.27, Time: 38044272
+> Pitch: 4.63 degrees
+Setpoint: 4.00, Measured: 4.63, Error: -1.27, Output: -110.00, I: -39.12, D: -3.87, Time: 38084198
+> Pitch: 4.09 degrees
+Setpoint: 4.00, Measured: 4.09, Error: -0.18, Output: -110.00, I: -39.12, D: -8.73, Time: 38124944
+> Pitch: 3.00 degrees
+Setpoint: 4.00, Measured: 3.00, Error: 2.00, Output: 110.00, I: -39.08, D: -17.98, Time: 38164125
+> Pitch: 1.90 degrees
+Setpoint: 4.00, Measured: 1.90, Error: 4.20, Output: 170.00, I: -39.00, D: -22.73, Time: 38206362
+> Pitch: 1.71 degrees
+Setpoint: 4.00, Measured: 1.71, Error: 4.59, Output: 170.00, I: -38.91, D: -13.82, Time: 38244342
+> Pitch: 1.32 degrees
+Setpoint: 4.00, Measured: 1.32, Error: 5.37, Output: 170.00, I: -38.80, D: -11.77, Time: 38284129
+> Pitch: 0.95 degrees
+Setpoint: 4.00, Measured: 0.95, Error: 6.09, Output: 170.00, I: -38.68, D: -10.44, Time: 38324993

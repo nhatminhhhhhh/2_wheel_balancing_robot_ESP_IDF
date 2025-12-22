@@ -1,0 +1,478 @@
+[0;32mI (360)�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ea70h (125552) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002ea98 vaddr=3ffb0000 size=01580h (  5504) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=930d0h (602320) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000c30f8 vaddr=3ffb1580 size=02a54h ( 10836) load[0m
+[0;32mI (364) esp_image: segment 4: paddr=000c5b54 vaddr=40080000 size=18f88h (102280) load[0m
+[0;32mI (418) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (418) boot: Disabling RNG early entropy source...[0m
+[0;32mI (431) cpu_start: Multicore app[0m
+[0;32mI (439) cpu_start: Pro cpu start user code[0m
+[0;32mI (439) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (439) app_init: Application information:[0m
+[0;32mI (442) app_init: Project name:     IDF_project[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (452) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (458) app_init: ELF file SHA256:  c694366ee...[0m
+[0;32mI (463) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (473) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (483) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (490) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFB8340 len 00027CC0 (159 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 40098F88 len 00007078 (28 KiB): IRAM[0m
+[0;32mI (523) spi_flash: detected chip: generic[0m
+[0;32mI (526) spi_flash: flash io: dio[0m
+[0;33mW (530) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (564) MAIN: Connecting to WiFi...[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc048c, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (634) wifi:wifi certification version: v7.0[0m
+[0;32mI (634) wifi:config NVS flash: enabled[0m
+[0;32mI (634) wifi:config nano formating: disabled[0m
+[0;32mI (634) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (644) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (654) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (664) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (674) wifi_init: tcpip mbox: 32[0m
+[0;32mI (674) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (684) wifi_init: tcp tx win: 5760[0m
+[0;32mI (684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (694) wifi_init: tcp mss: 1440[0m
+[0;32mI (694) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (694) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (704) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (794) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (794) wifi:enable tsf[0m
+[0;32mI (804) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (824) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (824) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (844) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (854) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (884) wifi:connected with Tran Van Tuan, aid = 17, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (884) wifi:security: WPA2-PSK, phy: bgn, rssi: -56[0m
+[0;32mI (884) wifi:pm start, type: 1[0m
+
+[0;32mI (884) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (894) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (904) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3904) esp_netif_handlers: sta ip: 192.168.1.102, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.102
+[0;32mI (3904) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3904) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4914) WEBSERVER: [34mPID loaded from NVS - Kp: 15.70, Ki: 0.00, Kd: 2.094, Kx: 0.00[0m[0m
+[0;32mI (4914) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4924) WEBSERVER: Web server started successfully![0m
+[0;32mI (4924) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5434) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5434) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5534) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5534) GPIO: LED GPIO initialized[0m
+[0;32mI (5534) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5544) GPIO: Button GPIO initialized[0m
+[0;32mI (5644) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (5744) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (7744) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7744) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7744) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7754) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7764) MOTOR: Encoders initialized on GPIOs 32/35 and 13/4[0m
+[0;32mI (7874) MAIN: I2C initialized successfully[0m
+[0;32mI (8174) MPU6050: Starting gyro calibration...[0m
+[0;32mI (12864) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (12864) MPU6050: Gyro offsets - X: -397.21, Y: -51.32, Z: 23.50[0m
+Target: 25.00, Max Speed: 255.0, Min Speed: 170.0
+Robot ready. Press the button to start balancing...
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: 0
+Encoder 1 count: 0, Encoder 2 count: -4
+Encoder 1 count: 0, Encoder 2 count: 7
+Encoder 1 count: 0, Encoder 2 count: 12
+Encoder 1 count: 0, Encoder 2 count: -21
+Encoder 1 count: 0, Encoder 2 count: -21
+Encoder 1 count: 0, Encoder 2 count: -21
+Encoder 1 count: 0, Encoder 2 count: -21
+Encoder 1 count: 0, Encoder 2 count: -21
+Encoder 1 count: 0, Encoder 2 count: -16
+Encoder 1 count: 0, Encoder 2 count: -8
+Encoder 1 count: 0, Encoder 2 count: -8
+Encoder 1 count: 0, Encoder 2 count: -8
+Encoder 1 count: 0, Encoder 2 count: -8
+Encoder 1 count: 0, Encoder 2 count: -8
+Encoder 1 count: 0, Encoder 2 count: -8
+Encoder 1 count: 0, Encoder 2 count: -8
+Encoder 1 count: 0, Encoder 2 count: -8
+Encoder 1 count: 0, Encoder 2 count: -8
+Encoder 1 count: 0, Encoder 2 count: -1
+Encoder 1 count: 0, Encoder 2 count: -5
+Encoder 1 count: 0, Encoder 2 count: -13
+Encoder 1 count: 0, Encoder 2 count: -17
+Encoder 1 count: 0, Encoder 2 count: -19
+Encoder 1 count: 0, Encoder 2 count: -19
+Encoder 1 count: 0, Encoder 2 count: -19
+Encoder 1 count: 0, Encoder 2 count: -19
+Encoder 1 count: 0, Encoder 2 count: -19
+Encoder 1 count: 0, Encoder 2 count: -19
+Encoder 1 count: 0, Encoder 2 count: -19
+Encoder 1 count: 0, Encoder 2 count: -19
+Encoder 1 count: 0, Encoder 2 count: -21
+Encoder 1 count: 0, Encoder 2 count: -22
+Encoder 1 count: 0, Encoder 2 count: -25
+Encoder 1 count: 0, Encoder 2 count: -29
+Encoder 1 count: 0, Encoder 2 count: -28
+Encoder 1 count: 0, Encoder 2 count: -21
+Encoder 1 count: 0, Encoder 2 count: -10
+Encoder 1 count: 0, Encoder 2 count: 8
+Encoder 1 count: 0, Encoder 2 count: 24
+Encoder 1 count: 0, Encoder 2 count: 45
+Encoder 1 count: 0, Encoder 2 count: 57
+Encoder 1 count: 0, Encoder 2 count: 60
+Encoder 1 count: 0, Encoder 2 count: 60
+Encoder 1 count: 0, Encoder 2 count: 60
+Encoder 1 count: 0, Encoder 2 count: 60
+Encoder 1 count: 0, Encoder 2 count: 57
+Encoder 1 count: 0, Encoder 2 count: 64
+Encoder 1 count: 0, Encoder 2 count: 87
+Encoder 1 count: 0, Encoder 2 count: 114
+Encoder 1 count: 0, Encoder 2 count: 128
+Encoder 1 count: 0, Encoder 2 count: 135
+Encoder 1 count: 0, Encoder 2 count: 135
+Encoder 1 count: 0, Encoder 2 count: 135
+Encoder 1 count: 0, Encoder 2 count: 135
+Encoder 1 count: 0, Encoder 2 count: 143
+Encoder 1 count: 0, Encoder 2 count: 159
+Encoder 1 count: 0, Encoder 2 count: 181
+Encoder 1 count: 0, Encoder 2 count: 201
+Encoder 1 count: 0, Encoder 2 count: 218
+Encoder 1 count: 0, Encoder 2 count: -18
+Encoder 1 count: 0, Encoder 2 count: -47
+Encoder 1 count: 0, Encoder 2 count: -77
+Encoder 1 count: 0, Encoder 2 count: -202
+Encoder 1 count: 0, Encoder 2 count: -596
+Encoder 1 count: 0, Encoder 2 count: -1034
+Encoder 1 count: 0, Encoder 2 count: -1512
+Encoder 1 count: 0, Encoder 2 count: -1959
+Encoder 1 count: 0, Encoder 2 count: -2403
+Encoder 1 count: 0, Encoder 2 count: -2964
+Encoder 1 count: 0, Encoder 2 count: -3472
+Encoder 1 count: 0, Encoder 2 count: -3983
+Encoder 1 count: 0, Encoder 2 count: -4454
+Encoder 1 count: 0, Encoder 2 count: -4973
+Encoder 1 count: 0, Encoder 2 count: -5476
+Encoder 1 count: 0, Encoder 2 count: -6011
+Encoder 1 count: 0, Encoder 2 count: -6534
+Encoder 1 count: 0, Encoder 2 count: -7061
+Encoder 1 count: 0, Encoder 2 count: -7550
+Encoder 1 count: 0, Encoder 2 count: -8073
+Encoder 1 count: 0, Encoder 2 count: -8626
+Encoder 1 count: 0, Encoder 2 count: -9134
+Encoder 1 count: 0, Encoder 2 count: -9621
+Encoder 1 count: 0, Encoder 2 count: -10117
+Encoder 1 count: 0, Encoder 2 count: -10567
+Encoder 1 count: 0, Encoder 2 count: -11054
+Encoder 1 count: 0, Encoder 2 count: -11527
+Encoder 1 count: 0, Encoder 2 count: -12037
+Encoder 1 count: 0, Encoder 2 count: -12575
+Encoder 1 count: 0, Encoder 2 count: -13191
+Encoder 1 count: 0, Encoder 2 count: -13686
+Encoder 1 count: 0, Encoder 2 count: -14183
+Encoder 1 count: 0, Encoder 2 count: -14677
+Encoder 1 count: 0, Encoder 2 count: -15132
+Encoder 1 count: 0, Encoder 2 count: -15666
+Encoder 1 count: 0, Encoder 2 count: -16176
+Encoder 1 count: 0, Encoder 2 count: -16680
+Encoder 1 count: 0, Encoder 2 count: -17169
+Encoder 1 count: 0, Encoder 2 count: -17652
+Encoder 1 count: 0, Encoder 2 count: -18147
+Encoder 1 count: 0, Encoder 2 count: -18630
+Encoder 1 count: 0, Encoder 2 count: -19135
+Encoder 1 count: 0, Encoder 2 count: -19660
+Encoder 1 count: 0, Encoder 2 count: -20162
+Encoder 1 count: 0, Encoder 2 count: -20678
+Encoder 1 count: 0, Encoder 2 count: -21165
+Encoder 1 count: 0, Encoder 2 count: -21676
+Encoder 1 count: 0, Encoder 2 count: -22183
+Encoder 1 count: 0, Encoder 2 count: -22700
+Encoder 1 count: 0, Encoder 2 count: -23208
+Encoder 1 count: 0, Encoder 2 count: -23713
+Encoder 1 count: 0, Encoder 2 count: -24231
+Encoder 1 count: 0, Encoder 2 count: -24684
+Encoder 1 count: 0, Encoder 2 count: -25135
+Encoder 1 count: 0, Encoder 2 count: -25536
+Encoder 1 count: 0, Encoder 2 count: -25965
+Encoder 1 count: 0, Encoder 2 count: -26282
+Encoder 1 count: 0, Encoder 2 count: -26482
+Encoder 1 count: 0, Encoder 2 count: -26689
+Encoder 1 count: 0, Encoder 2 count: -26871
+Encoder 1 count: 0, Encoder 2 count: -27221
+Encoder 1 count: 0, Encoder 2 count: -27760
+Encoder 1 count: 0, Encoder 2 count: -28325
+Encoder 1 count: 0, Encoder 2 count: -28863
+Encoder 1 count: 0, Encoder 2 count: -29443
+Encoder 1 count: 0, Encoder 2 count: -29990
+Encoder 1 count: 0, Encoder 2 count: -30488
+Encoder 1 count: 0, Encoder 2 count: -30828
+Encoder 1 count: 0, Encoder 2 count: -31082
+Encoder 1 count: 0, Encoder 2 count: -31693
+Encoder 1 count: 0, Encoder 2 count: -32388
+Encoder 1 count: 0, Encoder 2 count: -33008
+Encoder 1 count: 0, Encoder 2 count: -33363
+Encoder 1 count: 0, Encoder 2 count: -33499
+Encoder 1 count: 0, Encoder 2 count: -33520
+Encoder 1 count: 0, Encoder 2 count: -33546
+Encoder 1 count: 0, Encoder 2 count: -33585
+Encoder 1 count: 0, Encoder 2 count: -33634
+Encoder 1 count: 0, Encoder 2 count: -33693
+Encoder 1 count: 0, Encoder 2 count: -33804
+Encoder 1 count: 0, Encoder 2 count: -34198
+Encoder 1 count: 0, Encoder 2 count: -34866
+Encoder 1 count: 0, Encoder 2 count: -35334
+Encoder 1 count: 0, Encoder 2 count: -35708
+Encoder 1 count: 0, Encoder 2 count: -36005
+Encoder 1 count: 0, Encoder 2 count: -36058
+Encoder 1 count: 0, Encoder 2 count: -36078
+Encoder 1 count: 0, Encoder 2 count: -36106
+Encoder 1 count: 0, Encoder 2 count: -36152
+Encoder 1 count: 0, Encoder 2 count: -36232
+Encoder 1 count: 0, Encoder 2 count: -36288
+Encoder 1 count: 0, Encoder 2 count: -36336
+Encoder 1 count: 0, Encoder 2 count: -36391
+Encoder 1 count: 0, Encoder 2 count: -36429
+Encoder 1 count: 0, Encoder 2 count: -36477
+Encoder 1 count: 0, Encoder 2 count: -36508
+Encoder 1 count: 0, Encoder 2 count: -36576
+Encoder 1 count: 0, Encoder 2 count: -37769
+Encoder 1 count: 0, Encoder 2 count: -38748
+Encoder 1 count: 0, Encoder 2 count: -40258
+Encoder 1 count: 0, Encoder 2 count: -40423
+Encoder 1 count: 0, Encoder 2 count: -40452
+Encoder 1 count: 0, Encoder 2 count: -40526
+Encoder 1 count: 0, Encoder 2 count: -40780
+Encoder 1 count: 0, Encoder 2 count: -41230
+Encoder 1 count: 0, Encoder 2 count: -41622
+Encoder 1 count: 0, Encoder 2 count: -42031
+Encoder 1 count: 0, Encoder 2 count: -42447
+Encoder 1 count: 0, Encoder 2 count: -42803
+Encoder 1 count: 0, Encoder 2 count: -43196
+Encoder 1 count: 0, Encoder 2 count: -44125
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44836
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44881
+Encoder 1 count: 0, Encoder 2 count: -44875
+Encoder 1 count: 0, Encoder 2 count: -44875
+Encoder 1 count: 0, Encoder 2 count: -44879
+Encoder 1 count: 0, Encoder 2 count: -44877
+Encoder 1 count: 0, Encoder 2 count: -44877
+Encoder 1 count: 0, Encoder 2 count: -44877
+Encoder 1 count: 0, Encoder 2 count: -44877
+Encoder 1 count: 0, Encoder 2 count: -44877
+Encoder 1 count: 0, Encoder 2 count: -44877
+Encoder 1 count: 0, Encoder 2 count: -44877
+Encoder 1 count: 0, Encoder 2 count: -44877
+Encoder 1 count: 0, Encoder 2 count: -44877
+Encoder 1 count: 0, Encoder 2 count: -44876
+Encoder 1 count: 0, Encoder 2 count: -44864
+Encoder 1 count: 0, Encoder 2 count: -44845
+Encoder 1 count: 0, Encoder 2 count: -44826
+Encoder 1 count: 0, Encoder 2 count: -44808
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44806
+Encoder 1 count: 0, Encoder 2 count: -44794
+Encoder 1 count: 0, Encoder 2 count: -44778
+Encoder 1 count: 0, Encoder 2 count: -44758
+Encoder 1 count: 0, Encoder 2 count: -44734
+Encoder 1 count: 0, Encoder 2 count: -44713
+Encoder 1 count: 0, Encoder 2 count: -44702
+Encoder 1 count: 0, Encoder 2 count: -44702
+Encoder 1 count: 0, Encoder 2 count: -44702
+Encoder 1 count: 0, Encoder 2 count: -44702
+Encoder 1 count: 0, Encoder 2 count: -44700
+Encoder 1 count: 0, Encoder 2 count: -44694
+Encoder 1 count: 0, Encoder 2 count: -44677
+Encoder 1 count: 0, Encoder 2 count: -44650
+Encoder 1 count: 0, Encoder 2 count: -44626
+Encoder 1 count: 0, Encoder 2 count: -44609
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600
+Encoder 1 count: 0, Encoder 2 count: -44600

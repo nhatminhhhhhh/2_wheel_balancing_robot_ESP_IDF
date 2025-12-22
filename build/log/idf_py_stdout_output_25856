@@ -1,0 +1,2459 @@
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0�ښ�j%�(49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e9a0h (125344) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e9c8 vaddr=3ffb0000 size=01650h (  5712) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9266ch (599660) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2694 vaddr=3ffb1650 size=02984h ( 10628) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5020 vaddr=40080000 size=18f88h (102280) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (451) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (457) app_init: ELF file SHA256:  62cd036ad...[0m
+[0;32mI (462) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (477) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (489) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFB8310 len 00027CF0 (159 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (508) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 40098F88 len 00007078 (28 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (525) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (542) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MAIN: Connecting to WiFi...[0m
+[0;32mI (613) wifi:wifi driver task: 3ffc045c, prio:23, stack:6656, core=0[0m
+[0;32mI (623) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (623) wifi:wifi certification version: v7.0[0m
+[0;32mI (623) wifi:config NVS flash: enabled[0m
+[0;32mI (623) wifi:config nano formating: disabled[0m
+[0;32mI (633) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (643) wifi:Init management short buffer num: 32[0m
+[0;32mI (643) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (653) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (653) wifi:Init static rx buffer num: 10[0m
+[0;32mI (653) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (663) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: accept mbox: 6[0m
+[0;32mI (673) wifi_init: tcpip mbox: 32[0m
+[0;32mI (673) wifi_init: udp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp mbox: 6[0m
+[0;32mI (683) wifi_init: tcp tx win: 5760[0m
+[0;32mI (683) wifi_init: tcp rx win: 5760[0m
+[0;32mI (693) wifi_init: tcp mss: 1440[0m
+[0;32mI (693) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (693) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (703) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (793) wifi:mode : sta (d8:13:2a:7f:8e:e4)[0m
+[0;32mI (793) wifi:enable tsf[0m
+[0;32mI (793) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (833) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (833) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (853) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (863) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (883) wifi:connected with Tran Van Tuan, aid = 17, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (893) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (893) wifi:pm start, type: 1[0m
+
+[0;32mI (893) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (903) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (933) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3913) esp_netif_handlers: sta ip: 192.168.1.102, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.102
+[0;32mI (3913) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3913) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4923) WEBSERVER: [34mPID loaded from NVS - Kp: 15.70, Ki: 0.00, Kd: 2.094, Kx: 0.00[0m[0m
+[0;32mI (4923) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4933) WEBSERVER: Web server started successfully![0m
+[0;32mI (4933) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5443) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5443) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5543) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5543) GPIO: LED GPIO initialized[0m
+[0;32mI (5543) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5553) GPIO: Button GPIO initialized[0m
+[0;32mI (5653) MOTOR: Servo channel 2 initialized on GPIO 14[0m
+[0;32mI (5753) MOTOR: Servo channel 3 initialized on GPIO 27[0m
+[0;32mI (7753) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7753) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7753) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7763) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7773) MOTOR: Encoders initialized on GPIOs 32/35 and 13/4[0m
+[0;32mI (7883) MAIN: I2C initialized successfully[0m
+[0;32mI (8183) MPU6050: Starting gyro calibration...[0m
+[0;32mI (12873) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (12873) MPU6050: Gyro offsets - X: -400.39, Y: -57.87, Z: 25.63[0m
+Target: 25.00, Max Speed: 255.0, Min Speed: 170.0
+Robot ready. Press the button to start balancing...
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Angle Encoder 1: 0.00, Angle Encoder 2: 0.00
+Target Angle: 100.00, Measured Angle: 0.00, Error: 100.00, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 1.17, Error: 98.83, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 8.18, Error: 91.82, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 11.69, Error: 88.31, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 15.19, Error: 84.81, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 19.29, Error: 80.71, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 23.38, Error: 76.62, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 28.05, Error: 71.95, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 32.73, Error: 67.27, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 37.40, Error: 62.60, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 42.66, Error: 57.34, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 58.44, Error: 41.56, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 64.29, Error: 35.71, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 69.55, Error: 30.45, Output PWM: 252.25, Speed: 252
+Target Angle: 100.00, Measured Angle: 75.39, Error: 24.61, Output PWM: 187.91, Speed: 187
+Target Angle: 100.00, Measured Angle: 81.23, Error: 18.77, Output PWM: 129.41, Speed: 129
+Target Angle: 100.00, Measured Angle: 87.08, Error: 12.92, Output PWM: 70.91, Speed: 70
+Target Angle: 100.00, Measured Angle: 91.17, Error: 8.83, Output PWM: 47.52, Speed: 47
+Target Angle: 100.00, Measured Angle: 96.43, Error: 3.57, Output PWM: -16.72, Speed: 16
+Target Angle: 100.00, Measured Angle: 110.45, Error: -10.45, Output PWM: -244.91, Speed: 244
+Target Angle: 100.00, Measured Angle: 114.55, Error: -14.55, Output PWM: -186.51, Speed: 186
+Target Angle: 100.00, Measured Angle: 117.47, Error: -17.47, Output PWM: -204.07, Speed: 204
+Target Angle: 100.00, Measured Angle: 119.22, Error: -19.22, Output PWM: -209.93, Speed: 209
+Target Angle: 100.00, Measured Angle: 120.39, Error: -20.39, Output PWM: -215.79, Speed: 215
+Target Angle: 100.00, Measured Angle: 120.39, Error: -20.39, Output PWM: -204.10, Speed: 204
+Target Angle: 100.00, Measured Angle: 119.81, Error: -19.81, Output PWM: -192.41, Speed: 192
+Target Angle: 100.00, Measured Angle: 119.22, Error: -19.22, Output PWM: -186.57, Speed: 186
+Target Angle: 100.00, Measured Angle: 115.13, Error: -15.13, Output PWM: -110.54, Speed: 110
+Target Angle: 100.00, Measured Angle: 113.96, Error: -13.96, Output PWM: -128.06, Speed: 128
+Target Angle: 100.00, Measured Angle: 112.21, Error: -12.21, Output PWM: -104.67, Speed: 104
+Target Angle: 100.00, Measured Angle: 110.45, Error: -10.45, Output PWM: -87.12, Speed: 87
+Target Angle: 100.00, Measured Angle: 108.70, Error: -8.70, Output PWM: -69.57, Speed: 69
+Target Angle: 100.00, Measured Angle: 107.53, Error: -7.53, Output PWM: -63.71, Speed: 63
+Target Angle: 100.00, Measured Angle: 105.78, Error: -5.78, Output PWM: -40.32, Speed: 40
+Target Angle: 100.00, Measured Angle: 104.03, Error: -4.03, Output PWM: -22.83, Speed: 22
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 41.56, Speed: 41
+Target Angle: 100.00, Measured Angle: 98.18, Error: 1.82, Output PWM: 35.73, Speed: 35
+Target Angle: 100.00, Measured Angle: 97.01, Error: 2.99, Output PWM: 41.59, Speed: 41
+Target Angle: 100.00, Measured Angle: 95.84, Error: 4.16, Output PWM: 53.29, Speed: 53
+Target Angle: 100.00, Measured Angle: 95.26, Error: 4.74, Output PWM: 53.29, Speed: 53
+Target Angle: 100.00, Measured Angle: 94.09, Error: 5.91, Output PWM: 70.84, Speed: 70
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 70.84, Speed: 70
+Target Angle: 100.00, Measured Angle: 92.34, Error: 7.66, Output PWM: 87.22, Speed: 87
+Target Angle: 100.00, Measured Angle: 91.17, Error: 8.83, Output PWM: 100.09, Speed: 100
+Target Angle: 100.00, Measured Angle: 91.17, Error: 8.83, Output PWM: 88.40, Speed: 88
+Target Angle: 100.00, Measured Angle: 91.17, Error: 8.83, Output PWM: 88.40, Speed: 88
+Target Angle: 100.00, Measured Angle: 91.17, Error: 8.83, Output PWM: 88.40, Speed: 88
+Target Angle: 100.00, Measured Angle: 91.17, Error: 8.83, Output PWM: 88.40, Speed: 88
+Target Angle: 100.00, Measured Angle: 91.75, Error: 8.25, Output PWM: 76.71, Speed: 76
+Target Angle: 100.00, Measured Angle: 91.75, Error: 8.25, Output PWM: 82.55, Speed: 82
+Target Angle: 100.00, Measured Angle: 91.75, Error: 8.25, Output PWM: 82.55, Speed: 82
+Target Angle: 100.00, Measured Angle: 91.75, Error: 8.25, Output PWM: 82.55, Speed: 82
+Target Angle: 100.00, Measured Angle: 92.34, Error: 7.66, Output PWM: 70.86, Speed: 70
+Target Angle: 100.00, Measured Angle: 92.92, Error: 7.08, Output PWM: 65.01, Speed: 65
+Target Angle: 100.00, Measured Angle: 92.92, Error: 7.08, Output PWM: 70.85, Speed: 70
+Target Angle: 100.00, Measured Angle: 92.92, Error: 7.08, Output PWM: 70.85, Speed: 70
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 59.16, Speed: 59
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.01, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.01, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 65.00, Speed: 65
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 93.51, Angle Encoder 2: 85.91
+Angle Encoder 1: 91.17, Angle Encoder 2: 85.91
+Angle Encoder 1: 83.57, Angle Encoder 2: 85.91
+Angle Encoder 1: 70.71, Angle Encoder 2: 85.91
+Angle Encoder 1: 56.10, Angle Encoder 2: 85.91
+Angle Encoder 1: 41.49, Angle Encoder 2: 85.91
+Angle Encoder 1: 30.39, Angle Encoder 2: 85.91
+Angle Encoder 1: 26.88, Angle Encoder 2: 85.91
+Angle Encoder 1: 27.47, Angle Encoder 2: 85.91
+Angle Encoder 1: 27.47, Angle Encoder 2: 85.91
+Angle Encoder 1: 27.47, Angle Encoder 2: 85.91
+Angle Encoder 1: 27.47, Angle Encoder 2: 85.91
+Angle Encoder 1: 25.71, Angle Encoder 2: 85.91
+Angle Encoder 1: 18.70, Angle Encoder 2: 85.91
+Angle Encoder 1: 7.01, Angle Encoder 2: 85.91
+Angle Encoder 1: -6.43, Angle Encoder 2: 85.91
+Angle Encoder 1: -19.87, Angle Encoder 2: 85.91
+Angle Encoder 1: -32.73, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.91
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.32
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.32
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.32
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.32
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.32
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.32
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.32
+Angle Encoder 1: -39.74, Angle Encoder 2: 85.32
+Target Angle: 100.00, Measured Angle: -39.74, Error: 139.74, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -37.99, Error: 137.99, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -36.23, Error: 136.23, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -30.97, Error: 130.97, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -27.47, Error: 127.47, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -23.96, Error: 123.96, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -19.87, Error: 119.87, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -15.78, Error: 115.78, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -11.10, Error: 111.10, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -6.43, Error: 106.43, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: -1.75, Error: 101.75, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 2.34, Error: 97.66, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 12.86, Error: 87.14, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 18.70, Error: 81.30, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 23.96, Error: 76.04, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 29.81, Error: 70.19, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 35.65, Error: 64.35, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 41.49, Error: 58.51, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 47.34, Error: 52.66, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 53.77, Error: 46.23, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 59.61, Error: 40.39, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 66.04, Error: 33.96, Output PWM: 255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 78.90, Error: 21.10, Output PWM: 82.68, Speed: 82
+Target Angle: 100.00, Measured Angle: 85.32, Error: 14.68, Output PWM: 82.61, Speed: 82
+Target Angle: 100.00, Measured Angle: 91.17, Error: 8.83, Output PWM: 29.96, Speed: 29
+Target Angle: 100.00, Measured Angle: 97.60, Error: 2.40, Output PWM: -40.24, Speed: 40
+Target Angle: 100.00, Measured Angle: 103.44, Error: -3.44, Output PWM: -92.89, Speed: 92
+Target Angle: 100.00, Measured Angle: 109.29, Error: -9.29, Output PWM: -151.39, Speed: 151
+Target Angle: 100.00, Measured Angle: 113.96, Error: -13.96, Output PWM: -186.50, Speed: 186
+Target Angle: 100.00, Measured Angle: 118.05, Error: -18.05, Output PWM: -221.56, Speed: 221
+Target Angle: 100.00, Measured Angle: 121.56, Error: -21.56, Output PWM: -250.80, Speed: 250
+Target Angle: 100.00, Measured Angle: 124.48, Error: -24.48, Output PWM: -255.00, Speed: 255
+Target Angle: 100.00, Measured Angle: 124.48, Error: -24.48, Output PWM: -245.05, Speed: 245
+Target Angle: 100.00, Measured Angle: 123.90, Error: -23.90, Output PWM: -233.36, Speed: 233
+Target Angle: 100.00, Measured Angle: 122.14, Error: -22.14, Output PWM: -204.12, Speed: 204
+Target Angle: 100.00, Measured Angle: 120.39, Error: -20.39, Output PWM: -186.57, Speed: 186
+Target Angle: 100.00, Measured Angle: 118.05, Error: -18.05, Output PWM: -157.32, Speed: 157
+Target Angle: 100.00, Measured Angle: 115.71, Error: -15.71, Output PWM: -133.92, Speed: 133
+Target Angle: 100.00, Measured Angle: 113.38, Error: -13.38, Output PWM: -110.56, Speed: 110
+Target Angle: 100.00, Measured Angle: 111.04, Error: -11.04, Output PWM: -87.16, Speed: 87
+Target Angle: 100.00, Measured Angle: 106.95, Error: -6.95, Output PWM: -28.64, Speed: 28
+Target Angle: 100.00, Measured Angle: 104.61, Error: -4.61, Output PWM: -22.77, Speed: 22
+Target Angle: 100.00, Measured Angle: 102.27, Error: -2.27, Output PWM: 0.63, Speed: 0
+Target Angle: 100.00, Measured Angle: 100.52, Error: -0.52, Output PWM: 12.33, Speed: 12
+Target Angle: 100.00, Measured Angle: 98.77, Error: 1.23, Output PWM: 29.88, Speed: 29
+Target Angle: 100.00, Measured Angle: 97.01, Error: 2.99, Output PWM: 47.43, Speed: 47
+Target Angle: 100.00, Measured Angle: 95.26, Error: 4.74, Output PWM: 64.98, Speed: 64
+Target Angle: 100.00, Measured Angle: 94.09, Error: 5.91, Output PWM: 70.84, Speed: 70
+Target Angle: 100.00, Measured Angle: 92.92, Error: 7.08, Output PWM: 82.49, Speed: 82
+Target Angle: 100.00, Measured Angle: 90.58, Error: 9.42, Output PWM: 117.63, Speed: 117
+Target Angle: 100.00, Measured Angle: 90.00, Error: 10.00, Output PWM: 105.94, Speed: 105
+Target Angle: 100.00, Measured Angle: 89.42, Error: 10.58, Output PWM: 111.79, Speed: 111
+Target Angle: 100.00, Measured Angle: 88.83, Error: 11.17, Output PWM: 117.64, Speed: 117
+Target Angle: 100.00, Measured Angle: 88.83, Error: 11.17, Output PWM: 111.80, Speed: 111
+Target Angle: 100.00, Measured Angle: 88.83, Error: 11.17, Output PWM: 111.80, Speed: 111
+Target Angle: 100.00, Measured Angle: 88.83, Error: 11.17, Output PWM: 111.80, Speed: 111
+Target Angle: 100.00, Measured Angle: 88.83, Error: 11.17, Output PWM: 111.80, Speed: 111
+Target Angle: 100.00, Measured Angle: 89.42, Error: 10.58, Output PWM: 100.71, Speed: 100
+Target Angle: 100.00, Measured Angle: 89.42, Error: 10.58, Output PWM: 105.95, Speed: 105
+Target Angle: 100.00, Measured Angle: 90.00, Error: 10.00, Output PWM: 94.26, Speed: 94
+Target Angle: 100.00, Measured Angle: 90.00, Error: 10.00, Output PWM: 100.10, Speed: 100
+Target Angle: 100.00, Measured Angle: 90.58, Error: 9.42, Output PWM: 88.41, Speed: 88
+Target Angle: 100.00, Measured Angle: 91.17, Error: 8.83, Output PWM: 82.56, Speed: 82
+Target Angle: 100.00, Measured Angle: 91.17, Error: 8.83, Output PWM: 88.40, Speed: 88
+Target Angle: 100.00, Measured Angle: 91.75, Error: 8.25, Output PWM: 76.71, Speed: 76
+Target Angle: 100.00, Measured Angle: 91.75, Error: 8.25, Output PWM: 82.55, Speed: 82
+Target Angle: 100.00, Measured Angle: 92.34, Error: 7.66, Output PWM: 70.87, Speed: 70
+Target Angle: 100.00, Measured Angle: 92.92, Error: 7.08, Output PWM: 65.01, Speed: 65
+Target Angle: 100.00, Measured Angle: 93.51, Error: 6.49, Output PWM: 59.16, Speed: 59
+Target Angle: 100.00, Measured Angle: 94.09, Error: 5.91, Output PWM: 53.31, Speed: 53
+Target Angle: 100.00, Measured Angle: 94.68, Error: 5.32, Output PWM: 47.46, Speed: 47
+Target Angle: 100.00, Measured Angle: 94.68, Error: 5.32, Output PWM: 53.30, Speed: 53
+Target Angle: 100.00, Measured Angle: 95.26, Error: 4.74, Output PWM: 41.61, Speed: 41
+Target Angle: 100.00, Measured Angle: 95.26, Error: 4.74, Output PWM: 47.45, Speed: 47
+Target Angle: 100.00, Measured Angle: 95.84, Error: 4.16, Output PWM: 35.76, Speed: 35
+Target Angle: 100.00, Measured Angle: 96.43, Error: 3.57, Output PWM: 29.92, Speed: 29
+Target Angle: 100.00, Measured Angle: 96.43, Error: 3.57, Output PWM: 35.75, Speed: 35
+Target Angle: 100.00, Measured Angle: 97.01, Error: 2.99, Output PWM: 24.06, Speed: 24
+Target Angle: 100.00, Measured Angle: 97.60, Error: 2.40, Output PWM: 18.21, Speed: 18
+Target Angle: 100.00, Measured Angle: 97.60, Error: 2.40, Output PWM: 24.05, Speed: 24
+Target Angle: 100.00, Measured Angle: 98.18, Error: 1.82, Output PWM: 12.36, Speed: 12
+Target Angle: 100.00, Measured Angle: 98.77, Error: 1.23, Output PWM: 6.51, Speed: 6
+Target Angle: 100.00, Measured Angle: 98.77, Error: 1.23, Output PWM: 12.35, Speed: 12
+Target Angle: 100.00, Measured Angle: 98.77, Error: 1.23, Output PWM: 12.35, Speed: 12
+Target Angle: 100.00, Measured Angle: 99.35, Error: 0.65, Output PWM: 0.68, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.35, Error: 0.65, Output PWM: 6.50, Speed: 6
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: -5.19, Speed: 5
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Target Angle: 100.00, Measured Angle: 99.94, Error: 0.06, Output PWM: 0.65, Speed: 0
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 246.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 253.05
+Angle Encoder 1: 99.94, Angle Encoder 2: 254.22
+Angle Encoder 1: 99.94, Angle Encoder 2: 259.48
+Angle Encoder 1: 99.94, Angle Encoder 2: 264.16
+Angle Encoder 1: 99.94, Angle Encoder 2: 266.49
+Angle Encoder 1: 99.94, Angle Encoder 2: 264.74
+Angle Encoder 1: 99.94, Angle Encoder 2: 264.74
+Angle Encoder 1: 99.94, Angle Encoder 2: 264.74
+Angle Encoder 1: 99.94, Angle Encoder 2: 264.74
+Angle Encoder 1: 99.94, Angle Encoder 2: 264.74
+Angle Encoder 1: 99.94, Angle Encoder 2: 267.66
+Angle Encoder 1: 99.94, Angle Encoder 2: 274.68
+Angle Encoder 1: 99.94, Angle Encoder 2: 281.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 289.87
+Angle Encoder 1: 99.94, Angle Encoder 2: 296.88
+Angle Encoder 1: 99.94, Angle Encoder 2: 296.88
+Angle Encoder 1: 99.94, Angle Encoder 2: 296.88
+Angle Encoder 1: 99.94, Angle Encoder 2: 296.88
+Angle Encoder 1: 99.94, Angle Encoder 2: 296.88
+Angle Encoder 1: 99.94, Angle Encoder 2: 290.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 277.01
+Angle Encoder 1: 99.94, Angle Encoder 2: 261.82
+Angle Encoder 1: 99.94, Angle Encoder 2: 248.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 239.61
+Angle Encoder 1: 99.94, Angle Encoder 2: 231.43
+Angle Encoder 1: 99.94, Angle Encoder 2: 229.68
+Angle Encoder 1: 99.94, Angle Encoder 2: 232.01
+Angle Encoder 1: 99.94, Angle Encoder 2: 232.01
+Angle Encoder 1: 99.94, Angle Encoder 2: 232.01
+Angle Encoder 1: 99.94, Angle Encoder 2: 232.01
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.92
+Angle Encoder 1: 99.94, Angle Encoder 2: 220.91
+Angle Encoder 1: 99.94, Angle Encoder 2: 209.81
+Angle Encoder 1: 99.94, Angle Encoder 2: 196.36
+Angle Encoder 1: 99.94, Angle Encoder 2: 185.84
+Angle Encoder 1: 99.94, Angle Encoder 2: 182.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 182.92
+Angle Encoder 1: 99.94, Angle Encoder 2: 182.92
+Angle Encoder 1: 99.94, Angle Encoder 2: 182.92
+Angle Encoder 1: 99.94, Angle Encoder 2: 179.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 178.25
+Angle Encoder 1: 99.94, Angle Encoder 2: 170.06
+Angle Encoder 1: 99.94, Angle Encoder 2: 158.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 143.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 128.57
+Angle Encoder 1: 99.94, Angle Encoder 2: 120.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 116.88
+Angle Encoder 1: 99.94, Angle Encoder 2: 121.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 121.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 121.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 119.22
+Angle Encoder 1: 99.94, Angle Encoder 2: 115.13
+Angle Encoder 1: 99.94, Angle Encoder 2: 107.53
+Angle Encoder 1: 99.94, Angle Encoder 2: 93.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 81.82
+Angle Encoder 1: 99.94, Angle Encoder 2: 68.96
+Angle Encoder 1: 99.94, Angle Encoder 2: 58.44
+Angle Encoder 1: 99.94, Angle Encoder 2: 57.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 57.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 57.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 57.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 57.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 56.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 52.60
+Angle Encoder 1: 99.94, Angle Encoder 2: 42.66
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.14
+Angle Encoder 1: 99.94, Angle Encoder 2: 25.71
+Angle Encoder 1: 99.94, Angle Encoder 2: 22.21
+Angle Encoder 1: 99.94, Angle Encoder 2: 22.21
+Angle Encoder 1: 99.94, Angle Encoder 2: 22.21
+Angle Encoder 1: 99.94, Angle Encoder 2: 22.21
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.96
+Angle Encoder 1: 99.94, Angle Encoder 2: 22.21
+Angle Encoder 1: 99.94, Angle Encoder 2: 14.61
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: -6.43
+Angle Encoder 1: 99.94, Angle Encoder 2: -14.61
+Angle Encoder 1: 99.94, Angle Encoder 2: -18.70
+Angle Encoder 1: 99.94, Angle Encoder 2: -18.70
+Angle Encoder 1: 99.94, Angle Encoder 2: -18.70
+Angle Encoder 1: 99.94, Angle Encoder 2: -18.70
+Angle Encoder 1: 99.94, Angle Encoder 2: -18.70
+Angle Encoder 1: 99.94, Angle Encoder 2: -21.04
+Angle Encoder 1: 99.94, Angle Encoder 2: -17.53
+Angle Encoder 1: 99.94, Angle Encoder 2: -11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: -4.68
+Angle Encoder 1: 99.94, Angle Encoder 2: 1.17
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: -2.92
+Angle Encoder 1: 99.94, Angle Encoder 2: -2.34
+Angle Encoder 1: 99.94, Angle Encoder 2: -4.68
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 3.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 110.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 217.40
+Angle Encoder 1: 99.94, Angle Encoder 2: 217.40
+Angle Encoder 1: 99.94, Angle Encoder 2: 217.40
+Angle Encoder 1: 99.94, Angle Encoder 2: 217.40
+Angle Encoder 1: 99.94, Angle Encoder 2: 217.40
+Angle Encoder 1: 99.94, Angle Encoder 2: 217.40
+Angle Encoder 1: 99.94, Angle Encoder 2: 217.40
+Angle Encoder 1: 99.94, Angle Encoder 2: 217.40
+Angle Encoder 1: 99.94, Angle Encoder 2: 217.40
+Angle Encoder 1: 99.94, Angle Encoder 2: 223.25
+Angle Encoder 1: 99.94, Angle Encoder 2: 225.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 225.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 225.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 225.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 225.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 225.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 225.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 225.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 230.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 229.09
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 227.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 233.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 235.52
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 237.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 240.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 239.61
+Angle Encoder 1: 99.94, Angle Encoder 2: 243.12
+Angle Encoder 1: 99.94, Angle Encoder 2: 245.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 245.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 245.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 245.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 245.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 244.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 242.53
+Angle Encoder 1: 99.94, Angle Encoder 2: 236.10
+Angle Encoder 1: 99.94, Angle Encoder 2: 229.68
+Angle Encoder 1: 99.94, Angle Encoder 2: 223.83
+Angle Encoder 1: 99.94, Angle Encoder 2: 215.06
+Angle Encoder 1: 99.94, Angle Encoder 2: 208.05
+Angle Encoder 1: 99.94, Angle Encoder 2: 202.21
+Angle Encoder 1: 99.94, Angle Encoder 2: 194.03
+Angle Encoder 1: 99.94, Angle Encoder 2: 181.75
+Angle Encoder 1: 99.94, Angle Encoder 2: 167.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 154.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 143.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 132.66
+Angle Encoder 1: 99.94, Angle Encoder 2: 120.97
+Angle Encoder 1: 99.94, Angle Encoder 2: 106.36
+Angle Encoder 1: 99.94, Angle Encoder 2: 94.09
+Angle Encoder 1: 99.94, Angle Encoder 2: 89.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 89.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 89.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 89.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 89.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 89.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 89.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 87.08
+Angle Encoder 1: 99.94, Angle Encoder 2: 74.81
+Angle Encoder 1: 99.94, Angle Encoder 2: 57.86
+Angle Encoder 1: 99.94, Angle Encoder 2: 42.66
+Angle Encoder 1: 99.94, Angle Encoder 2: 35.65
+Angle Encoder 1: 99.94, Angle Encoder 2: 35.65
+Angle Encoder 1: 99.94, Angle Encoder 2: 35.65
+Angle Encoder 1: 99.94, Angle Encoder 2: 35.65
+Angle Encoder 1: 99.94, Angle Encoder 2: 38.57
+Angle Encoder 1: 99.94, Angle Encoder 2: 36.82
+Angle Encoder 1: 99.94, Angle Encoder 2: 33.90
+Angle Encoder 1: 99.94, Angle Encoder 2: 29.22
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 47.92
+Angle Encoder 1: 99.94, Angle Encoder 2: 48.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 48.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 59.61
+Angle Encoder 1: 99.94, Angle Encoder 2: 57.86
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 108.12
+Angle Encoder 1: 99.94, Angle Encoder 2: 105.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 103.44
+Angle Encoder 1: 99.94, Angle Encoder 2: 99.94
+Angle Encoder 1: 99.94, Angle Encoder 2: 100.52
+Angle Encoder 1: 99.94, Angle Encoder 2: 108.70
+Angle Encoder 1: 99.94, Angle Encoder 2: 121.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 131.49
+Angle Encoder 1: 99.94, Angle Encoder 2: 139.68
+Angle Encoder 1: 99.94, Angle Encoder 2: 134.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 134.42
+Angle Encoder 1: 99.94, Angle Encoder 2: 138.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 140.84
+Angle Encoder 1: 99.94, Angle Encoder 2: 148.44
+Angle Encoder 1: 99.94, Angle Encoder 2: 156.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 163.64
+Angle Encoder 1: 99.94, Angle Encoder 2: 167.14
+Angle Encoder 1: 99.94, Angle Encoder 2: 167.14
+Angle Encoder 1: 99.94, Angle Encoder 2: 167.14
+Angle Encoder 1: 99.94, Angle Encoder 2: 167.14
+Angle Encoder 1: 99.94, Angle Encoder 2: 168.31
+Angle Encoder 1: 99.94, Angle Encoder 2: 171.82
+Angle Encoder 1: 99.94, Angle Encoder 2: 180.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 191.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 208.05
+Angle Encoder 1: 99.94, Angle Encoder 2: 223.83
+Angle Encoder 1: 99.94, Angle Encoder 2: 236.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 239.03
+Angle Encoder 1: 99.94, Angle Encoder 2: 239.03
+Angle Encoder 1: 99.94, Angle Encoder 2: 239.03
+Angle Encoder 1: 99.94, Angle Encoder 2: 239.03
+Angle Encoder 1: 99.94, Angle Encoder 2: 245.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 240.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 228.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 209.22
+Angle Encoder 1: 99.94, Angle Encoder 2: 187.60
+Angle Encoder 1: 99.94, Angle Encoder 2: 166.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 146.10
+Angle Encoder 1: 99.94, Angle Encoder 2: 126.82
+Angle Encoder 1: 99.94, Angle Encoder 2: 107.53
+Angle Encoder 1: 99.94, Angle Encoder 2: 87.08
+Angle Encoder 1: 99.94, Angle Encoder 2: 63.70
+Angle Encoder 1: 99.94, Angle Encoder 2: 47.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 42.66
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: -38.57
+Angle Encoder 1: 99.94, Angle Encoder 2: -43.25
+Angle Encoder 1: 99.94, Angle Encoder 2: -53.18
+Angle Encoder 1: 99.94, Angle Encoder 2: -63.12
+Angle Encoder 1: 99.94, Angle Encoder 2: -69.55
+Angle Encoder 1: 99.94, Angle Encoder 2: -66.04
+Angle Encoder 1: 99.94, Angle Encoder 2: -66.04
+Angle Encoder 1: 99.94, Angle Encoder 2: -66.04
+Angle Encoder 1: 99.94, Angle Encoder 2: -66.04
+Angle Encoder 1: 99.94, Angle Encoder 2: -66.04
+Angle Encoder 1: 99.94, Angle Encoder 2: -53.77
+Angle Encoder 1: 99.94, Angle Encoder 2: -52.60
+Angle Encoder 1: 99.94, Angle Encoder 2: -49.09
+Angle Encoder 1: 99.94, Angle Encoder 2: -40.32
+Angle Encoder 1: 99.94, Angle Encoder 2: -32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: -26.30
+Angle Encoder 1: 99.94, Angle Encoder 2: -21.04
+Angle Encoder 1: 99.94, Angle Encoder 2: -15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: -7.01
+Angle Encoder 1: 99.94, Angle Encoder 2: 2.92
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 19.87
+Angle Encoder 1: 99.94, Angle Encoder 2: 24.55
+Angle Encoder 1: 99.94, Angle Encoder 2: 28.64
+Angle Encoder 1: 99.94, Angle Encoder 2: 31.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 35.06
+Angle Encoder 1: 99.94, Angle Encoder 2: 36.82
+Angle Encoder 1: 99.94, Angle Encoder 2: 43.83
+Angle Encoder 1: 99.94, Angle Encoder 2: 52.60
+Angle Encoder 1: 99.94, Angle Encoder 2: 60.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 67.21
+Angle Encoder 1: 99.94, Angle Encoder 2: 74.81
+Angle Encoder 1: 99.94, Angle Encoder 2: 79.48
+Angle Encoder 1: 99.94, Angle Encoder 2: 87.08
+Angle Encoder 1: 99.94, Angle Encoder 2: 93.51
+Angle Encoder 1: 99.94, Angle Encoder 2: 99.35
+Angle Encoder 1: 99.94, Angle Encoder 2: 102.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 109.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 109.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 109.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 109.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 109.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 109.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 119.81
+Angle Encoder 1: 99.94, Angle Encoder 2: 116.88
+Angle Encoder 1: 99.94, Angle Encoder 2: 111.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 105.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 97.01
+Angle Encoder 1: 99.94, Angle Encoder 2: 92.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 87.08
+Angle Encoder 1: 99.94, Angle Encoder 2: 84.74
+Angle Encoder 1: 99.94, Angle Encoder 2: 85.91
+Angle Encoder 1: 99.94, Angle Encoder 2: 85.91
+Angle Encoder 1: 99.94, Angle Encoder 2: 85.91
+Angle Encoder 1: 99.94, Angle Encoder 2: 81.82
+Angle Encoder 1: 99.94, Angle Encoder 2: 83.57
+Angle Encoder 1: 99.94, Angle Encoder 2: 79.48
+Angle Encoder 1: 99.94, Angle Encoder 2: 76.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 76.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 74.81
+Angle Encoder 1: 99.94, Angle Encoder 2: 71.88
+Angle Encoder 1: 99.94, Angle Encoder 2: 73.05
+Angle Encoder 1: 99.94, Angle Encoder 2: 71.30
+Angle Encoder 1: 99.94, Angle Encoder 2: 68.96
+Angle Encoder 1: 99.94, Angle Encoder 2: 64.87
+Angle Encoder 1: 99.94, Angle Encoder 2: 63.70
+Angle Encoder 1: 99.94, Angle Encoder 2: 60.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 57.86
+Angle Encoder 1: 99.94, Angle Encoder 2: 54.35
+Angle Encoder 1: 99.94, Angle Encoder 2: 52.60
+Angle Encoder 1: 99.94, Angle Encoder 2: 50.84
+Angle Encoder 1: 99.94, Angle Encoder 2: 49.68
+Angle Encoder 1: 99.94, Angle Encoder 2: 47.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 45.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 40.91
+Angle Encoder 1: 99.94, Angle Encoder 2: 40.91
+Angle Encoder 1: 99.94, Angle Encoder 2: 45.00
+Angle Encoder 1: 99.94, Angle Encoder 2: 47.34
+Angle Encoder 1: 99.94, Angle Encoder 2: 43.83
+Angle Encoder 1: 99.94, Angle Encoder 2: 43.83
+Angle Encoder 1: 99.94, Angle Encoder 2: 45.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 45.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 42.08
+Angle Encoder 1: 99.94, Angle Encoder 2: 41.49
+Angle Encoder 1: 99.94, Angle Encoder 2: 40.32
+Angle Encoder 1: 99.94, Angle Encoder 2: 36.82
+Angle Encoder 1: 99.94, Angle Encoder 2: 43.25
+Angle Encoder 1: 99.94, Angle Encoder 2: 43.25
+Angle Encoder 1: 99.94, Angle Encoder 2: 43.25
+Angle Encoder 1: 99.94, Angle Encoder 2: 42.66
+Angle Encoder 1: 99.94, Angle Encoder 2: 39.74
+Angle Encoder 1: 99.94, Angle Encoder 2: 37.99
+Angle Encoder 1: 99.94, Angle Encoder 2: 31.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 33.90
+Angle Encoder 1: 99.94, Angle Encoder 2: 31.56
+Angle Encoder 1: 99.94, Angle Encoder 2: 28.64
+Angle Encoder 1: 99.94, Angle Encoder 2: 28.05
+Angle Encoder 1: 99.94, Angle Encoder 2: 21.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 18.70
+Angle Encoder 1: 99.94, Angle Encoder 2: 16.95
+Angle Encoder 1: 99.94, Angle Encoder 2: 17.53
+Angle Encoder 1: 99.94, Angle Encoder 2: 17.53
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 17.53
+Angle Encoder 1: 99.94, Angle Encoder 2: 16.36
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 10.52
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 9.35
+Angle Encoder 1: 99.94, Angle Encoder 2: 7.01
+Angle Encoder 1: 99.94, Angle Encoder 2: 8.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 8.77
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 1.17
+Angle Encoder 1: 99.94, Angle Encoder 2: 0.58
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.26
+Angle Encoder 1: 99.94, Angle Encoder 2: 25.71
+Angle Encoder 1: 99.94, Angle Encoder 2: 25.71
+Angle Encoder 1: 99.94, Angle Encoder 2: 25.71
+Angle Encoder 1: 99.94, Angle Encoder 2: 18.12
+Angle Encoder 1: 99.94, Angle Encoder 2: 20.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 20.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 20.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 20.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 20.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 18.12
+Angle Encoder 1: 99.94, Angle Encoder 2: 16.95
+Angle Encoder 1: 99.94, Angle Encoder 2: 16.36
+Angle Encoder 1: 99.94, Angle Encoder 2: 16.95
+Angle Encoder 1: 99.94, Angle Encoder 2: 16.95
+Angle Encoder 1: 99.94, Angle Encoder 2: 16.95
+Angle Encoder 1: 99.94, Angle Encoder 2: 16.95
+Angle Encoder 1: 99.94, Angle Encoder 2: 19.29
+Angle Encoder 1: 99.94, Angle Encoder 2: 18.70
+Angle Encoder 1: 99.94, Angle Encoder 2: 18.70
+Angle Encoder 1: 99.94, Angle Encoder 2: 19.87
+Angle Encoder 1: 99.94, Angle Encoder 2: 19.87
+Angle Encoder 1: 99.94, Angle Encoder 2: 19.87
+Angle Encoder 1: 99.94, Angle Encoder 2: 18.12
+Angle Encoder 1: 99.94, Angle Encoder 2: 14.03
+Angle Encoder 1: 99.94, Angle Encoder 2: 9.94
+Angle Encoder 1: 99.94, Angle Encoder 2: 6.43
+Angle Encoder 1: 99.94, Angle Encoder 2: 5.84
+Angle Encoder 1: 99.94, Angle Encoder 2: 4.09
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.78
+Angle Encoder 1: 99.94, Angle Encoder 2: 14.61
+Angle Encoder 1: 99.94, Angle Encoder 2: 13.44
+Angle Encoder 1: 99.94, Angle Encoder 2: 12.27
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 15.19
+Angle Encoder 1: 99.94, Angle Encoder 2: 9.94
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 11.69
+Angle Encoder 1: 99.94, Angle Encoder 2: 21.62
+Angle Encoder 1: 99.94, Angle Encoder 2: 18.70
+Angle Encoder 1: 99.94, Angle Encoder 2: 20.45
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 32.73
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.97
+Angle Encoder 1: 99.94, Angle Encoder 2: 29.81
+Angle Encoder 1: 99.94, Angle Encoder 2: 29.22
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 30.39
+Angle Encoder 1: 99.94, Angle Encoder 2: 25.71
+Angle Encoder 1: 99.94, Angle Encoder 2: 26.88
+Angle Encoder 1: 99.94, Angle Encoder 2: 24.55
+Angle Encoder 1: 99.94, Angle Encoder 2: 24.55
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38
+Angle Encoder 1: 99.94, Angle Encoder 2: 23.38

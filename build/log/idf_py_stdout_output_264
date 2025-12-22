@@ -1,0 +1,143 @@
+T),boot:0x13 (SPI_FAST_����2: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0mets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c470h ( 50288) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001c498 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001e834 vaddr=40080000 size=017e4h (  6116) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=19738h (104248) map[0m
+[0;32mI (172) esp_image: segment 4: paddr=00039760 vaddr=400817e4 size=0c98ch ( 51596) load[0m
+[0;32mI (200) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (200) boot: Disabling RNG early entropy source...[0m
+[0;32mI (212) cpu_start: Multicore app[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     IDF_project[0m
+[0;32mI (229) app_init: App version:      1[0m
+[0;32mI (233) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (239) app_init: ELF file SHA256:  420007671...[0m
+[0;32mI (244) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (249) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (254) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (259) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (264) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (271) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (290) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (296) heap_init: At 4008E170 len 00011E90 (71 KiB): IRAM[0m
+[0;32mI (304) spi_flash: detected chip: generic[0m
+[0;32mI (307) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (324) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (335) main_task: Started on CPU0[0m
+[0;32mI (345) main_task: Calling app_main()[0m
+[0;32mI (345) MAIN: I2C initialized successfully[0m
+[0;32mI (345) MOTOR: Initializing MCPWM for motor control[0m
+[0;32mI (345) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (365) MOTOR: Motor PWM initialized successfully[0m
+[0;32mI (775) MPU6050: Starting gyro calibration...[0m
+[0;32mI (5395) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (5395) MPU6050: Gyro offsets - X: -428.50, Y: -65.59, Z: -11.66[0m
+> Pitch: 2.15 degrees
+Setpoint: 0.00, Measured: 2.15, Error: -2.15, Output: -32.21, I Term: -0.021474, D Term: -42.948650
+> Pitch: 4.22 degrees
+Setpoint: 0.00, Measured: 4.22, Error: -4.22, Output: -63.24, I Term: -0.063636, D Term: -75.733795
+> Pitch: 6.20 degrees
+Setpoint: 0.00, Measured: 6.20, Error: -6.20, Output: -92.98, I Term: -0.125624, D Term: -100.239487
+> Pitch: 8.21 degrees
+Setpoint: 0.00, Measured: 8.21, Error: -8.21, Output: -123.16, I Term: -0.207733, D Term: -120.433434
+> Pitch: 9.70 degrees
+Setpoint: 0.00, Measured: 9.70, Error: -9.70, Output: -145.48, I Term: -0.304720, D Term: -126.102097
+> Pitch: 11.45 degrees
+Setpoint: 0.00, Measured: 11.45, Error: -11.45, Output: -171.77, I Term: -0.419233, D Term: -135.934998
+> Pitch: 13.07 degrees
+Setpoint: 0.00, Measured: 13.07, Error: -13.07, Output: -195.98, I Term: -0.549884, D Term: -141.024292
+> Pitch: 14.69 degrees
+Setpoint: 0.00, Measured: 14.69, Error: -14.69, Output: -220.35, I Term: -0.696783, D Term: -145.314987
+> Pitch: 16.35 degrees
+Setpoint: 0.00, Measured: 16.35, Error: -16.35, Output: -245.19, I Term: -0.860244, D Term: -149.374893
+> Pitch: 18.13 degrees
+Setpoint: 0.00, Measured: 18.13, Error: -18.13, Output: -271.88, I Term: -1.041496, D Term: -155.082230
+> Pitch: 19.77 degrees
+Setpoint: 0.00, Measured: 19.77, Error: -19.77, Output: -296.56, I Term: -1.239200, D Term: -156.971100
+> Pitch: 21.44 degrees
+Setpoint: 0.00, Measured: 21.44, Error: -21.44, Output: -321.56, I Term: -1.453575, D Term: -158.917450
+> Pitch: 22.76 degrees
+Setpoint: 0.00, Measured: 22.76, Error: -22.76, Output: -341.47, I Term: -1.681219, D Term: -153.673340
+> Pitch: 24.16 degrees
+Setpoint: 0.00, Measured: 24.16, Error: -24.16, Output: -362.46, I Term: -1.922861, D Term: -150.932190
+> Pitch: 25.48 degrees
+Setpoint: 0.00, Measured: 25.48, Error: -25.48, Output: -382.17, I Term: -2.177637, D Term: -147.016815
+> Pitch: 26.83 degrees
+Setpoint: 0.00, Measured: 26.83, Error: -26.83, Output: -402.47, I Term: -2.445953, D Term: -144.692429
+> Pitch: 28.04 degrees
+Setpoint: 0.00, Measured: 28.04, Error: -28.04, Output: -420.55, I Term: -2.726320, D Term: -139.853943
+> Pitch: 29.29 degrees
+Setpoint: 0.00, Measured: 29.29, Error: -29.29, Output: -439.28, I Term: -3.019170, D Term: -136.851410
+> Pitch: 30.34 degrees
+Setpoint: 0.00, Measured: 30.34, Error: -30.34, Output: -455.04, I Term: -3.322530, D Term: -130.501648
+> Pitch: 31.44 degrees
+Setpoint: 0.00, Measured: 31.44, Error: -31.44, Output: -471.61, I Term: -3.636940, D Term: -126.500092
+> Pitch: 32.65 degrees
+Setpoint: 0.00, Measured: 32.65, Error: -32.65, Output: -489.68, I Term: -3.963395, D Term: -125.290497
+> Pitch: 33.48 degrees
+Setpoint: 0.00, Measured: 33.48, Error: -33.48, Output: -502.16, I Term: -4.298172, D Term: -116.874397
+> Pitch: 34.66 degrees
+Setpoint: 0.00, Measured: 34.66, Error: -34.66, Output: -519.86, I Term: -4.644742, D Term: -117.087776
+> Pitch: 35.49 degrees
+Setpoint: 0.00, Measured: 35.49, Error: -35.49, Output: -532.40, I Term: -4.999676, D Term: -110.396751
+> Pitch: 36.56 degrees
+Setpoint: 0.00, Measured: 36.56, Error: -36.56, Output: -548.39, I Term: -5.365272, D Term: -109.642097
+> Pitch: 37.48 degrees
+Setpoint: 0.00, Measured: 37.48, Error: -37.48, Output: -562.17, I Term: -5.740051, D Term: -106.081673
+> Pitch: 38.21 degrees
+Setpoint: 0.00, Measured: 38.21, Error: -38.21, Output: -573.09, I Term: -6.122110, D Term: -99.423828
+> Pitch: 39.07 degrees
+Setpoint: 0.00, Measured: 39.07, Error: -39.07, Output: -586.03, I Term: -6.512797, D Term: -96.794846
+> Pitch: 39.64 degrees
+Setpoint: 0.00, Measured: 39.64, Error: -39.64, Output: -594.59, I Term: -6.909189, D Term: -88.844872
+> Pitch: 40.54 degrees
+Setpoint: 0.00, Measured: 40.54, Error: -40.54, Output: -608.03, I Term: -7.314543, D Term: -89.002304
+> Pitch: 41.14 degrees
+Setpoint: 0.00, Measured: 41.14, Error: -41.14, Output: -617.06, I Term: -7.725914, D Term: -83.233704
+> Pitch: 41.92 degrees
+Setpoint: 0.00, Measured: 41.92, Error: -41.92, Output: -628.76, I Term: -8.145089, D Term: -82.196480
+> Pitch: 42.58 degrees
+Setpoint: 0.00, Measured: 42.58, Error: -42.58, Output: -638.74, I Term: -8.570918, D Term: -79.064606
+> Pitch: 43.12 degrees
+Setpoint: 0.00, Measured: 43.12, Error: -43.12, Output: -646.74, I Term: -9.002078, D Term: -73.912849
+> Pitch: 43.85 degrees
+Setpoint: 0.00, Measured: 43.85, Error: -43.85, Output: -657.72, I Term: -9.440559, D Term: -73.773071
+> Pitch: 44.30 degrees
+Setpoint: 0.00, Measured: 44.30, Error: -44.30, Output: -664.49, I Term: -9.883555, D Term: -68.048996
+> Pitch: 44.81 degrees
+Setpoint: 0.00, Measured: 44.81, Error: -44.81, Output: -672.19, I Term: -10.331683, D Term: -64.702332
+[0;32mI (5825) MOTOR: Motors stopped[0m
+Fail-safe activated! Angle exceeded safe limit.
+[0;32mI (5825) main_task: Returned from app_main()[0m
