@@ -11,7 +11,7 @@
 #include "nvs.h"
 #include "esp_netif.h"
 #include "esp_http_server.h"
-
+#include "gpio.h"
 static const char *TAG = "WEBSERVER";
 
 // WiFi event group
@@ -328,6 +328,10 @@ static esp_err_t set_pid_post_handler(httpd_req_t *req)
     // Save to NVS (EEPROM)
     if (pid_save_to_nvs() == ESP_OK) {
         ESP_LOGI(TAG, "PID Updated & Saved - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f", kp, ki, kd, kx);
+        gpio_set_level(LED_PIN, 1); // Indicate success
+        vTaskDelay(pdMS_TO_TICKS(100));
+        gpio_set_level(LED_PIN, 0); // Turn off LED
+        vTaskDelay(pdMS_TO_TICKS(100));
     } else {
         ESP_LOGW(TAG, "PID Updated (not saved) - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f", kp, ki, kd, kx);
     }

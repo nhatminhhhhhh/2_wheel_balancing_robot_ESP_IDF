@@ -19,14 +19,14 @@
 #define SERVO_MAX_US 2500
 #define SERVO_FREQ_HZ 50
 #define SERVO_PERIOD_US 20000
-#define SERVO1_PIN 14
-#define SERVO2_PIN 27
+#define SERVO1_PIN -1
+#define SERVO2_PIN -1
 
 // Encoder pins
-#define ENCODER1_PIN_A 32
-#define ENCODER1_PIN_B 35
-#define ENCODER2_PIN_A 13
-#define ENCODER2_PIN_B 4
+#define ENCODER1_PIN_A 16
+#define ENCODER1_PIN_B 17
+#define ENCODER2_PIN_A 27
+#define ENCODER2_PIN_B 14
 
 extern int32_t encoder1_count;
 extern int32_t encoder2_count;

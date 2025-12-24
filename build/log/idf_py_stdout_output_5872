@@ -1,0 +1,1146 @@
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,h�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e8a8h (125096) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e8d0 vaddr=3ffb0000 size=01748h (  5960) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=92ae0h (600800) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2b08 vaddr=3ffb1748 size=0288ch ( 10380) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c539c vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (451) app_init: Compile time:     Nov  9 2025 18:23:38[0m
+[0;32mI (457) app_init: ELF file SHA256:  9cdc3ac0a...[0m
+[0;32mI (462) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (477) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (489) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFB8348 len 00027CB8 (159 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (508) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (525) spi_flash: flash io: dio[0m
+[0;33mW (529) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (542) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (564) MAIN: Connecting to WiFi...[0m
+[0;32mI (604) wifi:wifi driver task: 3ffc0454, prio:23, stack:6656, core=0[0m
+[0;32mI (614) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (614) wifi:wifi certification version: v7.0[0m
+[0;32mI (614) wifi:config NVS flash: enabled[0m
+[0;32mI (614) wifi:config nano formating: disabled[0m
+[0;32mI (624) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (624) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (634) wifi:Init management short buffer num: 32[0m
+[0;32mI (634) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (644) wifi:Init static rx buffer num: 10[0m
+[0;32mI (644) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (654) wifi_init: rx ba win: 6[0m
+[0;32mI (654) wifi_init: accept mbox: 6[0m
+[0;32mI (654) wifi_init: tcpip mbox: 32[0m
+[0;32mI (664) wifi_init: udp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (674) wifi_init: tcp rx win: 5760[0m
+[0;32mI (674) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (684) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (694) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (774) wifi:mode : sta (1c:69:20:ca:90:9c)[0m
+[0;32mI (774) wifi:enable tsf[0m
+[0;32mI (774) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (794) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (794) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (804) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (824) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (854) wifi:connected with Tran Van Tuan, aid = 18, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (854) wifi:security: WPA2-PSK, phy: bgn, rssi: -39[0m
+[0;32mI (864) wifi:pm start, type: 1[0m
+
+[0;32mI (864) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (874) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (954) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3874) esp_netif_handlers: sta ip: 192.168.1.102, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.102
+[0;32mI (3874) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3874) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4884) WEBSERVER: [34mPID loaded from NVS - Kp: 34.10, Ki: 29.10, Kd: 1.229, Kx: 0.50[0m[0m
+[0;32mI (4884) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4894) WEBSERVER: Web server started successfully![0m
+[0;32mI (4894) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5404) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5404) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5504) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5504) GPIO: LED GPIO initialized[0m
+[0;32mI (5504) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5514) GPIO: Button GPIO initialized[0m
+[0;32mI (7814) MAIN: I2C initialized successfully[0m
+[0;32mI (8114) MPU6050: Starting gyro calibration...[0m
+[0;32mI (12814) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (12814) MPU6050: Gyro offsets - X: -410.54, Y: -67.86, Z: 24.43[0m
+Target: 0.50, Max Speed: 235.0, Min Speed: 80.0
+Robot ready. Press the button to start balancing...
+Setpoint: 0.50, Pitch: -11.66, Error: 12.16, Output: 235.00, Pterm: 418.85, I: 0.24, D: -184.35
+Setpoint: 0.50, Pitch: -11.36, Error: 11.86, Output: 235.00, Pterm: 412.66, I: 0.48, D: -62.68
+Setpoint: 0.50, Pitch: -10.34, Error: 10.84, Output: 235.00, Pterm: 381.50, I: 0.70, D: 12.61
+Setpoint: 0.50, Pitch: -9.78, Error: 10.28, Output: 235.00, Pterm: 365.93, I: 0.90, D: 25.68
+Setpoint: 0.50, Pitch: -9.37, Error: 9.87, Output: 235.00, Pterm: 355.47, I: 1.10, D: 25.22
+Setpoint: 0.50, Pitch: -8.94, Error: 9.44, Output: 235.00, Pterm: 343.98, I: 1.29, D: 25.99
+Setpoint: 0.50, Pitch: -8.27, Error: 8.77, Output: 235.00, Pterm: 324.07, I: 1.46, D: 35.16
+Setpoint: 0.50, Pitch: -7.85, Error: 8.35, Output: 235.00, Pterm: 312.45, I: 1.63, D: 29.71
+Setpoint: 0.50, Pitch: -7.25, Error: 7.75, Output: 235.00, Pterm: 294.76, I: 1.79, D: 33.86
+Setpoint: 0.50, Pitch: -6.89, Error: 7.39, Output: 235.00, Pterm: 284.83, I: 1.93, D: 27.01
+Setpoint: 0.50, Pitch: -6.76, Error: 7.26, Output: 235.00, Pterm: 283.01, I: 2.08, D: 15.45
+Setpoint: 0.50, Pitch: -6.74, Error: 7.24, Output: 235.00, Pterm: 284.65, I: 2.22, D: 7.07
+Setpoint: 0.50, Pitch: -6.68, Error: 7.18, Output: 235.00, Pterm: 285.07, I: 2.37, D: 5.02
+Setpoint: 0.50, Pitch: -6.48, Error: 6.98, Output: 235.00, Pterm: 280.71, I: 2.51, D: 9.30
+Setpoint: 0.50, Pitch: -6.15, Error: 6.65, Output: 235.00, Pterm: 271.68, I: 2.64, D: 15.93
+Setpoint: 0.50, Pitch: -5.69, Error: 6.19, Output: 235.00, Pterm: 258.35, I: 2.76, D: 23.07
+Setpoint: 0.50, Pitch: -5.22, Error: 5.72, Output: 235.00, Pterm: 244.18, I: 2.88, D: 26.66
+Setpoint: 0.50, Pitch: -4.63, Error: 5.13, Output: 235.00, Pterm: 225.61, I: 2.98, D: 32.63
+Setpoint: 0.50, Pitch: -3.62, Error: 4.12, Output: 235.00, Pterm: 192.66, I: 3.06, D: 50.20
+Setpoint: 0.50, Pitch: -2.54, Error: 3.04, Output: 235.00, Pterm: 156.87, I: 3.12, D: 59.90
+Setpoint: 0.50, Pitch: -1.33, Error: 1.83, Output: 219.45, Pterm: 116.14, I: 0.00, D: 68.67
+Setpoint: 0.50, Pitch: -0.08, Error: 0.58, Output: -133.07, Pterm: 19.98, I: 0.00, D: 73.39
+Setpoint: 0.50, Pitch: 0.98, Error: -0.48, Output: -165.15, Pterm: -16.48, I: 0.00, D: 68.39
+Setpoint: 0.50, Pitch: 1.57, Error: -1.07, Output: -166.39, Pterm: -36.74, I: 0.00, D: 49.04
+Setpoint: 0.50, Pitch: 1.89, Error: -1.39, Output: -160.24, Pterm: -47.88, I: 0.00, D: 31.55
+Setpoint: 0.50, Pitch: 1.98, Error: -1.48, Output: -147.85, Pterm: -51.01, I: 0.00, D: 15.97
+Setpoint: 0.50, Pitch: 2.11, Error: -1.61, Output: -147.67, Pterm: -55.52, I: 0.00, D: 11.21
+Setpoint: 0.50, Pitch: 2.18, Error: -1.68, Output: -145.51, Pterm: -57.71, I: 0.00, D: 6.83
+Setpoint: 0.50, Pitch: 2.22, Error: -1.72, Output: -144.34, Pterm: -59.11, I: 0.00, D: 4.23
+Setpoint: 0.50, Pitch: 2.17, Error: -1.67, Output: -138.35, Pterm: -57.46, I: 0.00, D: -0.08
+Setpoint: 0.50, Pitch: 2.08, Error: -1.58, Output: -132.23, Pterm: -54.50, I: 0.00, D: -3.19
+Setpoint: 0.50, Pitch: 2.09, Error: -1.59, Output: -134.70, Pterm: -54.77, I: 0.00, D: -1.00
+Setpoint: 0.50, Pitch: 2.12, Error: -1.62, Output: -137.10, Pterm: -55.63, I: 0.00, D: 0.53
+Setpoint: 0.50, Pitch: 2.11, Error: -1.61, Output: -136.15, Pterm: -55.33, I: 0.00, D: -0.11
+Setpoint: 0.50, Pitch: 2.12, Error: -1.62, Output: -137.16, Pterm: -55.78, I: 0.00, D: 0.44
+Setpoint: 0.50, Pitch: 2.15, Error: -1.65, Output: -139.38, Pterm: -56.97, I: 0.00, D: 1.45
+Setpoint: 0.50, Pitch: 2.33, Error: -1.83, Output: -151.06, Pterm: -62.98, I: 0.00, D: 7.01
+Setpoint: 0.50, Pitch: 2.57, Error: -2.07, Output: -164.32, Pterm: -71.35, I: -0.04, D: 11.77
+Setpoint: 0.50, Pitch: 2.82, Error: -2.32, Output: -177.33, Pterm: -80.75, I: -0.09, D: 14.02
+Setpoint: 0.50, Pitch: 2.93, Error: -2.43, Output: -178.51, Pterm: -85.11, I: -0.14, D: 9.42
+Setpoint: 0.50, Pitch: 2.98, Error: -2.48, Output: -178.65, Pterm: -87.64, I: -0.19, D: 5.59
+Setpoint: 0.50, Pitch: 3.24, Error: -2.74, Output: -196.27, Pterm: -97.44, I: -0.24, D: 11.82
+Setpoint: 0.50, Pitch: 3.47, Error: -2.97, Output: -208.22, Pterm: -106.29, I: -0.30, D: 13.20
+Setpoint: 0.50, Pitch: 3.55, Error: -3.05, Output: -208.97, Pterm: -110.14, I: -0.36, D: 8.32
+Setpoint: 0.50, Pitch: 3.69, Error: -3.19, Output: -217.21, Pterm: -116.17, I: -0.42, D: 8.67
+Setpoint: 0.50, Pitch: 3.93, Error: -3.43, Output: -231.90, Pterm: -125.38, I: -0.49, D: 12.16
+Setpoint: 0.50, Pitch: 4.07, Error: -3.57, Output: -235.00, Pterm: -131.46, I: -0.57, D: 10.12
+Setpoint: 0.50, Pitch: 4.14, Error: -3.64, Output: -235.00, Pterm: -135.07, I: -0.64, D: 6.61
+Setpoint: 0.50, Pitch: 4.14, Error: -3.64, Output: -235.00, Pterm: -136.15, I: -0.71, D: 2.47
+Setpoint: 0.50, Pitch: 4.15, Error: -3.65, Output: -235.00, Pterm: -137.71, I: -0.78, D: 1.33
+Setpoint: 0.50, Pitch: 4.11, Error: -3.61, Output: -235.00, Pterm: -137.82, I: -0.86, D: -0.68
+Setpoint: 0.50, Pitch: 4.13, Error: -3.63, Output: -235.00, Pterm: -139.49, I: -0.93, D: 0.20
+Setpoint: 0.50, Pitch: 4.23, Error: -3.73, Output: -235.00, Pterm: -144.17, I: -1.00, D: 3.76
+Setpoint: 0.50, Pitch: 4.38, Error: -3.88, Output: -235.00, Pterm: -150.56, I: -1.08, D: 6.98
+Setpoint: 0.50, Pitch: 4.49, Error: -3.99, Output: -235.00, Pterm: -155.94, I: -1.16, D: 7.14
+Setpoint: 0.50, Pitch: 4.57, Error: -4.07, Output: -235.00, Pterm: -159.94, I: -1.24, D: 5.68
+Setpoint: 0.50, Pitch: 4.71, Error: -4.21, Output: -235.00, Pterm: -166.10, I: -1.33, D: 7.38
+Setpoint: 0.50, Pitch: 4.83, Error: -4.33, Output: -235.00, Pterm: -171.72, I: -1.41, D: 7.43
+Setpoint: 0.50, Pitch: 4.88, Error: -4.38, Output: -235.00, Pterm: -174.87, I: -1.50, D: 4.76
+Setpoint: 0.50, Pitch: 5.00, Error: -4.50, Output: -235.00, Pterm: -180.42, I: -1.59, D: 6.25
+Setpoint: 0.50, Pitch: 5.19, Error: -4.69, Output: -235.00, Pterm: -188.56, I: -1.68, D: 9.58
+Setpoint: 0.50, Pitch: 5.31, Error: -4.81, Output: -235.00, Pterm: -194.47, I: -1.78, D: 8.45
+Setpoint: 0.50, Pitch: 5.48, Error: -4.98, Output: -235.00, Pterm: -201.88, I: -1.88, D: 9.55
+Setpoint: 0.50, Pitch: 5.65, Error: -5.15, Output: -235.00, Pterm: -209.48, I: -1.98, D: 10.14
+Setpoint: 0.50, Pitch: 5.78, Error: -5.28, Output: -235.00, Pterm: -215.61, I: -2.09, D: 8.74
+Setpoint: 0.50, Pitch: 5.85, Error: -5.35, Output: -235.00, Pterm: -219.93, I: -2.20, D: 6.19
+Setpoint: 0.50, Pitch: 5.93, Error: -5.43, Output: -235.00, Pterm: -224.52, I: -2.30, D: 5.44
+Setpoint: 0.50, Pitch: 6.03, Error: -5.53, Output: -235.00, Pterm: -229.60, I: -2.41, D: 5.63
+Setpoint: 0.50, Pitch: 6.08, Error: -5.58, Output: -235.00, Pterm: -233.44, I: -2.53, D: 4.35
+Setpoint: 0.50, Pitch: 6.12, Error: -5.62, Output: -235.00, Pterm: -236.55, I: -2.64, D: 3.03
+Setpoint: 0.50, Pitch: 6.14, Error: -5.64, Output: -235.00, Pterm: -239.27, I: -2.75, D: 2.07
+Setpoint: 0.50, Pitch: 6.18, Error: -5.68, Output: -235.00, Pterm: -242.50, I: -2.86, D: 2.23
+Setpoint: 0.50, Pitch: 6.23, Error: -5.73, Output: -235.00, Pterm: -246.03, I: -2.98, D: 2.60
+Setpoint: 0.50, Pitch: 6.26, Error: -5.76, Output: -235.00, Pterm: -249.03, I: -3.09, D: 2.16
+Setpoint: 0.50, Pitch: 6.29, Error: -5.79, Output: -235.00, Pterm: -252.03, I: -3.21, D: 1.97
+Setpoint: 0.50, Pitch: 6.29, Error: -5.79, Output: -235.00, Pterm: -254.07, I: -3.33, D: 0.86
+Setpoint: 0.50, Pitch: 6.31, Error: -5.81, Output: -235.00, Pterm: -256.70, I: -3.44, D: 1.04
+Setpoint: 0.50, Pitch: 6.36, Error: -5.86, Output: -235.00, Pterm: -260.49, I: -3.56, D: 2.36
+Setpoint: 0.50, Pitch: 6.44, Error: -5.94, Output: -235.00, Pterm: -265.17, I: -3.68, D: 3.82
+Setpoint: 0.50, Pitch: 6.53, Error: -6.03, Output: -235.00, Pterm: -270.35, I: -3.80, D: 4.91
+Setpoint: 0.50, Pitch: 6.66, Error: -6.16, Output: -235.00, Pterm: -276.75, I: -3.92, D: 6.61
+Setpoint: 0.50, Pitch: 6.78, Error: -6.28, Output: -235.00, Pterm: -283.31, I: -4.05, D: 7.42
+Setpoint: 0.50, Pitch: 6.94, Error: -6.44, Output: -235.00, Pterm: -290.83, I: -4.18, D: 8.72
+Setpoint: 0.50, Pitch: 7.07, Error: -6.57, Output: -235.00, Pterm: -297.57, I: -4.31, D: 8.36
+Setpoint: 0.50, Pitch: 7.17, Error: -6.67, Output: -235.00, Pterm: -303.12, I: -4.44, D: 6.88
+Setpoint: 0.50, Pitch: 7.26, Error: -6.76, Output: -235.00, Pterm: -308.61, I: -4.58, D: 6.20
+Setpoint: 0.50, Pitch: 7.39, Error: -6.89, Output: -235.00, Pterm: -315.37, I: -4.71, D: 7.24
+Setpoint: 0.50, Pitch: 7.50, Error: -7.00, Output: -235.00, Pterm: -321.47, I: -4.85, D: 6.91
+Setpoint: 0.50, Pitch: 7.58, Error: -7.08, Output: -235.00, Pterm: -326.75, I: -5.00, D: 5.87
+Setpoint: 0.50, Pitch: 7.67, Error: -7.17, Output: -235.00, Pterm: -332.04, I: -5.14, D: 5.42
+Setpoint: 0.50, Pitch: 7.75, Error: -7.25, Output: -235.00, Pterm: -337.26, I: -5.28, D: 5.14
+Setpoint: 0.50, Pitch: 7.84, Error: -7.34, Output: -235.00, Pterm: -342.75, I: -5.43, D: 5.28
+Setpoint: 0.50, Pitch: 7.91, Error: -7.41, Output: -235.00, Pterm: -347.80, I: -5.58, D: 4.84
+Setpoint: 0.50, Pitch: 8.01, Error: -7.51, Output: -235.00, Pterm: -353.89, I: -5.73, D: 5.75
+Setpoint: 0.50, Pitch: 8.14, Error: -7.64, Output: -235.00, Pterm: -360.94, I: -5.88, D: 7.11
+Setpoint: 0.50, Pitch: 8.32, Error: -7.82, Output: -235.00, Pterm: -369.65, I: -6.04, D: 9.37
+Setpoint: 0.50, Pitch: 8.41, Error: -7.91, Output: -235.00, Pterm: -375.47, I: -6.20, D: 7.13
+Setpoint: 0.50, Pitch: 8.47, Error: -7.97, Output: -235.00, Pterm: -380.15, I: -6.36, D: 4.97
+Setpoint: 0.50, Pitch: 8.56, Error: -8.06, Output: -235.00, Pterm: -385.99, I: -6.52, D: 5.34
+Setpoint: 0.50, Pitch: 8.61, Error: -8.11, Output: -235.00, Pterm: -390.42, I: -6.68, D: 3.94
+Setpoint: 0.50, Pitch: 8.64, Error: -8.14, Output: -235.00, Pterm: -394.19, I: -6.84, D: 2.64
+Setpoint: 0.50, Pitch: 8.66, Error: -8.16, Output: -235.00, Pterm: -397.71, I: -7.01, D: 1.86
+Setpoint: 0.50, Pitch: 8.69, Error: -8.19, Output: -235.00, Pterm: -401.43, I: -7.17, D: 1.74
+Setpoint: 0.50, Pitch: 8.73, Error: -8.23, Output: -235.00, Pterm: -405.72, I: -7.33, D: 2.30
+Setpoint: 0.50, Pitch: 8.75, Error: -8.25, Output: -235.00, Pterm: -409.09, I: -7.50, D: 1.53
+Setpoint: 0.50, Pitch: 8.71, Error: -8.21, Output: -235.00, Pterm: -410.74, I: -7.66, D: -0.63
+Setpoint: 0.50, Pitch: 8.61, Error: -8.11, Output: -235.00, Pterm: -410.05, I: -7.83, D: -4.00
+Setpoint: 0.50, Pitch: 8.56, Error: -8.06, Output: -235.00, Pterm: -411.09, I: -7.99, D: -3.44
+Setpoint: 0.50, Pitch: 8.59, Error: -8.09, Output: -235.00, Pterm: -413.57, I: -8.08, D: -0.34
+Setpoint: 0.50, Pitch: 8.64, Error: -8.14, Output: -235.00, Pterm: -415.19, I: -8.08, D: 1.62
+Setpoint: 0.50, Pitch: 8.69, Error: -8.19, Output: -235.00, Pterm: -417.02, I: -8.08, D: 2.63
+Setpoint: 0.50, Pitch: 8.80, Error: -8.30, Output: -235.00, Pterm: -420.57, I: -8.08, D: 4.88
+Setpoint: 0.50, Pitch: 8.99, Error: -8.49, Output: -235.00, Pterm: -427.33, I: -8.08, D: 9.27
+Setpoint: 0.50, Pitch: 9.32, Error: -8.82, Output: -235.00, Pterm: -438.30, I: -8.08, D: 15.56
+Setpoint: 0.50, Pitch: 9.66, Error: -9.16, Output: -235.00, Pterm: -450.11, I: -8.08, D: 19.00
+Setpoint: 0.50, Pitch: 9.96, Error: -9.46, Output: -235.00, Pterm: -460.32, I: -8.08, D: 18.64
+Setpoint: 0.50, Pitch: 10.20, Error: -9.70, Output: -235.00, Pterm: -468.57, I: -8.08, D: 16.38
+Setpoint: 0.50, Pitch: 10.37, Error: -9.87, Output: -235.00, Pterm: -474.16, I: -8.08, D: 12.59
+Setpoint: 0.50, Pitch: 10.56, Error: -10.06, Output: -235.00, Pterm: -480.59, I: -8.08, D: 11.98
+Setpoint: 0.50, Pitch: 10.84, Error: -10.34, Output: -235.00, Pterm: -490.28, I: -8.08, D: 15.27
+Setpoint: 0.50, Pitch: 11.20, Error: -10.70, Output: -235.00, Pterm: -502.44, I: -8.08, D: 19.26
+Setpoint: 0.50, Pitch: 11.51, Error: -11.01, Output: -235.00, Pterm: -513.15, I: -8.08, D: 19.29
+Setpoint: 0.50, Pitch: 11.78, Error: -11.28, Output: -235.00, Pterm: -522.45, I: -8.08, D: 17.77
+Setpoint: 0.50, Pitch: 12.01, Error: -11.51, Output: -235.00, Pterm: -530.15, I: -8.08, D: 15.43
+Setpoint: 0.50, Pitch: 12.17, Error: -11.67, Output: -235.00, Pterm: -535.56, I: -8.08, D: 12.02
+Setpoint: 0.50, Pitch: 12.30, Error: -11.80, Output: -235.00, Pterm: -540.18, I: -8.08, D: 9.81
+Setpoint: 0.50, Pitch: 12.41, Error: -11.91, Output: -235.00, Pterm: -543.96, I: -8.08, D: 8.01
+Setpoint: 0.50, Pitch: 12.51, Error: -12.01, Output: -235.00, Pterm: -547.32, I: -8.08, D: 6.84
+Setpoint: 0.50, Pitch: 12.49, Error: -11.99, Output: -235.00, Pterm: -546.53, I: -8.08, D: 1.88
+Setpoint: 0.50, Pitch: 12.35, Error: -11.85, Output: -235.00, Pterm: -541.78, I: -8.08, D: -4.38
+Setpoint: 0.50, Pitch: 12.14, Error: -11.64, Output: -235.00, Pterm: -534.48, I: -8.08, D: -9.65
+Setpoint: 0.50, Pitch: 11.84, Error: -11.34, Output: -235.00, Pterm: -524.33, I: -8.08, D: -14.83
+Setpoint: 0.50, Pitch: 11.52, Error: -11.02, Output: -235.00, Pterm: -513.37, I: -8.08, D: -17.78
+Setpoint: 0.50, Pitch: 11.14, Error: -10.64, Output: -235.00, Pterm: -500.56, I: -8.08, D: -20.96
+Setpoint: 0.50, Pitch: 10.69, Error: -10.19, Output: -235.00, Pterm: -485.13, I: -8.08, D: -25.08
+Setpoint: 0.50, Pitch: 10.16, Error: -9.66, Output: -235.00, Pterm: -467.19, I: -8.08, D: -29.42
+Setpoint: 0.50, Pitch: 9.66, Error: -9.16, Output: -235.00, Pterm: -449.95, I: -8.08, D: -30.42
+Setpoint: 0.50, Pitch: 9.16, Error: -8.66, Output: -235.00, Pterm: -433.13, I: -8.08, D: -30.34
+Setpoint: 0.50, Pitch: 8.64, Error: -8.14, Output: -235.00, Pterm: -415.20, I: -8.08, D: -31.53
+Setpoint: 0.50, Pitch: 8.06, Error: -7.56, Output: -235.00, Pterm: -395.32, I: -8.08, D: -34.10
+Setpoint: 0.50, Pitch: 7.46, Error: -6.96, Output: -235.00, Pterm: -374.87, I: -8.08, D: -35.75
+Setpoint: 0.50, Pitch: 6.87, Error: -6.37, Output: -235.00, Pterm: -354.91, I: -8.08, D: -35.88
+Setpoint: 0.50, Pitch: 6.28, Error: -5.78, Output: -235.00, Pterm: -334.65, I: -8.08, D: -36.26
+Setpoint: 0.50, Pitch: 5.71, Error: -5.21, Output: -235.00, Pterm: -315.29, I: -8.08, D: -35.44
+Setpoint: 0.50, Pitch: 5.11, Error: -4.61, Output: -235.00, Pterm: -294.94, I: -8.08, D: -36.17
+Setpoint: 0.50, Pitch: 4.49, Error: -3.99, Output: -235.00, Pterm: -273.88, I: -8.08, D: -37.24
+Setpoint: 0.50, Pitch: 3.88, Error: -3.38, Output: -235.00, Pterm: -253.02, I: -8.08, D: -37.46
+Setpoint: 0.50, Pitch: 3.31, Error: -2.81, Output: -235.00, Pterm: -233.59, I: -8.08, D: -35.98
+Setpoint: 0.50, Pitch: 2.81, Error: -2.31, Output: -235.00, Pterm: -216.58, I: -8.08, D: -32.78
+Setpoint: 0.50, Pitch: 2.36, Error: -1.86, Output: -235.00, Pterm: -200.97, I: 0.00, D: -30.00
+Setpoint: 0.50, Pitch: 1.95, Error: -1.45, Output: -103.85, Pterm: -49.95, I: 0.00, D: -26.94
+Setpoint: 0.50, Pitch: 1.71, Error: -1.21, Output: -102.57, Pterm: -41.59, I: 0.00, D: -19.72
+Setpoint: 0.50, Pitch: 1.41, Error: -0.91, Output: -93.25, Pterm: -31.46, I: 0.00, D: -18.74
+Setpoint: 0.50, Pitch: 1.10, Error: -0.60, Output: -82.12, Pterm: -20.74, I: 0.00, D: -18.97
+Setpoint: 0.50, Pitch: 0.84, Error: -0.34, Output: 85.62, Pterm: -11.58, I: 0.00, D: -17.39
+Setpoint: 0.50, Pitch: 0.83, Error: -0.33, Output: -84.29, Pterm: -11.33, I: 0.00, D: -7.23
+Setpoint: 0.50, Pitch: 0.95, Error: -0.45, Output: -97.68, Pterm: -15.66, I: 0.00, D: 1.75
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -95.07, Pterm: -14.91, I: 0.00, D: -0.10
+Setpoint: 0.50, Pitch: 0.85, Error: -0.35, Output: -88.83, Pterm: -11.90, I: 0.00, D: -3.27
+Setpoint: 0.50, Pitch: 0.64, Error: -0.14, Output: 84.24, Pterm: -4.70, I: 0.00, D: -9.02
+Setpoint: 0.50, Pitch: 0.43, Error: 0.07, Output: 93.91, Pterm: 2.53, I: 0.00, D: -11.34
+Setpoint: 0.50, Pitch: 0.22, Error: 0.28, Output: 101.95, Pterm: 9.64, I: 0.00, D: -12.15
+Setpoint: 0.50, Pitch: -0.18, Error: 0.68, Output: 123.65, Pterm: 23.53, I: 0.00, D: -19.73
+Setpoint: 0.50, Pitch: -0.63, Error: 1.13, Output: 144.04, Pterm: 38.96, I: 0.00, D: -24.41
+Setpoint: 0.50, Pitch: -1.01, Error: 1.51, Output: 156.89, Pterm: 52.14, I: 0.00, D: -23.87
+Setpoint: 0.50, Pitch: -1.28, Error: 1.78, Output: 161.65, Pterm: 61.28, I: 0.00, D: -19.33
+Setpoint: 0.50, Pitch: -1.53, Error: 2.03, Output: 167.87, Pterm: 69.82, I: 0.04, D: -16.87
+Setpoint: 0.50, Pitch: -1.90, Error: 2.40, Output: 186.54, Pterm: 83.41, I: 0.09, D: -20.56
+Setpoint: 0.50, Pitch: -2.16, Error: 2.66, Output: 194.78, Pterm: 93.02, I: 0.14, D: -17.64
+Setpoint: 0.50, Pitch: -2.30, Error: 2.80, Output: 197.01, Pterm: 98.89, I: 0.20, D: -12.37
+Setpoint: 0.50, Pitch: -2.33, Error: 2.83, Output: 194.36, Pterm: 100.89, I: 0.25, D: -6.07
+Setpoint: 0.50, Pitch: -2.42, Error: 2.92, Output: 199.87, Pterm: 104.99, I: 0.31, D: -5.78
+Setpoint: 0.50, Pitch: -2.52, Error: 3.02, Output: 206.10, Pterm: 109.34, I: 0.37, D: -5.90
+Setpoint: 0.50, Pitch: -2.70, Error: 3.20, Output: 217.95, Pterm: 116.41, I: 0.44, D: -8.82
+Setpoint: 0.50, Pitch: -2.90, Error: 3.40, Output: 230.69, Pterm: 124.72, I: 0.51, D: -11.26
+Setpoint: 0.50, Pitch: -3.16, Error: 3.66, Output: 235.00, Pterm: 134.52, I: 0.58, D: -13.75
+Setpoint: 0.50, Pitch: -3.59, Error: 4.09, Output: 235.00, Pterm: 150.70, I: 0.66, D: -21.49
+Setpoint: 0.50, Pitch: -3.91, Error: 4.41, Output: 235.00, Pterm: 163.20, I: 0.75, D: -20.49
+Setpoint: 0.50, Pitch: -4.07, Error: 4.57, Output: 235.00, Pterm: 170.33, I: 0.84, D: -14.21
+Setpoint: 0.50, Pitch: -4.26, Error: 4.76, Output: 235.00, Pterm: 178.30, I: 0.94, D: -12.55
+Setpoint: 0.50, Pitch: -4.38, Error: 4.88, Output: 235.00, Pterm: 184.06, I: 1.03, D: -9.45
+Setpoint: 0.50, Pitch: -4.53, Error: 5.03, Output: 235.00, Pterm: 190.89, I: 1.13, D: -9.31
+Setpoint: 0.50, Pitch: -4.61, Error: 5.11, Output: 235.00, Pterm: 195.28, I: 1.24, D: -6.59
+Setpoint: 0.50, Pitch: -4.68, Error: 5.18, Output: 235.00, Pterm: 199.63, I: 1.34, D: -5.43
+Setpoint: 0.50, Pitch: -4.87, Error: 5.37, Output: 235.00, Pterm: 207.84, I: 1.45, D: -9.07
+Setpoint: 0.50, Pitch: -4.81, Error: 5.31, Output: 235.00, Pterm: 207.69, I: 1.55, D: -1.50
+Setpoint: 0.50, Pitch: -4.84, Error: 5.34, Output: 235.00, Pterm: 210.27, I: 1.66, D: -1.42
+Setpoint: 0.50, Pitch: -5.03, Error: 5.53, Output: 235.00, Pterm: 218.60, I: 1.77, D: -7.55
+Setpoint: 0.50, Pitch: -5.21, Error: 5.71, Output: 235.00, Pterm: 226.74, I: 1.88, D: -9.71
+Setpoint: 0.50, Pitch: -5.41, Error: 5.91, Output: 235.00, Pterm: 235.70, I: 2.00, D: -11.39
+Setpoint: 0.50, Pitch: -5.64, Error: 6.14, Output: 235.00, Pterm: 245.72, I: 2.13, D: -13.13
+Setpoint: 0.50, Pitch: -5.81, Error: 6.31, Output: 235.00, Pterm: 253.60, I: 2.25, D: -11.44
+Setpoint: 0.50, Pitch: -6.17, Error: 6.67, Output: 235.00, Pterm: 268.28, I: 2.39, D: -17.98
+Setpoint: 0.50, Pitch: -6.51, Error: 7.01, Output: 235.00, Pterm: 282.18, I: 2.53, D: -19.64
+Setpoint: 0.50, Pitch: -6.75, Error: 7.25, Output: 235.00, Pterm: 292.70, I: 2.67, D: -16.56
+Setpoint: 0.50, Pitch: -6.95, Error: 7.45, Output: 235.00, Pterm: 302.17, I: 2.82, D: -14.12
+Setpoint: 0.50, Pitch: -7.09, Error: 7.59, Output: 235.00, Pterm: 309.35, I: 2.97, D: -10.61
+Setpoint: 0.50, Pitch: -7.15, Error: 7.65, Output: 235.00, Pterm: 314.16, I: 3.12, D: -6.62
+Setpoint: 0.50, Pitch: -7.21, Error: 7.71, Output: 235.00, Pterm: 318.87, I: 3.28, D: -4.91
+Setpoint: 0.50, Pitch: -7.28, Error: 7.78, Output: 235.00, Pterm: 323.89, I: 3.43, D: -4.52
+Setpoint: 0.50, Pitch: -7.24, Error: 7.74, Output: 235.00, Pterm: 325.08, I: 3.59, D: -0.24
+Setpoint: 0.50, Pitch: -7.23, Error: 7.73, Output: 235.00, Pterm: 327.48, I: 3.74, D: 0.17
+Setpoint: 0.50, Pitch: -7.25, Error: 7.75, Output: 235.00, Pterm: 330.73, I: 3.90, D: -0.60
+Setpoint: 0.50, Pitch: -7.23, Error: 7.73, Output: 235.00, Pterm: 332.72, I: 4.05, D: 0.46
+Setpoint: 0.50, Pitch: -7.19, Error: 7.69, Output: 235.00, Pterm: 334.02, I: 4.21, D: 1.62
+Setpoint: 0.50, Pitch: -7.10, Error: 7.60, Output: 235.00, Pterm: 333.36, I: 4.36, D: 4.16
+Setpoint: 0.50, Pitch: -7.02, Error: 7.52, Output: 235.00, Pterm: 333.17, I: 4.51, D: 4.64
+Setpoint: 0.50, Pitch: -6.91, Error: 7.41, Output: 235.00, Pterm: 332.14, I: 4.66, D: 5.70
+Setpoint: 0.50, Pitch: -6.86, Error: 7.36, Output: 235.00, Pterm: 332.99, I: 4.80, D: 4.08
+Setpoint: 0.50, Pitch: -6.79, Error: 7.29, Output: 235.00, Pterm: 332.85, I: 4.95, D: 4.47
+Setpoint: 0.50, Pitch: -6.69, Error: 7.19, Output: 235.00, Pterm: 332.08, I: 5.09, D: 5.27
+Setpoint: 0.50, Pitch: -6.59, Error: 7.09, Output: 235.00, Pterm: 331.14, I: 5.24, D: 5.73
+Setpoint: 0.50, Pitch: -6.50, Error: 7.00, Output: 235.00, Pterm: 330.43, I: 5.38, D: 5.65
+Setpoint: 0.50, Pitch: -6.24, Error: 6.74, Output: 235.00, Pterm: 323.62, I: 5.51, D: 12.10
+Setpoint: 0.50, Pitch: -5.85, Error: 6.35, Output: 235.00, Pterm: 312.68, I: 5.64, D: 19.01
+Setpoint: 0.50, Pitch: -5.38, Error: 5.88, Output: 235.00, Pterm: 298.70, I: 5.76, D: 24.89
+Setpoint: 0.50, Pitch: -4.69, Error: 5.19, Output: 235.00, Pterm: 276.81, I: 5.86, D: 35.54
+Setpoint: 0.50, Pitch: -3.86, Error: 4.36, Output: 235.00, Pterm: 250.05, I: 5.95, D: 44.75
+Setpoint: 0.50, Pitch: -2.94, Error: 3.44, Output: 235.00, Pterm: 219.82, I: 6.02, D: 51.85
+Setpoint: 0.50, Pitch: -1.82, Error: 2.32, Output: 235.00, Pterm: 182.38, I: 6.06, D: 62.08
+Setpoint: 0.50, Pitch: -0.75, Error: 1.25, Output: 235.00, Pterm: 146.34, I: 0.00, D: 64.26
+Setpoint: 0.50, Pitch: 0.33, Error: 0.17, Output: -139.74, Pterm: 5.74, I: 0.00, D: 65.58
+Setpoint: 0.50, Pitch: 1.61, Error: -1.11, Output: -191.94, Pterm: -38.11, I: 0.00, D: 73.18
+Setpoint: 0.50, Pitch: 2.26, Error: -1.76, Output: -195.06, Pterm: -60.64, I: 0.00, D: 53.39
+Setpoint: 0.50, Pitch: 2.83, Error: -2.33, Output: -203.73, Pterm: -80.14, I: -0.05, D: 42.23
+Setpoint: 0.50, Pitch: 3.10, Error: -2.60, Output: -200.35, Pterm: -90.43, I: -0.10, D: 27.05
+Setpoint: 0.50, Pitch: 3.18, Error: -2.68, Output: -191.94, Pterm: -93.91, I: -0.15, D: 13.60
+Setpoint: 0.50, Pitch: 3.16, Error: -2.66, Output: -184.94, Pterm: -94.20, I: -0.21, D: 4.77
+Setpoint: 0.50, Pitch: 3.10, Error: -2.60, Output: -180.17, Pterm: -93.01, I: -0.26, D: -0.33
+Setpoint: 0.50, Pitch: 2.99, Error: -2.49, Output: -174.84, Pterm: -90.10, I: -0.31, D: -4.20
+Setpoint: 0.50, Pitch: 2.95, Error: -2.45, Output: -177.19, Pterm: -89.77, I: -0.36, D: -2.94
+Setpoint: 0.50, Pitch: 3.03, Error: -2.53, Output: -186.51, Pterm: -93.14, I: -0.41, D: 1.54
+Setpoint: 0.50, Pitch: 3.19, Error: -2.69, Output: -199.37, Pterm: -99.49, I: -0.46, D: 6.48
+Setpoint: 0.50, Pitch: 3.38, Error: -2.88, Output: -211.95, Pterm: -107.10, I: -0.52, D: 9.77
+Setpoint: 0.50, Pitch: 3.59, Error: -3.09, Output: -223.47, Pterm: -115.14, I: -0.58, D: 11.46
+Setpoint: 0.50, Pitch: 3.79, Error: -3.29, Output: -233.74, Pterm: -123.04, I: -0.65, D: 11.91
+Setpoint: 0.50, Pitch: 3.99, Error: -3.49, Output: -235.00, Pterm: -131.10, I: -0.72, D: 12.20
+Setpoint: 0.50, Pitch: 4.12, Error: -3.62, Output: -235.00, Pterm: -136.72, I: -0.79, D: 9.62
+Setpoint: 0.50, Pitch: 4.05, Error: -3.55, Output: -235.00, Pterm: -135.73, I: -0.86, D: 1.47
+Setpoint: 0.50, Pitch: 4.19, Error: -3.69, Output: -235.00, Pterm: -141.74, I: -0.93, D: 5.72
+Setpoint: 0.50, Pitch: 4.32, Error: -3.82, Output: -235.00, Pterm: -147.33, I: -1.01, D: 6.93
+Setpoint: 0.50, Pitch: 4.30, Error: -3.80, Output: -235.00, Pterm: -148.19, I: -1.08, D: 2.30
+Setpoint: 0.50, Pitch: 4.26, Error: -3.76, Output: -235.00, Pterm: -148.00, I: -1.16, D: -0.67
+Setpoint: 0.50, Pitch: 4.31, Error: -3.81, Output: -235.00, Pterm: -150.97, I: -1.24, D: 1.54
+Setpoint: 0.50, Pitch: 4.29, Error: -3.79, Output: -235.00, Pterm: -151.77, I: -1.31, D: 0.07
+Setpoint: 0.50, Pitch: 4.38, Error: -3.88, Output: -235.00, Pterm: -156.07, I: -1.39, D: 3.25
+Setpoint: 0.50, Pitch: 4.51, Error: -4.01, Output: -235.00, Pterm: -161.89, I: -1.47, D: 6.11
+Setpoint: 0.50, Pitch: 4.60, Error: -4.10, Output: -235.00, Pterm: -166.25, I: -1.55, D: 5.65
+Setpoint: 0.50, Pitch: 4.56, Error: -4.06, Output: -235.00, Pterm: -166.20, I: -1.63, D: 0.71
+Setpoint: 0.50, Pitch: 4.53, Error: -4.03, Output: -235.00, Pterm: -166.81, I: -1.71, D: -0.54
+Setpoint: 0.50, Pitch: 4.51, Error: -4.01, Output: -235.00, Pterm: -167.38, I: -1.79, D: -1.08
+Setpoint: 0.50, Pitch: 4.51, Error: -4.01, Output: -235.00, Pterm: -168.62, I: -1.87, D: -0.58
+Setpoint: 0.50, Pitch: 4.51, Error: -4.01, Output: -235.00, Pterm: -169.97, I: -1.95, D: -0.24
+Setpoint: 0.50, Pitch: 4.65, Error: -4.15, Output: -235.00, Pterm: -176.22, I: -2.04, D: 5.13
+Setpoint: 0.50, Pitch: 4.81, Error: -4.31, Output: -235.00, Pterm: -183.11, I: -2.12, D: 7.92
+Setpoint: 0.50, Pitch: 4.93, Error: -4.43, Output: -235.00, Pterm: -188.86, I: -2.21, D: 7.75
+Setpoint: 0.50, Pitch: 5.03, Error: -4.53, Output: -235.00, Pterm: -193.80, I: -2.30, D: 6.77
+Setpoint: 0.50, Pitch: 5.11, Error: -4.61, Output: -235.00, Pterm: -198.00, I: -2.39, D: 5.55
+Setpoint: 0.50, Pitch: 5.13, Error: -4.63, Output: -235.00, Pterm: -200.33, I: -2.49, D: 3.03
+Setpoint: 0.50, Pitch: 5.22, Error: -4.72, Output: -235.00, Pterm: -204.82, I: -2.58, D: 4.33
+Setpoint: 0.50, Pitch: 5.31, Error: -4.81, Output: -235.00, Pterm: -209.59, I: -2.68, D: 5.12
+Setpoint: 0.50, Pitch: 5.47, Error: -4.97, Output: -235.00, Pterm: -216.89, I: -2.78, D: 8.10
+Setpoint: 0.50, Pitch: 5.72, Error: -5.22, Output: -235.00, Pterm: -227.21, I: -2.88, D: 12.48
+Setpoint: 0.50, Pitch: 6.01, Error: -5.51, Output: -235.00, Pterm: -238.96, I: -2.99, D: 15.66
+Setpoint: 0.50, Pitch: 6.39, Error: -5.89, Output: -235.00, Pterm: -254.04, I: -3.11, D: 20.40
+Setpoint: 0.50, Pitch: 6.83, Error: -6.33, Output: -235.00, Pterm: -271.10, I: -3.24, D: 24.27
+Setpoint: 0.50, Pitch: 7.34, Error: -6.84, Output: -235.00, Pterm: -290.89, I: -3.37, D: 28.58
+Setpoint: 0.50, Pitch: 7.90, Error: -7.40, Output: -235.00, Pterm: -312.54, I: -3.52, D: 32.11
+Setpoint: 0.50, Pitch: 8.50, Error: -8.00, Output: -235.00, Pterm: -335.63, I: -3.68, D: 34.86
+Setpoint: 0.50, Pitch: 9.09, Error: -8.59, Output: -235.00, Pterm: -358.62, I: -3.85, D: 35.64
+Setpoint: 0.50, Pitch: 9.58, Error: -9.08, Output: -235.00, Pterm: -378.43, I: -4.04, D: 32.33
+Setpoint: 0.50, Pitch: 9.98, Error: -9.48, Output: -235.00, Pterm: -395.46, I: -4.22, D: 27.84
+Setpoint: 0.50, Pitch: 10.27, Error: -9.77, Output: -235.00, Pterm: -408.63, I: -4.42, D: 21.77
+Setpoint: 0.50, Pitch: 10.44, Error: -9.94, Output: -235.00, Pterm: -417.68, I: -4.62, D: 14.84
+Setpoint: 0.50, Pitch: 10.40, Error: -9.90, Output: -235.00, Pterm: -419.59, I: -4.82, D: 4.35
+Setpoint: 0.50, Pitch: 10.39, Error: -9.89, Output: -235.00, Pterm: -422.91, I: -5.01, D: 1.68
+Setpoint: 0.50, Pitch: 10.38, Error: -9.88, Output: -235.00, Pterm: -425.69, I: -5.21, D: 0.03
+Setpoint: 0.50, Pitch: 10.36, Error: -9.86, Output: -235.00, Pterm: -428.33, I: -5.41, D: -0.76
+Setpoint: 0.50, Pitch: 10.46, Error: -9.96, Output: -235.00, Pterm: -435.25, I: -5.61, D: 3.51
+Setpoint: 0.50, Pitch: 10.54, Error: -10.04, Output: -235.00, Pterm: -441.40, I: -5.81, D: 4.34
+Setpoint: 0.50, Pitch: 10.73, Error: -10.23, Output: -235.00, Pterm: -451.25, I: -6.01, D: 8.62
+Setpoint: 0.50, Pitch: 10.81, Error: -10.31, Output: -235.00, Pterm: -457.74, I: -6.22, D: 6.66
+Setpoint: 0.50, Pitch: 10.79, Error: -10.29, Output: -235.00, Pterm: -460.42, I: -6.43, D: 1.77
+Setpoint: 0.50, Pitch: 10.57, Error: -10.07, Output: -235.00, Pterm: -456.33, I: -6.63, D: -7.42
+Setpoint: 0.50, Pitch: 9.93, Error: -9.43, Output: -235.00, Pterm: -437.80, I: -6.82, D: -26.48
+Setpoint: 0.50, Pitch: 8.90, Error: -8.40, Output: -235.00, Pterm: -405.57, I: -6.98, D: -48.54
+Setpoint: 0.50, Pitch: 7.79, Error: -7.29, Output: -235.00, Pterm: -370.31, I: -7.13, D: -60.22
+Setpoint: 0.50, Pitch: 6.56, Error: -6.06, Output: -235.00, Pterm: -330.22, I: -7.25, D: -69.67
+Setpoint: 0.50, Pitch: 5.45, Error: -4.95, Output: -235.00, Pterm: -294.09, I: -7.35, D: -68.76
+Setpoint: 0.50, Pitch: 4.71, Error: -4.21, Output: -235.00, Pterm: -270.15, I: -7.43, D: -54.94
+Setpoint: 0.50, Pitch: 4.37, Error: -3.87, Output: -235.00, Pterm: -259.97, I: -7.51, D: -34.41
+Setpoint: 0.50, Pitch: 4.35, Error: -3.85, Output: -235.00, Pterm: -260.75, I: -7.59, D: -14.34
+Setpoint: 0.50, Pitch: 4.17, Error: -3.67, Output: -235.00, Pterm: -255.66, I: -7.66, D: -12.59
+Setpoint: 0.50, Pitch: 4.36, Error: -3.86, Output: -235.00, Pterm: -263.70, I: -7.74, D: 2.23
+Setpoint: 0.50, Pitch: 4.57, Error: -4.07, Output: -235.00, Pterm: -272.19, I: -7.82, D: 8.57
+Setpoint: 0.50, Pitch: 4.79, Error: -4.29, Output: -235.00, Pterm: -281.26, I: -7.91, D: 11.65
+Setpoint: 0.50, Pitch: 4.51, Error: -4.01, Output: -235.00, Pterm: -273.03, I: -7.99, D: -5.72
+Setpoint: 0.50, Pitch: 4.27, Error: -3.77, Output: -235.00, Pterm: -265.87, I: -8.06, D: -11.42
+Setpoint: 0.50, Pitch: 4.00, Error: -3.50, Output: -235.00, Pterm: -257.08, I: -8.08, D: -14.31
+Setpoint: 0.50, Pitch: 3.85, Error: -3.35, Output: -235.00, Pterm: -252.04, I: -8.08, D: -11.18
+Setpoint: 0.50, Pitch: 3.57, Error: -3.07, Output: -235.00, Pterm: -242.49, I: -8.08, D: -14.79
+Setpoint: 0.50, Pitch: 3.46, Error: -2.96, Output: -235.00, Pterm: -238.55, I: -8.08, D: -10.18
+Setpoint: 0.50, Pitch: 3.56, Error: -3.06, Output: -235.00, Pterm: -242.13, I: -8.08, D: -0.20
+Setpoint: 0.50, Pitch: 3.33, Error: -2.83, Output: -235.00, Pterm: -234.12, I: -8.08, D: -8.74
+Setpoint: 0.50, Pitch: 3.13, Error: -2.63, Output: -235.00, Pterm: -227.51, I: -8.08, D: -10.64
+Setpoint: 0.50, Pitch: 2.98, Error: -2.48, Output: -235.00, Pterm: -222.14, I: -8.08, D: -10.06
+Setpoint: 0.50, Pitch: 2.63, Error: -2.13, Output: -235.00, Pterm: -210.40, I: -8.08, D: -16.72
+Setpoint: 0.50, Pitch: 2.57, Error: -2.07, Output: -235.00, Pterm: -208.30, I: -8.08, D: -8.96
+Setpoint: 0.50, Pitch: 2.59, Error: -2.09, Output: -235.00, Pterm: -208.97, I: -8.08, D: -2.86
+Setpoint: 0.50, Pitch: 2.76, Error: -2.26, Output: -235.00, Pterm: -214.61, I: -8.08, D: 4.95
+Setpoint: 0.50, Pitch: 2.93, Error: -2.43, Output: -235.00, Pterm: -220.52, I: -8.08, D: 8.37
+Setpoint: 0.50, Pitch: 3.10, Error: -2.60, Output: -235.00, Pterm: -226.43, I: -8.08, D: 9.73
+Setpoint: 0.50, Pitch: 3.17, Error: -2.67, Output: -235.00, Pterm: -228.64, I: -8.08, D: 6.29
+Setpoint: 0.50, Pitch: 3.21, Error: -2.71, Output: -235.00, Pterm: -230.26, I: -8.08, D: 4.27
+Setpoint: 0.50, Pitch: 3.24, Error: -2.74, Output: -235.00, Pterm: -231.08, I: -8.08, D: 2.59
+Setpoint: 0.50, Pitch: 3.20, Error: -2.70, Output: -235.00, Pterm: -229.73, I: -8.08, D: -0.42
+Setpoint: 0.50, Pitch: 3.15, Error: -2.65, Output: -235.00, Pterm: -228.20, I: -8.08, D: -1.82
+Setpoint: 0.50, Pitch: 3.06, Error: -2.56, Output: -235.00, Pterm: -224.93, I: -8.08, D: -4.26
+Setpoint: 0.50, Pitch: 3.03, Error: -2.53, Output: -235.00, Pterm: -224.03, I: -8.08, D: -2.68
+Setpoint: 0.50, Pitch: 2.92, Error: -2.42, Output: -235.00, Pterm: -220.22, I: -8.08, D: -5.19
+Setpoint: 0.50, Pitch: 2.93, Error: -2.43, Output: -235.00, Pterm: -220.56, I: -8.08, D: -1.71
+Setpoint: 0.50, Pitch: 2.87, Error: -2.37, Output: -235.00, Pterm: -218.41, I: -8.08, D: -3.01
+Setpoint: 0.50, Pitch: 2.79, Error: -2.29, Output: -235.00, Pterm: -215.81, I: -8.08, D: -4.01
+Setpoint: 0.50, Pitch: 2.80, Error: -2.30, Output: -235.00, Pterm: -216.08, I: -8.08, D: -1.32
+Setpoint: 0.50, Pitch: 2.80, Error: -2.30, Output: -235.00, Pterm: -216.24, I: -8.08, D: -0.35
+Setpoint: 0.50, Pitch: 2.79, Error: -2.29, Output: -235.00, Pterm: -215.68, I: -8.08, D: -0.74
+Setpoint: 0.50, Pitch: 2.74, Error: -2.24, Output: -235.00, Pterm: -213.98, I: -8.08, D: -2.14
+Setpoint: 0.50, Pitch: 2.68, Error: -2.18, Output: -235.00, Pterm: -212.17, I: -8.08, D: -2.82
+Setpoint: 0.50, Pitch: 2.71, Error: -2.21, Output: -235.00, Pterm: -212.94, I: -8.08, D: -0.30
+Setpoint: 0.50, Pitch: 2.75, Error: -2.25, Output: -235.00, Pterm: -214.33, I: -8.08, D: 1.39
+Setpoint: 0.50, Pitch: 2.78, Error: -2.28, Output: -235.00, Pterm: -215.34, I: -8.08, D: 1.64
+Setpoint: 0.50, Pitch: 2.79, Error: -2.29, Output: -235.00, Pterm: -215.68, I: -8.08, D: 1.03
+Setpoint: 0.50, Pitch: 2.82, Error: -2.32, Output: -235.00, Pterm: -216.88, I: -8.08, D: 1.70
+Setpoint: 0.50, Pitch: 2.84, Error: -2.34, Output: -235.00, Pterm: -217.46, I: -8.08, D: 1.31
+Setpoint: 0.50, Pitch: 2.81, Error: -2.31, Output: -235.00, Pterm: -216.55, I: -8.08, D: -0.47
+Setpoint: 0.50, Pitch: 2.84, Error: -2.34, Output: -235.00, Pterm: -217.45, I: -8.08, D: 0.79
+Setpoint: 0.50, Pitch: 2.90, Error: -2.40, Output: -235.00, Pterm: -219.44, I: -8.08, D: 2.47
+Setpoint: 0.50, Pitch: 2.91, Error: -2.41, Output: -235.00, Pterm: -220.03, I: -8.08, D: 1.63
+Setpoint: 0.50, Pitch: 2.96, Error: -2.46, Output: -235.00, Pterm: -221.54, I: -8.08, D: 2.28
+Setpoint: 0.50, Pitch: 3.02, Error: -2.52, Output: -235.00, Pterm: -223.66, I: -8.08, D: 3.20
+Setpoint: 0.50, Pitch: 3.02, Error: -2.52, Output: -235.00, Pterm: -223.76, I: -8.08, D: 1.39
+Setpoint: 0.50, Pitch: 3.03, Error: -2.53, Output: -235.00, Pterm: -224.01, I: -8.08, D: 0.83
+Setpoint: 0.50, Pitch: 3.02, Error: -2.52, Output: -235.00, Pterm: -223.54, I: -8.08, D: -0.18
+Setpoint: 0.50, Pitch: 2.99, Error: -2.49, Output: -235.00, Pterm: -222.55, I: -8.08, D: -1.14
+Setpoint: 0.50, Pitch: 2.99, Error: -2.49, Output: -235.00, Pterm: -222.69, I: -8.08, D: -0.31
+Setpoint: 0.50, Pitch: 3.02, Error: -2.52, Output: -235.00, Pterm: -223.58, I: -8.08, D: 0.84
+Setpoint: 0.50, Pitch: 3.04, Error: -2.54, Output: -235.00, Pterm: -224.21, I: -8.08, D: 1.01
+Setpoint: 0.50, Pitch: 3.10, Error: -2.60, Output: -235.00, Pterm: -226.43, I: -8.08, D: 2.81
+Setpoint: 0.50, Pitch: 3.19, Error: -2.69, Output: -235.00, Pterm: -229.29, I: -8.08, D: 4.21
+Setpoint: 0.50, Pitch: 3.22, Error: -2.72, Output: -235.00, Pterm: -230.51, I: -8.08, D: 3.00
+Setpoint: 0.50, Pitch: 3.22, Error: -2.72, Output: -235.00, Pterm: -230.30, I: -8.08, D: 0.98
+Setpoint: 0.50, Pitch: 3.26, Error: -2.76, Output: -235.00, Pterm: -231.84, I: -8.08, D: 2.06
+Setpoint: 0.50, Pitch: 3.38, Error: -2.88, Output: -235.00, Pterm: -235.97, I: -8.08, D: 5.28
+Setpoint: 0.50, Pitch: 3.39, Error: -2.89, Output: -235.00, Pterm: -236.31, I: -8.08, D: 2.48
+Setpoint: 0.50, Pitch: 3.36, Error: -2.86, Output: -235.00, Pterm: -235.32, I: -8.08, D: -0.07
+Setpoint: 0.50, Pitch: 3.41, Error: -2.91, Output: -235.00, Pterm: -237.00, I: -8.08, D: 1.79
+Setpoint: 0.50, Pitch: 3.44, Error: -2.94, Output: -235.00, Pterm: -237.84, I: -8.08, D: 1.62
+Setpoint: 0.50, Pitch: 3.54, Error: -3.04, Output: -235.00, Pterm: -241.44, I: -8.08, D: 4.54
+Setpoint: 0.50, Pitch: 3.59, Error: -3.09, Output: -235.00, Pterm: -243.06, I: -8.08, D: 3.56
+Setpoint: 0.50, Pitch: 3.69, Error: -3.19, Output: -235.00, Pterm: -246.61, I: -8.08, D: 5.26
+Setpoint: 0.50, Pitch: 3.64, Error: -3.14, Output: -235.00, Pterm: -244.69, I: -8.08, D: 0.04
+Setpoint: 0.50, Pitch: 3.77, Error: -3.27, Output: -235.00, Pterm: -249.29, I: -8.08, D: 4.98
+Setpoint: 0.50, Pitch: 3.82, Error: -3.32, Output: -235.00, Pterm: -250.77, I: -8.08, D: 3.60
+Setpoint: 0.50, Pitch: 3.80, Error: -3.30, Output: -235.00, Pterm: -250.23, I: -8.08, D: 0.85
+Setpoint: 0.50, Pitch: 3.84, Error: -3.34, Output: -235.00, Pterm: -251.60, I: -8.08, D: 1.82
+Setpoint: 0.50, Pitch: 3.88, Error: -3.38, Output: -235.00, Pterm: -252.95, I: -8.08, D: 2.19
+Setpoint: 0.50, Pitch: 3.92, Error: -3.42, Output: -235.00, Pterm: -254.26, I: -8.08, D: 2.29
+Setpoint: 0.50, Pitch: 3.93, Error: -3.43, Output: -235.00, Pterm: -254.67, I: -8.08, D: 1.36
+Setpoint: 0.50, Pitch: 3.99, Error: -3.49, Output: -235.00, Pterm: -256.86, I: -8.08, D: 2.92
+Setpoint: 0.50, Pitch: 4.09, Error: -3.59, Output: -235.00, Pterm: -260.10, I: -8.08, D: 4.67
+Setpoint: 0.50, Pitch: 4.19, Error: -3.69, Output: -235.00, Pterm: -263.37, I: -8.08, D: 5.40
+Setpoint: 0.50, Pitch: 4.30, Error: -3.80, Output: -235.00, Pterm: -267.17, I: -8.08, D: 6.27
+Setpoint: 0.50, Pitch: 4.43, Error: -3.93, Output: -235.00, Pterm: -271.73, I: -8.08, D: 7.44
+Setpoint: 0.50, Pitch: 4.52, Error: -4.02, Output: -235.00, Pterm: -274.74, I: -8.08, D: 6.23
+Setpoint: 0.50, Pitch: 4.64, Error: -4.14, Output: -235.00, Pterm: -278.95, I: -8.08, D: 7.04
+Setpoint: 0.50, Pitch: 4.64, Error: -4.14, Output: -235.00, Pterm: -279.03, I: -8.08, D: 2.91
+Setpoint: 0.50, Pitch: 4.71, Error: -4.21, Output: -235.00, Pterm: -281.40, I: -8.08, D: 3.73
+Setpoint: 0.50, Pitch: 4.87, Error: -4.37, Output: -235.00, Pterm: -286.64, I: -8.08, D: 7.16
+Setpoint: 0.50, Pitch: 4.97, Error: -4.47, Output: -235.00, Pterm: -289.95, I: -8.08, D: 6.43
+Setpoint: 0.50, Pitch: 5.17, Error: -4.67, Output: -235.00, Pterm: -297.04, I: -8.08, D: 10.25
+Setpoint: 0.50, Pitch: 5.36, Error: -4.86, Output: -235.00, Pterm: -303.48, I: -8.08, D: 11.06
+Setpoint: 0.50, Pitch: 5.57, Error: -5.07, Output: -235.00, Pterm: -310.60, I: -8.08, D: 12.13
+Setpoint: 0.50, Pitch: 5.65, Error: -5.15, Output: -235.00, Pterm: -313.25, I: -8.08, D: 7.71
+Setpoint: 0.50, Pitch: 5.64, Error: -5.14, Output: -235.00, Pterm: -313.10, I: -8.08, D: 2.92
+Setpoint: 0.50, Pitch: 5.67, Error: -5.17, Output: -235.00, Pterm: -313.84, I: -8.08, D: 1.97
+Setpoint: 0.50, Pitch: 5.73, Error: -5.23, Output: -235.00, Pterm: -315.96, I: -8.08, D: 3.08
+Setpoint: 0.50, Pitch: 5.72, Error: -5.22, Output: -235.00, Pterm: -315.71, I: -8.08, D: 0.96
+Setpoint: 0.50, Pitch: 5.79, Error: -5.29, Output: -235.00, Pterm: -317.93, I: -8.08, D: 2.79
+Setpoint: 0.50, Pitch: 5.78, Error: -5.28, Output: -235.00, Pterm: -317.76, I: -8.08, D: 0.93
+Setpoint: 0.50, Pitch: 5.95, Error: -5.45, Output: -235.00, Pterm: -323.61, I: -8.08, D: 6.69
+Setpoint: 0.50, Pitch: 6.05, Error: -5.55, Output: -235.00, Pterm: -326.98, I: -8.08, D: 6.32
+Setpoint: 0.50, Pitch: 6.12, Error: -5.62, Output: -235.00, Pterm: -329.26, I: -8.08, D: 5.00
+Setpoint: 0.50, Pitch: 6.23, Error: -5.73, Output: -235.00, Pterm: -332.92, I: -8.08, D: 5.95
+Setpoint: 0.50, Pitch: 6.29, Error: -5.79, Output: -235.00, Pterm: -335.25, I: -8.08, D: 4.90
+Setpoint: 0.50, Pitch: 6.38, Error: -5.88, Output: -235.00, Pterm: -338.04, I: -8.08, D: 4.98
+Setpoint: 0.50, Pitch: 6.43, Error: -5.93, Output: -235.00, Pterm: -340.05, I: -8.08, D: 4.16
+Setpoint: 0.50, Pitch: 6.47, Error: -5.97, Output: -235.00, Pterm: -341.19, I: -8.08, D: 2.89
+Setpoint: 0.50, Pitch: 6.45, Error: -5.95, Output: -235.00, Pterm: -340.71, I: -8.08, D: 0.64
+Setpoint: 0.50, Pitch: 6.41, Error: -5.91, Output: -235.00, Pterm: -339.33, I: -8.08, D: -1.24
+Setpoint: 0.50, Pitch: 6.44, Error: -5.94, Output: -235.00, Pterm: -340.39, I: -8.08, D: 0.65
+Setpoint: 0.50, Pitch: 6.39, Error: -5.89, Output: -235.00, Pterm: -338.70, I: -8.08, D: -1.57
+Setpoint: 0.50, Pitch: 6.38, Error: -5.88, Output: -235.00, Pterm: -338.22, I: -8.08, D: -1.14
+Setpoint: 0.50, Pitch: 6.36, Error: -5.86, Output: -235.00, Pterm: -337.37, I: -8.08, D: -1.38
+Setpoint: 0.50, Pitch: 6.27, Error: -5.77, Output: -235.00, Pterm: -334.56, I: -8.08, D: -3.59
+Setpoint: 0.50, Pitch: 6.12, Error: -5.62, Output: -235.00, Pterm: -329.33, I: -8.08, D: -7.09
+Setpoint: 0.50, Pitch: 5.97, Error: -5.47, Output: -235.00, Pterm: -324.14, I: -8.08, D: -8.44
+Setpoint: 0.50, Pitch: 5.73, Error: -5.23, Output: -235.00, Pterm: -315.95, I: -8.08, D: -12.23
+Setpoint: 0.50, Pitch: 5.48, Error: -4.98, Output: -235.00, Pterm: -307.38, I: -8.08, D: -14.16
+Setpoint: 0.50, Pitch: 5.20, Error: -4.70, Output: -235.00, Pterm: -297.83, I: -8.08, D: -15.99
+Setpoint: 0.50, Pitch: 4.90, Error: -4.40, Output: -235.00, Pterm: -287.89, I: -8.08, D: -17.14
+Setpoint: 0.50, Pitch: 4.65, Error: -4.15, Output: -235.00, Pterm: -279.04, I: -8.08, D: -16.43
+Setpoint: 0.50, Pitch: 4.47, Error: -3.97, Output: -235.00, Pterm: -273.14, I: -8.08, D: -12.94
+Setpoint: 0.50, Pitch: 4.30, Error: -3.80, Output: -235.00, Pterm: -267.19, I: -8.08, D: -11.62
+Setpoint: 0.50, Pitch: 4.13, Error: -3.63, Output: -235.00, Pterm: -261.63, I: -8.08, D: -10.65
+Setpoint: 0.50, Pitch: 4.04, Error: -3.54, Output: -235.00, Pterm: -258.54, I: -8.08, D: -7.61
+Setpoint: 0.50, Pitch: 4.01, Error: -3.51, Output: -235.00, Pterm: -257.33, I: -8.08, D: -4.35
+Setpoint: 0.50, Pitch: 3.98, Error: -3.48, Output: -235.00, Pterm: -256.48, I: -8.08, D: -2.66
+Setpoint: 0.50, Pitch: 3.98, Error: -3.48, Output: -235.00, Pterm: -256.39, I: -8.08, D: -1.16
+Setpoint: 0.50, Pitch: 4.00, Error: -3.50, Output: -235.00, Pterm: -256.98, I: -8.08, D: 0.18
+Setpoint: 0.50, Pitch: 3.96, Error: -3.46, Output: -235.00, Pterm: -255.55, I: -8.08, D: -1.48
+Setpoint: 0.50, Pitch: 3.87, Error: -3.37, Output: -235.00, Pterm: -252.54, I: -8.08, D: -3.85
+Setpoint: 0.50, Pitch: 3.76, Error: -3.26, Output: -235.00, Pterm: -248.82, I: -8.08, D: -5.56
+Setpoint: 0.50, Pitch: 3.70, Error: -3.20, Output: -235.00, Pterm: -246.75, I: -8.08, D: -4.47
+Setpoint: 0.50, Pitch: 3.57, Error: -3.07, Output: -235.00, Pterm: -242.38, I: -8.08, D: -6.51
+Setpoint: 0.50, Pitch: 3.49, Error: -2.99, Output: -235.00, Pterm: -239.51, I: -8.08, D: -5.71
+Setpoint: 0.50, Pitch: 3.47, Error: -2.97, Output: -235.00, Pterm: -239.00, I: -8.08, D: -2.83
+Setpoint: 0.50, Pitch: 3.43, Error: -2.93, Output: -235.00, Pterm: -237.46, I: -8.08, D: -2.80
+Setpoint: 0.50, Pitch: 3.37, Error: -2.87, Output: -235.00, Pterm: -235.69, I: -8.08, D: -3.03
+Setpoint: 0.50, Pitch: 3.35, Error: -2.85, Output: -235.00, Pterm: -234.84, I: -8.08, D: -2.13
+Setpoint: 0.50, Pitch: 3.33, Error: -2.83, Output: -235.00, Pterm: -234.19, I: -8.08, D: -1.56
+Setpoint: 0.50, Pitch: 3.25, Error: -2.75, Output: -235.00, Pterm: -231.40, I: -8.08, D: -3.64
+Setpoint: 0.50, Pitch: 3.17, Error: -2.67, Output: -235.00, Pterm: -228.57, I: -8.08, D: -4.51
+Setpoint: 0.50, Pitch: 3.18, Error: -2.68, Output: -235.00, Pterm: -229.02, I: -8.08, D: -1.32
+Setpoint: 0.50, Pitch: 3.15, Error: -2.65, Output: -235.00, Pterm: -228.08, I: -8.08, D: -1.54
+Setpoint: 0.50, Pitch: 3.16, Error: -2.66, Output: -235.00, Pterm: -228.55, I: -8.08, D: -0.12
+Setpoint: 0.50, Pitch: 3.10, Error: -2.60, Output: -235.00, Pterm: -226.20, I: -8.08, D: -2.59
+Setpoint: 0.50, Pitch: 3.01, Error: -2.51, Output: -235.00, Pterm: -223.29, I: -8.08, D: -4.17
+Setpoint: 0.50, Pitch: 2.92, Error: -2.42, Output: -235.00, Pterm: -220.20, I: -8.08, D: -5.01
+Setpoint: 0.50, Pitch: 2.88, Error: -2.38, Output: -235.00, Pterm: -218.79, I: -8.08, D: -3.53
+Setpoint: 0.50, Pitch: 2.78, Error: -2.28, Output: -235.00, Pterm: -215.58, I: -8.08, D: -4.89
+Setpoint: 0.50, Pitch: 2.67, Error: -2.17, Output: -235.00, Pterm: -211.73, I: -8.08, D: -6.12
+Setpoint: 0.50, Pitch: 2.63, Error: -2.13, Output: -235.00, Pterm: -210.45, I: -8.08, D: -3.82
+Setpoint: 0.50, Pitch: 2.64, Error: -2.14, Output: -235.00, Pterm: -210.76, I: -8.08, D: -1.20
+Setpoint: 0.50, Pitch: 2.57, Error: -2.07, Output: -235.00, Pterm: -208.34, I: -8.08, D: -3.09
+Setpoint: 0.50, Pitch: 2.54, Error: -2.04, Output: -235.00, Pterm: -207.42, I: -8.08, D: -2.23
+Setpoint: 0.50, Pitch: 2.49, Error: -1.99, Output: -235.00, Pterm: -205.70, I: 0.00, D: -2.75
+Setpoint: 0.50, Pitch: 2.48, Error: -1.98, Output: -147.50, Pterm: -68.09, I: 0.00, D: -1.74
+Setpoint: 0.50, Pitch: 2.41, Error: -1.91, Output: -143.44, Pterm: -65.65, I: 0.00, D: -3.32
+Setpoint: 0.50, Pitch: 2.21, Error: -1.71, Output: -131.26, Pterm: -58.86, I: 0.00, D: -8.59
+Setpoint: 0.50, Pitch: 2.10, Error: -1.60, Output: -128.70, Pterm: -55.16, I: 0.00, D: -7.39
+Setpoint: 0.50, Pitch: 1.99, Error: -1.49, Output: -124.83, Pterm: -51.18, I: 0.00, D: -7.22
+Setpoint: 0.50, Pitch: 2.11, Error: -1.61, Output: -137.82, Pterm: -55.33, I: 0.00, D: 1.55
+Setpoint: 0.50, Pitch: 2.02, Error: -1.52, Output: -130.97, Pterm: -52.50, I: 0.00, D: -2.41
+Setpoint: 0.50, Pitch: 1.84, Error: -1.34, Output: -119.27, Pterm: -46.20, I: 0.00, D: -7.71
+Setpoint: 0.50, Pitch: 1.82, Error: -1.32, Output: -122.28, Pterm: -45.42, I: 0.00, D: -3.91
+Setpoint: 0.50, Pitch: 1.71, Error: -1.21, Output: -116.79, Pterm: -41.67, I: 0.00, D: -5.58
+Setpoint: 0.50, Pitch: 1.61, Error: -1.11, Output: -113.29, Pterm: -38.39, I: 0.00, D: -5.75
+Setpoint: 0.50, Pitch: 1.54, Error: -1.04, Output: -111.22, Pterm: -35.74, I: 0.00, D: -5.13
+Setpoint: 0.50, Pitch: 1.50, Error: -1.00, Output: -111.77, Pterm: -34.53, I: 0.00, D: -3.35
+Setpoint: 0.50, Pitch: 1.44, Error: -0.94, Output: -109.56, Pterm: -32.51, I: 0.00, D: -3.50
+Setpoint: 0.50, Pitch: 1.46, Error: -0.96, Output: -112.84, Pterm: -33.08, I: 0.00, D: -0.80
+Setpoint: 0.50, Pitch: 1.52, Error: -1.02, Output: -117.45, Pterm: -35.06, I: 0.00, D: 1.80
+Setpoint: 0.50, Pitch: 1.41, Error: -0.91, Output: -108.44, Pterm: -31.26, I: 0.00, D: -3.34
+Setpoint: 0.50, Pitch: 1.39, Error: -0.89, Output: -109.15, Pterm: -30.64, I: 0.00, D: -2.00
+Setpoint: 0.50, Pitch: 1.33, Error: -0.83, Output: -106.25, Pterm: -28.67, I: 0.00, D: -2.90
+Setpoint: 0.50, Pitch: 1.24, Error: -0.74, Output: -101.14, Pterm: -25.39, I: 0.00, D: -4.68
+Setpoint: 0.50, Pitch: 1.14, Error: -0.64, Output: -96.79, Pterm: -21.96, I: 0.00, D: -5.54
+Setpoint: 0.50, Pitch: 1.07, Error: -0.57, Output: -95.03, Pterm: -19.52, I: 0.00, D: -4.83
+Setpoint: 0.50, Pitch: 1.05, Error: -0.55, Output: -96.61, Pterm: -18.90, I: 0.00, D: -2.60
+Setpoint: 0.50, Pitch: 1.05, Error: -0.55, Output: -98.36, Pterm: -18.98, I: 0.00, D: -0.95
+Setpoint: 0.50, Pitch: 1.07, Error: -0.57, Output: -100.64, Pterm: -19.80, I: 0.00, D: 0.50
+Setpoint: 0.50, Pitch: 1.10, Error: -0.60, Output: -101.94, Pterm: -20.57, I: 0.00, D: 1.02
+Setpoint: 0.50, Pitch: 1.10, Error: -0.60, Output: -101.73, Pterm: -20.76, I: 0.00, D: 0.61
+Setpoint: 0.50, Pitch: 1.08, Error: -0.58, Output: -99.61, Pterm: -19.93, I: 0.00, D: -0.65
+Setpoint: 0.50, Pitch: 1.03, Error: -0.53, Output: -96.87, Pterm: -18.42, I: 0.00, D: -1.87
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -95.08, Pterm: -17.03, I: 0.00, D: -2.24
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -93.91, Pterm: -15.83, I: 0.00, D: -2.18
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -95.06, Pterm: -15.75, I: 0.00, D: -0.96
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -96.14, Pterm: -15.99, I: 0.00, D: -0.12
+Setpoint: 0.50, Pitch: 0.98, Error: -0.48, Output: -97.02, Pterm: -16.38, I: 0.00, D: 0.36
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -97.75, Pterm: -16.83, I: 0.00, D: 0.63
+Setpoint: 0.50, Pitch: 1.00, Error: -0.50, Output: -98.20, Pterm: -17.23, I: 0.00, D: 0.68
+Setpoint: 0.50, Pitch: 0.97, Error: -0.47, Output: -95.93, Pterm: -16.34, I: 0.00, D: -0.68
+Setpoint: 0.50, Pitch: 0.94, Error: -0.44, Output: -94.02, Pterm: -15.22, I: 0.00, D: -1.47
+Setpoint: 0.50, Pitch: 0.92, Error: -0.42, Output: -93.60, Pterm: -14.60, I: 0.00, D: -1.25
+Setpoint: 0.50, Pitch: 0.90, Error: -0.40, Output: -92.48, Pterm: -13.71, I: 0.00, D: -1.46
+Setpoint: 0.50, Pitch: 0.88, Error: -0.38, Output: -91.89, Pterm: -13.01, I: 0.00, D: -1.33
+Setpoint: 0.50, Pitch: 0.85, Error: -0.35, Output: -90.89, Pterm: -12.14, I: 0.00, D: -1.46
+Setpoint: 0.50, Pitch: 0.86, Error: -0.36, Output: -92.21, Pterm: -12.36, I: 0.00, D: -0.36
+Setpoint: 0.50, Pitch: 0.87, Error: -0.37, Output: -93.36, Pterm: -12.81, I: 0.00, D: 0.34
+Setpoint: 0.50, Pitch: 0.88, Error: -0.38, Output: -93.74, Pterm: -13.09, I: 0.00, D: 0.43
+Setpoint: 0.50, Pitch: 0.89, Error: -0.39, Output: -94.29, Pterm: -13.48, I: 0.00, D: 0.59
+Setpoint: 0.50, Pitch: 0.91, Error: -0.41, Output: -95.49, Pterm: -14.22, I: 0.00, D: 1.03
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -95.77, Pterm: -14.65, I: 0.00, D: 0.87
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -95.85, Pterm: -14.94, I: 0.00, D: 0.66
+Setpoint: 0.50, Pitch: 0.94, Error: -0.44, Output: -95.65, Pterm: -15.03, I: 0.00, D: 0.36
+Setpoint: 0.50, Pitch: 0.95, Error: -0.45, Output: -96.33, Pterm: -15.46, I: 0.00, D: 0.61
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -94.95, Pterm: -14.98, I: 0.00, D: -0.28
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -94.78, Pterm: -14.81, I: 0.00, D: -0.29
+Setpoint: 0.50, Pitch: 0.92, Error: -0.42, Output: -94.35, Pterm: -14.53, I: 0.00, D: -0.42
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -95.15, Pterm: -14.79, I: 0.00, D: 0.11
+Setpoint: 0.50, Pitch: 0.94, Error: -0.44, Output: -96.06, Pterm: -15.26, I: 0.00, D: 0.55
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -96.82, Pterm: -15.78, I: 0.00, D: 0.77
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -96.18, Pterm: -15.69, I: 0.00, D: 0.22
+Setpoint: 0.50, Pitch: 0.95, Error: -0.45, Output: -95.59, Pterm: -15.48, I: 0.00, D: -0.14
+Setpoint: 0.50, Pitch: 0.94, Error: -0.44, Output: -94.75, Pterm: -15.03, I: 0.00, D: -0.53
+Setpoint: 0.50, Pitch: 0.92, Error: -0.42, Output: -93.92, Pterm: -14.48, I: 0.00, D: -0.81
+Setpoint: 0.50, Pitch: 0.92, Error: -0.42, Output: -94.36, Pterm: -14.46, I: 0.00, D: -0.34
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -95.58, Pterm: -14.95, I: 0.00, D: 0.38
+Setpoint: 0.50, Pitch: 0.95, Error: -0.45, Output: -96.82, Pterm: -15.65, I: 0.00, D: 0.91
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -96.56, Pterm: -15.78, I: 0.00, D: 0.51
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -96.04, Pterm: -15.68, I: 0.00, D: 0.09
+Setpoint: 0.50, Pitch: 0.95, Error: -0.45, Output: -95.32, Pterm: -15.36, I: 0.00, D: -0.30
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -94.50, Pterm: -14.88, I: 0.00, D: -0.63
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -94.69, Pterm: -14.79, I: 0.00, D: -0.35
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -94.94, Pterm: -14.81, I: 0.00, D: -0.12
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -95.32, Pterm: -14.96, I: 0.00, D: 0.11
+Setpoint: 0.50, Pitch: 0.94, Error: -0.44, Output: -95.78, Pterm: -15.21, I: 0.00, D: 0.31
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -97.09, Pterm: -15.93, I: 0.00, D: 0.89
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -98.62, Pterm: -16.92, I: 0.00, D: 1.42
+Setpoint: 0.50, Pitch: 1.01, Error: -0.51, Output: -99.32, Pterm: -17.66, I: 0.00, D: 1.36
+Setpoint: 0.50, Pitch: 1.07, Error: -0.57, Output: -102.29, Pterm: -19.48, I: 0.00, D: 2.49
+Setpoint: 0.50, Pitch: 1.11, Error: -0.61, Output: -103.94, Pterm: -20.98, I: 0.00, D: 2.61
+Setpoint: 0.50, Pitch: 1.05, Error: -0.55, Output: -98.19, Pterm: -18.98, I: 0.00, D: -1.10
+Setpoint: 0.50, Pitch: 1.13, Error: -0.63, Output: -104.44, Pterm: -21.65, I: 0.00, D: 2.42
+Setpoint: 0.50, Pitch: 1.18, Error: -0.68, Output: -106.38, Pterm: -23.28, I: 0.00, D: 2.71
+Setpoint: 0.50, Pitch: 1.24, Error: -0.74, Output: -109.04, Pterm: -25.33, I: 0.00, D: 3.28
+Setpoint: 0.50, Pitch: 1.28, Error: -0.78, Output: -110.09, Pterm: -26.78, I: 0.00, D: 2.86
+Setpoint: 0.50, Pitch: 1.17, Error: -0.67, Output: -100.55, Pterm: -23.03, I: 0.00, D: -2.87
+Setpoint: 0.50, Pitch: 1.04, Error: -0.54, Output: -93.19, Pterm: -18.68, I: 0.00, D: -5.80
+Setpoint: 0.50, Pitch: 1.03, Error: -0.53, Output: -95.49, Pterm: -18.11, I: 0.00, D: -2.93
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -95.01, Pterm: -17.04, I: 0.00, D: -2.32
+Setpoint: 0.50, Pitch: 0.92, Error: -0.42, Output: -91.19, Pterm: -14.55, I: 0.00, D: -3.60
+Setpoint: 0.50, Pitch: 0.84, Error: -0.34, Output: -87.78, Pterm: -11.88, I: 0.00, D: -4.30
+Setpoint: 0.50, Pitch: 0.84, Error: -0.34, Output: -90.33, Pterm: -11.86, I: 0.00, D: -1.73
+Setpoint: 0.50, Pitch: 0.84, Error: -0.34, Output: -90.76, Pterm: -11.57, I: 0.00, D: -1.01
+Setpoint: 0.50, Pitch: 0.82, Error: -0.32, Output: -90.17, Pterm: -11.00, I: 0.00, D: -1.02
+Setpoint: 0.50, Pitch: 0.84, Error: -0.34, Output: -91.99, Pterm: -11.58, I: 0.00, D: 0.21
+Setpoint: 0.50, Pitch: 0.88, Error: -0.38, Output: -94.74, Pterm: -12.96, I: 0.00, D: 1.56
+Setpoint: 0.50, Pitch: 0.89, Error: -0.39, Output: -95.05, Pterm: -13.55, I: 0.00, D: 1.26
+Setpoint: 0.50, Pitch: 0.92, Error: -0.42, Output: -95.89, Pterm: -14.32, I: 0.00, D: 1.33
+Setpoint: 0.50, Pitch: 0.91, Error: -0.41, Output: -94.82, Pterm: -14.19, I: 0.00, D: 0.39
+Setpoint: 0.50, Pitch: 0.94, Error: -0.44, Output: -96.80, Pterm: -15.25, I: 0.00, D: 1.29
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -96.98, Pterm: -15.71, I: 0.00, D: 1.01
+Setpoint: 0.50, Pitch: 0.97, Error: -0.47, Output: -97.08, Pterm: -16.05, I: 0.00, D: 0.77
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -98.46, Pterm: -16.93, I: 0.00, D: 1.25
+Setpoint: 0.50, Pitch: 1.00, Error: -0.50, Output: -98.41, Pterm: -17.26, I: 0.00, D: 0.86
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -97.36, Pterm: -17.01, I: 0.00, D: 0.07
+Setpoint: 0.50, Pitch: 0.97, Error: -0.47, Output: -95.33, Pterm: -16.05, I: 0.00, D: -0.99
+Setpoint: 0.50, Pitch: 0.95, Error: -0.45, Output: -94.75, Pterm: -15.49, I: 0.00, D: -1.00
+Setpoint: 0.50, Pitch: 0.94, Error: -0.44, Output: -94.44, Pterm: -15.05, I: 0.00, D: -0.87
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -94.66, Pterm: -14.91, I: 0.00, D: -0.50
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -94.60, Pterm: -14.74, I: 0.00, D: -0.38
+Setpoint: 0.50, Pitch: 0.91, Error: -0.41, Output: -93.73, Pterm: -14.21, I: 0.00, D: -0.72
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -95.28, Pterm: -14.75, I: 0.00, D: 0.29
+Setpoint: 0.50, Pitch: 0.96, Error: -0.46, Output: -97.19, Pterm: -15.74, I: 0.00, D: 1.18
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -98.97, Pterm: -16.93, I: 0.00, D: 1.75
+Setpoint: 0.50, Pitch: 1.01, Error: -0.51, Output: -99.10, Pterm: -17.50, I: 0.00, D: 1.30
+Setpoint: 0.50, Pitch: 1.02, Error: -0.52, Output: -98.98, Pterm: -17.81, I: 0.00, D: 0.86
+Setpoint: 0.50, Pitch: 1.01, Error: -0.51, Output: -98.17, Pterm: -17.68, I: 0.00, D: 0.20
+Setpoint: 0.50, Pitch: 1.01, Error: -0.51, Output: -97.96, Pterm: -17.63, I: 0.00, D: 0.03
+Setpoint: 0.50, Pitch: 1.00, Error: -0.50, Output: -97.22, Pterm: -17.29, I: 0.00, D: -0.36
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -96.56, Pterm: -16.87, I: 0.00, D: -0.59
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -97.02, Pterm: -16.92, I: 0.00, D: -0.18
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -97.07, Pterm: -16.89, I: 0.00, D: -0.10
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -97.21, Pterm: -16.93, I: 0.00, D: -0.00
+Setpoint: 0.50, Pitch: 0.98, Error: -0.48, Output: -96.26, Pterm: -16.47, I: 0.00, D: -0.49
+Setpoint: 0.50, Pitch: 0.94, Error: -0.44, Output: -93.94, Pterm: -15.22, I: 0.00, D: -1.54
+Setpoint: 0.50, Pitch: 0.90, Error: -0.40, Output: -91.84, Pterm: -13.77, I: 0.00, D: -2.16
+Setpoint: 0.50, Pitch: 0.88, Error: -0.38, Output: -91.86, Pterm: -13.16, I: 0.00, D: -1.52
+Setpoint: 0.50, Pitch: 0.84, Error: -0.34, Output: -90.06, Pterm: -11.86, I: 0.00, D: -2.00
+Setpoint: 0.50, Pitch: 0.79, Error: -0.29, Output: -87.01, Pterm: -9.82, I: 0.00, D: -2.98
+Setpoint: 0.50, Pitch: 0.74, Error: -0.24, Output: -85.47, Pterm: -8.23, I: 0.00, D: -2.90
+Setpoint: 0.50, Pitch: 0.71, Error: -0.21, Output: -84.80, Pterm: -7.08, I: 0.00, D: -2.39
+Setpoint: 0.50, Pitch: 0.69, Error: -0.19, Output: -84.95, Pterm: -6.46, I: 0.00, D: -1.62
+Setpoint: 0.50, Pitch: 0.68, Error: -0.18, Output: -85.72, Pterm: -6.36, I: 0.00, D: -0.75
+Setpoint: 0.50, Pitch: 0.67, Error: -0.17, Output: -85.33, Pterm: -5.96, I: 0.00, D: -0.73
+Setpoint: 0.50, Pitch: 0.63, Error: -0.13, Output: -82.90, Pterm: -4.59, I: 0.00, D: -1.76
+Setpoint: 0.50, Pitch: 0.61, Error: -0.11, Output: -82.11, Pterm: -3.70, I: 0.00, D: -1.65
+Setpoint: 0.50, Pitch: 0.60, Error: -0.10, Output: -82.25, Pterm: -3.29, I: 0.00, D: -1.10
+Setpoint: 0.50, Pitch: 0.61, Error: -0.11, Output: -83.82, Pterm: -3.73, I: 0.00, D: 0.03
+Setpoint: 0.50, Pitch: 0.61, Error: -0.11, Output: -84.20, Pterm: -3.92, I: 0.00, D: 0.22
+Setpoint: 0.50, Pitch: 0.60, Error: -0.10, Output: -83.10, Pterm: -3.45, I: 0.00, D: -0.41
+Setpoint: 0.50, Pitch: 0.59, Error: -0.09, Output: -82.32, Pterm: -2.96, I: 0.00, D: -0.69
+Setpoint: 0.50, Pitch: 0.59, Error: -0.09, Output: -83.23, Pterm: -3.20, I: 0.00, D: -0.02
+Setpoint: 0.50, Pitch: 0.61, Error: -0.11, Output: -84.51, Pterm: -3.81, I: 0.00, D: 0.64
+Setpoint: 0.50, Pitch: 0.65, Error: -0.15, Output: -86.67, Pterm: -5.03, I: 0.00, D: 1.56
+Setpoint: 0.50, Pitch: 0.66, Error: -0.16, Output: -86.40, Pterm: -5.34, I: 0.00, D: 0.96
+Setpoint: 0.50, Pitch: 0.63, Error: -0.13, Output: -84.28, Pterm: -4.61, I: 0.00, D: -0.40
+Setpoint: 0.50, Pitch: 0.59, Error: -0.09, Output: -81.38, Pterm: -3.10, I: 0.00, D: -1.77
+Setpoint: 0.50, Pitch: 0.54, Error: -0.04, Output: 80.90, Pterm: -1.50, I: 0.00, D: -2.42
+Setpoint: 0.50, Pitch: 0.56, Error: -0.06, Output: -81.78, Pterm: -2.09, I: 0.00, D: -0.34
+Setpoint: 0.50, Pitch: 0.56, Error: -0.06, Output: -82.08, Pterm: -2.13, I: 0.00, D: -0.09
+Setpoint: 0.50, Pitch: 0.54, Error: -0.04, Output: -80.28, Pterm: -1.24, I: 0.00, D: -0.99
+Setpoint: 0.50, Pitch: 0.54, Error: -0.04, Output: -81.17, Pterm: -1.39, I: 0.00, D: -0.24
+Setpoint: 0.50, Pitch: 0.56, Error: -0.06, Output: -82.82, Pterm: -2.11, I: 0.00, D: 0.68
+Setpoint: 0.50, Pitch: 0.57, Error: -0.07, Output: -82.83, Pterm: -2.31, I: 0.00, D: 0.49
+Setpoint: 0.50, Pitch: 0.59, Error: -0.09, Output: -84.07, Pterm: -3.04, I: 0.00, D: 0.98
+Setpoint: 0.50, Pitch: 0.55, Error: -0.05, Output: -80.64, Pterm: -1.68, I: 0.00, D: -1.07
+Setpoint: 0.50, Pitch: 0.55, Error: -0.05, Output: -81.55, Pterm: -1.81, I: 0.00, D: -0.29
+Setpoint: 0.50, Pitch: 0.55, Error: -0.05, Output: -81.40, Pterm: -1.65, I: 0.00, D: -0.28
+Setpoint: 0.50, Pitch: 0.56, Error: -0.06, Output: -82.46, Pterm: -2.08, I: 0.00, D: 0.34
+Setpoint: 0.50, Pitch: 0.55, Error: -0.05, Output: -81.73, Pterm: -1.83, I: 0.00, D: -0.13
+Setpoint: 0.50, Pitch: 0.52, Error: -0.02, Output: 80.25, Pterm: -0.84, I: 0.00, D: -1.11
+Setpoint: 0.50, Pitch: 0.51, Error: -0.01, Output: 80.95, Pterm: -0.19, I: 0.00, D: -1.14
+Setpoint: 0.50, Pitch: 0.48, Error: 0.02, Output: 81.77, Pterm: 0.53, I: 0.00, D: -1.23
+Setpoint: 0.50, Pitch: 0.46, Error: 0.04, Output: 83.01, Pterm: 1.48, I: 0.00, D: -1.50
+Setpoint: 0.50, Pitch: 0.43, Error: 0.07, Output: 83.70, Pterm: 2.24, I: 0.00, D: -1.42
+Setpoint: 0.50, Pitch: 0.43, Error: 0.07, Output: 83.46, Pterm: 2.53, I: 0.00, D: -0.88
+Setpoint: 0.50, Pitch: 0.43, Error: 0.07, Output: 82.72, Pterm: 2.44, I: 0.00, D: -0.25
+Setpoint: 0.50, Pitch: 0.43, Error: 0.07, Output: 82.23, Pterm: 2.27, I: 0.00, D: 0.08
+Setpoint: 0.50, Pitch: 0.45, Error: 0.05, Output: 81.26, Pterm: 1.78, I: 0.00, D: 0.55
+Setpoint: 0.50, Pitch: 0.47, Error: 0.03, Output: 80.25, Pterm: 1.14, I: 0.00, D: 0.91
+Setpoint: 0.50, Pitch: 0.48, Error: 0.02, Output: -80.10, Pterm: 0.71, I: 0.00, D: 0.82
+Setpoint: 0.50, Pitch: 0.49, Error: 0.01, Output: -80.52, Pterm: 0.27, I: 0.00, D: 0.80
+Setpoint: 0.50, Pitch: 0.50, Error: -0.00, Output: -80.71, Pterm: -0.05, I: 0.00, D: 0.66
+Setpoint: 0.50, Pitch: 0.50, Error: -0.00, Output: -80.26, Pterm: -0.02, I: 0.00, D: 0.24
+Setpoint: 0.50, Pitch: 0.52, Error: -0.02, Output: -81.18, Pterm: -0.53, I: 0.00, D: 0.64
+Setpoint: 0.50, Pitch: 0.53, Error: -0.03, Output: -81.69, Pterm: -0.96, I: 0.00, D: 0.72
+Setpoint: 0.50, Pitch: 0.54, Error: -0.04, Output: -82.37, Pterm: -1.49, I: 0.00, D: 0.85
+Setpoint: 0.50, Pitch: 0.54, Error: -0.04, Output: -81.95, Pterm: -1.54, I: 0.00, D: 0.39
+Setpoint: 0.50, Pitch: 0.54, Error: -0.04, Output: -81.27, Pterm: -1.32, I: 0.00, D: -0.08
+Setpoint: 0.50, Pitch: 0.54, Error: -0.04, Output: -81.75, Pterm: -1.53, I: 0.00, D: 0.20
+Setpoint: 0.50, Pitch: 0.55, Error: -0.05, Output: -82.15, Pterm: -1.78, I: 0.00, D: 0.34
+Setpoint: 0.50, Pitch: 0.57, Error: -0.07, Output: -83.56, Pterm: -2.55, I: 0.00, D: 0.97
+Setpoint: 0.50, Pitch: 0.59, Error: -0.09, Output: -84.47, Pterm: -3.26, I: 0.00, D: 1.15
+Setpoint: 0.50, Pitch: 0.62, Error: -0.12, Output: -85.86, Pterm: -4.26, I: 0.00, D: 1.53
+Setpoint: 0.50, Pitch: 0.65, Error: -0.15, Output: -86.51, Pterm: -5.01, I: 0.00, D: 1.41
+Setpoint: 0.50, Pitch: 0.67, Error: -0.17, Output: -87.46, Pterm: -5.87, I: 0.00, D: 1.49
+Setpoint: 0.50, Pitch: 0.70, Error: -0.20, Output: -88.91, Pterm: -7.00, I: 0.00, D: 1.80
+Setpoint: 0.50, Pitch: 0.76, Error: -0.26, Output: -92.27, Pterm: -9.12, I: 0.00, D: 2.99
+Setpoint: 0.50, Pitch: 0.83, Error: -0.33, Output: -95.26, Pterm: -11.41, I: 0.00, D: 3.65
+Setpoint: 0.50, Pitch: 0.90, Error: -0.40, Output: -98.22, Pterm: -13.88, I: 0.00, D: 4.10
+Setpoint: 0.50, Pitch: 0.95, Error: -0.45, Output: -99.43, Pterm: -15.64, I: 0.00, D: 3.52
+Setpoint: 0.50, Pitch: 1.04, Error: -0.54, Output: -103.83, Pterm: -18.76, I: 0.00, D: 4.75
+Setpoint: 0.50, Pitch: 1.11, Error: -0.61, Output: -105.89, Pterm: -21.11, I: 0.00, D: 4.42
+Setpoint: 0.50, Pitch: 1.15, Error: -0.65, Output: -106.10, Pterm: -22.48, I: 0.00, D: 3.23
+Setpoint: 0.50, Pitch: 1.16, Error: -0.66, Output: -105.00, Pterm: -22.89, I: 0.00, D: 1.73
+Setpoint: 0.50, Pitch: 1.19, Error: -0.69, Output: -106.08, Pterm: -23.90, I: 0.00, D: 1.77
+Setpoint: 0.50, Pitch: 1.22, Error: -0.72, Output: -106.54, Pterm: -24.63, I: 0.00, D: 1.49
+Setpoint: 0.50, Pitch: 1.22, Error: -0.72, Output: -105.95, Pterm: -24.78, I: 0.00, D: 0.76
+Setpoint: 0.50, Pitch: 1.19, Error: -0.69, Output: -103.48, Pterm: -23.81, I: 0.00, D: -0.73
+Setpoint: 0.50, Pitch: 1.17, Error: -0.67, Output: -102.49, Pterm: -23.13, I: 0.00, D: -1.03
+Setpoint: 0.50, Pitch: 1.16, Error: -0.66, Output: -102.16, Pterm: -22.67, I: 0.00, D: -0.90
+Setpoint: 0.50, Pitch: 1.14, Error: -0.64, Output: -101.42, Pterm: -22.06, I: 0.00, D: -1.01
+Setpoint: 0.50, Pitch: 1.11, Error: -0.61, Output: -100.18, Pterm: -21.18, I: 0.00, D: -1.35
+Setpoint: 0.50, Pitch: 1.09, Error: -0.59, Output: -99.52, Pterm: -20.47, I: 0.00, D: -1.29
+Setpoint: 0.50, Pitch: 1.09, Error: -0.59, Output: -100.28, Pterm: -20.46, I: 0.00, D: -0.53
+Setpoint: 0.50, Pitch: 1.08, Error: -0.58, Output: -99.40, Pterm: -19.89, I: 0.00, D: -0.82
+Setpoint: 0.50, Pitch: 1.05, Error: -0.55, Output: -98.24, Pterm: -19.10, I: 0.00, D: -1.18
+Setpoint: 0.50, Pitch: 1.03, Error: -0.53, Output: -97.23, Pterm: -18.27, I: 0.00, D: -1.35
+Setpoint: 0.50, Pitch: 1.00, Error: -0.50, Output: -95.60, Pterm: -17.10, I: 0.00, D: -1.79
+Setpoint: 0.50, Pitch: 0.97, Error: -0.47, Output: -94.76, Pterm: -16.18, I: 0.00, D: -1.70
+Setpoint: 0.50, Pitch: 0.95, Error: -0.45, Output: -94.28, Pterm: -15.47, I: 0.00, D: -1.45
+Setpoint: 0.50, Pitch: 0.93, Error: -0.43, Output: -93.47, Pterm: -14.66, I: 0.00, D: -1.44
+Setpoint: 0.50, Pitch: 0.91, Error: -0.41, Output: -93.09, Pterm: -14.07, I: 0.00, D: -1.21
+Setpoint: 0.50, Pitch: 0.89, Error: -0.39, Output: -92.68, Pterm: -13.52, I: 0.00, D: -1.07
+Setpoint: 0.50, Pitch: 0.87, Error: -0.37, Output: -91.51, Pterm: -12.66, I: 0.00, D: -1.36
+Setpoint: 0.50, Pitch: 0.84, Error: -0.34, Output: -90.17, Pterm: -11.62, I: 0.00, D: -1.65
+Setpoint: 0.50, Pitch: 0.84, Error: -0.34, Output: -91.65, Pterm: -11.86, I: 0.00, D: -0.41
+Setpoint: 0.50, Pitch: 0.86, Error: -0.36, Output: -92.94, Pterm: -12.36, I: 0.00, D: 0.37
+Setpoint: 0.50, Pitch: 0.86, Error: -0.36, Output: -92.80, Pterm: -12.40, I: 0.00, D: 0.19
+Setpoint: 0.50, Pitch: 0.84, Error: -0.34, Output: -91.57, Pterm: -11.87, I: 0.00, D: -0.49
+Setpoint: 0.50, Pitch: 0.85, Error: -0.35, Output: -91.95, Pterm: -11.91, I: 0.00, D: -0.15
+Setpoint: 0.50, Pitch: 0.88, Error: -0.38, Output: -94.19, Pterm: -12.93, I: 0.00, D: 1.04
+Setpoint: 0.50, Pitch: 0.92, Error: -0.42, Output: -96.64, Pterm: -14.41, I: 0.00, D: 1.99
+Setpoint: 0.50, Pitch: 0.97, Error: -0.47, Output: -98.85, Pterm: -16.04, I: 0.00, D: 2.54
+Setpoint: 0.50, Pitch: 1.01, Error: -0.51, Output: -100.16, Pterm: -17.40, I: 0.00, D: 2.47
+Setpoint: 0.50, Pitch: 1.04, Error: -0.54, Output: -100.90, Pterm: -18.46, I: 0.00, D: 2.13
+Setpoint: 0.50, Pitch: 1.07, Error: -0.57, Output: -102.22, Pterm: -19.70, I: 0.00, D: 2.18
+Setpoint: 0.50, Pitch: 1.11, Error: -0.61, Output: -103.79, Pterm: -21.08, I: 0.00, D: 2.35
+Setpoint: 0.50, Pitch: 1.16, Error: -0.66, Output: -105.75, Pterm: -22.70, I: 0.00, D: 2.67
+Setpoint: 0.50, Pitch: 1.18, Error: -0.68, Output: -106.01, Pterm: -23.59, I: 0.00, D: 2.02
+Setpoint: 0.50, Pitch: 1.21, Error: -0.71, Output: -106.38, Pterm: -24.35, I: 0.00, D: 1.62
+Setpoint: 0.50, Pitch: 1.24, Error: -0.74, Output: -107.68, Pterm: -25.44, I: 0.00, D: 1.81
+Setpoint: 0.50, Pitch: 1.26, Error: -0.76, Output: -107.96, Pterm: -26.09, I: 0.00, D: 1.43
+Setpoint: 0.50, Pitch: 1.25, Error: -0.75, Output: -106.55, Pterm: -25.83, I: 0.00, D: 0.28
+Setpoint: 0.50, Pitch: 1.21, Error: -0.71, Output: -103.36, Pterm: -24.38, I: 0.00, D: -1.43
+Setpoint: 0.50, Pitch: 1.19, Error: -0.69, Output: -102.81, Pterm: -23.70, I: 0.00, D: -1.30
+Setpoint: 0.50, Pitch: 1.17, Error: -0.67, Output: -102.19, Pterm: -23.04, I: 0.00, D: -1.24
+Setpoint: 0.50, Pitch: 1.16, Error: -0.66, Output: -102.23, Pterm: -22.70, I: 0.00, D: -0.85
+Setpoint: 0.50, Pitch: 1.16, Error: -0.66, Output: -102.53, Pterm: -22.60, I: 0.00, D: -0.45
+Setpoint: 0.50, Pitch: 1.15, Error: -0.65, Output: -102.71, Pterm: -22.55, I: 0.00, D: -0.23
+Setpoint: 0.50, Pitch: 1.17, Error: -0.67, Output: -103.80, Pterm: -23.01, I: 0.00, D: 0.40
+Setpoint: 0.50, Pitch: 1.17, Error: -0.67, Output: -103.76, Pterm: -23.11, I: 0.00, D: 0.26
+Setpoint: 0.50, Pitch: 1.17, Error: -0.67, Output: -103.51, Pterm: -23.07, I: 0.00, D: 0.06
+Setpoint: 0.50, Pitch: 1.18, Error: -0.68, Output: -103.93, Pterm: -23.28, I: 0.00, D: 0.25
+Setpoint: 0.50, Pitch: 1.18, Error: -0.68, Output: -103.73, Pterm: -23.26, I: 0.00, D: 0.08
+Setpoint: 0.50, Pitch: 1.18, Error: -0.68, Output: -103.76, Pterm: -23.30, I: 0.00, D: 0.07
+Setpoint: 0.50, Pitch: 1.20, Error: -0.70, Output: -105.25, Pterm: -24.03, I: 0.00, D: 0.81
+Setpoint: 0.50, Pitch: 1.23, Error: -0.73, Output: -107.13, Pterm: -25.16, I: 0.00, D: 1.54
+Setpoint: 0.50, Pitch: 1.27, Error: -0.77, Output: -108.69, Pterm: -26.35, I: 0.00, D: 1.89
+Setpoint: 0.50, Pitch: 1.32, Error: -0.82, Output: -111.26, Pterm: -28.13, I: 0.00, D: 2.66
+Setpoint: 0.50, Pitch: 1.38, Error: -0.88, Output: -113.88, Pterm: -30.15, I: 0.00, D: 3.23
+Setpoint: 0.50, Pitch: 1.44, Error: -0.94, Output: -116.82, Pterm: -32.48, I: 0.00, D: 3.79
+Setpoint: 0.50, Pitch: 1.52, Error: -1.02, Output: -119.97, Pterm: -35.08, I: 0.00, D: 4.30
+Setpoint: 0.50, Pitch: 1.59, Error: -1.09, Output: -122.80, Pterm: -37.67, I: 0.00, D: 4.49
+Setpoint: 0.50, Pitch: 1.66, Error: -1.16, Output: -125.08, Pterm: -40.05, I: 0.00, D: 4.35
+Setpoint: 0.50, Pitch: 1.71, Error: -1.21, Output: -125.54, Pterm: -41.53, I: 0.00, D: 3.32
+Setpoint: 0.50, Pitch: 1.72, Error: -1.22, Output: -124.54, Pterm: -42.00, I: 0.00, D: 1.83
+Setpoint: 0.50, Pitch: 1.72, Error: -1.22, Output: -123.24, Pterm: -41.90, I: 0.00, D: 0.63
+Setpoint: 0.50, Pitch: 1.73, Error: -1.23, Output: -123.88, Pterm: -42.39, I: 0.00, D: 0.77
+Setpoint: 0.50, Pitch: 1.75, Error: -1.25, Output: -125.12, Pterm: -43.21, I: 0.00, D: 1.18
+Setpoint: 0.50, Pitch: 1.77, Error: -1.27, Output: -125.57, Pterm: -43.76, I: 0.00, D: 1.07
+Setpoint: 0.50, Pitch: 1.77, Error: -1.27, Output: -124.69, Pterm: -43.65, I: 0.00, D: 0.31
+Setpoint: 0.50, Pitch: 1.75, Error: -1.25, Output: -123.42, Pterm: -43.13, I: 0.00, D: -0.44
+Setpoint: 0.50, Pitch: 1.72, Error: -1.22, Output: -121.25, Pterm: -41.96, I: 0.00, D: -1.42
+Setpoint: 0.50, Pitch: 1.67, Error: -1.17, Output: -118.79, Pterm: -40.37, I: 0.00, D: -2.27
+Setpoint: 0.50, Pitch: 1.63, Error: -1.13, Output: -116.81, Pterm: -38.78, I: 0.00, D: -2.62
+Setpoint: 0.50, Pitch: 1.57, Error: -1.07, Output: -114.26, Pterm: -36.80, I: 0.00, D: -3.16
+Setpoint: 0.50, Pitch: 1.51, Error: -1.01, Output: -111.97, Pterm: -34.80, I: 0.00, D: -3.41
+Setpoint: 0.50, Pitch: 1.43, Error: -0.93, Output: -107.96, Pterm: -31.89, I: 0.00, D: -4.47
+Setpoint: 0.50, Pitch: 1.32, Error: -0.82, Output: -102.74, Pterm: -28.11, I: 0.00, D: -5.84
+Setpoint: 0.50, Pitch: 1.22, Error: -0.72, Output: -99.09, Pterm: -24.68, I: 0.00, D: -6.01
+Setpoint: 0.50, Pitch: 1.14, Error: -0.64, Output: -96.85, Pterm: -21.88, I: 0.00, D: -5.40
+Setpoint: 0.50, Pitch: 1.08, Error: -0.58, Output: -95.85, Pterm: -19.85, I: 0.00, D: -4.33
+Setpoint: 0.50, Pitch: 0.99, Error: -0.49, Output: -92.34, Pterm: -16.92, I: 0.00, D: -4.87
+Setpoint: 0.50, Pitch: 0.87, Error: -0.37, Output: -86.78, Pterm: -12.86, I: 0.00, D: -6.30
+Setpoint: 0.50, Pitch: 0.78, Error: -0.28, Output: -83.64, Pterm: -9.55, I: 0.00, D: -6.06
+Setpoint: 0.50, Pitch: 0.73, Error: -0.23, Output: -83.59, Pterm: -7.78, I: 0.00, D: -4.32
+Setpoint: 0.50, Pitch: 0.70, Error: -0.20, Output: -84.02, Pterm: -6.74, I: 0.00, D: -2.83
+Setpoint: 0.50, Pitch: 0.67, Error: -0.17, Output: -83.67, Pterm: -5.76, I: 0.00, D: -2.19
+Setpoint: 0.50, Pitch: 0.63, Error: -0.13, Output: -82.61, Pterm: -4.62, I: 0.00, D: -2.09
+Setpoint: 0.50, Pitch: 0.61, Error: -0.11, Output: -82.04, Pterm: -3.75, I: 0.00, D: -1.77
+Setpoint: 0.50, Pitch: 0.58, Error: -0.08, Output: -80.82, Pterm: -2.65, I: 0.00, D: -1.88
+Setpoint: 0.50, Pitch: 0.57, Error: -0.07, Output: -81.33, Pterm: -2.36, I: 0.00, D: -1.07
+Setpoint: 0.50, Pitch: 0.55, Error: -0.05, Output: -80.58, Pterm: -1.69, I: 0.00, D: -1.14
+Setpoint: 0.50, Pitch: 0.50, Error: -0.00, Output: 82.08, Pterm: -0.09, I: 0.00, D: -2.17
+Setpoint: 0.50, Pitch: 0.47, Error: 0.03, Output: 82.79, Pterm: 0.88, I: 0.00, D: -1.90
+Setpoint: 0.50, Pitch: 0.46, Error: 0.04, Output: 82.58, Pterm: 1.32, I: 0.00, D: -1.24
+Setpoint: 0.50, Pitch: 0.48, Error: 0.02, Output: 80.45, Pterm: 0.66, I: 0.00, D: 0.22
+Setpoint: 0.50, Pitch: 0.52, Error: -0.02, Output: -81.92, Pterm: -0.54, I: 0.00, D: 1.37
+Setpoint: 0.50, Pitch: 0.53, Error: -0.03, Output: -82.37, Pterm: -1.15, I: 0.00, D: 1.20
+Setpoint: 0.50, Pitch: 0.57, Error: -0.07, Output: -83.92, Pterm: -2.24, I: 0.00, D: 1.65
+Setpoint: 0.50, Pitch: 0.59, Error: -0.09, Output: -84.66, Pterm: -3.06, I: 0.00, D: 1.54
+Setpoint: 0.50, Pitch: 0.62, Error: -0.12, Output: -85.93, Pterm: -4.11, I: 0.00, D: 1.74
+Setpoint: 0.50, Pitch: 0.65, Error: -0.15, Output: -87.18, Pterm: -5.21, I: 0.00, D: 1.87
+Setpoint: 0.50, Pitch: 0.70, Error: -0.20, Output: -89.69, Pterm: -6.96, I: 0.00, D: 2.61
+Setpoint: 0.50, Pitch: 0.79, Error: -0.29, Output: -94.34, Pterm: -9.94, I: 0.00, D: 4.24
+Setpoint: 0.50, Pitch: 0.91, Error: -0.41, Output: -100.53, Pterm: -14.12, I: 0.00, D: 6.17
+Setpoint: 0.50, Pitch: 1.00, Error: -0.50, Output: -103.26, Pterm: -17.20, I: 0.00, D: 5.77
+Setpoint: 0.50, Pitch: 0.94, Error: -0.44, Output: -95.82, Pterm: -15.29, I: 0.00, D: 0.26
+Setpoint: 0.50, Pitch: 0.89, Error: -0.39, Output: -91.94, Pterm: -13.51, I: 0.00, D: -1.80
+Setpoint: 0.50, Pitch: 0.89, Error: -0.39, Output: -92.86, Pterm: -13.44, I: 0.00, D: -0.80
+Setpoint: 0.50, Pitch: 0.91, Error: -0.41, Output: -94.48, Pterm: -13.98, I: 0.00, D: 0.26
+Setpoint: 0.50, Pitch: 0.88, Error: -0.38, Output: -92.51, Pterm: -13.11, I: 0.00, D: -0.83
+Setpoint: 0.50, Pitch: 0.83, Error: -0.33, Output: -89.46, Pterm: -11.41, I: 0.00, D: -2.15
+Setpoint: 0.50, Pitch: 0.75, Error: -0.25, Output: -85.18, Pterm: -8.75, I: 0.00, D: -3.71
+Setpoint: 0.50, Pitch: 0.72, Error: -0.22, Output: -84.67, Pterm: -7.44, I: 0.00, D: -2.89
+Setpoint: 0.50, Pitch: 0.70, Error: -0.20, Output: -85.35, Pterm: -6.93, I: 0.00, D: -1.70
+Setpoint: 0.50, Pitch: 0.69, Error: -0.19, Output: -85.38, Pterm: -6.46, I: 0.00, D: -1.18
+Setpoint: 0.50, Pitch: 0.64, Error: -0.14, Output: -82.86, Pterm: -4.91, I: 0.00, D: -2.13
+Setpoint: 0.50, Pitch: 0.60, Error: -0.10, Output: -81.12, Pterm: -3.46, I: 0.00, D: -2.40
+Setpoint: 0.50, Pitch: 0.59, Error: -0.09, Output: -81.66, Pterm: -3.03, I: 0.00, D: -1.42
+Setpoint: 0.50, Pitch: 0.58, Error: -0.08, Output: -81.86, Pterm: -2.72, I: 0.00, D: -0.91
+Setpoint: 0.50, Pitch: 0.54, Error: -0.04, Output: 80.53, Pterm: -1.32, I: 0.00, D: -1.86
+Setpoint: 0.50, Pitch: 0.45, Error: 0.05, Output: 86.03, Pterm: 1.86, I: 0.00, D: -4.14
+Setpoint: 0.50, Pitch: 0.35, Error: 0.15, Output: 90.25, Pterm: 5.07, I: 0.00, D: -5.10
+Setpoint: 0.50, Pitch: 0.32, Error: 0.18, Output: 89.84, Pterm: 6.34, I: 0.00, D: -3.39
+Setpoint: 0.50, Pitch: 0.31, Error: 0.19, Output: 88.14, Pterm: 6.50, I: 0.00, D: -1.53
+Setpoint: 0.50, Pitch: 0.31, Error: 0.19, Output: 87.30, Pterm: 6.54, I: 0.00, D: -0.65
+Setpoint: 0.50, Pitch: 0.30, Error: 0.20, Output: 87.79, Pterm: 6.96, I: 0.00, D: -0.71
+Setpoint: 0.50, Pitch: 0.28, Error: 0.22, Output: 88.59, Pterm: 7.55, I: 0.00, D: -0.91
+Setpoint: 0.50, Pitch: 0.27, Error: 0.23, Output: 88.52, Pterm: 7.78, I: 0.00, D: -0.61
+Setpoint: 0.50, Pitch: 0.29, Error: 0.21, Output: 87.25, Pterm: 7.34, I: 0.00, D: 0.22
+Setpoint: 0.50, Pitch: 0.28, Error: 0.22, Output: 87.71, Pterm: 7.50, I: 0.00, D: -0.08
+Setpoint: 0.50, Pitch: 0.27, Error: 0.23, Output: 88.55, Pterm: 7.93, I: 0.00, D: -0.49
+Setpoint: 0.50, Pitch: 0.26, Error: 0.24, Output: 88.98, Pterm: 8.27, I: 0.00, D: -0.56
+Setpoint: 0.50, Pitch: 0.29, Error: 0.21, Output: 86.52, Pterm: 7.26, I: 0.00, D: 0.86
+Setpoint: 0.50, Pitch: 0.33, Error: 0.17, Output: 84.23, Pterm: 5.91, I: 0.00, D: 1.78
+Setpoint: 0.50, Pitch: 0.36, Error: 0.14, Output: 83.30, Pterm: 4.96, I: 0.00, D: 1.74
+Setpoint: 0.50, Pitch: 0.35, Error: 0.15, Output: 85.05, Pterm: 5.30, I: 0.00, D: 0.33
+Setpoint: 0.50, Pitch: 0.34, Error: 0.16, Output: 86.02, Pterm: 5.66, I: 0.00, D: -0.26
+Setpoint: 0.50, Pitch: 0.31, Error: 0.19, Output: 87.84, Pterm: 6.61, I: 0.00, D: -1.12
+Setpoint: 0.50, Pitch: 0.29, Error: 0.21, Output: 88.54, Pterm: 7.27, I: 0.00, D: -1.15
+Setpoint: 0.50, Pitch: 0.27, Error: 0.23, Output: 89.53, Pterm: 8.07, I: 0.00, D: -1.32
+Setpoint: 0.50, Pitch: 0.28, Error: 0.22, Output: 87.59, Pterm: 7.52, I: 0.00, D: 0.06
+Setpoint: 0.50, Pitch: 0.32, Error: 0.18, Output: 84.97, Pterm: 6.25, I: 0.00, D: 1.39
+Setpoint: 0.50, Pitch: 0.35, Error: 0.15, Output: 83.78, Pterm: 5.28, I: 0.00, D: 1.59
+Setpoint: 0.50, Pitch: 0.40, Error: 0.10, Output: 81.17, Pterm: 3.58, I: 0.00, D: 2.46
+Setpoint: 0.50, Pitch: 0.46, Error: 0.04, Output: -81.64, Pterm: 1.52, I: 0.00, D: 3.19
+Setpoint: 0.50, Pitch: 0.51, Error: -0.01, Output: -83.34, Pterm: -0.21, I: 0.00, D: 3.13
+Setpoint: 0.50, Pitch: 0.57, Error: -0.07, Output: -86.19, Pterm: -2.47, I: 0.00, D: 3.67
+Setpoint: 0.50, Pitch: 0.63, Error: -0.13, Output: -88.09, Pterm: -4.44, I: 0.00, D: 3.58
+Setpoint: 0.50, Pitch: 0.70, Error: -0.20, Output: -91.10, Pterm: -6.91, I: 0.00, D: 4.07
+Setpoint: 0.50, Pitch: 0.79, Error: -0.29, Output: -94.75, Pterm: -9.83, I: 0.00, D: 4.75
+Setpoint: 0.50, Pitch: 0.88, Error: -0.38, Output: -98.38, Pterm: -12.93, I: 0.00, D: 5.23
+Setpoint: 0.50, Pitch: 0.97, Error: -0.47, Output: -102.16, Pterm: -16.25, I: 0.00, D: 5.64
+Setpoint: 0.50, Pitch: 1.09, Error: -0.59, Output: -107.07, Pterm: -20.22, I: 0.00, D: 6.51
+Setpoint: 0.50, Pitch: 1.22, Error: -0.72, Output: -112.79, Pterm: -24.83, I: 0.00, D: 7.54
+Setpoint: 0.50, Pitch: 1.36, Error: -0.86, Output: -118.00, Pterm: -29.49, I: 0.00, D: 8.01
+Setpoint: 0.50, Pitch: 1.52, Error: -1.02, Output: -124.65, Pterm: -34.98, I: 0.00, D: 9.08
+Setpoint: 0.50, Pitch: 1.70, Error: -1.20, Output: -132.45, Pterm: -41.33, I: 0.00, D: 10.42
+Setpoint: 0.50, Pitch: 1.94, Error: -1.44, Output: -143.80, Pterm: -49.76, I: 0.00, D: 13.20
+Setpoint: 0.50, Pitch: 2.32, Error: -1.82, Output: -162.50, Pterm: -62.51, I: 0.00, D: 18.93
+Setpoint: 0.50, Pitch: 2.74, Error: -2.24, Output: -181.63, Pterm: -77.12, I: -0.04, D: 23.21
+Setpoint: 0.50, Pitch: 3.07, Error: -2.57, Output: -193.49, Pterm: -89.24, I: -0.10, D: 21.45
+Setpoint: 0.50, Pitch: 3.36, Error: -2.86, Output: -203.67, Pterm: -100.02, I: -0.15, D: 19.18
+Setpoint: 0.50, Pitch: 3.49, Error: -2.99, Output: -204.37, Pterm: -105.59, I: -0.21, D: 12.58
+Setpoint: 0.50, Pitch: 3.63, Error: -3.13, Output: -209.91, Pterm: -111.55, I: -0.28, D: 10.33
+Setpoint: 0.50, Pitch: 3.82, Error: -3.32, Output: -220.09, Pterm: -119.08, I: -0.34, D: 11.05
+Setpoint: 0.50, Pitch: 4.05, Error: -3.55, Output: -232.81, Pterm: -128.02, I: -0.41, D: 12.77
+Setpoint: 0.50, Pitch: 4.23, Error: -3.73, Output: -235.00, Pterm: -135.43, I: -0.49, D: 11.75
+Setpoint: 0.50, Pitch: 4.39, Error: -3.89, Output: -235.00, Pterm: -142.13, I: -0.57, D: 10.51
+Setpoint: 0.50, Pitch: 4.58, Error: -4.08, Output: -235.00, Pterm: -150.05, I: -0.65, D: 11.26
+Setpoint: 0.50, Pitch: 4.69, Error: -4.19, Output: -235.00, Pterm: -155.27, I: -0.73, D: 8.61
+Setpoint: 0.50, Pitch: 4.65, Error: -4.15, Output: -235.00, Pterm: -155.51, I: -0.81, D: 2.17
+Setpoint: 0.50, Pitch: 4.50, Error: -4.00, Output: -235.00, Pterm: -151.72, I: -0.89, D: -4.70
+Setpoint: 0.50, Pitch: 4.43, Error: -3.93, Output: -235.00, Pterm: -150.66, I: -0.97, D: -4.47
+Setpoint: 0.50, Pitch: 4.30, Error: -3.80, Output: -235.00, Pterm: -147.44, I: -1.05, D: -6.67
+Setpoint: 0.50, Pitch: 4.09, Error: -3.59, Output: -235.00, Pterm: -141.47, I: -1.12, D: -10.45
+Setpoint: 0.50, Pitch: 3.82, Error: -3.32, Output: -233.83, Pterm: -133.41, I: -1.19, D: -14.12
+Setpoint: 0.50, Pitch: 3.60, Error: -3.10, Output: -229.61, Pterm: -127.00, I: -1.25, D: -13.72
+Setpoint: 0.50, Pitch: 3.39, Error: -2.89, Output: -225.75, Pterm: -120.89, I: -1.31, D: -13.16
+Setpoint: 0.50, Pitch: 2.95, Error: -2.45, Output: -204.37, Pterm: -106.57, I: -1.36, D: -21.65
+Setpoint: 0.50, Pitch: 2.59, Error: -2.09, Output: -193.82, Pterm: -95.05, I: -1.40, D: -21.89
+Setpoint: 0.50, Pitch: 2.37, Error: -1.87, Output: -193.27, Pterm: -88.28, I: 0.00, D: -16.76
+Setpoint: 0.50, Pitch: 2.03, Error: -1.53, Output: -114.50, Pterm: -52.80, I: 0.00, D: -19.19
+Setpoint: 0.50, Pitch: 1.65, Error: -1.15, Output: -98.74, Pterm: -39.73, I: 0.00, D: -21.66
+Setpoint: 0.50, Pitch: 1.50, Error: -1.00, Output: -100.74, Pterm: -34.46, I: 0.00, D: -14.31
+Setpoint: 0.50, Pitch: 1.61, Error: -1.11, Output: -116.86, Pterm: -38.07, I: 0.00, D: -1.86
+Setpoint: 0.50, Pitch: 1.56, Error: -1.06, Output: -114.96, Pterm: -36.63, I: 0.00, D: -2.29
+Setpoint: 0.50, Pitch: 1.47, Error: -0.97, Output: -109.70, Pterm: -33.45, I: 0.00, D: -4.32
+Setpoint: 0.50, Pitch: 1.41, Error: -0.91, Output: -108.09, Pterm: -31.44, I: 0.00, D: -3.88
+Setpoint: 0.50, Pitch: 1.39, Error: -0.89, Output: -108.63, Pterm: -30.59, I: 0.00, D: -2.47
+Setpoint: 0.50, Pitch: 1.38, Error: -0.88, Output: -109.58, Pterm: -30.33, I: 0.00, D: -1.26
+Setpoint: 0.50, Pitch: 1.35, Error: -0.85, Output: -108.35, Pterm: -29.38, I: 0.00, D: -1.52
+Setpoint: 0.50, Pitch: 1.30, Error: -0.80, Output: -105.48, Pterm: -27.56, I: 0.00, D: -2.55
+Setpoint: 0.50, Pitch: 1.25, Error: -0.75, Output: -103.06, Pterm: -25.67, I: 0.00, D: -3.04
+Setpoint: 0.50, Pitch: 1.18, Error: -0.68, Output: -100.30, Pterm: -23.48, I: 0.00, D: -3.57
+Setpoint: 0.50, Pitch: 1.11, Error: -0.61, Output: -97.43, Pterm: -21.07, I: 0.00, D: -4.00
+Setpoint: 0.50, Pitch: 1.03, Error: -0.53, Output: -94.01, Pterm: -18.28, I: 0.00, D: -4.59
+Setpoint: 0.50, Pitch: 0.95, Error: -0.45, Output: -90.74, Pterm: -15.40, I: 0.00, D: -4.92
+Setpoint: 0.50, Pitch: 0.87, Error: -0.37, Output: -87.79, Pterm: -12.57, I: 0.00, D: -4.99
+Setpoint: 0.50, Pitch: 0.78, Error: -0.28, Output: -84.48, Pterm: -9.55, I: 0.00, D: -5.23
+Setpoint: 0.50, Pitch: 0.68, Error: -0.18, Output: -80.71, Pterm: -6.24, I: 0.00, D: -5.63
+Setpoint: 0.50, Pitch: 0.59, Error: -0.09, Output: 82.81, Pterm: -2.93, I: 0.00, D: -5.80
+Setpoint: 0.50, Pitch: 0.47, Error: 0.03, Output: 87.47, Pterm: 0.96, I: 0.00, D: -6.49
+Setpoint: 0.50, Pitch: 0.34, Error: 0.16, Output: 92.90, Pterm: 5.43, I: 0.00, D: -7.38
+Setpoint: 0.50, Pitch: 0.20, Error: 0.30, Output: 98.83, Pterm: 10.39, I: 0.00, D: -8.26
+Setpoint: 0.50, Pitch: 0.03, Error: 0.47, Output: 105.68, Pterm: 16.05, I: 0.00, D: -9.36
+Setpoint: 0.50, Pitch: -0.14, Error: 0.64, Output: 112.67, Pterm: 22.09, I: 0.00, D: -10.21
+Setpoint: 0.50, Pitch: -0.34, Error: 0.84, Output: 120.70, Pterm: 28.87, I: 0.00, D: -11.34
+Setpoint: 0.50, Pitch: -0.57, Error: 1.07, Output: 130.55, Pterm: 36.85, I: 0.00, D: -13.08
+Setpoint: 0.50, Pitch: -0.83, Error: 1.33, Output: 141.75, Pterm: 45.98, I: 0.00, D: -15.00
+Setpoint: 0.50, Pitch: -1.13, Error: 1.63, Output: 153.93, Pterm: 56.12, I: 0.00, D: -16.86
+Setpoint: 0.50, Pitch: -1.43, Error: 1.93, Output: 165.19, Pterm: 66.36, I: 0.00, D: -17.71
+Setpoint: 0.50, Pitch: -1.73, Error: 2.23, Output: 176.07, Pterm: 76.66, I: 0.04, D: -18.11
+Setpoint: 0.50, Pitch: -2.00, Error: 2.50, Output: 187.16, Pterm: 86.96, I: 0.09, D: -17.45
+Setpoint: 0.50, Pitch: -2.26, Error: 2.76, Output: 197.48, Pterm: 96.66, I: 0.15, D: -16.46
+Setpoint: 0.50, Pitch: -2.49, Error: 2.99, Output: 206.44, Pterm: 105.41, I: 0.21, D: -14.94
+Setpoint: 0.50, Pitch: -2.71, Error: 3.21, Output: 216.50, Pterm: 114.22, I: 0.27, D: -14.32
+Setpoint: 0.50, Pitch: -2.96, Error: 3.46, Output: 228.31, Pterm: 123.66, I: 0.34, D: -14.67
+Setpoint: 0.50, Pitch: -3.24, Error: 3.74, Output: 235.00, Pterm: 134.74, I: 0.42, D: -16.46
+Setpoint: 0.50, Pitch: -3.58, Error: 4.08, Output: 235.00, Pterm: 147.80, I: 0.50, D: -19.20
+Setpoint: 0.50, Pitch: -3.91, Error: 4.41, Output: 235.00, Pterm: 160.39, I: 0.59, D: -19.67
+Setpoint: 0.50, Pitch: -4.22, Error: 4.72, Output: 235.00, Pterm: 172.75, I: 0.68, D: -19.49
+Setpoint: 0.50, Pitch: -4.53, Error: 5.03, Output: 235.00, Pterm: 184.85, I: 0.78, D: -19.02
+Setpoint: 0.50, Pitch: -4.81, Error: 5.31, Output: 235.00, Pterm: 196.14, I: 0.89, D: -17.86
+Setpoint: 0.50, Pitch: -5.10, Error: 5.60, Output: 235.00, Pterm: 207.87, I: 1.00, D: -17.76
+Setpoint: 0.50, Pitch: -5.44, Error: 5.94, Output: 235.00, Pterm: 221.59, I: 1.12, D: -19.75
+Setpoint: 0.50, Pitch: -5.83, Error: 6.33, Output: 235.00, Pterm: 237.17, I: 1.25, D: -22.41
+Setpoint: 0.50, Pitch: -6.23, Error: 6.73, Output: 235.00, Pterm: 252.87, I: 1.38, D: -23.46
+Setpoint: 0.50, Pitch: -6.58, Error: 7.08, Output: 235.00, Pterm: 267.48, I: 1.52, D: -22.57
+Setpoint: 0.50, Pitch: -6.90, Error: 7.40, Output: 235.00, Pterm: 280.91, I: 1.67, D: -20.82
+Setpoint: 0.50, Pitch: -7.18, Error: 7.68, Output: 235.00, Pterm: 292.86, I: 1.82, D: -18.42
+Setpoint: 0.50, Pitch: -7.48, Error: 7.98, Output: 235.00, Pterm: 305.91, I: 1.98, D: -18.54
+Setpoint: 0.50, Pitch: -7.77, Error: 8.27, Output: 235.00, Pterm: 318.76, I: 2.15, D: -18.26
+Setpoint: 0.50, Pitch: -8.01, Error: 8.51, Output: 235.00, Pterm: 329.85, I: 2.32, D: -16.15
+Setpoint: 0.50, Pitch: -8.26, Error: 8.76, Output: 235.00, Pterm: 341.09, I: 2.49, D: -15.38
+Setpoint: 0.50, Pitch: -8.49, Error: 8.99, Output: 235.00, Pterm: 352.32, I: 2.67, D: -14.98
+Setpoint: 0.50, Pitch: -8.75, Error: 9.25, Output: 235.00, Pterm: 364.18, I: 2.86, D: -15.41
+Setpoint: 0.50, Pitch: -9.02, Error: 9.52, Output: 235.00, Pterm: 376.63, I: 3.05, D: -16.11
+Setpoint: 0.50, Pitch: -9.29, Error: 9.79, Output: 235.00, Pterm: 389.31, I: 3.25, D: -16.54
+Setpoint: 0.50, Pitch: -9.58, Error: 10.08, Output: 235.00, Pterm: 402.41, I: 3.45, D: -17.06
+Setpoint: 0.50, Pitch: -9.83, Error: 10.33, Output: 235.00, Pterm: 414.47, I: 3.65, D: -16.06
+Setpoint: 0.50, Pitch: -10.03, Error: 10.53, Output: 235.00, Pterm: 424.91, I: 3.86, D: -13.83
+Setpoint: 0.50, Pitch: -10.26, Error: 10.76, Output: 235.00, Pterm: 436.41, I: 4.08, D: -14.00
+Setpoint: 0.50, Pitch: -10.52, Error: 11.02, Output: 235.00, Pterm: 448.94, I: 4.30, D: -15.08
+Setpoint: 0.50, Pitch: -10.74, Error: 11.24, Output: 235.00, Pterm: 460.42, I: 4.52, D: -14.30
+Setpoint: 0.50, Pitch: -10.97, Error: 11.47, Output: 235.00, Pterm: 472.04, I: 4.75, D: -14.06
+Setpoint: 0.50, Pitch: -11.20, Error: 11.70, Output: 235.00, Pterm: 484.13, I: 4.99, D: -14.38
+Setpoint: 0.50, Pitch: -11.43, Error: 11.93, Output: 235.00, Pterm: 496.02, I: 5.23, D: -14.21
+Setpoint: 0.50, Pitch: -11.62, Error: 12.12, Output: 235.00, Pterm: 506.62, I: 5.47, D: -12.68
+Setpoint: 0.50, Pitch: -11.81, Error: 12.31, Output: 235.00, Pterm: 517.12, I: 5.72, D: -11.88
+Setpoint: 0.50, Pitch: -11.96, Error: 12.46, Output: 235.00, Pterm: 526.71, I: 5.96, D: -10.53
+Setpoint: 0.50, Pitch: -12.07, Error: 12.57, Output: 235.00, Pterm: 534.59, I: 6.22, D: -8.10
+Setpoint: 0.50, Pitch: -12.15, Error: 12.65, Output: 235.00, Pterm: 541.59, I: 6.47, D: -6.14
+Setpoint: 0.50, Pitch: -12.21, Error: 12.71, Output: 235.00, Pterm: 547.97, I: 6.72, D: -4.67
+Setpoint: 0.50, Pitch: -12.28, Error: 12.78, Output: 235.00, Pterm: 554.92, I: 6.98, D: -4.67
+Setpoint: 0.50, Pitch: -12.34, Error: 12.84, Output: 235.00, Pterm: 561.10, I: 7.24, D: -3.81
+Setpoint: 0.50, Pitch: -12.38, Error: 12.88, Output: 235.00, Pterm: 566.94, I: 7.49, D: -3.09
+Setpoint: 0.50, Pitch: -12.42, Error: 12.92, Output: 235.00, Pterm: 572.59, I: 7.75, D: -2.58
+Setpoint: 0.50, Pitch: -12.48, Error: 12.98, Output: 235.00, Pterm: 579.18, I: 8.01, D: -3.37
+Setpoint: 0.50, Pitch: -12.53, Error: 13.03, Output: 235.00, Pterm: 581.98, I: 8.08, D: -3.19
+Setpoint: 0.50, Pitch: -12.55, Error: 13.05, Output: 235.00, Pterm: 582.78, I: 8.08, D: -2.14
+Setpoint: 0.50, Pitch: -12.58, Error: 13.08, Output: 235.00, Pterm: 583.67, I: 8.08, D: -1.81
+Setpoint: 0.50, Pitch: -12.61, Error: 13.11, Output: 235.00, Pterm: 584.88, I: 8.08, D: -2.04
+Setpoint: 0.50, Pitch: -12.66, Error: 13.16, Output: 235.00, Pterm: 586.55, I: 8.08, D: -2.62
+Setpoint: 0.50, Pitch: -12.68, Error: 13.18, Output: 235.00, Pterm: 587.04, I: 8.08, D: -1.58
+Setpoint: 0.50, Pitch: -12.67, Error: 13.17, Output: 235.00, Pterm: 586.68, I: 8.08, D: -0.24
+Setpoint: 0.50, Pitch: -12.66, Error: 13.16, Output: 235.00, Pterm: 586.57, I: 8.08, D: 0.02
+Setpoint: 0.50, Pitch: -12.63, Error: 13.13, Output: 235.00, Pterm: 585.50, I: 8.08, D: 1.16
+Setpoint: 0.50, Pitch: -12.59, Error: 13.09, Output: 235.00, Pterm: 584.05, I: 8.08, D: 2.04
+Setpoint: 0.50, Pitch: -12.51, Error: 13.01, Output: 235.00, Pterm: 581.50, I: 8.08, D: 3.57
+Setpoint: 0.50, Pitch: -12.36, Error: 12.86, Output: 235.00, Pterm: 576.21, I: 8.08, D: 7.15
+Setpoint: 0.50, Pitch: -12.15, Error: 12.65, Output: 235.00, Pterm: 568.96, I: 8.08, D: 10.69
+Setpoint: 0.50, Pitch: -11.87, Error: 12.37, Output: 235.00, Pterm: 559.51, I: 8.08, D: 14.50
+Setpoint: 0.50, Pitch: -11.66, Error: 12.16, Output: 235.00, Pterm: 552.46, I: 8.08, D: 13.42
+Setpoint: 0.50, Pitch: -11.59, Error: 12.09, Output: 235.00, Pterm: 550.12, I: 8.08, D: 7.90
+Setpoint: 0.50, Pitch: -11.53, Error: 12.03, Output: 235.00, Pterm: 547.98, I: 8.08, D: 5.48
+Setpoint: 0.50, Pitch: -11.50, Error: 12.00, Output: 235.00, Pterm: 546.85, I: 8.08, D: 3.41
+Setpoint: 0.50, Pitch: -11.44, Error: 11.94, Output: 235.00, Pterm: 544.86, I: 8.08, D: 3.52
+Setpoint: 0.50, Pitch: -11.32, Error: 11.82, Output: 235.00, Pterm: 540.71, I: 8.08, D: 5.89
+Setpoint: 0.50, Pitch: -11.20, Error: 11.70, Output: 235.00, Pterm: 536.81, I: 8.08, D: 6.57
+Setpoint: 0.50, Pitch: -11.06, Error: 11.56, Output: 235.00, Pterm: 531.84, I: 8.08, D: 8.01
+Setpoint: 0.50, Pitch: -10.93, Error: 11.43, Output: 235.00, Pterm: 527.53, I: 8.08, D: 7.86
+Setpoint: 0.50, Pitch: -10.79, Error: 11.29, Output: 235.00, Pterm: 522.61, I: 8.08, D: 8.46
+Setpoint: 0.50, Pitch: -10.66, Error: 11.16, Output: 235.00, Pterm: 518.10, I: 8.08, D: 8.26
+Setpoint: 0.50, Pitch: -10.53, Error: 11.03, Output: 235.00, Pterm: 513.68, I: 8.08, D: 8.08
+Setpoint: 0.50, Pitch: -10.45, Error: 10.95, Output: 235.00, Pterm: 510.96, I: 8.08, D: 6.18
+Setpoint: 0.50, Pitch: -10.27, Error: 10.77, Output: 235.00, Pterm: 504.87, I: 8.08, D: 9.05
+Setpoint: 0.50, Pitch: -9.98, Error: 10.48, Output: 235.00, Pterm: 494.98, I: 8.08, D: 14.31
+Setpoint: 0.50, Pitch: -9.65, Error: 10.15, Output: 235.00, Pterm: 483.84, I: 8.08, D: 17.78
+Setpoint: 0.50, Pitch: -9.37, Error: 9.87, Output: 235.00, Pterm: 474.12, I: 8.08, D: 17.62
+Setpoint: 0.50, Pitch: -8.79, Error: 9.29, Output: 235.00, Pterm: 454.41, I: 8.08, D: 28.36
+Setpoint: 0.50, Pitch: -8.32, Error: 8.82, Output: 235.00, Pterm: 438.57, I: 8.08, D: 28.47
+Setpoint: 0.50, Pitch: -7.62, Error: 8.12, Output: 235.00, Pterm: 414.55, I: 8.08, D: 37.36
+Setpoint: 0.50, Pitch: -6.85, Error: 7.35, Output: 235.00, Pterm: 388.24, I: 8.08, D: 43.39
+Setpoint: 0.50, Pitch: -6.07, Error: 6.57, Output: 235.00, Pterm: 361.86, I: 8.08, D: 45.88
+Setpoint: 0.50, Pitch: -5.26, Error: 5.76, Output: 235.00, Pterm: 334.21, I: 8.08, D: 48.24
+Setpoint: 0.50, Pitch: -4.48, Error: 4.98, Output: 235.00, Pterm: 307.36, I: 8.08, D: 48.33
+Setpoint: 0.50, Pitch: -3.62, Error: 4.12, Output: 235.00, Pterm: 278.21, I: 8.08, D: 50.85
+Setpoint: 0.50, Pitch: -2.41, Error: 2.91, Output: 235.00, Pterm: 236.91, I: 8.08, D: 65.00
+Setpoint: 0.50, Pitch: -1.06, Error: 1.56, Output: 235.00, Pterm: 190.86, I: 0.00, D: 75.79
+Setpoint: 0.50, Pitch: -0.02, Error: 0.52, Output: -130.28, Pterm: 17.98, I: 0.00, D: 68.56
+Setpoint: 0.50, Pitch: 0.92, Error: -0.42, Output: -156.65, Pterm: -14.36, I: 0.00, D: 62.05
+Setpoint: 0.50, Pitch: 1.49, Error: -0.99, Output: -160.51, Pterm: -34.05, I: 0.00, D: 45.89
+Setpoint: 0.50, Pitch: 1.86, Error: -1.36, Output: -159.54, Pterm: -46.77, I: 0.00, D: 31.98
+Setpoint: 0.50, Pitch: 2.12, Error: -1.62, Output: -159.47, Pterm: -55.93, I: 0.00, D: 22.60
+Setpoint: 0.50, Pitch: 2.39, Error: -1.89, Output: -164.84, Pterm: -65.00, I: 0.00, D: 18.74
+Setpoint: 0.50, Pitch: 2.67, Error: -2.17, Output: -174.25, Pterm: -74.89, I: -0.04, D: 18.09
+Setpoint: 0.50, Pitch: 2.97, Error: -2.47, Output: -186.93, Pterm: -85.95, I: -0.09, D: 18.28
+Setpoint: 0.50, Pitch: 3.26, Error: -2.76, Output: -198.50, Pterm: -96.49, I: -0.15, D: 17.70
+Setpoint: 0.50, Pitch: 3.44, Error: -2.94, Output: -203.78, Pterm: -103.83, I: -0.21, D: 13.93
+Setpoint: 0.50, Pitch: 3.61, Error: -3.11, Output: -210.20, Pterm: -110.61, I: -0.27, D: 11.76
+Setpoint: 0.50, Pitch: 3.77, Error: -3.27, Output: -217.56, Pterm: -117.20, I: -0.33, D: 10.62
+Setpoint: 0.50, Pitch: 3.92, Error: -3.42, Output: -224.76, Pterm: -123.38, I: -0.40, D: 9.66
+Setpoint: 0.50, Pitch: 4.05, Error: -3.55, Output: -231.82, Pterm: -129.19, I: -0.47, D: 8.84
+Setpoint: 0.50, Pitch: 4.18, Error: -3.68, Output: -235.00, Pterm: -134.95, I: -0.55, D: 8.41
+Setpoint: 0.50, Pitch: 4.16, Error: -3.66, Output: -235.00, Pterm: -135.43, I: -0.62, D: 2.54
+Setpoint: 0.50, Pitch: 4.05, Error: -3.55, Output: -229.88, Pterm: -132.84, I: -0.69, D: -3.09
+Setpoint: 0.50, Pitch: 3.95, Error: -3.45, Output: -228.17, Pterm: -130.77, I: -0.76, D: -4.75
+Setpoint: 0.50, Pitch: 3.87, Error: -3.37, Output: -227.83, Pterm: -128.90, I: -0.83, D: -5.17
+Setpoint: 0.50, Pitch: 3.84, Error: -3.34, Output: -231.90, Pterm: -129.02, I: -0.89, D: -3.16
+Setpoint: 0.50, Pitch: 3.90, Error: -3.40, Output: -235.00, Pterm: -132.46, I: -0.96, D: 1.20
+Setpoint: 0.50, Pitch: 4.04, Error: -3.54, Output: -235.00, Pterm: -138.40, I: -1.03, D: 5.60
+Setpoint: 0.50, Pitch: 4.36, Error: -3.86, Output: -235.00, Pterm: -150.59, I: -1.11, D: 13.99
+Setpoint: 0.50, Pitch: 4.72, Error: -4.22, Output: -235.00, Pterm: -164.32, I: -1.20, D: 18.89
+Setpoint: 0.50, Pitch: 5.18, Error: -4.68, Output: -235.00, Pterm: -181.66, I: -1.29, D: 24.58
+Setpoint: 0.50, Pitch: 5.63, Error: -5.13, Output: -235.00, Pterm: -198.72, I: -1.39, D: 26.38
+Setpoint: 0.50, Pitch: 6.07, Error: -5.57, Output: -235.00, Pterm: -215.57, I: -1.50, D: 26.72
+Setpoint: 0.50, Pitch: 6.48, Error: -5.98, Output: -235.00, Pterm: -231.62, I: -1.62, D: 25.84
+Setpoint: 0.50, Pitch: 6.84, Error: -6.34, Output: -235.00, Pterm: -245.92, I: -1.75, D: 23.45
+Setpoint: 0.50, Pitch: 7.15, Error: -6.65, Output: -235.00, Pterm: -258.89, I: -1.88, D: 20.95
+Setpoint: 0.50, Pitch: 7.30, Error: -6.80, Output: -235.00, Pterm: -266.34, I: -2.02, D: 13.94
+Setpoint: 0.50, Pitch: 7.29, Error: -6.79, Output: -235.00, Pterm: -268.15, I: -2.15, D: 5.03
+Setpoint: 0.50, Pitch: 7.09, Error: -6.59, Output: -235.00, Pterm: -263.70, I: -2.29, D: -5.23
+Setpoint: 0.50, Pitch: 6.70, Error: -6.20, Output: -235.00, Pterm: -252.47, I: -2.41, D: -16.52
+Setpoint: 0.50, Pitch: 6.22, Error: -5.72, Output: -235.00, Pterm: -238.02, I: -2.52, D: -24.35
+Setpoint: 0.50, Pitch: 5.59, Error: -5.09, Output: -235.00, Pterm: -218.20, I: -2.63, D: -33.04
+Setpoint: 0.50, Pitch: 4.78, Error: -4.28, Output: -235.00, Pterm: -192.04, I: -2.71, D: -43.08
+Setpoint: 0.50, Pitch: 3.85, Error: -3.35, Output: -235.00, Pterm: -161.60, I: -2.78, D: -51.38
+Setpoint: 0.50, Pitch: 2.69, Error: -2.19, Output: -221.73, Pterm: -122.86, I: -2.82, D: -63.25
+Setpoint: 0.50, Pitch: 1.32, Error: -0.82, Output: -163.26, Pterm: -76.44, I: 0.00, D: -75.79
+Setpoint: 0.50, Pitch: -0.26, Error: 0.76, Output: 195.21, Pterm: 26.14, I: 0.00, D: -88.62
+Setpoint: 0.50, Pitch: -1.79, Error: 2.29, Output: 235.00, Pterm: 78.88, I: 0.05, D: -91.91
+Setpoint: 0.50, Pitch: -3.03, Error: 3.53, Output: 235.00, Pterm: 122.19, I: 0.12, D: -82.29
+Setpoint: 0.50, Pitch: -3.85, Error: 4.35, Output: 235.00, Pterm: 151.87, I: 0.20, D: -63.39
+Setpoint: 0.50, Pitch: -4.33, Error: 4.83, Output: 235.00, Pterm: 169.90, I: 0.30, D: -43.07
+Setpoint: 0.50, Pitch: -4.78, Error: 5.28, Output: 235.00, Pterm: 187.00, I: 0.41, D: -33.78
+Setpoint: 0.50, Pitch: -5.08, Error: 5.58, Output: 235.00, Pterm: 199.20, I: 0.52, D: -24.64
+Setpoint: 0.50, Pitch: -5.19, Error: 5.69, Output: 235.00, Pterm: 204.68, I: 0.63, D: -13.68
+Setpoint: 0.50, Pitch: -5.18, Error: 5.68, Output: 235.00, Pterm: 206.23, I: 0.74, D: -5.06
+Setpoint: 0.50, Pitch: -5.04, Error: 5.54, Output: 235.00, Pterm: 203.46, I: 0.86, D: 3.01
+Setpoint: 0.50, Pitch: -4.91, Error: 5.41, Output: 235.00, Pterm: 200.78, I: 0.96, D: 6.09
+Setpoint: 0.50, Pitch: -4.73, Error: 5.23, Output: 235.00, Pterm: 196.52, I: 1.07, D: 8.97
+Setpoint: 0.50, Pitch: -4.46, Error: 4.96, Output: 235.00, Pterm: 188.91, I: 1.17, D: 13.64
+Setpoint: 0.50, Pitch: -4.02, Error: 4.52, Output: 235.00, Pterm: 175.48, I: 1.26, D: 21.65
+Setpoint: 0.50, Pitch: -3.45, Error: 3.95, Output: 235.00, Pterm: 157.60, I: 1.34, D: 29.45
+Setpoint: 0.50, Pitch: -2.76, Error: 3.26, Output: 218.58, Pterm: 135.10, I: 1.40, D: 37.31
+Setpoint: 0.50, Pitch: -1.83, Error: 2.33, Output: 176.99, Pterm: 104.12, I: 1.45, D: 49.28
+Setpoint: 0.50, Pitch: -0.69, Error: 1.19, Output: 126.67, Pterm: 65.61, I: 0.00, D: 61.78
+Setpoint: 0.50, Pitch: 0.28, Error: 0.22, Output: -133.03, Pterm: 7.42, I: 0.00, D: 60.58
+Setpoint: 0.50, Pitch: 1.32, Error: -0.82, Output: -170.87, Pterm: -28.12, I: 0.00, D: 62.28
+Setpoint: 0.50, Pitch: 2.66, Error: -2.16, Output: -230.04, Pterm: -74.37, I: -0.04, D: 74.42
+Setpoint: 0.50, Pitch: 3.65, Error: -3.15, Output: -235.00, Pterm: -109.11, I: -0.11, D: 66.17
+Setpoint: 0.50, Pitch: 4.17, Error: -3.67, Output: -235.00, Pterm: -128.18, I: -0.18, D: 45.73
+Setpoint: 0.50, Pitch: 4.25, Error: -3.75, Output: -235.00, Pterm: -132.34, I: -0.25, D: 21.41
+Setpoint: 0.50, Pitch: 4.41, Error: -3.91, Output: -235.00, Pterm: -139.11, I: -0.33, D: 14.44
+Setpoint: 0.50, Pitch: 4.55, Error: -4.05, Output: -235.00, Pterm: -145.02, I: -0.41, D: 10.68
+Setpoint: 0.50, Pitch: 4.68, Error: -4.18, Output: -235.00, Pterm: -151.13, I: -0.50, D: 9.33
+Setpoint: 0.50, Pitch: 4.73, Error: -4.23, Output: -235.00, Pterm: -154.08, I: -0.58, D: 5.36
+Setpoint: 0.50, Pitch: 4.75, Error: -4.25, Output: -235.00, Pterm: -156.30, I: -0.67, D: 2.98
+Setpoint: 0.50, Pitch: 4.67, Error: -4.17, Output: -235.00, Pterm: -154.99, I: -0.75, D: -1.76
+Setpoint: 0.50, Pitch: 4.35, Error: -3.85, Output: -235.00, Pterm: -145.25, I: -0.83, D: -12.66
+Setpoint: 0.50, Pitch: 3.99, Error: -3.49, Output: -222.44, Pterm: -134.41, I: -0.90, D: -18.07
+Setpoint: 0.50, Pitch: 3.53, Error: -3.03, Output: -203.34, Pterm: -119.71, I: -0.96, D: -24.24
+Setpoint: 0.50, Pitch: 2.99, Error: -2.49, Output: -181.76, Pterm: -102.10, I: -1.01, D: -29.66
+Setpoint: 0.50, Pitch: 2.41, Error: -1.91, Output: -160.50, Pterm: -83.13, I: 0.00, D: -33.07
+Setpoint: 0.50, Pitch: 2.13, Error: -1.63, Output: -113.49, Pterm: -56.21, I: 0.00, D: -23.66
+Setpoint: 0.50, Pitch: 2.00, Error: -1.50, Output: -118.55, Pterm: -51.83, I: 0.00, D: -14.16
+Setpoint: 0.50, Pitch: 1.97, Error: -1.47, Output: -124.45, Pterm: -50.58, I: 0.00, D: -6.99
+Setpoint: 0.50, Pitch: 2.02, Error: -1.52, Output: -132.00, Pterm: -52.19, I: 0.00, D: -1.07
+Setpoint: 0.50, Pitch: 2.18, Error: -1.68, Output: -144.28, Pterm: -57.77, I: 0.00, D: 5.54
+Setpoint: 0.50, Pitch: 2.62, Error: -2.12, Output: -172.62, Pterm: -72.93, I: -0.04, D: 18.45
+Setpoint: 0.50, Pitch: 2.82, Error: -2.32, Output: -177.98, Pterm: -80.59, I: -0.09, D: 14.80
+Setpoint: 0.50, Pitch: 3.24, Error: -2.74, Output: -201.31, Pterm: -95.79, I: -0.14, D: 21.34
+Setpoint: 0.50, Pitch: 3.58, Error: -3.08, Output: -215.97, Pterm: -108.67, I: -0.21, D: 21.33
+Setpoint: 0.50, Pitch: 3.73, Error: -3.23, Output: -216.85, Pterm: -114.91, I: -0.27, D: 14.09
+Setpoint: 0.50, Pitch: 3.96, Error: -3.46, Output: -227.58, Pterm: -123.77, I: -0.34, D: 13.94
+Setpoint: 0.50, Pitch: 4.06, Error: -3.56, Output: -229.25, Pterm: -128.23, I: -0.41, D: 9.08
+Setpoint: 0.50, Pitch: 4.56, Error: -4.06, Output: -235.00, Pterm: -146.87, I: -0.49, D: 22.30
+Setpoint: 0.50, Pitch: 4.07, Error: -3.57, Output: -218.51, Pterm: -131.33, I: -0.56, D: -9.20
+Setpoint: 0.50, Pitch: 3.57, Error: -3.07, Output: -191.20, Pterm: -115.25, I: -0.62, D: -22.20
+Setpoint: 0.50, Pitch: 3.48, Error: -2.98, Output: -200.89, Pterm: -113.19, I: -0.68, D: -12.20
+Setpoint: 0.50, Pitch: 3.45, Error: -2.95, Output: -208.62, Pterm: -113.09, I: -0.74, D: -6.08
+Setpoint: 0.50, Pitch: 3.52, Error: -3.02, Output: -220.17, Pterm: -116.58, I: -0.80, D: 0.23
+Setpoint: 0.50, Pitch: 3.54, Error: -3.04, Output: -224.23, Pterm: -118.28, I: -0.86, D: 0.82

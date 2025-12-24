@@ -18,8 +18,8 @@
 #define RAD_TO_DEG          57.2958f // 180/π
 
 // Filter constants
-#define ALPHA               0.66f    // Complementary filter // lower value means more trust on accel
-#define ANGLE_FILTER_ALPHA  0.15f     // Low-pass filter  // higher value means more filtering
+#define ALPHA               0.97f    // Complementary filter // lower value means more trust on accel
+#define ANGLE_FILTER_ALPHA  0.50f     // Low-pass filter  // higher value means more filtering
 // Global sensor data variables (extern - defined in mpu6050.c)
 extern float AccX, AccY, AccZ;                  // Accelerometer (g)
 extern float RateRoll, RatePitch, RateYaw;      // Gyro rate (°/s)

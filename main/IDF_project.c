@@ -16,12 +16,12 @@ float Ki ;
 float Kd ;
 float Kx;
 
-float Max_Output = 210.0f; // previous 218.0f
-float Min_Output = 150.0f;
-int BackOffset = 0;
-int FrontOffset = 0;
+float Max_Output = 240.0f; // previous 230.0f
+float Min_Output = 80.0f;
+int Offset = 0;
 
-float SETPOINT_ANGLE = 17.0f; //pevious 20.0f
+
+float SETPOINT_ANGLE = 0.0f;
 float Integral = 0.0f;
 float Iterm = 0.0f;
 float Pterm = 0.0f;
@@ -29,9 +29,10 @@ float Prev_error = 0.0f;
 float Prev_Measured = 0.0f;
 float Output = 0.0f;
 float Derivative_filter = 0.0f;
-float Derivative_Alpha = 0.8f; // lower value means less filtering
+float Derivative_Alpha = 0.40f; // lower value means less filtering
 float Delta_t = 0.02f; // Default to 20ms
 
+float Deadzone = 2.0f;
 bool Fail_detect = false;
 float ReverseAngle = 9.0f;
 float pos = 5.0f; // Initial servo position
@@ -51,7 +52,7 @@ void angle_pid(float target_angle, float angle){
     int64_t now = esp_timer_get_time(); 
     float timeChange = (now - LastAngleTime) / 1000000.0f; // in milliseconds
     LastAngleTime = now;
-    if(timeChange >= 0.01f){
+    if(timeChange >= 0.02f){
         float ErrorAngle = target_angle - angle;
         float Kp_angle = 10.0f; // Proportional gain for angle
         float Ki_angle = 1.0f; // Integral gain for angle
@@ -65,71 +66,73 @@ void angle_pid(float target_angle, float angle){
         int16_t speed = (int16_t) fabsf(OutputPWM);
         //speed = contrains(speed, 0, 176); // Limit speed to safe range
         motor_control(-OutputPWM, speed, 0, 0);
-        //printf("Target Angle: %.2f, Measured Angle: %.2f, Error: %.2f, Output PWM: %.2f, Speed: %d\n", target_angle, angle, ErrorAngle, OutputPWM, speed);
+        printf("Target Angle: %.2f, Measured Angle: %.2f, Error: %.2f, Output PWM: %.2f, Speed: %d\n", target_angle, angle, ErrorAngle, OutputPWM, speed);
         PrevErrorAngle = ErrorAngle;
     }
 }
 
 void pid_control(float setpoint, float measured){
-    if( measured > 63.0f || measured < -22.0f ){
+    if( measured > 60.0f || measured < -60.0f ){
             Fail_detect = true;
-            //StopBalanc = esp_timer_get_time() /1000; // Convert to milliseconds
             stop_motor();
             Prev_Measured = measured; // Reset previous measured
             Integral = 0.0f; // Reset integral term
             Derivative_filter = 0.0f; // Reset derivative filter
             //printf("Fail-safe activated! Angle exceeded safe limit.\n");
-            encoder_reset();
+            //encoder_reset();
             gpio_set_level(LED_PIN, 0); // Turn off LED
             return;
     }
-    
     gpio_set_level(LED_PIN, 1);
-    //int64_t now = esp_timer_get_time() / 1e6; // Current time in milliseconds
-    // Get current PID values from web server
-    //webserver_get_pid(&Kp, &Ki, &Kd, &Kx); //tunning real time
-        
-        float error = (setpoint - measured) ; //
+    //webserver_get_pid(&Kp, &Ki, &Kd, &Kx); //tunning real time 
 
-        Integral = Integral + error * Delta_t;
-        //Iterm += Ki * error * Delta_t; // avoid overshoot cause of tuning Ki real time
-        Iterm = Ki * Integral;
-        if (Iterm > Max_Output) {
-            Iterm = Max_Output;
-            Integral = Iterm / Ki; // Adjust integral to prevent windup
-        } else if (Iterm < -Max_Output) {
-            Iterm = -Max_Output;
-            Integral = Iterm / Ki; // Adjust integral to prevent windup
-        }
+    float error = (setpoint - measured) ; //
+    Integral = Integral + error * Delta_t;
+    //Iterm += Ki * error * Delta_t; // avoid overshoot cause of tuning Ki real time
+    Iterm = Ki * Integral;
+    if (Iterm > 160) {
+        Iterm = 160;
+        Integral = Iterm / Ki; // Adjust integral to prevent windup
+    } else if (Iterm < -160) {
+        Iterm = -160;
+        Integral = Iterm / Ki; // Adjust integral to prevent windup
+    }
 
-        float Derivative = (measured - Prev_Measured) / Delta_t; // Using measured change for derivative
-        //float Derivative = (error - Prev_error) / Delta_t; // Using error change for derivative
-        // Apply low-pass filter to derivative to reduce noise
-        Derivative_filter = (Derivative_Alpha * Derivative_filter) + ((1.0f - Derivative_Alpha) * Derivative);
-        Derivative_filter = contrains(Derivative_filter, -Max_Output, Max_Output);
-        Pterm = Kp * (error + Kx * Integral);
-        //Output = (Kp * error) + Iterm - (Kd * Derivative_filter);
-        Output = Pterm + Iterm - (Kd * Derivative_filter);
-        Output = contrains(Output, -Max_Output, Max_Output);
-        if(Output < Min_Output && Output > 0){
-            Output = Min_Output;
-        } else if(Output > -Min_Output && Output < 0){
-            Output = -Min_Output;
-        }
-        int16_t speed = (int16_t) fabsf(Output);
-        //speed = contrains(speed, Min_Output, Max_Output);
-        motor_control(Output, speed, 0, -20);
-        
-        //Calculate output angle
-        // Output = Pterm + Iterm - (Kd * Derivative_filter); // Angle setpoint for angle pid
-        // //Output = contrains(Output, -15.0f, 15.0f);
-        // angle_pid(Output, encoder_get_angle_1());
 
-        printf("Setpoint: %.2f, Pitch: %.2f, Error: %.2f, Output : %.2f, I: %.2f, D: %.2f\n", setpoint, measured, error, Output, Iterm, Kd * Derivative_filter);
+    float Derivative = (measured - Prev_Measured) / Delta_t; // Using measured change for derivative
+    //float Derivative = (error - Prev_error) / Delta_t; // Using error change for derivative
+    Derivative_filter = (Derivative_Alpha * Derivative_filter) + ((1.0f - Derivative_Alpha) * Derivative); // Apply low-pass filter to derivative to reduce noise
+    Derivative_filter = contrains(Derivative_filter, -150, 150);
+    //Output = (Kp * error) + Iterm - (Kd * Derivative_filter);
+    Pterm = Kp * (error + Kx * Integral);
+    if(fabsf(error) < Deadzone){
+        Integral = 0.0f;
+    }
+    // float SpeedFix =3.0f;
+    // if(fabsf(error) * SpeedFix > 10.0f){
+    //     Max_Output += SpeedFix;
+    // } else {
+    //     Max_Output -= SpeedFix;
+    // }
+    // Max_Output = contrains(Max_Output, 220, 255);
+    
+    Output = Pterm + Iterm - (Kd * Derivative_filter);
+    // if(Output < Min_Output && Output > 0){
+    //     Output = Min_Output;
+    // } else if(Output > -Min_Output && Output < 0){
+    //     Output = -Min_Output;
+    // }
+    if (Output > 0) Output += Min_Output;
+    else if (Output < 0) Output -= Min_Output;
+    Output = contrains(Output, -Max_Output, Max_Output);
+
+    int16_t speed = (int16_t) fabsf(Output);
+    //speed = contrains(speed, Min_Output, Max_Output);
+    motor_control(Output, speed, -15, 0);  
+        printf("Setpoint: %.2f, Pitch: %.2f, Error: %.2f, Output: %.2f, Pterm: %.2f, I: %.2f, D: %.2f\n", setpoint, measured, error, Output, Pterm, Iterm, Kd * Derivative_filter);
         //printf(">Setpoint:%.2f, Measured:%.2f, Output:%.2f\r\n", setpoint, measured, Output);
-        
-        //Prev_error = error;
-        Prev_Measured = measured;
+    //Prev_error = error;
+    Prev_Measured = measured;  
 }
 
 
@@ -157,30 +160,30 @@ void app_main(void)
     gpio_init();
     vTaskDelay(pdMS_TO_TICKS(100));
 
-    servo_init(SERVO1_PIN, LEDC_CHANNEL_2);
+    //servo_init(SERVO1_PIN, LEDC_CHANNEL_2);
     vTaskDelay(pdMS_TO_TICKS(100));
-    servo_init(SERVO2_PIN, LEDC_CHANNEL_3);
-    vTaskDelay(pdMS_TO_TICKS(100));
-    gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
-    vTaskDelay(pdMS_TO_TICKS(300));
-    gpio_set_level(LED_PIN, 0); // Turn off LED to indicate ready
-    vTaskDelay(pdMS_TO_TICKS(300));
-    gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
-    vTaskDelay(pdMS_TO_TICKS(300));
-    gpio_set_level(LED_PIN, 0); // Turn off LED to indicate ready
-    
-    servo_set_angle(LEDC_CHANNEL_2, pos);
-    servo_set_angle(LEDC_CHANNEL_3, 9 - pos);
-    vTaskDelay(pdMS_TO_TICKS(100));
-    gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
-    vTaskDelay(pdMS_TO_TICKS(300));
-    gpio_set_level(LED_PIN, 0); // Turn off LED to indicate ready
-    vTaskDelay(pdMS_TO_TICKS(300));
-    gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
-    vTaskDelay(pdMS_TO_TICKS(300));
+        //servo_init(SERVO2_PIN, LEDC_CHANNEL_3);
+        vTaskDelay(pdMS_TO_TICKS(100));
+        gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
+        vTaskDelay(pdMS_TO_TICKS(300));
+        gpio_set_level(LED_PIN, 0); // Turn off LED to indicate ready
+        vTaskDelay(pdMS_TO_TICKS(300));
+        gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
+        vTaskDelay(pdMS_TO_TICKS(300));
+        gpio_set_level(LED_PIN, 0); // Turn off LED to indicate ready
+        
+        // servo_set_angle(LEDC_CHANNEL_2, pos);
+        // servo_set_angle(LEDC_CHANNEL_3, 9 - pos);
+        vTaskDelay(pdMS_TO_TICKS(100));
+        gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
+        vTaskDelay(pdMS_TO_TICKS(300));
+        gpio_set_level(LED_PIN, 0); // Turn off LED to indicate ready
+        vTaskDelay(pdMS_TO_TICKS(300));
+        gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
+        vTaskDelay(pdMS_TO_TICKS(300));
     gpio_set_level(LED_PIN, 0); // Turn off LED to indicate ready
 
-    encoder_init();
+    //encoder_init();
     vTaskDelay(pdMS_TO_TICKS(100));
     // Initialize I2C for MPU6050
     ESP_ERROR_CHECK(mpu6050_i2c_init());
@@ -207,8 +210,10 @@ void app_main(void)
         // encoder_get_velocity_2();
 
         //printf("Encoder 1 vel: %.2f, Encoder 2 vel: %.2f\n", encoder1_velocity, encoder2_velocity);
-        //printf("Angle Encoder 1: %.2f, Angle Encoder 2: %.2f\n", encoder_get_angle_1(), encoder_get_angle_2());
-        vTaskDelay(pdMS_TO_TICKS(100));
+        // printf("Angle Encoder 1: %.2f, Angle Encoder 2: %.2f\n", encoder_get_angle_1(), encoder_get_angle_2());
+        read_mpu();
+        //printf("Initial Pitch Angle: %.2f\n", filteredAnglePitch);
+        vTaskDelay(pdMS_TO_TICKS(20));
         
         while(gpio_get_level(BUTTON_PIN) == 0){
             /* //Debug angle
@@ -218,20 +223,18 @@ void app_main(void)
             printf("Gyro:%.2f\r\n", gyroAnglePitch);
             vTaskDelay(pdMS_TO_TICKS(40));
             */
-           // float AngleFix = 25.0f;
-            // if(filteredAnglePitch < SETPOINT_ANGLE){
-            //     SETPOINT_ANGLE += AngleFix * delta_t;
-            // } else if(filteredAnglePitch > SETPOINT_ANGLE){
-            //     SETPOINT_ANGLE -= AngleFix * delta_t;
-            // }
-            // if (SETPOINT_ANGLE > 42.0f) SETPOINT_ANGLE = 42.0f;
-            //     if (SETPOINT_ANGLE < 36.0f) SETPOINT_ANGLE = 36.0f;
-            read_mpu();  
-            pid_control(SETPOINT_ANGLE, filteredAnglePitch);
+           read_mpu();
+            float AngleFix = 7.0f;
+                if(filteredAnglePitch < SETPOINT_ANGLE){
+                    SETPOINT_ANGLE += AngleFix * delta_t;
+                } else if(filteredAnglePitch > SETPOINT_ANGLE){
+                    SETPOINT_ANGLE -= AngleFix * delta_t;
+                }
+                if (SETPOINT_ANGLE > 2.0f) SETPOINT_ANGLE = 2.0f;
+                if (SETPOINT_ANGLE < -2.0f) SETPOINT_ANGLE = -2.0f;
             
-            //angle_pid(100.0f, encoder_get_angle_1());
-            vTaskDelay(pdMS_TO_TICKS(10)); 
-
+            pid_control(SETPOINT_ANGLE, filteredAnglePitch);
+            vTaskDelay(pdMS_TO_TICKS(20)); 
         }
         
     }
