@@ -30,6 +30,9 @@ pid_params_t pid_params = {
     .kx = 0.0f
 };
 
+// Fuzzy autotune flag
+static bool fuzzy_autotune_enabled = true;
+
 // Load PID parameters from NVS
 esp_err_t pid_load_from_nvs(void)
 {
@@ -48,8 +51,16 @@ esp_err_t pid_load_from_nvs(void)
         nvs_get_blob(nvs_handle, "ki", &pid_params.ki, &size);
         nvs_get_blob(nvs_handle, "kd", &pid_params.kd, &size);
         nvs_get_blob(nvs_handle, "kx", &pid_params.kx, &size);
-        ESP_LOGI(TAG, "\033[34mPID loaded from NVS - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f\033[0m",
-         pid_params.kp, pid_params.ki, pid_params.kd, pid_params.kx);
+        
+        // Load fuzzy autotune flag
+        uint8_t fuzzy_flag = 1;
+        size = sizeof(uint8_t);
+        if (nvs_get_blob(nvs_handle, "fuzzy", &fuzzy_flag, &size) == ESP_OK) {
+            fuzzy_autotune_enabled = (fuzzy_flag != 0);
+        }
+        
+        ESP_LOGI(TAG, "\033[34mPID loaded from NVS - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f, Fuzzy: %s\033[0m",
+         pid_params.kp, pid_params.ki, pid_params.kd, pid_params.kx, fuzzy_autotune_enabled ? "ON" : "OFF");
 
     } else {
         ESP_LOGW(TAG, "No saved PID values, using defaults");
@@ -75,12 +86,16 @@ esp_err_t pid_save_to_nvs(void)
     err |= nvs_set_blob(nvs_handle, "ki", &pid_params.ki, sizeof(float));
     err |= nvs_set_blob(nvs_handle, "kd", &pid_params.kd, sizeof(float));
     err |= nvs_set_blob(nvs_handle, "kx", &pid_params.kx, sizeof(float));
+    
+    // Save fuzzy autotune flag
+    uint8_t fuzzy_flag = fuzzy_autotune_enabled ? 1 : 0;
+    err |= nvs_set_blob(nvs_handle, "fuzzy", &fuzzy_flag, sizeof(uint8_t));
 
     if (err == ESP_OK) {
         err = nvs_commit(nvs_handle);
         if (err == ESP_OK) {
-            ESP_LOGI(TAG, "PID saved to NVS - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f", 
-                     pid_params.kp, pid_params.ki, pid_params.kd, pid_params.kx);
+            ESP_LOGI(TAG, "PID saved to NVS - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f, Fuzzy: %s", 
+                     pid_params.kp, pid_params.ki, pid_params.kd, pid_params.kx, fuzzy_autotune_enabled ? "ON" : "OFF");
         }
     }
 
@@ -135,6 +150,13 @@ static const char *html_page =
 "<input type='range' id='kx' min='0' max='50' step='0.01' value='%.2f' oninput='updateValue(\"kx\", this.value)'>" 
 "<input type='number' id='kx_num' min='0' max='50' step='0.01' value='%.2f' oninput='updateSlider(\"kx\", this.value)'>" 
 "</div>" 
+"<div class='param'>" 
+"<label>Fuzzy Autotune: <span class='value' id='fuzzy_val' style='color: %s;'>%s</span></label>" 
+"<label style='display: flex; align-items: center; cursor: pointer;'>" 
+"<input type='checkbox' id='fuzzy' %s onchange='updateFuzzy(this.checked)' style='width: auto; margin-right: 10px;'>" 
+"<span>Enable Fuzzy Logic Auto-tuning</span>" 
+"</label>" 
+"</div>" 
 "<button onclick='sendPID()'>Apply PID Parameters</button>"
 "<div class='info' id='status'>Ready to tune PID</div>"
 "</div>"
@@ -148,24 +170,40 @@ static const char *html_page =
 "  document.getElementById(param).value = val;"
 "  document.getElementById(param + '_val').innerText = parseFloat(val).toFixed(param === 'kd' ? 3 : 1);"
 "}"
+"function updateFuzzy(checked) {"
+"  var statusText = checked ? 'ON' : 'OFF';"
+"  var statusColor = checked ? '#28a745' : '#dc3545';"
+"  document.getElementById('fuzzy_val').innerText = statusText;"
+"  document.getElementById('fuzzy_val').style.color = statusColor;"
+"}"
 "function sendPID() {"
 "  var kp = document.getElementById('kp').value;"
 "  var ki = document.getElementById('ki').value;"
 "  var kd = document.getElementById('kd').value;"
 "  var kx = document.getElementById('kx').value;"
+"  var fuzzy = document.getElementById('fuzzy').checked ? '1' : '0';"
+"  console.log('Sending PID: kp=' + kp + ', ki=' + ki + ', kd=' + kd + ', kx=' + kx + ', fuzzy=' + fuzzy);"
 "  var xhr = new XMLHttpRequest();"
 "  xhr.open('POST', '/set_pid', true);"
 "  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');"
+"  xhr.onerror = function() {"
+"    console.error('Request failed');"
+"    document.getElementById('status').innerText = 'Connection error!';"
+"    document.getElementById('status').style.color = 'red';"
+"  };"
 "  xhr.onload = function() {"
+"    console.log('Response status: ' + xhr.status);"
+"    console.log('Response: ' + xhr.responseText);"
 "    if (xhr.status === 200) {"
-"      document.getElementById('status').innerText = 'PID updated: Kp=' + kp + ', Ki=' + ki + ', Kd=' + kd + ', Kx=' + kx;"
+"      var fuzzyText = fuzzy === '1' ? 'ON' : 'OFF';"
+"      document.getElementById('status').innerText = 'PID updated: Kp=' + kp + ', Ki=' + ki + ', Kd=' + kd + ', Kx=' + kx + ', Fuzzy=' + fuzzyText;"
 "      document.getElementById('status').style.color = 'green';"
 "    } else {"
-"      document.getElementById('status').innerText = 'Failed to update PID';"
+"      document.getElementById('status').innerText = 'Failed to update PID (Status: ' + xhr.status + ')';"
 "      document.getElementById('status').style.color = 'red';"
 "    }"
 "  };"
-"  xhr.send('kp=' + kp + '&ki=' + ki + '&kd=' + kd + '&kx=' + kx);"
+"  xhr.send('kp=' + kp + '&ki=' + ki + '&kd=' + kd + '&kx=' + kx + '&fuzzy=' + fuzzy);"
 "}"
 "</script>"
 "</body>"
@@ -264,17 +302,20 @@ esp_err_t wifi_init(void)
 static esp_err_t root_get_handler(httpd_req_t *req)
 {
     // Allocate response buffer on heap to avoid stack overflow
-    char *response = (char *)malloc(4096);
+    char *response = (char *)malloc(8192);  // Increased from 4096 to 8192
     if (response == NULL) {
         httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Out of memory");
         return ESP_FAIL;
     }
     
-    snprintf(response, 4096, html_page, 
+    snprintf(response, 8192, html_page, 
              pid_params.kp, pid_params.kp, pid_params.kp,
              pid_params.ki, pid_params.ki, pid_params.ki,
              pid_params.kd, pid_params.kd, pid_params.kd,
-             pid_params.kx, pid_params.kx, pid_params.kx);
+             pid_params.kx, pid_params.kx, pid_params.kx,
+             fuzzy_autotune_enabled ? "#28a745" : "#dc3545",
+             fuzzy_autotune_enabled ? "ON" : "OFF",
+             fuzzy_autotune_enabled ? "checked" : "");
     
     httpd_resp_set_type(req, "text/html");
     esp_err_t ret = httpd_resp_send(req, response, strlen(response));
@@ -299,12 +340,16 @@ static esp_err_t set_pid_post_handler(httpd_req_t *req)
         if (ret == HTTPD_SOCK_ERR_TIMEOUT) {
             httpd_resp_send_408(req);
         }
+        ESP_LOGE(TAG, "Failed to receive POST data");
         return ESP_FAIL;
     }
     buf[ret] = '\0';
+    
+    ESP_LOGI(TAG, "Received POST data: %s", buf);
 
     // Parse parameters
     float kp = 0, ki = 0, kd = 0, kx = 0;
+    int fuzzy = -1;
     char *token = strtok(buf, "&");
     while (token != NULL) {
         if (strncmp(token, "kp=", 3) == 0) {
@@ -315,6 +360,8 @@ static esp_err_t set_pid_post_handler(httpd_req_t *req)
             kd = atof(token + 3);
         } else if (strncmp(token, "kx=", 3) == 0) {
             kx = atof(token + 3);
+        } else if (strncmp(token, "fuzzy=", 6) == 0) {
+            fuzzy = atoi(token + 6);
         }
         token = strtok(NULL, "&");
     }
@@ -324,16 +371,23 @@ static esp_err_t set_pid_post_handler(httpd_req_t *req)
     pid_params.ki = ki;
     pid_params.kd = kd;
     pid_params.kx = kx;
+    
+    // Update fuzzy autotune flag if provided
+    if (fuzzy >= 0) {
+        fuzzy_autotune_enabled = (fuzzy != 0);
+    }
 
     // Save to NVS (EEPROM)
     if (pid_save_to_nvs() == ESP_OK) {
-        ESP_LOGI(TAG, "PID Updated & Saved - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f", kp, ki, kd, kx);
+        ESP_LOGI(TAG, "PID Updated & Saved - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f, Fuzzy: %s", 
+                 kp, ki, kd, kx, fuzzy_autotune_enabled ? "ON" : "OFF");
         gpio_set_level(LED_PIN, 1); // Indicate success
         vTaskDelay(pdMS_TO_TICKS(100));
         gpio_set_level(LED_PIN, 0); // Turn off LED
         vTaskDelay(pdMS_TO_TICKS(100));
     } else {
-        ESP_LOGW(TAG, "PID Updated (not saved) - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f", kp, ki, kd, kx);
+        ESP_LOGW(TAG, "PID Updated (not saved) - Kp: %.2f, Ki: %.2f, Kd: %.3f, Kx: %.2f, Fuzzy: %s", 
+                 kp, ki, kd, kx, fuzzy_autotune_enabled ? "ON" : "OFF");
     }
 
     httpd_resp_set_type(req, "text/plain");
@@ -399,4 +453,10 @@ void webserver_get_pid(float *kp, float *ki, float *kd, float *kx)
     *ki = pid_params.ki;
     *kd = pid_params.kd;
     *kx = pid_params.kx;
+}
+
+// Get fuzzy autotune flag
+bool webserver_get_fuzzy_autotune(void)
+{
+    return fuzzy_autotune_enabled;
 }

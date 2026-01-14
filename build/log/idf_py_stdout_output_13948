@@ -1,83 +1,470 @@
-[1/10] Performing build step for 'bootloader'
-[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Nam_3\2_wheel_balancing\IDF_project\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Nam_3/2_wheel_balancing/IDF_project/build/bootloader/bootloader.bin"
-Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
-[2/10] No install step for 'bootloader'
-[3/10] Completed 'bootloader'
-[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/IDF_project.c.obj
-[5/10] Linking C static library esp-idf\main\libmain.a
-[6/10] Generating ld/sections.ld
-[7/10] Linking CXX executable IDF_project.elf
-[8/10] Generating binary image from built executable
-esptool.py v4.10.0
-Creating esp32 image...
-Merged 2 ELF sections
-Successfully created esp32 image.
-Generated D:/Nam_3/2_wheel_balancing/IDF_project/build/IDF_project.bin
-[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Nam_3\2_wheel_balancing\IDF_project\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Nam_3/2_wheel_balancing/IDF_project/build/partition_table/partition-table.bin D:/Nam_3/2_wheel_balancing/IDF_project/build/IDF_project.bin"
-IDF_project.bin binary size 0xce130 bytes. Smallest app partition is 0x100000 bytes. 0x31ed0 bytes (20%) free.
-[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Nam_3/2_wheel_balancing/IDF_project/build -P C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"
-esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 IDF_project.bin 0x8000 partition_table/partition-table.bin
-esptool.py v4.10.0
-Serial port COM4
-Connecting....
-Chip is ESP32-D0WD-V3 (revision v3.1)
-Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
-Crystal is 40MHz
-MAC: 1c:69:20:ca:90:9c
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00001000 to 0x00007fff...
-Flash will be erased from 0x00010000 to 0x000defff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-SHA digest in image updated
-Compressed 26752 bytes to 16362...
-Writing at 0x00001000... (100 %)
-Wrote 26752 bytes (16362 compressed) at 0x00001000 in 0.8 seconds (effective 255.7 kbit/s)...
-Hash of data verified.
-Compressed 844080 bytes to 524742...
-Writing at 0x00010000... (3 %)
-Writing at 0x0001d43f... (6 %)
-Writing at 0x00026c99... (9 %)
-Writing at 0x000312da... (12 %)
-Writing at 0x00036aa0... (15 %)
-Writing at 0x0003cc52... (18 %)
-Writing at 0x00042ab5... (21 %)
-Writing at 0x00048940... (24 %)
-Writing at 0x0004e6fc... (27 %)
-Writing at 0x00054b4b... (30 %)
-Writing at 0x00059d7e... (33 %)
-Writing at 0x0005f093... (36 %)
-Writing at 0x00064849... (39 %)
-Writing at 0x00069ff1... (42 %)
-Writing at 0x0006f360... (45 %)
-Writing at 0x00074926... (48 %)
-Writing at 0x0007a7e2... (51 %)
-Writing at 0x0008013f... (54 %)
-Writing at 0x00085be3... (57 %)
-Writing at 0x0008b817... (60 %)
-Writing at 0x00091437... (63 %)
-Writing at 0x00096c98... (66 %)
-Writing at 0x0009cb8c... (69 %)
-Writing at 0x000a30d9... (72 %)
-Writing at 0x000a8911... (75 %)
-Writing at 0x000ade78... (78 %)
-Writing at 0x000b98a3... (81 %)
-Writing at 0x000bf77f... (84 %)
-Writing at 0x000c71dd... (87 %)
-Writing at 0x000ccbf9... (90 %)
-Writing at 0x000d29fe... (93 %)
-Writing at 0x000d86eb... (96 %)
-Writing at 0x000ddefb... (100 %)
-Wrote 844080 bytes (524742 compressed) at 0x00010000 in 13.5 seconds (effective 499.8 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 103...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 354.6 kbit/s)...
-Hash of data verified.
+ets Jul 29 2019 12:21:46
 
-Leaving...
-Hard resetting via RTS pin...
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e868h (125032) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e890 vaddr=3ffb0000 size=01788h (  6024) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=92a38h (600632) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2a60 vaddr=3ffb1788 size=0284ch ( 10316) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c52b4 vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      dd97b7c-dirty[0m
+[0;32mI (452) app_init: Compile time:     Dec 29 2025 11:47:23[0m
+[0;32mI (458) app_init: ELF file SHA256:  4b32c892a...[0m
+[0;32mI (463) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (473) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (483) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (490) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (523) spi_flash: detected chip: generic[0m
+[0;32mI (526) spi_flash: flash io: dio[0m
+[0;33mW (530) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (564) MAIN: Connecting to WiFi...[0m
+[0;32mI (604) wifi:wifi driver task: 3ffc043c, prio:23, stack:6656, core=0[0m
+[0;32mI (614) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (614) wifi:wifi certification version: v7.0[0m
+[0;32mI (614) wifi:config NVS flash: enabled[0m
+[0;32mI (614) wifi:config nano formating: disabled[0m
+[0;32mI (624) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (624) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (634) wifi:Init management short buffer num: 32[0m
+[0;32mI (634) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (644) wifi:Init static rx buffer num: 10[0m
+[0;32mI (644) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (654) wifi_init: rx ba win: 6[0m
+[0;32mI (654) wifi_init: accept mbox: 6[0m
+[0;32mI (654) wifi_init: tcpip mbox: 32[0m
+[0;32mI (664) wifi_init: udp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (674) wifi_init: tcp rx win: 5760[0m
+[0;32mI (674) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (684) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (694) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (764) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (844) wifi:mode : sta (1c:69:20:ca:90:9c)[0m
+[0;32mI (844) wifi:enable tsf[0m
+[0;32mI (844) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (864) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (864) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (884) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (894) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (924) wifi:connected with Tran Van Tuan, aid = 16, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (924) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (924) wifi:pm start, type: 1[0m
+
+[0;32mI (924) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (944) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (984) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3944) esp_netif_handlers: sta ip: 192.168.1.199, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.199
+[0;32mI (3944) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3944) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4954) WEBSERVER: [34mPID loaded from NVS - Kp: 23.10, Ki: 40.50, Kd: 1.250, Kx: 0.60[0m[0m
+[0;32mI (4954) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4964) WEBSERVER: Web server started successfully![0m
+[0;32mI (4964) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5474) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5474) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5574) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5574) GPIO: LED GPIO initialized[0m
+[0;32mI (5574) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5584) GPIO: Button GPIO initialized[0m
+[0;32mI (7884) MAIN: I2C initialized successfully[0m
+[0;32mI (8184) MPU6050: Starting gyro calibration...[0m
+[0;32mI (12864) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (12864) MPU6050: Gyro offsets - X: -406.75, Y: -62.47, Z: 18.82[0m
+Target: 0.00, Max Speed: 240.0, Min Speed: 80.0
+Robot ready. Press the button to start balancing...
+Error:5.00, De/dt: -149.98
+Error:4.58, De/dt: -47.47
+Error:3.87, De/dt: 2.39
+Error:3.61, De/dt: 8.84
+Error:3.46, De/dt: 7.93
+Error:3.50, De/dt: 1.95
+Error:3.55, De/dt: -0.78
+Error:3.57, De/dt: -0.79
+Error:3.60, De/dt: -1.32
+Error:3.50, De/dt: 2.68
+Error:3.41, De/dt: 3.53
+Error:3.27, De/dt: 5.63
+Error:3.27, De/dt: 2.30
+Error:3.26, De/dt: 1.33
+Error:3.10, De/dt: 5.40
+Error:2.85, De/dt: 9.49
+Error:2.29, De/dt: 20.77
+Error:2.06, De/dt: 15.20
+Error:1.84, De/dt: 12.56
+Error:1.68, De/dt: 9.86
+Error:1.79, De/dt: 0.48
+Error:2.05, De/dt: -7.45
+Error:2.33, De/dt: -11.38
+Error:2.54, De/dt: -10.76
+Error:2.69, De/dt: -8.86
+Error:2.58, De/dt: -0.35
+Error:2.59, De/dt: -0.50
+Error:2.62, De/dt: -1.12
+Error:2.56, De/dt: 1.34
+Error:2.54, De/dt: 1.32
+Error:2.53, De/dt: 0.76
+Error:2.48, De/dt: 1.67
+Error:2.43, De/dt: 2.21
+Error:2.37, De/dt: 2.62
+Error:2.33, De/dt: 2.34
+Error:2.18, De/dt: 5.47
+Error:1.88, De/dt: 11.26
+Error:1.60, De/dt: 12.97
+Error:1.43, De/dt: 10.15
+Error:1.44, De/dt: 3.81
+Error:1.60, De/dt: -3.42
+Error:1.80, De/dt: -7.23
+Error:1.99, De/dt: -8.69
+Error:2.15, De/dt: -8.33
+Error:2.28, De/dt: -7.00
+Error:2.39, De/dt: -6.05
+Error:2.50, De/dt: -6.00
+Error:2.63, De/dt: -6.28
+Error:2.77, De/dt: -6.67
+Error:2.77, De/dt: -2.68
+Error:2.94, De/dt: -6.15
+Error:3.09, De/dt: -6.86
+Error:3.04, De/dt: -1.33
+Error:2.57, De/dt: 13.53
+Error:1.83, De/dt: 27.63
+Error:1.27, De/dt: 27.95
+Error:0.87, De/dt: 23.07
+Error:0.57, De/dt: 18.27
+Error:0.43, De/dt: 11.41
+Error:0.34, De/dt: 7.30
+Error:0.37, De/dt: 2.23
+Error:0.49, De/dt: -2.83
+Error:0.59, De/dt: -4.08
+Error:0.68, De/dt: -4.33
+Error:0.74, De/dt: -3.59
+Error:0.79, De/dt: -2.99
+Error:0.83, De/dt: -2.44
+Error:0.87, De/dt: -2.14
+Error:0.90, De/dt: -1.59
+Error:0.92, De/dt: -1.32
+Error:0.93, De/dt: -0.79
+Error:0.92, De/dt: -0.10
+Error:0.91, De/dt: 0.44
+Error:0.88, De/dt: 0.89
+Error:0.85, De/dt: 1.22
+Error:0.82, De/dt: 1.37
+Error:0.79, De/dt: 1.66
+Error:0.74, De/dt: 2.02
+Error:0.68, De/dt: 2.50
+Error:0.62, De/dt: 3.01
+Error:0.54, De/dt: 3.63
+Error:0.45, De/dt: 4.05
+Error:0.36, De/dt: 4.45
+Error:0.26, De/dt: 4.72
+Error:0.15, De/dt: 5.04
+Error:0.03, De/dt: 5.61
+Error:-0.11, De/dt: 6.39
+Error:-0.26, De/dt: 7.27
+Error:-0.44, De/dt: 8.13
+Error:-0.63, De/dt: 9.12
+Error:-0.85, De/dt: 10.20
+Error:-1.09, De/dt: 11.37
+Error:-1.36, De/dt: 12.44
+Error:-1.66, De/dt: 14.03
+Error:-2.00, De/dt: 15.81
+Error:-2.36, De/dt: 17.03
+Error:-2.74, De/dt: 18.34
+Error:-3.04, De/dt: 16.41
+Error:-3.13, De/dt: 9.22
+Error:-2.96, De/dt: -1.48
+Error:-2.78, De/dt: -5.94
+Error:-2.82, De/dt: -1.02
+Error:-3.06, De/dt: 6.55
+Error:-3.19, De/dt: 6.49
+Error:-3.11, De/dt: 0.24
+Error:-2.78, De/dt: -9.74
+Error:-2.40, De/dt: -15.36
+Error:-2.22, De/dt: -11.47
+Error:-2.19, De/dt: -5.35
+Error:-2.40, De/dt: 3.91
+Error:-2.48, De/dt: 4.13
+Error:-2.31, De/dt: -3.34
+Error:-1.87, De/dt: -14.63
+Error:-1.44, De/dt: -18.94
+Error:-1.19, De/dt: -14.86
+Error:-1.29, De/dt: -3.12
+Error:-1.66, De/dt: 10.03
+Error:-2.46, De/dt: 28.07
+Error:-3.39, De/dt: 39.03
+Error:-4.13, De/dt: 37.72
+Error:-4.27, De/dt: 19.35
+Error:-3.55, De/dt: -13.73
+Error:-2.49, De/dt: -37.39
+Error:-1.53, De/dt: -43.92
+Error:-0.88, De/dt: -36.87
+Error:-0.64, De/dt: -21.97
+Error:-0.56, De/dt: -11.23
+Error:-0.85, De/dt: 4.21
+Error:-1.43, De/dt: 18.99
+Error:-2.30, De/dt: 33.70
+Error:-3.27, De/dt: 42.63
+Error:-3.97, De/dt: 38.00
+Error:-3.90, De/dt: 13.29
+Error:-3.13, De/dt: -17.98
+Error:-2.20, De/dt: -35.02
+Error:-1.60, De/dt: -31.89
+Error:-1.35, De/dt: -20.49
+Error:-1.41, De/dt: -6.27
+Error:-1.78, De/dt: 8.66
+Error:-2.59, De/dt: 27.73
+Error:-3.43, De/dt: 36.15
+Error:-4.24, De/dt: 38.91
+Error:-4.30, De/dt: 17.21
+Error:-3.54, De/dt: -15.93
+Error:-1.96, De/dt: -53.57
+Error:-0.45, De/dt: -66.74
+Error:1.00, De/dt: -70.36
+Error:1.49, De/dt: -42.83
+Error:1.22, De/dt: -8.90
+Error:0.85, De/dt: 7.51
+Error:0.64, De/dt: 9.38
+Error:0.50, De/dt: 7.74
+Error:0.60, De/dt: 0.36
+Error:0.83, De/dt: -7.02
+Error:1.32, De/dt: -17.34
+Error:2.12, De/dt: -31.08
+Error:3.13, De/dt: -42.72
+Error:4.00, De/dt: -42.99
+Error:3.90, De/dt: -14.24
+Error:3.58, De/dt: 3.97
+Error:3.31, De/dt: 9.46
+Error:4.09, De/dt: -19.67
+Error:5.18, De/dt: -40.52
+Error:5.71, De/dt: -32.15
+Error:6.92, De/dt: -49.15
+Error:7.82, De/dt: -46.67
+Error:7.63, De/dt: -12.79
+Error:6.02, De/dt: 43.02
+Error:4.35, De/dt: 67.55
+Error:4.09, De/dt: 34.70
+Error:2.71, De/dt: 55.20
+Error:2.23, De/dt: 36.63
+Error:2.28, De/dt: 12.97
+Error:2.36, De/dt: 2.94
+Error:2.54, De/dt: -4.30
+Error:2.66, De/dt: -5.26
+Error:2.10, De/dt: 14.64
+Error:1.49, De/dt: 24.28
+Error:0.80, De/dt: 30.28
+Error:0.23, De/dt: 29.26
+Error:-0.21, De/dt: 24.81
+Error:-0.62, De/dt: 22.37
+Error:-0.76, De/dt: 13.22
+Error:-0.89, De/dt: 9.08
+Error:-1.11, De/dt: 10.18
+Error:-1.25, De/dt: 8.30
+Error:-1.70, De/dt: 16.71
+Error:-2.26, De/dt: 23.62
+Error:-2.70, De/dt: 22.61
+Error:-3.05, De/dt: 19.51
+Error:-3.18, De/dt: 11.71
+Error:-3.17, De/dt: 4.48
+Error:-3.09, De/dt: -0.66
+Error:-2.86, De/dt: -7.30
+Error:-2.54, De/dt: -12.24
+Error:-2.40, De/dt: -9.32
+Error:-2.13, De/dt: -11.70
+Error:-1.90, De/dt: -11.69
+Error:-1.74, De/dt: -9.28
+Error:-1.92, De/dt: 1.68
+Error:-1.84, De/dt: -1.88
+Error:-1.92, De/dt: 1.57
+Error:-1.98, De/dt: 2.42
+Error:-2.28, De/dt: 9.98
+Error:-2.37, De/dt: 6.90
+Error:-2.71, De/dt: 12.92
+Error:-2.69, De/dt: 4.43
+Error:-2.60, De/dt: -0.84
+Error:-2.66, De/dt: 1.42
+Error:-2.81, De/dt: 5.08
+Error:-2.76, De/dt: 0.65
+Error:-2.56, De/dt: -5.70
+Error:-2.34, De/dt: -9.04
+Error:-2.12, De/dt: -10.31
+Error:-1.89, De/dt: -10.88
+Error:-1.73, De/dt: -9.15
+Error:-1.64, De/dt: -6.27
+Error:-1.85, De/dt: 3.57
+Error:-2.23, De/dt: 13.02
+Error:-2.74, De/dt: 20.51
+Error:-3.14, De/dt: 20.06
+Error:-3.24, De/dt: 11.14
+Error:-2.87, De/dt: -6.58
+Error:-2.28, De/dt: -20.29
+Error:-1.86, De/dt: -20.97
+Error:-1.63, De/dt: -15.10
+Error:-1.70, De/dt: -4.00
+Error:-1.98, De/dt: 6.92
+Error:-2.64, De/dt: 22.50
+Error:-3.28, De/dt: 28.15
+Error:-3.62, De/dt: 21.57
+Error:-3.32, De/dt: -0.41
+Error:-2.88, De/dt: -13.36
+Error:-2.22, De/dt: -25.10
+Error:-1.97, De/dt: -17.81
+Error:-1.83, De/dt: -11.09
+Error:-2.18, De/dt: 5.96
+Error:-2.75, De/dt: 19.51
+Error:-3.48, De/dt: 29.70
+Error:-3.87, De/dt: 23.40
+Error:-3.69, De/dt: 4.15
+Error:-2.76, De/dt: -26.27
+Error:-1.91, De/dt: -36.10
+Error:-1.12, De/dt: -38.17
+Error:-0.82, De/dt: -24.27
+Error:-0.64, De/dt: -14.87
+Error:-0.97, De/dt: 3.78
+Error:-1.54, De/dt: 18.56
+Error:-2.37, De/dt: 32.30
+Error:-3.31, De/dt: 41.23
+Error:-3.80, De/dt: 31.05
+Error:-3.55, De/dt: 5.09
+Error:-2.90, De/dt: -17.48
+Error:-2.16, De/dt: -29.19
+Error:-1.76, De/dt: -23.67
+Error:-1.61, De/dt: -13.94
+Error:-1.80, De/dt: -0.02
+Error:-2.28, De/dt: 14.59
+Error:-3.06, De/dt: 29.00
+Error:-3.73, De/dt: 31.85
+Error:-3.99, De/dt: 20.49
+Error:-3.65, De/dt: -1.83
+Error:-2.82, De/dt: -25.67
+Error:-2.11, De/dt: -31.61
+Error:-1.90, De/dt: -19.03
+Error:-2.65, De/dt: 15.01
+Error:-3.13, De/dt: 20.41
+Error:-3.36, De/dt: 15.11
+Error:-3.17, De/dt: 0.19
+Error:-2.84, De/dt: -9.94
+Error:-2.47, De/dt: -14.83
+Error:-2.43, De/dt: -7.14
+Error:-2.53, De/dt: 0.05
+Error:-2.40, De/dt: -3.90
+Error:-2.42, De/dt: -0.83
+Error:-2.38, De/dt: -1.67
+Error:-2.03, De/dt: -11.26
+Error:-1.41, De/dt: -23.13
+Error:-0.48, De/dt: -37.13
+Error:0.34, De/dt: -39.35
+Error:0.85, De/dt: -31.04
+Error:1.57, De/dt: -34.11
+Error:2.63, De/dt: -45.41
+Error:3.63, De/dt: -48.22
+Error:3.55, De/dt: -16.61
+Error:2.41, De/dt: 27.40
+Error:0.86, De/dt: 57.33
+Error:0.36, De/dt: 38.06
+Error:0.07, De/dt: 24.06
+Error:0.01, De/dt: 11.38
+Error:-0.10, De/dt: 7.73
+Error:0.06, De/dt: -1.74
+Error:0.49, De/dt: -13.44
+Error:1.01, De/dt: -21.06
+Error:1.50, De/dt: -23.26
+Error:1.83, De/dt: -19.01
+Error:2.02, De/dt: -13.49
+Error:2.09, De/dt: -7.28
+Error:2.16, De/dt: -5.02
+Error:2.23, De/dt: -4.11

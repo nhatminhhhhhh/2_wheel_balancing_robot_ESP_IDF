@@ -242,9 +242,6 @@ void motor_init(void)
 
 void motor_control(float direction, int16_t speed, int frontoffset, int backoffset)
 {
-    // // int16_t offset_speed = speed;
-    // // if (speed < 140) offset_speed = 0;
-    // else offset_speed = speed;
     if (direction > 0) {
         // Forward direction
         gpio_set_level(EN_PINA1, 0);

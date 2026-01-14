@@ -1,83 +1,1221 @@
-[1/10] Performing build step for 'bootloader'
-[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Nam_3\2_wheel_balancing\IDF_project\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Nam_3/2_wheel_balancing/IDF_project/build/bootloader/bootloader.bin"
-Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
-[2/10] No install step for 'bootloader'
-[3/10] Completed 'bootloader'
-[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/IDF_project.c.obj
-[5/10] Linking C static library esp-idf\main\libmain.a
-[6/10] Generating ld/sections.ld
-[7/10] Linking CXX executable IDF_project.elf
-[8/10] Generating binary image from built executable
-esptool.py v4.10.0
-Creating esp32 image...
-Merged 2 ELF sections
-Successfully created esp32 image.
-Generated D:/Nam_3/2_wheel_balancing/IDF_project/build/IDF_project.bin
-[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Nam_3\2_wheel_balancing\IDF_project\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Nam_3/2_wheel_balancing/IDF_project/build/partition_table/partition-table.bin D:/Nam_3/2_wheel_balancing/IDF_project/build/IDF_project.bin"
-IDF_project.bin binary size 0xcde40 bytes. Smallest app partition is 0x100000 bytes. 0x321c0 bytes (20%) free.
-[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Nam_3/2_wheel_balancing/IDF_project/build -P C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"
-esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 IDF_project.bin 0x8000 partition_table/partition-table.bin
-esptool.py v4.10.0
-Serial port COM4
-Connecting....
-Chip is ESP32-D0WD-V3 (revision v3.1)
-Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
-Crystal is 40MHz
-MAC: d8:13:2a:7f:8e:e4
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00001000 to 0x00007fff...
-Flash will be erased from 0x00010000 to 0x000ddfff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-SHA digest in image updated
-Compressed 26752 bytes to 16362...
-Writing at 0x00001000... (100 %)
-Wrote 26752 bytes (16362 compressed) at 0x00001000 in 0.8 seconds (effective 277.9 kbit/s)...
-Hash of data verified.
-Compressed 843328 bytes to 524571...
-Writing at 0x00010000... (3 %)
-Writing at 0x0001d332... (6 %)
-Writing at 0x00026b25... (9 %)
-Writing at 0x000312da... (12 %)
-Writing at 0x00036a91... (15 %)
-Writing at 0x0003cbef... (18 %)
-Writing at 0x00042a8e... (21 %)
-Writing at 0x00048913... (24 %)
-Writing at 0x0004e6a9... (27 %)
-Writing at 0x00054ad4... (30 %)
-Writing at 0x00059d02... (33 %)
-Writing at 0x0005f025... (36 %)
-Writing at 0x000647e3... (39 %)
-Writing at 0x00069f7b... (42 %)
-Writing at 0x0006f2dd... (45 %)
-Writing at 0x000748af... (48 %)
-Writing at 0x0007a76c... (51 %)
-Writing at 0x000800e2... (54 %)
-Writing at 0x00085b9c... (57 %)
-Writing at 0x0008b806... (60 %)
-Writing at 0x000913e0... (63 %)
-Writing at 0x00096c33... (66 %)
-Writing at 0x0009cb21... (69 %)
-Writing at 0x000a3070... (72 %)
-Writing at 0x000a88ad... (75 %)
-Writing at 0x000ade25... (78 %)
-Writing at 0x000b9828... (81 %)
-Writing at 0x000bf713... (84 %)
-Writing at 0x000c6fd7... (87 %)
-Writing at 0x000cc9cf... (90 %)
-Writing at 0x000d28cc... (93 %)
-Writing at 0x000d84c9... (96 %)
-Writing at 0x000ddce0... (100 %)
-Wrote 843328 bytes (524571 compressed) at 0x00010000 in 13.2 seconds (effective 510.7 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 103...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 273.2 kbit/s)...
-Hash of data verified.
+_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clkets Jul 29 2019 12:21:46
 
-Leaving...
-Hard resetting via RTS pin...
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e868h (125032) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e890 vaddr=3ffb0000 size=01788h (  6024) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=92ac0h (600768) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2ae8 vaddr=3ffb1788 size=0284ch ( 10316) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c533c vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      dd97b7c-dirty[0m
+[0;32mI (452) app_init: Compile time:     Dec 29 2025 11:47:23[0m
+[0;32mI (458) app_init: ELF file SHA256:  f9e718027...[0m
+[0;32mI (463) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (473) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (483) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (490) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (523) spi_flash: detected chip: generic[0m
+[0;32mI (526) spi_flash: flash io: dio[0m
+[0;33mW (530) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (565) MAIN: Connecting to WiFi...[0m
+[0;32mI (605) wifi:wifi driver task: 3ffc043c, prio:23, stack:6656, core=0[0m
+[0;32mI (615) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (615) wifi:wifi certification version: v7.0[0m
+[0;32mI (615) wifi:config NVS flash: enabled[0m
+[0;32mI (615) wifi:config nano formating: disabled[0m
+[0;32mI (625) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (625) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (635) wifi:Init management short buffer num: 32[0m
+[0;32mI (635) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (645) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (645) wifi:Init static rx buffer num: 10[0m
+[0;32mI (645) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (655) wifi_init: rx ba win: 6[0m
+[0;32mI (655) wifi_init: accept mbox: 6[0m
+[0;32mI (655) wifi_init: tcpip mbox: 32[0m
+[0;32mI (665) wifi_init: udp mbox: 6[0m
+[0;32mI (665) wifi_init: tcp mbox: 6[0m
+[0;32mI (675) wifi_init: tcp tx win: 5760[0m
+[0;32mI (675) wifi_init: tcp rx win: 5760[0m
+[0;32mI (675) wifi_init: tcp mss: 1440[0m
+[0;32mI (685) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (685) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (695) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (775) wifi:mode : sta (1c:69:20:ca:90:9c)[0m
+[0;32mI (775) wifi:enable tsf[0m
+[0;32mI (775) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (785) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (795) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (805) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (815) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (845) wifi:connected with Tran Van Tuan, aid = 16, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (845) wifi:security: WPA2-PSK, phy: bgn, rssi: -59[0m
+[0;32mI (855) wifi:pm start, type: 1[0m
+
+[0;32mI (855) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (865) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (865) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3875) esp_netif_handlers: sta ip: 192.168.1.199, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.199
+[0;32mI (3875) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3875) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4885) WEBSERVER: [34mPID loaded from NVS - Kp: 23.10, Ki: 40.50, Kd: 1.250, Kx: 0.60[0m[0m
+[0;32mI (4885) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4895) WEBSERVER: Web server started successfully![0m
+[0;32mI (4895) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5405) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5405) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5505) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5505) GPIO: LED GPIO initialized[0m
+[0;32mI (5505) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5515) GPIO: Button GPIO initialized[0m
+[0;32mI (7815) MAIN: I2C initialized successfully[0m
+[0;32mI (8115) MPU6050: Starting gyro calibration...[0m
+[0;32mI (12795) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (12795) MPU6050: Gyro offsets - X: -407.99, Y: -62.67, Z: 21.81[0m
+Target: 0.00, Max Speed: 240.0, Min Speed: 80.0
+Robot ready. Press the button to start balancing...
+Error:11.32, De/dt: -150.00
+Error:10.77, De/dt: -38.87
+Error:9.95, De/dt: 14.01
+Error:8.69, De/dt: 48.05
+Error:7.11, De/dt: 71.37
+Error:5.70, De/dt: 75.63
+Error:4.39, De/dt: 74.53
+Error:3.41, De/dt: 63.91
+Error:2.92, De/dt: 45.24
+Error:2.60, De/dt: 32.29
+Error:2.22, De/dt: 27.54
+Error:1.75, De/dt: 25.04
+Error:1.30, De/dt: 23.43
+Error:1.11, De/dt: 15.04
+Error:1.07, De/dt: 7.39
+Error:1.04, De/dt: 3.71
+Error:1.01, De/dt: 2.49
+Error:0.97, De/dt: 2.02
+Error:0.95, De/dt: 1.49
+Error:0.92, De/dt: 1.40
+Error:0.88, De/dt: 2.00
+Error:0.77, De/dt: 3.88
+Error:0.65, De/dt: 5.24
+Error:0.47, De/dt: 7.49
+Error:0.26, De/dt: 9.42
+Error:0.14, De/dt: 7.34
+Error:-0.31, De/dt: 11.57
+Error:-1.01, De/dt: 20.88
+Error:-2.06, De/dt: 35.12
+Error:-3.23, De/dt: 44.10
+Error:-4.10, De/dt: 38.97
+Error:-4.59, De/dt: 25.52
+Error:-4.51, De/dt: 3.14
+Error:-4.24, De/dt: -11.78
+Error:-3.48, De/dt: -32.39
+Error:-3.18, De/dt: -26.73
+Error:-3.17, De/dt: -15.79
+Error:-3.13, De/dt: -12.22
+Error:-3.07, De/dt: -11.31
+Error:-2.92, De/dt: -13.85
+Error:-2.76, De/dt: -15.37
+Error:-2.36, De/dt: -22.73
+Error:-1.91, De/dt: -27.41
+Error:-1.53, De/dt: -27.30
+Error:-1.33, De/dt: -21.62
+Error:-1.38, De/dt: -12.23
+Error:-1.59, De/dt: -3.09
+Error:-1.88, De/dt: 6.25
+Error:-2.06, De/dt: 7.89
+Error:-2.22, De/dt: 7.78
+Error:-2.40, De/dt: 8.67
+Error:-2.41, De/dt: 3.66
+Error:-2.44, De/dt: 2.53
+Error:-2.50, De/dt: 2.85
+Error:-2.63, De/dt: 5.04
+Error:-2.81, De/dt: 7.33
+Error:-3.03, De/dt: 9.49
+Error:-3.09, De/dt: 5.50
+Error:-3.02, De/dt: 0.12
+Error:-2.48, De/dt: -16.09
+Error:-1.85, De/dt: -25.38
+Error:-1.32, De/dt: -25.86
+Error:-1.18, De/dt: -14.64
+Error:-1.50, De/dt: 3.57
+Error:-1.95, De/dt: 15.10
+Error:-2.64, De/dt: 26.64
+Error:-2.97, De/dt: 20.69
+Error:-3.18, De/dt: 14.47
+Error:-3.04, De/dt: 1.74
+Error:-2.87, De/dt: -4.44
+Error:-2.60, De/dt: -10.08
+Error:-2.52, De/dt: -6.40
+Error:-2.68, De/dt: 2.32
+Error:-3.01, De/dt: 10.75
+Error:-3.18, De/dt: 9.53
+Error:-2.93, De/dt: -3.86
+Error:-2.23, De/dt: -22.46
+Error:-1.33, De/dt: -35.82
+Error:-0.65, De/dt: -34.81
+Error:-0.34, De/dt: -23.17
+Error:-0.29, De/dt: -10.95
+Error:-0.40, De/dt: -1.10
+Error:-0.70, De/dt: 8.55
+Error:-1.05, De/dt: 14.13
+Error:-1.74, De/dt: 26.26
+Error:-2.60, De/dt: 36.24
+Error:-3.21, De/dt: 32.94
+Error:-3.20, De/dt: 12.88
+Error:-2.89, De/dt: -4.23
+Error:-2.26, De/dt: -20.42
+Error:-1.88, De/dt: -19.84
+Error:-1.74, De/dt: -12.04
+Error:-1.83, De/dt: -2.06
+Error:-2.25, De/dt: 11.67
+Error:-3.07, De/dt: 29.26
+Error:-3.99, De/dt: 39.36
+Error:-4.00, De/dt: 15.96
+Error:-2.69, De/dt: -32.88
+Error:-0.90, De/dt: -66.85
+Error:0.97, De/dt: -77.88
+Error:2.28, De/dt: -65.57
+Error:2.46, De/dt: -27.02
+Error:1.84, De/dt: 12.55
+Error:1.09, De/dt: 32.41
+Error:0.57, De/dt: 33.40
+Error:0.35, De/dt: 24.74
+Error:0.37, De/dt: 14.13
+Error:0.44, De/dt: 8.24
+Error:0.59, De/dt: 3.78
+Error:0.76, De/dt: 1.12
+Error:0.97, De/dt: -0.98
+Error:1.19, De/dt: -2.41
+Error:1.44, De/dt: -3.70
+Error:1.74, De/dt: -5.47
+Error:2.08, De/dt: -7.54
+Error:2.45, De/dt: -9.49
+Error:2.87, De/dt: -11.49
+Error:3.40, De/dt: -15.89
+Error:3.58, De/dt: -6.86
+Error:3.29, De/dt: 10.72
+Error:2.76, De/dt: 21.57
+Error:2.21, De/dt: 25.12
+Error:1.78, De/dt: 22.90
+Error:1.58, De/dt: 15.08
+Error:1.48, De/dt: 9.03
+Error:1.55, De/dt: 1.46
+Error:1.79, De/dt: -6.49
+Error:2.30, De/dt: -18.01
+Error:2.77, De/dt: -21.21
+Error:3.07, De/dt: -17.52
+Error:3.22, De/dt: -11.35
+Error:3.25, De/dt: -5.44
+Error:3.06, De/dt: 3.54
+Error:2.74, De/dt: 10.79
+Error:2.54, De/dt: 10.30
+Error:2.48, De/dt: 5.95
+Error:2.62, De/dt: -1.88
+Error:2.76, De/dt: -4.93
+Error:2.69, De/dt: 0.09
+Error:2.35, De/dt: 10.44
+Error:1.86, De/dt: 18.84
+Error:1.45, De/dt: 19.78
+Error:1.17, De/dt: 16.47
+Error:1.04, De/dt: 10.50
+Error:1.06, De/dt: 3.57
+Error:1.17, De/dt: -2.00
+Error:1.40, De/dt: -7.81
+Error:1.79, De/dt: -14.76
+Error:2.31, De/dt: -21.29
+Error:2.83, De/dt: -24.33
+Error:3.35, De/dt: -25.19
+Error:3.55, De/dt: -16.02
+Error:3.17, De/dt: 4.97
+Error:2.37, De/dt: 25.95
+Error:1.69, De/dt: 30.65
+Error:1.04, De/dt: 31.88
+Error:0.48, De/dt: 29.50
+Error:-0.21, De/dt: 27.62
+Error:-0.77, De/dt: 23.12
+Error:-1.27, De/dt: 19.52
+Error:-1.67, De/dt: 15.03
+Error:-2.00, De/dt: 10.96
+Error:-2.17, De/dt: 4.71
+Error:-2.17, De/dt: -2.88
+Error:-2.11, De/dt: -7.69
+Error:-2.09, De/dt: -8.45
+Error:-2.11, De/dt: -7.64
+Error:-2.17, De/dt: -6.06
+Error:-2.27, De/dt: -4.12
+Error:-2.41, De/dt: -2.24
+Error:-2.60, De/dt: -0.16
+Error:-2.77, De/dt: 0.31
+Error:-2.75, De/dt: -5.23
+Error:-2.48, De/dt: -15.02
+Error:-2.20, De/dt: -19.11
+Error:-2.11, De/dt: -15.24
+Error:-2.21, De/dt: -7.86
+Error:-2.35, De/dt: -3.75
+Error:-2.41, De/dt: -1.07
+Error:-2.19, De/dt: -6.87
+Error:-1.78, De/dt: -15.11
+Error:-1.16, De/dt: -24.51
+Error:-0.62, De/dt: -26.10
+Error:-0.31, De/dt: -19.85
+Error:-0.19, De/dt: -11.44
+Error:-0.33, De/dt: -0.51
+Error:-0.49, De/dt: 4.63
+Error:-0.59, De/dt: 4.94
+Error:-0.66, De/dt: 4.02
+Error:-0.71, De/dt: 3.17
+Error:-0.73, De/dt: 1.92
+Error:-0.73, De/dt: 0.56
+Error:-0.70, De/dt: -0.41
+Error:-0.66, De/dt: -1.36
+Error:-0.61, De/dt: -2.27
+Error:-0.52, De/dt: -3.49
+Error:-0.42, De/dt: -4.38
+Error:-0.29, De/dt: -5.74
+Error:-0.14, De/dt: -6.84
+Error:0.21, De/dt: -8.40
+Error:0.59, De/dt: -9.86
+Error:0.99, De/dt: -11.17
+Error:1.42, De/dt: -12.56
+Error:1.89, De/dt: -14.31
+Error:2.41, De/dt: -16.47
+Error:2.97, De/dt: -18.56
+Error:3.50, De/dt: -18.65
+Error:3.91, De/dt: -14.91
+Error:3.95, De/dt: -2.38
+Error:3.67, De/dt: 12.15
+Error:3.16, De/dt: 25.11
+Error:2.67, De/dt: 29.53
+Error:2.44, De/dt: 23.36
+Error:2.52, De/dt: 11.66
+Error:2.73, De/dt: 3.16
+Error:3.11, De/dt: -5.27
+Error:3.04, De/dt: 4.73
+Error:2.61, De/dt: 19.66
+Error:1.76, De/dt: 38.10
+Error:0.92, De/dt: 45.40
+Error:0.11, De/dt: 43.51
+Error:-0.91, De/dt: 43.38
+Error:-1.70, De/dt: 36.12
+Error:-2.07, De/dt: 20.94
+Error:-1.74, De/dt: -6.33
+Error:-1.40, De/dt: -17.70
+Error:-1.19, De/dt: -18.09
+Error:-1.01, De/dt: -17.34
+Error:-0.84, De/dt: -17.18
+Error:-0.73, De/dt: -14.82
+Error:-0.66, De/dt: -12.78
+Error:-0.63, De/dt: -10.77
+Error:-0.64, De/dt: -8.94
+Error:-0.67, De/dt: -7.49
+Error:-0.72, De/dt: -6.04
+Error:-0.81, De/dt: -4.70
+Error:-0.92, De/dt: -3.41
+Error:-1.05, De/dt: -2.28
+Error:-1.20, De/dt: -1.11
+Error:-1.38, De/dt: 0.07
+Error:-1.58, De/dt: 1.18
+Error:-1.79, De/dt: 2.17
+Error:-1.90, De/dt: 3.00
+Error:-2.01, De/dt: 4.26
+Error:-2.12, De/dt: 5.18
+Error:-2.26, De/dt: 6.13
+Error:-2.41, De/dt: 7.01
+Error:-2.55, De/dt: 6.95
+Error:-2.65, De/dt: 5.78
+Error:-2.64, De/dt: 2.00
+Error:-2.48, De/dt: -3.79
+Error:-2.29, De/dt: -7.20
+Error:-2.21, De/dt: -5.51
+Error:-2.26, De/dt: -0.64
+Error:-2.43, De/dt: 5.00
+Error:-2.57, De/dt: 6.13
+Error:-2.61, De/dt: 3.51
+Error:-2.27, De/dt: -8.80
+Error:-1.62, De/dt: -22.98
+Error:-0.98, De/dt: -28.39
+Error:-0.51, De/dt: -25.28
+Error:-0.49, De/dt: -10.70
+Error:-0.70, De/dt: 1.97
+Error:-1.12, De/dt: 13.20
+Error:-1.57, De/dt: 18.93
+Error:-2.03, De/dt: 21.29
+Error:-2.40, De/dt: 19.63
+Error:-2.73, De/dt: 17.78
+Error:-2.93, De/dt: 13.14
+Error:-2.82, De/dt: 1.87
+Error:-2.61, De/dt: -5.48
+Error:-2.47, De/dt: -6.51
+Error:-2.51, De/dt: -1.29
+Error:-2.72, De/dt: 5.82
+Error:-2.85, De/dt: 6.27
+Error:-2.75, De/dt: -0.54
+Error:-2.46, De/dt: -8.81
+Error:-2.26, De/dt: -9.53
+Error:-1.98, De/dt: -12.46
+Error:-1.78, De/dt: -11.00
+Error:-1.71, De/dt: -6.23
+Error:-2.00, De/dt: 5.99
+Error:-2.47, De/dt: 16.54
+Error:-3.13, De/dt: 26.52
+Error:-3.65, De/dt: 26.01
+Error:-3.47, De/dt: 5.25
+Error:-2.97, De/dt: -12.92
+Error:-2.34, De/dt: -24.08
+Error:-1.96, De/dt: -21.24
+Error:-1.81, De/dt: -12.93
+Error:-1.85, De/dt: -4.05
+Error:-2.26, De/dt: 10.86
+Error:-3.14, De/dt: 30.69
+Error:-3.65, De/dt: 27.58
+Error:-3.98, De/dt: 21.08
+Error:-3.30, De/dt: -12.04
+Error:-2.28, De/dt: -35.37
+Error:-1.34, De/dt: -42.58
+Error:-0.67, De/dt: -36.98
+Error:-0.23, De/dt: -28.11
+Error:0.24, De/dt: -20.47
+Error:0.60, De/dt: -14.21
+Error:0.66, De/dt: -2.58
+Error:0.59, De/dt: 5.91
+Error:0.31, De/dt: 15.33
+Error:-0.35, De/dt: 21.39
+Error:-1.16, De/dt: 27.93
+Error:-2.09, De/dt: 34.33
+Error:-2.82, De/dt: 30.83
+Error:-3.16, De/dt: 17.63
+Error:-2.58, De/dt: -10.36
+Error:-1.82, De/dt: -26.90
+Error:-1.18, De/dt: -30.00
+Error:-0.67, De/dt: -27.30
+Error:-0.37, De/dt: -19.85
+Error:-0.20, De/dt: -13.18
+Error:-0.28, De/dt: -2.72
+Error:-0.38, De/dt: 1.84
+Error:-0.51, De/dt: 4.68
+Error:-0.67, De/dt: 6.64
+Error:-0.85, De/dt: 8.12
+Error:-1.04, De/dt: 8.83
+Error:-1.17, De/dt: 7.48
+Error:-1.22, De/dt: 4.39
+Error:-1.19, De/dt: 0.90
+Error:-1.08, De/dt: -2.86
+Error:-0.93, De/dt: -5.73
+Error:-0.63, De/dt: -11.06
+Error:-0.17, De/dt: -18.40
+Error:0.58, De/dt: -25.03
+Error:1.47, De/dt: -31.82
+Error:2.50, De/dt: -39.04
+Error:3.54, De/dt: -41.73
+Error:4.57, De/dt: -43.01
+Error:5.25, De/dt: -32.75
+Error:5.14, De/dt: -4.93
+Error:4.12, De/dt: 33.26
+Error:2.54, De/dt: 65.69
+Error:1.46, De/dt: 63.40
+Error:0.72, De/dt: 52.26
+Error:-0.22, De/dt: 44.54
+Error:-0.83, De/dt: 31.14
+Error:-0.85, De/dt: 8.21
+Error:-0.66, De/dt: -7.07
+Error:-0.34, De/dt: -17.24
+Error:0.48, De/dt: -26.61
+Error:1.41, De/dt: -33.74
+Error:2.75, De/dt: -49.11
+Error:3.69, De/dt: -43.04
+Error:3.94, De/dt: -19.90
+Error:3.42, De/dt: 12.48
+Error:2.92, De/dt: 24.77
+Error:3.21, De/dt: 6.18
+Error:3.65, De/dt: -5.98
+Error:3.51, De/dt: 6.59
+Error:3.07, De/dt: 20.63
+Error:2.95, De/dt: 16.63
+Error:2.83, De/dt: 14.90
+Error:2.61, De/dt: 17.58
+Error:2.53, De/dt: 14.23
+Error:2.38, De/dt: 11.27
+Error:2.08, De/dt: 13.41
+Error:1.80, De/dt: 13.96
+Error:1.51, De/dt: 14.06
+Error:1.41, De/dt: 8.73
+Error:1.35, De/dt: 5.47
+Error:1.37, De/dt: 1.35
+Error:1.32, De/dt: 2.22
+Error:1.30, De/dt: 1.49
+Error:1.26, De/dt: 1.83
+Error:1.15, De/dt: 3.96
+Error:1.16, De/dt: 1.12
+Error:1.25, De/dt: -2.25
+Error:1.29, De/dt: -2.04
+Error:1.45, De/dt: -5.57
+Error:1.55, De/dt: -5.30
+Error:1.67, De/dt: -5.71
+Error:1.87, De/dt: -8.09
+Error:2.04, De/dt: -8.32
+Error:2.08, De/dt: -4.64
+Error:2.14, De/dt: -3.61
+Error:2.15, De/dt: -1.95
+Error:2.17, De/dt: -1.14
+Error:2.14, De/dt: 0.49
+Error:2.10, De/dt: 1.15
+Error:2.07, De/dt: 1.52
+Error:2.04, De/dt: 1.48
+Error:2.02, De/dt: 1.30
+Error:2.02, De/dt: 0.46
+Error:2.02, De/dt: -0.01
+Error:2.05, De/dt: -0.66
+Error:2.07, De/dt: -1.01
+Error:2.07, De/dt: -0.51
+Error:1.98, De/dt: 2.67
+Error:1.81, De/dt: 6.23
+Error:1.67, De/dt: 6.67
+Error:1.59, De/dt: 4.97
+Error:1.49, De/dt: 5.13
+Error:1.35, De/dt: 6.17
+Error:1.17, De/dt: 7.72
+Error:0.98, De/dt: 8.96
+Error:0.75, De/dt: 10.42
+Error:0.49, De/dt: 11.94
+Error:0.20, De/dt: 13.63
+Error:-0.29, De/dt: 15.29
+Error:-0.82, De/dt: 17.19
+Error:-1.40, De/dt: 19.55
+Error:-2.09, De/dt: 23.46
+Error:-2.64, De/dt: 21.12
+Error:-3.18, De/dt: 19.89
+Error:-3.63, De/dt: 16.75
+Error:-3.94, De/dt: 11.16
+Error:-4.11, De/dt: 4.84
+Error:-4.00, De/dt: -6.21
+Error:-3.45, De/dt: -23.81
+Error:-2.71, De/dt: -36.58
+Error:-2.24, De/dt: -33.61
+Error:-2.16, De/dt: -20.48
+Error:-2.52, De/dt: -2.28
+Error:-2.94, De/dt: 6.96
+Error:-3.26, De/dt: 7.48
+Error:-2.78, De/dt: -16.24
+Error:-1.84, De/dt: -39.39
+Error:-0.81, De/dt: -51.32
+Error:0.23, De/dt: -47.19
+Error:1.21, De/dt: -43.34
+Error:1.76, De/dt: -28.97
+Error:1.88, De/dt: -10.45
+Error:1.75, De/dt: 4.66
+Error:1.48, De/dt: 14.48
+Error:1.06, De/dt: 23.44
+Error:0.46, De/dt: 32.15
+Error:-0.46, De/dt: 35.65
+Error:-1.53, De/dt: 41.34
+Error:-3.57, De/dt: 72.94
+Error:-3.65, De/dt: 26.80
+Error:-2.55, De/dt: -26.99
+Error:-1.11, De/dt: -58.83
+Error:0.50, De/dt: -66.84
+Error:1.56, De/dt: -53.79
+Error:2.22, De/dt: -36.71
+Error:1.87, De/dt: 0.72
+Error:1.36, De/dt: 20.40
+Error:1.19, De/dt: 17.93
+Error:1.13, De/dt: 13.97
+Error:1.13, De/dt: 10.34
+Error:1.18, De/dt: 7.56
+Error:1.23, De/dt: 6.09
+Error:1.34, De/dt: 3.89
+Error:1.50, De/dt: 1.72
+Error:1.69, De/dt: -0.29
+Error:1.92, De/dt: -2.15
+Error:2.20, De/dt: -4.41
+Error:2.52, De/dt: -6.71
+Error:2.90, De/dt: -9.07
+Error:3.23, De/dt: -8.85
+Error:3.52, De/dt: -12.16
+Error:3.70, De/dt: -10.35
+Error:3.48, De/dt: 2.43
+Error:2.89, De/dt: 18.82
+Error:2.36, De/dt: 23.21
+Error:2.03, De/dt: 19.14
+Error:1.96, De/dt: 9.96
+Error:2.21, De/dt: -3.47
+Error:2.57, De/dt: -12.30
+Error:3.17, De/dt: -22.79
+Error:3.49, De/dt: -18.78
+Error:3.33, De/dt: -2.92
+Error:2.72, De/dt: 17.31
+Error:2.06, De/dt: 26.59
+Error:1.58, De/dt: 25.04
+Error:1.37, De/dt: 16.43
+Error:1.15, De/dt: 13.20
+Error:1.15, De/dt: 5.13
+Error:1.25, De/dt: -0.81
+Error:1.43, De/dt: -5.65
+Error:1.80, De/dt: -13.46
+Error:2.36, De/dt: -22.15
+Error:2.85, De/dt: -23.63
+Error:3.37, De/dt: -25.06
+Error:3.58, De/dt: -16.26
+Error:3.12, De/dt: 7.42
+Error:2.33, De/dt: 26.51
+Error:1.62, De/dt: 31.94
+Error:1.00, De/dt: 31.23
+Error:0.34, De/dt: 32.35
+Error:-0.20, De/dt: 24.39
+Error:-0.60, De/dt: 17.05
+Error:-0.95, De/dt: 12.31
+Error:-1.33, De/dt: 11.74
+Error:-1.64, De/dt: 9.11
+Error:-1.92, De/dt: 7.29
+Error:-2.13, De/dt: 4.49
+Error:-2.31, De/dt: 2.21
+Error:-2.42, De/dt: -0.57
+Error:-2.56, De/dt: -1.00
+Error:-2.73, De/dt: -0.04
+Error:-2.94, De/dt: 1.57
+Error:-3.17, De/dt: 2.65
+Error:-3.32, De/dt: 0.78
+Error:-3.21, De/dt: -7.71
+Error:-2.70, De/dt: -23.11
+Error:-2.24, De/dt: -28.04
+Error:-1.98, De/dt: -23.66
+Error:-2.14, De/dt: -9.54
+Error:-2.53, De/dt: 3.07
+Error:-3.56, De/dt: 27.49
+Error:-3.69, De/dt: 13.53
+Error:-3.27, De/dt: -7.14
+Error:-2.51, De/dt: -25.50
+Error:-1.66, De/dt: -35.87
+Error:-1.05, De/dt: -32.53
+Error:-0.55, De/dt: -28.04
+Error:-0.46, De/dt: -13.91
+Error:-0.42, De/dt: -6.83
+Error:-0.66, De/dt: 4.40
+Error:-1.08, De/dt: 14.58
+Error:-1.58, De/dt: 20.64
+Error:-2.05, De/dt: 22.47
+Error:-2.40, De/dt: 19.47
+Error:-2.52, De/dt: 11.25
+Error:-2.49, De/dt: 3.73
+Error:-2.45, De/dt: 0.25
+Error:-2.50, De/dt: 1.61
+Error:-2.67, De/dt: 5.71
+Error:-2.75, De/dt: 4.64
+Error:-2.73, De/dt: 1.38
+Error:-2.65, De/dt: -1.89
+Error:-2.43, De/dt: -7.49
+Error:-2.24, De/dt: -8.44
+Error:-2.13, De/dt: -6.81
+Error:-2.01, De/dt: -6.36
+Error:-2.02, De/dt: -2.09
+Error:-1.99, De/dt: -1.96
+Error:-1.86, De/dt: -4.43
+Error:-1.92, De/dt: -0.12
+Error:-2.05, De/dt: 3.98
+Error:-2.32, De/dt: 9.60
+Error:-2.81, De/dt: 18.59
+Error:-3.14, De/dt: 17.26
+Error:-3.13, De/dt: 6.63
+Error:-2.71, De/dt: -10.01
+Error:-2.01, De/dt: -24.88
+Error:-1.59, De/dt: -22.56
+Error:-1.32, De/dt: -17.07
+Error:-1.07, De/dt: -14.42
+Error:-1.22, De/dt: -1.45
+Error:-1.50, De/dt: 8.02
+Error:-2.09, De/dt: 20.86
+Error:-2.72, De/dt: 27.35
+Error:-2.77, De/dt: 12.20
+Error:-2.71, De/dt: 3.07
+Error:-2.47, De/dt: -5.92
+Error:-2.31, De/dt: -7.16
+Error:-2.37, De/dt: -1.03
+Error:-2.48, De/dt: 2.89
+Error:-2.66, De/dt: 6.66
+Error:-2.67, De/dt: 3.01
+Error:-2.57, De/dt: -1.77
+Error:-2.18, De/dt: -12.57
+Error:-1.71, De/dt: -19.09
+Error:-1.39, De/dt: -17.26
+Error:-1.28, De/dt: -10.19
+Error:-1.48, De/dt: 2.04
+Error:-1.85, De/dt: 11.87
+Error:-2.30, De/dt: 18.30
+Error:-2.70, De/dt: 19.16
+Error:-2.93, De/dt: 14.63
+Error:-2.75, De/dt: 0.40
+Error:-2.44, De/dt: -9.14
+Error:-2.16, De/dt: -12.01
+Error:-2.10, De/dt: -6.68
+Error:-2.29, De/dt: 3.11
+Error:-2.62, De/dt: 11.19
+Error:-2.80, De/dt: 9.74
+Error:-2.58, De/dt: -2.67
+Error:-2.05, De/dt: -16.90
+Error:-1.59, De/dt: -20.53
+Error:-1.22, De/dt: -19.32
+Error:-1.03, De/dt: -13.62
+Error:-1.13, De/dt: -2.24
+Error:-1.31, De/dt: 4.44
+Error:-1.60, De/dt: 10.54
+Error:-1.88, De/dt: 12.61
+Error:-2.12, De/dt: 12.08
+Error:-2.27, De/dt: 9.45
+Error:-2.40, De/dt: 7.69
+Error:-2.52, De/dt: 6.74
+Error:-2.62, De/dt: 5.51
+Error:-2.66, De/dt: 3.46
+Error:-2.65, De/dt: 1.20
+Error:-2.54, De/dt: -3.00
+Error:-2.42, De/dt: -4.58
+Error:-2.29, De/dt: -5.92
+Error:-2.16, De/dt: -6.10
+Error:-2.07, De/dt: -5.32
+Error:-2.00, De/dt: -4.21
+Error:-1.96, De/dt: -2.74
+Error:-2.02, De/dt: 0.46
+Error:-2.02, De/dt: 0.20
+Error:-1.97, De/dt: -1.25
+Error:-1.90, De/dt: -2.76
+Error:-1.80, De/dt: -4.03
+Error:-1.67, De/dt: -5.35
+Error:-1.53, De/dt: -6.55
+Error:-1.35, De/dt: -7.95
+Error:-1.15, De/dt: -9.18
+Error:-0.92, De/dt: -10.62
+Error:-0.65, De/dt: -12.14
+Error:-0.35, De/dt: -14.08
+Error:0.16, De/dt: -16.05
+Error:0.71, De/dt: -18.19
+Error:1.33, De/dt: -20.98
+Error:1.98, De/dt: -23.07
+Error:2.70, De/dt: -26.16
+Error:3.46, De/dt: -28.33
+Error:3.99, De/dt: -22.57
+Error:4.13, De/dt: -8.37
+Error:3.67, De/dt: 15.29
+Error:3.37, De/dt: 19.90
+Error:3.21, De/dt: 17.67
+Error:3.41, De/dt: 5.66
+Error:3.76, De/dt: -3.29
+Error:3.77, De/dt: 3.04
+Error:3.58, De/dt: 11.92
+Error:3.17, De/dt: 21.85
+Error:2.58, De/dt: 31.14
+Error:2.01, De/dt: 34.73
+Error:1.78, De/dt: 25.15
+Error:1.63, De/dt: 19.46
+Error:1.61, De/dt: 13.12
+Error:1.72, De/dt: 3.26
+Error:1.79, De/dt: -0.91
+Error:2.07, De/dt: -8.85
+Error:2.46, De/dt: -15.00
+Error:3.07, De/dt: -24.44
+Error:3.56, De/dt: -24.33
+Error:3.45, De/dt: -6.54
+Error:2.94, De/dt: 12.52
+Error:2.13, De/dt: 29.47
+Error:1.61, De/dt: 27.49
+Error:1.20, De/dt: 23.32
+Error:0.77, De/dt: 22.09
+Error:0.56, De/dt: 15.10
+Error:0.41, De/dt: 10.67
+Error:0.31, De/dt: 7.18
+Error:0.33, De/dt: 2.13
+Error:0.32, De/dt: 1.16
+Error:0.31, De/dt: 0.96
+Error:0.15, De/dt: 5.11
+Error:0.01, De/dt: 6.27
+Error:-0.22, De/dt: 4.71
+Error:-0.46, De/dt: 4.12
+Error:-0.68, De/dt: 3.55
+Error:-0.98, De/dt: 5.53
+Error:-1.32, De/dt: 7.70
+Error:-1.67, De/dt: 8.56
+Error:-1.98, De/dt: 8.12
+Error:-2.28, De/dt: 7.37
+Error:-2.49, De/dt: 4.62
+Error:-2.63, De/dt: 1.18
+Error:-2.41, De/dt: -10.96
+Error:-2.17, De/dt: -16.50
+Error:-2.05, De/dt: -15.06
+Error:-1.99, De/dt: -12.45
+Error:-2.00, De/dt: -9.38
+Error:-2.07, De/dt: -6.55
+Error:-2.20, De/dt: -3.58
+Error:-2.38, De/dt: -0.74
+Error:-2.61, De/dt: 1.66
+Error:-2.83, De/dt: 2.52
+Error:-3.03, De/dt: 2.15
+Error:-3.06, De/dt: 0.71
+Error:-2.96, De/dt: -2.86
+Error:-2.72, De/dt: -8.13
+Error:-2.46, De/dt: -11.32
+Error:-2.23, De/dt: -11.28
+Error:-2.09, De/dt: -8.76
+Error:-2.05, De/dt: -4.72
+Error:-2.02, De/dt: -2.81
+Error:-1.95, De/dt: -3.05
+Error:-1.89, De/dt: -3.24
+Error:-1.77, De/dt: -4.79
+Error:-1.94, De/dt: 3.10
+Error:-2.44, De/dt: 16.20
+Error:-2.98, De/dt: 22.80
+Error:-3.31, De/dt: 19.17
+Error:-3.19, De/dt: 3.99
+Error:-2.92, De/dt: -6.45
+Error:-2.59, De/dt: -12.61
+Error:-2.32, De/dt: -13.10
+Error:-2.27, De/dt: -6.75
+Error:-2.44, De/dt: 2.52
+Error:-2.50, De/dt: 2.63
+Error:-2.61, De/dt: 4.36
+Error:-2.45, De/dt: -3.17
+Error:-2.17, De/dt: -9.44
+Error:-1.74, De/dt: -16.73
+Error:-1.45, De/dt: -15.56
+Error:-1.36, De/dt: -8.81
+Error:-1.63, De/dt: 4.55
+Error:-1.92, De/dt: 10.63
+Error:-2.52, De/dt: 22.19
+Error:-3.13, De/dt: 27.21
+Error:-3.58, De/dt: 24.40
+Error:-3.49, De/dt: 6.97
+Error:-2.66, De/dt: -21.99
+Error:-1.73, De/dt: -36.88
+Error:-1.11, De/dt: -33.21
+Error:-0.69, De/dt: -25.92
+Error:-0.50, De/dt: -15.96
+Error:-0.45, De/dt: -7.89
+Error:-0.53, De/dt: -0.74
+Error:-0.79, De/dt: 7.49
+Error:-1.16, De/dt: 14.08
+Error:-1.75, De/dt: 23.29
+Error:-2.69, De/dt: 37.38
+Error:-3.41, De/dt: 36.78
+Error:-3.66, De/dt: 22.08
+Error:-3.10, De/dt: -7.97
+Error:-2.07, De/dt: -34.24
+Error:-1.18, De/dt: -40.26
+Error:-0.28, De/dt: -43.08
+Error:0.37, De/dt: -31.95
+Error:0.97, De/dt: -26.11
+Error:1.40, De/dt: -18.51
+Error:1.80, De/dt: -14.36
+Error:1.97, De/dt: -6.32
+Error:2.16, De/dt: -3.18
+Error:2.12, De/dt: 4.46
+Error:2.15, De/dt: 5.85
+Error:2.02, De/dt: 10.92
+Error:1.62, De/dt: 21.28
+Error:1.32, De/dt: 22.19
+Error:1.08, De/dt: 21.07
+Error:0.91, De/dt: 18.24
+Error:0.78, De/dt: 16.06
+Error:0.67, De/dt: 14.49
+Error:0.59, De/dt: 12.89
+Error:0.54, De/dt: 11.55
+Error:0.50, De/dt: 10.67
+Error:0.47, De/dt: 9.79
+Error:0.46, De/dt: 9.03
+Error:0.47, De/dt: 8.13
+Error:0.37, De/dt: 7.50
+Error:0.23, De/dt: 7.27
+Error:0.09, De/dt: 7.07
+Error:-0.20, De/dt: 6.84
+Error:-0.49, De/dt: 6.65
+Error:-0.79, De/dt: 6.80
+Error:-1.09, De/dt: 6.74
+Error:-1.37, De/dt: 6.49
+Error:-1.66, De/dt: 6.30
+Error:-1.95, De/dt: 6.42
+Error:-2.24, De/dt: 6.65
+Error:-2.56, De/dt: 7.31
+Error:-2.86, De/dt: 7.31
+Error:-3.10, De/dt: 5.31
+Error:-3.29, De/dt: 3.06
+Error:-3.30, De/dt: -3.35
+Error:-3.06, De/dt: -13.51
+Error:-2.74, De/dt: -19.82
+Error:-2.52, De/dt: -19.18
+Error:-2.58, De/dt: -10.78
+Error:-2.80, De/dt: -2.53
+Error:-3.03, De/dt: 1.10
+Error:-2.97, De/dt: -5.92
+Error:-2.33, De/dt: -26.55
+Error:-1.34, De/dt: -41.38
+Error:-0.38, De/dt: -45.59
+Error:0.56, De/dt: -41.49
+Error:1.27, De/dt: -33.14
+Error:1.93, De/dt: -28.29
+Error:2.15, De/dt: -12.99
+Error:2.39, De/dt: -7.75
+Error:2.70, De/dt: -7.65
+Error:3.09, De/dt: -9.81
+Error:3.54, De/dt: -12.48
+Error:3.91, De/dt: -11.56
+Error:4.04, De/dt: -3.54
+Error:3.50, De/dt: 19.56
+Error:2.87, De/dt: 31.61
+Error:2.36, De/dt: 32.65
+Error:2.31, De/dt: 19.31
+Error:2.46, De/dt: 8.10
+Error:2.92, De/dt: -5.78
+Error:3.09, De/dt: -2.65
+Error:2.81, De/dt: 12.27
+Error:2.20, De/dt: 27.98
+Error:1.42, De/dt: 39.21
+Error:0.90, De/dt: 36.13
+Error:-0.17, De/dt: 41.93
+Error:-0.78, De/dt: 30.17
+Error:-1.16, De/dt: 18.49
+Error:-1.38, De/dt: 9.24
+Error:-1.57, De/dt: 4.62
+Error:-1.70, De/dt: 1.00
+Error:-1.76, De/dt: -2.55
+Error:-1.68, De/dt: -8.17
+Error:-1.43, De/dt: -15.51
+Error:-1.28, De/dt: -15.52
+Error:-1.17, De/dt: -14.41
+Error:-1.10, De/dt: -12.84
+Error:-1.04, De/dt: -11.57
+Error:-1.01, De/dt: -10.29
+Error:-1.01, De/dt: -8.97
+Error:-1.03, De/dt: -7.87
+Error:-1.06, De/dt: -6.88
+Error:-1.11, De/dt: -6.13
+Error:-1.17, De/dt: -5.38
+Error:-1.24, De/dt: -5.01
+Error:-1.31, De/dt: -4.63
+Error:-1.23, De/dt: -4.30
+Error:-1.15, De/dt: -4.10
+Error:-1.07, De/dt: -3.93
+Error:-0.99, De/dt: -4.02
+Error:-0.91, De/dt: -3.90
+Error:-0.84, De/dt: -3.76
+Error:-0.77, De/dt: -3.72
+Error:-0.69, De/dt: -3.83
+Error:-0.61, De/dt: -3.95
+Error:-0.53, De/dt: -4.03
+Error:-0.44, De/dt: -4.35
+Error:-0.34, De/dt: -4.60
+Error:-0.24, De/dt: -4.77
+Error:-0.14, De/dt: -5.03
+Error:-0.03, De/dt: -5.36
+Error:0.26, De/dt: -5.88
+Error:0.55, De/dt: -6.46
+Error:0.86, De/dt: -7.05
+Error:1.19, De/dt: -7.92
+Error:1.54, De/dt: -8.83
+Error:1.91, De/dt: -9.74
+Error:2.30, De/dt: -10.90
+Error:2.72, De/dt: -12.16
+Error:3.11, De/dt: -11.61
+Error:3.49, De/dt: -11.33
+Error:3.71, De/dt: -6.44
+Error:3.68, De/dt: 3.35
+Error:3.47, De/dt: 12.25
+Error:3.16, De/dt: 19.22
+Error:2.84, De/dt: 22.11
+Error:2.74, De/dt: 16.53
+Error:2.87, De/dt: 7.63
+Error:3.14, De/dt: -0.44
+Error:3.03, De/dt: 8.08
+Error:2.47, De/dt: 24.67
+Error:1.74, De/dt: 36.68
+Error:1.04, De/dt: 36.91
+Error:0.36, De/dt: 34.92
+Error:-0.47, De/dt: 34.20
+Error:-1.18, De/dt: 30.27
+Error:-1.78, De/dt: 25.20
+Error:-1.90, De/dt: 8.90
+Error:-1.85, De/dt: -2.80
+Error:-1.94, De/dt: -3.14
+Error:-2.07, De/dt: -2.10
+Error:-2.26, De/dt: 0.06
+Error:-2.50, De/dt: 2.44
+Error:-2.80, De/dt: 5.07
+Error:-3.15, De/dt: 7.65
+Error:-3.40, De/dt: 5.75
+Error:-3.47, De/dt: -0.27
+Error:-3.22, De/dt: -12.29
+Error:-2.86, De/dt: -20.70
+Error:-2.48, De/dt: -24.36
+Error:-2.32, De/dt: -19.41
+Error:-2.55, De/dt: -5.63
+Error:-2.84, De/dt: 1.51
+Error:-3.02, De/dt: 1.37
+Error:-2.92, De/dt: -7.26
+Error:-2.02, De/dt: -31.02
+Error:-1.02, De/dt: -42.60
+Error:-0.18, De/dt: -42.30
+Error:0.69, De/dt: -38.21
+Error:1.28, De/dt: -27.99
+Error:1.64, De/dt: -17.16
+Error:1.90, De/dt: -9.92
+Error:2.06, De/dt: -4.11
+Error:2.10, De/dt: 1.98
+Error:1.93, De/dt: 10.73
+Error:1.82, De/dt: 12.48
+Error:1.65, De/dt: 14.90
+Error:1.47, De/dt: 16.36
+Error:1.36, De/dt: 14.20
+Error:1.30, De/dt: 12.54
+Error:1.26, De/dt: 11.00
+Error:1.24, De/dt: 9.83
+Error:1.24, De/dt: 8.51
+Error:1.26, De/dt: 7.58
+Error:1.30, De/dt: 6.76
+Error:1.34, De/dt: 6.22
+Error:1.40, De/dt: 5.71
+Error:1.45, De/dt: 5.42
+Error:1.51, De/dt: 5.26
+Error:1.45, De/dt: 5.15
+Error:1.34, De/dt: 5.20
+Error:1.23, De/dt: 5.46
+Error:1.11, De/dt: 5.84
+Error:0.97, De/dt: 6.41
+Error:0.81, De/dt: 7.24
+Error:0.65, De/dt: 7.98
+Error:0.45, De/dt: 8.96
+Error:0.23, De/dt: 10.24
+Error:-0.18, De/dt: 11.60
+Error:-0.62, De/dt: 13.07
+Error:-1.10, De/dt: 14.97
+Error:-1.63, De/dt: 17.08
+Error:-2.22, De/dt: 19.59
+Error:-2.71, De/dt: 17.74
+Error:-3.32, De/dt: 20.73
+Error:-3.84, De/dt: 18.90
+Error:-4.08, De/dt: 10.17
+Error:-3.96, De/dt: -4.60
+Error:-3.50, De/dt: -20.18
+Error:-2.92, De/dt: -30.46
+Error:-2.60, De/dt: -26.62
+Error:-2.60, De/dt: -15.36
+Error:-2.94, De/dt: -0.74
+Error:-3.35, De/dt: 7.24
+Error:-3.44, De/dt: 0.63
+Error:-2.76, De/dt: -24.97
+Error:-1.64, De/dt: -48.39
+Error:-0.61, De/dt: -54.98
+Error:0.79, De/dt: -58.97
+Error:1.58, De/dt: -42.63
+Error:1.74, De/dt: -16.96
+Error:1.46, De/dt: 6.40
+Error:1.08, De/dt: 18.69
+Error:0.63, De/dt: 25.81
+Error:-0.32, De/dt: 34.02
+Error:-1.34, De/dt: 39.51
+Error:-2.49, De/dt: 45.48
+Error:-3.10, De/dt: 31.43
+Error:-3.09, De/dt: 7.70
+Error:-2.63, De/dt: -15.54
+Error:-2.04, De/dt: -28.92
+Error:-1.56, De/dt: -27.11
+Error:-1.04, De/dt: -26.42
+Error:-0.75, De/dt: -19.17
+Error:-0.60, De/dt: -12.28
+Error:-0.32, De/dt: -13.33
+Error:-0.17, De/dt: -9.76
+Error:-0.08, De/dt: -6.62
+Error:0.28, De/dt: -8.63
+Error:0.59, De/dt: -7.92
+Error:0.87, De/dt: -6.92
+Error:1.16, De/dt: -6.62
+Error:1.40, De/dt: -4.84
+Error:1.74, De/dt: -7.38
+Error:2.17, De/dt: -11.16
+Error:2.69, De/dt: -15.39
+Error:3.33, De/dt: -20.49
+Error:4.01, De/dt: -23.78
+Error:4.45, De/dt: -17.94
+Error:4.26, De/dt: 3.49
+Error:3.43, De/dt: 30.94
+Error:2.57, De/dt: 43.19
+Error:2.02, De/dt: 38.58
+Error:1.76, De/dt: 27.90
+Error:1.77, De/dt: 15.61
+Error:2.01, De/dt: 3.77
+Error:2.49, De/dt: -8.04
+Error:3.27, De/dt: -21.91
+Error:3.88, De/dt: -21.98
+Error:4.02, De/dt: -11.90
+Error:3.44, De/dt: 12.53
+Error:2.36, De/dt: 37.52
+Error:1.34, De/dt: 45.62
+Error:0.21, De/dt: 52.26
+Error:-0.79, De/dt: 46.08
+Error:-1.33, De/dt: 29.73
+Error:-1.36, De/dt: 7.95
+Error:-1.06, De/dt: -10.61
+Error:-0.86, De/dt: -14.95
+Error:-0.63, De/dt: -17.85
+Error:-0.45, De/dt: -17.28
+Error:-0.26, De/dt: -17.52
+Error:0.30, De/dt: -18.78
+Error:0.96, De/dt: -22.59
+Error:1.67, De/dt: -25.42
+Error:2.42, De/dt: -27.94
+Error:3.24, De/dt: -31.02
+Error:3.42, De/dt: -13.14
+Error:2.94, De/dt: 13.99
+Error:2.19, De/dt: 32.97
+Error:1.35, De/dt: 38.39
+Error:0.60, De/dt: 37.98
+Error:-0.36, De/dt: 38.95
+Error:-1.15, De/dt: 34.61
+Error:-1.69, De/dt: 25.14
+Error:-1.97, De/dt: 13.62
+Error:-2.00, De/dt: 1.57
+Error:-2.18, De/dt: 1.25
+Error:-2.39, De/dt: 2.13
+Error:-2.71, De/dt: 5.43
+Error:-3.10, De/dt: 9.07
+Error:-3.43, De/dt: 9.01
+Error:-3.56, De/dt: 2.66
+Error:-3.43, De/dt: -7.69
+Error:-3.23, De/dt: -13.93
+Error:-2.89, De/dt: -20.62
+Error:-2.62, De/dt: -20.95
+Error:-2.57, De/dt: -14.78
+Error:-2.75, De/dt: -5.26
+Error:-2.91, De/dt: -2.14
+Error:-3.00, De/dt: -3.12
+Error:-2.48, De/dt: -21.44
+Error:-1.75, De/dt: -35.36
+Error:-0.86, De/dt: -42.04
+Error:-0.09, De/dt: -40.04
+Error:0.67, De/dt: -33.49
+Error:1.21, De/dt: -25.28
+Error:1.60, De/dt: -16.80
+Error:1.85, De/dt: -9.42
+Error:2.00, De/dt: -3.49
+Error:2.05, De/dt: 1.69
+Error:2.04, De/dt: 5.86
+Error:1.83, De/dt: 13.36
+Error:1.49, De/dt: 20.35
+Error:1.06, De/dt: 26.08
+Error:0.64, De/dt: 27.82
+Error:0.22, De/dt: 28.32
+Error:-0.50, De/dt: 28.12
+Error:-1.21, De/dt: 27.77
+Error:-1.97, De/dt: 29.33
+Error:-2.59, De/dt: 25.41
+Error:-2.99, De/dt: 17.49
+Error:-3.15, De/dt: 7.01
+Error:-3.44, De/dt: 6.51
+Error:-3.21, De/dt: -9.15
+Error:-2.76, De/dt: -21.93
+Error:-2.53, De/dt: -20.30
+Error:-2.52, De/dt: -13.28
+Error:-2.44, De/dt: -12.54
+Error:-2.15, De/dt: -13.81
+Error:-1.66, De/dt: -20.06
+Error:-1.05, De/dt: -26.46
+Error:-0.51, De/dt: -26.61
+Error:-0.13, De/dt: -22.15
+Error:0.45, De/dt: -21.42
+Error:1.12, De/dt: -23.95
+Error:1.90, De/dt: -28.28
+Error:2.75, De/dt: -31.96
+Error:3.60, De/dt: -33.31
+Error:4.25, De/dt: -28.06
+Error:4.69, De/dt: -19.79
+Error:4.36, De/dt: 7.01
+Error:3.31, De/dt: 38.89
+Error:2.36, De/dt: 48.80
+Error:1.99, De/dt: 35.41
+Error:2.37, De/dt: 7.81
+Error:2.88, De/dt: -7.28
+Error:3.49, De/dt: -16.69
+Error:4.10, De/dt: -20.20
+Error:4.05, De/dt: -1.54
+Error:3.81, De/dt: 11.34
+Error:3.68, De/dt: 13.09
+Error:3.56, De/dt: 13.75
+Error:3.50, De/dt: 11.93
+Error:3.48, De/dt: 10.23
+Error:3.24, De/dt: 12.45
+Error:3.04, De/dt: 11.00
+Error:2.93, De/dt: 7.75
+Error:2.86, De/dt: 5.29
+Error:2.64, De/dt: 8.54
+Error:2.72, De/dt: 1.26
+Error:2.47, De/dt: 8.02
+Error:2.46, De/dt: 3.24
+Error:2.50, De/dt: 0.32
+Error:2.58, De/dt: -2.23
+Error:2.75, De/dt: -6.17
+Error:2.72, De/dt: -1.61
+Error:2.64, De/dt: 1.69
+Error:2.19, De/dt: 14.45
+Error:2.00, De/dt: 11.37
+Error:2.28, De/dt: -3.87
+Error:2.44, De/dt: -6.37
+Error:3.21, De/dt: -25.67
+Error:3.41, De/dt: -16.27
+Error:3.43, De/dt: -7.09
+Error:3.60, De/dt: -8.00
+Error:3.57, De/dt: -2.12
+Error:3.68, De/dt: -4.17
+Error:3.75, De/dt: -3.88
+Error:3.79, De/dt: -2.80
+Error:3.83, De/dt: -2.24
+Error:3.65, De/dt: 4.57
+Error:3.47, De/dt: 7.18
+Error:3.15, De/dt: 12.36
+Error:2.70, De/dt: 18.48
+Error:2.49, De/dt: 13.83
+Error:2.09, De/dt: 17.48
+Error:1.89, De/dt: 13.11
+Error:2.03, De/dt: 0.96
+Error:2.34, De/dt: -8.93
+Error:2.80, De/dt: -17.52
+Error:3.05, De/dt: -14.27
+Error:3.29, De/dt: -13.05
+Error:3.31, De/dt: -5.82
+Error:3.24, De/dt: -0.32
+Error:3.19, De/dt: 1.57
+Error:2.98, De/dt: 6.84
+Error:2.98, De/dt: 2.86

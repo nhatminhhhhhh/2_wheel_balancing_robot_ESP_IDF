@@ -1,0 +1,401 @@
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clkets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e858h (125016) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e880 vaddr=3ffb0000 size=01798h (  6040) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=92aa8h (600744) map[0m
+[0;32mI (359) esp_image: segment 3: paddr=000c2ad0 vaddr=3ffb1798 size=0283ch ( 10300) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000c5314 vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (417) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (417) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (438) app_init: Application information:[0m
+[0;32mI (441) app_init: Project name:     IDF_project[0m
+[0;32mI (446) app_init: App version:      dd97b7c-dirty[0m
+[0;32mI (452) app_init: Compile time:     Dec 29 2025 11:47:23[0m
+[0;32mI (458) app_init: ELF file SHA256:  8a7627e42...[0m
+[0;32mI (463) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (473) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (483) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (490) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (523) spi_flash: detected chip: generic[0m
+[0;32mI (526) spi_flash: flash io: dio[0m
+[0;33mW (530) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (565) MAIN: Connecting to WiFi...[0m
+[0;32mI (605) wifi:wifi driver task: 3ffc043c, prio:23, stack:6656, core=0[0m
+[0;32mI (615) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (615) wifi:wifi certification version: v7.0[0m
+[0;32mI (615) wifi:config NVS flash: enabled[0m
+[0;32mI (615) wifi:config nano formating: disabled[0m
+[0;32mI (625) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (625) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (635) wifi:Init management short buffer num: 32[0m
+[0;32mI (635) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (645) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (645) wifi:Init static rx buffer num: 10[0m
+[0;32mI (645) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (655) wifi_init: rx ba win: 6[0m
+[0;32mI (655) wifi_init: accept mbox: 6[0m
+[0;32mI (655) wifi_init: tcpip mbox: 32[0m
+[0;32mI (665) wifi_init: udp mbox: 6[0m
+[0;32mI (665) wifi_init: tcp mbox: 6[0m
+[0;32mI (675) wifi_init: tcp tx win: 5760[0m
+[0;32mI (675) wifi_init: tcp rx win: 5760[0m
+[0;32mI (675) wifi_init: tcp mss: 1440[0m
+[0;32mI (685) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (685) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (695) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (775) wifi:mode : sta (1c:69:20:ca:90:9c)[0m
+[0;32mI (775) wifi:enable tsf[0m
+[0;32mI (775) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (795) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (795) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (815) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (825) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (865) wifi:connected with Tran Van Tuan, aid = 22, channel 7, BW20, bssid = e4:60:4d:cf:9a:d7[0m
+[0;32mI (865) wifi:security: WPA2-PSK, phy: bgn, rssi: -43[0m
+[0;32mI (865) wifi:pm start, type: 1[0m
+
+[0;32mI (865) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (885) wifi:<ba-add>idx:0 (ifx:0, e4:60:4d:cf:9a:d7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (905) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3875) esp_netif_handlers: sta ip: 192.168.1.199, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.199
+[0;32mI (3875) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3875) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4885) WEBSERVER: [34mPID loaded from NVS - Kp: 23.10, Ki: 40.50, Kd: 1.250, Kx: 0.60[0m[0m
+[0;32mI (4885) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4895) WEBSERVER: Web server started successfully![0m
+[0;32mI (4895) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5405) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5405) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5505) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5505) GPIO: LED GPIO initialized[0m
+[0;32mI (5505) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5515) GPIO: Button GPIO initialized[0m
+[0;32mI (7815) MAIN: I2C initialized successfully[0m
+[0;32mI (8115) MPU6050: Starting gyro calibration...[0m
+[0;32mI (12795) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (12795) MPU6050: Gyro offsets - X: -404.64, Y: -62.67, Z: 14.95[0m
+Target: 0.00, Max Speed: 240.0, Min Speed: 80.0
+Robot ready. Press the button to start balancing...
+-62.88
+-17.61
+-14.01
+-4.92
+-4.36
+-2.83
+-1.03
+-3.85
+-1.07
+3.04
+6.02
+8.93
+11.55
+11.25
+14.25
+16.37
+18.82
+19.83
+18.04
+12.29
+6.84
+0.03
+-7.14
+-11.76
+-14.24
+-15.65
+-17.37
+-13.61
+-7.67
+-0.72
+3.56
+5.68
+5.26
+4.67
+3.55
+3.37
+4.41
+4.86
+5.06
+3.45
+3.99
+4.33
+5.02
+5.78
+2.20
+-2.86
+-8.55
+-15.39
+-19.46
+-18.73
+-12.88
+-3.63
+-0.06
+6.66
+9.94
+8.53
+4.73
+0.81
+-1.21
+-0.09
+2.73
+5.92
+8.77
+12.63
+10.03
+9.73
+5.40
+-0.34
+-9.41
+-14.99
+-23.84
+-25.90
+-21.13
+-15.42
+-7.73
+-0.22
+13.82
+17.24
+16.82
+11.29
+4.91
+-0.89
+-2.53
+-6.30
+-2.55
+20.69
+71.02
+97.20
+111.30
+64.51
+28.07
+6.60
+12.21
+22.41
+17.17
+4.07
+-12.36
+-26.24
+-31.72
+-29.24
+-16.66
+-30.89
+-41.32
+-53.46
+-59.98
+-55.95
+-46.10
+-31.69
+-20.19
+-7.53
+-2.24
+0.42
+6.57
+7.19
+-0.25
+-0.05
+-3.13
+-3.19
+-0.73
+3.35
+8.62
+5.26
+1.45
+1.40
+1.08
+-0.53
+-2.54
+-2.88
+0.61
+2.22
+0.81
+-1.20
+-0.94
+2.29
+5.11
+8.76
+9.07
+7.28
+7.83
+5.91
+4.47
+-1.18
+-7.92
+-15.23
+-17.69
+-16.55
+-12.93
+-13.05
+-8.24
+0.62
+9.04
+12.38
+11.23
+10.63
+8.92
+5.32
+1.41
+0.42
+1.43
+5.78
+5.72
+7.72
+5.70
+3.80
+-3.83
+-14.56
+-11.61
+-4.22
+0.72
+-3.22
+-10.38
+-10.20
+1.86
+10.68
+12.25
+11.64
+5.08
+-5.35
+-13.40
+-17.66
+-15.54
+-12.02
+-2.36
+3.48
+11.95
+20.67
+24.97
+22.51
+10.41
+-3.98
+-15.43
+-21.15
+-26.75
+6.95
+19.31
+40.75
+45.63
+17.62
+-0.92
+-8.24
+-5.96
+1.25
+9.97
+19.97
+31.84
+43.50
+53.73
+67.47
+59.63
+54.73
+45.96
+36.91
+23.30
+14.64
+4.65
+-2.06
+-4.00
+-3.99
+-3.83
+-2.61
+-2.73
+-5.95
+-10.23
+-12.83
+-18.44
+-32.22
+-49.67
+-61.52
+-75.16
+-85.51
+-74.97
+-66.69
+-45.90
+-35.87
+-10.40
+-11.99
+-9.27
+-7.29
+-9.00
+-8.22
+-5.97
+-1.96
+0.09
+-0.74
+-2.43
+-1.66
+1.37
+4.82
+6.07
+6.50
+6.06
+5.36
+5.11
+-0.21
+1.02
+2.59
+0.34
+-0.07
+-0.35
+2.10
+-8.02
+5.64
+16.38
+7.21
+3.53
+1.47
+-0.17
+3.30
+7.79
+10.60
+9.22
+7.74
+1.32
+-2.35
+2.46
+1.51
+5.25
+5.72
+3.65
+2.89
+3.87
+-1.79
+-10.00
+-12.32

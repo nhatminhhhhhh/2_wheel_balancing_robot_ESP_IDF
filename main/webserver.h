@@ -2,13 +2,14 @@
 #define WEBSERVER_H
 
 #include "esp_err.h"
+#include <stdbool.h>
 
 // WiFi credentials - update these with your router details
 #define WIFI_SSID      "Tran Van Tuan"
 #define WIFI_PASSWORD  "0353070860"
 
-// #define WIFI_SSID      "P2.3->2.6"
-// #define WIFI_PASSWORD  "Chinhanh2"
+// #define WIFI_SSID      "nminh"
+// #define WIFI_PASSWORD  "nminh21022005"
 
 // NVS namespace for storing PID parameters
 #define NVS_NAMESPACE  "pid_storage"
@@ -44,6 +45,7 @@ esp_err_t webserver_start(void);
  * @param kx Pointer to store Kx value
  */
 void webserver_get_pid(float *kp, float *ki, float *kd, float *kx);
+bool webserver_get_fuzzy_autotune(void);
 esp_err_t pid_load_from_nvs(void);
 esp_err_t pid_save_to_nvs(void);
 

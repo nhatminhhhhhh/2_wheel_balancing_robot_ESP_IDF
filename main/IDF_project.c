@@ -8,6 +8,7 @@
 #include <math.h>
 #include "gpio.h"
 #include "webserver.h"
+#include "autotune.h"
 static const char *TAG = "MAIN";
 
 // PID parameters - now controlled via web server
@@ -16,7 +17,22 @@ float Ki ;
 float Kd ;
 float Kx;
 
-float Max_Output = 240.0f; // previous 230.0f
+float Kpmax = 35.0f;
+float Kpmin = 10.0f;
+float Kimax = 60.0f;
+float Kimin = 0.0f;
+float Kdmax = 1.7f;
+float Kdmin = 0.0f;
+
+// Base PID parameters (initial values)
+float Kp_base = 24.1f;
+float Ki_base = 40.0f;
+float Kd_base = 1.05f;
+
+// Flag to enable/disable fuzzy autotuning
+bool use_fuzzy_autotune = true;
+
+float Max_Output = 255.0f; // previous 230.0f
 float Min_Output = 80.0f;
 int Offset = 0;
 
@@ -29,7 +45,7 @@ float Prev_error = 0.0f;
 float Prev_Measured = 0.0f;
 float Output = 0.0f;
 float Derivative_filter = 0.0f;
-float Derivative_Alpha = 0.40f; // lower value means less filtering
+float Derivative_Alpha = 0.20f; // lower value means less filtering
 float Delta_t = 0.02f; // Default to 20ms
 
 float Deadzone = 2.0f;
@@ -47,6 +63,7 @@ float contrains(float value, float min, float max){
     if(value < min) return min;
     return value;
 }
+float checkDirection = 0.0f;
 
 void angle_pid(float target_angle, float angle){
     int64_t now = esp_timer_get_time(); 
@@ -66,7 +83,8 @@ void angle_pid(float target_angle, float angle){
         int16_t speed = (int16_t) fabsf(OutputPWM);
         //speed = contrains(speed, 0, 176); // Limit speed to safe range
         motor_control(-OutputPWM, speed, 0, 0);
-        printf("Target Angle: %.2f, Measured Angle: %.2f, Error: %.2f, Output PWM: %.2f, Speed: %d\n", target_angle, angle, ErrorAngle, OutputPWM, speed);
+        //printf("Target Angle: %.2f, Measured Angle: %.2f, Error: %.2f, Output PWM: %.2f, Speed: %d\n", target_angle, angle, ErrorAngle, OutputPWM, speed);
+        
         PrevErrorAngle = ErrorAngle;
     }
 }
@@ -84,54 +102,73 @@ void pid_control(float setpoint, float measured){
             return;
     }
     gpio_set_level(LED_PIN, 1);
-    //webserver_get_pid(&Kp, &Ki, &Kd, &Kx); //tunning real time 
+    
+    bool prev_fuzzy_state = use_fuzzy_autotune;
+    use_fuzzy_autotune = webserver_get_fuzzy_autotune(); // Update fuzzy flag in real-time
+
+    // Initialize PID gains when switching from fuzzy to manual mode
+    if (prev_fuzzy_state && !use_fuzzy_autotune) {
+        Kp = Kp_base;
+        Ki = Ki_base;
+        Kd = Kd_base;
+    }
+    
+    // Get real-time PID tuning from webserver when fuzzy is disabled
+    if (!use_fuzzy_autotune) {
+        webserver_get_pid(&Kp, &Ki, &Kd, &Kx);
+    }
 
     float error = (setpoint - measured) ; //
+    
     Integral = Integral + error * Delta_t;
-    //Iterm += Ki * error * Delta_t; // avoid overshoot cause of tuning Ki real time
-    Iterm = Ki * Integral;
-    if (Iterm > 160) {
-        Iterm = 160;
-        Integral = Iterm / Ki; // Adjust integral to prevent windup
-    } else if (Iterm < -160) {
-        Iterm = -160;
-        Integral = Iterm / Ki; // Adjust integral to prevent windup
-    }
-
 
     float Derivative = (measured - Prev_Measured) / Delta_t; // Using measured change for derivative
-    //float Derivative = (error - Prev_error) / Delta_t; // Using error change for derivative
     Derivative_filter = (Derivative_Alpha * Derivative_filter) + ((1.0f - Derivative_Alpha) * Derivative); // Apply low-pass filter to derivative to reduce noise
     Derivative_filter = contrains(Derivative_filter, -150, 150);
-    //Output = (Kp * error) + Iterm - (Kd * Derivative_filter);
-    Pterm = Kp * (error + Kx * Integral);
-    if(fabsf(error) < Deadzone){
-        Integral = 0.0f;
+
+    // Fuzzy autotuning logic
+    if (use_fuzzy_autotune) {
+        // Fuzzify error and derivative
+        ErrorMF error_mf = fuzzifyError(error);
+        DerivativeMF de_mf = fuzzifyDE(Derivative_filter);
+        
+        // Inference
+        OutputMF output_mf = inference(error_mf, de_mf);
+        
+        // Defuzzify to get gain adjustment
+        float kp_dot = defuzzify(output_mf, -8.0f, 0.0f, 8.0f);
+        Kp = (Kpmax - Kpmin) * (kp_dot + 8) / 16 + Kpmin; // Map from [-8, 8] to [Kpmin, Kpmax]
+        float kd_dot = defuzzify(output_mf, -0.2f, 0.0f, 0.2f);
+        Kd = (Kdmax - Kdmin) * (kd_dot + 0.2f) / 0.4f + Kdmin; // Map from [-0.2, 0.2] to [Kdmin, Kdmax]
+        Pterm = Kp * error;
+        Output = Pterm - (Kd * Derivative_filter);
+        //printf("Kp fuzzy: %.2f, Kd fuzzy: %.2f\n", Kp, Kd);
+    } else{
+        Iterm = Ki * Integral;
+        if (Iterm > 160) {
+            Iterm = 160;
+            Integral = Iterm / Ki; // Adjust integral to prevent windup
+        } else if (Iterm < -160) {
+            Iterm = -160;
+            Integral = Iterm / Ki; // Adjust integral to prevent windup
+        }
+        Pterm = Kp * (error + Kx * Integral);
+        //Pterm = Kp * error;
+        if(fabsf(error) < Deadzone){
+            Integral = 0.0f;
+        }
+        Output = Pterm + Iterm - (Kd * Derivative_filter);
     }
-    // float SpeedFix =3.0f;
-    // if(fabsf(error) * SpeedFix > 10.0f){
-    //     Max_Output += SpeedFix;
-    // } else {
-    //     Max_Output -= SpeedFix;
-    // }
-    // Max_Output = contrains(Max_Output, 220, 255);
-    
-    Output = Pterm + Iterm - (Kd * Derivative_filter);
-    // if(Output < Min_Output && Output > 0){
-    //     Output = Min_Output;
-    // } else if(Output > -Min_Output && Output < 0){
-    //     Output = -Min_Output;
-    // }
+    //printf("Kp before fuzzy: %.2f,  ", Kp);
     if (Output > 0) Output += Min_Output;
     else if (Output < 0) Output -= Min_Output;
     Output = contrains(Output, -Max_Output, Max_Output);
 
     int16_t speed = (int16_t) fabsf(Output);
-    //speed = contrains(speed, Min_Output, Max_Output);
     motor_control(Output, speed, -15, 0);  
-        printf("Setpoint: %.2f, Pitch: %.2f, Error: %.2f, Output: %.2f, Pterm: %.2f, I: %.2f, D: %.2f\n", setpoint, measured, error, Output, Pterm, Iterm, Kd * Derivative_filter);
-        //printf(">Setpoint:%.2f, Measured:%.2f, Output:%.2f\r\n", setpoint, measured, Output);
-    //Prev_error = error;
+    //printf("Error:%.2f, De/dt: %.2f\n", error, Derivative_filter);
+    //printf("Kp: %.2f, Ki: %.2f, Kd: %.3f, Output: %.2f\n", Kp, Ki, Kd, Output);
+    printf("Setpoint: %.2f, Pitch: %.2f, Error: %.2f, Output: %.2f, Pterm: %.2f, I: %.2f, D: %.2f\n", setpoint, measured, error, Output, Pterm, Iterm, Kd * Derivative_filter);    
     Prev_Measured = measured;  
 }
 
@@ -202,7 +239,8 @@ void app_main(void)
     while (1) {
         //printf("Check button press to start balancing...\n");
         gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
-        webserver_get_pid(&Kp, &Ki, &Kd, &Kx);
+        //webserver_get_pid(&Kp, &Ki, &Kd, &Kx);
+        use_fuzzy_autotune = webserver_get_fuzzy_autotune();
         stop_motor();
         Integral = 0.0f;
         Prev_error = 0.0f;
@@ -216,23 +254,19 @@ void app_main(void)
         vTaskDelay(pdMS_TO_TICKS(20));
         
         while(gpio_get_level(BUTTON_PIN) == 0){
-            /* //Debug angle
             read_mpu();
-            printf(">Pitch:%.2f\r\n", filteredAnglePitch);
-            printf(",");
-            printf("Gyro:%.2f\r\n", gyroAnglePitch);
-            vTaskDelay(pdMS_TO_TICKS(40));
-            */
-           read_mpu();
-            float AngleFix = 7.0f;
-                if(filteredAnglePitch < SETPOINT_ANGLE){
-                    SETPOINT_ANGLE += AngleFix * delta_t;
-                } else if(filteredAnglePitch > SETPOINT_ANGLE){
-                    SETPOINT_ANGLE -= AngleFix * delta_t;
-                }
-                if (SETPOINT_ANGLE > 2.0f) SETPOINT_ANGLE = 2.0f;
-                if (SETPOINT_ANGLE < -2.0f) SETPOINT_ANGLE = -2.0f;
-            
+            // float AngleFix = 7.0f;
+            // if(filteredAnglePitch < SETPOINT_ANGLE){
+            //     SETPOINT_ANGLE += AngleFix * delta_t;
+            // } else if(filteredAnglePitch > SETPOINT_ANGLE){
+            //     SETPOINT_ANGLE -= AngleFix * delta_t;
+            // }
+            // if (SETPOINT_ANGLE > 1.9f) SETPOINT_ANGLE = 1.9f;
+            // if (SETPOINT_ANGLE < -2.2f) SETPOINT_ANGLE = -2.2f;
+            float AngleFix = 6.0f;
+            SETPOINT_ANGLE += AngleFix * Output/100 * delta_t;
+            if (SETPOINT_ANGLE > 2.5f) SETPOINT_ANGLE = 2.5f;
+            if (SETPOINT_ANGLE < -2.5f) SETPOINT_ANGLE = -2.5f;
             pid_control(SETPOINT_ANGLE, filteredAnglePitch);
             vTaskDelay(pdMS_TO_TICKS(20)); 
         }

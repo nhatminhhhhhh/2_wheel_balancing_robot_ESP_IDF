@@ -4,6 +4,7 @@
 #include "motor.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include <math.h>
 
 static const char *TAG = "AUTOTUNE";
 
@@ -14,35 +15,99 @@ static const char *TAG = "AUTOTUNE";
 // Output of Fuzzy: K'p, K'i, K'd = {Small, MediumSmall, Medium, MediumBig, Big} -> {0, 1, 2, 3, 4}
 // Fuzzy rule:
 /*
-    |     de/e      | NegativeBig   | NegativeSmall |   Zero        | PositiveSmall     | PositiveBig   |
-    |DecreaseFast   |     Small     |   Small       | MediumSmall   |   MediumSmall     |    Medium     |
-    |DecreaseSlow   |     Small     | MediumSmall   | MediumSmall   |   Medium          |   MediumBig   |
-    |NoChange       | MediumSmall   | MediumSmall   |   Medium      |   MediumBig       |    MediumBig  |
-    |IncreaseSlow   |   MediumSmall | Medium        | MediumBig     |   MediumBig       |    Big        |
-    |IncreaseFast   |  Medium       |   MediumBig   | MediumBig     |     Big           |    Big        |
-
+    |     E/De      | NegativeBig   | NegativeSmall |   Zero        | PositiveSmall | PositiveBig   |
+    |Negative       |     Big       |   Medium       | Medium        |   Big         |    Big        |
+    |Zero           |     Medium    |    Medium     | Small         |   Medium      |   Medium      |
+    |Positive       |     Big       |    Medium     |   Medium      |    Big        |    Big         |
 */
-
-esp_err_t autotune_pid(float target_angle, int tuning_duration_seconds)
+float triangle(float x, float a, float b, float c) {
+  if (x <= a || x >= c) return 0;
+  if (x == b) return 1;
+  if (x < b) return (x - a) / (b - a);
+  return (c - x) / (c - b);
+}
+float leftRamp(float x, float a, float b)
 {
-    ESP_LOGI(TAG, "Starting PID autotuning for %d seconds at target angle %.2f", tuning_duration_seconds, target_angle);
-    // Placeholder for autotuning logic
-    // Implement the autotuning algorithm here (e.g., relay method, Ziegler-Nichols, etc.)
-    // Adjust Kp, Ki, Kd based on system response
-
-    // For now, just simulate a delay for tuning duration
-    vTaskDelay(pdMS_TO_TICKS(tuning_duration_seconds * 1000));
-
-    ESP_LOGI(TAG, "Autotuning completed. New PID parameters set.");
-    return ESP_OK;
+    if (x <= a)
+        return 1.0f;
+    else if (x >= b)
+        return 0.0f;
+    else
+        return (b - x) / (b - a);
 }
 
-int fuzzy(float error, float delta_error)
+float rightRamp(float x, float a, float b)
 {
-    // Placeholder for fuzzy logic implementation
-    // Define fuzzy sets and rules to compute control output based on error and delta_error
+    if (x <= a)
+        return 0.0f;
+    else if (x >= b)
+        return 1.0f;
+    else
+        return (x - a) / (b - a);
+}
+ErrorMF fuzzifyError(float e) {
+  ErrorMF mf;
+  mf.N = leftRamp(e, -1, -0);
+  mf.Z = triangle(e, -1, 0, 1);
+  mf.P = rightRamp(e, 0, 1);
+  return mf;
+}
+DerivativeMF fuzzifyDE(float de) {
+  DerivativeMF mf;
+  mf.NB_ = leftRamp(de, -20, -10);
+  mf.NS_ = triangle(de, -20, -10, -5);
+  mf.Z_  = triangle(de, -5, 0, 5);
+  mf.PS_ = triangle(de, 5, 10, 20);
+  mf.PB_ = rightRamp(de, 10, 20);
+  return mf;
+}
 
-    // For now, return a dummy control output
-    int control_output = (int)(error * 10 + delta_error * 5); // Simple proportional control as placeholder
-    return control_output;
+OutputMF fuzzifyOutput(float out) {
+  OutputMF mf;
+  mf.S  = triangle(out, -100, -50, 0);
+  mf.M  = triangle(out, -50, 0, 50);
+  mf.B  = triangle(out, 0, 50, 100);
+  return mf;
+}
+
+OutputMF inference(ErrorMF e, DerivativeMF de) {
+  OutputMF out = {0, 0, 0};
+
+  // Rule table (E rows x De columns):
+  // E = Negative: NB->Big, NS->Medium, Z->Medium, PS->Big, PB->Big
+  out.B = fmaxf(out.B, fminf(e.N, de.NB_));
+  out.M = fmaxf(out.M, fminf(e.N, de.NS_));
+  out.M = fmaxf(out.M, fminf(e.N, de.Z_));
+  out.B = fmaxf(out.B, fminf(e.N, de.PS_));
+  out.B = fmaxf(out.B, fminf(e.N, de.PB_));  
+
+  // E = Zero: NB->Medium, NS->Medium, Z->Small, PS->Medium, PB->Medium
+  out.M = fmaxf(out.M, fminf(e.Z, de.NB_));
+  out.M = fmaxf(out.M, fminf(e.Z, de.NS_));
+  out.S = fmaxf(out.S, fminf(e.Z, de.Z_));
+  out.M = fmaxf(out.M, fminf(e.Z, de.PS_));
+  out.M = fmaxf(out.M, fminf(e.Z, de.PB_));
+
+  // E = Positive: NB->Big, NS->Medium, Z->Medium, PS->Big, PB->Big
+  out.B = fmaxf(out.B, fminf(e.P, de.NB_));
+  out.M = fmaxf(out.M, fminf(e.P, de.NS_));
+  out.M = fmaxf(out.M, fminf(e.P, de.Z_));
+  out.B = fmaxf(out.B, fminf(e.P, de.PS_));
+  out.B = fmaxf(out.B, fminf(e.P, de.PB_));
+
+  return out;
+}
+float defuzzify(OutputMF out, float left, float center, float right) {
+  // Centroid method using the center points from fuzzifyOutput() membership functions
+  // S: triangle(-100, -50, 0) -> center at -50
+  // M: triangle(-50, 0, 50) -> center at 0
+  // B: triangle(0, 50, 100) -> center at 50
+  float numerator =
+      out.S * (left) +
+      out.M * (center) +
+      out.B * (right);
+
+  float denominator = out.S + out.M + out.B;
+  if (denominator == 0) return 0;
+  return numerator / denominator;
 }

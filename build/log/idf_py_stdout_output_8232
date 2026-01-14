@@ -1,0 +1,370 @@
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+cl�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e878h (125048) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002e8a0 vaddr=3ffb0000 size=01778h (  6008) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=92f84h (601988) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000c2fac vaddr=3ffb1778 size=0285ch ( 10332) load[0m
+[0;32mI (364) esp_image: segment 4: paddr=000c5810 vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (418) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (418) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (439) cpu_start: Pro cpu start user code[0m
+[0;32mI (439) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (439) app_init: Application information:[0m
+[0;32mI (442) app_init: Project name:     IDF_project[0m
+[0;32mI (447) app_init: App version:      dd97b7c-dirty[0m
+[0;32mI (452) app_init: Compile time:     Dec 29 2025 11:47:23[0m
+[0;32mI (458) app_init: ELF file SHA256:  9b88fa52f...[0m
+[0;32mI (463) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (469) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (473) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (483) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (491) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (497) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (516) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (523) spi_flash: detected chip: generic[0m
+[0;32mI (526) spi_flash: flash io: dio[0m
+[0;33mW (530) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (544) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (565) MAIN: Connecting to WiFi...[0m
+[0;32mI (605) wifi:wifi driver task: 3ffc043c, prio:23, stack:6656, core=0[0m
+[0;32mI (615) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (615) wifi:wifi certification version: v7.0[0m
+[0;32mI (615) wifi:config NVS flash: enabled[0m
+[0;32mI (615) wifi:config nano formating: disabled[0m
+[0;32mI (625) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (625) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (635) wifi:Init management short buffer num: 32[0m
+[0;32mI (635) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (635) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (645) wifi:Init static rx buffer num: 10[0m
+[0;32mI (645) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (655) wifi_init: rx ba win: 6[0m
+[0;32mI (655) wifi_init: accept mbox: 6[0m
+[0;32mI (655) wifi_init: tcpip mbox: 32[0m
+[0;32mI (665) wifi_init: udp mbox: 6[0m
+[0;32mI (665) wifi_init: tcp mbox: 6[0m
+[0;32mI (665) wifi_init: tcp tx win: 5760[0m
+[0;32mI (675) wifi_init: tcp rx win: 5760[0m
+[0;32mI (675) wifi_init: tcp mss: 1440[0m
+[0;32mI (685) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (685) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (695) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (765) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (795) wifi:mode : sta (1c:69:20:ca:90:9c)[0m
+[0;32mI (805) wifi:enable tsf[0m
+[0;32mI (805) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (815) wifi:new:<4,0>, old:<1,0>, ap:<255,255>, sta:<4,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (815) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (825) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (835) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (865) wifi:connected with Tran Van Tuan, aid = 21, channel 4, BW20, bssid = 48:96:d9:39:93:5e[0m
+[0;32mI (865) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (865) wifi:pm start, type: 1[0m
+
+[0;32mI (865) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (875) wifi:<ba-add>idx:0 (ifx:0, 48:96:d9:39:93:5e), tid:0, ssn:2, winSize:64[0m
+[0;32mI (895) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3885) esp_netif_handlers: sta ip: 192.168.1.253, mask: 255.255.255.0, gw: 192.168.1.1[0m
+Got IP: 192.168.1.253
+[0;32mI (3885) WEBSERVER: Connected to AP SSID:Tran Van Tuan[0m
+[0;32mI (3885) MAIN: WiFi connected! Starting web server...[0m
+[0;32mI (4895) WEBSERVER: [34mPID loaded from NVS - Kp: 24.10, Ki: 40.50, Kd: 1.050, Kx: 0.00[0m[0m
+[0;32mI (4895) WEBSERVER: Starting HTTP server on port 80[0m
+[0;32mI (4905) WEBSERVER: Web server started successfully![0m
+[0;32mI (4905) MAIN: Web server started. Access PID tuning at http://[ESP32_IP][0m
+[0;32mI (5415) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (5415) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (5515) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5515) GPIO: LED GPIO initialized[0m
+[0;32mI (5515) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (5525) GPIO: Button GPIO initialized[0m
+[0;32mI (7825) MAIN: I2C initialized successfully[0m
+[0;32mI (8125) MPU6050: Starting gyro calibration...[0m
+[0;32mI (12805) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (12805) MPU6050: Gyro offsets - X: -407.08, Y: -67.86, Z: 21.60[0m
+Target: 0.00, Max Speed: 240.0, Min Speed: 80.0
+Robot ready. Press the button to start balancing...
+Kp after fuzzy: 32.10
+Kp before fuzzy: 32.10,  Kp after fuzzy: 38.26
+Kp before fuzzy: 38.26,  Kp after fuzzy: 46.26
+Kp before fuzzy: 46.26,  Kp after fuzzy: 54.26
+Kp before fuzzy: 54.26,  Kp after fuzzy: 62.26
+Kp before fuzzy: 62.26,  Kp after fuzzy: 70.26
+Kp before fuzzy: 70.26,  Kp after fuzzy: 78.26
+Kp before fuzzy: 78.26,  Kp after fuzzy: 86.26
+Kp before fuzzy: 86.26,  Kp after fuzzy: 94.26
+Kp before fuzzy: 94.26,  Kp after fuzzy: 97.65
+Kp before fuzzy: 97.65,  Kp after fuzzy: 103.91
+Kp before fuzzy: 103.91,  Kp after fuzzy: 107.96
+Kp before fuzzy: 107.96,  Kp after fuzzy: 111.24
+Kp before fuzzy: 111.24,  Kp after fuzzy: 119.24
+Kp before fuzzy: 119.24,  Kp after fuzzy: 122.50
+Kp before fuzzy: 122.50,  Kp after fuzzy: 130.50
+Kp before fuzzy: 130.50,  Kp after fuzzy: 134.57
+Kp before fuzzy: 134.57,  Kp after fuzzy: 135.96
+Kp before fuzzy: 135.96,  Kp after fuzzy: 137.62
+Kp before fuzzy: 137.62,  Kp after fuzzy: 139.69
+Kp before fuzzy: 139.69,  Kp after fuzzy: 142.50
+Kp before fuzzy: 142.50,  Kp after fuzzy: 149.14
+Kp before fuzzy: 149.14,  Kp after fuzzy: 151.44
+Kp before fuzzy: 151.44,  Kp after fuzzy: 154.31
+Kp before fuzzy: 154.31,  Kp after fuzzy: 150.31
+Kp before fuzzy: 150.31,  Kp after fuzzy: 158.07
+Kp before fuzzy: 158.07,  Kp after fuzzy: 157.62
+Kp before fuzzy: 157.62,  Kp after fuzzy: 161.94
+Kp before fuzzy: 161.94,  Kp after fuzzy: 166.46
+Kp before fuzzy: 166.46,  Kp after fuzzy: 174.46
+Kp before fuzzy: 174.46,  Kp after fuzzy: 178.43
+Kp before fuzzy: 178.43,  Kp after fuzzy: 186.43
+Kp before fuzzy: 186.43,  Kp after fuzzy: 194.43
+Kp before fuzzy: 194.43,  Kp after fuzzy: 202.43
+Kp before fuzzy: 202.43,  Kp after fuzzy: 210.43
+Kp before fuzzy: 210.43,  Kp after fuzzy: 218.43
+Kp before fuzzy: 218.43,  Kp after fuzzy: 226.43
+Kp before fuzzy: 226.43,  Kp after fuzzy: 234.43
+Kp before fuzzy: 234.43,  Kp after fuzzy: 242.43
+Kp before fuzzy: 242.43,  Kp after fuzzy: 250.43
+Kp before fuzzy: 250.43,  Kp after fuzzy: 258.43
+Kp before fuzzy: 258.43,  Kp after fuzzy: 266.43
+Kp before fuzzy: 266.43,  Kp after fuzzy: 274.43
+Kp before fuzzy: 274.43,  Kp after fuzzy: 282.43
+Kp before fuzzy: 282.43,  Kp after fuzzy: 289.14
+Kp before fuzzy: 289.14,  Kp after fuzzy: 297.14
+Kp before fuzzy: 297.14,  Kp after fuzzy: 305.14
+Kp before fuzzy: 305.14,  Kp after fuzzy: 313.14
+Kp before fuzzy: 313.14,  Kp after fuzzy: 321.14
+Kp before fuzzy: 321.14,  Kp after fuzzy: 329.14
+Kp before fuzzy: 329.14,  Kp after fuzzy: 337.14
+Kp before fuzzy: 337.14,  Kp after fuzzy: 345.14
+Kp before fuzzy: 345.14,  Kp after fuzzy: 352.37
+Kp before fuzzy: 352.37,  Kp after fuzzy: 360.37
+Kp before fuzzy: 360.37,  Kp after fuzzy: 368.37
+Kp before fuzzy: 368.37,  Kp after fuzzy: 369.86
+Kp before fuzzy: 369.86,  Kp after fuzzy: 377.86
+Kp before fuzzy: 377.86,  Kp after fuzzy: 385.86
+Kp before fuzzy: 385.86,  Kp after fuzzy: 393.86
+Kp before fuzzy: 393.86,  Kp after fuzzy: 401.86
+Kp before fuzzy: 401.86,  Kp after fuzzy: 409.86
+Kp before fuzzy: 409.86,  Kp after fuzzy: 417.86
+Kp before fuzzy: 417.86,  Kp after fuzzy: 425.86
+Kp before fuzzy: 425.86,  Kp after fuzzy: 433.86
+Kp before fuzzy: 433.86,  Kp after fuzzy: 441.86
+Kp before fuzzy: 441.86,  Kp after fuzzy: 449.86
+Kp before fuzzy: 449.86,  Kp after fuzzy: 454.80
+Kp before fuzzy: 454.80,  Kp after fuzzy: 462.80
+Kp before fuzzy: 462.80,  Kp after fuzzy: 470.80
+Kp before fuzzy: 470.80,  Kp after fuzzy: 478.80
+Kp before fuzzy: 478.80,  Kp after fuzzy: 486.80
+Kp before fuzzy: 486.80,  Kp after fuzzy: 494.80
+Kp before fuzzy: 494.80,  Kp after fuzzy: 502.80
+Kp before fuzzy: 502.80,  Kp after fuzzy: 510.80
+Kp before fuzzy: 510.80,  Kp after fuzzy: 518.80
+Kp before fuzzy: 518.80,  Kp after fuzzy: 526.80
+Kp before fuzzy: 526.80,  Kp after fuzzy: 534.80
+Kp before fuzzy: 534.80,  Kp after fuzzy: 542.80
+Kp before fuzzy: 542.80,  Kp after fuzzy: 550.80
+Kp before fuzzy: 550.80,  Kp after fuzzy: 558.80
+Kp before fuzzy: 558.80,  Kp after fuzzy: 566.80
+Kp before fuzzy: 566.80,  Kp after fuzzy: 574.80
+Kp before fuzzy: 574.80,  Kp after fuzzy: 582.80
+Kp before fuzzy: 582.80,  Kp after fuzzy: 590.80
+Kp before fuzzy: 590.80,  Kp after fuzzy: 598.80
+Kp before fuzzy: 598.80,  Kp after fuzzy: 606.80
+Kp before fuzzy: 606.80,  Kp after fuzzy: 614.80
+Kp before fuzzy: 614.80,  Kp after fuzzy: 616.34
+Kp before fuzzy: 616.34,  Kp after fuzzy: 624.34
+Kp before fuzzy: 624.34,  Kp after fuzzy: 632.34
+Kp before fuzzy: 632.34,  Kp after fuzzy: 640.34
+Kp before fuzzy: 640.34,  Kp after fuzzy: 648.34
+Kp before fuzzy: 648.34,  Kp after fuzzy: 656.34
+Kp before fuzzy: 656.34,  Kp after fuzzy: 664.34
+Kp before fuzzy: 664.34,  Kp after fuzzy: 672.34
+Kp before fuzzy: 672.34,  Kp after fuzzy: 680.34
+Kp before fuzzy: 680.34,  Kp after fuzzy: 688.34
+Kp before fuzzy: 688.34,  Kp after fuzzy: 696.34
+Kp before fuzzy: 696.34,  Kp after fuzzy: 704.34
+Kp before fuzzy: 704.34,  Kp after fuzzy: 705.33
+Kp before fuzzy: 705.33,  Kp after fuzzy: 713.33
+Kp before fuzzy: 713.33,  Kp after fuzzy: 721.33
+Kp before fuzzy: 721.33,  Kp after fuzzy: 729.33
+Kp before fuzzy: 729.33,  Kp after fuzzy: 735.27
+Kp before fuzzy: 735.27,  Kp after fuzzy: 743.27
+Kp before fuzzy: 743.27,  Kp after fuzzy: 751.27
+Kp before fuzzy: 751.27,  Kp after fuzzy: 759.27
+Kp before fuzzy: 759.27,  Kp after fuzzy: 767.27
+Kp before fuzzy: 767.27,  Kp after fuzzy: 775.27
+Kp before fuzzy: 775.27,  Kp after fuzzy: 783.27
+Kp before fuzzy: 783.27,  Kp after fuzzy: 791.27
+Kp before fuzzy: 791.27,  Kp after fuzzy: 799.27
+Kp before fuzzy: 799.27,  Kp after fuzzy: 807.27
+Kp before fuzzy: 807.27,  Kp after fuzzy: 815.27
+Kp before fuzzy: 815.27,  Kp after fuzzy: 823.27
+Kp before fuzzy: 823.27,  Kp after fuzzy: 831.27
+Kp before fuzzy: 831.27,  Kp after fuzzy: 832.76
+Kp before fuzzy: 832.76,  Kp after fuzzy: 832.76
+Kp before fuzzy: 832.76,  Kp after fuzzy: 840.76
+Kp before fuzzy: 840.76,  Kp after fuzzy: 848.76
+Kp before fuzzy: 848.76,  Kp after fuzzy: 856.76
+Kp before fuzzy: 856.76,  Kp after fuzzy: 864.76
+Kp before fuzzy: 864.76,  Kp after fuzzy: 864.76
+Kp before fuzzy: 864.76,  Kp after fuzzy: 872.76
+Kp before fuzzy: 872.76,  Kp after fuzzy: 880.76
+Kp before fuzzy: 880.76,  Kp after fuzzy: 888.76
+Kp before fuzzy: 888.76,  Kp after fuzzy: 896.76
+Kp before fuzzy: 896.76,  Kp after fuzzy: 904.76
+Kp before fuzzy: 904.76,  Kp after fuzzy: 912.76
+Kp before fuzzy: 912.76,  Kp after fuzzy: 920.76
+Kp before fuzzy: 920.76,  Kp after fuzzy: 928.76
+Kp before fuzzy: 928.76,  Kp after fuzzy: 936.76
+Kp before fuzzy: 936.76,  Kp after fuzzy: 944.76
+Kp before fuzzy: 944.76,  Kp after fuzzy: 952.76
+Kp before fuzzy: 952.76,  Kp after fuzzy: 960.76
+Kp before fuzzy: 960.76,  Kp after fuzzy: 968.76
+Kp before fuzzy: 968.76,  Kp after fuzzy: 976.76
+Kp before fuzzy: 976.76,  Kp after fuzzy: 984.76
+Kp before fuzzy: 984.76,  Kp after fuzzy: 992.76
+Kp before fuzzy: 992.76,  Kp after fuzzy: 1000.76
+Kp before fuzzy: 1000.76,  Kp after fuzzy: 1008.76
+Kp before fuzzy: 1008.76,  Kp after fuzzy: 1016.76
+Kp before fuzzy: 1016.76,  Kp after fuzzy: 1024.76
+Kp before fuzzy: 1024.76,  Kp after fuzzy: 1024.76
+Kp before fuzzy: 1024.76,  Kp after fuzzy: 1024.76
+Kp before fuzzy: 1024.76,  Kp after fuzzy: 1032.76
+Kp before fuzzy: 1032.76,  Kp after fuzzy: 1040.76
+Kp before fuzzy: 1040.76,  Kp after fuzzy: 1048.76
+Kp before fuzzy: 1048.76,  Kp after fuzzy: 1056.76
+Kp before fuzzy: 1056.76,  Kp after fuzzy: 1064.76
+Kp before fuzzy: 1064.76,  Kp after fuzzy: 1072.76
+Kp before fuzzy: 1072.76,  Kp after fuzzy: 1080.76
+Kp before fuzzy: 1080.76,  Kp after fuzzy: 1088.20
+Kp before fuzzy: 1088.20,  Kp after fuzzy: 1091.13
+Kp before fuzzy: 1091.13,  Kp after fuzzy: 1093.02
+Kp before fuzzy: 1093.02,  Kp after fuzzy: 1098.89
+Kp before fuzzy: 1098.89,  Kp after fuzzy: 1106.89
+Kp before fuzzy: 1106.89,  Kp after fuzzy: 1106.89
+Kp before fuzzy: 1106.89,  Kp after fuzzy: 1114.89
+Kp before fuzzy: 1114.89,  Kp after fuzzy: 1115.05
+Kp before fuzzy: 1115.05,  Kp after fuzzy: 1120.81
+Kp before fuzzy: 1120.81,  Kp after fuzzy: 1117.17
+Kp before fuzzy: 1117.17,  Kp after fuzzy: 1125.17
+Kp before fuzzy: 1125.17,  Kp after fuzzy: 1133.17
+Kp before fuzzy: 1133.17,  Kp after fuzzy: 1133.17
+Kp before fuzzy: 1133.17,  Kp after fuzzy: 1141.17
+Kp before fuzzy: 1141.17,  Kp after fuzzy: 1149.17
+Kp before fuzzy: 1149.17,  Kp after fuzzy: 1157.17
+Kp before fuzzy: 1157.17,  Kp after fuzzy: 1165.17
+Kp before fuzzy: 1165.17,  Kp after fuzzy: 1173.17
+Kp before fuzzy: 1173.17,  Kp after fuzzy: 1179.06
+Kp before fuzzy: 1179.06,  Kp after fuzzy: 1187.06
+Kp before fuzzy: 1187.06,  Kp after fuzzy: 1195.06
+Kp before fuzzy: 1195.06,  Kp after fuzzy: 1203.06
+Kp before fuzzy: 1203.06,  Kp after fuzzy: 1209.54
+Kp before fuzzy: 1209.54,  Kp after fuzzy: 1217.54
+Kp before fuzzy: 1217.54,  Kp after fuzzy: 1224.54
+Kp before fuzzy: 1224.54,  Kp after fuzzy: 1232.54
+Kp before fuzzy: 1232.54,  Kp after fuzzy: 1240.54
+Kp before fuzzy: 1240.54,  Kp after fuzzy: 1243.89
+Kp before fuzzy: 1243.89,  Kp after fuzzy: 1251.89
+Kp before fuzzy: 1251.89,  Kp after fuzzy: 1257.09
+Kp before fuzzy: 1257.09,  Kp after fuzzy: 1265.09
+Kp before fuzzy: 1265.09,  Kp after fuzzy: 1268.94
+Kp before fuzzy: 1268.94,  Kp after fuzzy: 1276.94
+Kp before fuzzy: 1276.94,  Kp after fuzzy: 1284.94
+Kp before fuzzy: 1284.94,  Kp after fuzzy: 1291.76
+Kp before fuzzy: 1291.76,  Kp after fuzzy: 1299.76
+Kp before fuzzy: 1299.76,  Kp after fuzzy: 1301.90
+Kp before fuzzy: 1301.90,  Kp after fuzzy: 1309.90
+Kp before fuzzy: 1309.90,  Kp after fuzzy: 1317.90
+Kp before fuzzy: 1317.90,  Kp after fuzzy: 1325.90
+Kp before fuzzy: 1325.90,  Kp after fuzzy: 1333.90
+Kp before fuzzy: 1333.90,  Kp after fuzzy: 1341.90
+Kp before fuzzy: 1341.90,  Kp after fuzzy: 1341.90
+Kp before fuzzy: 1341.90,  Kp after fuzzy: 1347.53
+Kp before fuzzy: 1347.53,  Kp after fuzzy: 1355.53
+Kp before fuzzy: 1355.53,  Kp after fuzzy: 1363.53
+Kp before fuzzy: 1363.53,  Kp after fuzzy: 1371.24
+Kp before fuzzy: 1371.24,  Kp after fuzzy: 1379.24
+Kp before fuzzy: 1379.24,  Kp after fuzzy: 1387.24
+Kp before fuzzy: 1387.24,  Kp after fuzzy: 1387.90
+Kp before fuzzy: 1387.90,  Kp after fuzzy: 1395.90
+Kp before fuzzy: 1395.90,  Kp after fuzzy: 1403.90
+Kp before fuzzy: 1403.90,  Kp after fuzzy: 1411.90
+Kp before fuzzy: 1411.90,  Kp after fuzzy: 1414.08
+Kp before fuzzy: 1414.08,  Kp after fuzzy: 1416.72
+Kp before fuzzy: 1416.72,  Kp after fuzzy: 1424.72
+Kp before fuzzy: 1424.72,  Kp after fuzzy: 1424.72
+Kp before fuzzy: 1424.72,  Kp after fuzzy: 1428.37
+Kp before fuzzy: 1428.37,  Kp after fuzzy: 1436.37
+Kp before fuzzy: 1436.37,  Kp after fuzzy: 1441.22
+Kp before fuzzy: 1441.22,  Kp after fuzzy: 1449.22
+Kp before fuzzy: 1449.22,  Kp after fuzzy: 1457.22
+Kp before fuzzy: 1457.22,  Kp after fuzzy: 1465.22
+Kp before fuzzy: 1465.22,  Kp after fuzzy: 1467.59
+Kp before fuzzy: 1467.59,  Kp after fuzzy: 1475.59
+Kp before fuzzy: 1475.59,  Kp after fuzzy: 1483.59
+Kp before fuzzy: 1483.59,  Kp after fuzzy: 1491.59
+Kp before fuzzy: 1491.59,  Kp after fuzzy: 1499.59
+Kp before fuzzy: 1499.59,  Kp after fuzzy: 1507.59
+Kp before fuzzy: 1507.59,  Kp after fuzzy: 1507.59
+Kp before fuzzy: 1507.59,  Kp after fuzzy: 1513.71
+Kp before fuzzy: 1513.71,  Kp after fuzzy: 1521.71
+Kp before fuzzy: 1521.71,  Kp after fuzzy: 1529.71
+Kp before fuzzy: 1529.71,  Kp after fuzzy: 1533.05
+Kp before fuzzy: 1533.05,  Kp after fuzzy: 1534.88
+Kp before fuzzy: 1534.88,  Kp after fuzzy: 1542.88
+Kp before fuzzy: 1542.88,  Kp after fuzzy: 1544.97
+Kp before fuzzy: 1544.97,  Kp after fuzzy: 1552.97
+Kp before fuzzy: 1552.97,  Kp after fuzzy: 1560.97
+Kp before fuzzy: 1560.97,  Kp after fuzzy: 1568.17
+Kp before fuzzy: 1568.17,  Kp after fuzzy: 1576.17
+Kp before fuzzy: 1576.17,  Kp after fuzzy: 1579.48
+Kp before fuzzy: 1579.48,  Kp after fuzzy: 1587.48
+Kp before fuzzy: 1587.48,  Kp after fuzzy: 1595.48
+Kp before fuzzy: 1595.48,  Kp after fuzzy: 1599.92
+Kp before fuzzy: 1599.92,  Kp after fuzzy: 1606.02
+Kp before fuzzy: 1606.02,  Kp after fuzzy: 1611.36
+Kp before fuzzy: 1611.36,  Kp after fuzzy: 1607.55
+Kp before fuzzy: 1607.55,  Kp after fuzzy: 1615.55
+Kp before fuzzy: 1615.55,  Kp after fuzzy: 1618.89
+Kp before fuzzy: 1618.89,  Kp after fuzzy: 1621.53
+Kp before fuzzy: 1621.53,  Kp after fuzzy: 1626.87
+Kp before fuzzy: 1626.87,  Kp after fuzzy: 1629.07
+Kp before fuzzy: 1629.07,  Kp after fuzzy: 1631.95
+Kp before fuzzy: 1631.95,  Kp after fuzzy: 1636.07
+Kp before fuzzy: 1636.07,  Kp after fuzzy: 1636.53
+Kp before fuzzy: 1636.53,  Kp after fuzzy: 1638.56
+Kp before fuzzy: 1638.56,  Kp after fuzzy: 1644.94
+Kp before fuzzy: 1644.94,  Kp after fuzzy: 1641.29
+Kp before fuzzy: 1641.29,  Kp after fuzzy: 1646.31
