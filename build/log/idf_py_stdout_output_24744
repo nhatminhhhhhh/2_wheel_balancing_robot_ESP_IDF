@@ -1,88 +1,123 @@
-[1/11] Performing build step for 'bootloader'
-[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Nam_3\2_wheel_balancing\IDF_project\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Nam_3/2_wheel_balancing/IDF_project/build/bootloader/bootloader.bin"
-Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
-[2/11] No install step for 'bootloader'
-[3/11] Completed 'bootloader'
-[4/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/IDF_project.c.obj
-[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/motor.c.obj
-D:/Nam_3/2_wheel_balancing/IDF_project/main/motor.c: In function 'motor_control':
-D:/Nam_3/2_wheel_balancing/IDF_project/main/motor.c:245:13: warning: variable 'offset_speed' set but not used [-Wunused-but-set-variable]
-  245 |     int16_t offset_speed = speed;
-      |             ^~~~~~~~~~~~
-[6/11] Linking C static library esp-idf\main\libmain.a
-[7/11] Generating ld/sections.ld
-[8/11] Linking CXX executable IDF_project.elf
-[9/11] Generating binary image from built executable
-esptool.py v4.10.0
-Creating esp32 image...
-Merged 2 ELF sections
-Successfully created esp32 image.
-Generated D:/Nam_3/2_wheel_balancing/IDF_project/build/IDF_project.bin
-[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Nam_3\2_wheel_balancing\IDF_project\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Nam_3/2_wheel_balancing/IDF_project/build/partition_table/partition-table.bin D:/Nam_3/2_wheel_balancing/IDF_project/build/IDF_project.bin"
-IDF_project.bin binary size 0xce110 bytes. Smallest app partition is 0x100000 bytes. 0x31ef0 bytes (20%) free.
-[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Nam_3/2_wheel_balancing/IDF_project/build -P C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"
-esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 IDF_project.bin 0x8000 partition_table/partition-table.bin
-esptool.py v4.10.0
-Serial port COM4
-Connecting....
-Chip is ESP32-D0WD-V3 (revision v3.1)
-Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
-Crystal is 40MHz
-MAC: 1c:69:20:ca:90:9c
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00001000 to 0x00007fff...
-Flash will be erased from 0x00010000 to 0x000defff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-SHA digest in image updated
-Compressed 26752 bytes to 16362...
-Writing at 0x00001000... (100 %)
-Wrote 26752 bytes (16362 compressed) at 0x00001000 in 0.8 seconds (effective 252.2 kbit/s)...
-Hash of data verified.
-Compressed 844048 bytes to 524701...
-Writing at 0x00010000... (3 %)
-Writing at 0x0001d43f... (6 %)
-Writing at 0x00026c81... (9 %)
-Writing at 0x000312c9... (12 %)
-Writing at 0x00036a94... (15 %)
-Writing at 0x0003cc53... (18 %)
-Writing at 0x00042ac4... (21 %)
-Writing at 0x0004893a... (24 %)
-Writing at 0x0004e6fa... (27 %)
-Writing at 0x00054b42... (30 %)
-Writing at 0x00059d79... (33 %)
-Writing at 0x0005f08b... (36 %)
-Writing at 0x00064848... (39 %)
-Writing at 0x00069ff0... (42 %)
-Writing at 0x0006f368... (45 %)
-Writing at 0x00074935... (48 %)
-Writing at 0x0007a7e8... (51 %)
-Writing at 0x00080141... (54 %)
-Writing at 0x00085be6... (57 %)
-Writing at 0x0008b859... (60 %)
-Writing at 0x0009143a... (63 %)
-Writing at 0x00096c96... (66 %)
-Writing at 0x0009cb8d... (69 %)
-Writing at 0x000a30e0... (72 %)
-Writing at 0x000a891e... (75 %)
-Writing at 0x000ade8c... (78 %)
-Writing at 0x000b98ac... (81 %)
-Writing at 0x000bf78a... (84 %)
-Writing at 0x000c71e9... (87 %)
-Writing at 0x000ccbfd... (90 %)
-Writing at 0x000d2a4b... (93 %)
-Writing at 0x000d86f9... (96 %)
-Writing at 0x000ddf05... (100 %)
-Wrote 844048 bytes (524701 compressed) at 0x00010000 in 13.5 seconds (effective 500.8 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 103...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 384.6 kbit/s)...
-Hash of data verified.
+:46
 
-Leaving...
-Hard resetting via RTS pin...
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+cl�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  9 2025 18:24:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f0d8h (127192) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002f100 vaddr=3ffb0000 size=00f18h (  3864) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9354ch (603468) map[0m
+[0;32mI (361) esp_image: segment 3: paddr=000c3574 vaddr=3ffb0f18 size=032bch ( 12988) load[0m
+[0;32mI (366) esp_image: segment 4: paddr=000c6838 vaddr=40080000 size=18d8ch (101772) load[0m
+[0;32mI (419) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (419) boot: Disabling RNG early entropy source...[0m
+[0;32mI (431) cpu_start: Multicore app[0m
+[0;32mI (440) cpu_start: Pro cpu start user code[0m
+[0;32mI (440) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (440) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     IDF_project[0m
+[0;32mI (448) app_init: App version:      3264107-dirty[0m
+[0;32mI (453) app_init: Compile time:     Jan 17 2026 12:50:13[0m
+[0;32mI (459) app_init: ELF file SHA256:  9152920bd...[0m
+[0;32mI (465) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (470) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (475) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (480) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (485) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (492) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (498) heap_init: At 3FFB8540 len 00027AC0 (158 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (510) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 40098D8C len 00007274 (28 KiB): IRAM[0m
+[0;32mI (525) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;33mW (532) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (545) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (556) main_task: Started on CPU0[0m
+[0;32mI (566) main_task: Calling app_main()[0m
+[0;32mI (566) MAIN: Connecting to WiFi...[0m
+[0;32mI (606) wifi:wifi driver task: 3ffc064c, prio:23, stack:6656, core=0[0m
+[0;32mI (616) wifi:wifi firmware version: b0fd6006b[0m
+[0;32mI (616) wifi:wifi certification version: v7.0[0m
+[0;32mI (616) wifi:config NVS flash: enabled[0m
+[0;32mI (616) wifi:config nano formating: disabled[0m
+[0;32mI (626) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (626) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (636) wifi:Init management short buffer num: 32[0m
+[0;32mI (636) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (636) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (646) wifi:Init static rx buffer num: 10[0m
+[0;32mI (646) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (656) wifi_init: rx ba win: 6[0m
+[0;32mI (656) wifi_init: accept mbox: 6[0m
+[0;32mI (656) wifi_init: tcpip mbox: 32[0m
+[0;32mI (666) wifi_init: udp mbox: 6[0m
+[0;32mI (666) wifi_init: tcp mbox: 6[0m
+[0;32mI (666) wifi_init: tcp tx win: 5760[0m
+[0;32mI (676) wifi_init: tcp rx win: 5760[0m
+[0;32mI (676) wifi_init: tcp mss: 1440[0m
+[0;32mI (686) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (686) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (746) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (816) wifi:mode : sta (1c:69:20:ca:90:9c)[0m
+[0;32mI (816) wifi:enable tsf[0m
+[0;32mI (816) WEBSERVER: WiFi initialization finished.[0m
+[0;32mI (3236) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (3236) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (5656) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (5656) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (8066) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (8066) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (10476) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (10476) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (12896) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (12896) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (15306) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (15306) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (17716) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (17716) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (20136) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (20136) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (22546) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (22546) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (24956) WEBSERVER: Retry to connect to the AP[0m
+[0;32mI (24956) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (27366) WEBSERVER: Connect to the AP fail[0m
+[0;32mI (27366) WEBSERVER: Failed to connect to SSID:nminh[0m
+[0;31mE (27366) MAIN: WiFi connection failed. Web server not started.[0m
+[0;32mI (27376) MOTOR: Initializing LEDC for motor control[0m
+[0;32mI (27386) MOTOR: LEDC PWM initialized successfully (20kHz, 8-bit resolution)[0m
+[0;32mI (27486) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (27486) GPIO: LED GPIO initialized[0m
+[0;32mI (27486) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (27496) GPIO: Button GPIO initialized[0m
+[0;32mI (29796) MAIN: I2C initialized successfully[0m
+[0;32mI (30096) MPU6050: Starting gyro calibration...[0m
+[0;32mI (34716) MPU6050: MPU6050 initialized and calibrated done![0m
+[0;32mI (34716) MPU6050: Gyro offsets - X: -411.35, Y: -77.20, Z: 23.07[0m
+Target: 0.00, Max Speed: 255.0, Min Speed: 80.0
+Robot ready. Press the button to start balancing...

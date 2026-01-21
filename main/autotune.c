@@ -99,9 +99,9 @@ OutputMF inference(ErrorMF e, DerivativeMF de) {
 }
 float defuzzify(OutputMF out, float left, float center, float right) {
   // Centroid method using the center points from fuzzifyOutput() membership functions
-  // S: triangle(-100, -50, 0) -> center at -50
-  // M: triangle(-50, 0, 50) -> center at 0
-  // B: triangle(0, 50, 100) -> center at 50
+  // S: triangle(left + center, left, center) -> center at left
+  // M: triangle(left, center, right) -> center at center
+  // B: triangle(center, right, right + center) -> center at right
   float numerator =
       out.S * (left) +
       out.M * (center) +

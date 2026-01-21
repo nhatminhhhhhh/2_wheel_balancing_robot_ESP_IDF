@@ -9,6 +9,7 @@
 #include "gpio.h"
 #include "webserver.h"
 #include "autotune.h"
+#include "neural_network.h"
 static const char *TAG = "MAIN";
 
 // PID parameters - now controlled via web server
@@ -31,6 +32,9 @@ float Kd_base = 1.05f;
 
 // Flag to enable/disable fuzzy autotuning
 bool use_fuzzy_autotune = true;
+
+// Flag to enable/disable neural network
+bool use_neural_network = false;
 
 float Max_Output = 255.0f; // previous 230.0f
 float Min_Output = 80.0f;
@@ -65,30 +69,6 @@ float contrains(float value, float min, float max){
 }
 float checkDirection = 0.0f;
 
-void angle_pid(float target_angle, float angle){
-    int64_t now = esp_timer_get_time(); 
-    float timeChange = (now - LastAngleTime) / 1000000.0f; // in milliseconds
-    LastAngleTime = now;
-    if(timeChange >= 0.02f){
-        float ErrorAngle = target_angle - angle;
-        float Kp_angle = 10.0f; // Proportional gain for angle
-        float Ki_angle = 1.0f; // Integral gain for angle
-        float Kd_angle = 0.1f; // Derivative gain for angle
-        float IntegralAngle = 0.0f;
-        IntegralAngle += ErrorAngle * timeChange;
-        float DerivativeAngle = (ErrorAngle - PrevErrorAngle) / timeChange;
-        
-        float OutputPWM = Kp_angle * ErrorAngle + Ki_angle * IntegralAngle + Kd_angle * DerivativeAngle;
-        OutputPWM = contrains(OutputPWM, -255, 255);
-        int16_t speed = (int16_t) fabsf(OutputPWM);
-        //speed = contrains(speed, 0, 176); // Limit speed to safe range
-        motor_control(-OutputPWM, speed, 0, 0);
-        //printf("Target Angle: %.2f, Measured Angle: %.2f, Error: %.2f, Output PWM: %.2f, Speed: %d\n", target_angle, angle, ErrorAngle, OutputPWM, speed);
-        
-        PrevErrorAngle = ErrorAngle;
-    }
-}
-
 void pid_control(float setpoint, float measured){
     if( measured > 60.0f || measured < -60.0f ){
             Fail_detect = true;
@@ -97,7 +77,6 @@ void pid_control(float setpoint, float measured){
             Integral = 0.0f; // Reset integral term
             Derivative_filter = 0.0f; // Reset derivative filter
             //printf("Fail-safe activated! Angle exceeded safe limit.\n");
-            //encoder_reset();
             gpio_set_level(LED_PIN, 0); // Turn off LED
             return;
     }
@@ -118,7 +97,7 @@ void pid_control(float setpoint, float measured){
         webserver_get_pid(&Kp, &Ki, &Kd, &Kx);
     }
 
-    float error = (setpoint - measured) ; //
+    float error = (setpoint - measured) ; 
     
     Integral = Integral + error * Delta_t;
 
@@ -126,8 +105,21 @@ void pid_control(float setpoint, float measured){
     Derivative_filter = (Derivative_Alpha * Derivative_filter) + ((1.0f - Derivative_Alpha) * Derivative); // Apply low-pass filter to derivative to reduce noise
     Derivative_filter = contrains(Derivative_filter, -150, 150);
 
+    // Neural Network control
+    if (use_neural_network) {
+        // Use neural network to compute Kp and Kd based on error and derivative
+        nn_pid(error, Derivative_filter, &Kp, &Kd);
+        
+        // Clamp Kp and Kd to safe ranges
+        Kp = contrains(Kp, Kpmin, Kpmax+10);
+        Kd = contrains(Kd, Kdmin, Kdmax);
+        
+        Pterm = Kp * error;
+        Output = Pterm - (Kd * Derivative_filter) + Iterm;
+        //printf("NN - Kp: %.2f, Kd: %.2f\n", Kp, Kd);
+    }
     // Fuzzy autotuning logic
-    if (use_fuzzy_autotune) {
+    else if (use_fuzzy_autotune) {
         // Fuzzify error and derivative
         ErrorMF error_mf = fuzzifyError(error);
         DerivativeMF de_mf = fuzzifyDE(Derivative_filter);
@@ -159,16 +151,16 @@ void pid_control(float setpoint, float measured){
         }
         Output = Pterm + Iterm - (Kd * Derivative_filter);
     }
-    //printf("Kp before fuzzy: %.2f,  ", Kp);
     if (Output > 0) Output += Min_Output;
     else if (Output < 0) Output -= Min_Output;
     Output = contrains(Output, -Max_Output, Max_Output);
 
     int16_t speed = (int16_t) fabsf(Output);
     motor_control(Output, speed, -15, 0);  
-    //printf("Error:%.2f, De/dt: %.2f\n", error, Derivative_filter);
-    //printf("Kp: %.2f, Ki: %.2f, Kd: %.3f, Output: %.2f\n", Kp, Ki, Kd, Output);
-    printf("Setpoint: %.2f, Pitch: %.2f, Error: %.2f, Output: %.2f, Pterm: %.2f, I: %.2f, D: %.2f\n", setpoint, measured, error, Output, Pterm, Iterm, Kd * Derivative_filter);    
+    //printf("Setpoint: %.2f, Pitch: %.2f, Error: %.2f, Output: %.2f, Kp: %.2f, I: %.2f, D: %.2f\n", setpoint, measured, error, Output, Kp, Iterm, Kd );    
+    //printf(">Error: %.2f\n", error);
+    printf("%.5f,%.5f,%.3f,%.3f\n", error, Derivative_filter, Kp, Kd);
+
     Prev_Measured = measured;  
 }
 
@@ -196,8 +188,6 @@ void app_main(void)
     vTaskDelay(pdMS_TO_TICKS(100));
     gpio_init();
     vTaskDelay(pdMS_TO_TICKS(100));
-
-    //servo_init(SERVO1_PIN, LEDC_CHANNEL_2);
     vTaskDelay(pdMS_TO_TICKS(100));
         //servo_init(SERVO2_PIN, LEDC_CHANNEL_3);
         vTaskDelay(pdMS_TO_TICKS(100));
@@ -208,9 +198,6 @@ void app_main(void)
         gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
         vTaskDelay(pdMS_TO_TICKS(300));
         gpio_set_level(LED_PIN, 0); // Turn off LED to indicate ready
-        
-        // servo_set_angle(LEDC_CHANNEL_2, pos);
-        // servo_set_angle(LEDC_CHANNEL_3, 9 - pos);
         vTaskDelay(pdMS_TO_TICKS(100));
         gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
         vTaskDelay(pdMS_TO_TICKS(300));
@@ -239,16 +226,13 @@ void app_main(void)
     while (1) {
         //printf("Check button press to start balancing...\n");
         gpio_set_level(LED_PIN, 1); // Turn on LED to indicate ready
-        //webserver_get_pid(&Kp, &Ki, &Kd, &Kx);
+        webserver_get_pid(&Kp, &Ki, &Kd, &Kx);
         use_fuzzy_autotune = webserver_get_fuzzy_autotune();
+        use_neural_network = webserver_get_neural_network();
         stop_motor();
         Integral = 0.0f;
         Prev_error = 0.0f;
-        // encoder_get_velocity_1();
-        // encoder_get_velocity_2();
-
-        //printf("Encoder 1 vel: %.2f, Encoder 2 vel: %.2f\n", encoder1_velocity, encoder2_velocity);
-        // printf("Angle Encoder 1: %.2f, Angle Encoder 2: %.2f\n", encoder_get_angle_1(), encoder_get_angle_2());
+  
         read_mpu();
         //printf("Initial Pitch Angle: %.2f\n", filteredAnglePitch);
         vTaskDelay(pdMS_TO_TICKS(20));
@@ -261,12 +245,12 @@ void app_main(void)
             // } else if(filteredAnglePitch > SETPOINT_ANGLE){
             //     SETPOINT_ANGLE -= AngleFix * delta_t;
             // }
-            // if (SETPOINT_ANGLE > 1.9f) SETPOINT_ANGLE = 1.9f;
-            // if (SETPOINT_ANGLE < -2.2f) SETPOINT_ANGLE = -2.2f;
-            float AngleFix = 6.0f;
+            // if (SETPOINT_ANGLE > 2.2f) SETPOINT_ANGLE = 2.2f;
+            // if (SETPOINT_ANGLE < -1.6f) SETPOINT_ANGLE = -1.6f;
+            float AngleFix = 6.8f;
             SETPOINT_ANGLE += AngleFix * Output/100 * delta_t;
-            if (SETPOINT_ANGLE > 2.5f) SETPOINT_ANGLE = 2.5f;
-            if (SETPOINT_ANGLE < -2.5f) SETPOINT_ANGLE = -2.5f;
+            if (SETPOINT_ANGLE > 3.5f) SETPOINT_ANGLE = 3.5f;
+            if (SETPOINT_ANGLE < -2.2f) SETPOINT_ANGLE = -2.2f;
             pid_control(SETPOINT_ANGLE, filteredAnglePitch);
             vTaskDelay(pdMS_TO_TICKS(20)); 
         }
